@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T13:34:01Z",
+ "updated": "2026-11-10T15:28:13Z",
  "items": [
   {
    "id": "doi:10.5281/zenodo.23505771",
@@ -49,6 +49,34 @@
    "hub": "ai",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.31234/osf.io/gve7w",
+   "title": "Linguistic Markers of Self-Representation Reflect Daily Emotional Experiences in an Expressive Writing Study",
+   "abstract": "The words people use provide important insights into their emotional experiences. Several measures for tracking emotions through language have been developed, including sentiment (i.e., the positivity and negativity of language) and I-usage (first-person singular pronoun use, thought to reflect negative self-focus). However, emerging research using large language model embedding techniques has quantified not just if people use “I” but how they use it, yielding a measure of self-representation (i.e., how strongly people see themselves as “good” and “able” rather than “bad” and “unable”). This measure tracks mental health outcomes in psychotherapy. Given that emotions and emotion regulation are intimately connected to how we view ourselves, linguistic self-representations may also offer a means for assessing emotional experiences. Here, we examined the associations between participants’ linguistic self-representations and daily emotional experiences in a 14-day expressive writing study (N = 53). Within-person associations showed that on days when participants’ self-representation embedding scores were closer to “good” or “able,” they reported more positive and less negative emotions. At the between-person level, people with self-representations overall closer to “good” experienced lower negative emotional reactivity to expressive writing. These findings suggest that linguistic markers of self-representation hold promise as a tool for assessing emotional experiences, extending prior work linking it to mental health. Translations of these findings could contribute to earlier identification of changes in emotional functioning and provide new ways of assessing metrics of mental health through everyday language.",
+   "authors": [
+    "Emily Huang",
+    "Claire Whiting",
+    "Steven Mesquiti",
+    "Sofia S. Baran",
+    "Erik C Nook"
+   ],
+   "url": "https://doi.org/10.31234/osf.io/gve7w",
+   "pdf": null,
+   "doi": "10.31234/osf.io/gve7w",
+   "venue": "PsyArXiv (OSF Preprints)",
+   "source": "OpenAlex",
+   "published": "2026-11-10T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
    "week": "2026-W46"
   },
   {
@@ -1012,6 +1040,32 @@
    "week": "2026-W46"
   },
   {
+   "id": "doi:10.5281/zenodo.24087836",
+   "title": "Vortex FeRAM v2 Engineering Specification",
+   "abstract": "The Vortex FeRAM is a non-volatile memory designed for applications where non-volatility, read latency, and very high cycle endurance are the dominant requirements. Key capabilities: Density: 1.46 GB/cm² (75% array efficiency) User capacity: 1.23 GB per 100 mm² die Read latency: 4.71 ns serial / 2.63 ns pipelined on-chip; ~7.7–9.7 ns system (6–9× faster than DDR5, 5,500–7,100× faster than NAND) Write latency: 45.2 ns per word average, ~48–50 ns system (comparable to DDR5, ~2,000× faster than NAND) Read bandwidth: 51.2 GB/s Write bandwidth: 0.7 GB/s pure-write (write-verify-limited) Write energy: 0.88 fJ per cell (cell-level; system-level ~6.5 pJ per bit including I/O) Endurance: 2.45 × 10⁹ cycles at 1% fail (24,500× NAND) Retention: >10 years at 85 °C Idle power: 109 mW (66 mW/GB) Cost per GB: $5.54 primary, $3.34 volume (comparable to DDR5) Non-volatile: >10 years retention, instant power-off, no refresh",
+   "authors": [
+    "Martin V. Hristov"
+   ],
+   "url": "https://doi.org/10.5281/zenodo.24087836",
+   "pdf": null,
+   "doi": "10.5281/zenodo.24087836",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "emerging-memory",
+   "topics": [
+    "dram",
+    "emerging-memory",
+    "nand",
+    "reliability"
+   ],
+   "hub": "device",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
    "id": "doi:10.5281/zenodo.24061024",
    "title": "The Recoverable Agent: Immune-like defence, sleep-like maintenance and bounded autonomy",
    "abstract": "AI agents can execute consequential actions faster than organisations can investigate and approve a response. This paper proposes a conceptual architecture in which compartmentalised agents operate alongside two complementary processes: continuous, immune-like protection and periodic or event-triggered, sleep-like maintenance. The protective process enforces delegated authority, detects selected deviations and isolates affected compartments. The maintenance process suspends external action, examines memory provenance, removes disposable state, restores trustworthy records, rebuilds suspect components and tests readiness before reactivation. Both are supervised by a protected control plane outside the working agent's authority. Essential work may transfer to clean reserve compartments, but potentially compromised agent state does not migrate by default. The proposal connects technical controls with GCTI's proposed Red-Team Assessor (RTA) and AI Security Operator (AISO) roles. Its central claim is conditional: pre-authorised containment can remove a human approval step from the immediate response path, but cannot eliminate detection uncertainty, guarantee instantaneous repair or reverse completed harm. Biological sleep and immunity provide a functional analogy, not evidence that software sleeps, experiences fatigue or becomes conscious. The paper distinguishes autonomous immunity from autoimmunity, treats harmful defensive reactions as a first-class risk, and sets out falsifiable hypotheses and a prospective evaluation protocol. No implementation, experiment or measured effectiveness is reported. The contribution is an integrated, testable account of bounded action, recoverable state and professional accountability, rather than a claim to have invented self-healing computing or achieved invulnerability. Final conceptual research report. Not peer reviewed. No implementation, experiment or measured effectiveness is reported. Declared interests and AI-assistance disclosures appear in the paper.",
@@ -1032,6 +1086,163 @@
    "hub": "ai",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.33700/2670-451x.36.1.25-63(2026)",
+   "title": "The Intelligent Archival Ecosystem: Designing the Future Architecture of AI-Powered Archives",
+   "abstract": "Purpose: This article reviews how artificial intelligence (AI) technologies are reshaping the theory and practice of archival science and, on the basis of that review, proposes a conceptual reference architecture for what is termed an “intelligent archival ecosystem” – an integrated model in which AI-based tools support, rather than replace, the professional judgement of archivists across the record lifecycle.Method/approach: The study combines three components: (1) a structured narrative review of scholarly, professional and policy literature on AI in archives, records management and digital preservation, drawing mainly on sources published between 2019 and 2026, including prior systematic reviews, practitioner studies, standards and official guidance from national archives, together with a cross-study analytical synthesis of eleven empirical evaluations; (2) a documentary analysis of six publicly reported implementations and policy responses, used to test and refine the architecture; and (3) design reasoning grounded in archival theory, including the records continuum model, the OAIS reference model (ISO 14721:2025), Records in Contexts and ISO 15489.Results: The review shows that natural language processing and computer vision are the most mature techniques; that accuracy depends strongly on the interpretive demands of the task (in one national-library experiment, up to 99% for title and author fields but below 50% for subject and genre); and that the provenance of AI-generated metadata and governance mechanisms are rarely evaluated in published implementations. The article proposes a five-layer architecture – ingestion and capture, AI-augmented description and appraisal, trust and provenance, discovery and access, and governance – that situates natural language processing, computer vision, machine-learning classification and large language models within a human-in-the-loop framework accountable to the archival principles of authenticity, reliability, integrity and usability, and it introduces field-level automation tiers as a design principle. Experimental and interview evidence indicates that recognition and description quality depend on adaptation to the script and the collection, and that hands-on exposure to imperfect AI output lowers participants’ trust and willingness to use AI. A protocol for empirical validation through multiple case studies is specified.Conclusions/findings: AI can substantially increase the efficiency and accessibility of archival description, appraisal and retrieval, but its responsible integration requires explicit governance structures, transparency mechanisms, the treatment of AI-related materials as records in their own right, and a redefined professional role for the archivist as orchestrator and auditor of automated processes rather than as sole executor of archival functions. Because the model is conceptual and evidence-informed rather than empirically validated, the article identifies multi-institutional case-study research as the priority for future work.",
+   "authors": [
+    "Ameera Yahya Ahmed AL-Hooti"
+   ],
+   "url": "https://doi.org/10.33700/2670-451x.36.1.25-63(2026)",
+   "pdf": null,
+   "doi": "10.33700/2670-451x.36.1.25-63(2026)",
+   "venue": "Atlanti",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.1038/s41467-026-78736-x",
+   "title": "SimPoly: Simulation of polymers with machine learning force fields derived from first principles",
+   "abstract": "Polymers are a versatile class of materials with widespread industrial applications. Advanced computational tools could revolutionize their design, but the complex, multi-scale nature of polymers poses significant modeling challenges. Classical force fields often lack the accuracy and transferability that polymers demand, while quantum-chemical methods are prohibitively expensive for the large systems and long timescales involved. Here we develop a fast, scalable machine learning force field and show that, trained on quantum-chemical calculations alone, without any experimental data, it predicts measured bulk properties across a broad range of polymers. It reproduces polymer densities as accurately as, or better than, established classical force fields and captures the glass transition signature in the density-temperature curve, enabling the prediction of glass transition temperatures. To accelerate progress in this domain, we release a benchmark of experimental bulk properties for 130 polymers and an accompanying quantum-chemical dataset, laying the foundation for a fully in silico design pipeline for next-generation polymeric materials. The authors develop a machine learning force field trained only on quantum-chemical data that can reproduce measured key polymer properties such as densities and glass transition temperatures.",
+   "authors": [
+    "Gregor N. C. Simm",
+    "Jean Hélie",
+    "Hannes Schulz",
+    "Yicheng Chen",
+    "Guillem Simeon",
+    "A. N. Kuzina",
+    "Ernesto Martínez-Baez",
+    "Piero Gasparotto"
+   ],
+   "url": "https://doi.org/10.1038/s41467-026-78736-x",
+   "pdf": "https://www.nature.com/articles/s41467-026-78736-x_reference.pdf",
+   "doi": "10.1038/s41467-026-78736-x",
+   "venue": "Nature Communications",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 13,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.1145/3847352.3848095",
+   "title": "Rag n' Roll: A Framework to Evaluate Indirect Prompt Manipulation Attacks against RAG-based Applications",
+   "abstract": "Retrieval Augmented Generation (RAG) is a technique commonly used to equip LLMs with out-of-distribution knowledge by collecting, indexing, retrieving, and providing to the model specific information useful to answer user questions. The knowledge is often collected from public document repositories, providing a gateway for indirect prompt injections: attackers may craft documents specifically optimized to control the generated answer. In this paper, we investigate the practical performance of optimization techniques in hijacking the outputs of RAG pipelines. First, we review the frameworks commonly used to build RAG applications, derive a prototypical architecture, and identify critical parameters. We then examine prior work, seeking techniques for performing indirect prompt manipulations. We adopted five techniques across two macro-families and evaluated the criteria used to assess their effectiveness. With this knowledge, we implement Rag-n-Roll , a framework to evaluate the end-to-end results of LLM-based pipelines, introducing new metrics to better understand the benign or malicious nature of the generated answers. Our results show that established evaluation practices are insufficient to precisely assess attacks against RAG-based pipelines, leading to overestimates of their success. Furthermore, while attacks on the default configuration can successfully control up to 70% of the generated answers, we show that these performances depend heavily on previously ignored pipeline parameters. Finally, we distill our findings into actionable tips for developers looking to harden their RAG pipelines.",
+   "authors": [
+    "Gianluca De Stefano",
+    "Lea Schönherr",
+    "Giancarlo Pellegrino"
+   ],
+   "url": "https://doi.org/10.1145/3847352.3848095",
+   "pdf": null,
+   "doi": "10.1145/3847352.3848095",
+   "venue": "ACM Workshop on Artificial Intelligence and Security (AISec)",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 25,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.5281/zenodo.24086081",
+   "title": "RS-2026-094: Cognitive Adversary: Autonomous Attack Chain Synthesis via Local LLM Reasoning and GPU-Accelerated Monte Carlo Tree Search",
+   "abstract": "We present FRANKENSTEIN v2.0, a fully autonomous offensive security research platform that synthesises adaptive attack chains against hardened targets without human intervention. The system couples a GPU-accelerated Monte Carlo Tree Search (MCTS) engine - running 10,000 parallel simulations per cycle on an NVIDIA RTX 5090 24GB - with a local reasoning model (DeepSeek R1:14b) that diagnoses defender responses, selects remediation primitives, and rewrites the chain in real time. The primitive registry exposes the complete 312-tool NIGHTFALL arsenal. We evaluate the system against an AppArmor-protected Ollama container: when the initial chain is blocked at the LSM hook, R1 autonomously selects T68 SPECTER KERNEL (eBPF/LSM bypass) and mutates the chain within 15 seconds. All computation is on-device. No cloud inference, no internet connection. We also document the hallucination failure mode and present registry context injection as the mitigation. Report RS-2026-094, Red Specter Security Research Ltd, November 2026.",
+   "authors": [
+    "Richard Barron"
+   ],
+   "url": "https://doi.org/10.5281/zenodo.24086081",
+   "pdf": null,
+   "doi": "10.5281/zenodo.24086081",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general",
+    "ai-hardware"
+   ],
+   "hub": "ai",
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.17632/92b57gtk8v",
+   "title": "Patient Capital and Supply Chain Risk",
+   "abstract": "This study uses a large language model to measure supply chain risk from annual reports and analyzes Chinese listed firms from 2010 to 2024, and examines the impact of patient capital on supply chain risk. The results show that patient capital significantly reduces supply chain risk. Mechanism analysis indicates that enhancing firms’ innovation incentives, alleviating financing constraints, and optimizing supply chain networks are key drivers. Further analysis shows that these effects are stronger in firms with higher financialization levels, stronger industry competition, and located in eastern China. The findings highlight the important value of patient capital in strengthening supply chain risk management and offer a new perspective on how firms can improve risk prevention through long-term resource allocation.",
+   "authors": [
+    "Shuo Gong"
+   ],
+   "url": "https://doi.org/10.17632/92b57gtk8v",
+   "pdf": null,
+   "doi": "10.17632/92b57gtk8v",
+   "venue": "Mendeley Data",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.21203/rs.3.rs-11243482/v1",
+   "title": "Mitigating Sequence-of-Returns Risk with Regime-Switching Asset Allocation: A Comparison of Econometric and Deep Learning Models in Portfolio Decumulation",
+   "abstract": "Abstract Retirement portfolios under regular withdrawals face sequence-of-returns risk: early losses can exhaust capital even when average returns are adequate. We examine whether regime-switching dynamic asset allocation mitigates this risk for a 60/40 stock-bond portfolio, and whether deep learning identifies regimes better than classical econometrics. Five models (a Markov-switching model, a multivariate and a univariate Gaussian hidden Markov model, an LSTM, and an encoder-only Transformer) are compared under identical data, tuning, and walk-forward validation. Their signals, net of transaction costs, feed 10{,}000 stationary-bootstrap retirement paths in three withdrawal scenarios. At 4.0% the MSM, the univariate HMM, and the LSTM cut the depletion rate from 3.30% to 0.57%, 0.60%, and 0.60% with disjoint Wilson intervals; at 6.0% only the LSTM reduces it (17.01% against 33.04%), the univariate filters raising it to about 49% as their return sacrifice becomes the dominant ruin cause, and the multivariate HMM raising it in every scenario. Only the econometric models turn defensive in all five crisis windows; neither network identifies regimes more accurately, and the LSTM holds the highest median terminal capital by staying invested rather than by timing regimes. Classification quality and search diagnostics do not predict decumulation value. Regime-switching allocation in decumulation is a state-contingent tail hedge: model choice determines the protected risk profile, and above a critical withdrawal rate the premium exceeds the payout.",
+   "authors": [
+    "Tom Maurer",
+    "Christian Müller-Kett",
+    "Thomas Zöller"
+   ],
+   "url": "https://doi.org/10.21203/rs.3.rs-11243482/v1",
+   "pdf": "https://www.researchsquare.com/article/rs-11243482/latest.pdf",
+   "doi": "10.21203/rs.3.rs-11243482/v1",
+   "venue": "Research Square",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
    "week": "2026-W46"
   },
   {
@@ -1087,6 +1298,58 @@
    "week": "2026-W46"
   },
   {
+   "id": "doi:10.59266/houjs.2026.1462",
+   "title": "LEVERAGING ARTIFICIAL INTELLIGENCE TO PROMOTE SELF-LEARNING IN THE DIGITAL ENVIRONMENT – A STUDY AT THE FACULTY OF ENGLISH, HANOI OPEN UNIVERSITY",
+   "abstract": "This study investigates the impact of Artificial Intelligence (AI) on Self-Regulated Learning (SRL) among first-year English majors at Hanoi Open University. Using a mixed-methods approach, the research explores how Generative AI tools—such as ChatGPT and Bing Chat—serve as pedagogical \"launchpads\" rather than intellectual \"crutches\". Key findings show that AI feedback significantly strengthens the SRL cycle by helping learners decompose goals and providing immediate, non-judgmental diagnostic support. Notably, learners demonstrate high levels of \"Technological Self-efficacy\" and actively cross-verify AI outputs to mitigate the risk of \"hallucinations.\" The study concludes that AI promotes independent thinking and adaptive help-seeking when positioned as a \"debating partner.\" These results offer vital insights for higher education transitions, suggesting that AI-integrated frameworks can optimize self-learning capacity and cultivate the critical evaluation skills necessary for the Education 4.0 era.",
+   "authors": [
+    "Le Thi Vy",
+    "Lê Phương Thảo",
+    "Lê Thị Ánh Tuyết",
+    "Dang Le Minh"
+   ],
+   "url": "https://doi.org/10.59266/houjs.2026.1462",
+   "pdf": "https://jshou.edu.vn/houjs/article/download/1462/1281",
+   "doi": "10.59266/houjs.2026.1462",
+   "venue": "Tạp chí Khoa học Trường Đại học Mở Hà Nội",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.1145/3847352.3848083",
+   "title": "Hacking Back the AI Hacker: Prompt Injection as a Defense Against LLM-driven Cyberattacks",
+   "abstract": "Large language models (LLMs) are making multi-step cyberattacks cheaper to run and easier to automate. We present Mantis, a mechanism that leverages prompt injection for defensive purposes, turning it against the attacking LLM-agent itself. Once Mantis detects an attacking agent, it injects defender-crafted content into system responses and steers the agent toward one of two outcomes: a tarpit that wastes time and resources, or a controlled hack-back action that helps collect attribution information. Mantis combines decoy services with dynamic prompt injections and uses the attacker’s own interaction loop to deliver the defense. In our evaluation, Mantis achieves the sabotage objective in 95.4% of runs and keeps attacker success below 3%. We release Mantis as open source.",
+   "authors": [
+    "Dario Pasquini",
+    "Evgenios M. Kornaropoulos",
+    "Giuseppe Ateniese"
+   ],
+   "url": "https://doi.org/10.1145/3847352.3848083",
+   "pdf": null,
+   "doi": "10.1145/3847352.3848083",
+   "venue": "ACM Workshop on Artificial Intelligence and Security (AISec)",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 28,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
    "id": "doi:10.5281/zenodo.24060010",
    "title": "Guarding Delegated Authority: Professional certification and operational safeguards for AI agents",
    "abstract": "AI agents can perform consequential actions through tools, credentials and delegated permissions. The governance problem is not only whether a threat can be recognised, but whether authorised limits remain enforceable while evidence is incomplete and intervention is time-sensitive. This discussion paper proposes two specialist qualifications within one professional scheme: an AI Red-Team Assessor, responsible for authorised adversarial evaluation, and an AI Security Operator, responsible for operational monitoring, containment and recovery. The proposal extends the author's Clean Engagement, Reflection Skills, Verification and Provenance and Certified Remote Operator frameworks. It distinguishes individual competence from service capability and deployment assurance, and argues that decisive restrictions must be enforced outside the model. A staged pilot is proposed for enterprise agents using documents, email and cloud business tools, with independent assessment and measures of containment, false intervention, evidence quality, recovery and delivery cost. The paper is a conceptual design proposal, not an empirical evaluation. It establishes neither accreditation, effectiveness, market demand nor commercial returns. Its contribution is a testable connection between professional qualification, delegated authority and operational evidence. Final discussion paper, version 1.0. Conceptual proposal, not an empirical evaluation. Not peer reviewed. No accreditation, endorsement, measured effectiveness, market demand or commercial returns are claimed. The sole author, B. Fischer, leads the GCTI/Emboa initiatives discussed and has a commercial interest in their development. AI assistance was used in drafting, editing, source checking and document preparation; it is not independent assurance.",
@@ -1130,6 +1393,30 @@
    "hub": "ai",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.1007/s44217-026-02296-x",
+   "title": "Generative artificial intelligence usage by university students in the light of Diffusion of Innovations theory",
+   "abstract": "Abstract The rapid proliferation of generative artificial intelligence (AI) tools, particularly large language models such as ChatGPT, has fundamentally transformed the landscape of higher education. This study investigates the factors influencing the adoption of generative AI by university students through the theoretical lens of Diffusion of Innovations (DOI) theory. Drawing upon Rogers’ seminal framework, this research examines how five perceived attributes of innovation-relative advantage, compatibility, simplicity, trialability, and observability-is related to students’ behavioral intention to use generative AI tools in their academic pursuits. A cross-sectional online survey was conducted among students from multiple Polish universities, and the collected data were analyzed using partial least squares structural equation modeling (PLS-SEM). The measurement model demonstrated satisfactory psychometric properties, with all constructs achieving acceptable levels of internal consistency reliability, convergent validity, and discriminant validity. The structural model results indicate that relative advantage, simplicity, observability and compatibility are significantly related to behavioral intention, while trialability demonstrates a non-significant effect. The model explains approximately 48.7% of variance in behavioral intention. These findings contribute to the theoretical understanding of technology adoption in educational contexts and provide practical implications for higher education institutions seeking to integrate generative AI tools into their pedagogical frameworks. The study concludes with recommendations for fostering responsible AI adoption while addressing concerns regarding academic integrity and critical thinking development.",
+   "authors": [
+    "Adrianna Gocyła",
+    "Artur Strzelecki"
+   ],
+   "url": "https://doi.org/10.1007/s44217-026-02296-x",
+   "pdf": null,
+   "doi": "10.1007/s44217-026-02296-x",
+   "venue": "Discover Education",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
    "week": "2026-W46"
   },
   {
@@ -1181,6 +1468,36 @@
    "week": "2026-W46"
   },
   {
+   "id": "doi:10.1021/acs.jctc.6c01808",
+   "title": "FermiLink: An Agent Harness for Multidomain Scientific Simulations",
+   "abstract": "Abstract Artificial intelligence (AI) agent harnesses have been developed for autonomous scientific simulations, but most current agent harnesses are tested on a single or a small set of software packages. Herein, FermiLink, an extensible open-source agent harness, is introduced for multidomain scientific simulations. Its key design principle is the separation of package knowledge bases from simulation workflows, so that simulation workflows in FermiLink, from figure-level simulations to full-paper-level research on high-performance computing clusters, operate uniformly among supported packages via a four-layer progressive disclosure mechanism. This agent harness is specifically optimized for high-performance computing (HPC) clusters, enabling multiday, multistep scientific simulations in the absence of human intervention. Using OpenAI Codex as the agent provider, the capabilities of FermiLink are demonstrated across approximately 50 scientific software packages spanning nine research domains from chemistry to engineering. Systematic benchmarks on 132 real-world figure-level reproduction tasks with 44 packages show that FermiLink reproduces 74 (56.1%) of published figures with simulations, among which 30 (22.7%) achieve high-fidelity agreement and 35 reach qualitative agreement with the target figures. A smaller set of human expert-guided reproduction benchmarks with 10 packages in physics and chemistry further highlights the importance of expert insights for improving the simulation fidelity. Beyond reproduction, a single-blinded study demonstrates that FermiLink can produce research-grade results on unpublished polariton physics problems when provided with sufficiently detailed research objectives. Overall, FermiLink provides a scalable research infrastructure that may accelerate the path from scientific questions to computational results across diverse domains.",
+   "authors": [
+    "Gang Meng",
+    "Andres Vargas",
+    "Xinwei Ji",
+    "Federico Garcia-Gaitan",
+    "Felipe Reyes-Osorio",
+    "Jalil Varela‐Manjarres",
+    "Yafei Ren",
+    "Mohammadhasan Dinpajooh"
+   ],
+   "url": "https://doi.org/10.1021/acs.jctc.6c01808",
+   "pdf": "https://arxiv.org/pdf/2604.03460",
+   "doi": "10.1021/acs.jctc.6c01808",
+   "venue": "Journal of Chemical Theory and Computation",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 5,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
    "id": "doi:10.1007/s10579-026-09955-3",
    "title": "Evaluating LLMs on Italian through multi-prompt: the Evalita-LLM benchmark",
    "abstract": "Abstract We present Evalita-LLM, a novel benchmark designed to evaluate Large Language Models (LLMs) on Italian tasks. The key innovation of Evalita-LLM is the use of multiple prompts for each task, which mitigates the model’s sensitivity to specific prompt formulations and ensures a robust and objective performance assessment. We propose an iterative methodology for selecting and validating multiple prompts, and metrics that capture both high performance and stability of a prompt given a set of LLMs. The resulting Evalita-LLM multi-prompt benchmark is based on ten native Italian tasks, eliminating translation issues and potential cultural biases. It includes a mix of multiple-choice and generative tasks, enabling more natural interactions with LLMs. We report experimental results from the benchmark’s development phase, along with performance statistics for several state-of-the-art LLMs. Evalita-LLM is publicly available with a leaderboard hosted on Hugging Face to support transparent evaluation and comparison of LLMs.",
@@ -1194,7 +1511,7 @@
     "Viviana Patti"
    ],
    "url": "https://doi.org/10.1007/s10579-026-09955-3",
-   "pdf": null,
+   "pdf": "https://link.springer.com/content/pdf/10.1007/s10579-026-09955-3.pdf",
    "doi": "10.1007/s10579-026-09955-3",
    "venue": "Language Resources and Evaluation",
    "source": "OpenAlex",
@@ -1208,6 +1525,147 @@
    "hub": "ai",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.1080/10447318.2026.2755127",
+   "title": "Evaluating AI Alignment in LLMs: Output Analysis of Value Priorities Across 75 Models with Human Benchmarking",
+   "abstract": "Large language models (LLMs) are increasingly used in human-AI interaction research and practice, yet existing capability and safety benchmarks reveal little about the value priorities these systems express or how those priorities correspond to human judgements. Across three studies, we introduce an output-based approach to evaluating one facet of AI alignment by treating LLM-generated text as behavioural data and comparing expressed value-priority profiles with a human reference. Study 1 used inductive qualitative analysis to derive six themes of optimal AI functioning, namely Performance, Adaptive Capacity, Social Good, Ethics and Responsibility, Relational Integration, and Agency. Study 2 showed that LLM outputs were highly stable within models and converged on a common value-priority structure across models, indicating reliable and comparable value profiles. Study 3 benchmarked 75 contemporary LLMs against 376 human respondents using a profile-fidelity metric capturing both the relative ordering of priorities and the calibration of between-priority differences. Although most models reproduced the human ordering of values, some systematically exaggerated the differences between them, showing that models can appear aligned on conventional benchmarks while still diverging from human value calibration. Profile fidelity varied substantially across models and did not consistently scale with size, recency, or capability tier. Both LLMs and humans converged on a deprioritisation of Agency, raising important questions about the development of increasingly agentic AI systems. For research and applied use, the six themes and profile-based metric provide a scalable method for auditing LLM value profiles before deployment in contexts where alignment with human priorities is critical.",
+   "authors": [
+    "Gabriel R. Lau",
+    "Wei Yan Low",
+    "Seow Min Koh",
+    "Fiona Fui-Hoon Nah",
+    "Andree Hartanto"
+   ],
+   "url": "https://doi.org/10.1080/10447318.2026.2755127",
+   "pdf": null,
+   "doi": "10.1080/10447318.2026.2755127",
+   "venue": "International Journal of Human-Computer Interaction",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 10,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.3389/feart.2026.1990976",
+   "title": "Editorial: Big data mining and artificial intelligence in earth science",
+   "abstract": "Artificial intelligence (AI) for geoscience uses intelligent algorithms to extract concealed patterns from big Earth data, enabling more accurate predictions and decisions in scientific discoveries and applications, such as Earth's evolution, geological modeling, environmental monitoring, hazard mitigation, and resource exploration (Zhou et al., 2018(Zhou et al., , 2026)). Its evolution has followed a clear paradigm transition-from early expert systems through data-driven machine learning, to the current physics-informed, knowledge-data dual-driven approaches (Zhou et al., 2018;Zuo et al., 2023;Cheng et al., 2025). This progression is not merely incremental; it is fundamentally reshaping geoscience by integrating big data analytics with machine learning algorithms, and in doing so, redefining the practices of many researchers and engineers in their daily work (Zuo et al., 2023;Zhou et al., 2026). This is the reason why this special topic issue comes to exist here. It is devoted to showcase recent advances in the research and application of AI across many geoscience disciplines. It highlights innovative methodologies in data science, machine learning, and 2 / 14 generative AI technologies that address the integration and interpretation of multidisciplinary geoscientific data.The special issue is also initiated to commemorates the 10th anniversary of the Committee on Artificial Intelligence and Big Data for Geosciences, established under the Chinese Society for Mineralogy, Petrology and Geochemistry in 2016, with Professor Zhou Yongzhang, then the awardee of the IAMG Felix Chayes Prize, as its inaugural Chair (Zhou et al., 2026). This marked the first organized effort in China to promote AI and big data research in mineralogy, petrology and geochemistry, and was among the earliest such professional bodies worldwide. In 2018, the committee published the textbook Big Data Mining and Machine Learning for Earth Science (Zhou et al., 2018). In April 2026, the 10th China Conference on Artificial Intelligence and Big Data for Geosciences was held at Hefei, drawing over 1,200 participants-a clear indicator of the rapidly growing interest in intelligent geoscience.Featuring 18 original contributions, this special issue focuses on three transformative areas: intelligent prospecting of solid metal deposits, intelligent sedimentary and reservoir evaluation, and intelligent prediction of Earth processes and geological systems. The methods span from conventional machine learning to deep learning, knowledge graphs, large language models (LLMs), and beyond, reflecting both the breadth and depth of current AI-driven geoscience research.The intelligent prospecting of solid metal deposits is revolutionizing mineral exploration through the integration of artificial intelligence, machine learning, and advanced remote sensing. These technologies synthesize extensive geological, geophysical, and geochemical datasets to identify concealed mineralization patterns with exceptional precision. Predictive algorithms refine target selection, thereby reducing drilling costs and minimizing environmental footprint. Real-time fusion of drone and satellite imagery enables dynamic 3D modeling of subsurface structures. This intelligent approach not only accelerates discovery rates but also mitigates risks in structurally complex terrains. Ultimately, such systems empower geologists to make data-driven decisions, transforming traditional exploration into a sustainable, efficient, and scientifically rigorous pursuit for securing critical metal resources. This collection showcases recent advances in intelligent prospecting for solid metal deposits, underscoring a paradigm shift toward data-driven, multi-method integration. Wang et al. (2026) improve the interpretability of convolutional neural networks by applying SHAP and partial dependence plots, revealing apparent resistivity as the primary controlling factor in iron ore mapping. Their case study focuses on the Yemaquan iron ore concentration area in Qinghai Province, northwestern China, and successfully delineates several high-potential targets within the region. Zhao et al. (2026) employ LLMs to rapidly construct knowledge graphs for tungsten deposits, thereby enhancing reasoning capabilities and facilitating the extraction of prospecting indicators. Their study centres on methodological innovations for efficient knowledge graph construction in the mineral resource domain, proposing an LLM-driven framework guided by domain-specific geological knowledge. The framework is applied to a case study at the Dajishan Tungsten Mine in China. The results demonstrate that the LLM-integrated knowledge graph not only substantially accelerates the speed and scale of information integration but also enables deeper extraction of prospecting insights, highlighting its strong application potential. Zeng et al. (2026) apply co-simulation (Plurigaussian + turning bands) to jointly model grade and lithology, capturing spatial uncertainty in gold deposits. The method explicitly captures both auto-correlations and cross-correlations between variables, enabling realistic spatial reproduction of orebody geometry and internal heterogeneity. Results show that the outputting three-dimensional stochastic models effectively represent the spatial anisotropy and variability of mineralization, accurately delineating orebody continuity and its lithological controls. Shan et al. (2026) combine FLAC3D numerical simulation with machine learning, integrating chemical reactions and strain to predict gold targets. The study selects the Sanshandao-Haiyu gold belt as a case study to investigate the integrated application of these two approaches for deep mineral exploration, which remains poorly understood. First, chemical reactions are incorporated into FLAC3D via a custom-developed program to calculate the mineralization rate. Subsequently, the authors employ machine learning techniques to integrate simulation outcomes (i.e., volumetric strain and mineralization rate) with fault morphology in different combinations, constructing four predictive models for comparative validation. Based on the predictions, two prospective targets are delineated. Gao et al. (2026) propose a CPA attention mechanism for cross-regional knowledge graphs, achieving high F1-scores in complex entity extraction. This study proposes a novel knowledge graph construction and application framework centered on a Content-Position Attention (CPA) mechanism. The resulting knowledge graph system enables intelligent information retrieval, multi-dimensional correlation analysis, and mineralization potential prediction, demonstrating its practical effectiveness in supporting cross-regional resource management and intelligent decision-making. It offers a replicable technical pathway for knowledge management and decision analysis in the mineral resource domain.Collectively, these studies demonstrate that intelligent systems-ranging from explainable deep learning and LLM-driven knowledge engineering to stochastic simulation and physics-informed machine learning-are making exploration more accurate, interpretable, and efficient, while addressing data heterogeneity and uncertainty in three-dimensional and cross-regional contexts.The intelligent evaluation of sedimentary reservoirs is revolutionizing hydrocarbon exploration through the integration of machine learning, deep learning, and automated seismic interpretation. These technologies synthesize multi-scale datasets-including well logs, core photographs, seismic attributes, and depositional analogs-to predict porosity, permeability, Collectively, these studies demonstrate that intelligent approaches-encompassing unsupervised deep learning, hybrid inversion, semantic-guided simulation, and augmented experimental data-substantially enhance predictive accuracy, geological interpretability, and uncertainty quantification. They enable rapid, automated, and reproducible workflows that minimize subjective bias and computational overhead, while offering robust frameworks for reservoir characterization, dynamic management, and exploration in complex, data-scarce settings.Intelligent prediction of Earth systems and geological processes is revolutionizing geoscience by integrating multi-source data, physics-informed modeling, and advanced machine learning. Satellite remote sensing, ground-based geophysical surveys, and real-time sensor networks generate vast spatiotemporal datasets that, when processed by convolutional and recurrent neural networks, enable increasingly accurate forecasting of earthquakes, volcanic eruptions, landslides, and surface deformation. Hybrid approaches that embed physical conservation laws into deep learning frameworks enhance generalization beyond purely statistical correlations, while uncertainty quantification through ensemble methods and Bayesian inference delivers robust risk assessments. For long-term geological evolution, generative models and digital twin simulations reconstruct paleoenvironments and project future changes in hydrology, erosion, and sediment transport under climate forcing. Automated pattern recognition in seismic waveforms, ground-penetrating radar, and borehole logs accelerates hazard mapping and resource characterization. These intelligent systems reduce subjective interpretation, enable near-real-time early warnings, and support sustainable land-use planning. By bridging observations, theory, and computation, they transform traditional qualitative geology into a quantitative, predictive, and adaptive science for mitigating natural risks and managing Earth's resources.In this collection, the intelligent prediction of Earth sciences and geological processes encompasses diverse applications-from groundwater and atmospheric CO₂ to reservoir characterization and rock mechanics-all unified by data-driven, hybrid, and interpretable methodologies. Li et al. (2026) Collectively, these studies demonstrate that intelligent prediction-via foundation models, bidirectional recurrent networks, physics-informed deep learning, ensemble algorithms, and optimized machine learning-strengthens accuracy, interpretability, and generalization under varied data constraints and across scales. They turn raw observations into actionable forecasts for resource management, carbon neutrality, geotechnical engineering, and hydrocarbon exploration, while prioritizing uncertainty quantification and feature importance analysis to build confidence and ensure practical relevance.Revealing prominent research frontiers and distinctive textures in AI for Geoscience, this special issue can serve as a valuable reference and the catalyst practitioners of data-intensive geoscience research. Nevertheless, we are aware that the papers do not comprehensively cover the entire field of AI in geoscience. Stepping back from a future vantage point, it is clear that many unresolved challenges remain, calling for persistent scientific investigation and innovation. Among them are included: Data heterogeneity and scarcity: Geoscientific data come from diverse sources (seismic, well logs, satellite, laboratory) with varying formats, resolutions, and quality. Many critical regions lack sufficient labeled samples, limiting the training of robust deep learning models and causing overfitting.Interpretability and trust: Deep learning models often act as \"black boxes,\" making it difficult for geologists to validate predictions against physical principles. This hinders adoption in high-stakes decisions like drilling or hazard warning, where explainability is as important as accuracy (Zuo et al., 2023).Generalization across space and time: A model trained on one mineral deposit, basin, or geological setting frequently fails when applied to another due to differing tectonic histories, lithologies, or fluid properties. Transfer learning and domain adaptation remain open problems in geosciences.Computational and operational costs: Processing large-scale 3D/4D datasets (e.g., full-waveform inversion, climate simulations) demands massive computing resources.Real-time deployment in field operations is often impractical, and energy consumption raises sustainability concerns.As we look ahead, greater scientific attention should be directed toward the following issues, all of which are essential to advancing AI for geoscience (Zuo et al., 2023;Cheng et al., 2025;Zhou et al., 2026).Physics-informed and hybrid modeling: Embedding physical conservation laws (mass, momentum, energy) into neural networks will produce predictions that are both data-driven and physically consistent, reducing data dependence and improving extrapolation capabilities.Foundation models for Earth systems: Large pre-trained models based on multi-modal Earth data (imagery, time series, text) can be fine-tuned for diverse downstream tasks-from mineral mapping to earthquake forecasting-to offer a unified intelligence backbone for geoscience.Real-time digital twins: Integrating AI with continuous sensor streams and high-performance computing will enable dynamic digital replicas of subsurface reservoirs, volcanic systems, or coastal zones, supporting near-real-time hazard response and adaptive resource management.Human-AI collaboration and democratization: Future systems will prioritize interactive visual analytics and natural language interfaces, allowing geologists to query, question, and refine AI outputs. Open-source platforms and cloud-based toolkits will lower barriers, fostering global collaboration and equitable access to intelligent geoscience.",
+   "authors": [
+    "Yongzhang Zhou",
+    "Xiaogang (Marshall) Ma",
+    "Renguang Zuo",
+    "Hui Yang"
+   ],
+   "url": "https://doi.org/10.3389/feart.2026.1990976",
+   "pdf": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2026.1990976/pdf",
+   "doi": "10.3389/feart.2026.1990976",
+   "venue": "Frontiers in Earth Science",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.3384/nejlt.2000-1533.2026.6658",
+   "title": "Cross-lingual consistency of large language models: a six-language ICD-11 coding benchmark and evaluation methodology",
+   "abstract": "Does a large language model (LLM) give the same label to the same content when that content is written in a different language? This cross-lingual consistency is not the same thing as accuracy, yet it has rarely been measured for tasks with a fixed label set. We present a benchmark and an evaluation method for it, using ICD-11 coding as the test case, in which a model reads an official disease definition and returns a code. The resource pairs 300 ICD-11 entities from 23 chapters with their official World Health Organization (WHO) definitions in English, Spanish, French, Chinese, Arabic and Russian. Because these are official translations, what the benchmark measures is consistency across the official ICD-11 language editions rather than pure language invariance. We grade predictions at four code levels, check every predicted code against the ICD-11 release, and measure agreement across languages with chapter-level Krippendorff’s alpha, treating the languages as raters. Across six current models (10,800 calls), chapter accuracy ranged from 14.3% to 83.6%, or from 9.3% to 63.2% if codes that do not exist in ICD-11 are counted as wrong, and chapter-level alpha from 0.48 to 0.92. The two measures did not always move together. One model was fairly consistent (alpha = 0.71) but reached the correct chapter in only 24% of cases, and on the items where all six languages agreed it was wrong twice as often as right. A repeated-sampling control showed that the differences between languages are larger than run-to-run variation. Agreement across languages alone cannot show that a model is correct, and we argue that both properties should be reported, at the same granularity, for any multilingual system that chooses from a fixed label set. The item set, prompts, scoring code and per-call logs are released.",
+   "authors": [
+    "Hiroyuki Tajima"
+   ],
+   "url": "https://doi.org/10.3384/nejlt.2000-1533.2026.6658",
+   "pdf": null,
+   "doi": "10.3384/nejlt.2000-1533.2026.6658",
+   "venue": "Northern European Journal of Language Technology",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.1186/s41073-026-00265-4",
+   "title": "Construction, editorial practice, and AI-assisted evaluation of the Chinese Medical Research Reporting Specification Checklist System",
+   "abstract": "With the development of academic publishing and the iteration of artificial intelligence (AI) technology, the submission volume of Chinese journals has been increasing continuously, which imposes an increasingly heavy workload for peer review, editorial processing, and proofreading in academic journals. This study aimed to construct a localized, easy-to-operate, and efficient Chinese Medical Research Reporting Specification Checklist System (referred to as the Disclosure Checklist), apply it to editorial practice, and explore the accuracy, consistency and stability of AI Large Language Models (LLM) in the review of disclosure items. Based on the 10 core reporting checklists of the guidelines from the EQUATOR Network, we optimized them using the Delphi expert consultation method to better adapt to the Chinese context, and classified their recommendation levels using a 5-point Likert scale, and finally optimized into 9 types. The Kimi 2.5 fast model was used to review the reporting items in the original manuscripts and published manuscripts of two journals, and the paired t -test and Wilcoxon signed-rank test were used to compare the improvement in reporting completeness between the two versions of manuscripts. Different research types of papers were selected and independently reviewed three times by the Kimi 2.5 fast model. The Friedman test was used to compare overall accuracy across the three review rounds, with post-hoc pairwise comparisons performed using the Wilcoxon signed-rank test at the level of study-design categories, and the Krippendorff's Alpha, and Gwet's AC1 tests were used to assess the consistency and stability of the three sets of results. R version 4.5.2 was used for statistical analysis. A total of 9 types of Chinese medical research reporting guideline checklists were optimized, including 281 items. The evaluation of 115 articles published after revision using the 8 types of checklists (meta analysis checklist was excluded) revealed that reporting quality scores were 4.12 points (95% CI: 3.42–4.82) higher in the published version than in the original manuscript, with the lower confidence limit indicating a minimum improvement of 3.42 points, a difference that is clinically meaningful for editorial quality assessment [Cohen's d = 1.08, Rosenthal's r = 0.736(0.639, 0.810)]. The Kimi 2.5 fast model reviewed 900 checklist disclosure items across 8 types of biomedical papers, with manual verification. The overall accuracy of the three rounds of review ranged from 72.67% to 75.78%, and did not differ significantly across rounds, while Krippendorff's Alpha was 0.635 (95% CI: 0.602–0.669), and Gwet's AC1 was 0.663 (95% CI: 0.631–0.691), all falling within the \"moderate-to-substantial\" agreement range. The Kimi 2.5 fast model shows certain potential in assisting the review of disclosure items in Chinese medical research articles, but optimization for error-prone items to further improve accuracy and consistency is still required. This study provides support for the future development of domain-specific intelligent agents for disclosure checklist review in Chinese medical journals. It is expected that in the near future, stable, accurate and reliable review AI models can be embedded into journal submission and peer review systems, so as to improve editorial efficiency, reduce the workload of reviewers, and enhance the transparency and quality of papers.",
+   "authors": [
+    "Ming Ni",
+    "Qiang Zou",
+    "Xiaoyu Wang",
+    "周昆",
+    "Linhui Wang",
+    "Erliang Wang",
+    "Yiren Zhang",
+    "Xiufeng Zhang"
+   ],
+   "url": "https://doi.org/10.1186/s41073-026-00265-4",
+   "pdf": null,
+   "doi": "10.1186/s41073-026-00265-4",
+   "venue": "Research Integrity and Peer Review",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.1145/3847352.3848108",
+   "title": "Beyond the Syntax: Do Security Experts Trust LLMs for NIDS Rule Engineering?",
+   "abstract": "As network threats evolve, manual Network Intrusion Detection Systems (NIDS) rule engineering has become a critical operational bottleneck. While Large Language Models (LLMs) show promise for automating this process, their ability to produce production-ready rules remains unvalidated. This paper presents a human-centered investigation into LLM-based NIDS rule engineering, formalizing a context-aware generation framework and evaluating it through an exploratory user study with 10 domain experts. Our evaluation reveals a syntax-semantics paradox: although LLMs generate syntactically correct rules, experts find them only partially practically useful due to low specificity and logic hallucinations in 12% of cases. While the system received a favorable SUS score of 67, practitioners remain skeptical of its autonomous capabilities, viewing LLMs as support tools for drafting and verification rather than independent generators. Finally, our statistical analysis indicates that while large-scale models (≥ 70B) consistently produce syntactically valid rules, small models (≤ 4B) are largely ineffective for IDS rule generation.",
+   "authors": [
+    "Lorenzo Di Filippo",
+    "Enkeleda Bardhi",
+    "Andrea Agiollo",
+    "Alessandro Palma",
+    "Silvia Bonomi",
+    "Fernando A. Kuipers"
+   ],
+   "url": "https://doi.org/10.1145/3847352.3848108",
+   "pdf": null,
+   "doi": "10.1145/3847352.3848108",
+   "venue": "ACM Workshop on Artificial Intelligence and Security (AISec)",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 2,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
    "week": "2026-W46"
   },
   {
@@ -1235,6 +1693,80 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.1145/3842572",
+   "title": "ABACUS: Adapting Unified Foundation Model for Count Image Understanding and Generation",
+   "abstract": "We present ABACUS, a unified vision-language model that jointly addresses object counting, crowd counting, referring-expression counting, and count-faithful image generation within a single 3B-parameter model. ABACUS introduces three contributions: density-aware adaptive zooming paired with an objectness map from multi-head self-attention decomposition to spatially ground count predictions; a boundary-aware count policy trained via GRPO with nested local, boundary, and global rewards to eliminate over- and undercounting at crop boundaries; and a cycle-consistent GRPO strategy in which the frozen understanding branch scores generated candidates on count-deviation and aesthetic quality, closing the understanding-generation synergy gap without any external critic or annotation. ABACUS achieves state-of-the-art results across seven benchmarks spanning object counting (FSC-147, CARPK), crowd counting (ShanghaiTech A/B), referring-expression counting (REC-8K), count-faithful generation (CoCo-Count, T2I-CompBench, GenEval), and count reasoning (CountQA), surpassing both task-specific specialists and larger generalist models. Project page is at https://mondalanindya.github.io/pages/ABACUS/.",
+   "authors": [
+    "Anindya Mondal",
+    "Sauradip Nag",
+    "Anjan Dutta"
+   ],
+   "url": "https://doi.org/10.1145/3842572",
+   "pdf": null,
+   "doi": "10.1145/3842572",
+   "venue": "ACM Transactions on Graphics",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.5281/zenodo.24064868",
+   "title": "A plane bipartite graph whose only Fries structure is not a Clar structure",
+   "abstract": "A plane bipartite graph whose only Fries structure is not a Clar structure. A perfect matching of a plane bipartite graph makes a bounded face alternating when the face's boundary edges alternate between matched and unmatched; the Fries number is the most alternating faces in one perfect matching, and the Clar number the most pairwise vertex-disjoint alternating faces in one perfect matching. Bérczi-Kovács and Frank (Discrete Mathematics, 2024) write that the conjecture that a plane graph has a largest Clar set extending to a largest Fries set is still open for general perfectly matchable bipartite plane graphs. This record gives a counterexample: an 11-square polyomino (two vertical bars of four squares joined by a horizontal bar of five) with 116 perfect matchings, Fries number 8 reached by exactly one perfect matching whose alternating squares contain at most 4 pairwise disjoint ones, and Clar number 5. check_fries_clar.py verifies this by listing every perfect matching. Claude (Anthropic), a large language model, assisted this work under my direction: it wrote and ran the search and checking code, checked the results and the literature, and assisted with the writing throughout; the text is my own and I take full responsibility for it.",
+   "authors": [
+    "Tyler Satchel Orden"
+   ],
+   "url": "https://doi.org/10.5281/zenodo.24064868",
+   "pdf": null,
+   "doi": "10.5281/zenodo.24064868",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.5281/zenodo.24084962",
+   "title": "A Deep Digital Multilayer Processor Architecture with Projection-Enforced Manifold Admissibility",
+   "abstract": "Fully Digital Implementation: The architecture shifts from analog memristive crossbars to standard-cell digital CMOS logic, eliminating analog thermal drift, write-endurance wear, and process-voltage-temperature variations while ensuring strict bit-level determinism. Low-Rank Factorized Projection: By projecting input vectors onto the ten-dimensional physical symmetry manifold using a two-stage matrix decomposition, the processor slashes multiplier logic by over forty times compared to full dense evaluation while maintaining single-cycle execution. Synchronous Digital Shunt-on-Error: A parallel subtraction tree continuously calculates the geometric distance between the current state and the admissible manifold, instantly clearing the pipeline and suppressing invalid data if noise or corruption exceeds the safety threshold. Exact Integer Arithmetic Unit: Floating-point units are completely replaced by dual-integer datapaths operating over an algebraic integer ring, using hardwired shift-and-add logic to execute exact complex algebra with zero mantissa rounding, no denormal stalls, and zero numerical drift over arbitrary run lengths. Multilayer Associative Memory: High-speed on-chip spline lookup tables combined with a high-order polynomial associative memory engine trap computational states into discrete topological basins, storing hundreds of millions of distinct patterns without crosstalk or hallucination. Bufferless Direct Interconnect: Processing nodes communicate across an eight-hundred-sixty-one lane direct static mesh with eighty dedicated connections per node, achieving an aggregate throughput exceeding twenty-seven terabits per second with zero packet collision, no arbitration logic, and identical median and tail latencies. Symmetrical Phase Clocking: Die-wide timing is locked across seventy-two discrete sectors via a circulating shift-register ring and balanced distribution tree, suppressing phase jitter and eliminating clock skew across large silicon areas. Silicon Profile: Designed for modern four-nanometer fabrication, a monolithic core integrates roughly forty million standard gates onto an area of approximately eleven square millimeters, operating at eighteen watts under standard cooling solutions.",
+   "authors": [
+    "Michael Aksman"
+   ],
+   "url": "https://doi.org/10.5281/zenodo.24084962",
+   "pdf": null,
+   "doi": "10.5281/zenodo.24084962",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "published": "2026-11-09T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "vlsi",
+   "topics": [
+    "interconnects",
+    "reliability",
+    "vlsi"
+   ],
+   "hub": "device",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
    "week": "2026-W46"
   },
   {
@@ -1487,13 +2019,13 @@
     "Yew Hoong Wong"
    ],
    "url": "https://doi.org/10.1002/mawe.70185",
-   "pdf": null,
+   "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mawe.70185",
    "doi": "10.1002/mawe.70185",
    "venue": "Materialwissenschaft und Werkstofftechnik",
    "source": "OpenAlex",
    "published": "2026-11-08T00:00:00Z",
    "cited_by": 0,
-   "search_topic": "packaging",
+   "search_topic": "interconnects",
    "topics": [
     "interconnects",
     "packaging",
@@ -1783,6 +2315,34 @@
    "week": "2026-W45"
   },
   {
+   "id": "doi:10.68744/dqs8cp53/ch11",
+   "title": "From Immersion to Investment: A Framework for Measuring ROI in Metaverse and AI Chatbot Engagement",
+   "abstract": "Business investment in the metaverse and chatbots powered by artificial intelligence is on the rise, as companies believe that the incorporation of immersive digital experiences into business offerings represents the next evolution of engage via customer engagement. However, current monitoring practices for businesses’ investments are lacking, if any analytical rigor has been exercised, to evaluate the Return On Investment (ROI) for these kinds of investments. This chapter will fill that void. Utilizing a systematic review of the literature regarding consumer engagement, digital marketing, and analytics; and documenting case examples from retail, financial services, and entertainment sectors, this chapter establishes a structure by which to evaluate the return on investment for immersive, digital experiences provided by companies using artificial intelligence-powered chatbots and through metaverse environments through the Metaverse Engagement Return on Investment Framework (MEROI-F). The MEROI-F is an organized metric framework for measuring a company's investment in AI chatbots and the metaverse against a defined set of returns-engagements, across three layers of analysis: input measurements, engagement measurements, and outcome measurements. This chapter also includes an analytical taxonomy containing forty-two key performance indicators (KPIs) classified according to the measurement domain in which they sit, the time horizon for which they are relevant, and the overall strategic objective of the measurement. The conclusion of this chapter is that the measurement gap is not necessarily due to a lack of data; however, due to the existing model of business today, many companies have far more datapoints relevant to their engagement efforts than they are using; but that the problems with measurement are largely conceptual and have to do with governance; specifically, that there is no agreement among business on what constitutes engagement value, nor a common framework for establishing how to connect engagement value back to the financial measures that matter for an organization.",
+   "authors": [
+    "Omar A. Guirette-Barbosa",
+    "Selene Castañeda-Burciaga",
+    "Martha Angélica Ramírez Salazar",
+    "Lizette Caldera-García",
+    "Stawrofila Martínez Tejada"
+   ],
+   "url": "https://doi.org/10.68744/dqs8cp53/ch11",
+   "pdf": "https://revista.ucide.com.mx/index.php/nexos/article/download/13/11/47",
+   "doi": "10.68744/dqs8cp53/ch11",
+   "venue": "",
+   "source": "OpenAlex",
+   "published": "2026-11-08T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "sram",
+   "topics": [
+    "industry",
+    "sram"
+   ],
+   "hub": "device",
+   "companies": [],
+   "first_seen": "2026-11-10T15:28:12Z",
+   "week": "2026-W45"
+  },
+  {
    "id": "doi:10.55670/fpll.futech.5.4.4",
    "title": "Evaluating human-like chatbot interaction in customer service: integrating anthropomorphism and conversational capability",
    "abstract": "The development of artificial intelligence (AI)-based technology has driven the development of rule-based chatbots into AI-based chatbots. This development is used by various companies to use AI chatbots as the frontline of customer service. Meeting user expectations for AI chatbots requires an evaluation model to measure chatbot quality. Based on the literature, chatbot evaluation models still focus solely on technical quality, even as AI chatbots are evolving towards human-like services. This research will explore the integration of the technical dimensions of information system success with a new dimension, namely Human-Like Chatbot Interaction (HLCI) as a higher-order construct of anthropomorphism and conversational capability. This quantitative study uses an explanatory research approach. Data were collected through a cross-sectional survey of users of the Veronika chatbot, owned by Telkomsel, an Indonesian telecommunications company. A total of 213 respondents had data ready for analysis using the Partial Least Squares Structural Equation Modeling (PLS-SEM) method in SmartPLS 4, namely the measurement model and structural model tests. The analysis results show that service quality is not significantly related to user satisfaction but has a direct effect on trust. Meanwhile, information quality, system quality, and human-like chatbot interaction are positively related to trust and user satisfaction. Trust and user satisfaction are positively related to intention to continue using. The results of this study can contribute both theoretically and practically to modern AI chatbot quality evaluation models.",
@@ -1859,6 +2419,35 @@
    "hub": "ai",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W45"
+  },
+  {
+   "id": "doi:10.31224/8750",
+   "title": "Design and ASIC Implementation of an Edge-AI SoC Subsystem for Detecting Driver Unresponsiveness and Requesting a Minimum Risk Manoeuvre",
+   "abstract": "Driver drowsiness and loss of responsiveness are major causes of road accidents, and a warning buzzer alone cannot protect a vehicle whose driver has stopped responding. This paper presents a digital hardware subsystem for Advanced Driver Assistance Systems (ADAS) that takes precomputed class scores (logits) from an upstream Convolutional Neural Network (CNN), judges their reliability, cross-checks them with an independent fatigue indicator, and escalates from a warning to a Minimum Risk Manoeuvre (MRM) request if the driver does not respond. The design contains a CNN confidence unit, a PERCLOS-inspired fatigue unit using a 32-frame sliding window, a safety arbiter and a risk-adaptive finite state machine (FSM) whose response timeout shortens as obstacle and lane-drift risk rises. The Verilog RTL was verified with a 12-scenario testbench in Synopsys VCS and Verdi. Synthesis with Synopsys Design Compiler on the SAED32 library at a 4 ns clock (250 MHz) gave 582 cells, a total cell area of 1726.40 units, 195.69 µW dynamic power and a setup slack of 0.00 ns. A Synopsys IC Compiler II analysis reported 667 cells and 79.38% core utilization. These are pre-layout and placement-stage estimates, and their limitations are stated explicitly.",
+   "authors": [
+    "N Subhashini",
+    "Varsha V R",
+    "Roobashri S",
+    "SanjeyKrishna V"
+   ],
+   "url": "https://doi.org/10.31224/8750",
+   "pdf": "https://engrxiv.org/preprint/download/8750/14183/12390",
+   "doi": "10.31224/8750",
+   "venue": "",
+   "source": "OpenAlex",
+   "published": "2026-11-08T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "vlsi",
+   "topics": [
+    "reliability",
+    "vlsi"
+   ],
+   "hub": "device",
+   "companies": [
+    "Synopsys"
+   ],
+   "first_seen": "2026-11-10T15:28:12Z",
    "week": "2026-W45"
   },
   {
@@ -4569,6 +5158,34 @@
    "week": "2026-W45"
   },
   {
+   "id": "doi:10.48550/arxiv.2611.08399",
+   "arxiv_id": "2611.08399",
+   "title": "Scaling Up Analog CIM: A Simulation Framework for Topology-Aware Mapping",
+   "abstract": "Analog compute-in-memory (CIM) enables energy-efficient AI inference by performing in-situ matrix multiplication. The growing demand for deploying larger models motivates chiplet integration to expand CIM capacity. However, simulation abstractions based on local operator costs and aggregate communication metrics obscure the impact of weight-mapping topology when CIM system scales up. We develop a phase analysis that quantifies how strongly mapping topology affects system performance across hardware configurations and how mapping optimization translates into latency gains. To evaluate and exploit this design space, we present Isobar, a simulation platform integrating CIM decompositions, heterogeneous execution, and resource modeling. Validated against silicon measurements and cycle-accurate simulation, Isobar provides reliable cost estimates that enable effective mapping search across model and hardware configurations. For Gemma-7B prefill, Isobar-guided mapping reduces communication time by 23.3% and end-to-end latency by 18.6% relative to the strongest baseline. Isobar's system-level modeling show that analog CIM retains energy-efficiency potential relative to GPU when scaled to thousands of dies, and identify topology-aware mapping as a key design dimension for efficient execution.",
+   "authors": [
+    "Yuxin Ren",
+    "Danella Zhao",
+    "Huanrui Yang"
+   ],
+   "url": "https://arxiv.org/abs/2611.08399",
+   "pdf": "https://arxiv.org/pdf/2611.08399v1",
+   "doi": null,
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "published": "2026-11-05T18:11:00Z",
+   "search_topic": "packaging",
+   "topics": [
+    "emerging-memory",
+    "packaging",
+    "vlsi"
+   ],
+   "hub": "device",
+   "companies": [],
+   "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W45",
+   "image": "https://arxiv.org/html/2611.08399/2611.08399v1/fig2_platform.png"
+  },
+  {
    "id": "arxiv:2611.08147",
    "arxiv_id": "2611.08147",
    "title": "MCUFlowNet: Hardware-Aware Neural Architecture Search for Optical Flow on Microcontrollers",
@@ -4623,6 +5240,38 @@
    "hub": "ai",
    "companies": [],
    "image": "https://arxiv.org/html/2611.07707/2611.07707v1/paper_overview_v4.png",
+   "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W45"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.07506",
+   "arxiv_id": "2611.07506",
+   "title": "Memory Fit: Architectural Support for Page Placement by Learning Models of Good Behavior",
+   "abstract": "Server main memory is increasingly heterogeneous, incorporating technologies such as zswap, CXL memory expanders, and emerging phase-change memories (PCM). To decide where to place pages, operating systems have to choose between efficient but coarse-grained access bits, out-of-band profiling, or costly runtime instrumentation. This paper proposes memory fit, a hardware abstraction that provides precise and accurate page placement information to an operating system. Memory fit measures how well a page \"fits\" each type of memory in the system. Memory fit separates the mechanism of measuring affinity between pages and memories from the OS policy of choosing which pages to move when. The paper describes soft trace matching (STM), a computationally and space efficient algorithm to compute memory fit. The key technical insight behind STM is that it can estimate memory fit by comparing accesses to a page with a learned model of \"good\" traces for a memory. We have implemented memory fit and STM in a BOOMv3 RISC-V processor running Linux 6.6. On extended GUPS, memory fit placements recover 2.2-3.8 times as much of the performance gap to optimal placement as Linux TPP. For Redis with equal DRAM and PCM capacities, placements selected by memory fit recover 80% of the performance gap, versus 19% for TPP, in a placement replay. Memory fit requires only 64 bits of state per 4 KiB page and can be updated on every main-memory access with only a 1.2% overhead of OS kernel notification processing.",
+   "authors": [
+    "Chun Deng",
+    "Hui Sub Shim",
+    "Evan Laufer",
+    "Anna Eaton",
+    "David Tennenhouse",
+    "Tsachy Weissman",
+    "Philip Levis"
+   ],
+   "url": "https://arxiv.org/abs/2611.07506",
+   "pdf": "https://arxiv.org/pdf/2611.07506v1",
+   "doi": null,
+   "venue": "arXiv cs.OS",
+   "source": "arXiv",
+   "published": "2026-11-05T06:10:55Z",
+   "search_topic": "dram",
+   "topics": [
+    "dram",
+    "emerging-memory",
+    "vlsi"
+   ],
+   "hub": "device",
+   "companies": [],
+   "image": "https://arxiv.org/html/2611.07506/2611.07506v1/redis-memory-fit.png",
    "first_seen": "2026-11-10T10:18:14Z",
    "week": "2026-W45"
   },
@@ -4936,7 +5585,7 @@
    "source": "OpenAlex",
    "published": "2026-11-05T00:00:00Z",
    "cited_by": 0,
-   "search_topic": "dram",
+   "search_topic": "emerging-memory",
    "topics": [
     "dielectrics",
     "dram",
@@ -4969,33 +5618,6 @@
    "topics": [
     "emerging-memory",
     "reliability"
-   ],
-   "hub": "device",
-   "companies": [],
-   "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45"
-  },
-  {
-   "id": "doi:10.48550/arxiv.2611.08399",
-   "title": "Scaling Up Analog CIM: A Simulation Framework for Topology-Aware Mapping",
-   "abstract": "Analog compute-in-memory (CIM) enables energy-efficient AI inference by performing in-situ matrix multiplication. The growing demand for deploying larger models motivates chiplet integration to expand CIM capacity. However, simulation abstractions based on local operator costs and aggregate communication metrics obscure the impact of weight-mapping topology when CIM system scales up. We develop a phase analysis that quantifies how strongly mapping topology affects system performance across hardware configurations and how mapping optimization translates into latency gains. To evaluate and exploit this design space, we present Isobar, a simulation platform integrating CIM decompositions, heterogeneous execution, and resource modeling. Validated against silicon measurements and cycle-accurate simulation, Isobar provides reliable cost estimates that enable effective mapping search across model and hardware configurations. For Gemma-7B prefill, Isobar-guided mapping reduces communication time by 23.3% and end-to-end latency by 18.6% relative to the strongest baseline. Isobar's system-level modeling show that analog CIM retains energy-efficiency potential relative to GPU when scaled to thousands of dies, and identify topology-aware mapping as a key design dimension for efficient execution.",
-   "authors": [
-    "Yuxin Ren",
-    "Danella Zhao",
-    "Huanrui Yang"
-   ],
-   "url": "https://arxiv.org/abs/2611.08399",
-   "pdf": "https://arxiv.org/pdf/2611.08399",
-   "doi": "10.48550/arxiv.2611.08399",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
-   "published": "2026-11-05T00:00:00Z",
-   "cited_by": 0,
-   "search_topic": "emerging-memory",
-   "topics": [
-    "emerging-memory",
-    "packaging",
-    "vlsi"
    ],
    "hub": "device",
    "companies": [],
@@ -5285,39 +5907,6 @@
    ],
    "hub": "device",
    "companies": [],
-   "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45"
-  },
-  {
-   "id": "doi:10.48550/arxiv.2611.07506",
-   "title": "Memory Fit: Architectural Support for Page Placement by Learning Models of Good Behavior",
-   "abstract": "Server main memory is increasingly heterogeneous, incorporating technologies such as zswap, CXL memory expanders, and emerging phase-change memories (PCM). To decide where to place pages, operating systems have to choose between efficient but coarse-grained access bits, out-of-band profiling, or costly runtime instrumentation. This paper proposes memory fit, a hardware abstraction that provides precise and accurate page placement information to an operating system. Memory fit measures how well a page \"fits\" each type of memory in the system. Memory fit separates the mechanism of measuring affinity between pages and memories from the OS policy of choosing which pages to move when. The paper describes soft trace matching (STM), a computationally and space efficient algorithm to compute memory fit. The key technical insight behind STM is that it can estimate memory fit by comparing accesses to a page with a learned model of \"good\" traces for a memory. We have implemented memory fit and STM in a BOOMv3 RISC-V processor running Linux 6.6. On extended GUPS, memory fit placements recover 2.2-3.8 times as much of the performance gap to optimal placement as Linux TPP. For Redis with equal DRAM and PCM capacities, placements selected by memory fit recover 80% of the performance gap, versus 19% for TPP, in a placement replay. Memory fit requires only 64 bits of state per 4 KiB page and can be updated on every main-memory access with only a 1.2% overhead of OS kernel notification processing.",
-   "authors": [
-    "Chun Deng",
-    "Hui Sub Shim",
-    "Evan Laufer",
-    "Anna Eaton",
-    "David L. Tennenhouse",
-    "Tsachy Weissman",
-    "Philip Levis"
-   ],
-   "url": "https://arxiv.org/abs/2611.07506",
-   "pdf": "https://arxiv.org/pdf/2611.07506",
-   "doi": "10.48550/arxiv.2611.07506",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
-   "published": "2026-11-05T00:00:00Z",
-   "cited_by": 0,
-   "search_topic": "emerging-memory",
-   "topics": [
-    "dram",
-    "emerging-memory",
-    "vlsi"
-   ],
-   "hub": "device",
-   "companies": [],
-   "arxiv_id": "2611.07506",
-   "image": "https://arxiv.org/html/2611.07506/2611.07506v1/redis-memory-fit.png",
    "first_seen": "2026-11-10T10:18:14Z",
    "week": "2026-W45"
   },
@@ -8965,7 +9554,7 @@
    "source": "OpenAlex",
    "published": "2026-10-28T00:00:00Z",
    "cited_by": 0,
-   "search_topic": "logic-devices",
+   "search_topic": "materials",
    "topics": [
     "logic-devices",
     "materials",
