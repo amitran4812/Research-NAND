@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T13:02:11Z",
+ "updated": "2026-11-10T13:07:32Z",
  "items": [
   {
    "id": "doi:10.5281/zenodo.23505771",
@@ -1322,9 +1322,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T13:02:09Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.5281/zenodo.24062686",
@@ -6705,9 +6705,9 @@
    "hub": "device",
    "companies": [],
    "arxiv_id": "2611.04144",
+   "image": "https://arxiv.org/html/2611.04144/2611.04144v1/fig4a_qwen35_1dgx.png",
    "first_seen": "2026-11-10T13:02:09Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.04144/2611.04144v1/fig4a_qwen35_1dgx.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.21227/22tq-yv29",
