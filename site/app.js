@@ -3,9 +3,9 @@
   "use strict";
 
   var D = { meta: null, news: [], papers: [], market: null, learn: null, insights: null, venues: null };
-  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false };
+  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false, newsSection: "all", newsRegion: "india" };
   try { state.cat = localStorage.getItem("dh-cat") || "all"; } catch (e) {}
-  var DEVICE_ROUTES = ["home", "news", "research", "radar", "publish", "events"];
+  var DEVICE_ROUTES = ["home", "news", "research", "radar", "learn", "publish", "events"];
   var app = document.getElementById("app");
 
   // ------------------------------------------------------------------ helpers
@@ -278,13 +278,56 @@
     app.innerHTML = h;
   }
 
-  function newsBlock(hub, cat, searchId) {
+  var REGIONS = [["india", "India", "Stories connected to India, from any outlet"], ["international", "International", "Global industry and research news"]];
+  function regionOf(n) { return n.region || "international"; }
+  var SECTIONS = [["all", "All news"], ["tech", "Technology & R&D"], ["market", "Market & business"], ["general", "Industry & other"]];
+  function sectionOf(n) { return n.section || "general"; }
+  function sectionChips(items) {
+    var c = { all: items.length, tech: 0, market: 0, general: 0 };
+    items.forEach(function (n) { c[sectionOf(n)]++; });
+    return '<div class="controls section-tabs"><div class="chips">' + SECTIONS.map(function (x) { return chip(x[1], x[0], state.newsSection === x[0], "newssec", c[x[0]]); }).join("") + "</div></div>";
+  }
+  // Market tab header: how much is happening, who it is about, what is expected next, and today's movers.
+  var OUTLOOK = /\b(forecast|outlook|expect|expected|guidance|projected|will|by 20\d\d|20(2[7-9]|3\d)|future|next year|demand)\b/i;
+  function marketSummary(items) {
+    var week = Date.now() - 7 * 86400000;
+    var recent = items.filter(function (n) { return new Date(n.published || 0).getTime() > week; });
+    var comp = {};
+    recent.forEach(function (n) { (n.companies || []).forEach(function (c) { comp[c] = (comp[c] || 0) + 1; }); });
+    var top = Object.keys(comp).sort(function (a, b) { return comp[b] - comp[a]; }).slice(0, 6);
+    var outlook = items.filter(function (n) { return OUTLOOK.test(n.title); }).slice(0, 5);
+    var q = (D.market && D.market.quotes) || [];
+    var movers = q.filter(function (x) { return x.change_pct != null; }).slice().sort(function (a, b) { return Math.abs(b.change_pct) - Math.abs(a.change_pct); }).slice(0, 5);
+    var h = '<div class="mkt-summary fade-in">';
+    h += '<div class="card pad mkt-stat"><div class="eyebrow">This week</div><div class="big">' + recent.length + '</div><p class="small muted">market & business stories</p>' +
+      (top.length ? '<div class="tags">' + top.map(function (c) { return '<button type="button" class="tag topic co" data-company="' + esc(c) + '">' + esc(c) + " · " + comp[c] + "</button>"; }).join("") + "</div>" : "") + "</div>";
+    h += '<div class="card pad mkt-outlook"><div class="eyebrow">What\'s expected next</div>' + (outlook.length ? "<ul>" + outlook.map(function (n) {
+      return "<li>" + ext(n.url, n.title) + ' <span class="muted small">' + esc(n.source) + " · " + esc(timeAgo(n.published)) + "</span></li>";
+    }).join("") + "</ul>" : '<p class="small muted">No forecast or outlook stories right now.</p>') + "</div>";
+    if (movers.length) h += '<div class="card pad mkt-movers"><div class="eyebrow">Today\'s share movers</div><table class="market"><tbody>' + movers.map(function (x) {
+      return "<tr><td><b>" + esc(x.name) + '</b></td><td class="num ' + (x.change_pct >= 0 ? "up" : "down") + '">' + (x.change_pct >= 0 ? "+" : "") + x.change_pct.toFixed(2) + "%</td></tr>";
+    }).join("") + "</tbody></table></div>";
+    return h + "</div>";
+  }
+  function newsBlock(hub, cat, searchId, withSections) {
     var items = D.news.filter(function (n) { return n.hub === hub && inCat(n, cat); });
+    var pre = "";
+    if (withSections) {
+      var rc = { india: 0, international: 0 };
+      items.forEach(function (n) { rc[regionOf(n)]++; });
+      pre = '<div class="region-tabs fade-in" role="tablist">' + REGIONS.map(function (r) {
+        return '<button type="button" class="region' + (state.newsRegion === r[0] ? " active" : "") + '" data-newsreg="' + r[0] + '"><b>' + esc(r[1]) + '</b><span>' + esc(r[2]) + '</span><i>' + rc[r[0]] + "</i></button>";
+      }).join("") + "</div>";
+      items = items.filter(function (n) { return regionOf(n) === state.newsRegion; });
+      pre += sectionChips(items);
+      if (state.newsSection !== "all") items = items.filter(function (n) { return sectionOf(n) === state.newsSection; });
+      if (state.newsSection === "market" && items.length) pre += marketSummary(items);
+    }
     var companies = {};
     items.forEach(function (n) { (n.companies || []).forEach(function (c) { companies[c] = (companies[c] || 0) + 1; }); });
     if (state.newsCompany && !companies[state.newsCompany]) state.newsCompany = "";
     var shown = items.filter(function (n) { return (!state.newsCompany || (n.companies || []).indexOf(state.newsCompany) !== -1) && matches(n, state.newsQuery); });
-    var h = '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search headlines, companies, sources…" value="' + esc(state.newsQuery) + '" aria-label="Search news">';
+    var h = pre + '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search headlines, companies, sources…" value="' + esc(state.newsQuery) + '" aria-label="Search news">';
     var cnames = Object.keys(companies).sort(function (a, b) { return companies[b] - companies[a]; });
     if (cnames.length) {
       h += '<select id="company-filter" aria-label="Filter by company"><option value="">All companies</option>' +
@@ -292,18 +335,27 @@
     }
     h += "</div>";
     if (!D.news.length) return h + noData();
-    return h + (shown.length ? '<div class="grid-news">' + shown.slice(0, 150).map(newsCard).join("") + "</div>" : empty("No stories in this category right now. Try <b>All</b> or another topic."));
+    return h + (shown.length ? '<div class="grid-news">' + shown.slice(0, 150).map(newsCard).join("") + "</div>" : empty(state.newsRegion === "india" && withSections ? "No India stories here yet. New ones arrive with each update; meanwhile try <b>International</b> or another topic." : "No stories here right now. Try <b>All</b> or another topic."));
   }
   function bindNews(rerender, searchId) {
     bindSearch(searchId, "newsQuery", rerender);
     var sel = document.getElementById("company-filter");
     if (sel) sel.addEventListener("change", function () { state.newsCompany = sel.value; rerender(); });
+    Array.prototype.forEach.call(app.querySelectorAll("[data-newsreg]"), function (b) {
+      b.addEventListener("click", function () { state.newsRegion = b.getAttribute("data-newsreg"); state.newsCompany = ""; rerender(); });
+    });
+    Array.prototype.forEach.call(app.querySelectorAll("[data-newssec]"), function (b) {
+      b.addEventListener("click", function () { state.newsSection = b.getAttribute("data-newssec"); state.newsCompany = ""; rerender(); });
+    });
+    Array.prototype.forEach.call(app.querySelectorAll("[data-company]"), function (b) {
+      b.addEventListener("click", function () { state.newsCompany = b.getAttribute("data-company"); rerender(); });
+    });
   }
   function pageNews() {
     function render(keepFocus) {
       app.innerHTML = head("News" + catSuffix(), state.cat === "all" ? "Industry & research news" : topicName(state.cat),
         "What memory, storage, device and VLSI companies are doing" + (D.meta.llm && D.meta.llm.enabled ? ", with a short AI summary on every story" : "") + ". The original source is always one click away.", "", pageArt("industry")) +
-        newsBlock("device", state.cat, "news-search");
+        newsBlock("device", state.cat, "news-search", true);
       bindNews(render, "news-search");
       if (keepFocus) refocus("news-search");
     }
@@ -322,7 +374,7 @@
       return (state.paperSource === "all" || (state.paperSource === "arxiv" ? p.source === "arXiv" : p.source !== "arXiv")) &&
         (!state.paperWeek || p.week === state.paperWeek) && matches(p, state.paperQuery);
     });
-    var h = '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search titles, abstracts, authors, materials (HZO, IGZO, MoS2…)" value="' + esc(state.paperQuery) + '" aria-label="Search papers">' +
+    var h = pre + '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search titles, abstracts, authors, materials (HZO, IGZO, MoS2…)" value="' + esc(state.paperQuery) + '" aria-label="Search papers">' +
       '<select id="paper-week" aria-label="Week"><option value="">All weeks</option>' + weeks.map(function (w) {
         return '<option value="' + esc(w) + '"' + (state.paperWeek === w ? " selected" : "") + ">" + esc(labels[w] || w) + "</option>";
       }).join("") + "</select>" +
@@ -545,27 +597,49 @@
     render();
   }
 
+  function courseCard(c, topic) {
+    return '<a class="card hover news-card course fade-in" href="' + safeUrl(c.url) + '" target="_blank" rel="noopener noreferrer">' + media(null, topic, c.title, c.format || "Free") +
+      '<div class="body"><h3>' + esc(c.title) + '</h3><p class="small muted" style="margin:0">' + esc(c.by) + "</p>" +
+      '<div class="foot">' + tagsHtml({ topics: c.topics }, 2) + '<span class="read">Open ↗</span></div></div></a>';
+  }
+  function videoCard(v) {
+    var t = primaryTopic(v);
+    return '<a class="card hover news-card video fade-in" href="' + safeUrl(v.url) + '" target="_blank" rel="noopener noreferrer">' +
+      '<div class="media">' + (v.thumbnail ? '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="' + safeUrl(v.thumbnail) + '" data-topic="' + esc(t) + '" data-key="' + esc(v.id) + '">' : window.DeviceArt(t, v.id)) + '<div class="play"><span></span></div></div>' +
+      '<div class="body"><div class="meta"><span class="src">' + esc(v.source) + '</span><span class="dot">' + esc(timeAgo(v.published)) + "</span></div><h3>" + esc(v.title) + "</h3></div></a>";
+  }
   function pageLearn() {
-    var L = D.learn || {}, items = L.items || [];
+    var L = D.learn || {}, cat = state.cat;
+    var all = L.items || [];
+    var items = all.filter(function (i) { return inCat(i, cat); });
+    var courses = (L.courses || []).filter(function (c) { return inCat(c, cat); });
     var videos = items.filter(function (i) { return i.kind === "video"; });
     var talks = items.filter(function (i) { return i.kind === "interview"; });
     var reads = items.filter(function (i) { return i.kind === "article"; });
-    var h = head("Learn", "Lectures, interviews & deep dives", "Explainers, interviews, keynotes and courses on semiconductors, memory, devices and VLSI.", "", "sram");
-    h += '<section><div class="section-title"><h2>Latest videos</h2></div>' + (videos.length ? '<div class="grid-news">' + videos.slice(0, 12).map(function (v) {
-      return '<a class="card hover news-card video fade-in" href="' + safeUrl(v.url) + '" target="_blank" rel="noopener noreferrer">' +
-        '<div class="media">' + (v.thumbnail ? '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="' + safeUrl(v.thumbnail) + '" data-topic="vlsi" data-key="' + esc(v.id) + '">' : window.DeviceArt("vlsi", v.id)) + '<div class="play"><span></span></div></div>' +
-        '<div class="body"><div class="meta"><span class="src">' + esc(v.source) + '</span><span class="dot">' + esc(timeAgo(v.published)) + "</span></div><h3>" + esc(v.title) + "</h3></div></a>";
-    }).join("") + "</div>" : noData()) + "</section>";
-    h += '<div class="grid-2"><section><div class="section-title"><h2>Interviews & keynotes</h2></div>' + (talks.length ? '<div class="list">' + talks.slice(0, 10).map(function (t) { return compactCard({ id: t.id, title: t.title, url: t.url, topics: ["industry"] }, t.source + " · " + timeAgo(t.published)); }).join("") + "</div>" : noData()) + "</section>";
+    var h = head("Learn" + catSuffix(), cat === "all" ? "Lectures, courses & deep dives" : topicName(cat),
+      "Free lectures and professors' courses (MIT OpenCourseWare, nanoHUB, NPTEL, ETH Zürich and more), explainer videos, interviews and newsletters. Pick a topic above to see only that area.", "", pageArt("sram"));
+
+    // free lectures & courses, in one section per topic
+    h += '<section><div class="section-title"><h2>Free lectures & courses</h2><span class="muted small">' + courses.length + " free to open</span></div>";
+    if (cat !== "all") {
+      h += courses.length ? '<div class="grid-cards">' + courses.map(function (c) { return courseCard(c, cat); }).join("") + "</div>" : empty("No lectures listed for this topic yet. Try <b>All</b>.");
+    } else {
+      topicsOf("device").forEach(function (t) {
+        var cs = courses.filter(function (c) { return (c.topics || [])[0] === t.id; });
+        if (!cs.length) return;
+        h += '<div class="learn-group"><h3 class="learn-topic"><button type="button" data-cat="' + esc(t.id) + '">' + esc(t.name) + ' <span>→</span></button></h3><div class="grid-cards">' + cs.map(function (c) { return courseCard(c, t.id); }).join("") + "</div></div>";
+      });
+    }
+    h += "</section>";
+
+    var vids = videos.length ? videos : [];
+    h += '<section><div class="section-title"><h2>Latest videos' + (cat === "all" ? "" : " on " + esc(shortTopic(cat))) + "</h2></div>" +
+      (vids.length ? '<div class="grid-news">' + vids.slice(0, 12).map(videoCard).join("") + "</div>" :
+        empty(all.length ? "No recent videos on this topic. The lectures above are a good place to start." : "No videos yet. They appear after the next update.")) + "</section>";
+    h += '<div class="grid-2"><section><div class="section-title"><h2>Interviews & keynotes</h2></div>' + (talks.length ? '<div class="list">' + talks.slice(0, 10).map(function (t) { return compactCard({ id: t.id, title: t.title, url: t.url, topics: t.topics && t.topics.length ? t.topics : ["industry"] }, t.source + " · " + timeAgo(t.published)); }).join("") + "</div>" : empty("No interviews on this topic right now.")) + "</section>";
     h += '<section style="margin-top:0"><div class="section-title"><h2>Deep-dive reads</h2></div>' + (reads.length ? '<div class="list">' + reads.slice(0, 10).map(function (r) {
-      return compactCard({ id: r.id, title: r.title, url: r.url, image: r.thumbnail, topics: ["process"], tldr: r.description }, r.source + " · " + timeAgo(r.published));
-    }).join("") + "</div>" : noData()) + "</section></div>";
-    h += '<section><div class="section-title"><h2>Courses & lecture series</h2></div><div class="grid-cards">' + (L.courses || []).map(function (c) {
-      var tg = (c.tags || [])[0] || "", art = { devices: "logic-devices", vlsi: "vlsi", memory: "dram", logic: "logic-devices", circuits: "sram" }[tg] || "materials";
-      return '<a class="card hover news-card fade-in" href="' + safeUrl(c.url) + '" target="_blank" rel="noopener noreferrer">' + media(null, art, c.title, c.by) +
-        '<div class="body"><h3>' + esc(c.title) + "</h3>" +
-        '<div class="tags">' + (c.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div></div></a>";
-    }).join("") + "</div></section>";
+      return compactCard({ id: r.id, title: r.title, url: r.url, image: r.thumbnail, topics: r.topics && r.topics.length ? r.topics : ["process"], tldr: r.description }, r.source + " · " + timeAgo(r.published));
+    }).join("") + "</div>" : empty("No deep-dive articles on this topic right now.")) + "</section></div>";
     app.innerHTML = h;
   }
 
@@ -739,6 +813,10 @@
   function currentRoute() {
     var hash = location.hash.replace(/^#\/?/, "") || "home";
     var qm = hash.match(/[?&]cat=([\w-]+)/);
+    var sm = hash.match(/[?&]sec=(tech|market|general|all)/);
+    if (sm) state.newsSection = sm[1];
+    var rm = hash.match(/[?&]region=(india|international)/);
+    if (rm) state.newsRegion = rm[1];
     var parts = hash.split("?")[0].split("/");
     return { name: parts[0] || "home", arg: parts[1], cat: qm && qm[1] };
   }

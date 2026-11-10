@@ -110,7 +110,7 @@
   }
   function countAll(scope, sel) { Array.prototype.forEach.call(scope.querySelectorAll(sel), countUp); }
   function countPage() {
-    countAll(app, "table.market td.num.up, table.market td.num.down, .week-group .section-title > .small, .journal .hit, .chip .count");
+    countAll(app, "table.market td.num.up, table.market td.num.down, .week-group .section-title > .small, .journal .hit, .chip .count, .mkt-stat .big");
   }
   function countChrome() {
     var cat = document.getElementById("catbar");

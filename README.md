@@ -2,7 +2,7 @@
 
 A news and research portal for nanoscale semiconductor devices, with DRAM, NAND flash and storage first, plus emerging memory (FeFET, MRAM, ReRAM), advanced logic devices (CFET, GAA), device materials, VLSI design, and an AI Hub.
 
-**Topics** (one-click bar at the top of Home, News, Research, Research gaps and Publish, with an *All* option): DRAM & HBM · NAND flash & SSD · Emerging memory (FeRAM, MRAM, ReRAM, PCM) · SRAM & embedded memory · Nano & logic transistors (CFET, GAA) · 2D & channel materials · Dielectrics & ferroelectrics · Interconnects & BEOL · Advanced packaging & 3D integration · Process, litho & fabs · Reliability & characterization · TCAD & device modeling · Power & wide-bandgap · VLSI & circuit design · Industry & market. The chosen topic is remembered between visits and can be linked directly, e.g. `#/news?cat=nand`.
+**Topics** (one-click bar at the top of Home, News, Research, Research gaps and Publish, with an *All* option): DRAM & HBM · NAND flash & SSD · HBF (high-bandwidth flash) · Emerging memory (FeRAM, MRAM, ReRAM, PCM) · SRAM & embedded memory · Nano & logic transistors (CFET, GAA) · 2D & channel materials · Dielectrics & ferroelectrics · Interconnects & BEOL · Advanced packaging & 3D integration · Process, litho & fabs · Reliability & characterization · TCAD & device modeling · Power & wide-bandgap · VLSI & circuit design · Industry & market. The chosen topic is remembered between visits and can be linked directly, e.g. `#/news?cat=nand`.
 
 Twice a day a GitHub Actions job fetches the latest news and papers, asks Claude to summarise them, commits the data and publishes a static site to GitHub Pages. No server to run.
 
@@ -13,11 +13,11 @@ Twice a day a GitHub Actions job fetches the latest news and papers, asks Claude
 | **What's new** (bell, top right) | Count of stories and papers added since you last opened it, broken down by topic, with links. "Mark all as read" resets it (stored in your browser). |
 | **Ticker** (top bar) | Scrolling share prices for Micron, Samsung, SK hynix, Kioxia, Sandisk, WDC, Seagate, TSMC, Intel, Nvidia, AMD, ASML, AMAT, Lam, KLA, TEL, Synopsys, Cadence and the SOX index. Fetched once a day. |
 | **Home** | Today's briefing (Claude-written, every point linked to its source), latest news, new papers, top research gaps, market movers. |
-| **News** | Company and industry news as image cards. Each item has a short summary, the source name and a link to the original article. Filter by topic or company, or search. Photos come from the publisher's feed; stories without one get a designed illustration for their topic. |
+| **News** | Two editions, **India** (stories connected to India from any outlet: India Semiconductor Mission, fabs/OSAT, Indian companies and institutes) and **International**, each split into **Technology & R&D** (new chips, layer counts, nodes, materials, research results), **Market & business** (earnings, prices, demand, deals, outlook; with a summary of this week's story count, most-mentioned companies, "what's expected next" headlines and today's share movers) and **Industry & other**. Link a section directly with `#/news?sec=market`. Company and industry news as image cards. Each item has a short summary, the source name and a link to the original article. Filter by topic or company, or search. Photos come from the publisher's feed; stories without one get a designed illustration for their topic. |
 | **Research** | New papers grouped week by week, with a one-line TL;DR, a domain label, the full abstract, the paper's first figure (from arXiv's HTML version, when available) and direct links (paper page, PDF, DOI). Filter by topic, week, or arXiv vs journals, and search (e.g. "HZO", "IGZO", "MoS2"). |
 | **Research gaps** | For each topic: what recent papers are doing, 3-5 open research gaps (what's missing, why it matters, suggested approach, difficulty), starter project ideas and papers to read first. **Open one-page report** gives a printable brief you can save as PDF or download as Markdown. |
 | **AI Hub** | AI briefing, AI news, AI papers by week, "AI in devices & VLSI" playbook (how to apply ML/LLMs to TCAD, materials, compact models, yield, RTL, placement), and AI research gaps. |
-| **Learn** | Latest videos from semiconductor explainer channels, interviews and keynotes, deep-dive newsletters, and a list of courses (nanoHUB, MIT OCW, NPTEL, IEEE EDS, imec, Stanford). |
+| **Learn** | Free lectures and professors' courses grouped by topic (MIT OpenCourseWare, nanoHUB/Purdue, NPTEL, ETH Zürich, Coursera, IEEE EDS, imec), plus latest explainer videos, interviews and deep-dive newsletters. Follows the topic bar. |
 | **Publish** | Where to send a paper. *Conferences*: 25 device, memory, packaging and VLSI meetings (IEDM, VLSI Symposium, ISSCC, IMW, IRPS, ECTC, DAC, …) ordered by the next paper deadline, with tier, location and a "deadline soon" flag. *Journals & transactions*: 37 journals (IEEE EDL, T-ED, JSSC, TCAD, Nature Electronics, Advanced Materials, APL, …) with an approximate Scimago quartile (Q1-Q4), type (Letters / Transactions / Journal), open-access flag, a link to check the current rank, and how many recent papers on the site came from each. Both follow the topic bar. |
 
 Light theme is red (#E00400) on white with a solid red header, dark theme is red on black; the toggle is top right and it follows the system setting by default. Cards fade in as you scroll, tilt toward the mouse, numbers count up and the header has a moving circuit glow; all of it switches off when the device asks for reduced motion.
@@ -70,9 +70,11 @@ Everything the fetchers look for is in [`config.yaml`](config.yaml):
 
 - `topics`: each topic's keywords (for tagging news) and search phrases (sent to arXiv/OpenAlex). Add a topic and it gets its own filter chip and research-gap page. `hub: ai` puts it on the AI Hub.
 - `companies`: names used to tag news.
+- `news_sections`: keywords that sort stories into Technology & R&D or Market & business.
 - `news_queries` / `news_feeds`: Google News searches and RSS feeds. Prefix a query with `ai:` for the AI Hub.
 - `tickers`: Yahoo Finance symbols for the scrolling bar.
-- `learn_feeds`, `learn_queries`, `courses`: the Learn page.
+- `learn_feeds`, `learn_queries`, `courses`: the Learn page (each course has `topics` and a `format`).
+- `india`: keywords and Indian outlets that put a story in the India edition of News.
 
 Conferences and journals for the Publish page live in [`venues.yaml`](venues.yaml): usual deadline and meeting months, tier, quartile, topics and links. Deadlines move a little each year, so the site calls them typical and links each call for papers.
 

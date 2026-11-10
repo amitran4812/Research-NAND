@@ -24,6 +24,10 @@ topics:
     name: NAND flash & SSD
     keywords: [nand, "3d nand", "v-nand", "flash memory", "charge trap", "floating gate", qlc, plc, tlc, ssd, "solid state drive", "solid-state drive", "storage class memory", "word line", "string select", "bit cost scalable", bics, kioxia, sandisk, solidigm, "ufs 4", nvme, "enterprise ssd", "cmos bonded array"]
     search: ["3D NAND", "NAND flash", "charge trap", "flash memory", "solid-state drive", "V-NAND"]
+  - id: hbf
+    name: HBF (high-bandwidth flash)
+    keywords: [hbf, "high bandwidth flash", "high-bandwidth flash", "flash-based hbm", "hbm-like flash", "stacked nand", "nand stack for ai", "ai flash", "memory-centric ai", "flash for ai inference", "near-memory flash", "high bandwidth nand"]
+    search: ["high bandwidth flash", "HBF memory", "stacked NAND flash bandwidth", "NAND flash for AI inference", "high bandwidth NAND"]
   - id: emerging-memory
     name: Emerging memory (FeRAM, MRAM, ReRAM, PCM)
     keywords: [fefet, "ferroelectric fet", "ferroelectric memory", feram, mram, "stt-mram", "sot-mram", reram, rram, "phase change memory", "phase-change memory", pcm, "memristor", "non-volatile memory", "storage class memory", "ferroelectric tunnel junction", ftj, "selector device", ots, "3d xpoint", "nvram"]
@@ -75,7 +79,7 @@ topics:
   - id: industry
     name: Industry & market
     # News-only category (no "search" phrases, so no papers or research-gap page).
-    keywords: [earnings, revenue, "quarterly results", capex, "capital expenditure", "price hike", "price increase", "contract price", "spot price", shortage, oversupply, "market share", "tariff", "export control", "chips act", subsidy, "acquisition", "acquire", "merger", "ipo", "new fab", "groundbreaking", "investment", "guidance", "layoffs", "trendforce", "inventory"]
+    keywords: [earnings, revenue, "quarterly results", capex, "capital expenditure", "price hike", "price increase", "contract price", "spot price", shortage, oversupply, "market share", "tariff", "export control", "chips act", subsidy, "acquisition", "acquire", "merger", "ipo", "new fab", "groundbreaking", "investment", "guidance", "layoffs", "trendforce", "inventory", "semiconductor mission", "india semiconductor", "indian semiconductor", "semiconductor fab", "semiconductor plant", "chip plant", "chip fab", osat, "atmp", "tata electronics", dholera, sanand, "scl mohali", "semicon india", "chip design centre", "chip design center"]
 
   # ---- AI Hub topics (hub: ai) ----
   - id: ai-for-devices
@@ -100,7 +104,7 @@ topics:
     search: ["large language model", "foundation model", "AI agents", "reasoning model"]
 
 # Company names used to tag news ("what other companies are doing").
-companies: [Samsung, "SK hynix", Micron, Kioxia, Sandisk, "Western Digital", YMTC, CXMT, Nanya, Winbond, Macronix, Intel, TSMC, GlobalFoundries, "Applied Materials", "Lam Research", "Tokyo Electron", ASML, KLA, imec, IBM, Nvidia, AMD, Synopsys, Cadence, Solidigm, Seagate, Rapidus, Everspin, Weebit]
+companies: ["Tata Electronics", "CG Semi", "Kaynes", "HCL", Vedanta, Polymatech, "L&T Semiconductor", Samsung, "SK hynix", Micron, Kioxia, Sandisk, "Western Digital", YMTC, CXMT, Nanya, Winbond, Macronix, Intel, TSMC, GlobalFoundries, "Applied Materials", "Lam Research", "Tokyo Electron", ASML, KLA, imec, IBM, Nvidia, AMD, Synopsys, Cadence, Solidigm, Seagate, Rapidus, Everspin, Weebit]
 
 # --- News --------------------------------------------------------------
 # Google News RSS search feeds are generated from these queries.
@@ -113,6 +117,12 @@ news_queries:
   - 'semiconductor materials 2D transistor'
   - 'VLSI chip design OR chiplet OR "advanced packaging"'
   - 'TSMC OR Intel Foundry OR Rapidus process node'
+  # India: stories connected to India, from any outlet
+  - 'HBF OR "high bandwidth flash" OR "high-bandwidth flash"'
+  - 'India semiconductor OR "India Semiconductor Mission" OR "Semicon India"'
+  - '"Tata Electronics" OR Dholera fab OR "Micron Sanand" OR OSAT India'
+  - 'India memory chip OR DRAM OR NAND OR HBM OR SSD'
+  - 'India chip design OR VLSI OR IIT semiconductor research'
   # AI Hub news (prefix "ai:" puts the query on the AI Hub page)
   - 'ai: artificial intelligence research breakthrough'
   - 'ai: AI chip design EDA OR "AI for semiconductor"'
@@ -201,12 +211,57 @@ learn_queries:
   - 'semiconductor interview CEO memory OR NAND OR DRAM'
   - 'IEDM OR "VLSI Symposium" OR "Flash Memory Summit" keynote'
 
-# Hand-picked courses and lecture series that do not change often.
+# Free lectures, professors' courses and tutorials, tagged by topic for the Learn page.
+# "format" is shown on the card. Links are free to open (some search pages).
 courses:
-  - {title: "Semiconductor device fundamentals (nanoHUB-U)", by: "Purdue / nanoHUB", url: "https://nanohub.org/courses", tags: [devices, fundamentals]}
-  - {title: "Microelectronic Devices and Circuits (6.012)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/search/?q=6.012", tags: [devices, circuits]}
-  - {title: "NPTEL courses: VLSI, semiconductor devices, memory", by: "IITs via NPTEL", url: "https://nptel.ac.in/courses", tags: [vlsi, devices]}
-  - {title: "IEEE Electron Devices Society webinars & tutorials", by: "IEEE EDS", url: "https://eds.ieee.org/education", tags: [devices, memory]}
-  - {title: "imec technology roadmap & talks", by: "imec", url: "https://www.imec-int.com/en/articles", tags: [logic, roadmap]}
-  - {title: "Stanford EE online (devices & VLSI)", by: "Stanford Online", url: "https://online.stanford.edu/search-catalog?keywords=semiconductor", tags: [devices, vlsi]}
+  - {title: "Microelectronic Devices and Circuits (6.012)", by: "MIT OpenCourseWare · free lectures & notes", url: "https://ocw.mit.edu/search/?q=6.012", topics: [logic-devices, vlsi], format: "Course"}
+  - {title: "Integrated Microelectronic Devices (6.720J)", by: "MIT OpenCourseWare · Prof. Jesús del Alamo", url: "https://ocw.mit.edu/search/?q=6.720", topics: [logic-devices, modeling], format: "Course"}
+  - {title: "Analysis and Design of Digital Integrated Circuits (6.374)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/search/?q=6.374", topics: [vlsi, sram], format: "Course"}
+  - {title: "Microelectronics Processing Technology (6.152J)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/search/?q=6.152", topics: [process, materials], format: "Course"}
+  - {title: "Electronic, Optical and Magnetic Properties of Materials (3.024)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/search/?q=3.024", topics: [materials, dielectrics], format: "Course"}
+  - {title: "Fundamentals of Nanotransistors", by: "nanoHUB-U · Prof. Mark Lundstrom (Purdue)", url: "https://nanohub.org/search/?terms=Fundamentals+of+Nanotransistors", topics: [logic-devices, modeling], format: "Course"}
+  - {title: "Solid State Devices (ECE 606)", by: "nanoHUB · Prof. Muhammad Alam (Purdue)", url: "https://nanohub.org/search/?terms=ECE+606+Solid+State+Devices", topics: [logic-devices, materials], format: "Lecture series"}
+  - {title: "Reliability Physics of Nanotransistors", by: "nanoHUB · Prof. Muhammad Alam (Purdue)", url: "https://nanohub.org/search/?terms=Reliability+Physics+of+Nanotransistors", topics: [reliability, dielectrics], format: "Lecture series"}
+  - {title: "Fundamentals of Nanoelectronics", by: "nanoHUB-U · Prof. Supriyo Datta (Purdue)", url: "https://nanohub.org/search/?terms=Fundamentals+of+Nanoelectronics", topics: [modeling, materials, emerging-memory], format: "Course"}
+  - {title: "Simulation tools for devices (TCAD, NEGF, MOSFET)", by: "nanoHUB · free online tools", url: "https://nanohub.org/resources/tools", topics: [modeling], format: "Tools"}
+  - {title: "Computer Architecture & Memory Systems lectures", by: "ETH Zürich · Prof. Onur Mutlu (YouTube channel)", url: "https://www.youtube.com/@OnurMutluLectures", topics: [dram, nand, ai-hardware], format: "Lecture channel"}
+  - {title: "DRAM: cell operation, refresh, RowHammer", by: "Prof. Onur Mutlu lectures (YouTube search)", url: "https://www.youtube.com/results?search_query=Onur+Mutlu+DRAM+lecture", topics: [dram], format: "Videos"}
+  - {title: "Flash memory: errors, reliability and SSD controllers", by: "Prof. Onur Mutlu lectures (YouTube search)", url: "https://www.youtube.com/results?search_query=Onur+Mutlu+flash+memory+SSD+lecture", topics: [nand, reliability], format: "Videos"}
+  - {title: "3D NAND flash technology lectures and tutorials", by: "University and IEEE talks (YouTube search)", url: "https://www.youtube.com/results?search_query=3D+NAND+flash+memory+lecture", topics: [nand], format: "Videos"}
+  - {title: "High-bandwidth flash (HBF) and memory for AI", by: "Talks and conference sessions (YouTube search)", url: "https://www.youtube.com/results?search_query=high+bandwidth+flash+HBF+memory", topics: [hbf, nand, ai-hardware], format: "Videos"}
+  - {title: "HBM and 3D-stacked memory explained", by: "Lectures and conference talks (YouTube search)", url: "https://www.youtube.com/results?search_query=HBM+high+bandwidth+memory+lecture", topics: [dram, packaging], format: "Videos"}
+  - {title: "Semiconductor Devices and Circuits / VLSI Technology", by: "NPTEL (IIT professors) · free", url: "https://www.youtube.com/results?search_query=NPTEL+semiconductor+devices", topics: [logic-devices, process], format: "Lecture series"}
+  - {title: "VLSI Design and digital VLSI circuits", by: "NPTEL (IIT professors) · free", url: "https://www.youtube.com/results?search_query=NPTEL+VLSI+design+lecture", topics: [vlsi, sram], format: "Lecture series"}
+  - {title: "Memory design: SRAM and embedded memory", by: "NPTEL and university lectures (YouTube search)", url: "https://www.youtube.com/results?search_query=SRAM+memory+design+lecture", topics: [sram, vlsi], format: "Videos"}
+  - {title: "Emerging memories: FeFET, FeRAM, MRAM, ReRAM, PCM", by: "University lectures (YouTube search)", url: "https://www.youtube.com/results?search_query=emerging+memory+FeFET+MRAM+ReRAM+lecture", topics: [emerging-memory], format: "Videos"}
+  - {title: "Ferroelectric HfO2 / HZO for memory", by: "Tutorials and talks (YouTube search)", url: "https://www.youtube.com/results?search_query=ferroelectric+hafnium+oxide+HZO+memory+tutorial", topics: [dielectrics, emerging-memory], format: "Videos"}
+  - {title: "2D materials for transistors (MoS2, WSe2)", by: "University lectures (YouTube search)", url: "https://www.youtube.com/results?search_query=2D+materials+transistor+MoS2+lecture", topics: [materials, logic-devices], format: "Videos"}
+  - {title: "Interconnects, BEOL and electromigration", by: "Lectures and tutorials (YouTube search)", url: "https://www.youtube.com/results?search_query=BEOL+interconnect+electromigration+lecture", topics: [interconnects, reliability], format: "Videos"}
+  - {title: "Advanced packaging, chiplets and hybrid bonding", by: "Lectures and tutorials (YouTube search)", url: "https://www.youtube.com/results?search_query=advanced+packaging+chiplets+hybrid+bonding+lecture", topics: [packaging, interconnects], format: "Videos"}
+  - {title: "Lithography and EUV", by: "Lectures and tutorials (YouTube search)", url: "https://www.youtube.com/results?search_query=EUV+lithography+lecture", topics: [process], format: "Videos"}
+  - {title: "GaN and SiC power devices", by: "University lectures (YouTube search)", url: "https://www.youtube.com/results?search_query=GaN+SiC+power+devices+lecture", topics: [power-devices], format: "Videos"}
+  - {title: "VLSI CAD: logic to layout", by: "Coursera (free to audit) · Prof. Rob Rutenbar (UIUC)", url: "https://www.coursera.org/search?query=VLSI%20CAD", topics: [vlsi, modeling], format: "Course"}
+  - {title: "IEEE Electron Devices Society webinars & tutorials", by: "IEEE EDS", url: "https://eds.ieee.org/education", topics: [logic-devices, emerging-memory, reliability], format: "Webinars"}
+  - {title: "imec technology roadmap & talks", by: "imec", url: "https://www.imec-int.com/en/articles", topics: [logic-devices, process, industry], format: "Talks"}
+  - {title: "Stanford Online: devices & VLSI", by: "Stanford Online (some free)", url: "https://online.stanford.edu/search-catalog?keywords=semiconductor", topics: [logic-devices, vlsi], format: "Course"}
+  - {title: "Semiconductor industry explainers", by: "Asianometry (YouTube)", url: "https://www.youtube.com/@Asianometry", topics: [industry, process], format: "Lecture channel"}
+
+# News page sections. Each story is scored against these keyword lists (title
+# counts double) and filed under the higher score; stories that match neither
+# go to "Industry & other". Words match as prefixes, so "unveil" also catches
+# "unveils" / "unveiled".
+news_sections:
+  tech:
+    name: Technology & R&D
+    keywords: [unveil, reveal, introduc, launch, debut, demonstrat, prototype, sample, sampling, "mass production", "volume production", tape-out, taped out, breakthrough, "-layer", layers, "hbm4", "hbm3e", "lpddr6", "ddr6", "gddr7", "pcie 6", "pcie 7", "ufs 5", cxl, "nm process", "nm node", "2nm", "1.4nm", "a16", "a14", "18a", "14a", node, transistor, cfet, gaa, nanosheet, "backside power", chiplet, "hybrid bonding", packaging, interposer, "high-na", euv, architecture, patent, research, researcher, scientist, study, paper, iedm, isscc, "vlsi symposium", imec, develop, "first ", record, faster, density, efficient, ferroelectric, mram, reram, fefet, "3d dram", "4f2", controller, jedec, specification, standard, roadmap, benchmark, "new technology", innovation, invent, engineer, material, wafer, discover, atom, lithograph, inspection, metrology, hbf, "high bandwidth flash", "physical ai", optical, photonic, scandium, molybdenum, ruthenium, "2d ", mos2, igzo, hzo]
+  market:
+    name: Market & business
+    keywords: [earning, revenue, profit, loss, quarter, quarterly, "q1", "q2", "q3", "q4", guidance, forecast, outlook, expect, "2027", "2028", "2030", share price, shares, stock, investor, analyst, "price target", valuation, "market cap", "market share", pricing, price, "contract price", demand, supply, shortage, oversupply, inventory, shipment, sales, capex, invest, billion, million, fund, acquisition, acquire, merger, deal, ipo, tariff, "export control", sanction, subsidy, "chips act", layoff, hiring, ceo, trendforce, idc, gartner, counterpoint, yole, upgrade, downgrade, dividend, fiscal, results, rally, surge, slump, plunge, soar, jump, "wall street", nasdaq, kospi, nikkei, economy, recession, boom, raise, raising, funding, seed round, "series a", "series b", workforce, "work force", expand, expansion, capacity, fab construction, license, licence, leveraged, etf, etn, "stock exchange", listing, bond]
+
+# A story is filed under "India" when it mentions any of these (prefix match,
+# case-insensitive) or comes from one of the Indian outlets below; everything
+# else is "International".
+india:
+  keywords: [india, indian, "new delhi", delhi, mumbai, bengaluru, bangalore, hyderabad, chennai, pune, noida, gurugram, gujarat, dholera, sanand, assam, jagiroad, odisha, karnataka, "tamil nadu", "uttar pradesh", telangana, mohali, "india semiconductor mission", meity, iit, iits, iisc, iiser, c-dac, drdo, isro, "tata electronics", "tata group", reliance, adani, vedanta, "hcl", kaynes, polymatech, "cg semi", "l&t semiconductor", "ashwini vaishnaw", modi, crore, lakh, "₹", rupee]
+  sources: ["Times of India", "The Economic Times", "Economic Times", "ETTelecom", "ET Telecom", "ETCIO", "Hindustan Times", "The Hindu", "BusinessLine", "Mint", "Livemint", "Moneycontrol", "Business Standard", "NDTV", "India Today", "Financial Express", "Deccan Herald", "News18", "Firstpost", "The Indian Express", "Indian Express", "Business Today", "Inc42", "YourStory", "ElectronicsB2B", "Electronics For You", "MediaNama", "CNBC-TV18", "Zee Business", "The Print", "ThePrint", "Swarajya", "DD News", "PIB"]
 
