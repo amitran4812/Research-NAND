@@ -2,7 +2,7 @@
 
 A news and research portal for nanoscale semiconductor devices, with DRAM, NAND flash and storage first, plus emerging memory (FeFET, MRAM, ReRAM), advanced logic devices (CFET, GAA), device materials, VLSI design, and an AI Hub.
 
-**Topics** (one-click bar at the top of Home, News, Research and Research gaps, with an *All* option): DRAM & HBM · NAND flash & SSD · Emerging memory (FeRAM, MRAM, ReRAM, PCM) · SRAM & embedded memory · Nano & logic transistors (CFET, GAA) · 2D & channel materials · Dielectrics & ferroelectrics · Interconnects & BEOL · Advanced packaging & 3D integration · Process, litho & fabs · Reliability & characterization · TCAD & device modeling · Power & wide-bandgap · VLSI & circuit design · Industry & market. The chosen topic is remembered between visits and can be linked directly, e.g. `#/news?cat=nand`.
+**Topics** (one-click bar at the top of Home, News, Research, Research gaps and Publish, with an *All* option): DRAM & HBM · NAND flash & SSD · Emerging memory (FeRAM, MRAM, ReRAM, PCM) · SRAM & embedded memory · Nano & logic transistors (CFET, GAA) · 2D & channel materials · Dielectrics & ferroelectrics · Interconnects & BEOL · Advanced packaging & 3D integration · Process, litho & fabs · Reliability & characterization · TCAD & device modeling · Power & wide-bandgap · VLSI & circuit design · Industry & market. The chosen topic is remembered between visits and can be linked directly, e.g. `#/news?cat=nand`.
 
 Twice a day a GitHub Actions job fetches the latest news and papers, asks Claude to summarise them, commits the data and publishes a static site to GitHub Pages. No server to run.
 
@@ -18,9 +18,9 @@ Twice a day a GitHub Actions job fetches the latest news and papers, asks Claude
 | **Research gaps** | For each topic: what recent papers are doing, 3-5 open research gaps (what's missing, why it matters, suggested approach, difficulty), starter project ideas and papers to read first. **Open one-page report** gives a printable brief you can save as PDF or download as Markdown. |
 | **AI Hub** | AI briefing, AI news, AI papers by week, "AI in devices & VLSI" playbook (how to apply ML/LLMs to TCAD, materials, compact models, yield, RTL, placement), and AI research gaps. |
 | **Learn** | Latest videos from semiconductor explainer channels, interviews and keynotes, deep-dive newsletters, and a list of courses (nanoHUB, MIT OCW, NPTEL, IEEE EDS, imec, Stanford). |
-| **Events** | ISSCC, IMW, VLSI Symposium, FMS, Hot Chips, IEDM. |
+| **Publish** | Where to send a paper. *Conferences*: 25 device, memory, packaging and VLSI meetings (IEDM, VLSI Symposium, ISSCC, IMW, IRPS, ECTC, DAC, …) ordered by the next paper deadline, with tier, location and a "deadline soon" flag. *Journals & transactions*: 37 journals (IEEE EDL, T-ED, JSSC, TCAD, Nature Electronics, Advanced Materials, APL, …) with an approximate Scimago quartile (Q1-Q4), type (Letters / Transactions / Journal), open-access flag, a link to check the current rank, and how many recent papers on the site came from each. Both follow the topic bar. |
 
-Light theme is red on white, dark theme is red on black; the toggle is top right and it follows the system setting by default.
+Light theme is cherry red on white, dark theme is cherry red on black; the toggle is top right and it follows the system setting by default.
 
 ## Where the data comes from
 
@@ -48,7 +48,7 @@ Everything except the AI-written text works with no key and no cost:
 | Papers by week with full abstracts, figures, PDF/DOI links, filters, search | One-line TL;DR and domain label on each paper |
 | Research gaps page: a keyword snapshot per topic (paper counts this week vs last, recurring themes, main venues, most-cited and newest paper) | AI research-gap notes, trends, starter projects and the one-page report |
 | AI Hub news and papers | Daily briefings (Home and AI Hub) and the "AI in devices & VLSI" playbook |
-| Share-price ticker, Learn, Events, What's new bell, light/dark themes | — |
+| Share-price ticker, Learn, Publish, What's new bell, light/dark themes | — |
 
 Add the key later and the next scheduled run fills in the AI parts automatically, including summaries for items already on the site.
 
@@ -72,7 +72,9 @@ Everything the fetchers look for is in [`config.yaml`](config.yaml):
 - `companies`: names used to tag news.
 - `news_queries` / `news_feeds`: Google News searches and RSS feeds. Prefix a query with `ai:` for the AI Hub.
 - `tickers`: Yahoo Finance symbols for the scrolling bar.
-- `learn_feeds`, `learn_queries`, `courses`, `conferences`: the Learn and Events pages.
+- `learn_feeds`, `learn_queries`, `courses`: the Learn page.
+
+Conferences and journals for the Publish page live in [`venues.yaml`](venues.yaml): usual deadline and meeting months, tier, quartile, topics and links. Deadlines move a little each year, so the site calls them typical and links each call for papers.
 
 ## Running locally
 
@@ -88,6 +90,7 @@ python -m unittest discover -s tests # offline tests
 
 ```
 config.yaml              topics, feeds, tickers, courses
+venues.yaml              conferences and journals for the Publish page
 devicehub/
   news.py                RSS + Google News fetch, tagging, de-duplication
   papers.py              arXiv + OpenAlex fetch, relevance filter, weekly grouping

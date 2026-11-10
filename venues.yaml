@@ -1,0 +1,591 @@
+# Where to publish: conferences and journals shown on the "Publish" page.
+#
+# Dates are the *usual* months for each venue. They move a little every year,
+# so the site labels them "typical" and links the official page; check the
+# call for papers before you plan around a deadline. Edit freely: the next run
+# copies this file to site/data/venues.json.
+#
+# topics: ids from config.yaml, so the topic bar can filter venues.
+# Conferences
+#   deadline: month (1-12) the full paper / abstract is usually due
+#   deadline_note: e.g. "early", "mid", "late" for that month, or extra detail
+#   month: month (1-12) the meeting is usually held
+#   tier: flagship | major | specialist
+# Journals
+#   quartile: best Scimago (SJR) category quartile, approximate. It changes
+#     yearly and differs by category; the site links Scimago so you can check.
+#   type: Letters (short, fast) | Transactions | Journal | Magazine
+
+conferences:
+  - name: IEDM
+    full: IEEE International Electron Devices Meeting
+    deadline: 8
+    deadline_note: early (late-news in Sept)
+    month: 12
+    where: San Francisco, USA
+    tier: flagship
+    topics: [logic-devices, dram, nand, emerging-memory, materials, dielectrics, interconnects, reliability, modeling, power-devices, process]
+    url: https://www.ieee-iedm.org/
+    for: "The top venue for new transistors and memory cells: CFET, GAA, 3D DRAM, 3D NAND, FeFET, 2D channels."
+  - name: VLSI Symposium
+    full: Symposium on VLSI Technology and Circuits
+    deadline: 1
+    deadline_note: late Jan / early Feb
+    month: 6
+    where: Kyoto, Japan / Honolulu, USA (alternating)
+    tier: flagship
+    topics: [logic-devices, dram, nand, emerging-memory, sram, interconnects, process, vlsi, packaging]
+    url: https://www.vlsisymposium.org/
+    for: "Joint technology + circuits papers; strong on scaled logic, DRAM, SRAM and 3D integration."
+  - name: ISSCC
+    full: IEEE International Solid-State Circuits Conference
+    deadline: 9
+    deadline_note: mid
+    month: 2
+    where: San Francisco, USA
+    tier: flagship
+    topics: [vlsi, sram, dram, nand, emerging-memory]
+    url: https://www.isscc.org/
+    for: "First disclosure of record memory chips (HBM, LPDDR, 3D NAND die) and circuits."
+  - name: IMW
+    full: IEEE International Memory Workshop
+    deadline: 1
+    deadline_note: mid
+    month: 5
+    where: Rotates (Asia / USA / Europe)
+    tier: major
+    topics: [dram, nand, emerging-memory, reliability]
+    url: https://www.ieee-imw.org/
+    for: "The focused memory venue: NAND, DRAM, FeRAM, MRAM, ReRAM, PCM device and reliability work."
+  - name: IRPS
+    full: IEEE International Reliability Physics Symposium
+    deadline: 10
+    deadline_note: abstract, early
+    month: 3
+    where: USA
+    tier: major
+    topics: [reliability, logic-devices, dram, nand, emerging-memory, dielectrics, interconnects, packaging]
+    url: https://www.irps.org/
+    for: "BTI, HCI, TDDB, retention, endurance, EM and package reliability."
+  - name: ESSERC
+    full: European Solid-State Electronics Research Conference
+    deadline: 4
+    deadline_note: early
+    month: 9
+    where: Europe
+    tier: major
+    topics: [logic-devices, emerging-memory, vlsi, modeling, materials]
+    url: https://www.esserc.org/
+    for: "Devices and circuits together (former ESSDERC + ESSCIRC)."
+  - name: DRC
+    full: Device Research Conference
+    deadline: 2
+    deadline_note: late Feb / early Mar
+    month: 6
+    where: USA
+    tier: major
+    topics: [logic-devices, materials, emerging-memory, power-devices]
+    url: https://www.deviceresearchconference.org/
+    for: "Early-stage and exploratory devices: 2D, oxide semiconductors, ferroelectrics."
+  - name: EDTM
+    full: IEEE Electron Devices Technology and Manufacturing Conference
+    deadline: 11
+    deadline_note: mid
+    month: 3
+    where: Asia-Pacific
+    tier: major
+    topics: [process, logic-devices, dram, nand, emerging-memory, materials, packaging]
+    url: https://eds.ieee.org/conferences
+    for: "Device technology with a manufacturing angle."
+  - name: SISPAD
+    full: Simulation of Semiconductor Processes and Devices
+    deadline: 4
+    deadline_note: mid
+    month: 9
+    where: Rotates (Japan / USA / Europe)
+    tier: specialist
+    topics: [modeling, logic-devices, emerging-memory]
+    url: https://eds.ieee.org/conferences
+    for: "TCAD, atomistic and compact modelling."
+  - name: SSDM
+    full: International Conference on Solid State Devices and Materials
+    deadline: 4
+    deadline_note: late
+    month: 9
+    where: Japan
+    tier: specialist
+    topics: [materials, logic-devices, emerging-memory, dielectrics, power-devices]
+    url: https://www.ssdm.jp/
+    for: "Devices and materials; extended abstracts, good for first results."
+  - name: IITC
+    full: IEEE International Interconnect Technology Conference
+    deadline: 2
+    deadline_note: early
+    month: 6
+    where: Rotates (USA / Asia / Europe)
+    tier: specialist
+    topics: [interconnects, process, materials]
+    url: https://www.iitc-conference.org/
+    for: "BEOL metals, low-k, backside power, hybrid bonding interconnects."
+  - name: ECTC
+    full: IEEE Electronic Components and Technology Conference
+    deadline: 10
+    deadline_note: abstract, early
+    month: 5
+    where: USA
+    tier: flagship
+    topics: [packaging, interconnects, reliability]
+    url: https://www.ectc.net/
+    for: "Advanced packaging, chiplets, hybrid bonding, HBM stacking."
+  - name: ISPSD
+    full: International Symposium on Power Semiconductor Devices and ICs
+    deadline: 12
+    deadline_note: mid Dec / Jan
+    month: 6
+    where: Rotates
+    tier: flagship
+    topics: [power-devices]
+    url: https://eds.ieee.org/conferences
+    for: "SiC, GaN and Ga2O3 power devices."
+  - name: DAC
+    full: Design Automation Conference
+    deadline: 11
+    deadline_note: mid
+    month: 6
+    where: San Francisco, USA
+    tier: flagship
+    topics: [vlsi, modeling, ai-for-vlsi]
+    url: https://www.dac.com/
+    for: "EDA, physical design, ML for chip design."
+  - name: ICCAD
+    full: IEEE/ACM International Conference on Computer-Aided Design
+    deadline: 4
+    deadline_note: mid
+    month: 10
+    where: USA
+    tier: flagship
+    topics: [vlsi, modeling, ai-for-vlsi]
+    url: https://iccad.com/
+    for: "CAD algorithms, logic synthesis, placement and routing."
+  - name: DATE
+    full: Design, Automation and Test in Europe
+    deadline: 9
+    deadline_note: mid
+    month: 3
+    where: Europe
+    tier: major
+    topics: [vlsi, emerging-memory, ai-hardware]
+    url: https://www.date-conference.com/
+    for: "Design, test and in-memory computing architectures."
+  - name: ASP-DAC
+    full: Asia and South Pacific Design Automation Conference
+    deadline: 7
+    deadline_note: mid
+    month: 1
+    where: Asia-Pacific
+    tier: major
+    topics: [vlsi, modeling]
+    url: https://www.aspdac.com/
+    for: "Design automation, with a strong Asia-Pacific community."
+  - name: CICC
+    full: IEEE Custom Integrated Circuits Conference
+    deadline: 11
+    deadline_note: mid
+    month: 4
+    where: USA
+    tier: major
+    topics: [vlsi, sram, emerging-memory]
+    url: https://www.ieee-cicc.org/
+    for: "Analog, mixed-signal and memory circuits."
+  - name: A-SSCC
+    full: IEEE Asian Solid-State Circuits Conference
+    deadline: 6
+    deadline_note: early
+    month: 11
+    where: Asia
+    tier: major
+    topics: [vlsi, sram, dram]
+    url: https://www.a-sscc.org/
+    for: "Circuits, often the Asian counterpart of ISSCC work."
+  - name: ISCAS
+    full: IEEE International Symposium on Circuits and Systems
+    deadline: 10
+    deadline_note: mid
+    month: 5
+    where: Rotates
+    tier: major
+    topics: [vlsi, ai-hardware]
+    url: https://ieee-cas.org/conferences
+    for: "Broad circuits and systems; good for first circuit papers."
+  - name: ISCA
+    full: International Symposium on Computer Architecture
+    deadline: 11
+    deadline_note: mid
+    month: 6
+    where: Rotates
+    tier: flagship
+    topics: [ai-hardware, dram, emerging-memory]
+    url: https://iscaconf.org/
+    for: "Memory systems, accelerators, processing-in-memory."
+  - name: Hot Chips
+    full: Hot Chips Symposium
+    deadline: 3
+    deadline_note: talk proposals, spring
+    month: 8
+    where: Stanford, USA
+    tier: major
+    topics: [ai-hardware, vlsi, industry]
+    url: https://hotchips.org/
+    for: "Industry talks on new processors and accelerators (presentations, not papers)."
+  - name: FMS
+    full: Future of Memory and Storage
+    deadline: 4
+    deadline_note: speaker proposals
+    month: 8
+    where: Santa Clara, USA
+    tier: specialist
+    topics: [nand, dram, industry]
+    url: https://futurememorystorage.com/
+    for: "Industry event for flash, DRAM and SSDs (talks, not papers)."
+  - name: MRS Spring
+    full: Materials Research Society Spring Meeting
+    deadline: 10
+    deadline_note: abstract, late
+    month: 4
+    where: USA
+    tier: major
+    topics: [materials, dielectrics, emerging-memory]
+    url: https://www.mrs.org/meetings-events
+    for: "Materials for devices: 2D, oxides, ferroelectrics (abstract-based)."
+  - name: MRS Fall
+    full: Materials Research Society Fall Meeting
+    deadline: 6
+    deadline_note: abstract, mid
+    month: 12
+    where: Boston, USA
+    tier: major
+    topics: [materials, dielectrics, emerging-memory]
+    url: https://www.mrs.org/meetings-events
+    for: "Materials for devices (abstract-based)."
+
+journals:
+  # ---- IEEE device and circuit journals ----
+  - name: IEEE Electron Device Letters
+    abbr: EDL
+    publisher: IEEE
+    quartile: Q1
+    type: Letters
+    open_access: false
+    topics: [logic-devices, dram, nand, emerging-memory, materials, dielectrics, power-devices, reliability]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=55
+    for: "Short, fast device results (about 3-4 pages)."
+  - name: IEEE Transactions on Electron Devices
+    abbr: T-ED
+    publisher: IEEE
+    quartile: Q1
+    type: Transactions
+    open_access: false
+    topics: [logic-devices, dram, nand, emerging-memory, materials, dielectrics, reliability, modeling, power-devices, interconnects]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=16
+    for: "Full-length device papers; the default home for device physics and modelling."
+  - name: IEEE Journal of the Electron Devices Society
+    abbr: J-EDS
+    publisher: IEEE
+    quartile: Q2
+    type: Journal
+    open_access: true
+    topics: [logic-devices, emerging-memory, materials, reliability, modeling, power-devices]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6245494
+    for: "Open-access device journal; also publishes extended conference papers."
+  - name: IEEE Transactions on Device and Materials Reliability
+    abbr: TDMR
+    publisher: IEEE
+    quartile: Q2
+    type: Transactions
+    open_access: false
+    topics: [reliability, dielectrics, interconnects, packaging]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7298
+    for: "Device and materials reliability."
+  - name: IEEE Transactions on Nanotechnology
+    abbr: TNANO
+    publisher: IEEE
+    quartile: Q2
+    type: Transactions
+    open_access: false
+    topics: [materials, logic-devices, emerging-memory]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7729
+    for: "Nanoscale devices and materials."
+  - name: IEEE Journal on Exploratory Solid-State Computational Devices and Circuits
+    abbr: JXCDC
+    publisher: IEEE
+    quartile: Q2
+    type: Journal
+    open_access: true
+    topics: [emerging-memory, logic-devices, ai-hardware]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6570653
+    for: "Beyond-CMOS devices and in-memory computing, device-to-circuit."
+  - name: IEEE Journal of Solid-State Circuits
+    abbr: JSSC
+    publisher: IEEE
+    quartile: Q1
+    type: Journal
+    open_access: false
+    topics: [vlsi, sram, dram, nand, emerging-memory]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4
+    for: "Top circuits journal; extended ISSCC / VLSI papers."
+  - name: IEEE Transactions on Circuits and Systems I
+    abbr: TCAS-I
+    publisher: IEEE
+    quartile: Q1
+    type: Transactions
+    open_access: false
+    topics: [vlsi, ai-hardware]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8919
+    for: "Circuit theory and design, accelerators."
+  - name: IEEE Transactions on Very Large Scale Integration Systems
+    abbr: TVLSI
+    publisher: IEEE
+    quartile: Q1
+    type: Transactions
+    open_access: false
+    topics: [vlsi, sram, ai-hardware]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=92
+    for: "VLSI architecture and circuit design."
+  - name: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+    abbr: TCAD
+    publisher: IEEE
+    quartile: Q1
+    type: Transactions
+    open_access: false
+    topics: [vlsi, modeling, ai-for-vlsi]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=43
+    for: "EDA algorithms, physical design, ML for CAD."
+  - name: IEEE Transactions on Semiconductor Manufacturing
+    abbr: TSM
+    publisher: IEEE
+    quartile: Q2
+    type: Transactions
+    open_access: false
+    topics: [process, ai-for-devices]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=66
+    for: "Fab process control, yield, metrology."
+  - name: IEEE Transactions on Components, Packaging and Manufacturing Technology
+    abbr: TCPMT
+    publisher: IEEE
+    quartile: Q2
+    type: Transactions
+    open_access: false
+    topics: [packaging, interconnects]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5503870
+    for: "Packaging, 3D integration, thermal."
+  - name: IEEE Transactions on Power Electronics
+    abbr: TPEL
+    publisher: IEEE
+    quartile: Q1
+    type: Transactions
+    open_access: false
+    topics: [power-devices]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=63
+    for: "Power converters and wide-bandgap device use."
+  - name: IEEE Transactions on Magnetics
+    abbr: TMAG
+    publisher: IEEE
+    quartile: Q2
+    type: Transactions
+    open_access: false
+    topics: [emerging-memory]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=20
+    for: "MRAM, spintronics and magnetic materials."
+  - name: IEEE Access
+    abbr: Access
+    publisher: IEEE
+    quartile: Q1
+    type: Journal
+    open_access: true
+    topics: [vlsi, ai-for-devices, ai-for-vlsi, modeling, reliability]
+    url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639
+    for: "Broad, fast open-access journal (article charge applies)."
+  # ---- Nature / Science family ----
+  - name: Nature Electronics
+    publisher: Springer Nature
+    quartile: Q1
+    type: Journal
+    open_access: false
+    topics: [logic-devices, emerging-memory, materials, ai-hardware]
+    url: https://www.nature.com/natelectron/
+    for: "High-impact device and electronics breakthroughs."
+  - name: Nature Communications
+    publisher: Springer Nature
+    quartile: Q1
+    type: Journal
+    open_access: true
+    topics: [materials, emerging-memory, logic-devices]
+    url: https://www.nature.com/ncomms/
+    for: "Broad high-impact, open access."
+  - name: Science Advances
+    publisher: AAAS
+    quartile: Q1
+    type: Journal
+    open_access: true
+    topics: [materials, emerging-memory]
+    url: https://www.science.org/journal/sciadv
+    for: "Broad high-impact, open access."
+  - name: npj 2D Materials and Applications
+    publisher: Springer Nature
+    quartile: Q1
+    type: Journal
+    open_access: true
+    topics: [materials, logic-devices]
+    url: https://www.nature.com/npj2dmaterials/
+    for: "2D materials and devices."
+  - name: Scientific Reports
+    publisher: Springer Nature
+    quartile: Q1
+    type: Journal
+    open_access: true
+    topics: [materials, emerging-memory, modeling]
+    url: https://www.nature.com/srep/
+    for: "Broad, technically sound work; open access."
+  # ---- Materials journals ----
+  - name: Advanced Materials
+    publisher: Wiley
+    quartile: Q1
+    type: Journal
+    open_access: false
+    topics: [materials, emerging-memory, dielectrics]
+    url: https://onlinelibrary.wiley.com/journal/15214095
+    for: "Top materials journal; new device materials."
+  - name: Advanced Functional Materials
+    publisher: Wiley
+    quartile: Q1
+    type: Journal
+    open_access: false
+    topics: [materials, emerging-memory, dielectrics]
+    url: https://onlinelibrary.wiley.com/journal/16163028
+    for: "Functional materials, ferroelectrics, memristive materials."
+  - name: Advanced Electronic Materials
+    publisher: Wiley
+    quartile: Q1
+    type: Journal
+    open_access: true
+    topics: [materials, emerging-memory, dielectrics, logic-devices]
+    url: https://onlinelibrary.wiley.com/journal/2199160x
+    for: "Materials-driven device work."
+  - name: ACS Nano
+    publisher: ACS
+    quartile: Q1
+    type: Journal
+    open_access: false
+    topics: [materials, logic-devices, emerging-memory]
+    url: https://pubs.acs.org/journal/ancac3
+    for: "Nanoscale materials and devices."
+  - name: Nano Letters
+    publisher: ACS
+    quartile: Q1
+    type: Letters
+    open_access: false
+    topics: [materials, logic-devices, emerging-memory]
+    url: https://pubs.acs.org/journal/nalefd
+    for: "Short nanoscience and nanodevice papers."
+  - name: ACS Applied Materials & Interfaces
+    publisher: ACS
+    quartile: Q1
+    type: Journal
+    open_access: false
+    topics: [materials, dielectrics, emerging-memory]
+    url: https://pubs.acs.org/journal/aamick
+    for: "Applied materials, interfaces, thin films."
+  - name: ACS Applied Electronic Materials
+    publisher: ACS
+    quartile: Q1
+    type: Journal
+    open_access: false
+    topics: [materials, dielectrics, emerging-memory, logic-devices]
+    url: https://pubs.acs.org/journal/aaembp
+    for: "Electronic materials with device demonstrations."
+  - name: 2D Materials
+    publisher: IOP
+    quartile: Q1
+    type: Journal
+    open_access: false
+    topics: [materials]
+    url: https://iopscience.iop.org/journal/2053-1583
+    for: "2D materials science."
+  # ---- Applied physics ----
+  - name: Applied Physics Letters
+    abbr: APL
+    publisher: AIP
+    quartile: Q1
+    type: Letters
+    open_access: false
+    topics: [materials, dielectrics, emerging-memory, power-devices]
+    url: https://pubs.aip.org/aip/apl
+    for: "Short applied-physics results, widely read by device people."
+  - name: Journal of Applied Physics
+    abbr: JAP
+    publisher: AIP
+    quartile: Q2
+    type: Journal
+    open_access: false
+    topics: [materials, dielectrics, modeling, reliability]
+    url: https://pubs.aip.org/aip/jap
+    for: "Full-length applied physics."
+  - name: Japanese Journal of Applied Physics
+    abbr: JJAP
+    publisher: IOP / JSAP
+    quartile: Q2
+    type: Journal
+    open_access: false
+    topics: [materials, process, logic-devices]
+    url: https://iopscience.iop.org/journal/1347-4065
+    for: "Applied physics; also publishes extended SSDM papers."
+  - name: Semiconductor Science and Technology
+    publisher: IOP
+    quartile: Q2
+    type: Journal
+    open_access: false
+    topics: [materials, logic-devices, power-devices, modeling]
+    url: https://iopscience.iop.org/journal/0268-1242
+    for: "Semiconductor materials and devices."
+  # ---- Elsevier device journals ----
+  - name: Solid-State Electronics
+    publisher: Elsevier
+    quartile: Q3
+    type: Journal
+    open_access: false
+    topics: [logic-devices, modeling, emerging-memory]
+    url: https://www.sciencedirect.com/journal/solid-state-electronics
+    for: "Device physics and modelling; extended ESSDERC / EUROSOI papers."
+  - name: Microelectronic Engineering
+    publisher: Elsevier
+    quartile: Q2
+    type: Journal
+    open_access: false
+    topics: [process, interconnects, materials]
+    url: https://www.sciencedirect.com/journal/microelectronic-engineering
+    for: "Process, lithography, nanofabrication."
+  - name: Microelectronics Reliability
+    publisher: Elsevier
+    quartile: Q3
+    type: Journal
+    open_access: false
+    topics: [reliability, packaging, power-devices]
+    url: https://www.sciencedirect.com/journal/microelectronics-reliability
+    for: "Reliability; extended ESREF papers."
+  - name: Integration, the VLSI Journal
+    publisher: Elsevier
+    quartile: Q2
+    type: Journal
+    open_access: false
+    topics: [vlsi]
+    url: https://www.sciencedirect.com/journal/integration
+    for: "VLSI design and CAD."
+  - name: ACM Transactions on Design Automation of Electronic Systems
+    abbr: TODAES
+    publisher: ACM
+    quartile: Q2
+    type: Transactions
+    open_access: false
+    topics: [vlsi, ai-for-vlsi]
+    url: https://dl.acm.org/journal/todaes
+    for: "Design automation."
