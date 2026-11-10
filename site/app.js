@@ -405,7 +405,7 @@
       return (state.paperSource === "all" || (state.paperSource === "arxiv" ? p.source === "arXiv" : p.source !== "arXiv")) &&
         (!state.paperWeek || p.week === state.paperWeek) && matches(p, state.paperQuery);
     });
-    var h = pre + '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search titles, abstracts, authors, materials (HZO, IGZO, MoS2…)" value="' + esc(state.paperQuery) + '" aria-label="Search papers">' +
+    var h = '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search titles, abstracts, authors, materials (HZO, IGZO, MoS2…)" value="' + esc(state.paperQuery) + '" aria-label="Search papers">' +
       '<select id="paper-week" aria-label="Week"><option value="">All weeks</option>' + weeks.map(function (w) {
         return '<option value="' + esc(w) + '"' + (state.paperWeek === w ? " selected" : "") + ">" + esc(labels[w] || w) + "</option>";
       }).join("") + "</select>" +
