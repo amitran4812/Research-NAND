@@ -5,8 +5,9 @@ import datetime as dt
 import logging
 
 import feedparser
+import yaml
 
-from .common import Tagger, clean_text, http_get, iso, make_id, norm_title, parse_iso, utcnow
+from .common import ROOT, Tagger, clean_text, http_get, iso, make_id, norm_title, parse_iso, utcnow
 from .news import fetch_google_news, page_image
 
 log = logging.getLogger("devicehub.learn")
@@ -76,4 +77,14 @@ def collect(cfg: dict, previous: dict | None = None) -> dict:
         "updated": iso(utcnow()),
         "items": items,
         "courses": cfg.get("courses", []),
+        "library": load_library(),
     }
+
+
+def load_library() -> dict:
+    """Free video courses (NPTEL, MIT OCW, nanoHUB), split into devices and circuits."""
+    path = ROOT / "library.yaml"
+    if not path.exists():
+        return {"subjects": {}, "courses": []}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {"subjects": data.get("subjects", {}), "courses": data.get("courses", [])}

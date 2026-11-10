@@ -96,6 +96,15 @@ class PipelineTest(unittest.TestCase):
         for j in venues["journals"]:
             self.assertIn(j["quartile"], ("Q1", "Q2", "Q3", "Q4"), j["name"])
 
+        lib = self.load("learn.json")["library"]
+        self.assertTrue(lib["courses"])
+        for c in lib["courses"]:
+            self.assertIn(c["group"], ("devices", "circuits"), c["title"])
+            self.assertIn(c["subject"], lib["subjects"][c["group"]], c["title"])
+            self.assertIn(c["level"], ("Beginner", "Intermediate", "Advanced"), c["title"])
+            self.assertTrue(c["url"].startswith("https://"), c["title"])
+            self.assertTrue(set(c["topics"]) <= topic_ids, c["title"])
+
         news = self.load("news.json")["items"]
         titles = [n["title"] for n in news]
         # Publisher-feed copy wins over the Google News duplicate, and has a real link.

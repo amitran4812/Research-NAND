@@ -555,3 +555,23 @@ table.market td.num { text-align: right; }
   .catbar-label { padding-top: .55rem; }
   .catbar { position: static; }
 }
+
+/* ---- learn: free video course library ----------------------------------- */
+.lib-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.lib-controls input[type="search"] { flex: 1 1 320px; }
+.lib-subject { display: flex; align-items: baseline; gap: .6rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 700; }
+.lib-subject small { font-family: var(--sans, inherit); font-size: .8rem; font-weight: 600; }
+.lib-card .meta { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; margin-bottom: .45rem; }
+.badge.lvl { background: #e3edff; color: #1d4ed8; }
+.badge.lvl-intermediate { background: #fff1d6; color: #8a5a00; }
+.badge.lvl-advanced { background: #ece6ff; color: #4b2db3; }
+:root[data-theme="dark"] .badge.lvl { background: #12224a; color: #8fb3ff; }
+:root[data-theme="dark"] .badge.lvl-intermediate { background: #33260a; color: #ffc861; }
+:root[data-theme="dark"] .badge.lvl-advanced { background: #221a40; color: #b9a6ff; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .badge.lvl { background: #12224a; color: #8fb3ff; }
+  :root:not([data-theme="light"]) .badge.lvl-intermediate { background: #33260a; color: #ffc861; }
+  :root:not([data-theme="light"]) .badge.lvl-advanced { background: #221a40; color: #b9a6ff; }
+}
+.linkish { font: inherit; font-weight: 700; color: var(--red); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+@media (max-width: 640px) { .lib-tabs { gap: .5rem; } .lib-tabs .region { padding: .7rem .6rem 2.4rem; } .lib-tabs .region b { font-size: 1.05rem; } .lib-tabs .region span { display: none; } .lib-tabs .region i { top: auto; bottom: .6rem; left: .6rem; right: auto; transform: none; } }
