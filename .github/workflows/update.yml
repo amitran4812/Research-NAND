@@ -70,6 +70,9 @@ jobs:
             git push
           fi
 
+      - name: Stamp asset versions (so browsers load the new code after each deploy)
+        run: sed -i "s/__V__/${GITHUB_SHA::8}-$(date -u +%H%M)/g" site/index.html
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

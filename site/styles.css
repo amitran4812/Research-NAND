@@ -546,3 +546,12 @@ table.market td.num { text-align: right; }
 .learn-topic button:hover span { transform: translateX(4px); }
 .course .media { aspect-ratio: 16 / 7; }
 @media (max-width: 520px) { .catbar-label { display: none; } }
+
+/* On wider screens show every topic: chips wrap onto more rows, no sideways scrolling needed. */
+@media (min-width: 821px) {
+  .catbar .chips, .cat-scroller.at-start .chips, .cat-scroller.at-end .chips { flex-wrap: wrap; overflow: visible; padding: 2px; -webkit-mask-image: none; mask-image: none; row-gap: .45rem; }
+  .cat-arrow { display: none; }
+  .catbar-row { align-items: flex-start; }
+  .catbar-label { padding-top: .55rem; }
+  .catbar { position: static; }
+}
