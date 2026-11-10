@@ -167,12 +167,43 @@
       (it.topics || []).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; });
     });
     bar.hidden = false;
-    bar.innerHTML = '<div class="wrap wide catbar-row"><span class="catbar-label">Topics</span><div class="chips" role="tablist">' +
+    var prev = bar.querySelector(".chips"), keep = prev ? prev.scrollLeft : 0;
+    var arrow = function (dir, label, path) {
+      return '<button type="button" class="cat-arrow ' + dir + '" aria-label="' + label + '"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="' + path + '" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
+    };
+    bar.innerHTML = '<div class="wrap wide catbar-row"><span class="catbar-label">Topics</span><div class="cat-scroller">' +
+      arrow("prev", "Scroll topics left", "M15 5l-7 7 7 7") + '<div class="chips" role="tablist">' +
       chip("All", "all", state.cat === "all", "cat", total) +
-      topics.map(function (t) { return chip(shortTopic(t.id), t.id, state.cat === t.id, "cat", counts[t.id] || 0); }).join("") + "</div></div>";
-    var active = bar.querySelector(".chip.active");
-    if (active && active.scrollIntoView) active.scrollIntoView({ block: "nearest", inline: "nearest" });
+      topics.map(function (t) { return chip(shortTopic(t.id), t.id, state.cat === t.id, "cat", counts[t.id] || 0); }).join("") + "</div>" +
+      arrow("next", "Scroll topics right", "M9 5l7 7-7 7") + "</div></div>";
+    var row = bar.querySelector(".chips"), scroller = bar.querySelector(".cat-scroller");
+    row.scrollLeft = keep;
+    // keep the chosen topic in view without moving the page
+    var active = row.querySelector(".chip.active");
+    if (active) {
+      var l = active.offsetLeft - row.offsetLeft, r = l + active.offsetWidth;
+      if (l < row.scrollLeft + 40) row.scrollLeft = Math.max(0, l - 40);
+      else if (r > row.scrollLeft + row.clientWidth - 40) row.scrollLeft = r - row.clientWidth + 40;
+    }
+    function edges() {
+      var max = row.scrollWidth - row.clientWidth - 2;
+      scroller.classList.toggle("at-start", row.scrollLeft <= 2);
+      scroller.classList.toggle("at-end", row.scrollLeft >= max);
+      scroller.classList.toggle("no-scroll", max <= 0);
+    }
+    bar.querySelector(".cat-arrow.prev").addEventListener("click", function () { row.scrollBy({ left: -row.clientWidth * 0.7, behavior: "smooth" }); });
+    bar.querySelector(".cat-arrow.next").addEventListener("click", function () { row.scrollBy({ left: row.clientWidth * 0.7, behavior: "smooth" }); });
+    row.addEventListener("scroll", edges, { passive: true });
+    // a mouse wheel over the bar scrolls it sideways
+    row.addEventListener("wheel", function (e) {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && row.scrollWidth > row.clientWidth) { row.scrollLeft += e.deltaY; e.preventDefault(); }
+    }, { passive: false });
+    edges();
   }
+  window.addEventListener("resize", function () {
+    var row = document.querySelector("#catbar .chips");
+    if (row) row.dispatchEvent(new Event("scroll"));
+  });
 
   // ------------------------------------------------------------------ cards
   function newsCard(n) {
