@@ -1,0 +1,124 @@
+{
+ "title": "Device Hub",
+ "tagline": "Nanoscale devices, memory & storage, VLSI — news and research, twice a day",
+ "updated": "2026-11-10T10:19:18Z",
+ "edition": "morning",
+ "llm": {
+  "enabled": false,
+  "model": null
+ },
+ "topics": [
+  {
+   "id": "dram",
+   "name": "DRAM & HBM",
+   "hub": "device"
+  },
+  {
+   "id": "nand",
+   "name": "NAND flash & SSD",
+   "hub": "device"
+  },
+  {
+   "id": "emerging-memory",
+   "name": "Emerging memory (FeRAM, MRAM, ReRAM, PCM)",
+   "hub": "device"
+  },
+  {
+   "id": "sram",
+   "name": "SRAM & embedded memory",
+   "hub": "device"
+  },
+  {
+   "id": "logic-devices",
+   "name": "Nano & logic transistors (CFET, GAA)",
+   "hub": "device"
+  },
+  {
+   "id": "materials",
+   "name": "2D & channel materials",
+   "hub": "device"
+  },
+  {
+   "id": "dielectrics",
+   "name": "Dielectrics & ferroelectrics",
+   "hub": "device"
+  },
+  {
+   "id": "interconnects",
+   "name": "Interconnects & BEOL",
+   "hub": "device"
+  },
+  {
+   "id": "packaging",
+   "name": "Advanced packaging & 3D integration",
+   "hub": "device"
+  },
+  {
+   "id": "process",
+   "name": "Process, litho & fabs",
+   "hub": "device"
+  },
+  {
+   "id": "reliability",
+   "name": "Reliability & characterization",
+   "hub": "device"
+  },
+  {
+   "id": "modeling",
+   "name": "TCAD & device modeling",
+   "hub": "device"
+  },
+  {
+   "id": "power-devices",
+   "name": "Power & wide-bandgap",
+   "hub": "device"
+  },
+  {
+   "id": "vlsi",
+   "name": "VLSI & circuit design",
+   "hub": "device"
+  },
+  {
+   "id": "industry",
+   "name": "Industry & market",
+   "hub": "device"
+  },
+  {
+   "id": "ai-for-devices",
+   "name": "AI for devices & materials",
+   "hub": "ai"
+  },
+  {
+   "id": "ai-for-vlsi",
+   "name": "AI for VLSI & EDA",
+   "hub": "ai"
+  },
+  {
+   "id": "ai-hardware",
+   "name": "AI hardware & neuromorphic",
+   "hub": "ai"
+  },
+  {
+   "id": "ai-general",
+   "name": "AI research & industry",
+   "hub": "ai"
+  }
+ ],
+ "weeks": [
+  {
+   "key": "2026-W46",
+   "label": "Nov 09 – Nov 15, 2026",
+   "count": 45
+  },
+  {
+   "key": "2026-W45",
+   "label": "Nov 02 – Nov 08, 2026",
+   "count": 221
+  },
+  {
+   "key": "2026-W44",
+   "label": "Oct 26 – Nov 01, 2026",
+   "count": 60
+  }
+ ]
+}
