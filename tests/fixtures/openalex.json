@@ -1,0 +1,13 @@
+{"results": [
+ {"id": "https://openalex.org/W1", "doi": "https://doi.org/10.1109/TED.2026.1", "display_name": "Endurance of HZO FeFET for 3D NAND-like Arrays",
+  "publication_date": "__RECENT_DATE__", "cited_by_count": 2,
+  "abstract_inverted_index": {"We": [0], "report": [1], "FeFET": [2], "endurance": [3], "in": [4], "3D": [5], "NAND": [6], "arrays.": [7]},
+  "authorships": [{"author": {"display_name": "D. Engineer"}}],
+  "primary_location": {"landing_page_url": "https://ieeexplore.ieee.org/document/1", "source": {"display_name": "IEEE Transactions on Electron Devices"}},
+  "best_oa_location": null},
+ {"id": "https://openalex.org/W2", "doi": null, "display_name": "Charge-trap retention in 3D NAND flash with 300+ word line layers",
+  "publication_date": "__RECENT_DATE__", "cited_by_count": 0,
+  "abstract_inverted_index": {"Retention": [0], "in": [1], "3D": [2], "NAND": [3]},
+  "authorships": [], "primary_location": {"landing_page_url": "https://example.org/x", "source": {"display_name": "IMW 2026"}},
+  "best_oa_location": null}
+]}

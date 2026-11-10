@@ -1,0 +1,220 @@
+# Device Hub configuration.
+# Everything the fetchers look for lives here, so you can tune the portal
+# without touching code. Edit, commit, and the next scheduled run picks it up.
+
+site:
+  title: Device Hub
+  tagline: Nanoscale devices, memory & storage, VLSI — news and research, twice a day
+  # How many weeks of papers to keep in the archive shown on the Research page.
+  weeks_to_keep: 8
+  # How many days of news to keep.
+  news_days_to_keep: 10
+
+# Topics drive both classification (tags on each item) and the research
+# searches. "keywords" are matched case-insensitively against titles and
+# summaries. "search" phrases are what we send to arXiv / OpenAlex (any match).
+# "hub: ai" puts a topic on the AI Hub page instead of the device pages.
+topics:
+  # ---- Device Hub categories (shown left to right in the category bar) ----
+  - id: dram
+    name: DRAM & HBM
+    keywords: [dram, hbm, hbm3e, hbm4, "high bandwidth memory", ddr5, ddr6, lpddr, lpddr5x, lpddr6, gddr7, "1c nm", "1-gamma", "1γ", "capacitorless", "3d dram", "vertical channel transistor", "4f2", "cxl memory", "memory cell capacitor", "2t0c", "1t1c", "buried channel array"]
+    search: ["DRAM", "high bandwidth memory", "3D DRAM", "capacitorless DRAM", "1T1C", "DRAM cell", "2T0C"]
+  - id: nand
+    name: NAND flash & SSD
+    keywords: [nand, "3d nand", "v-nand", "flash memory", "charge trap", "floating gate", qlc, plc, tlc, ssd, "solid state drive", "solid-state drive", "storage class memory", "word line", "string select", "bit cost scalable", bics, kioxia, sandisk, solidigm, "ufs 4", nvme, "enterprise ssd", "cmos bonded array"]
+    search: ["3D NAND", "NAND flash", "charge trap", "flash memory", "solid-state drive", "V-NAND"]
+  - id: emerging-memory
+    name: Emerging memory (FeRAM, MRAM, ReRAM, PCM)
+    keywords: [fefet, "ferroelectric fet", "ferroelectric memory", feram, mram, "stt-mram", "sot-mram", reram, rram, "phase change memory", "phase-change memory", pcm, "memristor", "non-volatile memory", "storage class memory", "ferroelectric tunnel junction", ftj, "selector device", ots, "3d xpoint", "nvram"]
+    search: ["ferroelectric field-effect transistor", "FeFET", "FeRAM", "MRAM", "ReRAM", "resistive switching memory", "phase-change memory", "ferroelectric tunnel junction"]
+  - id: sram
+    name: SRAM & embedded memory
+    keywords: [sram, "static random access memory", "bitcell", "bit cell", edram, "embedded memory", "embedded flash", "eflash", "emram", "cache memory", "memory compiler", "register file", "6t sram", "8t sram"]
+    search: ["SRAM bitcell", "SRAM", "embedded memory", "eDRAM", "embedded MRAM"]
+  - id: logic-devices
+    name: Nano & logic transistors (CFET, GAA)
+    keywords: [cfet, "complementary fet", gaa, "gate-all-around", nanosheet, forksheet, finfet, "nanowire transistor", "backside power", "backside contact", "2nm", "1.4nm", "a16", "a14", "18a", "14a", "angstrom", "tunnel fet", tfet, "negative capacitance", ncfet, "monolithic 3d", "steep slope", "transistor scaling", "stacked transistor"]
+    search: ["complementary FET", "CFET", "gate-all-around", "nanosheet transistor", "forksheet", "negative capacitance FET", "tunnel FET", "backside power delivery", "stacked transistor"]
+  - id: materials
+    name: 2D & channel materials
+    keywords: ["2d material", "2d semiconductor", mos2, ws2, wse2, "transition metal dichalcogenide", tmd, graphene, "hbn", "black phosphorus", igzo, "oxide semiconductor", "amorphous oxide", "indium oxide", "carbon nanotube", cnt, germanium, sige, "iii-v", "ingaas", "channel material", "contact resistance", tellurium]
+    search: ["2D semiconductor transistor", "MoS2 transistor", "WSe2 transistor", "IGZO transistor", "oxide semiconductor transistor", "carbon nanotube transistor", "2D material device"]
+  - id: dielectrics
+    name: Dielectrics & ferroelectrics
+    keywords: ["high-k", "high k", "gate dielectric", "gate stack", hfo2, "hafnium oxide", "hafnium zirconium oxide", hzo, "ferroelectric", "antiferroelectric", "zro2", "al2o3", "interfacial layer", "work function", "equivalent oxide thickness", eot, "wake-up", "imprint", "dielectric breakdown"]
+    search: ["hafnium zirconium oxide", "high-k dielectric", "HfO2 ferroelectric", "gate stack", "antiferroelectric", "ferroelectric thin film device"]
+  - id: interconnects
+    name: Interconnects & BEOL
+    keywords: [interconnect, beol, "back end of line", ruthenium, molybdenum, "copper interconnect", "cu interconnect", "barrier layer", "airgap", "air gap", "via resistance", electromigration, "semi-damascene", "subtractive etch", "low-k", "metal pitch", "intercalated graphene"]
+    search: ["ruthenium interconnect", "molybdenum interconnect", "BEOL interconnect", "electromigration", "low-k dielectric interconnect", "semi-damascene"]
+  - id: packaging
+    name: Advanced packaging & 3D integration
+    keywords: ["advanced packaging", chiplet, chiplets, "hybrid bonding", "wafer bonding", "3d ic", "3d integration", "3d stacking", tsv, "through-silicon via", cowos, "foveros", "emib", "soic", "interposer", "glass substrate", "fan-out", "co-packaged optics", ucie, "panel level"]
+    search: ["hybrid bonding", "chiplet", "3D integration", "through-silicon via", "advanced packaging", "wafer-to-wafer bonding"]
+  - id: process
+    name: Process, litho & fabs
+    keywords: [euv, "high-na", "high na", lithography, "atomic layer deposition", ald, "atomic layer etching", ale, "selective deposition", etch, "cmp", "metrology", "overlay", "photoresist", "dry resist", "fab", "fabs", "foundry", "wafer fab", "process node", "yield", "cleanroom", asml, "applied materials", "lam research", "tokyo electron", kla]
+    search: ["EUV lithography", "high-NA EUV", "atomic layer deposition", "atomic layer etching", "area-selective deposition", "semiconductor metrology"]
+  - id: reliability
+    name: Reliability & characterization
+    keywords: [reliability, endurance, retention, "bias temperature instability", bti, nbti, pbti, tddb, "hot carrier", "random telegraph noise", rtn, variability, "trap density", "charge trapping", "1/f noise", "self-heating", "radiation hardness", "soft error", "disturb", "read disturb", "failure analysis"]
+    search: ["bias temperature instability", "time-dependent dielectric breakdown", "memory endurance retention", "random telegraph noise", "device variability", "hot carrier degradation"]
+  - id: modeling
+    name: TCAD & device modeling
+    keywords: [tcad, "compact model", "bsim", "device simulation", "drift-diffusion", "monte carlo simulation", "negf", "non-equilibrium green", "ab initio", "first-principles", dft, "density functional", "atomistic simulation", "spice model", "process simulation", "sentaurus", "quantum transport"]
+    search: ["TCAD simulation transistor", "compact model", "quantum transport simulation", "first-principles device", "device simulation memory"]
+  - id: power-devices
+    name: Power & wide-bandgap
+    keywords: [gan, "gallium nitride", sic, "silicon carbide", "ga2o3", "gallium oxide", "wide bandgap", "wide-bandgap", "ultra-wide bandgap", hemt, "power mosfet", igbt, "power device", "power semiconductor", "diamond semiconductor", aln]
+    search: ["GaN HEMT", "SiC MOSFET", "gallium oxide transistor", "wide bandgap power device"]
+  - id: vlsi
+    name: VLSI & circuit design
+    keywords: [vlsi, "circuit design", "standard cell", eda, "place and route", "design technology co-optimization", dtco, stco, asic, rtl, "analog", "mixed-signal", "low power design", "low-power", "clock", "pll", "adc", synopsys, cadence, siemens eda, "isscc", "vlsi symposium", "timing closure", "physical design", "risc-v"]
+    search: ["VLSI", "design-technology co-optimization", "standard cell", "low-power circuit design", "mixed-signal circuit", "physical design"]
+  - id: industry
+    name: Industry & market
+    # News-only category (no "search" phrases, so no papers or research-gap page).
+    keywords: [earnings, revenue, "quarterly results", capex, "capital expenditure", "price hike", "price increase", "contract price", "spot price", shortage, oversupply, "market share", "tariff", "export control", "chips act", subsidy, "acquisition", "acquire", "merger", "ipo", "new fab", "groundbreaking", "investment", "guidance", "layoffs", "trendforce", "inventory"]
+
+  # ---- AI Hub topics (hub: ai) ----
+  - id: ai-for-devices
+    hub: ai
+    name: AI for devices & materials
+    keywords: ["machine learning", "deep learning", "neural network", "ai-driven", "ai-assisted", "surrogate model", "tcad", "materials discovery", "inverse design", "physics-informed", "bayesian optimization", "virtual metrology", "defect detection", "yield"]
+    search: ["machine learning transistor", "machine learning TCAD", "deep learning semiconductor device", "machine learning memory device", "machine learning materials discovery semiconductor", "neural network compact model", "virtual metrology"]
+  - id: ai-for-vlsi
+    hub: ai
+    name: AI for VLSI & EDA
+    keywords: ["llm", "large language model", "ai for eda", "ml for eda", "chip design", "rtl generation", "verilog", "placement", "routing", "timing prediction", "design space exploration", "reinforcement learning", "agentic", "copilot"]
+    search: ["large language model Verilog", "LLM chip design", "machine learning EDA", "reinforcement learning placement", "machine learning logic synthesis", "LLM hardware design", "machine learning timing prediction"]
+  - id: ai-hardware
+    hub: ai
+    name: AI hardware & neuromorphic
+    keywords: ["ai accelerator", "ai chip", "neuromorphic", "in-memory computing", "analog ai", "spiking", "npu", "tpu", "gpu", "inference chip", "hbm4", "photonic computing"]
+    search: ["AI accelerator", "neuromorphic computing", "analog in-memory computing", "spiking neural network hardware", "in-memory computing"]
+  - id: ai-general
+    hub: ai
+    name: AI research & industry
+    keywords: ["ai", "artificial intelligence", "generative ai", "machine learning", "neural network", "deep learning", "foundation model", "llm", "openai", "anthropic", "google deepmind", "meta ai", "transformer", "agents", "reasoning model"]
+    search: ["large language model", "foundation model", "AI agents", "reasoning model"]
+
+# Company names used to tag news ("what other companies are doing").
+companies: [Samsung, "SK hynix", Micron, Kioxia, Sandisk, "Western Digital", YMTC, CXMT, Nanya, Winbond, Macronix, Intel, TSMC, GlobalFoundries, "Applied Materials", "Lam Research", "Tokyo Electron", ASML, KLA, imec, IBM, Nvidia, AMD, Synopsys, Cadence, Solidigm, Seagate, Rapidus, Everspin, Weebit]
+
+# --- News --------------------------------------------------------------
+# Google News RSS search feeds are generated from these queries.
+news_queries:
+  - '"NAND flash" OR "3D NAND"'
+  - 'DRAM OR HBM memory chip'
+  - 'SK hynix OR Micron OR Kioxia OR "Samsung memory"'
+  - 'CFET OR "gate-all-around" OR nanosheet transistor'
+  - 'FeFET OR ferroelectric memory OR MRAM OR ReRAM'
+  - 'semiconductor materials 2D transistor'
+  - 'VLSI chip design OR chiplet OR "advanced packaging"'
+  - 'TSMC OR Intel Foundry OR Rapidus process node'
+  # AI Hub news (prefix "ai:" puts the query on the AI Hub page)
+  - 'ai: artificial intelligence research breakthrough'
+  - 'ai: AI chip design EDA OR "AI for semiconductor"'
+  - 'ai: AI accelerator OR neuromorphic chip'
+  - 'ai: generative AI industry news'
+
+# Direct publisher RSS feeds. Items are kept only if they match a topic
+# keyword or a company name, so general tech news is filtered out.
+news_feeds:
+  - name: Semiconductor Engineering
+    url: https://semiengineering.com/feed/
+  - name: EE Times
+    url: https://www.eetimes.com/feed/
+  - name: IEEE Spectrum (Semiconductors)
+    url: https://spectrum.ieee.org/feeds/topic/semiconductors.rss
+  - name: Blocks & Files
+    url: https://blocksandfiles.com/feed/
+  - name: Tom's Hardware
+    url: https://www.tomshardware.com/feeds/all
+  - name: The Register
+    url: https://www.theregister.com/headlines.atom
+  - name: Phys.org (Nanotech)
+    url: https://phys.org/rss-feed/nanotech-news/
+  - name: TechPowerUp
+    url: https://www.techpowerup.com/rss/news
+  # AI Hub feeds
+  - name: MIT News (AI)
+    hub: ai
+    url: https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml
+  - name: Google Research Blog
+    hub: ai
+    url: https://research.google/blog/rss/
+  - name: Hugging Face Blog
+    hub: ai
+    url: https://huggingface.co/blog/feed.xml
+  - name: IEEE Spectrum (AI)
+    hub: ai
+    url: https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss
+
+# --- Research ------------------------------------------------------------
+research:
+  # arXiv categories to search in (device physics, applied physics, materials,
+  # hardware architecture, emerging tech).
+  arxiv_categories: [cond-mat.mes-hall, physics.app-ph, cond-mat.mtrl-sci, cs.AR, cs.ET, eess.SY]
+  # AI Hub topics search these categories instead.
+  arxiv_categories_ai: [cs.LG, cs.AI, cs.AR, cs.ET, cs.NE, cond-mat.mtrl-sci, physics.app-ph]
+  arxiv_max_per_topic: 40
+  openalex_max_per_topic: 40
+  # Only papers published within this many days are fetched each run.
+  lookback_days: 14
+
+# --- Market ticker ---------------------------------------------------------
+# Symbols use Yahoo Finance notation.
+tickers:
+  - {symbol: MU, name: Micron}
+  - {symbol: 005930.KS, name: Samsung}
+  - {symbol: 000660.KS, name: SK hynix}
+  - {symbol: 285A.T, name: Kioxia}
+  - {symbol: SNDK, name: Sandisk}
+  - {symbol: WDC, name: Western Digital}
+  - {symbol: STX, name: Seagate}
+  - {symbol: TSM, name: TSMC}
+  - {symbol: INTC, name: Intel}
+  - {symbol: NVDA, name: Nvidia}
+  - {symbol: AMD, name: AMD}
+  - {symbol: ASML, name: ASML}
+  - {symbol: AMAT, name: Applied Materials}
+  - {symbol: LRCX, name: Lam Research}
+  - {symbol: KLAC, name: KLA}
+  - {symbol: 8035.T, name: Tokyo Electron}
+  - {symbol: SNPS, name: Synopsys}
+  - {symbol: CDNS, name: Cadence}
+  - {symbol: ^SOX, name: PHLX Semi Index}
+
+# --- Learn -------------------------------------------------------------------
+# YouTube channel RSS feeds (latest videos) and podcast/newsletter feeds.
+# Find a channel id: open the channel page > View source > search "channelId".
+learn_feeds:
+  - {name: Asianometry, kind: video, url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC1LpsuAUaKoMzzJSEt5WImw"}
+  - {name: TechTechPotato, kind: video, url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC1r0DG-KEPyqOeW6o79PByw"}
+  - {name: The Chip Letter, kind: article, url: "https://thechipletter.substack.com/feed"}
+  - {name: SemiAnalysis, kind: article, url: "https://newsletter.semianalysis.com/feed"}
+  - {name: Fabricated Knowledge, kind: article, url: "https://www.fabricatedknowledge.com/feed"}
+# Google News searches for interviews and talks.
+learn_queries:
+  - 'semiconductor interview CEO memory OR NAND OR DRAM'
+  - 'IEDM OR "VLSI Symposium" OR "Flash Memory Summit" keynote'
+
+# Hand-picked courses and lecture series that do not change often.
+courses:
+  - {title: "Semiconductor device fundamentals (nanoHUB-U)", by: "Purdue / nanoHUB", url: "https://nanohub.org/courses", tags: [devices, fundamentals]}
+  - {title: "Microelectronic Devices and Circuits (6.012)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/search/?q=6.012", tags: [devices, circuits]}
+  - {title: "NPTEL courses: VLSI, semiconductor devices, memory", by: "IITs via NPTEL", url: "https://nptel.ac.in/courses", tags: [vlsi, devices]}
+  - {title: "IEEE Electron Devices Society webinars & tutorials", by: "IEEE EDS", url: "https://eds.ieee.org/education", tags: [devices, memory]}
+  - {title: "imec technology roadmap & talks", by: "imec", url: "https://www.imec-int.com/en/articles", tags: [logic, roadmap]}
+  - {title: "Stanford EE online (devices & VLSI)", by: "Stanford Online", url: "https://online.stanford.edu/search-catalog?keywords=semiconductor", tags: [devices, vlsi]}
+
+# Key conferences to watch (shown in the Events section).
+conferences:
+  - {name: ISSCC, month: February, focus: "Solid-state circuits, memory chips", url: "https://www.isscc.org/"}
+  - {name: IMW (Int. Memory Workshop), month: May, focus: "Memory devices & technology", url: "https://www.ieee-imw.org/"}
+  - {name: VLSI Symposium, month: June, focus: "Technology & circuits", url: "https://www.vlsisymposium.org/"}
+  - {name: FMS (Future of Memory and Storage), month: August, focus: "Flash, DRAM, storage industry", url: "https://futurememorystorage.com/"}
+  - {name: Hot Chips, month: August, focus: "Processor & system architecture", url: "https://hotchips.org/"}
+  - {name: IEDM, month: December, focus: "Electron devices (CFET, FeFET, 3D DRAM…)", url: "https://www.ieee-iedm.org/"}

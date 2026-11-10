@@ -1,0 +1,87 @@
+name: Update Device Hub
+
+# Fetches news, papers, prices and learning content, writes summaries with Claude,
+# commits the data, and publishes the site to GitHub Pages.
+on:
+  schedule:
+    # Times are UTC. 00:30 UTC = 06:00 IST / 09:30 KST (morning edition),
+    # 12:30 UTC = 18:00 IST / 21:30 KST (evening edition). Edit to suit your timezone.
+    - cron: "30 0 * * *"
+    - cron: "30 12 * * *"
+  workflow_dispatch:
+    inputs:
+      force_insights:
+        description: "Regenerate research-gap radar now (normally once a day)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths-ignore:
+      - "site/data/**"
+      - "README.md"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: device-hub-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run offline tests
+        run: python -m unittest discover -s tests
+
+      - name: Fetch and summarise
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEVICEHUB_MODEL: ${{ vars.DEVICEHUB_MODEL }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENALEX_EMAIL: ${{ vars.OPENALEX_EMAIL }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.force_insights }}" = "true" ]; then ARGS="--force-insights"; fi
+          python -m devicehub.run $ARGS
+
+      - name: Commit updated data
+        run: |
+          git config user.name "device-hub-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Update Device Hub data ($(date -u +'%Y-%m-%d %H:%M') UTC)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
