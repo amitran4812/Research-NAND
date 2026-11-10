@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T10:19:16Z",
+ "updated": "2026-11-10T10:23:12Z",
  "items": [
   {
    "id": "doi:10.5281/zenodo.23505771",
@@ -79,9 +79,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12835/2611.12835v1/figures/e-pog-overview.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12835/2611.12835v1/figures/e-pog-overview.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12737",
@@ -109,9 +109,9 @@
    "companies": [
     "Nvidia"
    ],
+   "image": "https://arxiv.org/html/2611.12737/2611.12737v1/architecture.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12737/2611.12737v1/architecture.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12712",
@@ -138,9 +138,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12705",
@@ -164,9 +164,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12635",
@@ -195,9 +195,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12635/2611.12635v1/framework.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12635/2611.12635v1/framework.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12491",
@@ -226,9 +226,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12484",
@@ -253,9 +253,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12435",
@@ -279,9 +279,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12435/2611.12435v1/swiglu_mapping.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12435/2611.12435v1/swiglu_mapping.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12377",
@@ -305,9 +305,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12377/2611.12377v1/figures/disclaimer.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12377/2611.12377v1/figures/disclaimer.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12293",
@@ -337,9 +337,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12293/2611.12293v1/fig03.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12293/2611.12293v1/fig03.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12285",
@@ -366,9 +366,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12285/2611.12285v1/motivation.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12285/2611.12285v1/motivation.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12225",
@@ -390,9 +390,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12222",
@@ -420,9 +420,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12167",
@@ -452,9 +452,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12167/2611.12167v1/icons/gh-logo.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12167/2611.12167v1/icons/gh-logo.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12122",
@@ -484,9 +484,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12122/2611.12122v1/toolcalls_cost_heatmap.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12122/2611.12122v1/toolcalls_cost_heatmap.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12120",
@@ -509,9 +509,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12120/2611.12120v1/exp2_gap_accuracy.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12120/2611.12120v1/exp2_gap_accuracy.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12095",
@@ -541,9 +541,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12095/2611.12095v1/Evaluation_framework.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12095/2611.12095v1/Evaluation_framework.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12092",
@@ -567,9 +567,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12092/2611.12092v1/Figures/Factory_AI_Pipeline_Feedback_Loop.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12092/2611.12092v1/Figures/Factory_AI_Pipeline_Feedback_Loop.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12060",
@@ -595,9 +595,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12060/2611.12060v1/Compass.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12060/2611.12060v1/Compass.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12048",
@@ -620,9 +620,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12048/2611.12048v1/nova-silicon-mark.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12048/2611.12048v1/nova-silicon-mark.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12014",
@@ -652,9 +652,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.12013",
@@ -684,9 +684,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.12013/2611.12013v1/figure1.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.12013/2611.12013v1/figure1.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11975",
@@ -714,9 +714,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11921",
@@ -741,9 +741,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11910",
@@ -769,9 +769,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11902",
@@ -796,9 +796,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11861",
@@ -828,9 +828,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11848",
@@ -854,9 +854,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.11848/2611.11848v1/pipeline.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.11848/2611.11848v1/pipeline.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11846",
@@ -885,9 +885,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.11846/2611.11846v1/fig_overview.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.11846/2611.11846v1/fig_overview.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11796",
@@ -913,9 +913,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.11796/2611.11796v1/fig1_overview.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.11796/2611.11796v1/fig1_overview.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.11716",
@@ -937,9 +937,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "doi:10.5281/zenodo.24063350",
@@ -1265,9 +1265,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.11475/2611.11475v1/fig7-layouts.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.11475/2611.11475v1/fig7-layouts.png"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.11256",
@@ -1295,9 +1295,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.11256/2611.11256v1/Fig1_v3.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.11256/2611.11256v1/Fig1_v3.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.5281/zenodo.24062686",
@@ -2088,9 +2088,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.10648",
@@ -2116,9 +2116,9 @@
    "companies": [
     "AMD"
    ],
+   "image": "https://arxiv.org/html/2611.10648/2611.10648v1/pensa_architecture.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.10648/2611.10648v1/pensa_architecture.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.5281/zenodo.24036079",
@@ -2659,9 +2659,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.10316/2611.10316v1/fig1.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.10316/2611.10316v1/fig1.png"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.09522",
@@ -2684,9 +2684,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.09522/2611.09522v1/figs/trans-runtime.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.09522/2611.09522v1/figs/trans-runtime.png"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.09422",
@@ -2710,9 +2710,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.09422/2611.09422v1/cm_8cores_no_memory_50_web_JS.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.09422/2611.09422v1/cm_8cores_no_memory_50_web_JS.png"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.09254",
@@ -2739,9 +2739,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.09141",
@@ -2766,9 +2766,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.09141/2611.09141v1/fig_spklyrs.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.09141/2611.09141v1/fig_spklyrs.png"
+   "week": "2026-W45"
   },
   {
    "id": "openalex:W7225604570",
@@ -4534,9 +4534,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.08147",
@@ -4559,9 +4559,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.08147/2611.08147v1/backbone-space.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.08147/2611.08147v1/backbone-space.png"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.07707",
@@ -4592,9 +4592,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.07707/2611.07707v1/paper_overview_v4.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.07707/2611.07707v1/paper_overview_v4.png"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.10024",
@@ -4620,9 +4620,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "openalex:W7225501815",
@@ -4795,9 +4795,9 @@
    "hub": "device",
    "companies": [],
    "arxiv_id": "2611.08405",
+   "image": "https://arxiv.org/html/2611.08405/2611.08405v1/Fig1.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.08405/2611.08405v1/Fig1.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.1021/acsomega.6c02241",
@@ -5287,9 +5287,9 @@
    "hub": "device",
    "companies": [],
    "arxiv_id": "2611.07506",
+   "image": "https://arxiv.org/html/2611.07506/2611.07506v1/redis-memory-fit.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.07506/2611.07506v1/redis-memory-fit.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.4071/001c.173632",
@@ -6118,9 +6118,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.06036",
@@ -6144,9 +6144,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.06036/2611.06036v1/figures/DPU_architecture.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.06036/2611.06036v1/figures/DPU_architecture.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.5281/zenodo.23942786",
@@ -6280,9 +6280,9 @@
    "hub": "device",
    "companies": [],
    "arxiv_id": "2611.06127",
+   "image": "https://arxiv.org/html/2611.06127/2611.06127v1/measurement_setup.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.06127/2611.06127v1/measurement_setup.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.1088/1361-6501/aebdbb",
@@ -6538,9 +6538,9 @@
    "companies": [
     "AMD"
    ],
+   "image": "https://arxiv.org/html/2611.05751/2611.05751v1/cdna5-1.drawio.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.05751/2611.05751v1/cdna5-1.drawio.png"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.05194",
@@ -6565,9 +6565,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.04804",
@@ -6594,9 +6594,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.04804/2611.04804v3/intro.drawio.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.04804/2611.04804v3/intro.drawio.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.1002/adco.70014",
@@ -6762,9 +6762,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.04019/2611.04019v1/KSA16GDSsample.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.04019/2611.04019v1/KSA16GDSsample.png"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.03173",
@@ -6792,9 +6792,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.02520",
@@ -6823,9 +6823,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.02520/2611.02520v1/Figure1.jpg",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.02520/2611.02520v1/Figure1.jpg"
+   "week": "2026-W45"
   },
   {
    "id": "arxiv:2611.02401",
@@ -6851,9 +6851,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45",
-   "image": ""
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.48550/arxiv.2611.02723",
@@ -7385,9 +7385,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.01707/2611.01707v1/figures/imc_intro.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2611.01707/2611.01707v1/figures/imc_intro.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2611.01473",
@@ -7412,9 +7412,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.01473/2611.01473v1/mesh_overview_2x3.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2611.01473/2611.01473v1/mesh_overview_2x3.png"
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.1016/j.mee.2026.112518",
@@ -7746,9 +7746,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.01144/2611.01144v1/fig_1a.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2611.01144/2611.01144v1/fig_1a.png"
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.1038/s41598-026-78917-0",
@@ -7805,9 +7805,9 @@
    "hub": "ai",
    "companies": [],
    "arxiv_id": "2611.00806",
+   "image": "https://arxiv.org/html/2611.00806/2611.00806v1/data-heterogenity-v2.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2611.00806/2611.00806v1/data-heterogenity-v2.png"
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.1016/j.rineng.2026.113856",
@@ -7976,7 +7976,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2611.00292/2611.00292v1/Fig_3_elegante.png"
   },
   {
    "id": "arxiv:2611.05415",
@@ -8006,7 +8007,8 @@
    "hub": "ai",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2611.05415/2611.05415v1/Figures/OverviewWorkingModel.png"
   },
   {
    "id": "arxiv:2611.03707",
@@ -8031,7 +8033,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2611.03707/2611.03707v1/case4_gaas.png"
   },
   {
    "id": "doi:10.1038/s41598-026-78623-x",
@@ -8275,7 +8278,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": ""
   },
   {
    "id": "arxiv:2610.39797",
@@ -8304,7 +8308,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2610.39797/2610.39797v1/speedup-combined.png"
   },
   {
    "id": "arxiv:2610.39688",
@@ -8332,7 +8337,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2610.39688/2610.39688v2/1_Full_Attack_USE.png"
   },
   {
    "id": "arxiv:2610.39625",
@@ -8356,7 +8362,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2610.39625/2610.39625v1/Fig_23pt1.png"
   },
   {
    "id": "arxiv:2610.39515",
@@ -8382,7 +8389,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2610.39515/2610.39515v1/Fig2.superellipse_prelim.png"
   },
   {
    "id": "arxiv:2610.39420",
@@ -8412,7 +8420,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2610.39420/2610.39420v1/Depression_crop.png"
   },
   {
    "id": "arxiv:2610.39222",
@@ -8443,7 +8452,8 @@
    "hub": "ai",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2610.39222/2610.39222v2/feasible.png"
   },
   {
    "id": "doi:10.4028/p-n4h8p9",
@@ -8567,7 +8577,8 @@
    "companies": [],
    "arxiv_id": "2610.40000",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": ""
   },
   {
    "id": "doi:10.1117/12.3115933",
@@ -8630,7 +8641,8 @@
    "companies": [],
    "arxiv_id": "2610.39213",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": ""
   },
   {
    "id": "doi:10.4028/p-p8iuia",
@@ -8813,7 +8825,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": ""
   },
   {
    "id": "arxiv:2610.38329",
@@ -8838,7 +8851,8 @@
    "hub": "ai",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": ""
   },
   {
    "id": "arxiv:2610.38262",
@@ -8868,7 +8882,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2610.38262/2610.38262v1/intro.png"
   },
   {
    "id": "doi:10.1021/acsnano.6c16739",
@@ -8925,7 +8940,8 @@
     "TSMC"
    ],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": "https://arxiv.org/html/2610.37601/2610.37601v1/Arch.png"
   },
   {
    "id": "arxiv:2610.37121",
@@ -8949,7 +8965,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": ""
   },
   {
    "id": "arxiv:2610.37033",
@@ -8978,7 +8995,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": ""
   },
   {
    "id": "arxiv:2610.36492",
@@ -9008,7 +9026,8 @@
    "hub": "device",
    "companies": [],
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
+   "week": "2026-W44",
+   "image": ""
   },
   {
    "id": "doi:10.1103/wkjv-zx9x",

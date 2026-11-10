@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T10:16:55Z",
+ "updated": "2026-11-10T10:21:46Z",
  "items": [
   {
    "id": "1717eac24e0e",
@@ -439,6 +439,23 @@
     "SK hynix"
    ],
    "first_seen": "2026-11-10T10:16:55Z"
+  },
+  {
+   "id": "0c6d750d4c44",
+   "title": "Sunrise Energy Metals (ASX: SRL) Completes Strategic Investment in Agni Semiconductor to Build Scandium Value Chain",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObWJqZE9IcEVsdEFRS3lsUXhLeldXVGg2NXZMbGZSNGlDMGNpcFNQYVhNcEFmYk1Xd0RENVhhTFJYN1hVM0FLNkI2UzF6ck5oRzMzdHFwSXBmODhobzc3TFFIQ0ZTUEtFTW5tT3c3QmhoeWFReDNJb2xMN1lLNjNTTjZjSDJuaHlLT0Vac2ZXcS1SY1lGVXhsb1NyQVBBaE0xNGF6Z0xVXzN2SlFIM1h0UUp6R0IwREJ4cUI2SmhYdFd2OUZXd0VBWnBuNmgtV0RFM2NONE5famtZbExEc3lEeA?oc=5",
+   "source": "Kalkine",
+   "source_url": "https://kalkine.com.au",
+   "published": "2026-11-10T07:36:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-10T10:21:45Z"
   },
   {
    "id": "5c7e691391d6",
@@ -1097,6 +1114,23 @@
    "first_seen": "2026-11-10T10:16:55Z"
   },
   {
+   "id": "e1e9452df51b",
+   "title": "[G-STAR 26] Phantom Blade Zero themed SSD on sale at B2C",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBCdHlqbHlfVWUzOE5CUVIyYkJ4Y1Bwb3QyQWxLZWZPRWNBcHZFWDhJSWtZNXZrYUliRkpfQThnNVpfQ3lWUUtZQmxid3BsY0Fac0JUOHpySmU4Zw?oc=5",
+   "source": "게임메카",
+   "source_url": "https://www.gamemeca.com",
+   "published": "2026-11-10T02:13:21Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-10T10:21:45Z"
+  },
+  {
    "id": "e51158950895",
    "title": "Samsung Electronics and SK hynix surge together on upbeat US AI chip sentiment",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsWkRBX09qU3JRblZUSlgySzJ4aS14YjlMSDNWb2xlSjBxcl9sbEktNjgzeVdWSlpta3BUS3BmN2hmQ1hCZC1qYkpGaGhnbjhfejRfYXBRZERtcUdIUDhpamt1cWFQbzV2ODA0cQ?oc=5",
@@ -1113,6 +1147,24 @@
     "SK hynix"
    ],
    "first_seen": "2026-11-10T10:16:55Z"
+  },
+  {
+   "id": "b5117f90bf4b",
+   "title": "Refurbished DRAM Is Moving Into New Smartphones, TrendForce Says, Raising Questions About Quality",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE12ZzY3eXNNZzR3TkhpSWZUdGRCc05tcmFFUk5EQ0d2czhVRGhjUTRfcTBsYncyVjVsSzk2ZUxONUNGcWZhSkFrT0hWcmpLc3FEUzQ0QjBxSWFXM2IwdWtpVUdZV1RNMXhIRXlwODJR?oc=5",
+   "source": "XenoSpectrum",
+   "source_url": "https://xenospectrum.com",
+   "published": "2026-11-10T02:10:06Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram",
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-10T10:21:45Z"
   },
   {
    "id": "e01042f9bff8",
@@ -1204,23 +1256,6 @@
    "first_seen": "2026-11-10T10:16:55Z"
   },
   {
-   "id": "c47d411f0760",
-   "title": "Disney partners with Adobe for generative AI models",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTFVGRGNEMjB0ajBqSFJPM0E2MjM0LVN6M0dhZDk4X0ZXX1lBQWdEN0kzTUo5SWdzY1FLMjl2TXhYTTdmSHFKWjRfZGxVazdSVDVMSVhKNWZtWWhWeHpFUkY2WjQxb2JEU0t5b1lMUEltLWlJcmVzV0dGZ3lyLTBWeGdTZjVUeG5COHByeFlwZE9IeEpQTjV0SDdTaw?oc=5",
-   "source": "TechGig",
-   "source_url": "https://techgig.com",
-   "published": "2026-11-10T01:46:26Z",
-   "description": "",
-   "hub": "ai",
-   "origin": "google",
-   "image": null,
-   "topics": [
-    "ai-general"
-   ],
-   "companies": [],
-   "first_seen": "2026-11-10T10:16:55Z"
-  },
-  {
    "id": "7f2971108f59",
    "title": "CMS NTAP Explained: 42 CFR 412.87 & AI Payment",
    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBhUWpwckgxQWU0eFJLN3ZPVllneVBBeXJ6Mm9LUXdFMmtrVnc5MWpZQ2JVWkVuM3lkWElqSndCVjBDU1daWktmYUxR?oc=5",
@@ -1272,6 +1307,23 @@
    "companies": [
     "Samsung"
    ],
+   "first_seen": "2026-11-10T10:16:55Z"
+  },
+  {
+   "id": "c47d411f0760",
+   "title": "Disney partners with Adobe for generative AI models",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZERleHhWV3RYY045T0VtVWVTX2lkVjVBSFdlODlvLUoyTktRUlNhMG9NVTNjSThGQlVMTDRCT1VuUEpydW53aUtseFRWSVBaVDRQTHlKLVNnb2VYbVRDT19fR005TFl1WTV2LUZfVEpMM3F6NWVtNHpDeVRONmhMYWFkSjd2R2FKNlQ1VXhLMmhZVy1lc05PRnJBY1c0THdG0gGgAUFVX3lxTE9kRGV4eFZXdFhjTjlPRW1VZVNfaWRWNUFIV2U4OW8tSjJOS1FSU2Ewb01VM2NJOEZCVUxMNEJPVW5QSnJ1bndpS2x4VFZJUFpUNFBMeUotU2dvZVhtVENPX19HTTlMWXVZNXYtRl9USkwzcXo1ZW00ekN5VE42aExhYWRKN3ZHYUo2VDVVeEsyaFlXLWVzTk9GckFjVzRMd0Y?oc=5",
+   "source": "TechGig",
+   "source_url": "https://techgig.com",
+   "published": "2026-11-10T01:15:55Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
    "first_seen": "2026-11-10T10:16:55Z"
   },
   {
@@ -1972,6 +2024,21 @@
    "first_seen": "2026-11-10T10:16:55Z"
   },
   {
+   "id": "45d0883ff441",
+   "title": "Edge of Breakthrough: Dr. Steven Rosen, on a life of science, song and care",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNllJRF9HV1ZrVU5EODlGTmRfck1GLXdZME1zSlZPbVZEbUFNTm9OX3FLaGhobHplakhIeDlnMzRIc0hfeVdxY0JzVUVwY2kzOTIwTlRPS1ViU19UWVhwbjBFNWFwbndWTHUtNzdWR1lyNmRKSFI4UHcxSk5HOHFmMG1vY2g1TEtidmY0?oc=5",
+   "source": "City of Hope",
+   "source_url": "https://www.cityofhope.org",
+   "published": "2026-11-09T18:45:06Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-10T10:21:45Z"
+  },
+  {
    "id": "1fb8f3a14164",
    "title": "India positioned to lead global semiconductor drive from the front: Intel",
    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORnMtampqcjBxeXUzTVpWamQ0MWpLMWlLb3lUZlBjS1dZcTBESW1aQTVKWE9rcDdOeTNRUVVZWl9oWEE3S2dIbWNhM1VmNlVscTZMRW9uZUdCX3duV19TaWFVaGlJck11alFMdm92b2wtYldsUHl1SlprTDdRSml6OWk3YUdVcEozb18wc1JlenJld3h6NGZGSXZnMF82WU0?oc=5",
@@ -2528,6 +2595,23 @@
     "SK hynix"
    ],
    "first_seen": "2026-11-10T10:16:55Z"
+  },
+  {
+   "id": "45f9bdc79ba0",
+   "title": "Roundhill Generative AI & Technology ETF (CHAT) Stock Price, News, Quote & History",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE81QTJsWGJ1NGVNQW5rb0dLOTlvdVRmTGUxenFkU1IxM096U0hXUXhBY2NrSVFGeERGM1RheTJlR3k4TWlKU3lWOWJDTHg3aEhxMGc?oc=5",
+   "source": "Yahoo! Finance Canada",
+   "source_url": "https://ca.finance.yahoo.com",
+   "published": "2026-11-09T14:01:11Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-10T10:21:45Z"
   },
   {
    "id": "2bcfdb567688",
@@ -3181,6 +3265,40 @@
    "first_seen": "2026-11-10T10:16:55Z"
   },
   {
+   "id": "d6eaf9330e6e",
+   "title": "SK Hynix stock faces US licensing hurdle for New York plans",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNT2daY3NMVENtUFQ2VE9mM2VnVUlCeTNTNmF2Z0FNQnd3VGp3U1RuUEQ4Q191R3NvV001eF9Wc19pZ2xMVk9jNEJjVDFGeThTLTlwQllBYmJGNjhKUV9KMmFMNmljYWQ3WTlnYW9yWUhINkJIT041ektqdV8zYkZiR1RYYXJFRXRFS0YxandpWlhPMk9DWDA2bFJvZXdnSnNZMGpCZ0VONzRzSkptcGRNSVVDTW4td2dNdWJPQjZncw?oc=5",
+   "source": "ad-hoc-news.de",
+   "source_url": "https://www.ad-hoc-news.de",
+   "published": "2026-11-09T08:50:24Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-10T10:21:45Z"
+  },
+  {
+   "id": "274d8d645b61",
+   "title": "SK hynix posts record Q3 margins despite 58% ne...",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQS1F6aEV4RWhGNjdMUldZelh6YlBpbXdzdTVqTWo1WGt1QW9ueDJsRG4xdU4xT3dLemFWVVlld0JGNFdFZDRBLTZINnA0SEVBWDA5aUtUaXVRZnFpUm53NU1DVWxmWkVqOWpid2xCVDBsckRhTWl4TDBIWGF3VzlLVUY0a0hhUmRLTWhTMkhPMkRSLTBtaXR2MWhlTEtUUQ?oc=5",
+   "source": "Pluang",
+   "source_url": "https://pluang.com",
+   "published": "2026-11-09T08:40:57Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-10T10:21:45Z"
+  },
+  {
    "id": "d0e46d89c9a9",
    "title": "TSMC, SK Hynix, Samsung: Asian Chip Stocks Rise Even As Nvidia CEO Jensen Huang’s Controversy Tests Investor Confidence",
    "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQWUpWX21FNDNaeTlfaFpYQ3l1dmlPSTZuSG1WWkRuRUlYajAtT0hkbWZmTGc5NTVBcjZSeTQ5OGJSWENmR181Nm9SNG1mbUpkMWE5UV9HWXZCX2l0TnRKRmhLZEdkeFhsNUlHN0VmY0dqN3dYLXJGenFFdWVWTFRlSTVCQVdyWHNUdUVfaGxuSlU2T21BLWtVMG1EMTdvMzRRZUxwOGRnb1BNQ29CQTBYeHQ4SUFnR01Db1VtVk1haU8tWk9UclNsMzRQNkxQcWlvb2QyOFRFYUxDWmhJcmNyYnZmaWNWQ3VFcWNqNk9hdHduR00xYVNvUXlSWmZEbG5VblF5Sms1WE4yalVq?oc=5",
@@ -3246,12 +3364,13 @@
    "description": "LPDDR6 becomes an essential ingredient as intelligence moves into autonomous and mobile edge systems. The post Memory In Physical AI appeared first on Semiconductor Engineering .",
    "hub": "device",
    "origin": "feed",
-   "image": null,
+   "image": "https://semiengineering.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-3.04.59-PM-1024x946.png",
    "topics": [
     "dram"
    ],
    "companies": [],
-   "first_seen": "2026-11-10T10:16:55Z"
+   "first_seen": "2026-11-10T10:16:55Z",
+   "img_checked": true
   },
   {
    "id": "79df64080cc6",
