@@ -59,7 +59,8 @@
     "sram",
     "dram",
     "nand",
-    "emerging-memory"
+    "emerging-memory",
+    "hbf"
    ],
    "url": "https://www.isscc.org/",
    "for": "First disclosure of record memory chips (HBM, LPDDR, 3D NAND die) and circuits."
@@ -76,7 +77,8 @@
     "dram",
     "nand",
     "emerging-memory",
-    "reliability"
+    "reliability",
+    "hbf"
    ],
    "url": "https://www.ieee-imw.org/",
    "for": "The focused memory venue: NAND, DRAM, FeRAM, MRAM, ReRAM, PCM device and reliability work."
@@ -374,7 +376,8 @@
    "topics": [
     "ai-hardware",
     "vlsi",
-    "industry"
+    "industry",
+    "hbf"
    ],
    "url": "https://hotchips.org/",
    "for": "Industry talks on new processors and accelerators (presentations, not papers)."
@@ -390,7 +393,8 @@
    "topics": [
     "nand",
     "dram",
-    "industry"
+    "industry",
+    "hbf"
    ],
    "url": "https://futurememorystorage.com/",
    "for": "Industry event for flash, DRAM and SSDs (talks, not papers)."

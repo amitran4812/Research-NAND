@@ -1,7 +1,7 @@
 {
  "title": "Device Hub",
  "tagline": "Nanoscale devices, memory & storage, VLSI — news and research, twice a day",
- "updated": "2026-11-10T12:53:12Z",
+ "updated": "2026-11-10T13:02:14Z",
  "edition": "evening",
  "llm": {
   "enabled": false,
@@ -16,6 +16,11 @@
   {
    "id": "nand",
    "name": "NAND flash & SSD",
+   "hub": "device"
+  },
+  {
+   "id": "hbf",
+   "name": "HBF (high-bandwidth flash)",
    "hub": "device"
   },
   {
@@ -113,7 +118,7 @@
   {
    "key": "2026-W45",
    "label": "Nov 02 – Nov 08, 2026",
-   "count": 221
+   "count": 223
   },
   {
    "key": "2026-W44",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T12:53:12Z",
+ "updated": "2026-11-10T13:02:14Z",
  "items": [
   {
    "id": "c3cf39ae4286",
@@ -9,7 +9,8 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-09T16:35:06Z"
+   "published": "2026-11-09T16:35:06Z",
+   "topics": []
   },
   {
    "id": "1783971b31ae",
@@ -19,7 +20,8 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-09T02:26:00Z"
+   "published": "2026-11-09T02:26:00Z",
+   "topics": []
   },
   {
    "id": "cc6991707a68",
@@ -29,7 +31,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/aPuPzqJN1DQ/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-11-08T23:00:32Z"
+   "published": "2026-11-08T23:00:32Z",
+   "topics": []
   },
   {
    "id": "2f203fd19b19",
@@ -39,7 +42,10 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-08T10:10:48Z"
+   "published": "2026-11-08T10:10:48Z",
+   "topics": [
+    "dram"
+   ]
   },
   {
    "id": "1c98f41610ef",
@@ -49,7 +55,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "A wind-powered 800MW campus, 120MW built within a year, a 5MW SST-native 800V DC pilot and a cooling design without central chillers",
-   "published": "2026-11-07T19:01:39Z"
+   "published": "2026-11-07T19:01:39Z",
+   "topics": []
   },
   {
    "id": "6d3b4bdecc47",
@@ -59,7 +66,8 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/S0UKqR8yrOo/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-11-06T23:00:05Z"
+   "published": "2026-11-06T23:00:05Z",
+   "topics": []
   },
   {
    "id": "b47f3baf65d9",
@@ -69,7 +77,8 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-06T16:31:38Z"
+   "published": "2026-11-06T16:31:38Z",
+   "topics": []
   },
   {
    "id": "eb8915d3ae69",
@@ -79,7 +88,8 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-06T05:52:00Z"
+   "published": "2026-11-06T05:52:00Z",
+   "topics": []
   },
   {
    "id": "c7b2a18fc00d",
@@ -89,7 +99,8 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/SnVQ-gK96lM/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-11-05T23:00:34Z"
+   "published": "2026-11-05T23:00:34Z",
+   "topics": []
   },
   {
    "id": "6170a361e39d",
@@ -99,7 +110,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "Viable Alternative of CUDA Moat, NVIDIA scared and working nights & weekends, Jensen’s Counter Submission, Kimi K3, Muse Spark Open, Qwen, GLM5.3, TorchTPU, vLLM, SGLang, llm-d, Ray",
-   "published": "2026-11-05T19:03:45Z"
+   "published": "2026-11-05T19:03:45Z",
+   "topics": []
   },
   {
    "id": "e5fd18257b50",
@@ -109,7 +121,10 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/SdpLpfAgj0k/hqdefault.jpg",
    "description": "What do you have in your computer? Does it feel like too much memory? Timestamps: [00:00] - Intro [05:27] - When in-flight internet is worth paying for (Starlink) [08:20] - *Topic #1: Sam Altman Wants Your DRAM* [08:46] - Altman's comment that your system's DRAM should be in a…",
-   "published": "2026-11-05T06:34:21Z"
+   "published": "2026-11-05T06:34:21Z",
+   "topics": [
+    "dram"
+   ]
   },
   {
    "id": "93371e8a6f43",
@@ -119,7 +134,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/Y0WA7Gl4kyo/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-11-04T23:00:26Z"
+   "published": "2026-11-04T23:00:26Z",
+   "topics": []
   },
   {
    "id": "24a98255ca8e",
@@ -129,7 +145,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "Making 13GW in 1.5 Years A Reality, Repurposing Rocket Ship Campuses, A Datacenter at TeraFab?",
-   "published": "2026-11-03T20:44:53Z"
+   "published": "2026-11-03T20:44:53Z",
+   "topics": []
   },
   {
    "id": "38446d533dab",
@@ -139,7 +156,10 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-03T15:43:45Z"
+   "published": "2026-11-03T15:43:45Z",
+   "topics": [
+    "nand"
+   ]
   },
   {
    "id": "b09ac21494ae",
@@ -149,7 +169,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/9LMvGwOT1a0/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-11-03T04:00:28Z"
+   "published": "2026-11-03T04:00:28Z",
+   "topics": []
   },
   {
    "id": "fa67338aa019",
@@ -159,7 +180,10 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-02T07:50:00Z"
+   "published": "2026-11-02T07:50:00Z",
+   "topics": [
+    "industry"
+   ]
   },
   {
    "id": "d8d8dddbf79c",
@@ -169,7 +193,10 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-02T02:32:07Z"
+   "published": "2026-11-02T02:32:07Z",
+   "topics": [
+    "dram"
+   ]
   },
   {
    "id": "c2ee97472f42",
@@ -179,7 +206,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "A frontier benchmark spanning RSI, hardware design, cyber, bio, finance, legal, quant trading, chip design, software engineering, materials science, and alignment",
-   "published": "2026-11-02T01:51:42Z"
+   "published": "2026-11-02T01:51:42Z",
+   "topics": []
   },
   {
    "id": "03dff39ff109",
@@ -189,7 +217,8 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-02T01:46:00Z"
+   "published": "2026-11-02T01:46:00Z",
+   "topics": []
   },
   {
    "id": "8b58adb3daf7",
@@ -199,7 +228,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/y5YKL75e78Y/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-11-01T23:40:14Z"
+   "published": "2026-11-01T23:40:14Z",
+   "topics": []
   },
   {
    "id": "67a5ea053167",
@@ -209,7 +239,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "2027 is largely locked in. 2028 is less secure: a prolonged Texas permit freeze is now the biggest single risk to the US buildout, and both parties are running on tighter rules",
-   "published": "2026-11-01T18:40:45Z"
+   "published": "2026-11-01T18:40:45Z",
+   "topics": []
   },
   {
    "id": "c3668905da12",
@@ -219,7 +250,8 @@
    "kind": "video",
    "thumbnail": "https://i1.ytimg.com/vi/TTGOXA5OgY4/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-11-01T07:00:31Z"
+   "published": "2026-11-01T07:00:31Z",
+   "topics": []
   },
   {
    "id": "80506b158faa",
@@ -229,7 +261,8 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/gADulYiRSww/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-10-30T14:00:40Z"
+   "published": "2026-10-30T14:00:40Z",
+   "topics": []
   },
   {
    "id": "c7f488f40a46",
@@ -239,7 +272,8 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-10-30T07:00:00Z"
+   "published": "2026-10-30T07:00:00Z",
+   "topics": []
   },
   {
    "id": "47f657e831ed",
@@ -249,7 +283,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/iajgS3611BM/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-10-29T22:00:06Z"
+   "published": "2026-10-29T22:00:06Z",
+   "topics": []
   },
   {
    "id": "e35e79c10b02",
@@ -259,7 +294,10 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/OHtNaTeiQPQ/hqdefault.jpg",
    "description": "George and I are at the OCP Global Summit. We clear six weeks of backlog: Diamond Rapids motherboards sitting on the show floor two quarters early, the Qualcomm and Arm countersuit closing with Arm owing two dollars, Japan paying for two GlobalFoundries fabs in New York, and…",
-   "published": "2026-10-29T16:30:30Z"
+   "published": "2026-10-29T16:30:30Z",
+   "topics": [
+    "process"
+   ]
   },
   {
    "id": "7fba4082a92c",
@@ -269,7 +307,8 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-10-29T07:00:00Z"
+   "published": "2026-10-29T07:00:00Z",
+   "topics": []
   },
   {
    "id": "e221657e121b",
@@ -279,7 +318,8 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-10-29T07:00:00Z"
+   "published": "2026-10-29T07:00:00Z",
+   "topics": []
   },
   {
    "id": "4c04efbeb2bb",
@@ -289,7 +329,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/ub00LkAWPe4/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-10-28T22:00:14Z"
+   "published": "2026-10-28T22:00:14Z",
+   "topics": []
   },
   {
    "id": "908327a8a8b1",
@@ -299,7 +340,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/-dkjlB3slSo/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-10-27T22:00:13Z"
+   "published": "2026-10-27T22:00:13Z",
+   "topics": []
   },
   {
    "id": "3512ef5e0850",
@@ -309,7 +351,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/-lsjjOLTCSg/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-10-26T23:39:17Z"
+   "published": "2026-10-26T23:39:17Z",
+   "topics": []
   },
   {
    "id": "e07a56fb318d",
@@ -319,7 +362,8 @@
    "kind": "video",
    "thumbnail": "https://i1.ytimg.com/vi/hBOyX0lfbQs/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-10-26T23:00:20Z"
+   "published": "2026-10-26T23:00:20Z",
+   "topics": []
   },
   {
    "id": "e51c340870fc",
@@ -329,7 +373,8 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/ksx5g5WvAIw/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-10-25T23:00:15Z"
+   "published": "2026-10-25T23:00:15Z",
+   "topics": []
   },
   {
    "id": "9b47e4f295c7",
@@ -339,7 +384,8 @@
    "kind": "video",
    "thumbnail": "https://i3.ytimg.com/vi/RMoEgchfDmg/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
-   "published": "2026-10-24T19:00:36Z"
+   "published": "2026-10-24T19:00:36Z",
+   "topics": []
   },
   {
    "id": "ace513f96962",
@@ -349,7 +395,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "Trainium Best for Inference? But now good for Training too, Native Trainium PyTorch, High Quality CI, TorchTitan, GPU Impossible Profiler",
-   "published": "2026-10-23T19:06:44Z"
+   "published": "2026-10-23T19:06:44Z",
+   "topics": []
   },
   {
    "id": "8633c87217b1",
@@ -359,7 +406,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "Huawei Ascend 950PR Deep dive & µbenchmarks, DSv4.1 Flash Analysis, DeepSeek support for Ascend",
-   "published": "2026-10-21T17:34:38Z"
+   "published": "2026-10-21T17:34:38Z",
+   "topics": []
   },
   {
    "id": "a5efb530b446",
@@ -369,7 +417,10 @@
    "kind": "article",
    "thumbnail": null,
    "description": "60GW Under Construction, SemiAnalysis Leading Indicators, 1.3T of Lease Contracts Signed YTD, The Shortage Could Move to Chips",
-   "published": "2026-10-19T05:39:38Z"
+   "published": "2026-10-19T05:39:38Z",
+   "topics": [
+    "industry"
+   ]
   },
   {
    "id": "622c77508c56",
@@ -379,7 +430,8 @@
    "kind": "video",
    "thumbnail": "https://i1.ytimg.com/vi/0oNqfLl6YPE/hqdefault.jpg",
    "description": "IBM's next-generation Z processor doesn't just run Z; it runs Arm natively too, and at 5.7 GHz that makes it the fastest Arm chip ever made. At Hot Chips 2026, IBM opened day one by unveiling a dual-ISA core that switches between z/Architecture and Armv9.3 on a per-thread…",
-   "published": "2026-10-16T13:00:24Z"
+   "published": "2026-10-16T13:00:24Z",
+   "topics": []
   },
   {
    "id": "2bcdcac996ea",
@@ -389,7 +441,11 @@
    "kind": "article",
    "thumbnail": null,
    "description": "ASML is building a hybrid bonding tool! The company has not announced anything yet, but its patent filings, a news report and its own roadmap all suggest so.",
-   "published": "2026-10-15T19:27:20Z"
+   "published": "2026-10-15T19:27:20Z",
+   "topics": [
+    "packaging",
+    "process"
+   ]
   },
   {
    "id": "a46f0e3016bf",
@@ -399,7 +455,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/Y7VigDmUds8/hqdefault.jpg",
    "description": "Meta builds its own AI accelerators, and at Hot Chips 2026 it presents the next two: the MTIA 300 for training and the MTIA 400 for generative AI and recommendation. Recommendation compute at Meta grows 3x a year, and GPUs sit idle waiting on memory for those workloads. I also…",
-   "published": "2026-10-13T13:00:30Z"
+   "published": "2026-10-13T13:00:30Z",
+   "topics": []
   },
   {
    "id": "fe0de0ceb8e2",
@@ -409,7 +466,10 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/Q_QVlJkyaWc/hqdefault.jpg",
    "description": "Agentic AI runs its tools on the CPU, and no vendor tells you how many cores an agent needs. In this keynote at the Design Automation Conference, I compare AMD Venice, Intel Xeon 6, the Arm AGI CPU and Nvidia Vera, then follow the problem down into advanced packaging, CFETs and…",
-   "published": "2026-10-09T13:00:13Z"
+   "published": "2026-10-09T13:00:13Z",
+   "topics": [
+    "packaging"
+   ]
   },
   {
    "id": "96fbcd1f4743",
@@ -419,7 +479,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "AI safety is on fire.",
-   "published": "2026-10-08T17:46:05Z"
+   "published": "2026-10-08T17:46:05Z",
+   "topics": []
   },
   {
    "id": "cf2bd1bf51a5",
@@ -429,7 +490,10 @@
    "kind": "video",
    "thumbnail": "https://i3.ytimg.com/vi/rJ3u_jjfD_8/hqdefault.jpg",
    "description": "It's not every day ASML calls you up for a favor. In this fireside chat recorded live at Hello Tomorrow in Amsterdam, I sit down with ASML CEO Christophe Fouquet to talk Moore's Law, the company's unconventional origin story, and the two decades of costly trial-and-error behind…",
-   "published": "2026-10-07T13:00:11Z"
+   "published": "2026-10-07T13:00:11Z",
+   "topics": [
+    "process"
+   ]
   },
   {
    "id": "3856a7623ab2",
@@ -439,7 +503,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "Limit testing every AI subscription plan from Anthropic, OpenAI, Meta, SpaceXSI, MiniMax, Moonshot, Z.ai, Cursor, and Cognition",
-   "published": "2026-10-05T20:01:09Z"
+   "published": "2026-10-05T20:01:09Z",
+   "topics": []
   },
   {
    "id": "6aceede4e26c",
@@ -449,7 +514,8 @@
    "kind": "video",
    "thumbnail": "https://i3.ytimg.com/vi/Fu3fhAKLOB8/hqdefault.jpg",
    "description": "South Korea's AI chip scene is booming - DEEPX, HyperAccel, Mobilint, FuriosaAI, and Rebellions are all racing to carve out a niche between the edge and the data center. Ian Cutress and Sally Ward-Foxton give their honest takes on which companies have the traction, funding, and…",
-   "published": "2026-10-05T13:00:37Z"
+   "published": "2026-10-05T13:00:37Z",
+   "topics": []
   },
   {
    "id": "4b84a7970544",
@@ -459,7 +525,8 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/E5QFuppNFSk/hqdefault.jpg",
    "description": "South Korea has quietly become one of the most active fronts in the AI chip race, and Sally Ward-Foxton and Ian Cutress are on the ground to find out why. In this episode of The AI Hardware Show, they break down five of the country's boldest AI silicon players — DeepX,…",
-   "published": "2026-10-02T13:00:24Z"
+   "published": "2026-10-02T13:00:24Z",
+   "topics": []
   },
   {
    "id": "614729bab0fe",
@@ -469,7 +536,11 @@
    "kind": "video",
    "thumbnail": "https://i1.ytimg.com/vi/lABUTzWYVlY/hqdefault.jpg",
    "description": "Broadcom's Beast XPU is coming in 2028 with 16 HBM stacks and 8 compute dies on a single package, but how do you actually build something that big? At OCP Taiwan, Broadcom's VP of ASIC products gave a talk on 3.5D heterogeneous \"scale-in\" packaging, covering face-to-face…",
-   "published": "2026-10-01T13:00:04Z"
+   "published": "2026-10-01T13:00:04Z",
+   "topics": [
+    "dram",
+    "vlsi"
+   ]
   },
   {
    "id": "81ff4302a4d5",
@@ -479,7 +550,8 @@
    "kind": "video",
    "thumbnail": "https://i1.ytimg.com/vi/8s7uYtCM1bc/hqdefault.jpg",
    "description": "Today's sponsor is https://www.amtechmicro.com Richard Ho leads hardware at OpenAI. He joined Google's TPU program as one of its first engineers, built Anton supercomputers at D. E. Shaw before that, and now runs the team behind Jalapeño. He tells me how close he came to a…",
-   "published": "2026-09-30T13:10:53Z"
+   "published": "2026-09-30T13:10:53Z",
+   "topics": []
   },
   {
    "id": "e9bf11b36afa",
@@ -489,7 +561,12 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/kxWhzTmJfQQ/hqdefault.jpg",
    "description": "I walk the show floor at TSMC's Open Innovation Platform (OIP) event in the Bay Area. It's a one-day conference where TSMC puts its partners front and centre. We stop by Cadence, Samsung, SK hynix, Synopsys and GUC to see what's next for HBM thermals, co-packaged optics, UCIe…",
-   "published": "2026-09-29T13:00:08Z"
+   "published": "2026-09-29T13:00:08Z",
+   "topics": [
+    "dram",
+    "packaging",
+    "vlsi"
+   ]
   },
   {
    "id": "6b584623a8de",
@@ -499,7 +576,10 @@
    "kind": "article",
    "thumbnail": null,
    "description": "GLM-5.3, KV Cache Offloading, HiSparse, DeepSeek Sparse Attention, IndexShare, Single-rollout Asynchronous Optimization, Cybersecurity",
-   "published": "2026-09-28T19:26:41Z"
+   "published": "2026-09-28T19:26:41Z",
+   "topics": [
+    "dram"
+   ]
   },
   {
    "id": "629c14aa7b88",
@@ -509,7 +589,10 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/ipsL7t1GFFY/hqdefault.jpg",
    "description": "Forget the data center - the real AI action might be happening in microwatts. Sally Ward-Foxton and Ian Cutress dig into the tiniest AI chips on the market, from analog compute upstarts to ARM's revived Ethos NPU line, and debate why an \"AI ASIC\" isn't really an ASIC at all.…",
-   "published": "2026-09-28T13:00:23Z"
+   "published": "2026-09-28T13:00:23Z",
+   "topics": [
+    "vlsi"
+   ]
   },
   {
    "id": "01ce2c4217db",
@@ -519,7 +602,10 @@
    "kind": "article",
    "thumbnail": null,
    "description": "Looking inside Intel 18A and Intel’s Panther Lake. A free SemiAnalysis STEEL teardown.",
-   "published": "2026-09-26T13:36:32Z"
+   "published": "2026-09-26T13:36:32Z",
+   "topics": [
+    "logic-devices"
+   ]
   },
   {
    "id": "b303ff07966b",
@@ -529,7 +615,8 @@
    "kind": "article",
    "thumbnail": null,
    "description": "1,000+ facilities across 60+ operators mapped, built retail-first and flipped by AI, largest hyperscaler leases 1/5 national capacity, 100MW in 12 months, Eastern Data Western Compute",
-   "published": "2026-09-25T15:58:22Z"
+   "published": "2026-09-25T15:58:22Z",
+   "topics": []
   },
   {
    "id": "d8b13c79dfe9",
@@ -539,7 +626,10 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/Wiv08sstkJc/hqdefault.jpg",
    "description": "Forget the data center - the real AI action might be happening in a coin-cell battery near you. Ian Cutress and Sally Ward-Foxton dig into six ultra-low-power chip architectures built to run always-on AI for years on almost nothing, from analog processors that skip the ADC…",
-   "published": "2026-09-25T13:00:16Z"
+   "published": "2026-09-25T13:00:16Z",
+   "topics": [
+    "vlsi"
+   ]
   },
   {
    "id": "45106674700a",
@@ -549,7 +639,10 @@
    "kind": "article",
    "thumbnail": null,
    "description": "In gory detail: reliability, performance, support, pricing—and, of course, security—in our most thorough analysis of GPU cloud providers globally.",
-   "published": "2026-09-23T21:20:29Z"
+   "published": "2026-09-23T21:20:29Z",
+   "topics": [
+    "reliability"
+   ]
   },
   {
    "id": "db4ba69b7898",
@@ -559,7 +652,8 @@
    "kind": "video",
    "thumbnail": "https://i4.ytimg.com/vi/K_0xp41Q_jk/hqdefault.jpg",
    "description": "Edge AI doesn't need a data center - it's already running in retail stores, laptops, and microcontrollers all around you. In part two of this edge AI deep-dive, Ian Cutress and Sally Ward-Foxton go off-script to talk through seven chip companies - Axelera AI, Kalray, Kinara,…",
-   "published": "2026-09-21T13:00:11Z"
+   "published": "2026-09-21T13:00:11Z",
+   "topics": []
   },
   {
    "id": "7306454874d6",
@@ -569,63 +663,323 @@
    "kind": "video",
    "thumbnail": "https://i2.ytimg.com/vi/aOaYY1DLGqg/hqdefault.jpg",
    "description": "We're at the final day of the AI Infrastructure Summit, and the booths come down around me as I walk. You get Dnotita's vector database ASIC back from the fab, SK Hynix mocking up high bandwidth flash, Marvell showing photonics, and a 30 watt box running 120 billion parameters…",
-   "published": "2026-09-18T17:45:43Z"
+   "published": "2026-09-18T17:45:43Z",
+   "topics": [
+    "hbf",
+    "process",
+    "vlsi"
+   ]
   }
  ],
  "courses": [
   {
-   "title": "Semiconductor device fundamentals (nanoHUB-U)",
-   "by": "Purdue / nanoHUB",
-   "url": "https://nanohub.org/courses",
-   "tags": [
-    "devices",
-    "fundamentals"
-   ]
-  },
-  {
    "title": "Microelectronic Devices and Circuits (6.012)",
-   "by": "MIT OpenCourseWare",
+   "by": "MIT OpenCourseWare · free lectures & notes",
    "url": "https://ocw.mit.edu/search/?q=6.012",
-   "tags": [
-    "devices",
-    "circuits"
-   ]
+   "topics": [
+    "logic-devices",
+    "vlsi"
+   ],
+   "format": "Course"
   },
   {
-   "title": "NPTEL courses: VLSI, semiconductor devices, memory",
-   "by": "IITs via NPTEL",
-   "url": "https://nptel.ac.in/courses",
-   "tags": [
+   "title": "Integrated Microelectronic Devices (6.720J)",
+   "by": "MIT OpenCourseWare · Prof. Jesús del Alamo",
+   "url": "https://ocw.mit.edu/search/?q=6.720",
+   "topics": [
+    "logic-devices",
+    "modeling"
+   ],
+   "format": "Course"
+  },
+  {
+   "title": "Analysis and Design of Digital Integrated Circuits (6.374)",
+   "by": "MIT OpenCourseWare",
+   "url": "https://ocw.mit.edu/search/?q=6.374",
+   "topics": [
     "vlsi",
-    "devices"
-   ]
+    "sram"
+   ],
+   "format": "Course"
+  },
+  {
+   "title": "Microelectronics Processing Technology (6.152J)",
+   "by": "MIT OpenCourseWare",
+   "url": "https://ocw.mit.edu/search/?q=6.152",
+   "topics": [
+    "process",
+    "materials"
+   ],
+   "format": "Course"
+  },
+  {
+   "title": "Electronic, Optical and Magnetic Properties of Materials (3.024)",
+   "by": "MIT OpenCourseWare",
+   "url": "https://ocw.mit.edu/search/?q=3.024",
+   "topics": [
+    "materials",
+    "dielectrics"
+   ],
+   "format": "Course"
+  },
+  {
+   "title": "Fundamentals of Nanotransistors",
+   "by": "nanoHUB-U · Prof. Mark Lundstrom (Purdue)",
+   "url": "https://nanohub.org/search/?terms=Fundamentals+of+Nanotransistors",
+   "topics": [
+    "logic-devices",
+    "modeling"
+   ],
+   "format": "Course"
+  },
+  {
+   "title": "Solid State Devices (ECE 606)",
+   "by": "nanoHUB · Prof. Muhammad Alam (Purdue)",
+   "url": "https://nanohub.org/search/?terms=ECE+606+Solid+State+Devices",
+   "topics": [
+    "logic-devices",
+    "materials"
+   ],
+   "format": "Lecture series"
+  },
+  {
+   "title": "Reliability Physics of Nanotransistors",
+   "by": "nanoHUB · Prof. Muhammad Alam (Purdue)",
+   "url": "https://nanohub.org/search/?terms=Reliability+Physics+of+Nanotransistors",
+   "topics": [
+    "reliability",
+    "dielectrics"
+   ],
+   "format": "Lecture series"
+  },
+  {
+   "title": "Fundamentals of Nanoelectronics",
+   "by": "nanoHUB-U · Prof. Supriyo Datta (Purdue)",
+   "url": "https://nanohub.org/search/?terms=Fundamentals+of+Nanoelectronics",
+   "topics": [
+    "modeling",
+    "materials",
+    "emerging-memory"
+   ],
+   "format": "Course"
+  },
+  {
+   "title": "Simulation tools for devices (TCAD, NEGF, MOSFET)",
+   "by": "nanoHUB · free online tools",
+   "url": "https://nanohub.org/resources/tools",
+   "topics": [
+    "modeling"
+   ],
+   "format": "Tools"
+  },
+  {
+   "title": "Computer Architecture & Memory Systems lectures",
+   "by": "ETH Zürich · Prof. Onur Mutlu (YouTube channel)",
+   "url": "https://www.youtube.com/@OnurMutluLectures",
+   "topics": [
+    "dram",
+    "nand",
+    "ai-hardware"
+   ],
+   "format": "Lecture channel"
+  },
+  {
+   "title": "DRAM: cell operation, refresh, RowHammer",
+   "by": "Prof. Onur Mutlu lectures (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=Onur+Mutlu+DRAM+lecture",
+   "topics": [
+    "dram"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "Flash memory: errors, reliability and SSD controllers",
+   "by": "Prof. Onur Mutlu lectures (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=Onur+Mutlu+flash+memory+SSD+lecture",
+   "topics": [
+    "nand",
+    "reliability"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "3D NAND flash technology lectures and tutorials",
+   "by": "University and IEEE talks (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=3D+NAND+flash+memory+lecture",
+   "topics": [
+    "nand"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "High-bandwidth flash (HBF) and memory for AI",
+   "by": "Talks and conference sessions (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=high+bandwidth+flash+HBF+memory",
+   "topics": [
+    "hbf",
+    "nand",
+    "ai-hardware"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "HBM and 3D-stacked memory explained",
+   "by": "Lectures and conference talks (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=HBM+high+bandwidth+memory+lecture",
+   "topics": [
+    "dram",
+    "packaging"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "Semiconductor Devices and Circuits / VLSI Technology",
+   "by": "NPTEL (IIT professors) · free",
+   "url": "https://www.youtube.com/results?search_query=NPTEL+semiconductor+devices",
+   "topics": [
+    "logic-devices",
+    "process"
+   ],
+   "format": "Lecture series"
+  },
+  {
+   "title": "VLSI Design and digital VLSI circuits",
+   "by": "NPTEL (IIT professors) · free",
+   "url": "https://www.youtube.com/results?search_query=NPTEL+VLSI+design+lecture",
+   "topics": [
+    "vlsi",
+    "sram"
+   ],
+   "format": "Lecture series"
+  },
+  {
+   "title": "Memory design: SRAM and embedded memory",
+   "by": "NPTEL and university lectures (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=SRAM+memory+design+lecture",
+   "topics": [
+    "sram",
+    "vlsi"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "Emerging memories: FeFET, FeRAM, MRAM, ReRAM, PCM",
+   "by": "University lectures (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=emerging+memory+FeFET+MRAM+ReRAM+lecture",
+   "topics": [
+    "emerging-memory"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "Ferroelectric HfO2 / HZO for memory",
+   "by": "Tutorials and talks (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=ferroelectric+hafnium+oxide+HZO+memory+tutorial",
+   "topics": [
+    "dielectrics",
+    "emerging-memory"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "2D materials for transistors (MoS2, WSe2)",
+   "by": "University lectures (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=2D+materials+transistor+MoS2+lecture",
+   "topics": [
+    "materials",
+    "logic-devices"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "Interconnects, BEOL and electromigration",
+   "by": "Lectures and tutorials (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=BEOL+interconnect+electromigration+lecture",
+   "topics": [
+    "interconnects",
+    "reliability"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "Advanced packaging, chiplets and hybrid bonding",
+   "by": "Lectures and tutorials (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=advanced+packaging+chiplets+hybrid+bonding+lecture",
+   "topics": [
+    "packaging",
+    "interconnects"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "Lithography and EUV",
+   "by": "Lectures and tutorials (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=EUV+lithography+lecture",
+   "topics": [
+    "process"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "GaN and SiC power devices",
+   "by": "University lectures (YouTube search)",
+   "url": "https://www.youtube.com/results?search_query=GaN+SiC+power+devices+lecture",
+   "topics": [
+    "power-devices"
+   ],
+   "format": "Videos"
+  },
+  {
+   "title": "VLSI CAD: logic to layout",
+   "by": "Coursera (free to audit) · Prof. Rob Rutenbar (UIUC)",
+   "url": "https://www.coursera.org/search?query=VLSI%20CAD",
+   "topics": [
+    "vlsi",
+    "modeling"
+   ],
+   "format": "Course"
   },
   {
    "title": "IEEE Electron Devices Society webinars & tutorials",
    "by": "IEEE EDS",
    "url": "https://eds.ieee.org/education",
-   "tags": [
-    "devices",
-    "memory"
-   ]
+   "topics": [
+    "logic-devices",
+    "emerging-memory",
+    "reliability"
+   ],
+   "format": "Webinars"
   },
   {
    "title": "imec technology roadmap & talks",
    "by": "imec",
    "url": "https://www.imec-int.com/en/articles",
-   "tags": [
-    "logic",
-    "roadmap"
-   ]
+   "topics": [
+    "logic-devices",
+    "process",
+    "industry"
+   ],
+   "format": "Talks"
   },
   {
-   "title": "Stanford EE online (devices & VLSI)",
-   "by": "Stanford Online",
+   "title": "Stanford Online: devices & VLSI",
+   "by": "Stanford Online (some free)",
    "url": "https://online.stanford.edu/search-catalog?keywords=semiconductor",
-   "tags": [
-    "devices",
+   "topics": [
+    "logic-devices",
     "vlsi"
-   ]
+   ],
+   "format": "Course"
+  },
+  {
+   "title": "Semiconductor industry explainers",
+   "by": "Asianometry (YouTube)",
+   "url": "https://www.youtube.com/@Asianometry",
+   "topics": [
+    "industry",
+    "process"
+   ],
+   "format": "Lecture channel"
   }
  ]
 }

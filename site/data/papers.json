@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T12:53:10Z",
+ "updated": "2026-11-10T13:02:11Z",
  "items": [
   {
    "id": "doi:10.5281/zenodo.23505771",
@@ -1300,6 +1300,33 @@
    "week": "2026-W45"
   },
   {
+   "id": "arxiv:2611.11036",
+   "arxiv_id": "2611.11036",
+   "title": "When Is High-Bandwidth Flash Cost-Effective for LLM Inference?",
+   "abstract": "Can high-bandwidth flash (HBF) make LLM inference cheaper than adding GPUs? By storing weights closer to the GPU than SSD, HBF may reduce the number of GPUs needed for model capacity. However, this integration is only justified if it meets service targets and its cost is recovered. We simulate this integration using public component data across nine dense and mixture-of-experts (MoE) models, five workloads, two GPU platforms, and 1--100 GPUs. At fixed demand, HBF reduces the minimum GPU count to meet a service target in 98 of 468 comparisons; majority of them are paused and short sessions, 63 remain cost-effective at half a GPU price per HBF stack. For single short-chat users, HBF enables large MoEs, e.g. DeepSeek V3 and Kimi K2, to meet a relaxed service target on one RTX~4090 GPU, where conventional serving fails. At fixed GPU count, HBF improves throughput in 48\\% of matched comparisons below 16 GPUs and 13\\% at larger counts. Even at 100 RTX~4090-scale GPUs, cascaded HBF raises offline throughput by 16.4--26.5$\\times$ for three large MoEs. We found savings and throughput gains arise in different scenarios.",
+   "authors": [
+    "Zhiyu An",
+    "Yiping Li",
+    "Wan Du"
+   ],
+   "url": "https://arxiv.org/abs/2611.11036",
+   "pdf": "https://arxiv.org/pdf/2611.11036v1",
+   "doi": null,
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "published": "2026-11-08T00:37:16Z",
+   "search_topic": "hbf",
+   "topics": [
+    "hbf",
+    "nand"
+   ],
+   "hub": "device",
+   "companies": [],
+   "first_seen": "2026-11-10T13:02:09Z",
+   "week": "2026-W45",
+   "image": ""
+  },
+  {
    "id": "doi:10.5281/zenodo.24062686",
    "title": "simantalahkar/lammpskit: LAMMPSKit v1.2.1",
    "abstract": "LAMMPSKit v1.2.1 LAMMPSKit is a Python toolkit for post-processing and analysing molecular-dynamics simulations run with LAMMPS. It was built for simulations of HfTaO-based resistive random-access memory (ReRAM) devices. It tracks how conductive filaments form and evolve, analyses atomic, charge and displacement distributions, and produces publication-ready plots. This release is an archived snapshot of the code as of 29 July 2025, tagged v1.2.1. It is the version that matches the published PyPI package and Docker image below. What the package does Filament analysis: OVITO-based cluster analysis that tracks filament connectivity, gap, size and height over time (lammpskit.ecellmodel.filament_layer_analysis). Distributions: atomic, charge and displacement distributions by element and position (lammpskit.ecellmodel.data_processing). Trajectory input: readers for LAMMPS trajectory and displacement files (lammpskit.io), with input validation and descriptive error messages (lammpskit.config). Designed for large trajectories (more than 1M atoms, more than 10K frames). Plotting: publication-ready time-series and comparison plots with central control of fonts and styles (lammpskit.plotting). Example workflow: usage/ecellmodel/run_analysis.py runs four analyses: filament evolution, displacement by species, charge distribution and atomic distribution under different voltages. Changes in v1.2.1 (since v1.2.0) Improved the reliability of the GitHub Actions status and coverage badges, and added automated coverage-badge generation to the CI pipeline. Added a fail-safe Codecov upload that runs on Python 3.12 only, to avoid duplicate uploads. Fixed the tests badge so it points to the docker-ci.yml workflow. Updated version references across the documentation and configuration files. No change to the analysis, I/O or plotting code is recorded for this release; see CHANGELOG.md for the full history, including 1.0.0 (modular restructuring, timeseries plotting module, configuration system, extended test suite with visual regression tests). Install and run PyPI: pip install lammpskit==1.2.1 (requires Python 3.12 or later; NumPy, Matplotlib and OVITO 3.12.4 or later) Docker: docker pull simantalahkar/lammpskit:1.2.1 Documentation: https://lammpskit.readthedocs.io/en/latest/ Citation If you use LAMMPSKit in your research, please cite the paper that describes the simulations it was built for: S. Lahkar et al., Decoupling Electric Field and Temperature-Driven Atomistic Forming Mechanisms in TaOx/HfO2-Based ReRAMs using Reactive Molecular Dynamics Simulations, arXiv:2505.24468 (2025), https://doi.org/10.48550/arXiv.2505.24468 To cite this exact software version, use the DOI that Zenodo assigns to this release. Related software The simulations analysed with LAMMPSKit were run with the integrated CTIP–EChemDID package for LAMMPS: https://github.com/simantalahkar/LAMMPS-CTIP-EChemDID Licence GPL-3.0-or-later. Author: Simanta Lahkar.",
@@ -2538,6 +2565,7 @@
    "cited_by": 0,
    "search_topic": "interconnects",
    "topics": [
+    "industry",
     "interconnects",
     "modeling",
     "process"
@@ -4210,7 +4238,9 @@
     "process"
    ],
    "hub": "device",
-   "companies": [],
+   "companies": [
+    "HCL"
+   ],
    "first_seen": "2026-11-10T10:18:14Z",
    "week": "2026-W45"
   },
@@ -6650,6 +6680,36 @@
    "week": "2026-W45"
   },
   {
+   "id": "doi:10.48550/arxiv.2611.04144",
+   "title": "HyPAIC: Personal AI Computer with High Bandwidth Flash for High Performance Trillion-Parameter LLM Inference",
+   "abstract": "LLMs have rapidly expanded from simple chatbots to agentic AI, where models directly use tools to solve complex problems. To improve problem solving, most frontier LLMs adopt an MoE architecture, pushing model sizes into the trillion-parameter regime. While cloud services have dominated large-scale LLM inference, cost and security concerns drive demand for on-premises deployment. Thus, GPU manufacturers have introduced personal AI computers (PAICs). However, existing PAICs with LPDDR-based unified main memory suffer from severe capacity limitations, restricting hostable LLM size on a single device. If most memory holds model weights, little remains for the KV cache, reducing supported context length. In this paper, we propose HyPAIC, a PAIC architecture incorporating HBF to overcome these memory constraints. HyPAIC stores read-only model weights in HBF and mutable runtime data in LPDDR. HBF offers over 10x the capacity of HBM with comparable TB/s-scale bandwidth. HyPAIC addresses HBF's access latency, limited write endurance, and page-level access granularity through prefetching, read-only weight placement, and coarse-grained weight accesses, respectively; power and cooling remain significant implementation challenges. Through simulation-based evaluation, we show that a single HyPAIC improves end-to-end system throughput by up to 1.04x and TDP-normalized throughput by up to 3.59x during 1T-parameter MoE inference versus the aggregate of eight baseline systems without HBF, one HyPAIC thus approaches the raw performance of eight baselines with far superior power efficiency. For small model inference, HyPAIC increases the maximum number of concurrent tasks sustaining at least 50 decode TPS per task by up to 4x, enhancing user experience and productivity. Although HBF specifications are still evolving, this study demonstrates strong architectural synergy between HBF and PAICs.",
+   "authors": [
+    "Minho Ha",
+    "Myunghyun Rhee",
+    "Euiseok Kim",
+    "Hoshik Kim"
+   ],
+   "url": "https://arxiv.org/abs/2611.04144",
+   "pdf": "https://arxiv.org/pdf/2611.04144",
+   "doi": "10.48550/arxiv.2611.04144",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "published": "2026-11-03T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "hbf",
+   "topics": [
+    "dram",
+    "hbf",
+    "reliability"
+   ],
+   "hub": "device",
+   "companies": [],
+   "arxiv_id": "2611.04144",
+   "first_seen": "2026-11-10T13:02:09Z",
+   "week": "2026-W45",
+   "image": "https://arxiv.org/html/2611.04144/2611.04144v1/fig4a_qwen35_1dgx.png"
+  },
+  {
    "id": "doi:10.21227/22tq-yv29",
    "title": "Hump modulation in Transfer Characteristics: Simulated Gate-all-around field-effect transistors — Supporting TCAD Simulation Data",
    "abstract": "A parasitic current path beneath the bottom nanosheet of a simulated triple-stacked silicon gate-all-around field-effect transistor (GAA-FET) accompanies a hump in the low-drain-bias transfer curve. In a separate punch-through stopper (PTS) simulation, both the hump and the drive current were reduced, indicating a substrate-side contribution. Without altering the substrate structure, the hump is also dependent on channel and source/drain conditions throughout 486 parameter combinations. For channel widths of 8 and 12 nm, the mean peak-to-valley logarithmic-current gradient difference was lower by 51.2% in the wider-channel case. At 0.05 V drain bias and 8 nm channel width, the interface trap density was changed from 1010 to 1012 cm-2 eV-1. Hump onset moved to more positive gate voltage for all 27 paired conditions, with a mean shift of 23.91 ± 0.49 mV. The change in gradient difference has a coefficient of variation (CV) of 24.3%. The onset shift has a CV of 2.1%. Different relative contributions from nanosheet and substrate currents can account for these responses. Channel and source/drain parameters may thus modify hump shape without additional substrate-isolation structures.",
@@ -8563,11 +8623,12 @@
    "source": "OpenAlex",
    "published": "2026-10-29T00:00:00Z",
    "cited_by": 0,
-   "search_topic": "logic-devices",
+   "search_topic": "hbf",
    "topics": [
     "dielectrics",
     "dram",
     "emerging-memory",
+    "hbf",
     "interconnects",
     "logic-devices",
     "nand",
@@ -8969,36 +9030,6 @@
    "week": "2026-W44"
   },
   {
-   "id": "arxiv:2610.37033",
-   "arxiv_id": "2610.37033",
-   "title": "p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM-RAG Pipeline",
-   "abstract": "We present a fabricated SRAM DCIM Ising machine that performs set-level context selection for large language model (LLM) with retrieval-augmented generation (RAG). In RAG, the evidence-selection stage is increasingly delegated to repeated language-model reranking, which adds substantial energy to the inference pipeline. We reformulate evidence selection as a quadratic unconstrained binary optimization (QUBO) problem and solve it on a dual-mode digital compute-in-memory (DCIM) macro: the same multiply-and-accumulate datapath computes the embedding-similarity scores that populate the QUBO coefficients and evaluates the per-spin Hamiltonian differences that drive the anneal. The annealing temperature is set by a digital plane-count control along with the SRAM pseudo-read random bit flips, giving graded cooling entirely from on-chip digital configuration. The macro is taped-out in a 28 nm process [0.16 mm2, 0.41 mW] and is proposed to be integrated as part of the logic base-die in hybrid high-bandwidth memory (HBM) and high-bandwidth flash (HBF) stacks in a GPU package, where only the selected passage identifiers return to the host. Replacing the language-model selection pass with the near-memory Ising solver yields a macro normalized selection-energy estimate more than six orders of magnitude lower than the LLM-based baseline and reduces the evaluated total energy per query by 67%, while maintaining comparable token-level F1 on the evaluated examples.",
-   "authors": [
-    "Madhav Vadlamani",
-    "Rahul Singh",
-    "Yuyao Kong",
-    "Haomei Liu",
-    "Zheng Zhang",
-    "Shimeng Yu"
-   ],
-   "url": "https://arxiv.org/abs/2610.37033",
-   "pdf": "https://arxiv.org/pdf/2610.37033v1",
-   "doi": null,
-   "venue": "arXiv cs.AR",
-   "source": "arXiv",
-   "published": "2026-10-27T11:10:26Z",
-   "search_topic": "dram",
-   "topics": [
-    "dram",
-    "sram"
-   ],
-   "hub": "device",
-   "companies": [],
-   "image": "",
-   "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44"
-  },
-  {
    "id": "arxiv:2610.36492",
    "arxiv_id": "2610.36492",
    "title": "Demonstration of high output power (3.75 W/mm) with 31.8% PAE in Ga-Polar AlGaN/GaN HEMTs on sapphire at 94 GHz",
@@ -9025,6 +9056,38 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
+   "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W44"
+  },
+  {
+   "id": "arxiv:2610.37033",
+   "title": "p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM-RAG Pipeline",
+   "abstract": "We present a fabricated SRAM DCIM Ising machine that performs set-level context selection for large language model (LLM) with retrieval-augmented generation (RAG). In RAG, the evidence-selection stage is increasingly delegated to repeated language-model reranking, which adds substantial energy to the inference pipeline. We reformulate evidence selection as a quadratic unconstrained binary optimization (QUBO) problem and solve it on a dual-mode digital compute-in-memory (DCIM) macro: the same multiply-and-accumulate datapath computes the embedding-similarity scores that populate the QUBO coefficients and evaluates the per-spin Hamiltonian differences that drive the anneal. The annealing temperature is set by a digital plane-count control along with the SRAM pseudo-read random bit flips, giving graded cooling entirely from on-chip digital configuration. The macro is taped-out in a 28 nm process [0.16 mm2, 0.41 mW] and is proposed to be integrated as part of the logic base-die in hybrid high-bandwidth memory (HBM) and high-bandwidth flash (HBF) stacks in a GPU package, where only the selected passage identifiers return to the host. Replacing the language-model selection pass with the near-memory Ising solver yields a macro normalized selection-energy estimate more than six orders of magnitude lower than the LLM-based baseline and reduces the evaluated total energy per query by 67%, while maintaining comparable token-level F1 on the evaluated examples.",
+   "authors": [
+    "Madhav Vadlamani",
+    "Rahul Singh",
+    "Yuyao Kong",
+    "Haomei Liu",
+    "Zheng Zhang",
+    "Shimeng Yu"
+   ],
+   "url": "https://arxiv.org/abs/2610.37033",
+   "pdf": "https://arxiv.org/pdf/2610.37033",
+   "doi": "10.48550/arxiv.2610.37033",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "published": "2026-10-27T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "hbf",
+   "topics": [
+    "dram",
+    "hbf",
+    "sram"
+   ],
+   "hub": "device",
+   "companies": [],
+   "arxiv_id": "2610.37033",
    "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
    "week": "2026-W44"
