@@ -12,8 +12,10 @@ import datetime as dt
 import logging
 import sys
 
+import yaml
+
 from . import learn, market, news, papers
-from .common import Tagger, iso, load_config, parse_iso, read_json, utcnow, week_label, write_json
+from .common import ROOT, Tagger, iso, load_config, parse_iso, read_json, utcnow, week_label, write_json
 from .summarize import Summarizer
 
 log = logging.getLogger("devicehub")
@@ -134,6 +136,16 @@ def run_insights(cfg, llm: Summarizer, news_items, paper_items, force: bool) -> 
     write_json("insights.json", store)
 
 
+def write_venues() -> None:
+    """Copy the hand-curated venues.yaml (conferences, journals) for the Publish page."""
+    path = ROOT / "venues.yaml"
+    if not path.exists():
+        return
+    with open(path, encoding="utf-8") as fh:
+        data = yaml.safe_load(fh) or {}
+    write_json("venues.json", {"conferences": data.get("conferences", []), "journals": data.get("journals", [])})
+
+
 def write_meta(cfg, llm: Summarizer, paper_items: list[dict] | None) -> None:
     paper_items = paper_items if paper_items is not None else read_json("papers.json", {"items": []})["items"]
     weeks: dict[str, int] = {}
@@ -181,6 +193,7 @@ def main(argv: list[str] | None = None) -> int:
         run_learn(cfg)
     if "insights" in stages:
         run_insights(cfg, llm, news_items, paper_items, args.force_insights)
+    write_venues()
     write_meta(cfg, llm, paper_items)
     log.info("Done. news=%d papers=%d claude_calls=%d", len(news_items), len(paper_items), llm.calls)
     return 0

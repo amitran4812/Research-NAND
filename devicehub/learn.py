@@ -72,5 +72,4 @@ def collect(cfg: dict, previous: dict | None = None) -> dict:
         "updated": iso(utcnow()),
         "items": items,
         "courses": cfg.get("courses", []),
-        "conferences": cfg.get("conferences", []),
     }

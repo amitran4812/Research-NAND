@@ -2,10 +2,10 @@
 (function () {
   "use strict";
 
-  var D = { meta: null, news: [], papers: [], market: null, learn: null, insights: null };
-  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "" };
+  var D = { meta: null, news: [], papers: [], market: null, learn: null, insights: null, venues: null };
+  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false };
   try { state.cat = localStorage.getItem("dh-cat") || "all"; } catch (e) {}
-  var DEVICE_ROUTES = ["home", "news", "research", "radar"];
+  var DEVICE_ROUTES = ["home", "news", "research", "radar", "publish", "events"];
   var app = document.getElementById("app");
 
   // ------------------------------------------------------------------ helpers
@@ -100,7 +100,7 @@
     fetch("data/meta.json?v=" + Date.now()).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
       .then(function (meta) {
         D.meta = meta || { topics: [], weeks: [], title: "Device Hub" };
-        return Promise.all([load("news.json"), load("papers.json"), load("market.json"), load("learn.json"), load("insights.json")]);
+        return Promise.all([load("news.json"), load("papers.json"), load("market.json"), load("learn.json"), load("insights.json"), load("venues.json")]);
       })
       .then(function (r) {
         D.news = (r[0] && r[0].items) || [];
@@ -108,6 +108,7 @@
         D.market = r[2];
         D.learn = r[3];
         D.insights = r[4];
+        D.venues = r[5];
         renderTicker();
         renderFooter();
         renderBell();
@@ -563,16 +564,92 @@
     app.innerHTML = h;
   }
 
-  var EVENT_ART = { ISSCC: "vlsi", IMW: "emerging-memory", VLSI: "logic-devices", FMS: "nand", Hot: "ai", IEDM: "dram" };
-  function pageEvents() {
-    var conf = (D.learn && D.learn.conferences) || [];
-    var h = head("Events", "Conferences to watch", "Where new memory, device and VLSI results are announced. Papers and news from these show up in Research and News as they appear.", "", "process");
-    h += conf.length ? '<div class="grid-cards">' + conf.map(function (c) {
-      var art = EVENT_ART[c.name.split(" ")[0]] || "vlsi";
-      return '<a class="card hover news-card fade-in" href="' + safeUrl(c.url) + '" target="_blank" rel="noopener noreferrer">' + media(null, art, c.name, c.month) +
-        '<div class="body"><h2 style="margin:0">' + esc(c.name) + '</h2><p class="small muted" style="margin:0">' + esc(c.focus) + "</p></div></a>";
-    }).join("") + "</div>" : noData();
-    app.innerHTML = h;
+  // ------------------------------------------------------------------ where to publish
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  // Next time a month comes round on or after `from` (same month counts).
+  function nextMonth(month, from) {
+    var y = from.getFullYear();
+    if (month - 1 < from.getMonth()) y++;
+    return new Date(y, month - 1, 1);
+  }
+  function monthsUntil(d, now) { return (d.getFullYear() - now.getFullYear()) * 12 + d.getMonth() - now.getMonth(); }
+  function whenText(n) { return n <= 0 ? "this month" : n === 1 ? "next month" : "in " + n + " months"; }
+  function confSchedule(c, now) {
+    var dl = nextMonth(c.deadline, now);
+    var ev = nextMonth(c.month, new Date(dl.getFullYear(), dl.getMonth() + 1, 1));
+    return { deadline: dl, event: ev, until: monthsUntil(dl, now) };
+  }
+  function normVenue(s) { return String(s || "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, " ").trim(); }
+  function venuePaperCount(j) {
+    var keys = [normVenue(j.name)];
+    return D.papers.filter(function (p) {
+      var v = normVenue(p.venue);
+      return v && keys.some(function (k) { return v === k || v.indexOf(k + " ") === 0; });
+    }).length;
+  }
+  function scimago(name) { return "https://www.scimagojr.com/journalsearch.php?q=" + encodeURIComponent(name); }
+  var TIER = { flagship: "Flagship", major: "Major", specialist: "Specialist" };
+
+  function confCard(c, s) {
+    var soon = s.until <= 2;
+    return '<article class="card conf fade-in' + (soon ? " soon" : "") + '">' +
+      '<div class="conf-date"><span class="m">' + MONTHS[s.deadline.getMonth()] + '</span><span class="y">' + s.deadline.getFullYear() + '</span><span class="w">' + esc(whenText(s.until)) + "</span></div>" +
+      '<div class="conf-body"><div class="meta"><span class="badge tier-' + esc(c.tier) + '">' + esc(TIER[c.tier] || c.tier) + "</span>" + (soon ? '<span class="badge ambitious">Deadline soon</span>' : "") + "</div>" +
+      "<h3>" + ext(c.url, c.name) + '</h3><p class="small muted full">' + esc(c.full) + "</p>" +
+      (c["for"] ? '<p class="small">' + esc(c["for"]) + "</p>" : "") +
+      '<dl class="conf-facts"><div><dt>Paper deadline</dt><dd>' + esc((c.deadline_note ? c.deadline_note + " " : "") + MONTHS[c.deadline - 1]) + " " + s.deadline.getFullYear() + "</dd></div>" +
+      "<div><dt>Conference</dt><dd>" + MONTHS[s.event.getMonth()] + " " + s.event.getFullYear() + (c.where ? " · " + esc(c.where) : "") + "</dd></div></dl>" +
+      '<div class="foot">' + tagsHtml({ topics: c.topics }, 3) + ext(c.url, "Call for papers ↗", "read") + "</div></div></article>";
+  }
+  function journalCard(j) {
+    var n = venuePaperCount(j);
+    return '<article class="card journal fade-in"><div class="jq q' + esc(String(j.quartile).slice(1)) + '" title="Approximate Scimago quartile">' + esc(j.quartile) + "</div>" +
+      '<div class="j-body"><div class="meta"><span class="src">' + esc(j.publisher) + '</span><span class="dot">' + esc(j.type) + "</span>" + (j.open_access ? '<span class="badge oa">Open access</span>' : "") + "</div>" +
+      "<h3>" + ext(j.url, j.name) + (j.abbr ? ' <span class="abbr">' + esc(j.abbr) + "</span>" : "") + "</h3>" +
+      (j["for"] ? '<p class="small">' + esc(j["for"]) + "</p>" : "") +
+      (n ? '<p class="small hit">' + n + " recent paper" + (n === 1 ? "" : "s") + " from here on Device Hub</p>" : "") +
+      '<div class="foot">' + tagsHtml({ topics: j.topics }, 3) + '<span class="links" style="margin:0">' + ext(scimago(j.name), "Check rank ↗") + ext(j.url, "Journal ↗") + "</span></div></div></article>";
+  }
+
+  function pagePublish() {
+    var V = D.venues || {}, now = new Date();
+    var conf = (V.conferences || []).filter(function (c) { return inCat(c, state.cat); });
+    var jour = (V.journals || []).filter(function (j) { return inCat(j, state.cat); });
+    function render() {
+      var h = head("Where to publish" + catSuffix(), state.cat === "all" ? "Conferences & journals for your next paper" : topicName(state.cat),
+        "Upcoming paper deadlines for the main device, memory and VLSI conferences, and journals with their quartile rank. Pick a topic above to see only the venues that fit it.", "", pageArt("process"));
+      h += '<div class="controls"><div class="chips">' + chip("Conferences", "conf", state.pubTab === "conf", "pubtab", conf.length) + chip("Journals & transactions", "jour", state.pubTab === "jour", "pubtab", jour.length) + "</div></div>";
+      if (state.pubTab === "conf") {
+        var tiers = ["all", "flagship", "major", "specialist"];
+        h += '<div class="controls"><div class="chips">' + tiers.map(function (t) { return chip(t === "all" ? "All tiers" : TIER[t], t, state.pubTier === t, "pubtier"); }).join("") + "</div></div>";
+        var list = conf.filter(function (c) { return state.pubTier === "all" || c.tier === state.pubTier; })
+          .map(function (c) { return { c: c, s: confSchedule(c, now) }; })
+          .sort(function (a, b) { return a.s.deadline - b.s.deadline || a.c.name.localeCompare(b.c.name); });
+        h += '<p class="notice">Ordered by the next paper deadline. Dates are the <b>usual</b> months for each meeting and shift a little every year, so open the call for papers before you plan around one.</p>';
+        h += list.length ? '<div class="pub-grid">' + list.map(function (x) { return confCard(x.c, x.s); }).join("") + "</div>" : empty("No conferences listed for this topic yet.");
+      } else {
+        var qs = ["all", "Q1", "Q2", "Q3"];
+        h += '<div class="controls"><div class="chips">' + qs.map(function (q) { return chip(q === "all" ? "All ranks" : q === "Q3" ? "Q3 & below" : q, q, state.pubQ === q, "pubq"); }).join("") +
+          chip("Open access only", "oa", state.pubOA, "puboa") + "</div></div>";
+        var js = jour.filter(function (j) {
+          if (state.pubOA && !j.open_access) return false;
+          if (state.pubQ === "all") return true;
+          return state.pubQ === "Q3" ? j.quartile === "Q3" || j.quartile === "Q4" : j.quartile === state.pubQ;
+        }).sort(function (a, b) { return a.quartile.localeCompare(b.quartile) || (a.type === "Letters" ? -1 : 0) - (b.type === "Letters" ? -1 : 0) || a.name.localeCompare(b.name); });
+        h += '<p class="notice">Q1 is the top quarter of journals in a subject. Ranks shown are approximate best-category <a href="https://www.scimagojr.com/" target="_blank" rel="noopener noreferrer">Scimago</a> quartiles and change yearly, so use <b>Check rank</b> to confirm. <b>Letters</b> journals take short papers and review fastest.</p>';
+        h += js.length ? '<div class="pub-grid">' + js.map(journalCard).join("") + "</div>" : empty("No journals match these filters.");
+      }
+      app.innerHTML = h;
+      [["pubtab", "pubTab"], ["pubtier", "pubTier"], ["pubq", "pubQ"]].forEach(function (pair) {
+        Array.prototype.forEach.call(app.querySelectorAll("[data-" + pair[0] + "]"), function (b) {
+          b.addEventListener("click", function () { state[pair[1]] = b.getAttribute("data-" + pair[0]); render(); });
+        });
+      });
+      var oa = app.querySelector("[data-puboa]");
+      if (oa) oa.addEventListener("click", function () { state.pubOA = !state.pubOA; render(); });
+    }
+    if (!V.conferences && !V.journals) { app.innerHTML = head("Where to publish", "Conferences & journals", "", "", "process") + noData(); return; }
+    render();
   }
 
   // ------------------------------------------------------------------ notifications
@@ -672,7 +749,7 @@
     else if (r.name === "report") pageReport(r.arg);
     else if (r.name === "ai") pageAI();
     else if (r.name === "learn") pageLearn();
-    else if (r.name === "events") pageEvents();
+    else if (r.name === "publish" || r.name === "events") { setActive("publish"); pagePublish(); }
     else { setActive("home"); pageHome(); }
     if (keepScroll !== true) window.scrollTo(0, 0);
   }

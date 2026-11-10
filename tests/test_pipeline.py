@@ -82,8 +82,19 @@ class PipelineTest(unittest.TestCase):
 
     def test_full_run_without_llm(self):
         self.assertEqual(self._run(), 0)
-        for f in ("news.json", "papers.json", "market.json", "learn.json", "meta.json"):
+        for f in ("news.json", "papers.json", "market.json", "learn.json", "meta.json", "venues.json"):
             self.assertTrue((self.data / f).exists(), f)
+        venues = json.loads((self.data / "venues.json").read_text())
+        self.assertTrue(venues["conferences"] and venues["journals"])
+        topic_ids = {t["id"] for t in json.loads((self.data / "meta.json").read_text())["topics"]}
+        for v in venues["conferences"] + venues["journals"]:
+            self.assertTrue(set(v["topics"]) <= topic_ids, v["name"])
+            self.assertTrue(v["url"].startswith("https://"), v["name"])
+        for c in venues["conferences"]:
+            self.assertIn(c["deadline"], range(1, 13), c["name"])
+            self.assertIn(c["month"], range(1, 13), c["name"])
+        for j in venues["journals"]:
+            self.assertIn(j["quartile"], ("Q1", "Q2", "Q3", "Q4"), j["name"])
 
         news = self.load("news.json")["items"]
         titles = [n["title"] for n in news]

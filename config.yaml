@@ -210,11 +210,3 @@ courses:
   - {title: "imec technology roadmap & talks", by: "imec", url: "https://www.imec-int.com/en/articles", tags: [logic, roadmap]}
   - {title: "Stanford EE online (devices & VLSI)", by: "Stanford Online", url: "https://online.stanford.edu/search-catalog?keywords=semiconductor", tags: [devices, vlsi]}
 
-# Key conferences to watch (shown in the Events section).
-conferences:
-  - {name: ISSCC, month: February, focus: "Solid-state circuits, memory chips", url: "https://www.isscc.org/"}
-  - {name: IMW (Int. Memory Workshop), month: May, focus: "Memory devices & technology", url: "https://www.ieee-imw.org/"}
-  - {name: VLSI Symposium, month: June, focus: "Technology & circuits", url: "https://www.vlsisymposium.org/"}
-  - {name: FMS (Future of Memory and Storage), month: August, focus: "Flash, DRAM, storage industry", url: "https://futurememorystorage.com/"}
-  - {name: Hot Chips, month: August, focus: "Processor & system architecture", url: "https://hotchips.org/"}
-  - {name: IEDM, month: December, focus: "Electron devices (CFET, FeFET, 3D DRAM…)", url: "https://www.ieee-iedm.org/"}
