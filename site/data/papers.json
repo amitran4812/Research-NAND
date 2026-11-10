@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T10:23:12Z",
+ "updated": "2026-11-10T12:39:41Z",
  "items": [
   {
    "id": "doi:10.5281/zenodo.23505771",
@@ -7975,9 +7975,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.00292/2611.00292v1/Fig_3_elegante.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2611.00292/2611.00292v1/Fig_3_elegante.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2611.05415",
@@ -8006,9 +8006,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.05415/2611.05415v1/Figures/OverviewWorkingModel.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2611.05415/2611.05415v1/Figures/OverviewWorkingModel.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2611.03707",
@@ -8032,9 +8032,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2611.03707/2611.03707v1/case4_gaas.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2611.03707/2611.03707v1/case4_gaas.png"
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.1038/s41598-026-78623-x",
@@ -8277,9 +8277,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": ""
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.39797",
@@ -8307,9 +8307,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2610.39797/2610.39797v1/speedup-combined.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2610.39797/2610.39797v1/speedup-combined.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.39688",
@@ -8336,9 +8336,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2610.39688/2610.39688v2/1_Full_Attack_USE.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2610.39688/2610.39688v2/1_Full_Attack_USE.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.39625",
@@ -8361,9 +8361,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2610.39625/2610.39625v1/Fig_23pt1.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2610.39625/2610.39625v1/Fig_23pt1.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.39515",
@@ -8388,9 +8388,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2610.39515/2610.39515v1/Fig2.superellipse_prelim.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2610.39515/2610.39515v1/Fig2.superellipse_prelim.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.39420",
@@ -8419,9 +8419,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2610.39420/2610.39420v1/Depression_crop.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2610.39420/2610.39420v1/Depression_crop.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.39222",
@@ -8451,9 +8451,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "https://arxiv.org/html/2610.39222/2610.39222v2/feasible.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2610.39222/2610.39222v2/feasible.png"
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.4028/p-n4h8p9",
@@ -8576,9 +8576,9 @@
    "hub": "device",
    "companies": [],
    "arxiv_id": "2610.40000",
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": ""
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.1117/12.3115933",
@@ -8640,9 +8640,9 @@
    "hub": "device",
    "companies": [],
    "arxiv_id": "2610.39213",
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": ""
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.4028/p-p8iuia",
@@ -8824,9 +8824,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": ""
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.38329",
@@ -8850,9 +8850,9 @@
    ],
    "hub": "ai",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": ""
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.38262",
@@ -8881,9 +8881,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "https://arxiv.org/html/2610.38262/2610.38262v1/intro.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2610.38262/2610.38262v1/intro.png"
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.1021/acsnano.6c16739",
@@ -8939,9 +8939,9 @@
    "companies": [
     "TSMC"
    ],
+   "image": "https://arxiv.org/html/2610.37601/2610.37601v1/Arch.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": "https://arxiv.org/html/2610.37601/2610.37601v1/Arch.png"
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.37121",
@@ -8964,9 +8964,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": ""
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.37033",
@@ -8994,9 +8994,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": ""
+   "week": "2026-W44"
   },
   {
    "id": "arxiv:2610.36492",
@@ -9025,9 +9025,9 @@
    ],
    "hub": "device",
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W44",
-   "image": ""
+   "week": "2026-W44"
   },
   {
    "id": "doi:10.1103/wkjv-zx9x",
