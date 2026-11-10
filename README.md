@@ -20,7 +20,7 @@ Twice a day a GitHub Actions job fetches the latest news and papers, asks Claude
 | **Learn** | Latest videos from semiconductor explainer channels, interviews and keynotes, deep-dive newsletters, and a list of courses (nanoHUB, MIT OCW, NPTEL, IEEE EDS, imec, Stanford). |
 | **Publish** | Where to send a paper. *Conferences*: 25 device, memory, packaging and VLSI meetings (IEDM, VLSI Symposium, ISSCC, IMW, IRPS, ECTC, DAC, …) ordered by the next paper deadline, with tier, location and a "deadline soon" flag. *Journals & transactions*: 37 journals (IEEE EDL, T-ED, JSSC, TCAD, Nature Electronics, Advanced Materials, APL, …) with an approximate Scimago quartile (Q1-Q4), type (Letters / Transactions / Journal), open-access flag, a link to check the current rank, and how many recent papers on the site came from each. Both follow the topic bar. |
 
-Light theme is red (#E00400) on white with a solid red header, dark theme is red on black; the toggle is top right and it follows the system setting by default.
+Light theme is red (#E00400) on white with a solid red header, dark theme is red on black; the toggle is top right and it follows the system setting by default. Cards fade in as you scroll, tilt toward the mouse, numbers count up and the header has a moving circuit glow; all of it switches off when the device asks for reduced motion.
 
 ## Where the data comes from
 
@@ -98,6 +98,6 @@ devicehub/
   learn.py               videos, interviews, newsletters
   summarize.py           Claude: briefs, TL;DRs, briefings, research gaps, AI playbook
   run.py                 pipeline entry point
-site/                    static front end (index.html, app.js, art.js, styles.css) + data/*.json
+site/                    static front end (index.html, app.js, art.js, motion.js, styles.css) + data/*.json
 .github/workflows/update.yml   schedule, commit data, deploy to Pages
 ```
