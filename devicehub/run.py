@@ -34,6 +34,7 @@ def run_news(cfg, tagger, llm: Summarizer) -> list[dict]:
     if not fresh and store["items"]:
         log.warning("No news fetched; keeping previous data")
     items = news.merge(store["items"], fresh, cfg["site"].get("news_days_to_keep", 10))
+    log.info("Looked up preview images for %d stories", news.add_page_images(items))
     todo = [it for it in items if not it.get("brief")][:MAX_NEW_BRIEFS]
     if todo and llm.enabled:
         briefs = llm.news_briefs(todo)

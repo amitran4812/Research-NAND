@@ -133,6 +133,18 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(len({n["id"] for n in news}), len(news))
 
 
+class ImageTest(unittest.TestCase):
+    def test_og_image_parsing(self):
+        from devicehub import news
+        page = '<html><head><meta content="/img/a.jpg" property="og:image"></head></html>'
+        with mock.patch.object(news, "http_get", lambda url, **kw: FakeHtml(page, "https://ex.com/story")):
+            self.assertEqual(news.page_image("https://ex.com/story"), "https://ex.com/img/a.jpg")
+            items = [{"url": "https://ex.com/story", "origin": "feed"}, {"url": "https://news.google.com/x", "origin": "google"}]
+            self.assertEqual(news.add_page_images(items), 1)
+            self.assertEqual(items[0]["image"], "https://ex.com/img/a.jpg")
+            self.assertNotIn("image", items[1])
+
+
 class TaggerTest(unittest.TestCase):
     def test_whole_word_matching(self):
         from devicehub.common import Tagger, load_config

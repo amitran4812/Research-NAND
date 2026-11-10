@@ -7,7 +7,7 @@ import logging
 import feedparser
 
 from .common import clean_text, http_get, iso, make_id, norm_title, parse_iso, utcnow
-from .news import fetch_google_news
+from .news import fetch_google_news, page_image
 
 log = logging.getLogger("devicehub.learn")
 
@@ -50,6 +50,16 @@ def collect(cfg: dict, previous: dict | None = None) -> dict:
             items.append({"id": it["id"], "title": it["title"], "url": it["url"], "source": it["source"],
                           "kind": "interview", "thumbnail": None, "description": "",
                           "published": it["published"]})
+    # preview images for newsletter/article items without one (once per item)
+    prev_imgs = {it["id"]: it.get("thumbnail") for it in (previous or {}).get("items", [])}
+    looked = 0
+    for it in items:
+        if it["kind"] == "article" and not it.get("thumbnail"):
+            if it["id"] in prev_imgs:
+                it["thumbnail"] = prev_imgs[it["id"]]
+            elif looked < 20:
+                it["thumbnail"] = page_image(it["url"]) or None
+                looked += 1
     # keep older items that dropped off the feeds, for up to 60 days
     seen = {it["id"] for it in items}
     for it in (previous or {}).get("items", []):

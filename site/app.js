@@ -217,9 +217,12 @@
     var el = document.getElementById(id);
     if (el) { el.focus(); var v = el.value; el.value = ""; el.value = v; }
   }
-  function head(eyebrow, title, sub, extra) {
-    return '<div class="page-head"><div><div class="eyebrow">' + esc(eyebrow) + "</div><h1>" + esc(title) + '</h1><p class="muted">' + sub + "</p></div>" + (extra || "") + "</div>";
+  function head(eyebrow, title, sub, extra, art) {
+    if (!art) return '<div class="page-head"><div><div class="eyebrow">' + esc(eyebrow) + "</div><h1>" + esc(title) + '</h1><p class="muted">' + sub + "</p></div>" + (extra || "") + "</div>";
+    return '<div class="page-head banner fade-in"><div class="banner-art" aria-hidden="true">' + window.DeviceArt(art, "banner-" + art) + '</div>' +
+      '<div class="banner-text"><div class="eyebrow">' + esc(eyebrow) + "</div><h1>" + esc(title) + '</h1><p class="muted">' + sub + "</p>" + (extra ? '<div style="margin-top:1rem">' + extra + "</div>" : "") + "</div></div>";
   }
+  function pageArt(fallback) { return state.cat === "all" ? fallback : state.cat; }
   function catSuffix() { return state.cat === "all" ? "" : " · " + topicName(state.cat); }
 
   // ------------------------------------------------------------------ pages
@@ -293,7 +296,7 @@
   function pageNews() {
     function render(keepFocus) {
       app.innerHTML = head("News" + catSuffix(), state.cat === "all" ? "Industry & research news" : topicName(state.cat),
-        "What memory, storage, device and VLSI companies are doing. A short AI summary on every story, with the original source one click away.") +
+        "What memory, storage, device and VLSI companies are doing" + (D.meta.llm && D.meta.llm.enabled ? ", with a short AI summary on every story" : "") + ". The original source is always one click away.", "", pageArt("industry")) +
         newsBlock("device", state.cat, "news-search");
       bindNews(render, "news-search");
       if (keepFocus) refocus("news-search");
@@ -339,7 +342,7 @@
     function render(keepFocus) {
       app.innerHTML = head("Research" + catSuffix(), state.cat === "all" ? "New papers, week by week" : topicName(state.cat),
         "From arXiv preprints and OpenAlex (IEEE, Nature, Elsevier, ACS and other journals and conferences). " + (D.meta.llm && D.meta.llm.enabled ? "Each paper has a one-line takeaway, the full abstract and a direct link." : "Each paper has its full abstract and a direct link.") + "",
-        '<a class="btn ghost" href="#/radar">Research gaps →</a>') + papersBlock("device", state.cat, "paper-search");
+        '<a class="btn ghost" href="#/radar">Research gaps →</a>', pageArt("materials")) + papersBlock("device", state.cat, "paper-search");
       bindPapers(render, "paper-search");
       if (keepFocus) refocus("paper-search");
     }
@@ -428,7 +431,7 @@
     var topics = topicsOf("device").filter(function (t) { return radar[t.id]; });
     if (topicId && radar[topicId]) { setCat(topicId); renderCatBar("radar"); }
     var h = head("Research gaps" + catSuffix(), state.cat !== "all" && radar[state.cat] ? topicName(state.cat) : "Where the open problems are",
-      "For each area: what recent papers are doing, where the gaps are, and ideas to start on. Refreshed daily from the latest papers; open a one-page report to print or save.");
+      "For each area: what recent papers are doing, where the gaps are, and ideas to start on. Refreshed daily from the latest papers; open a one-page report to print or save.", "", pageArt("modeling"));
     if (!topics.length) {
       var llmOn = D.meta.llm && D.meta.llm.enabled;
       app.innerHTML = h + '<p class="notice">' + (llmOn ? "AI research-gap notes are generated once a day and will appear after the next run." :
@@ -505,7 +508,7 @@
     var tabs = [["news", "AI news"], ["papers", "AI research"], ["playbook", "AI in devices & VLSI"], ["radar", "AI research gaps"]];
     function render(keepFocus) {
       var radar = D.insights && D.insights.topics || {};
-      var h = head("AI Hub", "AI, and how it is reshaping devices & VLSI", "Latest AI news and research, and how machine learning and LLMs are being applied to device physics, materials, EDA and chip design.");
+      var h = head("AI Hub", "AI, and how it is reshaping devices & VLSI", "Latest AI news and research, and how machine learning and LLMs are being applied to device physics, materials, EDA and chip design.", "", "ai");
       h += briefingCard("ai");
       h += '<div class="controls"><div class="chips">' + tabs.map(function (t) { return chip(t[1], t[0], state.aiTab === t[0], "aitab"); }).join("") + "</div></div>";
       if (state.aiTab === "news" || state.aiTab === "papers") {
@@ -541,7 +544,7 @@
     var videos = items.filter(function (i) { return i.kind === "video"; });
     var talks = items.filter(function (i) { return i.kind === "interview"; });
     var reads = items.filter(function (i) { return i.kind === "article"; });
-    var h = head("Learn", "Lectures, interviews & deep dives", "Explainers, interviews, keynotes and courses on semiconductors, memory, devices and VLSI.");
+    var h = head("Learn", "Lectures, interviews & deep dives", "Explainers, interviews, keynotes and courses on semiconductors, memory, devices and VLSI.", "", "sram");
     h += '<section><div class="section-title"><h2>Latest videos</h2></div>' + (videos.length ? '<div class="grid-news">' + videos.slice(0, 12).map(function (v) {
       return '<a class="card hover news-card video fade-in" href="' + safeUrl(v.url) + '" target="_blank" rel="noopener noreferrer">' +
         '<div class="media">' + (v.thumbnail ? '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="' + safeUrl(v.thumbnail) + '" data-topic="vlsi" data-key="' + esc(v.id) + '">' : window.DeviceArt("vlsi", v.id)) + '<div class="play"><span></span></div></div>' +
@@ -552,17 +555,22 @@
       return compactCard({ id: r.id, title: r.title, url: r.url, image: r.thumbnail, topics: ["process"], tldr: r.description }, r.source + " · " + timeAgo(r.published));
     }).join("") + "</div>" : noData()) + "</section></div>";
     h += '<section><div class="section-title"><h2>Courses & lecture series</h2></div><div class="grid-cards">' + (L.courses || []).map(function (c) {
-      return '<a class="card hover pad fade-in" href="' + safeUrl(c.url) + '" target="_blank" rel="noopener noreferrer"><div class="eyebrow">' + esc(c.by) + "</div><h3 style=\"margin:.35rem 0 .6rem\">" + esc(c.title) + "</h3>" +
-        '<div class="tags">' + (c.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div></a>";
+      var tg = (c.tags || [])[0] || "", art = { devices: "logic-devices", vlsi: "vlsi", memory: "dram", logic: "logic-devices", circuits: "sram" }[tg] || "materials";
+      return '<a class="card hover news-card fade-in" href="' + safeUrl(c.url) + '" target="_blank" rel="noopener noreferrer">' + media(null, art, c.title, c.by) +
+        '<div class="body"><h3>' + esc(c.title) + "</h3>" +
+        '<div class="tags">' + (c.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div></div></a>";
     }).join("") + "</div></section>";
     app.innerHTML = h;
   }
 
+  var EVENT_ART = { ISSCC: "vlsi", IMW: "emerging-memory", VLSI: "logic-devices", FMS: "nand", Hot: "ai", IEDM: "dram" };
   function pageEvents() {
     var conf = (D.learn && D.learn.conferences) || [];
-    var h = head("Events", "Conferences to watch", "Where new memory, device and VLSI results are announced. Papers and news from these show up in Research and News as they appear.");
+    var h = head("Events", "Conferences to watch", "Where new memory, device and VLSI results are announced. Papers and news from these show up in Research and News as they appear.", "", "process");
     h += conf.length ? '<div class="grid-cards">' + conf.map(function (c) {
-      return '<a class="card hover pad fade-in" href="' + safeUrl(c.url) + '" target="_blank" rel="noopener noreferrer"><div class="eyebrow">' + esc(c.month) + "</div><h2 style=\"margin:.3rem 0 .4rem\">" + esc(c.name) + '</h2><p class="small muted" style="margin:0">' + esc(c.focus) + "</p></a>";
+      var art = EVENT_ART[c.name.split(" ")[0]] || "vlsi";
+      return '<a class="card hover news-card fade-in" href="' + safeUrl(c.url) + '" target="_blank" rel="noopener noreferrer">' + media(null, art, c.name, c.month) +
+        '<div class="body"><h2 style="margin:0">' + esc(c.name) + '</h2><p class="small muted" style="margin:0">' + esc(c.focus) + "</p></div></a>";
     }).join("") + "</div>" : noData();
     app.innerHTML = h;
   }
