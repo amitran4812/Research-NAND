@@ -32,11 +32,25 @@ Light theme is red on white, dark theme is red on black; the toggle is top right
 
 ## Setup (one time)
 
-1. **Add your Claude API key.** Repo → Settings → Secrets and variables → Actions → *New repository secret*: name `ANTHROPIC_API_KEY`, value from <https://console.anthropic.com/>. Without it the site still works, showing feed descriptions and abstracts, but no summaries, briefings or research gaps.
+1. **(Optional, can be done later) Add your Claude API key.** Repo → Settings → Secrets and variables → Actions → *New repository secret*: name `ANTHROPIC_API_KEY`, value from <https://console.anthropic.com/>. See *Without the API key* below for what changes.
 2. **Turn on GitHub Pages.** Repo → Settings → Pages → *Build and deployment* → Source: **GitHub Actions**.
 3. **Run it once now.** Repo → Actions → *Update Device Hub* → *Run workflow*. After it finishes, the site is at `https://<your-username>.github.io/Research-NAND/`.
 
 From then on it runs at 00:30 and 12:30 UTC every day (06:00 and 18:00 IST). Change the `cron` lines in `.github/workflows/update.yml` for other times.
+
+### Without the API key
+
+Everything except the AI-written text works with no key and no cost:
+
+| Works without a key | Needs `ANTHROPIC_API_KEY` |
+|---|---|
+| News from all feeds, topic bar, company filter, search, source links, images | Two-sentence AI summary on each story (without it you see the publisher's own description, or just the headline for Google News items) |
+| Papers by week with full abstracts, figures, PDF/DOI links, filters, search | One-line TL;DR and domain label on each paper |
+| Research gaps page: a keyword snapshot per topic (paper counts this week vs last, recurring themes, main venues, most-cited and newest paper) | AI research-gap notes, trends, starter projects and the one-page report |
+| AI Hub news and papers | Daily briefings (Home and AI Hub) and the "AI in devices & VLSI" playbook |
+| Share-price ticker, Learn, Events, What's new bell, light/dark themes | — |
+
+Add the key later and the next scheduled run fills in the AI parts automatically, including summaries for items already on the site.
 
 ### Optional settings
 

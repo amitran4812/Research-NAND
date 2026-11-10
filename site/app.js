@@ -338,7 +338,7 @@
   function pageResearch() {
     function render(keepFocus) {
       app.innerHTML = head("Research" + catSuffix(), state.cat === "all" ? "New papers, week by week" : topicName(state.cat),
-        "From arXiv preprints and OpenAlex (IEEE, Nature, Elsevier, ACS and other journals and conferences). Each paper has a one-line takeaway, the full abstract and a direct link.",
+        "From arXiv preprints and OpenAlex (IEEE, Nature, Elsevier, ACS and other journals and conferences). " + (D.meta.llm && D.meta.llm.enabled ? "Each paper has a one-line takeaway, the full abstract and a direct link." : "Each paper has its full abstract and a direct link.") + "",
         '<a class="btn ghost" href="#/radar">Research gaps →</a>') + papersBlock("device", state.cat, "paper-search");
       bindPapers(render, "paper-search");
       if (keepFocus) refocus("paper-search");
@@ -383,13 +383,59 @@
     return empty(D.meta.llm && D.meta.llm.enabled ? "Research-gap notes are generated once a day and will appear after the next run." :
       "Research-gap notes need the Claude API. Add the <code>ANTHROPIC_API_KEY</code> secret to the repository to switch them on.");
   }
+  // Keyword trend snapshot computed in the browser: works without the Claude API.
+  var STOP = "a an the of in on for to and or with by from at as is are was were be been this that these those we our it its via using use based into than then also can which show shows shown study studies paper results result new novel high low large small two one three both between under over within without such has have had not more most their they them here there however while due effect effects approach method methods model models data performance device devices proposed demonstrate demonstrated report reported present presented work significant significantly different various compared improved improve enable enables enabling achieve achieved".split(" ");
+  var STOPSET = {};
+  STOP.forEach(function (w) { STOPSET[w] = 1; });
+  function topTerms(items, n) {
+    var counts = {};
+    items.forEach(function (p) {
+      var words = (p.title + " " + (p.abstract || "")).toLowerCase().replace(/[^a-z0-9\-+ ]/g, " ").split(/\s+/).filter(function (w) { return w.length > 2 && !STOPSET[w] && !/^\d+$/.test(w); });
+      var seen = {};
+      for (var i = 0; i < words.length - 1; i++) {
+        var bg = words[i] + " " + words[i + 1];
+        if (!seen[bg]) { seen[bg] = 1; counts[bg] = (counts[bg] || 0) + 1; }
+      }
+    });
+    return Object.keys(counts).filter(function (k) { return counts[k] > 1; })
+      .sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, n).map(function (k) { return [k, counts[k]]; });
+  }
+  function trendSnapshot(cat) {
+    var weeks = (D.meta.weeks || []).map(function (w) { return w.key; });
+    var topics = topicsOf("device").filter(function (t) { return cat === "all" || t.id === cat; });
+    var cards = topics.map(function (t) {
+      var ps = D.papers.filter(function (p) { return p.hub === "device" && (p.topics || []).indexOf(t.id) !== -1; });
+      if (!ps.length) return "";
+      var thisW = ps.filter(function (p) { return p.week === weeks[0]; }).length;
+      var lastW = ps.filter(function (p) { return p.week === weeks[1]; }).length;
+      var venues = {};
+      ps.forEach(function (p) { if (p.venue && p.source !== "arXiv") venues[p.venue] = (venues[p.venue] || 0) + 1; });
+      var topV = Object.keys(venues).sort(function (a, b) { return venues[b] - venues[a]; }).slice(0, 3);
+      var terms = topTerms(ps, 8);
+      var cited = ps.filter(function (p) { return p.cited_by; }).sort(function (a, b) { return b.cited_by - a.cited_by; })[0];
+      var latest = ps[0];
+      return '<div class="card gap fade-in"><div class="eyebrow">' + esc(shortTopic(t.id)) + "</div>" +
+        '<h3>' + ps.length + (ps.length === 1 ? " paper" : " papers") + " <span class=\"muted small\" style=\"font-weight:500\">· " + thisW + " this week, " + lastW + " last week</span></h3>" +
+        (terms.length ? '<dl><dt>Recurring themes</dt><dd><div class="tags" style="margin-top:.3rem">' + terms.map(function (x) { return '<span class="tag topic">' + esc(x[0]) + " · " + x[1] + "</span>"; }).join("") + "</div></dd></dl>" : "") +
+        (topV.length ? "<dl><dt>Where it is published</dt><dd>" + topV.map(esc).join(" · ") + "</dd></dl>" : "") +
+        (cited ? "<dl><dt>Most cited so far</dt><dd>" + ext(cited.url, cited.title) + "</dd></dl>" : "") +
+        (latest ? "<dl><dt>Newest</dt><dd>" + ext(latest.url, latest.title) + "</dd></dl>" : "") + "</div>";
+    }).join("");
+    return cards ? '<div class="grid-cards">' + cards + "</div>" : empty("No papers in this topic yet.");
+  }
   function pageRadar(topicId) {
     var radar = D.insights && D.insights.topics || {};
     var topics = topicsOf("device").filter(function (t) { return radar[t.id]; });
     if (topicId && radar[topicId]) { setCat(topicId); renderCatBar("radar"); }
     var h = head("Research gaps" + catSuffix(), state.cat !== "all" && radar[state.cat] ? topicName(state.cat) : "Where the open problems are",
       "For each area: what recent papers are doing, where the gaps are, and ideas to start on. Refreshed daily from the latest papers; open a one-page report to print or save.");
-    if (!topics.length) { app.innerHTML = h + noRadar(); return; }
+    if (!topics.length) {
+      var llmOn = D.meta.llm && D.meta.llm.enabled;
+      app.innerHTML = h + '<p class="notice">' + (llmOn ? "AI research-gap notes are generated once a day and will appear after the next run." :
+        "AI research-gap notes switch on when the <code>ANTHROPIC_API_KEY</code> secret is added.") +
+        " Meanwhile, here is a keyword snapshot of what recent papers in each topic are about.</p>" + trendSnapshot(state.cat);
+      return;
+    }
     if (state.cat !== "all" && radar[state.cat]) { app.innerHTML = h + radarView(state.cat, radar[state.cat]); return; }
     var note = state.cat !== "all" ? '<p class="notice">No research-gap notes for <b>' + esc(topicName(state.cat)) + "</b> yet (it needs at least 3 recent papers, and Industry & market is news-only). Showing all topics.</p>" : "";
     app.innerHTML = h + note + radarTiles(topics, radar, "cat");
