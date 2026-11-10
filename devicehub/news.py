@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import html
 import logging
 import re
 import urllib.parse
@@ -113,6 +114,38 @@ def tag_and_filter(items: list[dict], tagger: Tagger) -> list[dict]:
     return kept
 
 
+_OG_RE = re.compile(
+    r'<meta[^>]+(?:property|name)=["\'](?:og:image(?::secure_url)?|twitter:image(?::src)?)["\'][^>]*content=["\']([^"\']+)["\']'
+    r'|<meta[^>]+content=["\']([^"\']+)["\'][^>]*(?:property|name)=["\'](?:og:image|twitter:image)["\']', re.I)
+
+
+def page_image(url: str) -> str:
+    """og:image / twitter:image of an article page ('' if none or unreachable)."""
+    resp = http_get(url, timeout=12, retries=1, headers={"User-Agent": "Mozilla/5.0 (compatible; DeviceHub/1.0)"})
+    if resp is None:
+        return ""
+    m = _OG_RE.search(resp.text[:200_000])
+    if not m:
+        return ""
+    img = html.unescape(m.group(1) or m.group(2) or "").strip()
+    return urllib.parse.urljoin(getattr(resp, "url", None) or url, img) if img else ""
+
+
+def add_page_images(items: list[dict], limit: int = 50) -> int:
+    """Look up a preview image for direct-link stories that came without one.
+    Google News links are redirects to the publisher, so they are skipped."""
+    done = 0
+    for it in items:
+        if done >= limit:
+            break
+        if it.get("image") or it.get("img_checked") or it.get("origin") != "feed":
+            continue
+        it["image"] = page_image(it["url"]) or None
+        it["img_checked"] = True
+        done += 1
+    return done
+
+
 def merge(existing: list[dict], fresh: list[dict], keep_days: int) -> list[dict]:
     """Merge new items into the stored list, de-duplicating by normalized title and
     keeping already-generated summaries."""
@@ -120,7 +153,7 @@ def merge(existing: list[dict], fresh: list[dict], keep_days: int) -> list[dict]
     for it in fresh:
         old = by_id.get(it["id"])
         if old:
-            for k in ("brief", "image"):
+            for k in ("brief", "image", "img_checked"):
                 if old.get(k) and not it.get(k):
                     it[k] = old[k]
             it["first_seen"] = old.get("first_seen", it.get("published"))
