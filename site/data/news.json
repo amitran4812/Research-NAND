@@ -1,6 +1,46 @@
 {
- "updated": "2026-11-10T13:06:20Z",
+ "updated": "2026-11-10T13:17:46Z",
  "items": [
+  {
+   "id": "022445124a23",
+   "title": "First, AI failed basic maths – now it is reshaping our minds",
+   "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNMC1SbTNYbWVhM19HU2k2VTFaOWc0eWdyYXhFWERITG15cm0teVNULVhGbFhiQVZvdUtoRnRaRkhtSjFxc01EOGs2MEM5V01pemZrRnM3Smw0YW1seGpkSHdZYzVrZzJyNGo5cHhMOHNERGlnQ3JqdzZDWmVkTW5rUXljYTJ0NEk1NEdoUnU4OFZTUzdsZ0ZHclh2RU02a3FaWUw3dk41TUYyS01RaWNqcVJIWXhMVm1WMF9IRHpQSUtocFhiMmF0cWF0VkF0YVJOcTYxdUJfdlJPc2szQk9xb3JkeTQzNFZMRzl4bWZWc2hXS0Fj?oc=5",
+   "source": "The Australian",
+   "source_url": "https://www.theaustralian.com.au",
+   "published": "2026-11-10T13:07:44Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-10T13:17:46Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "0d15dc52118e",
+   "title": "IBM Impact Accelerator Backs Skills Revamp With AI And Quantum Tech",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03VjhYVld6eUR2NWw4Mm1UbE5RWnVHSGFaYkhNd1doeFlWZUtWSmRBTVd0Yk9KQ2hINWZLSUNwTlRFMmtLYnE4eXNIY0RhaDNKSDVTa2ljV2UyT1pmcEZkSWxVZUhyei1zcFFaNWxBVUoxQzdkaHZFUEFR?oc=5",
+   "source": "Quantum Zeitgeist",
+   "source_url": "https://quantumzeitgeist.com",
+   "published": "2026-11-10T13:06:06Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [
+    "IBM"
+   ],
+   "first_seen": "2026-11-10T13:17:46Z",
+   "section": "general",
+   "region": "international"
+  },
   {
    "id": "419080d67128",
    "title": "SK Hynix Jumps 7.2% as Honam Site Deadline Meets a Split Analyst Verdict",
@@ -452,6 +492,23 @@
    "companies": [],
    "first_seen": "2026-11-10T13:00:55Z",
    "section": "general",
+   "region": "india"
+  },
+  {
+   "id": "ba3b4ba6f0e6",
+   "title": "India Highlights Expanding Entrepreneurship Ecosystem on National Entrepreneurship Day",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdE51bG1iVEdETUNtRGhMbS1fNnpESW9DT1VSNWRkbUJ4bzdRMU5LNGhvamFQNmFlV1hlVDlvR0lZUlNVX2M2X3NjNldpZm9aLVlUaUVaeTk3WE85Y056b2xhcDB6dVNWR2sxT2VRTldiQUc4SFI5cVdYQlB3eFNXWlZRNkJzS05xZ29MOHFSZFMtU2RlSHB4S2FzcnBrdDZEeExiMWROQm8wVVZDN0dkZA?oc=5",
+   "source": "OpenGov Asia",
+   "source_url": "https://opengovasia.com",
+   "published": "2026-11-10T09:28:46Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-10T13:17:46Z",
+   "section": "market",
    "region": "india"
   },
   {
@@ -2014,6 +2071,25 @@
    "companies": [],
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "c4847022466c",
+   "title": "SK Hynix Inc (HY9.DU) Recent Insider Transactions",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA5SS15allHR2FCNDZhR09SbExBUHdacl9nVmJlQm5pNlZ2b3A3N2hQOUZKSmZETl9lbXoycWRjdnpDdDYxLV9DS0xVNkZTdHRPT1JHZ0pjdk9QY0l6ZzNkTVRNbWhHZE53Y1BtSWsxUVU?oc=5",
+   "source": "Yahoo! Finance Canada",
+   "source_url": "https://ca.finance.yahoo.com",
+   "published": "2026-11-10T02:55:46Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-10T13:17:46Z",
+   "section": "general",
    "region": "international"
   },
   {
@@ -5331,6 +5407,7 @@
    "origin": "feed",
    "image": "https://i0.wp.com/semiengineering.com/wp-content/uploads/2026/11/Tate_Optical-Super-Highway-For-AI-fig1.png?resize=1430%2C373&#038;ssl=1",
    "topics": [
+    "ai-general",
     "interconnects"
    ],
    "companies": [],
