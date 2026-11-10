@@ -1,3 +1,83 @@
 # Device Hub
 
-News and research portal for nanoscale devices, DRAM, NAND flash, storage, VLSI and AI.
+A news and research portal for nanoscale semiconductor devices, with DRAM, NAND flash and storage first, plus emerging memory (FeFET, MRAM, ReRAM), advanced logic devices (CFET, GAA), device materials, VLSI design, and an AI Hub.
+
+Twice a day a GitHub Actions job fetches the latest news and papers, asks Claude to summarise them, commits the data and publishes a static site to GitHub Pages. No server to run.
+
+## What's on the site
+
+| Page | What it shows |
+|---|---|
+| **Ticker** (top bar) | Scrolling share prices for Micron, Samsung, SK hynix, Kioxia, Sandisk, WDC, Seagate, TSMC, Intel, Nvidia, AMD, ASML, AMAT, Lam, KLA, TEL, Synopsys, Cadence and the SOX index. Fetched once a day. |
+| **Home** | Today's briefing (Claude-written, every point linked to its source), latest news, new papers, top research gaps, market movers. |
+| **News** | Company and industry news filtered to device, memory, storage, materials and VLSI topics. Each item has a short summary, the source name and a link to the original article. Filter by topic or company, or search. |
+| **Research** | New papers grouped week by week, with a one-line TL;DR, a domain label, the full abstract and direct links (paper page, PDF, DOI). Filter by topic, week, or arXiv vs journals, and search (e.g. "HZO", "IGZO", "MoS2"). |
+| **Research gaps** | For each topic: what recent papers are doing, 3-5 open research gaps (what's missing, why it matters, suggested approach, difficulty), starter project ideas and papers to read first. **Open one-page report** gives a printable brief you can save as PDF or download as Markdown. |
+| **AI Hub** | AI briefing, AI news, AI papers by week, "AI in devices & VLSI" playbook (how to apply ML/LLMs to TCAD, materials, compact models, yield, RTL, placement), and AI research gaps. |
+| **Learn** | Latest videos from semiconductor explainer channels, interviews and keynotes, deep-dive newsletters, and a list of courses (nanoHUB, MIT OCW, NPTEL, IEEE EDS, imec, Stanford). |
+| **Events** | ISSCC, IMW, VLSI Symposium, FMS, Hot Chips, IEDM. |
+
+Light theme is red on white, dark theme is red on black; the toggle is top right and it follows the system setting by default.
+
+## Where the data comes from
+
+- **News:** publisher RSS feeds (Semiconductor Engineering, EE Times, IEEE Spectrum, Blocks & Files, Tom's Hardware, The Register, Phys.org, TechPowerUp, plus AI feeds) and Google News RSS searches. Items from general feeds are kept only if they match a topic keyword.
+- **Papers:** the [arXiv API](https://info.arxiv.org/help/api/) for preprints and the [OpenAlex API](https://openalex.org/) for journal and conference papers (IEEE, Elsevier, Nature, ACS, …).
+  **Why not Google Scholar?** It has no official API and blocks automated queries (CAPTCHAs, IP bans), so a scheduled scraper would break within days and breach its terms. OpenAlex indexes the same publications with abstracts and is free and open.
+- **Prices:** Yahoo Finance's chart endpoint, with Stooq as a fallback for US listings. Delayed quotes, refreshed on the first run of each day.
+- **Summaries, briefings, research gaps, playbook:** the Claude API (`claude-opus-5-5` by default). AI-generated text is labelled on the site; always check the linked source.
+
+## Setup (one time)
+
+1. **Add your Claude API key.** Repo → Settings → Secrets and variables → Actions → *New repository secret*: name `ANTHROPIC_API_KEY`, value from <https://console.anthropic.com/>. Without it the site still works, showing feed descriptions and abstracts, but no summaries, briefings or research gaps.
+2. **Turn on GitHub Pages.** Repo → Settings → Pages → *Build and deployment* → Source: **GitHub Actions**.
+3. **Run it once now.** Repo → Actions → *Update Device Hub* → *Run workflow*. After it finishes, the site is at `https://<your-username>.github.io/Research-NAND/`.
+
+From then on it runs at 00:30 and 12:30 UTC every day (06:00 and 18:00 IST). Change the `cron` lines in `.github/workflows/update.yml` for other times.
+
+### Optional settings
+
+| Name | Type | Purpose |
+|---|---|---|
+| `DEVICEHUB_MODEL` | Actions *variable* | Claude model to use. Default `claude-opus-5-5`. Set `claude-sonnet-5-5` to cut cost roughly in half. |
+| `OPENALEX_EMAIL` | Actions *variable* | Contact email sent to OpenAlex (their "polite pool", faster responses). |
+| `OPENALEX_API_KEY` | Actions *secret* | OpenAlex API key, if you have one, for higher limits. |
+
+### Cost
+
+Each run makes roughly 10-20 Claude calls (briefs for new news items and papers, two briefings), plus about 11 research-gap calls once a day. With the default model expect around US$1-3 per day depending on how much news there is; switching to `claude-sonnet-5-5` roughly halves that.
+
+## Customising
+
+Everything the fetchers look for is in [`config.yaml`](config.yaml):
+
+- `topics`: each topic's keywords (for tagging news) and search phrases (sent to arXiv/OpenAlex). Add a topic and it gets its own filter chip and research-gap page. `hub: ai` puts it on the AI Hub.
+- `companies`: names used to tag news.
+- `news_queries` / `news_feeds`: Google News searches and RSS feeds. Prefix a query with `ai:` for the AI Hub.
+- `tickers`: Yahoo Finance symbols for the scrolling bar.
+- `learn_feeds`, `learn_queries`, `courses`, `conferences`: the Learn and Events pages.
+
+## Running locally
+
+```bash
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY=...        # optional
+python -m devicehub.run              # all stages; or --only news,papers / --no-llm
+python -m http.server -d site 8000   # open http://localhost:8000
+python -m unittest discover -s tests # offline tests
+```
+
+## Layout
+
+```
+config.yaml              topics, feeds, tickers, courses
+devicehub/
+  news.py                RSS + Google News fetch, tagging, de-duplication
+  papers.py              arXiv + OpenAlex fetch, relevance filter, weekly grouping
+  market.py              daily share prices
+  learn.py               videos, interviews, newsletters
+  summarize.py           Claude: briefs, TL;DRs, briefings, research gaps, AI playbook
+  run.py                 pipeline entry point
+site/                    static front end (index.html, app.js, styles.css) + data/*.json
+.github/workflows/update.yml   schedule, commit data, deploy to Pages
+```

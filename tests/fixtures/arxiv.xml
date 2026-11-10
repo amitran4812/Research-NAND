@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <title>arXiv Query</title>
+  <entry>
+    <id>http://arxiv.org/abs/2611.01234v2</id>
+    <published>__RECENT__</published>
+    <title>Charge-Trap Retention in 3D NAND Flash
+      with 300+ Word Line Layers</title>
+    <summary>We study retention loss in 3D NAND flash memory with more than 300 word-line layers using
+      TCAD and array measurements. Lateral charge migration dominates at high temperature.</summary>
+    <author><name>A. Researcher</name></author>
+    <author><name>B. Scientist</name></author>
+    <link href="http://arxiv.org/abs/2611.01234v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2611.01234v2" rel="related" type="application/pdf"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.05678v1</id>
+    <published>__RECENT__</published>
+    <title>Thermal transport in bulk graphite</title>
+    <summary>Phonon transport in graphite at low temperature.</summary>
+    <author><name>C. Physicist</name></author>
+    <link href="http://arxiv.org/abs/2611.05678v1" rel="alternate" type="text/html"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+</feed>
