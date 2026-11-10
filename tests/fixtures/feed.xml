@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel><title>Tech</title>
 <item><title>SK hynix begins mass production of 321-layer NAND</title><link>https://blocksandfiles.com/321</link>
-<pubDate>__RFC822__</pubDate><description>&lt;p&gt;The 321-layer 3D NAND chips ship to SSD makers.&lt;/p&gt;</description></item>
+<pubDate>__RFC822__</pubDate><enclosure url="https://blocksandfiles.com/img/321.jpg" type="image/jpeg" length="1"/><description>&lt;p&gt;The 321-layer 3D NAND chips ship to SSD makers.&lt;/p&gt;</description></item>
 <item><title>Best gaming mouse deals this week</title><link>https://example.com/mouse</link>
 <pubDate>__RFC822__</pubDate><description>Nvidia bundle included.</description></item>
 </channel></rss>

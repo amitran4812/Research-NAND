@@ -51,6 +51,8 @@ def run_papers(cfg, tagger, llm: Summarizer) -> list[dict]:
     if not fresh and store["items"]:
         log.warning("No papers fetched; keeping previous data")
     items = papers.merge(store["items"], fresh, cfg["site"].get("weeks_to_keep", 8))
+    n_fig = papers.add_figures(items)
+    log.info("Looked up figures for %d arXiv papers", n_fig)
     todo = [p for p in items if not p.get("tldr") and p.get("abstract")][:MAX_NEW_TLDRS]
     if todo and llm.enabled:
         tl = llm.paper_tldrs(todo)
@@ -101,6 +103,8 @@ def run_insights(cfg, llm: Summarizer, news_items, paper_items, force: bool) -> 
 
     # Research radar per topic + AI playbook: once a day.
     for topic in cfg["topics"]:
+        if not topic.get("search"):
+            continue  # news-only category: no research radar
         prev = store["topics"].get(topic["id"]) or {}
         if not force and not _older_than(prev.get("generated"), 20):
             continue

@@ -30,7 +30,15 @@ class FakeResp:
         return json.loads(self.text)
 
 
+class FakeHtml(FakeResp):
+    def __init__(self, text, url):
+        super().__init__(text)
+        self.url = url
+
+
 def fake_get(url, params=None, **_):
+    if "arxiv.org/html/" in url:
+        return FakeHtml('<figure><img src="x1.png" class="ltx_graphics ltx_img" alt=""></figure>', url + "v2/")
     if "arxiv.org" in url:
         return FakeResp(_fixture("arxiv.xml"))
     if "openalex.org" in url:
@@ -83,6 +91,7 @@ class PipelineTest(unittest.TestCase):
         sk = [n for n in news if "321-layer" in n["title"]]
         self.assertEqual(len(sk), 1)
         self.assertEqual(sk[0]["url"], "https://blocksandfiles.com/321")
+        self.assertEqual(sk[0]["image"], "https://blocksandfiles.com/img/321.jpg")
         self.assertIn("nand", sk[0]["topics"])
         self.assertIn("SK hynix", sk[0]["companies"])
         # Irrelevant general-tech story is filtered out.
@@ -95,6 +104,11 @@ class PipelineTest(unittest.TestCase):
         self.assertFalse(any("graphite" in t for t in ptitles), "off-topic paper should be filtered")
         nand = [p for p in papers if "retention" in p["title"].lower()]
         self.assertEqual(len(nand), 1, "arXiv + OpenAlex copies of one paper are merged")
+        arx = [p for p in papers if p.get("arxiv_id")]
+        self.assertTrue(arx)
+        for p in arx:
+            self.assertTrue(p["image"].startswith("https://arxiv.org/html/"), p["image"])
+            self.assertTrue(p["image"].endswith("/x1.png"))
         fefet = [p for p in papers if "HZO" in p["title"]][0]
         self.assertEqual(fefet["abstract"], "We report FeFET endurance in 3D NAND arrays.")
         self.assertIn("emerging-memory", fefet["topics"])

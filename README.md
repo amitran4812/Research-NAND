@@ -2,16 +2,19 @@
 
 A news and research portal for nanoscale semiconductor devices, with DRAM, NAND flash and storage first, plus emerging memory (FeFET, MRAM, ReRAM), advanced logic devices (CFET, GAA), device materials, VLSI design, and an AI Hub.
 
+**Topics** (one-click bar at the top of Home, News, Research and Research gaps, with an *All* option): DRAM & HBM · NAND flash & SSD · Emerging memory (FeRAM, MRAM, ReRAM, PCM) · SRAM & embedded memory · Nano & logic transistors (CFET, GAA) · 2D & channel materials · Dielectrics & ferroelectrics · Interconnects & BEOL · Advanced packaging & 3D integration · Process, litho & fabs · Reliability & characterization · TCAD & device modeling · Power & wide-bandgap · VLSI & circuit design · Industry & market. The chosen topic is remembered between visits and can be linked directly, e.g. `#/news?cat=nand`.
+
 Twice a day a GitHub Actions job fetches the latest news and papers, asks Claude to summarise them, commits the data and publishes a static site to GitHub Pages. No server to run.
 
 ## What's on the site
 
 | Page | What it shows |
 |---|---|
+| **What's new** (bell, top right) | Count of stories and papers added since you last opened it, broken down by topic, with links. "Mark all as read" resets it (stored in your browser). |
 | **Ticker** (top bar) | Scrolling share prices for Micron, Samsung, SK hynix, Kioxia, Sandisk, WDC, Seagate, TSMC, Intel, Nvidia, AMD, ASML, AMAT, Lam, KLA, TEL, Synopsys, Cadence and the SOX index. Fetched once a day. |
 | **Home** | Today's briefing (Claude-written, every point linked to its source), latest news, new papers, top research gaps, market movers. |
-| **News** | Company and industry news filtered to device, memory, storage, materials and VLSI topics. Each item has a short summary, the source name and a link to the original article. Filter by topic or company, or search. |
-| **Research** | New papers grouped week by week, with a one-line TL;DR, a domain label, the full abstract and direct links (paper page, PDF, DOI). Filter by topic, week, or arXiv vs journals, and search (e.g. "HZO", "IGZO", "MoS2"). |
+| **News** | Company and industry news as image cards. Each item has a short summary, the source name and a link to the original article. Filter by topic or company, or search. Photos come from the publisher's feed; stories without one get a designed illustration for their topic. |
+| **Research** | New papers grouped week by week, with a one-line TL;DR, a domain label, the full abstract, the paper's first figure (from arXiv's HTML version, when available) and direct links (paper page, PDF, DOI). Filter by topic, week, or arXiv vs journals, and search (e.g. "HZO", "IGZO", "MoS2"). |
 | **Research gaps** | For each topic: what recent papers are doing, 3-5 open research gaps (what's missing, why it matters, suggested approach, difficulty), starter project ideas and papers to read first. **Open one-page report** gives a printable brief you can save as PDF or download as Markdown. |
 | **AI Hub** | AI briefing, AI news, AI papers by week, "AI in devices & VLSI" playbook (how to apply ML/LLMs to TCAD, materials, compact models, yield, RTL, placement), and AI research gaps. |
 | **Learn** | Latest videos from semiconductor explainer channels, interviews and keynotes, deep-dive newsletters, and a list of courses (nanoHUB, MIT OCW, NPTEL, IEEE EDS, imec, Stanford). |
@@ -45,7 +48,7 @@ From then on it runs at 00:30 and 12:30 UTC every day (06:00 and 18:00 IST). Cha
 
 ### Cost
 
-Each run makes roughly 10-20 Claude calls (briefs for new news items and papers, two briefings), plus about 11 research-gap calls once a day. With the default model expect around US$1-3 per day depending on how much news there is; switching to `claude-sonnet-5-5` roughly halves that.
+Each run makes roughly 10-20 Claude calls (briefs for new news items and papers, two briefings), plus about 19 research-gap calls once a day (one per topic). With the default model expect around US$1.5-4 per day depending on how much news there is; switching to `claude-sonnet-5-5` roughly halves that.
 
 ## Customising
 
@@ -78,6 +81,6 @@ devicehub/
   learn.py               videos, interviews, newsletters
   summarize.py           Claude: briefs, TL;DRs, briefings, research gaps, AI playbook
   run.py                 pipeline entry point
-site/                    static front end (index.html, app.js, styles.css) + data/*.json
+site/                    static front end (index.html, app.js, art.js, styles.css) + data/*.json
 .github/workflows/update.yml   schedule, commit data, deploy to Pages
 ```

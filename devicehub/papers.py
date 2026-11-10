@@ -13,6 +13,7 @@ import logging
 import os
 import re
 import time
+import urllib.parse
 
 import feedparser
 
@@ -49,6 +50,7 @@ def parse_arxiv(content: bytes | str, topic_id: str) -> list[dict]:
         cats = [t.get("term") for t in e.get("tags", []) if t.get("term")]
         out.append({
             "id": "arxiv:" + base_id,
+            "arxiv_id": base_id,
             "title": title,
             "abstract": clean_text(e.get("summary")),
             "authors": [a.get("name") for a in e.get("authors", [])][:8],
@@ -75,6 +77,38 @@ def fetch_arxiv(topic: dict, categories: list[str], max_results: int) -> list[di
     if resp is None:
         return []
     return parse_arxiv(resp.content, topic["id"])
+
+
+_FIG_RE = re.compile(r'<img[^>]+class="ltx_graphics[^"]*"[^>]*src="([^"]+)"|<img[^>]+src="([^"]+)"[^>]*class="ltx_graphics', re.I)
+
+
+def arxiv_figure(base_id: str) -> str:
+    """URL of the first figure in the arXiv HTML rendering of a paper ('' if none)."""
+    resp = http_get(f"https://arxiv.org/html/{base_id}", timeout=30, retries=1)
+    if resp is None:
+        return ""
+    m = _FIG_RE.search(resp.text)
+    if not m:
+        return ""
+    src = m.group(1) or m.group(2)
+    base = getattr(resp, "url", "") or f"https://arxiv.org/html/{base_id}"
+    if not base.endswith("/"):
+        base += "/"
+    return urllib.parse.urljoin(base, src)
+
+
+def add_figures(papers: list[dict], limit: int = 60, pause: float = 1.0) -> int:
+    """Attach a figure thumbnail to new arXiv papers. Marks tried papers with image=''."""
+    done = 0
+    for p in papers:
+        if done >= limit:
+            break
+        if not p.get("arxiv_id") or "image" in p:
+            continue
+        p["image"] = arxiv_figure(p["arxiv_id"])
+        done += 1
+        time.sleep(pause)
+    return done
 
 
 # --------------------------------------------------------------------------- OpenAlex
@@ -164,6 +198,7 @@ def finalize(papers: list[dict], tagger: Tagger, cfg: dict) -> list[dict]:
             # prefer the published (OpenAlex) record's venue but keep the arXiv PDF
             if prev["source"] == "arXiv" and p["source"] == "OpenAlex":
                 p["pdf"] = p.get("pdf") or prev.get("pdf")
+                p["arxiv_id"] = prev.get("arxiv_id")
                 p["topics"] = prev["topics"]
                 out[key] = p
             continue
@@ -179,8 +214,8 @@ def merge(existing: list[dict], fresh: list[dict], weeks_to_keep: int) -> list[d
         pid = titles.get(norm_title(p["title"]), p["id"])
         old = by_id.get(pid)
         if old:
-            for k in ("tldr", "first_seen"):
-                if old.get(k):
+            for k in ("tldr", "domain", "image", "arxiv_id", "first_seen"):
+                if k in old and (old[k] or k == "image"):
                     p[k] = old[k]
             p["topics"] = sorted(set(p["topics"]) | set(old.get("topics", [])))
             p["id"] = pid
@@ -206,6 +241,8 @@ def collect(cfg: dict, tagger: Tagger) -> list[dict]:
     since = (utcnow() - dt.timedelta(days=rcfg.get("lookback_days", 14))).date()
     raw: list[dict] = []
     for topic in cfg["topics"]:
+        if not topic.get("search"):
+            continue  # news-only category
         cats = rcfg.get("arxiv_categories_ai" if topic["hub"] == "ai" else "arxiv_categories", [])
         ax = fetch_arxiv(topic, cats, rcfg.get("arxiv_max_per_topic", 40))
         time.sleep(3)  # arXiv asks clients to wait 3 s between API calls

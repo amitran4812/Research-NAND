@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import datetime as dt
 import logging
+import re
 import urllib.parse
 
 import feedparser
@@ -24,6 +25,27 @@ def _entry_time(e) -> dt.datetime | None:
 
 def parse_feed(content: bytes | str):
     return feedparser.parse(content)
+
+
+_IMG_RE = re.compile(r"<img[^>]+src=[\"']([^\"']+)[\"']", re.I)
+
+
+def entry_image(e) -> str | None:
+    """Best image for a feed entry: media:content / media:thumbnail / enclosure / first <img>."""
+    for key in ("media_content", "media_thumbnail"):
+        for m in e.get(key) or []:
+            url = m.get("url")
+            if url and (m.get("medium") in (None, "image") or key == "media_thumbnail"):
+                if not re.search(r"\.(mp4|mp3|webm)(\?|$)", url, re.I):
+                    return url
+    for enc in e.get("enclosures") or []:
+        if (enc.get("type") or "").startswith("image/") and enc.get("href"):
+            return enc["href"]
+    for blob in [e.get("summary")] + [c.get("value") for c in e.get("content") or []]:
+        m = _IMG_RE.search(blob or "")
+        if m and m.group(1).startswith("http") and not re.search(r"(pixel|tracking|feedburner|1x1|gravatar|emoji)", m.group(1), re.I):
+            return m.group(1)
+    return None
 
 
 def _items_from_feed(parsed, *, source_name: str, hub: str, origin: str) -> list[dict]:
@@ -55,6 +77,7 @@ def _items_from_feed(parsed, *, source_name: str, hub: str, origin: str) -> list
             "description": desc,
             "hub": hub,
             "origin": origin,
+            "image": entry_image(e) if origin == "feed" else None,
         })
     return items
 
@@ -97,7 +120,7 @@ def merge(existing: list[dict], fresh: list[dict], keep_days: int) -> list[dict]
     for it in fresh:
         old = by_id.get(it["id"])
         if old:
-            for k in ("brief",):
+            for k in ("brief", "image"):
                 if old.get(k) and not it.get(k):
                     it[k] = old[k]
             it["first_seen"] = old.get("first_seen", it.get("published"))
