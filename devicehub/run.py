@@ -44,6 +44,8 @@ def run_news(cfg, tagger, llm: Summarizer) -> list[dict]:
             if it["id"] in briefs:
                 it["brief"] = briefs[it["id"]]
         log.info("Wrote %d news briefs", len(briefs))
+    for it in items:
+        it["section"] = news.classify_section(it, cfg)
     write_json("news.json", {"updated": iso(utcnow()), "items": items})
     return items
 

@@ -105,6 +105,8 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(sk[0]["image"], "https://blocksandfiles.com/img/321.jpg")
         self.assertIn("nand", sk[0]["topics"])
         self.assertIn("SK hynix", sk[0]["companies"])
+        self.assertTrue(all(n["section"] in ("tech", "market", "general") for n in news))
+        self.assertEqual(sk[0]["section"], "tech")
         # Irrelevant general-tech story is filtered out.
         self.assertFalse(any("mouse" in t.lower() for t in titles))
         # Google News " - Publisher" suffix is stripped.
@@ -154,6 +156,17 @@ class ImageTest(unittest.TestCase):
             self.assertEqual(news.add_page_images(items), 1)
             self.assertEqual(items[0]["image"], "https://ex.com/img/a.jpg")
             self.assertNotIn("image", items[1])
+
+
+class SectionTest(unittest.TestCase):
+    def test_classify(self):
+        from devicehub.common import load_config
+        from devicehub.news import classify_section
+        cfg = load_config()
+        self.assertEqual(classify_section({"title": "SK hynix unveils 321-layer NAND with new architecture"}, cfg), "tech")
+        self.assertEqual(classify_section({"title": "Micron revenue jumps as DRAM prices rise; analysts raise outlook"}, cfg), "market")
+        self.assertEqual(classify_section({"title": "Kioxia leveraged product debuts in Hong Kong"}, cfg), "market")
+        self.assertEqual(classify_section({"title": "5 cheaper ways to play games"}, cfg), "general")
 
 
 class TaggerTest(unittest.TestCase):

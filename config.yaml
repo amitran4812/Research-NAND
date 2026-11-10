@@ -210,3 +210,15 @@ courses:
   - {title: "imec technology roadmap & talks", by: "imec", url: "https://www.imec-int.com/en/articles", tags: [logic, roadmap]}
   - {title: "Stanford EE online (devices & VLSI)", by: "Stanford Online", url: "https://online.stanford.edu/search-catalog?keywords=semiconductor", tags: [devices, vlsi]}
 
+
+# News page sections. Each story is scored against these keyword lists (title
+# counts double) and filed under the higher score; stories that match neither
+# go to "Industry & other". Words match as prefixes, so "unveil" also catches
+# "unveils" / "unveiled".
+news_sections:
+  tech:
+    name: Technology & R&D
+    keywords: [unveil, reveal, introduc, launch, debut, demonstrat, prototype, sample, sampling, "mass production", "volume production", tape-out, taped out, breakthrough, "-layer", layers, "hbm4", "hbm3e", "lpddr6", "ddr6", "gddr7", "pcie 6", "pcie 7", "ufs 5", cxl, "nm process", "nm node", "2nm", "1.4nm", "a16", "a14", "18a", "14a", node, transistor, cfet, gaa, nanosheet, "backside power", chiplet, "hybrid bonding", packaging, interposer, "high-na", euv, architecture, patent, research, researcher, scientist, study, paper, iedm, isscc, "vlsi symposium", imec, develop, "first ", record, faster, density, efficient, ferroelectric, mram, reram, fefet, "3d dram", "4f2", controller, jedec, specification, standard, roadmap, benchmark, "new technology", innovation, invent, engineer, material, wafer, discover, atom, lithograph, inspection, metrology, hbf, "high bandwidth flash", "physical ai", optical, photonic, scandium, molybdenum, ruthenium, "2d ", mos2, igzo, hzo]
+  market:
+    name: Market & business
+    keywords: [earning, revenue, profit, loss, quarter, quarterly, "q1", "q2", "q3", "q4", guidance, forecast, outlook, expect, "2027", "2028", "2030", share price, shares, stock, investor, analyst, "price target", valuation, "market cap", "market share", pricing, price, "contract price", demand, supply, shortage, oversupply, inventory, shipment, sales, capex, invest, billion, million, fund, acquisition, acquire, merger, deal, ipo, tariff, "export control", sanction, subsidy, "chips act", layoff, hiring, ceo, trendforce, idc, gartner, counterpoint, yole, upgrade, downgrade, dividend, fiscal, results, rally, surge, slump, plunge, soar, jump, "wall street", nasdaq, kospi, nikkei, economy, recession, boom, raise, raising, funding, seed round, "series a", "series b", workforce, "work force", expand, expansion, capacity, fab construction, license, licence, leveraged, etf, etn, "stock exchange", listing, bond]

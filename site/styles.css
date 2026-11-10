@@ -498,3 +498,15 @@ table.market td.num { text-align: right; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]).motion .card.hover::after { background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 59, 47, .13), transparent 45%); }
 }
+
+/* ---- news sections ------------------------------------------------------ */
+.section-tabs .chip { font-size: .92rem; padding: .45rem 1rem; font-weight: 600; }
+.mkt-summary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1fr); gap: 1rem; margin-bottom: 1.4rem; }
+@media (max-width: 960px) { .mkt-summary { grid-template-columns: 1fr; } }
+.mkt-stat .big { font-family: var(--serif); font-weight: 700; font-size: 2.8rem; line-height: 1.05; color: var(--red); margin-top: .3rem; }
+.mkt-stat p { margin: .1rem 0 .7rem; }
+.tag.co { cursor: pointer; font: inherit; font-size: .74rem; font-weight: 600; }
+.mkt-outlook ul { margin: .5rem 0 0; padding-left: 1.1rem; display: grid; gap: .5rem; }
+.mkt-outlook li { font-size: .93rem; font-weight: 600; line-height: 1.4; }
+.mkt-outlook li a { color: var(--text); }
+.mkt-movers table.market { margin-top: .4rem; }

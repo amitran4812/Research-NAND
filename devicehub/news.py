@@ -198,3 +198,30 @@ def collect(cfg: dict, tagger: Tagger) -> list[dict]:
         else:
             cur["topics"] = sorted(set(cur["topics"]) | set(it["topics"]))
     return list(seen.values())
+
+
+# --------------------------------------------------------------------------- sections
+_SECTION_RX: dict[str, re.Pattern] = {}
+
+
+def _section_rx(key: str, words: list[str]) -> re.Pattern:
+    if key not in _SECTION_RX:
+        alts = sorted({w.lower() for w in words if w}, key=len, reverse=True)
+        _SECTION_RX[key] = re.compile(r"(?<![a-z0-9])(?:" + "|".join(re.escape(w) for w in alts) + ")", re.I)
+    return _SECTION_RX[key]
+
+
+def classify_section(item: dict, cfg: dict) -> str:
+    """'tech' (new technology / R&D), 'market' (business, prices, outlook) or 'general'."""
+    sections = cfg.get("news_sections") or {}
+    title = item.get("title") or ""
+    body = " ".join(filter(None, [item.get("description"), item.get("brief")]))
+    scores = {}
+    for key, sec in sections.items():
+        rx = _section_rx(key, sec.get("keywords", []))
+        scores[key] = 2 * len(rx.findall(title)) + len(rx.findall(body))
+    tech, market = scores.get("tech", 0), scores.get("market", 0)
+    if not tech and not market:
+        return "general"
+    return "tech" if tech > market else "market"
+

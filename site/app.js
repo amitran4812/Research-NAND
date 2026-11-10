@@ -3,7 +3,7 @@
   "use strict";
 
   var D = { meta: null, news: [], papers: [], market: null, learn: null, insights: null, venues: null };
-  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false };
+  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false, newsSection: "all" };
   try { state.cat = localStorage.getItem("dh-cat") || "all"; } catch (e) {}
   var DEVICE_ROUTES = ["home", "news", "research", "radar", "publish", "events"];
   var app = document.getElementById("app");
@@ -278,13 +278,48 @@
     app.innerHTML = h;
   }
 
-  function newsBlock(hub, cat, searchId) {
+  var SECTIONS = [["all", "All news"], ["tech", "Technology & R&D"], ["market", "Market & business"], ["general", "Industry & other"]];
+  function sectionOf(n) { return n.section || "general"; }
+  function sectionChips(items) {
+    var c = { all: items.length, tech: 0, market: 0, general: 0 };
+    items.forEach(function (n) { c[sectionOf(n)]++; });
+    return '<div class="controls section-tabs"><div class="chips">' + SECTIONS.map(function (x) { return chip(x[1], x[0], state.newsSection === x[0], "newssec", c[x[0]]); }).join("") + "</div></div>";
+  }
+  // Market tab header: how much is happening, who it is about, what is expected next, and today's movers.
+  var OUTLOOK = /\b(forecast|outlook|expect|expected|guidance|projected|will|by 20\d\d|20(2[7-9]|3\d)|future|next year|demand)\b/i;
+  function marketSummary(items) {
+    var week = Date.now() - 7 * 86400000;
+    var recent = items.filter(function (n) { return new Date(n.published || 0).getTime() > week; });
+    var comp = {};
+    recent.forEach(function (n) { (n.companies || []).forEach(function (c) { comp[c] = (comp[c] || 0) + 1; }); });
+    var top = Object.keys(comp).sort(function (a, b) { return comp[b] - comp[a]; }).slice(0, 6);
+    var outlook = items.filter(function (n) { return OUTLOOK.test(n.title); }).slice(0, 5);
+    var q = (D.market && D.market.quotes) || [];
+    var movers = q.filter(function (x) { return x.change_pct != null; }).slice().sort(function (a, b) { return Math.abs(b.change_pct) - Math.abs(a.change_pct); }).slice(0, 5);
+    var h = '<div class="mkt-summary fade-in">';
+    h += '<div class="card pad mkt-stat"><div class="eyebrow">This week</div><div class="big">' + recent.length + '</div><p class="small muted">market & business stories</p>' +
+      (top.length ? '<div class="tags">' + top.map(function (c) { return '<button type="button" class="tag topic co" data-company="' + esc(c) + '">' + esc(c) + " · " + comp[c] + "</button>"; }).join("") + "</div>" : "") + "</div>";
+    h += '<div class="card pad mkt-outlook"><div class="eyebrow">What\'s expected next</div>' + (outlook.length ? "<ul>" + outlook.map(function (n) {
+      return "<li>" + ext(n.url, n.title) + ' <span class="muted small">' + esc(n.source) + " · " + esc(timeAgo(n.published)) + "</span></li>";
+    }).join("") + "</ul>" : '<p class="small muted">No forecast or outlook stories right now.</p>') + "</div>";
+    if (movers.length) h += '<div class="card pad mkt-movers"><div class="eyebrow">Today\'s share movers</div><table class="market"><tbody>' + movers.map(function (x) {
+      return "<tr><td><b>" + esc(x.name) + '</b></td><td class="num ' + (x.change_pct >= 0 ? "up" : "down") + '">' + (x.change_pct >= 0 ? "+" : "") + x.change_pct.toFixed(2) + "%</td></tr>";
+    }).join("") + "</tbody></table></div>";
+    return h + "</div>";
+  }
+  function newsBlock(hub, cat, searchId, withSections) {
     var items = D.news.filter(function (n) { return n.hub === hub && inCat(n, cat); });
+    var pre = "";
+    if (withSections) {
+      pre = sectionChips(items);
+      if (state.newsSection !== "all") items = items.filter(function (n) { return sectionOf(n) === state.newsSection; });
+      if (state.newsSection === "market" && items.length) pre += marketSummary(items);
+    }
     var companies = {};
     items.forEach(function (n) { (n.companies || []).forEach(function (c) { companies[c] = (companies[c] || 0) + 1; }); });
     if (state.newsCompany && !companies[state.newsCompany]) state.newsCompany = "";
     var shown = items.filter(function (n) { return (!state.newsCompany || (n.companies || []).indexOf(state.newsCompany) !== -1) && matches(n, state.newsQuery); });
-    var h = '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search headlines, companies, sources…" value="' + esc(state.newsQuery) + '" aria-label="Search news">';
+    var h = pre + '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search headlines, companies, sources…" value="' + esc(state.newsQuery) + '" aria-label="Search news">';
     var cnames = Object.keys(companies).sort(function (a, b) { return companies[b] - companies[a]; });
     if (cnames.length) {
       h += '<select id="company-filter" aria-label="Filter by company"><option value="">All companies</option>' +
@@ -292,18 +327,24 @@
     }
     h += "</div>";
     if (!D.news.length) return h + noData();
-    return h + (shown.length ? '<div class="grid-news">' + shown.slice(0, 150).map(newsCard).join("") + "</div>" : empty("No stories in this category right now. Try <b>All</b> or another topic."));
+    return h + (shown.length ? '<div class="grid-news">' + shown.slice(0, 150).map(newsCard).join("") + "</div>" : empty("No stories here right now. Try <b>All</b> or another topic."));
   }
   function bindNews(rerender, searchId) {
     bindSearch(searchId, "newsQuery", rerender);
     var sel = document.getElementById("company-filter");
     if (sel) sel.addEventListener("change", function () { state.newsCompany = sel.value; rerender(); });
+    Array.prototype.forEach.call(app.querySelectorAll("[data-newssec]"), function (b) {
+      b.addEventListener("click", function () { state.newsSection = b.getAttribute("data-newssec"); state.newsCompany = ""; rerender(); });
+    });
+    Array.prototype.forEach.call(app.querySelectorAll("[data-company]"), function (b) {
+      b.addEventListener("click", function () { state.newsCompany = b.getAttribute("data-company"); rerender(); });
+    });
   }
   function pageNews() {
     function render(keepFocus) {
       app.innerHTML = head("News" + catSuffix(), state.cat === "all" ? "Industry & research news" : topicName(state.cat),
         "What memory, storage, device and VLSI companies are doing" + (D.meta.llm && D.meta.llm.enabled ? ", with a short AI summary on every story" : "") + ". The original source is always one click away.", "", pageArt("industry")) +
-        newsBlock("device", state.cat, "news-search");
+        newsBlock("device", state.cat, "news-search", true);
       bindNews(render, "news-search");
       if (keepFocus) refocus("news-search");
     }
@@ -322,7 +363,7 @@
       return (state.paperSource === "all" || (state.paperSource === "arxiv" ? p.source === "arXiv" : p.source !== "arXiv")) &&
         (!state.paperWeek || p.week === state.paperWeek) && matches(p, state.paperQuery);
     });
-    var h = '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search titles, abstracts, authors, materials (HZO, IGZO, MoS2…)" value="' + esc(state.paperQuery) + '" aria-label="Search papers">' +
+    var h = pre + '<div class="controls"><input type="search" id="' + searchId + '" placeholder="Search titles, abstracts, authors, materials (HZO, IGZO, MoS2…)" value="' + esc(state.paperQuery) + '" aria-label="Search papers">' +
       '<select id="paper-week" aria-label="Week"><option value="">All weeks</option>' + weeks.map(function (w) {
         return '<option value="' + esc(w) + '"' + (state.paperWeek === w ? " selected" : "") + ">" + esc(labels[w] || w) + "</option>";
       }).join("") + "</select>" +
@@ -739,6 +780,8 @@
   function currentRoute() {
     var hash = location.hash.replace(/^#\/?/, "") || "home";
     var qm = hash.match(/[?&]cat=([\w-]+)/);
+    var sm = hash.match(/[?&]sec=(tech|market|general|all)/);
+    if (sm) state.newsSection = sm[1];
     var parts = hash.split("?")[0].split("/");
     return { name: parts[0] || "home", arg: parts[1], cat: qm && qm[1] };
   }
