@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T13:17:46Z",
+ "updated": "2026-11-10T13:32:49Z",
  "items": [
   {
    "id": "022445124a23",
@@ -150,6 +150,25 @@
    "topics": [],
    "companies": [],
    "first_seen": "2026-11-10T13:00:55Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "8f83d92bab32",
+   "title": "Seur integrates generative AI into Seur Pro to speed up the management of shipments for companies",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNNTBwM1N3NEFacW9sYk9TZXM2clpVb2VqYUlmSDFlODhMNnVhcnh1bzZoQmFaWUo2cDRJZjJzZFkwSHdhWldxTXJkTGZOOGZhbnlfc0xEbU02ZGo5aVdHUTBnS0NidXFnTHhzVnBjWXVSRWMwRkFiNS15cTZQeElqX19oTjdqWFUxWVNOb0RGRnZ4MjlJeXNHbGE1MXhXbmJ0dk42RkU3ZS1CVUhaNmpESGhJV0V1aEJzbE42U2Z3XzliamM5NU11WlpfenpFX3fSAdQBQVVfeXFMUDZuOGxaSGpVbFFNb1RTY0NkMjRPb3I3YzZIazhCRWxYTUdDdTRTQVBfZGx0LWg1dXB4bXhKZWlTcmZKU0hqY1I4ZjhQV2tqWTg5ZHVzX3F6UTRJdHl4N2ZnUjhrakd2d19CVGRPX2Fndk0wdHF5aTNSUmlPUFktRWhXNWYyOEktNjA0enpMaHZfMV9yYmNfNEdvTjd5S1V0M1BHSGViSmN3ZndNWm1YUEszYmNRTldKeTc0bXRXc2JJNXpfZ1g0NUNNMkhmVS1xdHZOMWk?oc=5",
+   "source": "Demócrata",
+   "source_url": "https://www.democrata.es",
+   "published": "2026-11-10T11:48:34Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-10T13:32:49Z",
    "section": "market",
    "region": "international"
   },
@@ -796,6 +815,23 @@
    "region": "international"
   },
   {
+   "id": "2dfb338fd26d",
+   "title": "Which Passing Chips Need More Testing?",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE42Sk5YWUNfczAweWpGeGptU3FNR2hnUlhKdnA5dGZnSjJuNE12LVZiZVcxbmdVbmJ3alNVTElOVndXRmx0WVZwOE4tdmxiR0NNS0ZpWmlXNmNSYlYtTU9RQTNOb1QwNVVIZGVNUHNUYXRkVkJN?oc=5",
+   "source": "Semiconductor Engineering",
+   "source_url": "https://semiengineering.com",
+   "published": "2026-11-10T08:32:47Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-10T13:32:49Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
    "id": "9fdc8c7fe725",
    "title": "Samsung Cut a Chip Thermal Simulation From 18 Hours to 41 Seconds",
    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdm1iN2FJdXpvcUg4M09xbnhVUkJwcEwyRkRoVjQxUlNmblU3clNvWVh3a0hIbXlLTG5JLUdXMWh3RjN4NXFzVnhmMjh1MDAwcndIaDBRUDZoRUtWSDZBRWxGNW1aYXg3ODlVWEl6Z2o4YnJqMVhMOUZWMjBBbThWNUVPdmZfQTM5a1FGNk9CZG1SUElVcnc3NXB6ck5lekR4ZklkZEJYN0c?oc=5",
@@ -830,6 +866,23 @@
    ],
    "companies": [],
    "first_seen": "2026-11-10T10:16:55Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "84fec5b6ddcd",
+   "title": "Kospi posts biggest gain in two weeks as chips rebound, oil falls",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5yMl93UFJlTmt4TmV5NTNpcUdFZ3pYMHJ5czJ5TExEdHFBTUVGV0RaVHQxM2RjWUEzMnlhbVU0VEhhUDgxS3YzYk1KRHJDeUNxYS1ZLTFjWjlSMjdISVNVOGh1T1J2bVFSbFBidS1wMkxiTEc3MWJ4cmhR?oc=5",
+   "source": "KED Global",
+   "source_url": "https://www.kedglobal.com",
+   "published": "2026-11-10T08:18:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-10T13:32:49Z",
    "section": "market",
    "region": "international"
   },
@@ -980,6 +1033,25 @@
    "companies": [],
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "886a92980860",
+   "title": "Rising Demand for Reworked Memory in Smartphones Amid DRAM Price Increases",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRkRBYi1wck1ySkMwLVlnQWpGUnQ5Ymxvb2g1d1RSal9nSndraWI2RVVYcnBqSmlEYVdUV1RKbDZfcHZ1OEh2Ri1tV09JNUJya3pkd0xSM1Q3d2Iwa1dzZnhIU2NLUzVMSUJFenk4M0hOM1YyNm82UXRVVHRYbFNUWG1jS1FnRkVSLXhzb21QVThwWWJiZW5XWHhPa202QVM0TjRORmZLdVc0OGY2OGhLVzZQNA?oc=5",
+   "source": "GuruFocus",
+   "source_url": "https://www.gurufocus.com",
+   "published": "2026-11-10T08:02:58Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-10T13:32:49Z",
+   "section": "market",
    "region": "international"
   },
   {
@@ -1591,6 +1663,25 @@
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "general",
    "region": "international"
+  },
+  {
+   "id": "369472e659fc",
+   "title": "Jensen Huang Controversy Puts Nvidia In Focus; What It Means For India's AI Ecosystem",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPUlVkVUFrTU9JU1h1NEYyNEF1d0J4Z3ZBeDlZRHFSckRyaUF0TWlCVlQtSkVaVjNGeEFRdVBUUU9hcVY3UWZWaVotaHB3ZjMxbUZNTndXWUVMZkp1bUZ5ejRwbVA2R0xhLVByRGR3UTk5M2NlVlkyTHc4SVlmd1NDRXdENEhpTjhBVGdrMnlnc1pOeGdrTGswWnd4LVg5NWJ6ZFZBeVByblo0WWRNa1ZHLWxMVDI5YU55Tnc0dzZTQ1Y0eG9FV0E2aFNrNzhJcS1oZHfSAdcBQVVfeXFMTTFLclZVMFJfOVhlTUhPSGlPS0VuREFBcGZEQ2JVR21yVGNxN1dRNVlPTjZsbk9tbnQ5TXRYSzhILWJVYWd6U29RSGQzbTBPUzBtRTB4X041eXNiVDJacWtFOVhqTE1yRl9RcTh4UVpqVU1hdkZjQm1FdVR6TzF4cUlkZ29tUElRMm5OSDVUaW9fT3g3ZDJsaUQxOElsNTZvUzBYNXZsaU1fdEhkdFRrRmtKSzZJMGRGZURqbWtjcC1YdVBxa2NlYnZEQ3hGY1k2eG5kNjBncXc?oc=5",
+   "source": "Times Now",
+   "source_url": "https://www.timesnownews.com",
+   "published": "2026-11-10T05:21:11Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-10T13:32:49Z",
+   "section": "general",
+   "region": "india"
   },
   {
    "id": "779a2c5c26ac",
@@ -5951,6 +6042,25 @@
    ],
    "first_seen": "2026-11-10T13:00:55Z",
    "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "52e9d7c01ff3",
+   "title": "Who is Jensen Huang? Nvidia CEO's education journey from Oregon State University to Stanford amid suspected Chinese spy controversy",
+   "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPU3BKcHBfUWZncFVCNzVnRmR2S1NoVHl3UDV3ZDA1b25FZFREVFRBSVFNSk1kUGRxQ3lRS21fUkdTb2F4Tmw0OWFkdFBMc2h0eEUwM0lvY0J6c2ZtUUpzZXktRVlNSEd4ZmVTTVRGUURJaFY2b3BYbWlpM0xxdWN6X29rRkNEWmxoOHJQOWkxQnlrcm9OcnIycWRIRzJZaXZ0MWRuSVVlVzUwZXB2SWRlVlpZeFU5MzA1cHAxRGpuT1NkdGlLajVMWTZndDFSUWg1NUprbXdrZENyMFZwS01qak5oUm5PWXhNZ1lHV0Z1eElxWXNuRkpYNnREZUcwWUJBVFVkcFFlNWwzaWk1eHloUGprNmZlVWI1QUpv?oc=5",
+   "source": "Education Times",
+   "source_url": "https://www.educationtimes.com",
+   "published": "2026-11-09T04:37:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-10T13:32:49Z",
+   "section": "market",
    "region": "international"
   },
   {
