@@ -1,0 +1,65 @@
+# Free video courses for the Learn page, in two groups: devices and circuits.
+# Every link was checked to open the course page. NPTEL courses are free to watch
+# (the certificate exam is the only paid part).
+#   group:    devices | circuits
+#   subject:  the shelf the course sits on (see `subjects` below for the order)
+#   level:    Beginner | Intermediate | Advanced (a guide, not a rule)
+#   provider: NPTEL | MIT OpenCourseWare | nanoHUB (Purdue)
+#   topics:   Device Hub topic ids, so the topic bar can narrow the list
+
+subjects:
+  devices:
+    - Semiconductor device physics
+    - Semiconductor device modeling
+    - Power devices
+    - Nanoelectronics & fabrication
+  circuits:
+    - Analog circuits
+    - Analog IC design
+    - Digital circuits
+    - Digital VLSI design
+
+courses:
+  # ---------------------------------------------------------------- devices
+  - {title: "Semiconductor Devices", by: "Dr. G.S. Visweswaran", institute: "IIT Delhi", provider: NPTEL, group: devices, subject: "Semiconductor device physics", level: Beginner, url: "https://nptel.ac.in/courses/117102061", topics: [logic-devices]}
+  - {title: "Fundamentals of Semiconductor Devices", by: "Prof. Digbijoy N. Nath", institute: "IISc Bangalore", provider: NPTEL, group: devices, subject: "Semiconductor device physics", level: Beginner, url: "https://nptel.ac.in/courses/108108122", topics: [logic-devices, materials]}
+  - {title: "Introduction to Semiconductor Devices", by: "Prof. Naresh Kumar Emani", institute: "IIT Hyderabad", provider: NPTEL, group: devices, subject: "Semiconductor device physics", level: Beginner, url: "https://nptel.ac.in/courses/108106181", topics: [logic-devices]}
+  - {title: "Solid State Devices", by: "Prof. S. Karmalkar", institute: "IIT Madras", provider: NPTEL, group: devices, subject: "Semiconductor device physics", level: Intermediate, url: "https://nptel.ac.in/courses/117106091", topics: [logic-devices, materials]}
+  - {title: "Principles of Semiconductor Devices (ECE 606)", by: "Prof. Muhammad A. Alam", institute: "Purdue University", provider: "nanoHUB (Purdue)", group: devices, subject: "Semiconductor device physics", level: Intermediate, url: "https://nanohub.org/resources/5749", topics: [logic-devices, reliability]}
+
+  - {title: "Semiconductor Device Modeling", by: "Prof. S. Karmalkar", institute: "IIT Madras", provider: NPTEL, group: devices, subject: "Semiconductor device modeling", level: Advanced, url: "https://nptel.ac.in/courses/117106033", topics: [modeling, logic-devices]}
+  - {title: "Semiconductor Device Modeling and Simulation", by: "Prof. Vivek Dixit", institute: "IIT Kharagpur", provider: NPTEL, group: devices, subject: "Semiconductor device modeling", level: Advanced, url: "https://nptel.ac.in/courses/108105188", topics: [modeling]}
+
+  - {title: "Power Electronics with Wide Band Gap Devices", by: "Prof. Moumita Das", institute: "IIT Mandi", provider: NPTEL, group: devices, subject: "Power devices", level: Advanced, url: "https://nptel.ac.in/courses/108106480", topics: [power-devices]}
+  - {title: "Power Electronics", by: "Prof. B.G. Fernandes, Prof. Kishore Chatterjee", institute: "IIT Bombay", provider: NPTEL, group: devices, subject: "Power devices", level: Intermediate, url: "https://nptel.ac.in/courses/108101038", topics: [power-devices]}
+  - {title: "Power Electronics", by: "Prof. G. Bhuvaneshwari", institute: "IIT Delhi", provider: NPTEL, group: devices, subject: "Power devices", level: Intermediate, url: "https://nptel.ac.in/courses/108102145", topics: [power-devices]}
+
+  - {title: "Nanoelectronics: Devices and Materials", by: "Dr. Navakanta Bhat, Dr. S.A. Shivashankar, Prof. K.N. Bhat", institute: "IISc Bangalore", provider: NPTEL, group: devices, subject: "Nanoelectronics & fabrication", level: Advanced, url: "https://nptel.ac.in/courses/117108047", topics: [logic-devices, materials, dielectrics]}
+  - {title: "Fundamentals of Nanoelectronics, Part A", by: "Prof. Supriyo Datta", institute: "Purdue University", provider: "nanoHUB (Purdue)", group: devices, subject: "Nanoelectronics & fabrication", level: Advanced, url: "https://nanohub.org/courses/FoN1", topics: [modeling, logic-devices]}
+  - {title: "VLSI Technology", by: "Prof. Nandita Dasgupta", institute: "IIT Madras", provider: NPTEL, group: devices, subject: "Nanoelectronics & fabrication", level: Intermediate, url: "https://nptel.ac.in/courses/117106093", topics: [process]}
+  - {title: "Fabrication of Silicon VLSI Circuits using the MOS Technology", by: "Prof. A.N. Chandorkar", institute: "IIT Bombay", provider: NPTEL, group: devices, subject: "Nanoelectronics & fabrication", level: Intermediate, url: "https://nptel.ac.in/courses/108101089", topics: [process, materials]}
+  - {title: "Semiconductor Devices to Sensors", by: "Prof. Mitradip Bhattacharjee", institute: "IISER Bhopal", provider: NPTEL, group: devices, subject: "Nanoelectronics & fabrication", level: Intermediate, url: "https://nptel.ac.in/courses/108106001", topics: [logic-devices, materials]}
+
+  # ---------------------------------------------------------------- circuits
+  - {title: "Circuits and Electronics (6.002)", by: "Prof. Anant Agarwal", institute: "MIT", provider: "MIT OpenCourseWare", group: circuits, subject: "Analog circuits", level: Beginner, url: "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/", topics: [vlsi]}
+  - {title: "Analog Electronic Circuits", by: "Prof. S.C. Dutta Roy", institute: "IIT Delhi", provider: NPTEL, group: circuits, subject: "Analog circuits", level: Beginner, url: "https://nptel.ac.in/courses/108102095", topics: [vlsi]}
+  - {title: "Analog Electronic Circuits", by: "Prof. Pradip Mandal", institute: "IIT Kharagpur", provider: NPTEL, group: circuits, subject: "Analog circuits", level: Beginner, url: "https://nptel.ac.in/courses/108105158", topics: [vlsi]}
+  - {title: "Analog Electronic Circuits", by: "Prof. Shanthi Pavan", institute: "IIT Madras", provider: NPTEL, group: circuits, subject: "Analog circuits", level: Intermediate, url: "https://nptel.ac.in/courses/108106188", topics: [vlsi]}
+  - {title: "Analog Electronic Circuit", by: "Prof. Shouribrata Chatterjee", institute: "IIT Delhi", provider: NPTEL, group: circuits, subject: "Analog circuits", level: Intermediate, url: "https://nptel.ac.in/courses/108102112", topics: [vlsi]}
+  - {title: "Analog Circuits", by: "Prof. Nagendra Krishnapura", institute: "IIT Madras", provider: NPTEL, group: circuits, subject: "Analog circuits", level: Intermediate, url: "https://nptel.ac.in/courses/108106084", topics: [vlsi]}
+
+  - {title: "Analog IC Design", by: "Dr. Nagendra Krishnapura", institute: "IIT Madras", provider: NPTEL, group: circuits, subject: "Analog IC design", level: Advanced, url: "https://nptel.ac.in/courses/117106030", topics: [vlsi]}
+  - {title: "Analog IC Design", by: "Prof. Aniruddhan S, Prof. Nagendra Krishnapura", institute: "IIT Madras", provider: NPTEL, group: circuits, subject: "Analog IC design", level: Advanced, url: "https://nptel.ac.in/courses/108106105", topics: [vlsi]}
+  - {title: "CMOS Analog VLSI Design", by: "Prof. A.N. Chandorkar", institute: "IIT Bombay", provider: NPTEL, group: circuits, subject: "Analog IC design", level: Advanced, url: "https://nptel.ac.in/courses/117101105", topics: [vlsi]}
+  - {title: "Analog VLSI Design", by: "Prof. Imon Mondal", institute: "IIT Kanpur", provider: NPTEL, group: circuits, subject: "Analog IC design", level: Advanced, url: "https://nptel.ac.in/courses/108104193", topics: [vlsi]}
+
+  - {title: "Digital Circuits", by: "Prof. Santanu Chattopadhyay", institute: "IIT Kharagpur", provider: NPTEL, group: circuits, subject: "Digital circuits", level: Beginner, url: "https://nptel.ac.in/courses/108105113", topics: [vlsi]}
+  - {title: "Digital Electronic Circuits", by: "Prof. Goutam Saha", institute: "IIT Kharagpur", provider: NPTEL, group: circuits, subject: "Digital circuits", level: Beginner, url: "https://nptel.ac.in/courses/108105132", topics: [vlsi]}
+  - {title: "Digital Circuits", by: "Prof. Anil Mahanta, Prof. Roy Paily Palanthinkal", institute: "IIT Guwahati", provider: NPTEL, group: circuits, subject: "Digital circuits", level: Beginner, url: "https://nptel.ac.in/courses/117103064", topics: [vlsi]}
+  - {title: "Digital Circuits and Systems", by: "Prof. S. Srinivasan", institute: "IIT Madras", provider: NPTEL, group: circuits, subject: "Digital circuits", level: Beginner, url: "https://nptel.ac.in/courses/117106086", topics: [vlsi]}
+  - {title: "Computation Structures (6.004)", by: "Chris Terman", institute: "MIT", provider: "MIT OpenCourseWare", group: circuits, subject: "Digital circuits", level: Intermediate, url: "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/", topics: [vlsi]}
+
+  - {title: "Digital Integrated Circuits", by: "Prof. Amitava Dasgupta", institute: "IIT Madras", provider: NPTEL, group: circuits, subject: "Digital VLSI design", level: Intermediate, url: "https://nptel.ac.in/courses/108106069", topics: [vlsi, sram]}
+  - {title: "CMOS Digital VLSI Design", by: "Prof. Sudeb Dasgupta", institute: "IIT Roorkee", provider: NPTEL, group: circuits, subject: "Digital VLSI design", level: Intermediate, url: "https://nptel.ac.in/courses/108107129", topics: [vlsi]}
+  - {title: "VLSI Circuits", by: "Prof. S. Srinivasan", institute: "IIT Madras", provider: NPTEL, group: circuits, subject: "Digital VLSI design", level: Advanced, url: "https://nptel.ac.in/courses/117106092", topics: [vlsi, sram]}
+  - {title: "VLSI Design", by: "Prof. A.N. Chandorkar", institute: "IIT Bombay", provider: NPTEL, group: circuits, subject: "Digital VLSI design", level: Advanced, url: "https://nptel.ac.in/courses/117101058", topics: [vlsi]}

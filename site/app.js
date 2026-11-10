@@ -3,7 +3,7 @@
   "use strict";
 
   var D = { meta: null, news: [], papers: [], market: null, learn: null, insights: null, venues: null };
-  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false, newsSection: "all", newsRegion: "india" };
+  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false, newsSection: "all", newsRegion: "india", libGroup: "all", libSubject: "", libProvider: "all", libLevel: "all", libQuery: "" };
   try { state.cat = localStorage.getItem("dh-cat") || "all"; } catch (e) {}
   var DEVICE_ROUTES = ["home", "news", "research", "radar", "learn", "publish", "events"];
   var app = document.getElementById("app");
@@ -639,7 +639,89 @@
       '<div class="media">' + (v.thumbnail ? '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="' + safeUrl(v.thumbnail) + '" data-topic="' + esc(t) + '" data-key="' + esc(v.id) + '">' : window.DeviceArt(t, v.id)) + '<div class="play"><span></span></div></div>' +
       '<div class="body"><div class="meta"><span class="src">' + esc(v.source) + '</span><span class="dot">' + esc(timeAgo(v.published)) + "</span></div><h3>" + esc(v.title) + "</h3></div></a>";
   }
+  // ------------------------------------------------------------------ free video course library (devices / circuits)
+  var LIB_GROUPS = [
+    ["all", "All", "Every free video course in the library"],
+    ["devices", "Devices", "Device physics, modeling, power devices, nanoelectronics"],
+    ["circuits", "Circuits", "Analog, digital and VLSI circuit design"]
+  ];
+  var LEVELS = ["Beginner", "Intermediate", "Advanced"];
+  function libMatches(c, q) {
+    if (!q) return true;
+    var hay = [c.title, c.by, c.institute, c.provider, c.subject, c.level].join(" ").toLowerCase();
+    return q.toLowerCase().split(/\s+/).every(function (w) { return hay.indexOf(w) !== -1; });
+  }
+  function libCard(c) {
+    var t = (c.topics || [])[0] || (c.group === "circuits" ? "vlsi" : "logic-devices");
+    return '<a class="card hover news-card course lib-card fade-in" href="' + safeUrl(c.url) + '" target="_blank" rel="noopener noreferrer">' + media(null, t, c.title, c.provider) +
+      '<div class="body"><div class="meta"><span class="badge oa">Free</span><span class="badge lvl lvl-' + esc(String(c.level).toLowerCase()) + '">' + esc(c.level) + "</span></div>" +
+      "<h3>" + esc(c.title) + '</h3><p class="small muted" style="margin:0">' + esc(c.by) + (c.institute ? " · <b>" + esc(c.institute) + "</b>" : "") + "</p>" +
+      '<div class="foot"><span class="tag">' + esc(c.subject) + '</span><span class="read">Watch free ↗</span></div></div></a>';
+  }
+  function libraryBlock(lib) {
+    var all = lib.courses || [], subjects = lib.subjects || {};
+    var inGroup = all.filter(function (c) { return state.libGroup === "all" || c.group === state.libGroup; });
+    var subjList = state.libGroup === "all" ? (subjects.devices || []).concat(subjects.circuits || []) : (subjects[state.libGroup] || []);
+    if (state.libSubject && subjList.indexOf(state.libSubject) === -1) state.libSubject = "";
+    var providers = [];
+    all.forEach(function (c) { if (providers.indexOf(c.provider) === -1) providers.push(c.provider); });
+    var shown = inGroup.filter(function (c) {
+      return (!state.libSubject || c.subject === state.libSubject) && (state.libProvider === "all" || c.provider === state.libProvider) &&
+        (state.libLevel === "all" || c.level === state.libLevel) && libMatches(c, state.libQuery);
+    });
+    var gc = { all: all.length, devices: 0, circuits: 0 };
+    all.forEach(function (c) { gc[c.group] = (gc[c.group] || 0) + 1; });
+    var h = '<section id="library"><div class="section-title"><h2>Free video courses</h2><span class="muted small">' + all.length + " courses · NPTEL, MIT OpenCourseWare, nanoHUB</span></div>" +
+      '<div class="region-tabs lib-tabs fade-in" role="tablist">' + LIB_GROUPS.map(function (g) {
+        return '<button type="button" class="region' + (state.libGroup === g[0] ? " active" : "") + '" data-libgroup="' + g[0] + '"><b>' + esc(g[1]) + "</b><span>" + esc(g[2]) + "</span><i>" + (gc[g[0]] || 0) + "</i></button>";
+      }).join("") + "</div>";
+    var sc = {};
+    inGroup.forEach(function (c) { sc[c.subject] = (sc[c.subject] || 0) + 1; });
+    h += '<div class="controls lib-controls"><input type="search" id="lib-search" placeholder="Search course, professor or institute (e.g. MOSFET, Karmalkar, IIT Madras)" value="' + esc(state.libQuery) + '" aria-label="Search video courses">' +
+      '<select id="lib-provider" aria-label="Provider"><option value="all">All providers</option>' + providers.map(function (p) {
+        return '<option value="' + esc(p) + '"' + (state.libProvider === p ? " selected" : "") + ">" + esc(p) + "</option>";
+      }).join("") + "</select>" +
+      '<select id="lib-level" aria-label="Level"><option value="all">All levels</option>' + LEVELS.map(function (l) {
+        return '<option value="' + l + '"' + (state.libLevel === l ? " selected" : "") + ">" + l + "</option>";
+      }).join("") + "</select></div>" +
+      '<div class="controls"><div class="chips">' + chip("All subjects", "", !state.libSubject, "libsubj", inGroup.length) +
+      subjList.map(function (s) { return chip(s, s, state.libSubject === s, "libsubj", sc[s] || 0); }).join("") + "</div></div>";
+    if (!all.length) return h + empty("The course library appears after the next update.") + "</section>";
+    if (!shown.length) return h + empty('No courses match these filters. <button type="button" class="linkish" data-libclear>Clear filters</button>') + "</section>";
+    subjList.forEach(function (s) {
+      var cs = shown.filter(function (c) { return c.subject === s; });
+      if (!cs.length) return;
+      h += '<div class="learn-group"><h3 class="learn-topic lib-subject">' + esc(s) + ' <small class="muted">' + cs.length + " course" + (cs.length === 1 ? "" : "s") + "</small></h3>" +
+        '<div class="grid-cards">' + cs.map(libCard).join("") + "</div></div>";
+    });
+    return h + "</section>";
+  }
+  function bindLibrary(rerender) {
+    bindSearch("lib-search", "libQuery", rerender);
+    function sel(id, key) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener("change", function () { state[key] = el.value; rerender(); });
+    }
+    sel("lib-provider", "libProvider"); sel("lib-level", "libLevel");
+    Array.prototype.forEach.call(app.querySelectorAll("[data-libgroup]"), function (b) {
+      b.addEventListener("click", function () { state.libGroup = b.getAttribute("data-libgroup"); state.libSubject = ""; rerender(); });
+    });
+    Array.prototype.forEach.call(app.querySelectorAll("[data-libsubj]"), function (b) {
+      b.addEventListener("click", function () { state.libSubject = b.getAttribute("data-libsubj"); rerender(); });
+    });
+    var clr = app.querySelector("[data-libclear]");
+    if (clr) clr.addEventListener("click", function () { state.libSubject = ""; state.libProvider = "all"; state.libLevel = "all"; state.libQuery = ""; rerender(); });
+  }
+
   function pageLearn() {
+    function render(keepFocus) {
+      app.innerHTML = learnHtml();
+      bindLibrary(render);
+      if (keepFocus) refocus("lib-search");
+    }
+    render();
+  }
+  function learnHtml() {
     var L = D.learn || {}, cat = state.cat;
     var all = L.items || [];
     var items = all.filter(function (i) { return inCat(i, cat); });
@@ -648,10 +730,12 @@
     var talks = items.filter(function (i) { return i.kind === "interview"; });
     var reads = items.filter(function (i) { return i.kind === "article"; });
     var h = head("Learn" + catSuffix(), cat === "all" ? "Lectures, courses & deep dives" : topicName(cat),
-      "Free lectures and professors' courses (MIT OpenCourseWare, nanoHUB, NPTEL, ETH Zürich and more), explainer videos, interviews and newsletters. Pick a topic above to see only that area.", "", pageArt("sram"));
+      "Free video courses from IIT and IISc professors on NPTEL, MIT OpenCourseWare and Purdue's nanoHUB, sorted into Devices and Circuits. Filter by subject, provider and level, or search for a professor.", "", pageArt("sram"));
 
-    // free lectures & courses, in one section per topic
-    h += '<section><div class="section-title"><h2>Free lectures & courses</h2><span class="muted small">' + courses.length + " free to open</span></div>";
+    h += libraryBlock(L.library || {});
+
+    // more free lectures & resources, in one section per topic
+    h += '<section><div class="section-title"><h2>More free lectures & resources by topic</h2><span class="muted small">' + courses.length + " free to open</span></div>";
     if (cat !== "all") {
       h += courses.length ? '<div class="grid-cards">' + courses.map(function (c) { return courseCard(c, cat); }).join("") + "</div>" : empty("No lectures listed for this topic yet. Try <b>All</b>.");
     } else {
@@ -671,7 +755,7 @@
     h += '<section style="margin-top:0"><div class="section-title"><h2>Deep-dive reads</h2></div>' + (reads.length ? '<div class="list">' + reads.slice(0, 10).map(function (r) {
       return compactCard({ id: r.id, title: r.title, url: r.url, image: r.thumbnail, topics: r.topics && r.topics.length ? r.topics : ["process"], tldr: r.description }, r.source + " · " + timeAgo(r.published));
     }).join("") + "</div>" : empty("No deep-dive articles on this topic right now.")) + "</section></div>";
-    app.innerHTML = h;
+    return h;
   }
 
   // ------------------------------------------------------------------ where to publish
@@ -848,6 +932,8 @@
     if (sm) state.newsSection = sm[1];
     var rm = hash.match(/[?&]region=(india|international)/);
     if (rm) state.newsRegion = rm[1];
+    var gm = hash.match(/[?&]group=(devices|circuits|all)/);
+    if (gm) state.libGroup = gm[1];
     var parts = hash.split("?")[0].split("/");
     return { name: parts[0] || "home", arg: parts[1], cat: qm && qm[1] };
   }

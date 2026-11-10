@@ -214,13 +214,13 @@ learn_queries:
 # Free lectures, professors' courses and tutorials, tagged by topic for the Learn page.
 # "format" is shown on the card. Links are free to open (some search pages).
 courses:
-  - {title: "Microelectronic Devices and Circuits (6.012)", by: "MIT OpenCourseWare · free lectures & notes", url: "https://ocw.mit.edu/search/?q=6.012", topics: [logic-devices, vlsi], format: "Course"}
-  - {title: "Integrated Microelectronic Devices (6.720J)", by: "MIT OpenCourseWare · Prof. Jesús del Alamo", url: "https://ocw.mit.edu/search/?q=6.720", topics: [logic-devices, modeling], format: "Course"}
-  - {title: "Analysis and Design of Digital Integrated Circuits (6.374)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/search/?q=6.374", topics: [vlsi, sram], format: "Course"}
+  - {title: "Microelectronic Devices and Circuits (6.012)", by: "MIT OpenCourseWare · free lectures & notes", url: "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/", topics: [logic-devices, vlsi], format: "Course"}
+  - {title: "Integrated Microelectronic Devices (6.720J)", by: "MIT OpenCourseWare · Prof. Jesús del Alamo", url: "https://ocw.mit.edu/courses/6-720j-integrated-microelectronic-devices-spring-2007/", topics: [logic-devices, modeling], format: "Course"}
+  - {title: "Analysis and Design of Digital Integrated Circuits (6.374)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/", topics: [vlsi, sram], format: "Course"}
   - {title: "Microelectronics Processing Technology (6.152J)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/search/?q=6.152", topics: [process, materials], format: "Course"}
   - {title: "Electronic, Optical and Magnetic Properties of Materials (3.024)", by: "MIT OpenCourseWare", url: "https://ocw.mit.edu/search/?q=3.024", topics: [materials, dielectrics], format: "Course"}
   - {title: "Fundamentals of Nanotransistors", by: "nanoHUB-U · Prof. Mark Lundstrom (Purdue)", url: "https://nanohub.org/search/?terms=Fundamentals+of+Nanotransistors", topics: [logic-devices, modeling], format: "Course"}
-  - {title: "Solid State Devices (ECE 606)", by: "nanoHUB · Prof. Muhammad Alam (Purdue)", url: "https://nanohub.org/search/?terms=ECE+606+Solid+State+Devices", topics: [logic-devices, materials], format: "Lecture series"}
+  - {title: "Solid State Devices (ECE 606)", by: "nanoHUB · Prof. Muhammad Alam (Purdue)", url: "https://nanohub.org/resources/5749", topics: [logic-devices, materials], format: "Lecture series"}
   - {title: "Reliability Physics of Nanotransistors", by: "nanoHUB · Prof. Muhammad Alam (Purdue)", url: "https://nanohub.org/search/?terms=Reliability+Physics+of+Nanotransistors", topics: [reliability, dielectrics], format: "Lecture series"}
   - {title: "Fundamentals of Nanoelectronics", by: "nanoHUB-U · Prof. Supriyo Datta (Purdue)", url: "https://nanohub.org/search/?terms=Fundamentals+of+Nanoelectronics", topics: [modeling, materials, emerging-memory], format: "Course"}
   - {title: "Simulation tools for devices (TCAD, NEGF, MOSFET)", by: "nanoHUB · free online tools", url: "https://nanohub.org/resources/tools", topics: [modeling], format: "Tools"}
