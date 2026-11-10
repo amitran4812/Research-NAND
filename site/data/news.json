@@ -1,6 +1,23 @@
 {
- "updated": "2026-11-10T12:45:14Z",
+ "updated": "2026-11-10T12:52:04Z",
  "items": [
+  {
+   "id": "419080d67128",
+   "title": "SK Hynix Jumps 7.2% as Honam Site Deadline Meets a Split Analyst Verdict",
+   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZmlYWmRTXzJHZTV3WUJOR3pHd0hPZUpFTHUzZFlGZmdJNEs1eHVSOTFjbjFEdmlZQ0dPYUFtUXJKSzVMc0ZkTGlaaGRrYXVONDBlUzR6djdPeEhlVld3WU5VQlJiZ0Z5blBJcnA0bWZHRXlTVnlLSEtaaXZFUTV4SU1xeWhqYzh3aUxPay0wdkVyMGQtTlFxb3ppM1ozT1ozakJoVGpuUHFqWDlQMDBHR2JReHNIMkFVMzlQbHdnZ1FtSGJzQUF1MHVEWmpERkZDbUp3Q3lnZVZ2OVU?oc=5",
+   "source": "ad-hoc-news.de",
+   "source_url": "https://www.ad-hoc-news.de",
+   "published": "2026-11-10T12:41:31Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-10T12:52:04Z"
+  },
   {
    "id": "fd47f3f299f3",
    "title": "Upgrade your PS5's storage for GTA 6's digital pre-load with these SSD storage options from $174",
@@ -196,6 +213,21 @@
     "Nvidia"
    ],
    "first_seen": "2026-11-10T12:38:25Z"
+  },
+  {
+   "id": "ba21334c0358",
+   "title": "Streaming Scan Network Test Over PCIe",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ZV2lvVWFSeXFCVElYZjFPN1VzRExuOWdUTDROWW13NmpFUmJXV3hGejFjMkdON3FWcEpLN0hUZmlZMTNoTTVJQUVCN3ZOa0RvSnV0RDRQRk5UUG1EVFNuUU5Ed1JwVF9TLVpBbWhqUGpqOXl1?oc=5",
+   "source": "Semiconductor Engineering",
+   "source_url": "https://semiengineering.com",
+   "published": "2026-11-10T10:53:26Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-10T12:52:04Z"
   },
   {
    "id": "926b9446468e",
@@ -1038,23 +1070,6 @@
    ],
    "companies": [
     "AMD"
-   ],
-   "first_seen": "2026-11-10T10:16:55Z"
-  },
-  {
-   "id": "702abfe75855",
-   "title": "Cadence Design Systems, Inc. (CDNS) Stock Price, News, Quote & History",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE50TmxNWkFDRzktNWoyZ21PQzNjU21TY0pnaFJlUTAwcmhYcDVBY3JLYnVIM0dSMnQxaDB5eUZZVGJzck05YVpPMDdNSlZHckRreUE?oc=5",
-   "source": "Yahoo! Finance Canada",
-   "source_url": "https://ca.finance.yahoo.com",
-   "published": "2026-11-10T05:45:16Z",
-   "description": "",
-   "hub": "ai",
-   "origin": "google",
-   "image": null,
-   "topics": [],
-   "companies": [
-    "Cadence"
    ],
    "first_seen": "2026-11-10T10:16:55Z"
   },
@@ -1985,6 +2000,23 @@
    "image": null,
    "topics": [],
    "companies": [],
+   "first_seen": "2026-11-10T10:16:55Z"
+  },
+  {
+   "id": "702abfe75855",
+   "title": "Cadence Design Systems, Inc. (CDNS) Stock Price, News, Quote & History",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE50TmxNWkFDRzktNWoyZ21PQzNjU21TY0pnaFJlUTAwcmhYcDVBY3JLYnVIM0dSMnQxaDB5eUZZVGJzck05YVpPMDdNSlZHckRreUE?oc=5",
+   "source": "Yahoo! Finance Canada",
+   "source_url": "https://ca.finance.yahoo.com",
+   "published": "2026-11-09T22:45:21Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Cadence"
+   ],
    "first_seen": "2026-11-10T10:16:55Z"
   },
   {
@@ -3806,7 +3838,6 @@
    "origin": "feed",
    "image": "https://i0.wp.com/semiengineering.com/wp-content/uploads/2026/11/Tate_Optical-Super-Highway-For-AI-fig1.png?resize=1430%2C373&#038;ssl=1",
    "topics": [
-    "ai-general",
     "interconnects"
    ],
    "companies": [],
@@ -4608,12 +4639,14 @@
    "source_url": "https://www.koreaittimes.com",
    "published": "2026-11-08T23:43:23Z",
    "description": "",
-   "hub": "ai",
+   "hub": "device",
    "origin": "google",
    "image": null,
    "topics": [
+    "ai-general",
     "ai-hardware",
-    "ai-general"
+    "dram",
+    "packaging"
    ],
    "companies": [],
    "first_seen": "2026-11-10T10:16:55Z"
@@ -4908,8 +4941,8 @@
   {
    "id": "db927dfdca26",
    "title": "Semiconductor and AI Revolution",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA2RzJwZ2V0b0lyVFc2UnNHUmdjLTJEVmFTNllJVGQwNHM2X3pHMUhjME8zX1FzZU5UV0hrY1lSVndib2YzVkxpVU54RjhKN25NaTdyNjBaYS1IbDU5cmFIZk1PZm9XejNTVjFtbWpDemZqUXp1MFl3?oc=5",
-   "source": "pib.gov.in",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9KYUg1amI0RE5lSk1icV8wdmZsa2Z5TFFjdlpUWUlXVkxDTnJpTHBEVERNNlBzdjhtaWw2VVB5YUlhUWVpY0ppQnB3amk2RWNya1Q1b1ZFbVEydGhlSkRqc1ZyZm52QWRadkxtbDZQWDVTcWYwTU9R?oc=5",
+   "source": "www.pib.gov.in",
    "source_url": "https://www.pib.gov.in",
    "published": "2026-11-08T15:04:27Z",
    "description": "",
