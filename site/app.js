@@ -96,6 +96,11 @@
     var v = D.meta ? encodeURIComponent(D.meta.updated || "") : Date.now();
     return fetch("data/" + name + "?v=" + v).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
   }
+  // Everything is shown latest first; items without a date go last.
+  function newestFirst(items) {
+    function t(it) { var v = new Date(it.published || it.first_seen || 0).getTime(); return isNaN(v) ? 0 : v; }
+    return items.slice().sort(function (a, b) { return t(b) - t(a); });
+  }
   function init() {
     fetch("data/meta.json?v=" + Date.now()).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
       .then(function (meta) {
@@ -103,10 +108,11 @@
         return Promise.all([load("news.json"), load("papers.json"), load("market.json"), load("learn.json"), load("insights.json"), load("venues.json")]);
       })
       .then(function (r) {
-        D.news = (r[0] && r[0].items) || [];
-        D.papers = (r[1] && r[1].items) || [];
+        D.news = newestFirst((r[0] && r[0].items) || []);
+        D.papers = newestFirst((r[1] && r[1].items) || []);
         D.market = r[2];
         D.learn = r[3];
+        if (D.learn && D.learn.items) D.learn.items = newestFirst(D.learn.items);
         D.insights = r[4];
         D.venues = r[5];
         renderTicker();
@@ -161,7 +167,7 @@
       (it.topics || []).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; });
     });
     bar.hidden = false;
-    bar.innerHTML = '<div class="wrap catbar-row"><span class="catbar-label">Topics</span><div class="chips" role="tablist">' +
+    bar.innerHTML = '<div class="wrap wide catbar-row"><span class="catbar-label">Topics</span><div class="chips" role="tablist">' +
       chip("All", "all", state.cat === "all", "cat", total) +
       topics.map(function (t) { return chip(shortTopic(t.id), t.id, state.cat === t.id, "cat", counts[t.id] || 0); }).join("") + "</div></div>";
     var active = bar.querySelector(".chip.active");
@@ -234,8 +240,7 @@
     var radarIds = topicsOf("device").map(function (t) { return t.id; }).filter(function (id) { return radar[id] && (state.cat === "all" || state.cat === id); });
     var q = (D.market && D.market.quotes) || [];
     var movers = q.filter(function (x) { return x.change_pct != null; }).slice().sort(function (a, b) { return Math.abs(b.change_pct) - Math.abs(a.change_pct); }).slice(0, 7);
-    var withImg = dev.filter(function (n) { return n.image; });
-    var lead = withImg[0] || dev[0];
+    var lead = dev[0]; // newest story leads, with topic art if it has no photo
     var rest = dev.filter(function (n) { return n !== lead; });
 
     var h = head(state.cat === "all" ? "Device Hub" : "Topic", state.cat === "all" ? "What's moving in devices today" : topicName(state.cat),
@@ -695,7 +700,7 @@
       }).join("") + "</div>";
     var latest = x.news.map(function (n) { return { it: n, k: "News · " + n.source }; })
       .concat(x.papers.map(function (p) { return { it: p, k: "Paper · " + (p.domain || shortTopic((p.topics || [])[0] || "")) }; }))
-      .sort(function (a, b) { return seenAt(b.it) - seenAt(a.it) || String(b.it.published).localeCompare(String(a.it.published)); })
+      .sort(function (a, b) { return String(b.it.published || "").localeCompare(String(a.it.published || "")); })
       .slice(0, 12);
     h += latest.map(function (e) {
       return '<a class="bell-item" href="' + safeUrl(e.it.url) + '" target="_blank" rel="noopener noreferrer"><i></i><span><span class="k">' + esc(e.k) + '</span><br><span class="t">' + esc(e.it.title) + "</span></span></a>";
