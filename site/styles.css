@@ -120,7 +120,7 @@ code { font-size: .9em; background: var(--bg-alt); padding: .1em .35em; border-r
 }
 .nav a:hover { color: var(--text); text-decoration: none; }
 .nav a.active { color: var(--text); font-weight: 700; }
-.nav a.active::after { content: ""; position: absolute; left: .9rem; right: .9rem; bottom: -18px; height: 2px; background: var(--red); border-radius: 2px; }
+.nav a.active::after { content: ""; position: absolute; left: .9rem; right: .9rem; bottom: 2px; height: 2px; background: var(--red); border-radius: 2px; }
 .icon-btn {
   position: relative; border: 1px solid var(--border); background: var(--card); color: var(--text); border-radius: 10px;
   width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; flex: none; transition: border-color .15s, color .15s;
@@ -380,6 +380,55 @@ table.market td.num { text-align: right; }
 .fade-in { animation: fade .35s ease both; }
 @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
+/* ---- motion (motion.js adds .motion on <html> unless reduced motion is set) -- */
+.has-indicator .nav a.active::after { display: none; }
+.nav { position: relative; }
+.nav-indicator {
+  position: absolute; left: 0; bottom: 2px; height: 3px; width: 0; border-radius: 3px; background: #fff; pointer-events: none;
+  box-shadow: 0 0 12px rgba(255, 255, 255, .7); transition: transform .45s cubic-bezier(.65, 0, .25, 1), width .45s cubic-bezier(.65, 0, .25, 1), opacity .2s;
+}
+.header-glow { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.site-header > .header-row { position: relative; z-index: 1; }
+.header-glow::before {
+  /* faint circuit traces */
+  content: ""; position: absolute; inset: 0; opacity: .13;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='80' viewBox='0 0 240 80'%3E%3Cg fill='none' stroke='white' stroke-width='1.2'%3E%3Cpath d='M0 20h50l12 12h60l10-10h48l14 14h46'/%3E%3Cpath d='M0 58h28l10-10h70l16 16h52l10-10h54'/%3E%3C/g%3E%3Cg fill='white'%3E%3Ccircle cx='62' cy='32' r='2.4'/%3E%3Ccircle cx='180' cy='22' r='2.4'/%3E%3Ccircle cx='108' cy='48' r='2.4'/%3E%3Ccircle cx='176' cy='64' r='2.4'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 240px 80px;
+}
+.motion .header-glow::before { animation: traces 40s linear infinite; }
+.motion .header-glow::after {
+  /* a soft band of light sweeping across */
+  content: ""; position: absolute; top: -50%; bottom: -50%; width: 38%; left: -40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .16) 45%, rgba(255, 255, 255, .26) 50%, rgba(255, 255, 255, .16) 55%, transparent);
+  animation: sweep 9s ease-in-out infinite;
+}
+@keyframes traces { to { background-position: 240px 0; } }
+@keyframes sweep { 0% { transform: translateX(0); } 55%, 100% { transform: translateX(380%); } }
+
+.motion .fade-in { animation: none; }
+.motion .reveal { opacity: 0; transform: translateY(22px); }
+.motion .reveal.in { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1); }
+
+.motion .card.hover { position: relative; transform-style: preserve-3d; }
+.motion .card.hover:hover {
+  transform: perspective(900px) translateY(-5px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .12s ease-out, box-shadow .25s ease, border-color .25s ease;
+}
+.motion .card.hover::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .25s;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .22), transparent 45%);
+}
+.motion .card.hover:hover::after { opacity: 1; }
+:root[data-theme="dark"] .motion .card.hover::after, :root[data-theme="dark"].motion .card.hover::after { background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 59, 47, .13), transparent 45%); }
+.motion .card.hover:hover .media img, .motion .card.hover:hover .media .art { transform: scale(1.07); }
+
+.motion #bell.ring svg { animation: ring 1s ease 2; transform-origin: 50% 10%; }
+.motion #bell.ring .bell-badge { animation: pulse 1.6s ease-out 2; }
+.motion .bell-item i { animation: ping 1.4s ease-out 2; }
+@keyframes ring { 0%, 100% { transform: rotate(0); } 15% { transform: rotate(14deg); } 30% { transform: rotate(-12deg); } 45% { transform: rotate(8deg); } 60% { transform: rotate(-5deg); } 75% { transform: rotate(2deg); } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, .8); } 100% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); } }
+@keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(224, 4, 0, .6); } 100% { box-shadow: 0 0 0 9px rgba(224, 4, 0, 0); } }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .ticker { overflow-x: auto; }
@@ -446,3 +495,6 @@ table.market td.num { text-align: right; }
 .site-header .bell-badge { background: #fff; color: #e00400; }
 .site-header :focus-visible { outline-color: #fff; }
 .site-header .bell-panel { color: var(--text); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]).motion .card.hover::after { background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 59, 47, .13), transparent 45%); }
+}
