@@ -510,3 +510,24 @@ table.market td.num { text-align: right; }
 .mkt-outlook li { font-size: .93rem; font-weight: 600; line-height: 1.4; }
 .mkt-outlook li a { color: var(--text); }
 .mkt-movers table.market { margin-top: .4rem; }
+.region-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin-bottom: 1rem; }
+.region { position: relative; text-align: left; font: inherit; cursor: pointer; padding: .95rem 3.4rem .95rem 1.15rem; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--card); color: var(--text); box-shadow: var(--shadow); transition: border-color .2s, transform .2s, box-shadow .2s; }
+.region b { display: block; font-family: var(--serif); font-size: 1.3rem; font-weight: 700; }
+.region span { display: block; font-size: .84rem; color: var(--muted); }
+.region i { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); font-style: normal; font-weight: 700; font-size: .85rem; min-width: 2.2rem; text-align: center;
+  padding: .25rem .5rem; border-radius: 99px; background: var(--red-soft); color: var(--red); }
+.region:hover { border-color: var(--red-line); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+.region.active { background: linear-gradient(135deg, var(--red), var(--red-strong)); border-color: transparent; color: #fff; }
+.region.active span { color: rgba(255, 255, 255, .85); }
+.region.active i { background: rgba(255, 255, 255, .2); color: #fff; }
+@media (max-width: 520px) { .region b { font-size: 1.1rem; } .region span { display: none; } }
+
+/* ---- learn by topic ----------------------------------------------------- */
+.learn-group { margin-bottom: 1.8rem; }
+.learn-topic { margin: 0 0 .8rem; }
+.learn-topic button { font: inherit; font-family: var(--serif); font-size: 1.25rem; font-weight: 700; color: var(--text); background: none; border: 0; padding: 0; cursor: pointer;
+  display: inline-flex; align-items: center; gap: .4rem; border-bottom: 3px solid var(--red); padding-bottom: .2rem; }
+.learn-topic button span { color: var(--red); transition: transform .2s; }
+.learn-topic button:hover span { transform: translateX(4px); }
+.course .media { aspect-ratio: 16 / 7; }

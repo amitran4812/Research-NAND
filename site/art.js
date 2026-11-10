@@ -36,6 +36,19 @@
       }
       return s;
     },
+    // HBF: a stack of flash dies joined by through-silicon vias, with a wide bus out to the logic die
+    hbf: function (r) {
+      var s = "", hot = Math.floor(r() * 6);
+      for (var d = 0; d < 6; d++) {
+        var y = 40 + d * 24;
+        s += '<rect ' + (d === hot ? A : F) + ' x="70" y="' + y + '" width="200" height="16" rx="3"/>';
+        for (var w = 0; w < 4; w++) s += '<path ' + L + ' d="M80 ' + (y + 4 + w * 3) + 'h180" opacity=".35"/>';
+      }
+      for (var v = 0; v < 5; v++) s += '<path ' + L + ' d="M' + (95 + v * 38) + ' 36v150" stroke-dasharray="3 4"/>';
+      s += '<rect ' + L + ' x="55" y="186" width="230" height="16" rx="3"/>';
+      for (var b = 0; b < 6; b++) s += '<path ' + L + ' d="M285 ' + (60 + b * 22) + 'h60"/><path ' + A + ' d="M345 ' + (57 + b * 22) + 'l8 3-8 3z"/>';
+      return s;
+    },
     // Emerging memory: magnetic tunnel junction / switching hysteresis
     "emerging-memory": function (r) {
       var s = '<rect ' + F + ' x="120" y="60" width="160" height="22" rx="4"/><rect ' + A + ' x="120" y="92" width="160" height="10" rx="3"/><rect ' + F + ' x="120" y="112" width="160" height="22" rx="4"/>';

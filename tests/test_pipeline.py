@@ -107,6 +107,7 @@ class PipelineTest(unittest.TestCase):
         self.assertIn("SK hynix", sk[0]["companies"])
         self.assertTrue(all(n["section"] in ("tech", "market", "general") for n in news))
         self.assertEqual(sk[0]["section"], "tech")
+        self.assertTrue(all(n["region"] in ("india", "international") for n in news))
         # Irrelevant general-tech story is filtered out.
         self.assertFalse(any("mouse" in t.lower() for t in titles))
         # Google News " - Publisher" suffix is stripped.
@@ -167,6 +168,15 @@ class SectionTest(unittest.TestCase):
         self.assertEqual(classify_section({"title": "Micron revenue jumps as DRAM prices rise; analysts raise outlook"}, cfg), "market")
         self.assertEqual(classify_section({"title": "Kioxia leveraged product debuts in Hong Kong"}, cfg), "market")
         self.assertEqual(classify_section({"title": "5 cheaper ways to play games"}, cfg), "general")
+
+    def test_region(self):
+        from devicehub.common import load_config
+        from devicehub.news import classify_region
+        cfg = load_config()
+        self.assertEqual(classify_region({"title": "Tata Electronics starts trial runs at Dholera fab", "source": "Reuters"}, cfg), "india")
+        self.assertEqual(classify_region({"title": "Micron expands HBM output", "source": "The Economic Times"}, cfg), "india")
+        self.assertEqual(classify_region({"title": "Micron expands HBM output", "source": "Reuters"}, cfg), "international")
+        self.assertEqual(classify_region({"title": "Analysts weigh Indiana plant", "source": "Reuters"}, cfg), "international")
 
 
 class TaggerTest(unittest.TestCase):

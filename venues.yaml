@@ -44,7 +44,7 @@ conferences:
     month: 2
     where: San Francisco, USA
     tier: flagship
-    topics: [vlsi, sram, dram, nand, emerging-memory]
+    topics: [vlsi, sram, dram, nand, emerging-memory, hbf]
     url: https://www.isscc.org/
     for: "First disclosure of record memory chips (HBM, LPDDR, 3D NAND die) and circuits."
   - name: IMW
@@ -54,7 +54,7 @@ conferences:
     month: 5
     where: Rotates (Asia / USA / Europe)
     tier: major
-    topics: [dram, nand, emerging-memory, reliability]
+    topics: [dram, nand, emerging-memory, reliability, hbf]
     url: https://www.ieee-imw.org/
     for: "The focused memory venue: NAND, DRAM, FeRAM, MRAM, ReRAM, PCM device and reliability work."
   - name: IRPS
@@ -234,7 +234,7 @@ conferences:
     month: 8
     where: Stanford, USA
     tier: major
-    topics: [ai-hardware, vlsi, industry]
+    topics: [ai-hardware, vlsi, industry, hbf]
     url: https://hotchips.org/
     for: "Industry talks on new processors and accelerators (presentations, not papers)."
   - name: FMS
@@ -244,7 +244,7 @@ conferences:
     month: 8
     where: Santa Clara, USA
     tier: specialist
-    topics: [nand, dram, industry]
+    topics: [nand, dram, industry, hbf]
     url: https://futurememorystorage.com/
     for: "Industry event for flash, DRAM and SSDs (talks, not papers)."
   - name: MRS Spring

@@ -6,7 +6,7 @@ import logging
 
 import feedparser
 
-from .common import clean_text, http_get, iso, make_id, norm_title, parse_iso, utcnow
+from .common import Tagger, clean_text, http_get, iso, make_id, norm_title, parse_iso, utcnow
 from .news import fetch_google_news, page_image
 
 log = logging.getLogger("devicehub.learn")
@@ -68,6 +68,10 @@ def collect(cfg: dict, previous: dict | None = None) -> dict:
     cutoff = utcnow() - dt.timedelta(days=60)
     items = [it for it in items if (parse_iso(it.get("published")) or utcnow()) >= cutoff]
     items.sort(key=lambda it: it.get("published") or "", reverse=True)
+    # topic tags so the Learn page can be split by NAND, DRAM, materials, ...
+    tagger = Tagger(cfg)
+    for it in items:
+        it["topics"] = tagger.topics_for(f"{it['title']} {it.get('description') or ''}", "device")
     return {
         "updated": iso(utcnow()),
         "items": items,
