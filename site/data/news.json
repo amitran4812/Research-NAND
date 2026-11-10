@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T12:38:25Z",
+ "updated": "2026-11-10T12:45:14Z",
  "items": [
   {
    "id": "fd47f3f299f3",
@@ -17,6 +17,25 @@
    ],
    "companies": [],
    "first_seen": "2026-11-10T12:38:25Z"
+  },
+  {
+   "id": "9a82f294e31b",
+   "title": "TSMC and OpenAI: investment buzz meets a chipmaking reality",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8yNUdQUkdyeWZCZHo5YzdCZjJWVlhQYlB1a1dPODNnQ0xnZVhKeTNDR29OVEpqTl9fNGxVYmxsaXVzODBNNFNXNXptSlZhMkNKMTN2bHJ4cmNLMlh2elgtcnp0QXk2M3A1UTh1V2ZCVU80Wl84Q3JPbw?oc=5",
+   "source": "Crypto Briefing",
+   "source_url": "https://cryptobriefing.com",
+   "published": "2026-11-10T11:56:06Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "TSMC"
+   ],
+   "first_seen": "2026-11-10T12:45:14Z"
   },
   {
    "id": "c0ac90b505ef",
@@ -691,6 +710,7 @@
    "origin": "feed",
    "image": "https://i0.wp.com/ontoinnovation.com/wp-content/uploads/2026/11/overcoming-silicon-figure-1.png?resize=570%2C241&#038;ssl=1",
    "topics": [
+    "ai-general",
     "process"
    ],
    "companies": [],
@@ -1306,6 +1326,24 @@
     "SK hynix"
    ],
    "first_seen": "2026-11-10T10:16:55Z"
+  },
+  {
+   "id": "1d12b4703060",
+   "title": "Morgan Stanley cuts target prices for Samsung Electronics to 309,000 won and SK Hynix to 1.6 million won",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE10LXBGOUhlVVRHV3htYXFVNGo1OVcydERmb3VwOUNzU2pKM3lOUjBrbF9vdmJET21NTU5OMEY0bVRqWWpLN3FZZnRXMzM4QWhQVm4tTW1zNXZqVzlwTFlmVU53?oc=5",
+   "source": "재경일보",
+   "source_url": "https://news.jkn.co.kr",
+   "published": "2026-11-10T03:40:05Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung",
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-10T12:45:14Z"
   },
   {
    "id": "50aff9495b27",
@@ -4426,9 +4464,9 @@
   {
    "id": "4f00f6817ac7",
    "title": "Beyond tech race: Science, trust and the future of China-US ties",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNM1RzYjdqQ3lJeHI4YkNQUlp3MGtDQVIzQ0d2YXpmdl96MnBJU3FDZUNJWjF5c29KMXh4VEtPTk5MZGRYYm53Ny1NQlFHamJDSG1zYXpOMUZrYzBHazNla1UxV0ZwTjNVTmwtekROYzNER0tCZTcwUUFMSEdNdm1aLQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTDFsUFk4ZEpUd3Nndk9SaXMtbGpkeVZlWWZNUUxmZHpKck41bjNqU1BCdGllaW1yZDhTS1h6ZGlnYXA0ZWE0RnJKajNQc3Y0UXlrY1Y4eUVfVExJWEFpaFJvd0lVQ0E1YTN0eFozUXlobEI4blQ1M2lINllsZF9tZHdB?oc=5",
    "source": "China Daily Global Edition",
-   "source_url": "http://global.chinadaily.com.cn",
+   "source_url": "https://global.chinadaily.com.cn",
    "published": "2026-11-09T01:21:04Z",
    "description": "",
    "hub": "ai",
