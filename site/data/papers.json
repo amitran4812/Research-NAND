@@ -1,6 +1,848 @@
 {
- "updated": "2026-11-10T19:58:02Z",
+ "updated": "2026-11-11T06:52:28Z",
  "items": [
+  {
+   "id": "doi:10.5281/zenodo.24042861",
+   "title": "A manually curated resource of PD-L1 regulatory mechanisms in cancer cells with AI-assisted biocuration benchmarking",
+   "abstract": "This repository contains a manually curated dataset of 985 experimentally supported PD-L1 (CD274) regulatory interactions from 362 primary research articles involving cancer cells. The dataset captures regulatory relationships, intermediate regulators, protein complexes, and PD-L1 molecular target forms. It also provides materials used to benchmark three AI research tools (Claude, ChatGPT, and Elicit), including study retrieval results, prompts, expert feedback, edge extraction outputs, and evaluation results.",
+   "authors": [
+    "Jimin Hwang"
+   ],
+   "url": "https://doi.org/10.5281/zenodo.24042861",
+   "pdf": null,
+   "doi": "10.5281/zenodo.24042861",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "published": "2026-11-11T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "arxiv:2611.14519",
+   "arxiv_id": "2611.14519",
+   "title": "Medical Image Segmentation: Foundation Model Adaptation versus Task-Specific Training",
+   "abstract": "Foundation models pretrained on large natural-image collections are increasingly adapted for medical image segmentation, in the expectation that they will replace models trained for each task. Most comparisons, however, use data from the training distribution and a single task-specific baseline whose configuration is rarely justified, and therefore provide limited evidence of performance at new clinical sites. It also remains unclear how much of a foundation model must be adapted, and what determines this. We adapted a foundation model, DINOv2, with strategies ranging from tuning only its bias terms to full fine-tuning, and compared it with U-Nets and ResU-Nets trained from scratch. Experiments covered colonoscopy, breast ultrasound and dermoscopy, with testing on held-out data from the training source and on independent datasets from other institutions. The adapted foundation model generalised better on every external dataset. Within the training distribution, the task-specific models remained competitive when training data were abundant, and delineated boundaries more precisely, while the foundation model more often missed small lesions. Only a small fraction of the foundation model required adaptation, and the capacity needed was determined by the imaging domain rather than by the adaptation method. A widely used polyp test set was also found to duplicate images from another benchmark. Foundation-model adaptation is therefore warranted where models must work across sites, with capacity selected on the target domain.",
+   "authors": [
+    "Emre Kutlusan",
+    "Yongmin Li"
+   ],
+   "url": "https://arxiv.org/abs/2611.14519",
+   "pdf": "https://arxiv.org/pdf/2611.14519v1",
+   "doi": null,
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "published": "2026-11-10T18:59:54Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.14519/2611.14519v1/figs/fig_design.png"
+  },
+  {
+   "id": "arxiv:2611.14518",
+   "arxiv_id": "2611.14518",
+   "title": "Toward Foundation Detection Models via Example-Based Grounding in EM-DETR",
+   "abstract": "DeepLearning (DL)-based Computer-Aided Diagnostic (CAD) systems have shown great promise in supporting clinicians, but their performance heavily depends on the availability of large, well-annotated datasets. In medical lesion detection, the scarcity of comprehensive, stan dardized annotations and the heterogeneity of existing datasets limit the development of robust foundation models. In this work, we introduce a novel approach to building a multi-domain foundation model for le sion detection by integrating diverse medical image datasets annotated for both anatomical structures and abnormalities. We first propose a student-teacher training strategy to effectively combine datasets with heterogeneous label spaces, mitigating catastrophic forgetting, and im proving feature learning. In addition, building on our previously pro posed example-based EM-DETR framework, we adapt it to jointly learn from multiple domain-specific datasets, enabling fine-grained, example driven detection across modalities. Our model achieves state-of-the-art (SOTA) results, with image-level AUC scores exceeding previous SOTA by 1% point on four key findings in CXRs. We achieve a leading mAP50 in CXRs and mammography, surpassing EM-DETR trained on a single dataset by 2-3% points. This approach paves the way for scalable foundation models in medical imaging that leverage heterogeneous data while maintaining robust and generalizable performance.",
+   "authors": [
+    "Sheethal Bhat",
+    "Bogdan Georgescu",
+    "Awais Mansoor",
+    "Florin C. Ghesu",
+    "Sasa Grbic",
+    "Andreas Maier"
+   ],
+   "url": "https://arxiv.org/abs/2611.14518",
+   "pdf": "https://arxiv.org/pdf/2611.14518v1",
+   "doi": null,
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "published": "2026-11-10T18:59:17Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.14518/2611.14518v1/images/foundation_model.png"
+  },
+  {
+   "id": "arxiv:2611.14504",
+   "arxiv_id": "2611.14504",
+   "title": "Emergent Biological Capabilities in a Foundation Model for Molecular Interactions",
+   "abstract": "Foundation models trained on large unlabeled corpora develop emergent capabilities, tasks that go beyond the training objective. We extend this paradigm to multimodal biology with Bonbon, a foundation model for molecular interactions trained on approximately 3.2 trillion tokens of paired protein-ligand sequences. From a single representation space, Bonbon exhibits three zero-shot emergent capabilities at hierarchical levels of resolution: functional (mechanism of action), residue (binding site localization, including orthosteric/allosteric discrimination), and bond (covalent versus non-covalent engagement). All three capabilities generalize to out-of-distribution complexes. Bonbon was trained on protein-ligand sequences alone, without any task-specific supervision and without structural coordinates. We conducted controlled scaling experiments across six model scales from 42M to 1.6B parameters; every capability evaluated shows a sharp jump at the largest scale on continuous metrics, even as pretraining loss decreases smoothly. This demonstrates that loss-based scaling laws alone are insufficient to predict when zero-shot emergent capabilities become available. The capabilities reported here emerge after training at a 1:2,000 parameter-to-token ratio to accommodate the sparsity of paired biological interaction data. The same frozen representations achieve state-of-the-art binding and affinity prediction at five orders of magnitude greater speed than co-folding methods. In prospective wet-lab validation across nine disease targets spanning seven protein families, Bonbon achieves a 61.5% dose-response hit rate on de novo compounds, yielding structurally novel molecules not previously reported to inhibit these proteins, including for out-of-distribution targets.",
+   "authors": [
+    "Adi Mashiach"
+   ],
+   "url": "https://arxiv.org/abs/2611.14504",
+   "pdf": "https://arxiv.org/pdf/2611.14504v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-11-10T18:53:01Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.14504/2611.14504v1/figures/figure-1.png"
+  },
+  {
+   "id": "arxiv:2611.14492",
+   "arxiv_id": "2611.14492",
+   "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+   "abstract": "Business process automation runs the same Standard Operating Procedure (SOP) again and again on new inputs. Large Language Model (LLM) agents can follow an SOP written in natural language, but they call an LLM to choose every step of every run, which adds latency and cost at scale. We present ReTrace, which turns an SOP and a few logged agent runs into a reusable workflow in which code, not an LLM, selects the next step. The agent's reasoning, the explanation it writes with each tool call, often states why it took an action; the tool calls alone do not. ReTrace extracts the condition behind each step, merges these conditions across runs into a compact rule document, and generates an executable workflow from it. Only this last stage depends on the platform, so rule documents can be compiled for different orchestration platforms. On $79$ procedures from our production platform, ReTrace workflows reach $93.8\\%$ completion, against $96.8\\%$ for the agent, at $24\\%$ lower cost per task. On $τ^2$-Bench, they reach $75.8\\%$ task success (agent: $80.6\\%$) and run in $1.3$s instead of $170$s; three rounds of repair on training failures lift $k{=}2$ workflows from $66.7\\%$ to $81.2\\%$. On eight SOP-Bench procedures, ReTrace without repair trails few-shot generation ($80.6\\%$ vs. $83.6\\%$), but repair from labeled training failures lifts it to $87.8\\%$ at $0.40$s per task, compared to $85.5\\%$ in $46.6$s for the agent.",
+   "authors": [
+    "Kaiyuan Hou",
+    "Yang Ping Kuo",
+    "Indranil Bhattacharya",
+    "Rohith Nama",
+    "Arushi Gupta",
+    "Carlos D. Castillo",
+    "Prathap Ramachandra",
+    "Xiaofan Jiang"
+   ],
+   "url": "https://arxiv.org/abs/2611.14492",
+   "pdf": "https://arxiv.org/pdf/2611.14492v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T18:49:47Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.14491",
+   "arxiv_id": "2611.14491",
+   "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
+   "abstract": "Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter size, lacking the ability to adaptively model complex time series patterns from multi-domain data. 2) Current TSFMs are primarily pre-trained for specific tasks, e.g., forecasting or anomaly detection, and a few models support multiple tasks, but they fail to fully leverage task specificity and commonality, resulting in suboptimal performance. To address these challenges, we propose TimeSeek, a novel generalized time series analytics model that adaptively models time series patterns from multi-domain data and unifies multiple tasks in pre-training. Conceptually, TimeSeek is guided by selective information sharing under domain and task heterogeneity. From the perspective of multi-domain data, we propose a Multi-Domain Feature Extractor that adaptively captures temporal dependencies and channel correlations based on domain-specific characteristics, including progressive multi-scale modeling and adaptive slot channel modeling. From the perspective of the diversity of tasks, we propose multi-task collaborative training, which leverages task specificity and task commonality through task customization and cross-task training, effectively unifying multiple tasks in pre-training and better adapting to diverse downstream scenarios. After pre-training on large-scale time series data, TimeSeek achieves state-of-the-art performance in forecasting, anomaly detection, and classification tasks across both few-shot learning and zero-shot situations, together with favorable inference efficiency.",
+   "authors": [
+    "Peng Chen",
+    "Yihang Wang",
+    "Zhongwen Rao",
+    "Yang Shu",
+    "Yuying Qiu",
+    "Yuxuan Chen",
+    "Lujia Pan",
+    "Bin Yang"
+   ],
+   "url": "https://arxiv.org/abs/2611.14491",
+   "pdf": "https://arxiv.org/pdf/2611.14491v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-11-10T18:49:26Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.14491/2611.14491v1/Intro.png"
+  },
+  {
+   "id": "arxiv:2611.14462",
+   "arxiv_id": "2611.14462",
+   "title": "Accurate predictions of properties of energetic materials with tabular foundation models",
+   "abstract": "We use TabPFN, a recently developed tabular foundation model, to predict three properties of energetic materials: impact sensitivity, decomposition temperature and crystal density. Without any hyperparameter tuning, TabPFN outperforms the best published models for all three properties. It also substantially outperforms a wide range of established machine-learning models, including tuned gradient boosting (XGBoost), random forests and Gaussian processes. This holds both when the models are given hand-crafted molecular descriptors and when they are given learned representations from Chemprop's message-passing neural network. In particular, for all three properties, TabPFN applied to Chemprop's own embedding is more accurate than Chemprop's predictions. TabPFN is also among the fastest models we consider, more than an order of magnitude faster than XGBoost. As TabPFN predicts the entire distribution of the target rather than just a single value, it offers built-in uncertainty quantification, which we compare with the empirical distributions of compounds with repeated measurements. Finally, we interpret the predictions using Shapley values, which rank the features by their importance.",
+   "authors": [
+    "Vagn Krister Nes Glomsrud",
+    "Mathias Bynke",
+    "Lars Henry Berge Olsen",
+    "Dennis Christensen"
+   ],
+   "url": "https://arxiv.org/abs/2611.14462",
+   "pdf": "https://arxiv.org/pdf/2611.14462v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-11-10T18:29:37Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.14333",
+   "arxiv_id": "2611.14333",
+   "title": "AI Isn't Getting Dumber, We're Getting Pickier: Rising Standards in Human Evaluation of Large Language Models",
+   "abstract": "Users often complain that AI assistants such as ChatGPT are getting worse. Some versions do change, but human evaluation leaves a second possibility untested: the people judging may change. We separate the two on Chatbot Arena, a public platform where people compare answers from two anonymous large language models (LLMs) and pick the better one or say both are bad. We study 1,260,967 blind votes cast from May 2023 to August 2024 on pairs of models whose versions are fixed: dated vendor snapshots and models with fixed open weights. For the same pair of unchanged models, the share of votes saying \"both are bad\" rises by 1.71 percentage points a month on a mean of 17.1%, and by 1.91 points a month in 2024. In fourteen pairs observed often in both 2023 and 2024, it rose in every one, from 15.5% to 23.3%. The ranking does not trend: in 2024, the stronger model's share of decisive votes is flat. The rise holds within the same voter and on the same pair, and across arrival cohorts from their first recorded vote. It holds with prompt controls, in every major language, for dated vendor snapshots, open-weight models and models with stable answer length, and between interface changes. The drift is shared across models: month effects estimated from other models' pairs remove it from each model's own pairs. Platform-wide, the average model would be expected to score 78% against the 2023 average, yet the share of \"both are bad\" votes ended near where it began. The pattern fits a standard that follows the category's progress, so a product that stands still is judged as declining. Absolute verdicts on AI drifted while relative comparisons held steady, an evaluation drift that matters for LLM leaderboards and for the human feedback used to train models.",
+   "authors": [
+    "Zihan Chen",
+    "Lei Nico Zheng",
+    "Di Zhu"
+   ],
+   "url": "https://arxiv.org/abs/2611.14333",
+   "pdf": "https://arxiv.org/pdf/2611.14333v1",
+   "doi": null,
+   "venue": "arXiv cs.HC",
+   "source": "arXiv",
+   "published": "2026-11-10T16:56:16Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.14285",
+   "arxiv_id": "2611.14285",
+   "title": "LM-SimBench: A Unified Framework, Dataset, and Benchmark for Large Language Model Training Simulation",
+   "abstract": "Evaluating candidate parallelization strategies through distributed training runs makes strategy selection prohibitively expensive at scale. Performance simulation offers a lower cost alternative, yet controlled comparisons among existing simulators remain difficult because they differ in the training stages they model and the workloads on which they are evaluated. We introduce LM-SimBench, a unified framework, profiling dataset, and benchmark for evaluating LLM training simulators. The framework decomposes simulation into functional stages from model compilation to schedule level aggregation, connecting execution representations and cost estimators to measurable evaluation targets. Following this framework, we profile 23 model settings from 10 dense and Mixture-of-Experts (MoE) LLM families on an Ascend Neural Processing Unit (NPU) cluster. The resulting dataset contains 348 feasible configurations that jointly vary five parallelism dimensions and activation recomputation, with six views spanning configuration, rank, operator, event, and kernel granularity. Evaluations of representative training simulators demonstrate how LM-SimBench supports comparisons of prediction accuracy, assessment of configuration selection, and diagnosis of prediction errors. Matched GPU-NPU experiments validate the cross-platform applicability of the collection and evaluation protocol and demonstrate NPU-guided GPU configuration selection.",
+   "authors": [
+    "Yu Dong",
+    "Hong Li",
+    "Qiang Sun",
+    "Xu Zhou",
+    "Jinbiao Huo",
+    "Qixiu Cheng",
+    "Zhiyuan Liu"
+   ],
+   "url": "https://arxiv.org/abs/2611.14285",
+   "pdf": "https://arxiv.org/pdf/2611.14285v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T16:26:19Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general",
+    "ai-hardware"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.14285/2611.14285v1/background.png"
+  },
+  {
+   "id": "arxiv:2611.14263",
+   "arxiv_id": "2611.14263",
+   "title": "Chain of Physics: Supporting Fault Diagnosis with Engineering-Inspired Large Language Model Reasoning",
+   "abstract": "Fault diagnosis in complex systems requires linking observed changes in physical quantities to the failure mechanisms that produce them. Experienced engineers perform this task by combining sensor information with knowledge of system behavior and fault propagation. Large Language Models (LLMs) can support this process, but their diagnostic reasoning depends on the availability of asset-specific engineering knowledge and on how this knowledge is represented and used during inference. This work introduces Chain of Physics (CoP), an LLM-based fault-diagnosis framework built around a Constrained Knowledge Graph (CKG) generated automatically from asset-specific reference documentation. CoP addresses failure-sensor association from textual engineering knowledge. The CKG stores diagnostic chains connecting failure modes, changes in physical quantities, and monitoring sensors. During inference, semantically similar graph paths are retrieved for each question and used as both information and in-context examples for the reasoning process. Candidate failure modes are extracted from the question and analysed independently through dedicated LLM calls, which generate plausible failure-to-observation chains. A final decision module compares these chains with the available answer choices. CoP is evaluated on the FailureSensorIQ benchmark across four industrial asset classes and three LLMs. Compared with direct prompting and conventional Retrieval-Augmented Generation (RAG), CoP improves diagnostic accuracy across all evaluated models, with gains ranging from 7.8 to 19.6 percentage points and from 11.7 to 18.2 percentage points, respectively. The results show that structured engineering knowledge can improve LLM-based diagnostic reasoning when graph retrieval is combined with in-context examples of fault propagation.",
+   "authors": [
+    "Wenqi Zhou",
+    "Leonardo Baldo",
+    "Kai Goebel",
+    "Manuel Arias Chao"
+   ],
+   "url": "https://arxiv.org/abs/2611.14263",
+   "pdf": "https://arxiv.org/pdf/2611.14263v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-11-10T16:09:44Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.14211",
+   "arxiv_id": "2611.14211",
+   "title": "Verifiable Agentic Traffic Class: A Policed Quality-of-Service Mechanism for Agentic AI Traffic, Evaluated from Simulation to Real-Kernel Adversarial Testing",
+   "abstract": "Software agents built on large language models generate traffic unlike human web traffic, yet routers have no class for it and cannot verify a sender's claim to be an agent. This paper proposes the Verifiable Agentic Traffic Class (VATC), which combines a reserved Differentiated Services Code Point (DSCP) value declaring agent traffic, a router-side classifier that demotes flows contradicting the declaration to a class served after best-effort traffic, and a rate-limited priority queue. VATC was compared with static Differentiated Services (DiffServ), a dedicated class that trusts the marking, and fq_codel, a per-flow fair-queuing scheduler, in two simulators and on a real Linux kernel. VATC matched DiffServ under steady load. In a constructed burst it cut mean agent queuing delay by 98% relative to DiffServ in simulation (assuming an immediate verdict), at a 12% increase in human delay; most of the gain came from the separate class. Under a spoofed flood in the kernel, the rate limit held human latency 11 times below DiffServ's. Without verification, DiffServ and a tightly configured fq_codel gave legitimate agents lower latency than VATC; a live four-feature classifier then demoted all 20 bulk-shaped spoofers and gave agents 0.30 ms, but missed six spoofers that copied the agent pattern. With emulated network delay, a timing feature of the classifier stopped separating agent from human flows. In real agent harnesses on a congested link, router queueing took 13% to 63% of task time, depending on harness and assumed model latency. The traffic was synthetic or sandbox-scale.",
+   "authors": [
+    "Naveen Babu Narayanan Nair",
+    "Sajay Kurup"
+   ],
+   "url": "https://arxiv.org/abs/2611.14211",
+   "pdf": "https://arxiv.org/pdf/2611.14211v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-11-10T15:33:22Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.14211/2611.14211v1/naveen_babu_narayanan_nair.png"
+  },
+  {
+   "id": "arxiv:2611.14209",
+   "arxiv_id": "2611.14209",
+   "title": "Breakdown of Autoregressive Multi-Step Reasoning Under Concentrated vs. Diffuse Attention Head Dropout",
+   "abstract": "During extended wakefulness, mammalian neocortical networks experience localized periods of transient neuronal silence termed off-states. Here, we examine how analogous spatiotemporally concentrated disruptions affect sequential reasoning in autoregressive Large Language Models (LLMs). Evaluating 250 paired derivations on the GSM8K benchmark across two 8B models (Qwen3-8B and LLaMA-3.1-8B-Instruct), we contrast clustered bursts of attention head masking against budget-matched diffuse i.i.d. dropout. Concentrated bursts induce substantial reasoning degradation: at onset parameter $\\mathcal{B}=0.10$ (scheduling $\\sim 5.7\\%$ of vulnerable head-token volume), Qwen3-8B accuracy drops from $91.2\\%$ under diffuse noise to $78.8\\%$ under burst dropout ($Δ= -12.4$ percentage points [pp], exact McNemar $p = 5.5 \\times 10^{-6}$), while LLaMA-3.1-8B-Instruct drops from $84.0\\%$ to $76.8\\%$ ($Δ= -7.2$ pp, $p = 0.0198$). Conversely, dispersing the identical cumulative budget uniformly across generation steps via stratified quintile matching yields substantially milder degradation (retaining $91.2\\%$ in Qwen and $84.0\\%$ in LLaMA). In an exploratory factorial dissociation ($N=100$), single-step dropout density is associated with an acute drop in a single schedule draw ($-10.0$ pp on Qwen, $p_{\\text{holm}} = 0.0425$), while multi-token continuity exhibits an inconclusive compounding trend ($-7.0$ pp, $p_{\\text{holm}} = 0.1892$). Error analysis reveals that Qwen failures reflect derivation errors within formatted responses (conditional accuracy drop of $-11.4$ pp), whereas in LLaMA $22.2\\%$ of discordant losses lack a final answer format line (conditional gap narrows to $-5.0$ pp). These findings demonstrate that autoregressive reasoning chains are particularly vulnerable to concentrated structural disruptions, providing empirical benchmarks for fault tolerance in transformer architectures.",
+   "authors": [
+    "Karol Struniawski"
+   ],
+   "url": "https://arxiv.org/abs/2611.14209",
+   "pdf": "https://arxiv.org/pdf/2611.14209v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T15:29:57Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.14136",
+   "arxiv_id": "2611.14136",
+   "title": "HaiRuo: Forecasting Ocean Eddies as Fields and Objects with a Satellite-Altimetry Foundation Model",
+   "abstract": "Mesoscale eddies carry most of the ocean's kinetic energy and move heat, salt and nutrients across basins, yet where an eddy will be two weeks ahead is still read off ocean models with post-hoc tracking heuristics. We introduce HaiRuo, which forecasts eddies as fields and as objects at once: from 30 days of satellite sea-level maps, one forward pass returns 15 days of sea level and geostrophic velocity, daily eddy masks and the trajectory of every eddy alive today. HaiRuo pairs two components with a clear division of labour: (1) HaiRuo-1B, an open-weight 1.05-billion-parameter foundation model pretrained without labels on 24 years of global satellite-altimetry observations, which supplies the 15-day physical fields and masks (+0.14 field skill and +1.1 mIoU points under the same decoder) and further lowers 15-day centre error by 1.2 km frozen (1.35 km over training from scratch); and (2) XuanJi, a Lagrangian object decoder that samples the evolving forecast in each eddy's co-moving polar frame and refines the 15-day path across three look-ahead rounds, removing 2.5 km on HaiRuo-1B (2.9 km with joint fine-tuning) and 2.5-3.3 km via its object attention across six published backbones. Under one pre-registered global evaluation over the whole ocean, HaiRuo improves on fourteen methods on every endpoint (25.2 vs. 30.6 km 15-day centre error, -18%), holding its margin outside the labelled regions and through both phases of the El Nino-Southern Oscillation (ENSO), while reproducing westward drift, 50-60 deg S eastward reversal and poleward cyclone-anticyclone deflection. Over ten days through one fixed tracker, HaiRuo's forecast field cuts the eddy-centre error of WenHai and XiHe by 37-43% (-2.8 km vs. day 0 while they degrade +4.3-8.7 km), and its object trajectories cut pipeline error by 77-78% globally. Open-weight checkpoints, code and project page: https://github.com/xkqin/HaiRuo",
+   "authors": [
+    "Xukun Qin",
+    "Haochen Sun",
+    "Yuyang Tian",
+    "Ge Chen"
+   ],
+   "url": "https://arxiv.org/abs/2611.14136",
+   "pdf": "https://arxiv.org/pdf/2611.14136v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-11-10T14:24:07Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.14136/2611.14136v1/fig1_teaser.png"
+  },
+  {
+   "id": "arxiv:2611.14083",
+   "arxiv_id": "2611.14083",
+   "title": "Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models",
+   "abstract": "We present Sable, an argument system and single-GPU prover for the statement that a committed, integer-quantized transformer produced a given token sequence from a given prompt, bit for bit. Sable fixes an integer function F_O with no floating-point step, in which every rounding, normalization, softmax and sampling decision is determined by its inputs, and proves it with a constraint system whose relations provably never wrap modulo the 31-bit KoalaBear prime. The proof batches zerochecks and LogUp-GKR lookups into one sumcheck per domain, and commits to every witness tensor and weight in one multilinear commitment built from Reed-Solomon codes, BLAKE3 Merkle trees and a mixed-length BaseFold opening. The prover streams the model layer by layer on one GPU. On one NVIDIA RTX PRO 6000 Blackwell GPU, Sable proves all 64 layers of Qwen2.5-32B in 92.5 s for 4,096 tokens and 398 s for 16,384 tokens, and covers Qwen3-32B and the mixture-of-experts Qwen3-30B-A3B (4,096 tokens in 121.8 and 84.7 s). A proof costs 41 to 50 times the serving time, or 6.4 cents per 4,096-token request at public GPU prices, and 40 to 64 times less time per parameter and token than zkLLM. On WikiText-2, F_O's greedy token matches the BF16 model's at 86.3% of positions; on Qwen3, F_O is within 1.6 points of BF16 on MMLU and 1.7 points on GSM8K. A verifier with a compiled core checks a proof on one CPU core in 19 to 56 s. In the random-oracle model, the interactive proof has round-by-round soundness error 2^-103. The proof is not zero-knowledge, so the system targets open-weight models. Code: https://github.com/moonmath-ai/Sable",
+   "authors": [
+    "Tomer Solberg"
+   ],
+   "url": "https://arxiv.org/abs/2611.14083",
+   "pdf": "https://arxiv.org/pdf/2611.14083v1",
+   "doi": null,
+   "venue": "arXiv cs.CR",
+   "source": "arXiv",
+   "published": "2026-11-10T13:47:29Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general",
+    "ai-hardware"
+   ],
+   "hub": "ai",
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.14079",
+   "arxiv_id": "2611.14079",
+   "title": "From Bias to Positionality: A critical grammar for Large Language Models",
+   "abstract": "Bias has become a default lens for understanding what machine learning systems do and how we should relate to them. Bias is at root a deviation from a standard; in decision making systems we can supply a standard from outside: a law, a protected attribute, a benchmark, a statistical property. However, even there, biased is often used as a shorthand, without stating what the position taken is - a silent ``relative to''. In a general use of language models, nothing supplies the standard: there is no decision to audit and no counterfactual output, so the shorthand fails. We argue that positionality -- the located, articulated, owned and contestable position from which anything is said -- is the better grammar for the question these models now force: who is speaking, from where? Against the vendors' answer of nowhere and the seductive possibility of everywhere, we argue that when a model is taken as-if speaking, it speaks from somewhere, and this means positionality can describe models, and the way they are believed beyond their warrant, even though they are not accountable speakers. A model's positionality is laminar -- laid down across corpus, tuning, system prompt, application and the live conversation. We separate three sets of factors: the positionality of a model's creators, the behaviour they intend for it, and the behaviour it enacts, and situate current work within this matrix. This lets us highlight what each stratum inherits from the one below, with ruptures and collapses where that inheritance is disavowed. We then return to where models speak from, and discuss the implications for how models are made, read and held accountable.",
+   "authors": [
+    "Dave Murray-Rust",
+    "Elisa Giaccardi",
+    "Federico Bomba",
+    "Maria Luce Lupetti"
+   ],
+   "url": "https://arxiv.org/abs/2611.14079",
+   "pdf": "https://arxiv.org/pdf/2611.14079v1",
+   "doi": null,
+   "venue": "arXiv cs.CL",
+   "source": "arXiv",
+   "published": "2026-11-10T13:41:18Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.14036",
+   "arxiv_id": "2611.14036",
+   "title": "MISO-BR: An Open Corpus for Misogyny Detection in Brazilian Portuguese",
+   "abstract": "Misogyny is among the most prevalent forms of online hate speech directed at Brazilian users, yet open and auditable resources dedicated to it in Brazilian Portuguese remain scarce. We introduce MISO-BR, an open, documented and versioned corpus of 896 balanced social media texts annotated for binary misogyny, released with its construction protocol and reproducible baselines. The corpus combines lexicon- and target-guided scraping from X with items imported from OLID-BR, a large language model triage stage whose prompt and decoding parameters are released, and manual annotation by three annotators following a written guide. Inter-annotator reliability reaches a Fleiss' kappa of 0.788 over 816 items. Under a single fixed protocol we compare four classical classifiers (Multinomial and Bernoulli Naive Bayes, a linear SVM and a random forest) with fine-tuned BERTimbau Base and Large. The classical models cluster between 0.651 and 0.676 macro-F1 and are precision-oriented but recall-poor. The transformers reach 0.833 macro-F1 and accuracy (Wilson 95% CI for accuracy [0.77, 0.88]), a gap of roughly 16 points, while Base and Large are indistinguishable on the test set despite a 2.6x difference in training cost. We argue that the value of the resource lies less in its headline scores than in the auditability of its pipeline, and we state three limits that users must reckon with: the artificial class balance, whose effect on precision under realistic prevalence we quantify; the association between provenance and label, which the released source field makes measurable; and the selection bias induced by lexicon-guided sampling and automatic triage. The corpus, annotation guide, models and experimental scripts are publicly available.",
+   "authors": [
+    "Fábio A. S. Passos",
+    "Péricles B. C. Miranda",
+    "Ana Paula Cavalcanti"
+   ],
+   "url": "https://arxiv.org/abs/2611.14036",
+   "pdf": "https://arxiv.org/pdf/2611.14036v1",
+   "doi": null,
+   "venue": "arXiv cs.CL",
+   "source": "arXiv",
+   "published": "2026-11-10T13:03:50Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.13994",
+   "arxiv_id": "2611.13994",
+   "title": "BioXArena-Pro: a research-grade benchmark for autonomous biomedical machine learning agents",
+   "abstract": "Coding agents are increasingly proposed as autonomous builders of biomedical models, but existing benchmarks are small, near saturation or open to leaked information. We present BioXArena-Pro, 64 research-level modelling tasks from eight biomedical domains, each rebuilt from a published study; most hold out whole biological units such as species or cohorts. Across 22 agent configurations, the best scores 55.1 of 100, and the scaffold matters almost as much as the model. We re-ran a published method for every task: where the published recipe applies unchanged, the best agent and the methods tie; on rebuilt tasks the methods trail by 8.2 points, suggesting that agents gain by adapting to new data. Pretrained models (including biological foundation models) matter where the strongest agent uses them: forbidding them decreases its score on those tasks by 9 points. Every task was audited in several AI-assisted rounds and a final human review.",
+   "authors": [
+    "Loka Li",
+    "Duzhen Zhang",
+    "Xingbo Du",
+    "Leonard Song",
+    "Kun Zhang",
+    "Le Song"
+   ],
+   "url": "https://arxiv.org/abs/2611.13994",
+   "pdf": "https://arxiv.org/pdf/2611.13994v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-11-10T12:39:35Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13994/2611.13994v1/Fig2_capability.png"
+  },
+  {
+   "id": "arxiv:2611.13966",
+   "arxiv_id": "2611.13966",
+   "title": "Controlled Knowledge Engineering for Taxonomy Induction with Tool-Grounded LLM Agents and Runtime-Adaptive Policies",
+   "abstract": "Taxonomies are structured knowledge representations that support semantic search, recommendation, product catalog organization, and retrieval-augmented generation. Their automated construction from a fixed set of candidate entities requires more than plausible text generation: the resulting hierarchy must be complete, structurally valid, and semantically coherent. Large Language Models (LLMs) are promising for this task, but iterative free-form generation remains vulnerable to omitted or hallucinated entities, invalid hierarchical relations, and inconsistent organizational principles. We introduce TIGA (Taxonomy Induction with Tool-Grounded Agents), a knowledge-engineering architecture that formulates taxonomy induction as an iterative decision process over an explicit state and constrained action space. TIGA combines executable taxonomy-editing tools, an memory that records tool calls, rationales, and outcomes, and a runtime-adaptive organizational policy that the agent revises during inference. An optional global reviewer evaluates the constructed taxonomy against the candidate set and the active policy. We evaluate TIGA on four benchmark taxonomies using two LLM backbones and compare it with single-shot and iterative prompting-based baselines. TIGA achieves the strongest structural-quality results in most evaluated configurations, but does not dominate on every precision measure. The gains are accompanied by substantially higher token consumption, API-call volume, and inference time. Ablation results show consistent benefits from the policy and interaction-memory components, whereas the effect of global review depends on the dataset and the available revision budget. These findings characterize tool grounding and runtime policy adaptation as promising but costly mechanisms for improving the controlled construction of structured knowledge representations.",
+   "authors": [
+    "Jonas Limniatis",
+    "Bennet Schaarmann",
+    "Georg Reuber",
+    "Robert Stahlbock"
+   ],
+   "url": "https://arxiv.org/abs/2611.13966",
+   "pdf": "https://arxiv.org/pdf/2611.13966v1",
+   "doi": null,
+   "venue": "arXiv cs.IR",
+   "source": "arXiv",
+   "published": "2026-11-10T12:04:54Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13966/01_figures/slope_chart_v2.png"
+  },
+  {
+   "id": "arxiv:2611.13946",
+   "arxiv_id": "2611.13946",
+   "title": "TreeAgent: Structure-Aware Memory Agent for Processing Long Hierarchical Data",
+   "abstract": "Practical Web applications increasingly require agents to interpret long conversations or documents. For inputs exceeding the context windows of large language models (LLMs), memory agents process segments sequentially and retain past information in bounded memory. However, they typically divide inputs into flat token segments without preserving structure or hierarchy, causing three limitations for structured data such as API responses or HTML documents. First, fixed-length segmentation can split fields of the same record, breaking their relationships. Second, segments lack hierarchical information, obscuring their structural context and positions. Third, successive memory updates may discard details of earlier sibling records needed for reasoning on later segments. To address these limitations, we propose TreeAgent, a structure-aware agent that uses the input hierarchy to guide both segment-wise context processing and access to past information. Specifically, TreeAgent constructs segments from complete subtrees and groups of adjacent sibling subtrees to preserve local structural relationships. We provide theoretical guarantees on segment counts to guide token budget selection toward matching the segment count of fixed-length segmentation. We further attach structural paths to the segments for the agent to identify their ancestors and hierarchical positions. We also introduce residual memory links from the segments of low-level children to the segments of high-level parents, enabling direct information flows beyond successive memory updates. We evaluate TreeAgent with four representative memory agents on eight retrieval and aggregation tasks. The inputs are derived from real-world application data in JSON, HTML, YAML, and JavaScript and range from 8K to 1M tokens. TreeAgent improves the average score across the four datasets for all four agents, with 3.61% performance gain on average.",
+   "authors": [
+    "Wei Gu",
+    "Weiwei Qi",
+    "Jiajun Tang",
+    "Tianhang Zheng",
+    "Bo Chen",
+    "Zhibo Zhang",
+    "Jinfei Liu",
+    "Kui Ren"
+   ],
+   "url": "https://arxiv.org/abs/2611.13946",
+   "pdf": "https://arxiv.org/pdf/2611.13946v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T11:33:05Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13946/2611.13946v1/TreeAgent_WWW_Overview_V8.png"
+  },
+  {
+   "id": "arxiv:2611.13931",
+   "arxiv_id": "2611.13931",
+   "title": "TAPCO-G: LLM-Guided Design-Adaptive Timing and Power Co-Optimization with Graph-Based Physical Priors",
+   "abstract": "Post-placement timing and power co-optimization is critical to meeting setup timing targets and reducing power within placement constraints. A cell replacement can improve timing along one path while increasing power or reducing slack on others. Conventional optimizers follow fixed rules for scheduling and accepting repairs, limiting their ability to address design-specific bottlenecks. A large language model (LLM) can propose changes to these rules, but on its own it cannot reliably estimate how a cell replacement affects endpoint slack and power. TAPCO-G combines LLM-guided optimizer adaptation with graph-based physical priors to evaluate candidate cell replacements. The outer loop tunes tool settings using physical-design feedback and revises executable repair policies when tuning stalls. The inner loop anchors delay estimates to static timing analysis snapshots, accounts for upstream driver-load changes, and propagates delay shifts to timing endpoints. It combines these estimates with coarse-to-fine power screening to prioritize candidates for physical trials. TAPCO-G produced placement-legal, logic-equivalent implementations and outscored CERBERUS on all eight ASAP7 benchmarks from the MLCAD 2026 Contest, with a mean quality score gain of 5.516 points, and scored 21.648 points higher than TAPCO on average. These results demonstrate the effectiveness of the proposed co-optimization framework.",
+   "authors": [
+    "Wuqian Tang",
+    "Zixiao Wang",
+    "Che-Chien Lin",
+    "Fong-Hua Fu",
+    "Laura Angélica Shion-Korsak",
+    "Xinyun Zhang",
+    "Bei Yu",
+    "Chun-Yao Wang"
+   ],
+   "url": "https://arxiv.org/abs/2611.13931",
+   "pdf": "https://arxiv.org/pdf/2611.13931v1",
+   "doi": null,
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "published": "2026-11-10T11:19:50Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.13926",
+   "arxiv_id": "2611.13926",
+   "title": "Beyond Proxy Metrics: MLLMs as Human Surrogates for Explainable AI Evaluation",
+   "abstract": "Explainable AI (XAI) has expanded into a broad and impactful research area, but the fundamental question of how best to evaluate explanation techniques has proven frustratingly elusive. Methodologies typically revolve around either proxy metrics which tell us little about the utility of an explanation, or human evaluation which---while generally considered the gold standard---is expensive, difficult to scale, and challenging to reproduce. In this paper, we investigate if Multimodal Large Language Models (MLLMs) can act as surrogate human participants to automate the evaluation of XAI. To do this, we first propose a ``purpose-grounded'' evaluation framework with metrics applicable to both MLLMs and human users alike. Then, we offer some conceptual insights as to why and when we can trust these models to automate this process. Lastly, we conduct extensive empirical testing across five purpose-grounded areas such as model improvement and fourteen popular MLLMs. Results indicate that all models trend positively, but OpenAI and Qwen models generally show higher alignment compared to other variants, which would be the recommended choices in practice. We expect our insights not to replace user testing, but rather to help XAI researchers complement their current evaluation methodologies and move the field away from heavy reliance on proxy metrics for measuring explanation utility.",
+   "authors": [
+    "Eoin M. Kenny",
+    "Salim I. Amoukou",
+    "Tom Bewley"
+   ],
+   "url": "https://arxiv.org/abs/2611.13926",
+   "pdf": "https://arxiv.org/pdf/2611.13926v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T11:15:28Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13926/2611.13926v1/title.png"
+  },
+  {
+   "id": "arxiv:2611.13914",
+   "arxiv_id": "2611.13914",
+   "title": "From Counterfactual Edits to Human Narratives: LLM-Driven Interpretations for Recommender System Explanations",
+   "abstract": "Recommender systems increasingly influence what users discover and consume online, yet the decision logic behind their outputs often remains opaque. Counterfactual explanation (CFX) methods provide an effective way to show which changes to a user's interaction history would alter a recommendation. In recommendation settings, however, CFXs often require many edits, producing long, low-level lists that are hard for users to interpret. Moreover, most evaluations emphasize edit counts while largely overlooking whether the resulting CFXs are coherent and actionable for users. We argue that this gap between generating valid CFXs and communicating model behavior stems from the lack of user-centered abstraction and limited qualitative evaluation. To bridge this gap, we investigate large language models as mediators that summarize raw CFX interaction edit lists into concise natural language explanations describing higher-level preference patterns. We optimize these mediators for correctness, informativeness, and linguistic quality through preference optimization, and evaluate the resulting explanations with human-calibrated metrics derived from separate human-labeled datasets. On the MovieLens-1M dataset, across multiple counterfactual generators and language models, the resulting summaries achieve high overall linguistic quality, while the strongest semantic results are obtained with high-success CFX methods such as ACCENT and SPINRec. Direct Preference Optimization improves the semantic metrics in almost all evaluated settings.",
+   "authors": [
+    "Vojtech Cahlik",
+    "Amir Reza Mohammadi",
+    "Rodrigo Alves",
+    "Pavel Kordik",
+    "Eva Zangerle"
+   ],
+   "url": "https://arxiv.org/abs/2611.13914",
+   "pdf": "https://arxiv.org/pdf/2611.13914v1",
+   "doi": "10.1145/3799682.3839968",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T11:05:19Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13914/2611.13914v1/img/compactness_comparison_all_datasets_top5_VAE_withSpinrec.png"
+  },
+  {
+   "id": "arxiv:2611.13860",
+   "arxiv_id": "2611.13860",
+   "title": "Uncovering the Memory Hierarchy of Modern NVIDIA GPUs for Accurate Simulation",
+   "abstract": "Emerging artificial intelligence workloads, particularly Large Language Models (LLMs), place unprecedented demands on GPU memory systems. Consequently, architectural innovations increasingly target the memory system to alleviate these bottlenecks. However, existing works still rely on outdated memory hierarchy models that fail to capture the complexities of modern hardware. This fidelity gap leads to inaccurate characterization and could misguide optimization strategies. To bridge this gap, we present GemAtlas, the first systematic reverse engineering of the memory hierarchy in modern NVIDIA GPUs. By developing fine-grained SASS-level benchmarking, we expose critical, previously undocumented micro-architectural details across different cache levels, including cache set associativity, slice-routing and set-indexing hash functions, replacement policies, coherence behavior, and interconnect topologies. We integrate these discovered micro-architecture details into the state-of-the-art GPU simulation framework. The final results demonstrate that GemAtlas reduces the mean absolute percentage error (MAPE) from 31.69% to 22.24% on average across four GPUs. Specifically, GemAtlas reduces the MAPE from 34.04% to 23.98% for real-world LLM operators.",
+   "authors": [
+    "Ziwen Wang",
+    "Jiapeng Zhou",
+    "Changxi Liu",
+    "Dongsheng Wang",
+    "Yun Chen"
+   ],
+   "url": "https://arxiv.org/abs/2611.13860",
+   "pdf": "https://arxiv.org/pdf/2611.13860v1",
+   "doi": null,
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "published": "2026-11-10T10:19:20Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general",
+    "ai-hardware"
+   ],
+   "hub": "ai",
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13860/2611.13860v1/L1_Architecture.png"
+  },
+  {
+   "id": "arxiv:2611.13850",
+   "arxiv_id": "2611.13850",
+   "title": "Taxonomy-Agnostic Neurosymbolic Grounding of Robot Kinematics",
+   "abstract": "While symbolic reasoning for task allocation requires grounding a robot's physical capabilities, standard Unified Robot Description Format (URDF) files provide only low-level kinematics without the formal semantic context needed for reasoning. We present URDF2Ontology, an automated, taxonomy-agnostic neurosymbolic framework that transforms raw URDF files into populated, grounded OWL ontologies. It leverages a Large Language Model (LLM) for targeted semantic reasoning, coupled with an iterative sequential graph-purging mechanism to prevent context window saturation. To process complex kinematic structures, it employs a morphology-aware dual-track architecture featuring a bottom-up Tree Track for branching assemblies and a top-down Chain Track for serial limbs. Guided by neurosymbolic guardrails, the framework extracts functional sub-graphs and asserts populated ontologies aligned with arbitrary user-provided taxonomies. Empirical evaluation across a diverse fleet of heterogeneous robots demonstrates strong schema alignment, valid structural extraction, and a significant reduction in manual domain authoring overhead.",
+   "authors": [
+    "Bastien Dussard",
+    "Aur{é}lie Clodic",
+    "Guillaume Sarthou"
+   ],
+   "url": "https://arxiv.org/abs/2611.13850",
+   "pdf": "https://arxiv.org/pdf/2611.13850v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T10:11:30Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.13713",
+   "arxiv_id": "2611.13713",
+   "title": "Toward Autonomous RTL and Synthesis Optimization: Benchmarking and Self-Improving Agents",
+   "abstract": "Recent advances in large language models (LLMs) and autonomous agents are creating new opportunities for hardware design optimization. This paper examines three connected directions toward autonomous RTL and synthesis optimization: (1) Realistic benchmarking. We discuss reference-based and open-ended RTL optimization benchmarks that evaluate optimization opportunities under realistic EDA workflows. (2) Tool-grounded RTL optimization. We present Dr. RTL, a multi-agent framework that automates critical-path analysis, RTL rewriting, and implementation-level evaluation, while continuously improving through reusable optimization skills. Evaluated on 20 real-world RTL designs, Dr.~RTL achieves average WNS/TNS improvements of 21\\%/17\\% with a 6\\% area reduction over commercial synthesis. (3) Design-specific synthesis optimization. We explore agent-driven synthesis script tuning and the discovery of executable synthesis algorithms across intermediate representations, technology-independent optimization, and technology mapping. Finally, we envision AI-native design automation that jointly explores architectural, RTL, and EDA algorithm design spaces, guided by verification constraints and implementation feedback.",
+   "authors": [
+    "Wenji Fang",
+    "Yao Lu",
+    "Jinghua Wang",
+    "Zhiyao Xie"
+   ],
+   "url": "https://arxiv.org/abs/2611.13713",
+   "pdf": "https://arxiv.org/pdf/2611.13713v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T08:07:31Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13713/2611.13713v1/fig/overview.png"
+  },
+  {
+   "id": "arxiv:2611.13710",
+   "arxiv_id": "2611.13710",
+   "title": "AutoManifold: Agentic Design of Data Visualisation Algorithms via Manifold Embedding",
+   "abstract": "Manifold embedding for data visualisation is dominated by a small set of hand-designed state-of-the-art (SOTA) algorithms. Their design targets are fixed at development time, resulting in inflexible algorithmic behaviour that cannot be readily steered towards user-specified structural priorities. Hand-designing new embedding algorithms to address user priority requires highly specialised expertise and is time consuming. To address autonomous algorithm design tailored to user preference, we introduce an agentic algorithm generation pipeline AutoManifold. It composes new manifold embedding algorithms from a constrained vocabulary of affinity, cost, and optimisation primitives, supported by multi-agent large-language-model (LLM) orchestration. AutoManifold conditions every stage of its design on user-specified structural preservation preferences, and iteratively refines the algorithm configuration through an LLM-guided, metric-grounded iterative loop. We compare the generated algorithms against the three strongest and most frequently used SOTA methods (t-SNE, UMAP, and PaCMAP) on real-world datasets spanning different difficulty regimes under identical evaluation infrastructure. The results demonstrate that LLM-driven, priority-conditioned algorithm synthesis can move beyond hyperparameter tuning, producing genuinely new algorithms that outperform traditional hand-designed methods in their ability to steer towards user-specified properties without compromising the intrinsic structure in the original data. The code of AutoManifold is available at https://github.com/buraksusam/AutoManifold_NeurIPS2026.",
+   "authors": [
+    "Burak Susam",
+    "Ruiyuan Kang",
+    "Tingting Mu"
+   ],
+   "url": "https://arxiv.org/abs/2611.13710",
+   "pdf": "https://arxiv.org/pdf/2611.13710v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T08:03:15Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13710/2611.13710v1/figures/cortex_max_sil_v2.png"
+  },
+  {
+   "id": "arxiv:2611.13708",
+   "arxiv_id": "2611.13708",
+   "title": "FedVP: Federated Learning across Heterogeneous Models by Pooling Locally Trained Verifiers",
+   "abstract": "Conventional federated learning relies on the shared model backbone to aggregate client updates, limiting collaboration among institutions that deploy large language models (LLMs) from different families and at different scales. We propose Federated Verifier Pool (FEDVP), a new federated learning paradigm that enables heterogeneous clients to collaborate through shared verification rather than parameter aggregation. Each client trains a verifier using local data and responses generated by its chosen LLM backbone. The server pools these independently trained verifiers and combines their judgments to select answers without merging model parameters. This allows both LLM backbones and verifiers to differ in architecture and size, while keeping the LLM backbones frozen and deriving collaborative gains from improved answer selection. We evaluate FEDVP across five public medical question-answering datasets treated as federated clients, using Qwen and LLaMA backbones ranging from 3B to 14B parameters. FEDVP consistently improves performance across all five clients and outperforms the strongest conventional federated baselines by 1.46-5.79 percentage points in mean accuracy.",
+   "authors": [
+    "Yifan Li",
+    "Xi Chen"
+   ],
+   "url": "https://arxiv.org/abs/2611.13708",
+   "pdf": "https://arxiv.org/pdf/2611.13708v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-11-10T08:00:55Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13708/2611.13708v1/figures/conventional_fl_vs_fedvp.png"
+  },
+  {
+   "id": "arxiv:2611.13705",
+   "arxiv_id": "2611.13705",
+   "title": "Agentic AI Meets Formal Verification in the Era of Agentic Hardware Development",
+   "abstract": "As AI agents become increasingly capable of generating and optimizing hardware circuits, ensuring the correctness of AI-generated designs becomes more important. Meanwhile, advances in AI lower the barriers to developing and applying formal methods, creating new opportunities to automate and improve hardware verification. This invited paper presents an overview of the methodologies and applications of hardware formal methods in the AI era. First, we examine how agentic AI advances hardware formal methods across three levels: specification, proof construction, and reasoning engines. Second, we discuss how formal methods support reliable AI-driven hardware development through RTL generation, debugging, and correctness-preserving optimization. We review representative research alongside our recent contributions, highlighting key technical advances and insights from experimental results. Finally, we discuss future research opportunities toward proof-native hardware development, where formal reasoning could become an integral part of autonomous hardware design.",
+   "authors": [
+    "Wenji Fang",
+    "Yuchao Wu",
+    "Jing Wang",
+    "Zhiyao Xie"
+   ],
+   "url": "https://arxiv.org/abs/2611.13705",
+   "pdf": "https://arxiv.org/pdf/2611.13705v1",
+   "doi": null,
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "published": "2026-11-10T07:57:20Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13705/2611.13705v1/fig/overview.png"
+  },
+  {
+   "id": "arxiv:2611.13696",
+   "arxiv_id": "2611.13696",
+   "title": "On Private Knowledge Retrieval and Private Inference for secure multi-agent systems",
+   "abstract": "Multi-agent systems provide a convenient framework for the massive deployment of agents based on Large Language Models (LLMs). It provides a sound framework where agents can interact with existing software to perform actions in an autonomous way. Agentic AI is the new term to denote these AI-based autonomous systems. In real multi-agent systems, agents need to deal with malicious agents some of which can exploit security vulnerabilities to do harm. A memory poisoning attack is an example of exploiting a vulnerability to modify agents knowledge and, thus, affect its behavior. In an agent, there are different types of memory systems (semantic, episodic, and short-term) which have their own characteristics and for which different memory poisoning attacks may be developed. In this paper we focus on semantic memory, we discuss its attack, and mitigation strategies. We introduce private knowledge retrieval and private inference. We propose a signature system in the knowledge base to prevent from undesired manipulation. This should avoid memory poisoning attacks by introducing security by design in the construction of the semantic memory. In our architecture, an agent contains a local Prolog-like inference system (i.e., using Horn clauses to represent knowledge) which accesses an external knowledge base to get the required knowledge. This externally signed knowledge base is accessed privately. We provide different implementations in Python using different privacy levels including k-anonymity and information-theoretical privacy (IT-PIR).",
+   "authors": [
+    "Vicenç Torra",
+    "Maria Bras-Amorós"
+   ],
+   "url": "https://arxiv.org/abs/2611.13696",
+   "pdf": "https://arxiv.org/pdf/2611.13696v1",
+   "doi": null,
+   "venue": "arXiv cs.CR",
+   "source": "arXiv",
+   "published": "2026-11-10T07:43:02Z",
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": ""
+  },
+  {
+   "id": "arxiv:2611.13644",
+   "arxiv_id": "2611.13644",
+   "title": "Tri-Stack-PIM: A Heterogeneous Multi-Die 3D-Integrated Processing-in-Memory Architecture for Efficient LLM Inference",
+   "abstract": "Large language model (LLM) inference during autoregressive decoding is fundamentally memory-bandwidth-bound. Existing three-dimensional (3D) stacked processing-in-memory (PIM) architectures alleviate the off-chip bandwidth wall, yet remain constrained by several limitations: physical layer (PHY), controllers, and direct memory access (DMA) engines compete with arithmetic units for advanced-node base-die area; hybrid-bonding keep-out zones fragment the base-die floorplan and impede physical design; compute tiles built in a dynamic random access memory (DRAM) process are restricted to low logic density, capping achievable throughput; and nonlinear operations offloaded to the host reintroduce a communication bottleneck. We present Tri-Stack-PIM, a heterogeneous three-die architecture that resolves these tensions by dedicating a top DRAM die to storage, a middle buffer die on a mature process node to PHYs, DMA engines, and near-memory compute units, and a bottom base die on an advanced node exclusively to single-instruction-multiple-data (SIMD) multiply-accumulate (MAC) arrays. We further introduce a Unified Buffer-Aware Ready-based (UBAR) hardware out-of-order micro-operation scheduler that enforces cross-die dependency correctness at runtime while maximizing issue-slot utilization through a multi-term priority function, recovering up to 90% of the cycles that an in-order policy would forfeit. A joint architecture-dataflow co-exploration identifies Pareto-optimal configurations that reduce the energy-delay product (EDP) by 33-66x over naive parameter selection. Evaluated across multi-head, grouped-query, and multi-query attention (MHA, GQA, MQA) mechanisms with batch sizes 1-32, Tri-Stack-PIM achieves geometric-mean speedups of 4.95x, 2.57x, and 1.68x across all three attention mechanisms and batch sizes over a graphics processing unit (GPU) baseline, AttAcc, and H2-LLM, respectively.",
+   "authors": [
+    "Shuao Jia",
+    "Zichao Ling",
+    "Chen Bai",
+    "Kang Zhao",
+    "Jianwang Zhai"
+   ],
+   "url": "https://arxiv.org/abs/2611.13644",
+   "pdf": "https://arxiv.org/pdf/2611.13644v1",
+   "doi": null,
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "published": "2026-11-10T06:40:42Z",
+   "search_topic": "dram",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general",
+    "ai-hardware",
+    "dram",
+    "process",
+    "vlsi"
+   ],
+   "hub": "device",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W46",
+   "image": "https://arxiv.org/html/2611.13644/2611.13644v1/attention_execution_timeline.png"
+  },
   {
    "id": "doi:10.21203/rs.3.rs-11444323/v1",
    "title": "Zero-shot performance of a concept-grounded chest radiograph foundation model depends on the evaluation dataset: a preregistered external evaluation of CLEAR and CheXzero",
@@ -4131,6 +4973,40 @@
    "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
    "week": "2026-W45"
+  },
+  {
+   "id": "arxiv:2611.12968",
+   "arxiv_id": "2611.12968",
+   "title": "Wafer-scale MoS2 and HZO-based Ferroelectric Field Effect Transistors with 4.4 V Memory Window for Back-End Compatible Multibit Memory",
+   "abstract": "Ferroelectric field-effect transistors (FeFETs) with low-power operation and non-volatile data retention enabled by stable ferroelectric polarization switching, have emerged as promising alternatives to conventional floating-gate transistors for next-generation low-power memory applications. A FeFET with two-dimensional (2D) channel provides the opportunity for better electrostatic gate control and scalability beyond silicon. In this work, we report wafer scale 2D semiconductor-based FeFETs with Hf0.5Zr0.5O2 (HZO) gate stack showing unusual p-type charge transport and stable multibit memory properties. FeFETs based on 2-3 monolayer Molybdenum disulfide (MoS2) channel and a 20 nm HZO back gate oxide layer exhibit a large hysteresis with a memory window spanning 4.4 V under a operating voltage range of +3.8 to -3.8 V, and an ION/IOFF ratio of 10^5. We demonstrate that the polarization charge-induced modification of Schottky barrier width strongly affects the hole transport and memory properties of MoS2-HZO FeFETs. We further demonstrate several advantages and unique features of the FeFETs such as nondestructive data readout, non-volatile data retention under zero gate bias, low operation voltage, high write endurance and ultra-fast switching speed. These 1T memory cells can simplify the dense 3D integrated array architecture and offer additional practical functionalities, such as fast programming and erasing of large data arrays that are absent for many conventional memories. The demonstrated MoS2 and HZO-based FeFET shows great potential for on-chip complementary metal-oxide semiconductor (CMOS)-back-end-of-line (BEOL) compatible circuits for multifunctional devices, especially for 3D monolithically integrated architectures for AI workload.",
+   "authors": [
+    "Manisha Rajput",
+    "Farhan Ahmed Siddique",
+    "Chung-Che Huang",
+    "Ioannis Zeimpekis",
+    "Sayani Majumdar"
+   ],
+   "url": "https://arxiv.org/abs/2611.12968",
+   "pdf": "https://arxiv.org/pdf/2611.12968v1",
+   "doi": null,
+   "venue": "arXiv cond-mat.mtrl-sci",
+   "source": "arXiv",
+   "published": "2026-11-07T15:52:32Z",
+   "search_topic": "emerging-memory",
+   "topics": [
+    "dielectrics",
+    "emerging-memory",
+    "interconnects",
+    "materials",
+    "packaging",
+    "reliability",
+    "vlsi"
+   ],
+   "hub": "device",
+   "companies": [],
+   "first_seen": "2026-11-11T06:51:56Z",
+   "week": "2026-W45",
+   "image": "https://arxiv.org/html/2611.12968/2611.12968v1/Figure_1.jpg"
   },
   {
    "id": "arxiv:2611.10648",
