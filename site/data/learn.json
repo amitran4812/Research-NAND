@@ -1,6 +1,50 @@
 {
- "updated": "2026-11-12T07:30:48Z",
+ "updated": "2026-11-12T20:21:27Z",
  "items": [
+  {
+   "id": "c771130ada54",
+   "title": "Nvidia and the World Without Jensen",
+   "url": "https://newsletter.semianalysis.com/p/nvidia-and-the-world-without-jensen",
+   "source": "SemiAnalysis",
+   "kind": "article",
+   "thumbnail": "https://substackcdn.com/image/fetch/$s_!yMix!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2f060cf6-e633-4930-a5b9-31e783fbbe96_700x394.jpeg",
+   "description": "Is NVIDIA Over? Export Controls, RASA, Open Source Implications, Supply Chain Implications, Affair, US Still Dependent On China",
+   "published": "2026-11-12T18:06:26Z",
+   "topics": []
+  },
+  {
+   "id": "8d0dcddd2bd6",
+   "title": "Everyone's Asking About The Bubble // The Tech Poutine 12th November 2026",
+   "url": "https://www.youtube.com/watch?v=Hcbpty6yUY4",
+   "source": "TechTechPotato",
+   "kind": "video",
+   "thumbnail": "https://i1.ytimg.com/vi/Hcbpty6yUY4/hqdefault.jpg",
+   "description": "Well, there's only one topic.",
+   "published": "2026-11-12T17:37:33Z",
+   "topics": []
+  },
+  {
+   "id": "1d597d4f7619",
+   "title": "KORA Systems Develops AI OS With Qualcomm",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBtV2E4QWVBdWhkNzlRTm5SMVpMdG9PX2xuN2JBbVdvd0tNSGJNWnp6WWphcUY4b2RXSmEzT3ZpbURHS1dhb3ZhZ0tvTWd6NWtBS0xkLWpzdmN4a3NjV0VQbnRQMXFzNGs?oc=5",
+   "source": "THE ELEC, Korea Electronics Industry Media",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-12T15:03:14Z",
+   "topics": []
+  },
+  {
+   "id": "129b9f12a5b4",
+   "title": "President Lee Jae Myung and Samsung Chairman Laugh at Student's Interview",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdVgyaVp2eTU1UlJRSGZkVjRJTzgtVzRxLXBFamdXcWhUbU5ZNVRORncwQjNDRDhNNHV5V2tVU3d4ZWlIaWx3NzZXZTFZRmxEbUZlYmZpTE1kTjd6T2hKYWVXWE1JNk1vRXp4NHBYUXI4NFBuS0QzT2pIQlhwemhnZGtXQVFGTU1q?oc=5",
+   "source": "조선일보",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-12T04:45:57Z",
+   "topics": []
+  },
   {
    "id": "0086938371f6",
    "title": "President Lee, Samsung's Lee Laugh at Student's Interview Remark",
