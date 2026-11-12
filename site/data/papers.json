@@ -1,6 +1,62 @@
 {
- "updated": "2026-11-11T19:51:02Z",
+ "updated": "2026-11-12T07:30:44Z",
  "items": [
+  {
+   "id": "openalex:W7213390565",
+   "title": "Identification automatique de domaines de connaissances dans un dictionnaire universel du XVIIIe s.",
+   "abstract": "On se propose de présenter les résultats d’une recherche visant à l’identification et à la classification automatique de domaines de connaissances dans un dictionnaire universel du XVIIIe siècle.L’œuvre support des analyses est l’édition de 1743 du Dictionnaire Universel François & Latin (désormais, DUFLT) dit de Trévoux. Environ 20 % des articles héberge un ou plusieurs paragraphes associés à une marque de domaine (Pétrequin 2009, Turcan 2024) qui stipule de quelle science (astronomie ...), art (poësie ... forge...) ou métier (charron ...) relève le contenu. On est loin de la systématicité de l’Encyclopédie de Diderot et d’Alembert (1751-1772) où 83% environ des articles est pourvu d’une marque de domaine (données tirées de l’ARTFL et de l’ENCCRE). Notre objectif est de parvenir à une classification complète de l’ensemble des paragraphes du dictionnaire en leur affectant un ou plusieurs domaines de connaissance. Pour ce faire, nous développons une approche combinant grands modèles de langage (LLMs) et modèles de classification supervisée. On soulignera que la classification en domaines de connaissances a déjà fait l’objet de plusieurs études computationnelles sur l’Encyclopédie de Diderot & d’Alembert (Horton et al. 2009, Roe et al. 2016, Brenon et al. 2022), mais qu’aucune n’a été conduite à ce jour sur le DUFLT.Dans une première partie, nous présenterons les choix méthodologiques qui structurent notre démarche. Nous justifierons le choix du paragraphe comme unité de base de nos analyses, le regroupement des marques de domaine (simples : en termes de géographie ...; complexes : Terme de Botanique & de Pharmacie) en un nombre restreint de « macro-domaines ». Nous aborderons également les difficultés liées à l’hétérogénéité de ces marques et à la nature parfois pluri-/inter-disciplinaire de leurs contenus.Dans une seconde partie, nous décrirons le protocole expérimental mis en œuvre. À partir d’un ensemble de paragraphes initialement pourvus d’une ou plusieurs marques de domaine (que l’on aura retirées), nous sollicitons différents LLMs dans un cadre de classification few-shot afin de leur faire associer un ou plusieurs macro-domaines. Les prédictions sont ensuite évaluées par comparaison avec les annotations existantes. Cette phase permet d’identifier les configurations de prompts et les modèles les plus performants, et d’affiner progressivement les instructions fournies aux modèles. Les résultats préliminaires montrent qu’un des modèles testés (Gemini 3.5 Flash) atteint un F-score proche de 70 % sur un jeu d’évaluation encore limité à une cinquantaine de paragraphes. L’extension de ce jeu de test constitue une étape importante afin d’obtenir une mesure plus robuste des performances.Le meilleur modèle sera ensuite appliqué à un ensemble de paragraphes dépourvus de marque de domaine. Les annotations produites feront l’objet d’une validation et d’une correction manuelle, permettant la constitution d’un corpus de référence (gold standard). Ce corpus servira à l’entraînement d’un modèle de classification supervisée fondé sur une architecture Transformer de type encodeur, mieux adaptée à un déploiement à grande échelle sur l’ensemble du dictionnaire.Nous montrerons que cette approche progressive, associant annotation assistée par LLM et apprentissage supervisé, permet non seulement d’améliorer la couverture de l’annotation thématique du DUFLT, mais aussi d’ouvrir de nouvelles perspectives pour l’étude de l’organisation des savoirs dans les dictionnaires encyclopédiques du XVIIIe siècle.",
+   "authors": [
+    "Nicolas Neila",
+    "Ludovic Moncla",
+    "Denis Vigier",
+    "Sabine Loudcher",
+    "Julien Velcin",
+    "Nicolas Gutehrlé"
+   ],
+   "url": "https://hal.science/hal-05748044v1",
+   "pdf": null,
+   "doi": null,
+   "venue": "HAL",
+   "source": "OpenAlex",
+   "published": "2026-11-12T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-12T07:30:44Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "doi:10.5281/zenodo.20634301",
+   "title": "Data-Driven Estimation of Ship Manoeuvring Hydrodynamic Derivatives using a Hybrid MARUS–PINN Framework with LLM-Guided Symbolic Discovery",
+   "abstract": "Identification of hydrodynamic derivatives that govern ship manoeuvring behaviour for autonomous vessels such as unmanned surface vehicles (USVs) is essential for diverse maritime purposes including oceanographic research, environmental monitoring, and autonomous navigation. However, conventional hydrodynamic modelling approaches, such as classical manoeuvring models, experimental methods, and high-fidelity computational fluid dynamics (CFD), are often labour-intensive, costly, and time-consuming, and their estimated parameters may not fully capture real-world operating conditions due to nonlinearities, scale effects, and complex sea states. With the advent of machine learning, recent advances in Physics-Informed Neural Networks (PINNs) offer a promising alternative by embedding governing fluid-dynamic equations directly into the neural learning network, providing the advantages of data-driven learning while maintaining physical consistency. Hence, this thesis investigates a novel approach that combines Marine Robotics Unity Simulator (MARUS)–simulated manoeuvring data, PINN-based parameter learning, and symbolic discovery via Large Language Models (LLMs) to estimate hydrodynamic derivatives with improved robustness, reduced data requirements, and enhanced interpretability compared to conventional system identification methods, while promoting interoperability and standardization through its modular design. To evaluate this hybrid approach, the thesis addresses the following research question: Can a hybrid MARUS–PINN–LLM framework provide more accurate, interpretable, and data-efficient estimates of manoeuvring hydrodynamic derivatives than conventional system identification methods? To this end, an extensive set of experiments and ablation studies is conducted to compare the proposed hybrid model with its purely data-driven and purely physics-based counterparts across parameter accuracy, trajectory reconstruction quality, and generalization to diverse maneuvering conditions of various industry-standard USVs. The results demonstrate that integrating symbolic discovery with PINNs reduces sway-acceleration error by 86%, yaw-rate acceleration error by 66%, and heading-rollout error by 89% relative to purely data-driven baselines, producing compact, physically consistent residual terms that align with established nonlinear hydrodynamic effects while its physics-only counterparts catastrophically diverge from the ground-truths. Taken together, these findings highlight the potential of hybrid physics–machine-learning frameworks to advance the estimation of manoeuvring coefficients for the next generation of autonomous marine systems.",
+   "authors": [
+    "Paria Rezayan",
+    "Konstantinos Domdouzis",
+    "Yogang Singh"
+   ],
+   "url": "https://doi.org/10.5281/zenodo.20634301",
+   "pdf": null,
+   "doi": "10.5281/zenodo.20634301",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "published": "2026-11-12T00:00:00Z",
+   "cited_by": 0,
+   "search_topic": "ai-general",
+   "topics": [
+    "ai-for-devices",
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "hub": "ai",
+   "companies": [],
+   "first_seen": "2026-11-12T07:30:44Z",
+   "week": "2026-W46"
+  },
   {
    "id": "doi:10.1186/s44147-026-01313-y",
    "title": "Designing against isolation: urban planning, public space, and social connection at Elizabeth Quay, Perth, Australia",
