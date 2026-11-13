@@ -1,6 +1,17 @@
 {
- "updated": "2026-11-13T07:01:08Z",
+ "updated": "2026-11-13T19:59:50Z",
  "items": [
+  {
+   "id": "85319eb139b0",
+   "title": "Nvidia without Jensen Huang: what lies ahead for Asian chipmakers",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOEoyUjBrQUpjSExVM0E1eXkybWVHaXJaWm82S0VlNHdSR1FjUHFrTlFnX1J4elB6UEZoSm03dUdGd0JGZGtOQ015cThxNzYyNWdJMmhxRXNxRWFUZWZhWjVVU1E4el9ZUHRkZWY2Zmo2eF9jdlFUZjhjSU5YUUFKOW1DcDd1eWY2THhIUHhOa1k?oc=5",
+   "source": "Rich Picks Daily",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-13T12:50:24Z",
+   "topics": []
+  },
   {
    "id": "ac94162d8a8f",
    "title": "TSMC seeks to back next chip titan with new investment arm",
@@ -13,6 +24,17 @@
    "topics": [
     "industry"
    ]
+  },
+  {
+   "id": "5a2ed1f58330",
+   "title": "Indonesia’s Mega Rice Failure",
+   "url": "https://www.youtube.com/watch?v=ZnNRkW51qng",
+   "source": "Asianometry",
+   "kind": "video",
+   "thumbnail": "https://i3.ytimg.com/vi/ZnNRkW51qng/hqdefault.jpg",
+   "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
+   "published": "2026-11-12T23:00:39Z",
+   "topics": []
   },
   {
    "id": "c771130ada54",
@@ -32,7 +54,7 @@
    "source": "TechTechPotato",
    "kind": "video",
    "thumbnail": "https://i1.ytimg.com/vi/Hcbpty6yUY4/hqdefault.jpg",
-   "description": "Well, there's only one topic.",
+   "description": "Well, there's only one topic. Timestamps [00:00] - Pre-Show: we're not lawyers [00:50] - Jensen Huang resigns from NVIDIA [01:55] - Other news saved for Sunday [02:30] - Topic #1: What Happened [06:05] - Topic #2: Our Reactions [10:50] - Topic #3: Megaspeed and the Spy Question…",
    "published": "2026-11-12T17:37:33Z",
    "topics": []
   },
