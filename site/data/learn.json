@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T11:06:32Z",
+ "updated": "2026-11-14T18:41:58Z",
  "items": [
   {
    "id": "2f88f8937300",
@@ -230,17 +230,6 @@
    "topics": []
   },
   {
-   "id": "eb8915d3ae69",
-   "title": "AI boom turns chip packaging into the next battleground for semiconductors",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVTRsRWo5SjhUM1lPV19Xc1ZKUjNWWEx1eTFkZEZLYmpjVG1FNFltZDRRdVBwZ3RBVnk0NlQtbDZmaWdmaFhSY0NFT3Rpa2YzZVRzNl8zSHNzcVdhR3RZdEpFeVNkMW93SDFrbTY5SE9NM3NneHpZOFYxN1FGOVU1ekxjSF9aZ2FyZnRXLU5aY2pFT0gtYTVwMEhfUmU2a2lOaURTeURqcDQ0M185ekd4ZWJwVHdiVWEwanduVElR?oc=5",
-   "source": "Reuters",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-06T05:52:00Z",
-   "topics": []
-  },
-  {
    "id": "c7b2a18fc00d",
    "title": "Why Japanese Supercomputers Frightened America",
    "url": "https://www.youtube.com/shorts/SnVQ-gK96lM",
@@ -260,6 +249,17 @@
    "thumbnail": null,
    "description": "Viable Alternative of CUDA Moat, NVIDIA scared and working nights & weekends, Jensen’s Counter Submission, Kimi K3, Muse Spark Open, Qwen, GLM5.3, TorchTPU, vLLM, SGLang, llm-d, Ray",
    "published": "2026-11-05T19:03:45Z",
+   "topics": []
+  },
+  {
+   "id": "eb8915d3ae69",
+   "title": "AI boom turns chip packaging into the next battleground for semiconductors",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVTRsRWo5SjhUM1lPV19Xc1ZKUjNWWEx1eTFkZEZLYmpjVG1FNFltZDRRdVBwZ3RBVnk0NlQtbDZmaWdmaFhSY0NFT3Rpa2YzZVRzNl8zSHNzcVdhR3RZdEpFeVNkMW93SDFrbTY5SE9NM3NneHpZOFYxN1FGOVU1ekxjSF9aZ2FyZnRXLU5aY2pFT0gtYTVwMEhfUmU2a2lOaURTeURqcDQ0M185ekd4ZWJwVHdiVWEwanduVElR?oc=5",
+   "source": "Reuters",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-05T08:00:00Z",
    "topics": []
   },
   {
