@@ -24,7 +24,7 @@ Light theme is red (#E00400) on white with a solid red header, dark theme is red
 ## Where the data comes from
 
 - **News:** publisher RSS feeds (Semiconductor Engineering, EE Times, IEEE Spectrum, Blocks & Files, Tom's Hardware, The Register, Phys.org, TechPowerUp, plus AI feeds) and Google News RSS searches. Every story is checked for relevance (see *How off-topic items are kept out* below).
-- **Papers:** the [arXiv API](https://info.arxiv.org/help/api/) for preprints and the [OpenAlex API](https://openalex.org/) for journal and conference papers (IEEE, Elsevier, Nature, ACS, …).
+- **Papers:** the [arXiv API](https://info.arxiv.org/help/api/) for preprints, the [OpenAlex API](https://openalex.org/) for journal and conference papers (IEEE, Elsevier, Nature, ACS, …) and the [Semantic Scholar API](https://www.semanticscholar.org/product/api) as a second index. OpenAlex is searched once per topic phrase, and the newest papers of core device journals (IEEE EDL, TED, JEDS, TDMR, JSSC, TVLSI, Nature Electronics, …, listed in `research.venues`) are pulled by ISSN. The last 60 days are fetched each run and 12 weeks are kept. Every paper card links the paper, its PDF/DOI when known, and a Google Scholar search for the title.
   **Why not Google Scholar?** It has no official API and blocks automated queries (CAPTCHAs, IP bans), so a scheduled scraper would break within days and breach its terms. OpenAlex indexes the same publications with abstracts and is free and open.
 - **Prices:** Yahoo Finance's chart endpoint, with Stooq as a fallback for US listings. Delayed quotes, refreshed on the first run of each day.
 - **Summaries, briefings, relevance second opinion, playbook:** the Claude API (`claude-opus-5-5` by default). AI-generated text is labelled on the site; always check the linked source.
@@ -34,7 +34,7 @@ Light theme is red (#E00400) on white with a solid red header, dark theme is red
 A keyword in the headline is not enough. Each paper's **abstract** and each story's **description** is read, and an item is kept only when:
 
 1. **It is in the right domain.** Device pages need semiconductor context somewhere in the text (transistor, wafer, DRAM, foundry, a chip company, ...), the AI Hub needs AI context. "HBF Park" (a football stadium), HbF (fetal hemoglobin) and the HBF stock ticker have none, so they are dropped, while "Could HBF be the solution to the memory bottleneck?" stays.
-2. **It is not from an unrelated field.** Stems such as *religio*, *jurisprud*, *hemoglobin*, *stadium*, *clinical*, *livestock* rule an item out (`relevance.*.exclude`), and OpenAlex papers must be filed under Engineering, Materials Science, Physics, Computer Science, Chemistry, Energy or Mathematics. So a paper on Islamic jurisprudence that happens to use an LLM is not shown as AI research, and a social-science "SRAM" mentoring model is not shown as memory.
+2. **It is not from an unrelated field.** Stems such as *religio*, *jurisprud*, *hemoglobin*, *stadium*, *clinical*, *livestock* rule an item out (`relevance.*.exclude`), and OpenAlex papers must be filed under Engineering, Materials Science, Physics, Computer Science, Chemistry, Energy or Mathematics (Semantic Scholar papers likewise, via `relevance.s2_fields`). Papers from the core journals in `research.venues` skip the domain-word check, and when the publisher hides the abstract they are judged by the title. So a paper on Islamic jurisprudence that happens to use an LLM is not shown as AI research, and a social-science "SRAM" mentoring model is not shown as memory.
 3. **It is really about the topic.** A title mention scores 3, a mention in the abstract or description scores 1. Stories need 1; papers need 2, so a single passing mention in an abstract is not enough. Short acronyms and everyday words (HBF, PCM, ALD, yield, retention, graphene, ...) are listed as `ambiguous` and only count next to semiconductor context.
 4. **Claude agrees (when the API key is set).** Each new item that passes the rules is sent with its abstract or description, and Claude removes topics that turn out to be coincidental matches. The verdict is stored, so each item is checked once.
 
@@ -69,6 +69,7 @@ Add the key later and the next scheduled run fills in the AI parts automatically
 | `DEVICEHUB_MODEL` | Actions *variable* | Claude model to use. Default `claude-opus-5-5`. Set `claude-sonnet-5-5` to cut cost roughly in half. |
 | `OPENALEX_EMAIL` | Actions *variable* | Contact email sent to OpenAlex (their "polite pool", faster responses). |
 | `OPENALEX_API_KEY` | Actions *secret* | OpenAlex API key, if you have one, for higher limits. |
+| `S2_API_KEY` | Actions *secret* | Optional Semantic Scholar API key (free on request); without it the shared public rate limit applies. |
 
 ### Cost
 
@@ -107,7 +108,7 @@ config.yaml              topics, feeds, tickers, courses
 venues.yaml              conferences and journals for the Publish page
 devicehub/
   news.py                RSS + Google News fetch, tagging, de-duplication
-  papers.py              arXiv + OpenAlex fetch, relevance filter, weekly grouping
+  papers.py              arXiv + OpenAlex + Semantic Scholar fetch, relevance filter, weekly grouping
   market.py              daily share prices
   learn.py               videos, interviews, newsletters
   summarize.py           Claude: briefs, TL;DRs, relevance checks, briefings, AI playbook

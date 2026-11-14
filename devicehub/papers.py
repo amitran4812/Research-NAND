@@ -1,10 +1,13 @@
-"""Research papers from arXiv and OpenAlex, grouped by ISO week.
+"""Research papers from arXiv, OpenAlex and Semantic Scholar, grouped by ISO week.
 
 Google Scholar has no public API and actively blocks automated queries, so the
-portal uses open scholarly APIs instead:
-  * arXiv API      - preprints (device physics, materials, hardware), full abstracts
-  * OpenAlex API   - journal & conference papers (IEEE, Elsevier, Nature, ACS, ...),
-                     the same publications Google Scholar indexes, with abstracts
+portal uses open scholarly APIs instead (each card also links a Scholar search):
+  * arXiv API            - preprints (device physics, materials, hardware), full abstracts
+  * OpenAlex API         - journal & conference papers (IEEE, Elsevier, Nature, ACS, ...),
+                           the same publications Google Scholar indexes, with abstracts.
+                           Searched once per phrase, plus a feed of the newest papers
+                           from core device journals (IEEE EDL, TED, JEDS, ...).
+  * Semantic Scholar API - a second index of journals, conferences and preprints
 """
 from __future__ import annotations
 
@@ -23,6 +26,7 @@ log = logging.getLogger("devicehub.papers")
 
 ARXIV_API = "http://export.arxiv.org/api/query"
 OPENALEX_API = "https://api.openalex.org/works"
+S2_API = "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
 
 
 # --------------------------------------------------------------------------- arXiv
@@ -123,7 +127,8 @@ def _abstract_from_index(inv: dict | None) -> str:
     return " ".join(w for _, w in positions)
 
 
-def parse_openalex(data: dict, topic_id: str) -> list[dict]:
+def parse_openalex(data: dict, topic_id: str | None, hub: str | None = None,
+                   trusted: bool = False) -> list[dict]:
     out = []
     for w in data.get("results", []):
         title = clean_text(w.get("display_name") or w.get("title"))
@@ -151,26 +156,128 @@ def parse_openalex(data: dict, topic_id: str) -> list[dict]:
             "field": field,
             "search_topic": topic_id,
         })
+        if hub:
+            out[-1]["hub"] = hub
+        if trusted:
+            out[-1]["trusted_venue"] = True
     return out
 
 
-def fetch_openalex(topic: dict, since: dt.date, max_results: int) -> list[dict]:
-    search = " OR ".join(f'"{p}"' for p in topic["search"])
-    params = {
-        "search": search,
-        "filter": f"from_publication_date:{since.isoformat()},to_publication_date:{utcnow().date().isoformat()},has_abstract:true",
-        "sort": "publication_date:desc",
-        "per-page": min(max_results, 200),
-    }
+def _openalex_auth(params: dict) -> dict:
     if os.environ.get("OPENALEX_EMAIL"):
         params["mailto"] = os.environ["OPENALEX_EMAIL"]
     if os.environ.get("OPENALEX_API_KEY"):
         params["api_key"] = os.environ["OPENALEX_API_KEY"]
-    resp = http_get(OPENALEX_API, params=params, timeout=60)
+    return params
+
+
+def _openalex_get(params: dict) -> dict | None:
+    resp = http_get(OPENALEX_API, params=_openalex_auth(params), timeout=60)
+    if resp is None:
+        return None
+    try:
+        return resp.json()
+    except ValueError:
+        return None
+
+
+def fetch_openalex(topic: dict, since: dt.date, max_results: int) -> list[dict]:
+    """One search per phrase, so a common phrase (e.g. "DRAM") cannot crowd out the
+    others in a single combined result list."""
+    out: list[dict] = []
+    date_filter = f"from_publication_date:{since.isoformat()},to_publication_date:{utcnow().date().isoformat()}"
+    for phrase in topic["search"]:
+        data = _openalex_get({
+            "search": f'"{phrase}"',
+            "filter": date_filter + ",has_abstract:true",
+            "sort": "publication_date:desc",
+            "per-page": min(max_results, 200),
+        })
+        if data:
+            out.extend(parse_openalex(data, topic["id"]))
+        time.sleep(0.2)
+    return out
+
+
+def fetch_openalex_venue(venue: dict, since: dt.date, max_results: int) -> list[dict]:
+    """Newest papers from one core journal (by ISSN), whatever their wording. They
+    still have to pass the topic check, but need no extra 'is this electronics' context,
+    and papers whose publisher hides the abstract are kept (judged by title)."""
+    out: list[dict] = []
+    cursor = "*"
+    while cursor and len(out) < max_results:
+        data = _openalex_get({
+            "filter": f"primary_location.source.issn:{venue['issn']},type:!paratext,"
+                      f"from_publication_date:{since.isoformat()},to_publication_date:{utcnow().date().isoformat()}",
+            "sort": "publication_date:desc",
+            "per-page": min(max_results, 200),
+            "cursor": cursor,
+        })
+        if not data:
+            break
+        out.extend(parse_openalex(data, None, hub=venue.get("hub", "device"), trusted=True))
+        cursor = (data.get("meta") or {}).get("next_cursor")
+        if not data.get("results"):
+            break
+        time.sleep(0.2)
+    return out[:max_results]
+
+
+# --------------------------------------------------------------------------- Semantic Scholar
+S2_FIELDS = "title,abstract,authors,venue,publicationVenue,publicationDate,externalIds,url,openAccessPdf,citationCount,fieldsOfStudy"
+
+
+def parse_s2(data: dict, topic_id: str) -> list[dict]:
+    out = []
+    for w in data.get("data", []) or []:
+        title = clean_text(w.get("title"))
+        abstract = clean_text(w.get("abstract"))
+        if not title or not abstract:
+            continue
+        ext = w.get("externalIds") or {}
+        doi = ext.get("DOI")
+        arxiv_id = ext.get("ArXiv")
+        if doi:
+            pid, url = "doi:" + doi.lower(), f"https://doi.org/{doi}"
+        elif arxiv_id:
+            pid, url = "arxiv:" + arxiv_id, f"https://arxiv.org/abs/{arxiv_id}"
+        else:
+            pid, url = "s2:" + (w.get("paperId") or make_id(title)), w.get("url")
+        pv = w.get("publicationVenue") or {}
+        pdf = (w.get("openAccessPdf") or {}).get("url") or None
+        out.append({
+            "id": pid,
+            "title": title,
+            "abstract": abstract,
+            "authors": [a.get("name") for a in (w.get("authors") or []) if a.get("name")][:8],
+            "url": url or w.get("url"),
+            "pdf": pdf,
+            "doi": doi,
+            "venue": pv.get("name") or w.get("venue") or ("arXiv" if arxiv_id else ""),
+            "source": "Semantic Scholar",
+            "published": iso(parse_iso(w.get("publicationDate"))) if w.get("publicationDate") else None,
+            "cited_by": w.get("citationCount", 0),
+            "s2_url": w.get("url"),
+            "s2_fields": w.get("fieldsOfStudy") or [],
+            "search_topic": topic_id,
+        })
+    return out
+
+
+def fetch_s2(topic: dict, since: dt.date, max_results: int) -> list[dict]:
+    query = " | ".join(f'"{p}"' for p in topic["search"])
+    params = {
+        "query": query,
+        "fields": S2_FIELDS,
+        "publicationDateOrYear": f"{since.isoformat()}:",
+        "sort": "publicationDate:desc",
+    }
+    headers = {"x-api-key": os.environ["S2_API_KEY"]} if os.environ.get("S2_API_KEY") else None
+    resp = http_get(S2_API, params=params, headers=headers, timeout=60)
     if resp is None:
         return []
     try:
-        return parse_openalex(resp.json(), topic["id"])
+        return parse_s2(resp.json(), topic["id"])[:max_results]
     except ValueError:
         return []
 
@@ -187,9 +294,14 @@ def paper_topics(p: dict, tagger: Tagger, cfg: dict) -> list[str] | None:
     fields = rel.get("openalex_fields")
     if fields and p.get("field") and p["field"] not in fields:
         return None  # OpenAlex files it under e.g. Social Sciences / Arts and Humanities / Medicine
+    s2_fields = rel.get("s2_fields")
+    if s2_fields and p.get("s2_fields") and not set(p["s2_fields"]) & set(s2_fields):
+        return None  # Semantic Scholar's fields of study, e.g. only History / Medicine
     title, abstract = p["title"], p.get("abstract", "") or ""
     text = f"{title} {abstract}"
-    if tagger.excluded(text, hub) or not tagger.has_context(text, hub):
+    if tagger.excluded(text, hub):
+        return None
+    if not p.get("trusted_venue") and not tagger.has_context(text, hub):
         return None
     topics = tagger.relevant_topics(title, abstract, hub=hub, min_score=PAPER_MIN_SCORE)
     if p.get("llm_topics") is not None:  # Claude's verdict, when the API key is set
@@ -211,14 +323,20 @@ def refilter(papers: list[dict], tagger: Tagger, cfg: dict) -> list[dict]:
 
 
 # --------------------------------------------------------------------------- merge
+_SOURCE_RANK = {"OpenAlex": 3, "Semantic Scholar": 2, "arXiv": 1}
+
+
+def _rank(p: dict) -> tuple:
+    return (bool(p.get("abstract")), _SOURCE_RANK.get(p.get("source"), 0))
+
+
 def finalize(papers: list[dict], tagger: Tagger, cfg: dict) -> list[dict]:
     """Tag, filter for relevance, de-duplicate (DOI / arXiv id / title)."""
     hubs = {t["id"]: t["hub"] for t in cfg["topics"]}
     out: dict[str, dict] = {}
     title_index: dict[str, str] = {}
     for p in papers:
-        hub = hubs.get(p["search_topic"], "device")
-        p["hub"] = hub
+        p["hub"] = p.get("hub") or hubs.get(p.get("search_topic"), "device")
         topics = paper_topics(p, tagger, cfg)
         if topics is None:
             # Search engines match loosely; the abstract must really be about the topic.
@@ -231,12 +349,18 @@ def finalize(papers: list[dict], tagger: Tagger, cfg: dict) -> list[dict]:
         if key in out:
             prev = out[key]
             prev["topics"] = sorted(set(prev["topics"]) | set(p["topics"]))
-            # prefer the published (OpenAlex) record's venue but keep the arXiv PDF
-            if prev["source"] == "arXiv" and p["source"] == "OpenAlex":
-                p["pdf"] = p.get("pdf") or prev.get("pdf")
-                p["arxiv_id"] = prev.get("arxiv_id")
-                p["topics"] = prev["topics"]
-                out[key] = p
+            # prefer the richest record (published venue + abstract), keep every useful link
+            if _rank(p) > _rank(prev):
+                p, prev = prev, p
+                prev["topics"] = sorted(set(prev["topics"]) | set(p["topics"]))
+                out[key] = prev
+            for k in ("pdf", "arxiv_id", "doi", "s2_url"):
+                if p.get(k) and not prev.get(k):
+                    prev[k] = p[k]
+            if p.get("abstract") and not prev.get("abstract"):
+                prev["abstract"] = p["abstract"]
+            if p.get("trusted_venue"):
+                prev["trusted_venue"] = True
             continue
         out[key] = p
         title_index[nt] = key
@@ -250,7 +374,7 @@ def merge(existing: list[dict], fresh: list[dict], weeks_to_keep: int) -> list[d
         pid = titles.get(norm_title(p["title"]), p["id"])
         old = by_id.get(pid)
         if old:
-            for k in ("tldr", "domain", "image", "arxiv_id", "first_seen", "llm_topics", "field"):
+            for k in ("tldr", "domain", "image", "arxiv_id", "first_seen", "llm_topics", "field", "pdf", "doi", "s2_url"):
                 if k in old and (old[k] or k in ("image", "llm_topics")) and not p.get(k):
                     p[k] = old[k]
             p["id"] = pid
@@ -274,6 +398,7 @@ def merge(existing: list[dict], fresh: list[dict], weeks_to_keep: int) -> list[d
 def collect(cfg: dict, tagger: Tagger) -> list[dict]:
     rcfg = cfg.get("research", {})
     since = (utcnow() - dt.timedelta(days=rcfg.get("lookback_days", 14))).date()
+    use_s2 = rcfg.get("semantic_scholar", True)
     raw: list[dict] = []
     for topic in cfg["topics"]:
         if not topic.get("search"):
@@ -282,8 +407,19 @@ def collect(cfg: dict, tagger: Tagger) -> list[dict]:
         ax = fetch_arxiv(topic, cats, rcfg.get("arxiv_max_per_topic", 40))
         time.sleep(3)  # arXiv asks clients to wait 3 s between API calls
         ax = [p for p in ax if not p["published"] or parse_iso(p["published"]).date() >= since]
-        oa = fetch_openalex(topic, since, rcfg.get("openalex_max_per_topic", 40))
-        log.info("Papers %-18s arXiv=%d OpenAlex=%d", topic["id"], len(ax), len(oa))
+        oa = fetch_openalex(topic, since, rcfg.get("openalex_max_per_phrase", 50))
+        s2: list[dict] = []
+        if use_s2:
+            s2 = fetch_s2(topic, since, rcfg.get("s2_max_per_topic", 200))
+            time.sleep(1.1)  # Semantic Scholar's public rate limit is about 1 request/s
+        log.info("Papers %-18s arXiv=%d OpenAlex=%d SemanticScholar=%d", topic["id"], len(ax), len(oa), len(s2))
         raw.extend(ax)
         raw.extend(oa)
-    return finalize(raw, tagger, cfg)
+        raw.extend(s2)
+    for venue in rcfg.get("venues", []):
+        vp = fetch_openalex_venue(venue, since, rcfg.get("venue_max", 300))
+        log.info("Papers venue %-28s OpenAlex=%d", venue["name"], len(vp))
+        raw.extend(vp)
+    out = finalize(raw, tagger, cfg)
+    log.info("Papers fetched: %d raw -> %d relevant and unique", len(raw), len(out))
+    return out

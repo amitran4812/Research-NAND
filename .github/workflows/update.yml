@@ -53,6 +53,7 @@ jobs:
           DEVICEHUB_MODEL: ${{ vars.DEVICEHUB_MODEL }}
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           OPENALEX_EMAIL: ${{ vars.OPENALEX_EMAIL }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
         run: |
           ARGS=""
           if [ "${{ inputs.force_insights }}" = "true" ]; then ARGS="--force-insights"; fi
