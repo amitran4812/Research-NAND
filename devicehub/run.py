@@ -55,6 +55,9 @@ def run_news(cfg, tagger, llm: Summarizer) -> list[dict]:
     _llm_relevance(items, cfg, llm, "news")
     items = news.tag_and_filter(items, tagger)
     log.info("News relevance: kept %d of %d stories", len(items), before)
+    before = len(items)
+    items = news.dedupe(items, tagger)
+    log.info("News de-duplication: %d stories -> %d", before, len(items))
     log.info("Looked up preview images for %d stories", news.add_page_images(items))
     todo = [it for it in items if not it.get("brief")][:MAX_NEW_BRIEFS]
     if todo and llm.enabled:

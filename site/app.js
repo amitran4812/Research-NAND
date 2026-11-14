@@ -212,8 +212,15 @@
     return '<article class="card hover news-card fade-in">' +
       '<a href="' + safeUrl(n.url) + '" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">' + media(n.image, t, n.id, shortTopic(t)) + "</a>" +
       '<div class="body"><div class="meta"><span class="src">' + esc(n.source) + '</span><span class="dot">' + esc(timeAgo(n.published)) + "</span></div>" +
-      "<h3>" + ext(n.url, n.title) + "</h3>" + (text ? "<p>" + esc(text) + "</p>" : "") +
+      "<h3>" + ext(n.url, n.title) + "</h3>" + (text ? "<p>" + esc(text) + "</p>" : "") + alsoHtml(n) +
       '<div class="foot">' + tagsHtml({ companies: n.companies }) + ext(n.url, "Read ↗", "read") + "</div></div></article>";
+  }
+  // Same story from other outlets (merged by the pipeline), shown once as small links.
+  function alsoHtml(n) {
+    var a = (n.also || []).filter(function (x) { return x && x.source; });
+    if (!a.length) return "";
+    return '<p class="also small muted">Also in ' + a.slice(0, 3).map(function (x) { return ext(x.url, x.source); }).join(", ") +
+      (a.length > 3 ? " +" + (a.length - 3) : "") + "</p>";
   }
   function compactCard(it, sub) {
     var t = primaryTopic(it);
