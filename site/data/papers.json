@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T07:15:09Z",
+ "updated": "2026-11-14T09:37:03Z",
  "items": [
   {
    "id": "openalex:W7214409375",
@@ -408,9 +408,9 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16929",
@@ -522,9 +522,9 @@
    "companies": [
     "Nvidia"
    ],
+   "image": "https://arxiv.org/html/2611.16856/2611.16856v1/fig11_factorial_heatmap.png",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.16856/2611.16856v1/fig11_factorial_heatmap.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16821",
@@ -547,9 +547,9 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16767",
@@ -611,9 +611,9 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.16748/2611.16748v1/fig1_teaser_image.png",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.16748/2611.16748v1/fig1_teaser_image.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16727",
@@ -641,9 +641,9 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.16727/2611.16727v1/figures/teaser.png",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.16727/2611.16727v1/figures/teaser.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16722",
@@ -723,9 +723,9 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.16662/2611.16662v1/figure1_editable.png",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.16662/2611.16662v1/figure1_editable.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16591",
@@ -953,9 +953,9 @@
     "ai-for-vlsi"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.16445/2611.16445v1/figures/hexaco_six_methods_curves.png",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.16445/2611.16445v1/figures/hexaco_six_methods_curves.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16426",
@@ -983,9 +983,9 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": ""
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16414",
@@ -1068,9 +1068,9 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.16384/2611.16384v1/method_compare.png",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W46",
-   "image": "https://arxiv.org/html/2611.16384/2611.16384v1/method_compare.png"
+   "week": "2026-W46"
   },
   {
    "id": "arxiv:2611.16189",
@@ -12299,9 +12299,9 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.04740/2611.04740v1/images/tensix.png",
    "first_seen": "2026-11-14T07:14:54Z",
-   "week": "2026-W45",
-   "image": "https://arxiv.org/html/2611.04740/2611.04740v1/images/tensix.png"
+   "week": "2026-W45"
   },
   {
    "id": "doi:10.30420/566716388",
