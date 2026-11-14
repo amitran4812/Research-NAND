@@ -184,6 +184,118 @@ def merge(existing: list[dict], fresh: list[dict], keep_days: int) -> list[dict]
     return out
 
 
+# --------------------------------------------------------------------------- duplicates
+_TRACKING = re.compile(r"^(utm_|fbclid$|gclid$|ocid$|cmpid$|ref$|src$|source$|guccounter$|mc_)", re.I)
+
+
+def norm_url(url: str) -> str:
+    """Canonical form of an article link: no scheme/www, tracking parameters, fragment or trailing slash."""
+    try:
+        u = urllib.parse.urlsplit(url or "")
+    except ValueError:
+        return url or ""
+    host = u.netloc.lower().removeprefix("www.").removeprefix("m.")
+    query = urllib.parse.urlencode(sorted((k, v) for k, v in urllib.parse.parse_qsl(u.query) if not _TRACKING.match(k)))
+    return host + u.path.rstrip("/") + ("?" + query if query else "")
+
+
+_DROP_RE = re.compile(
+    r"^\s*(\(pr\)|\[[a-z ]*newswire\]|\[news\]|exclusive:|breaking:)\s*"   # wire / label prefixes
+    r"|\s+by investing\.com.*$"                                         # syndication suffixes
+    r"|\((?:nyse|nasdaq|nse|bse|krx|tse|otc|lse)[^)]*\)"                # ticker tags
+    r"|\s+[|\u2013\u2014-]\s+[^|\u2013\u2014-]{2,40}$",                   # " | Publisher" / " - Publisher"
+    re.I)
+_STOP = set("a an the of in on for to and or with by from at as is are be its it this that new after over into "
+            "amid says said will would could may its their his her than more".split())
+_OPPOSITES = [{"long", "short"}, {"up", "down"}, {"rise", "fall"}, {"rises", "falls"}, {"gain", "loss"},
+              {"surging", "sliding"}, {"surges", "slides"}, {"jumps", "drops"}, {"buy", "sell"},
+              {"higher", "lower"}, {"beats", "misses"}, {"raises", "cuts"}]
+_NUM_RE = re.compile(r"\d+(?:[.,]\d+)?")
+
+
+def _title_key(title: str) -> tuple[set[str], set[str]]:
+    t = _DROP_RE.sub(" ", title or "").lower()
+    t = t.replace("&", " and ").replace("u.s.", "us").replace("u.k.", "uk")
+    t = re.sub(r"[\u2018\u2019\u201c\u201d'\"`]", "", t)  # quotes / apostrophes: "CEO's" == "CEOs"
+    nums = set(_NUM_RE.findall(t))
+    words = {w[:-1] if len(w) > 3 and w.endswith("s") else w
+             for w in re.findall(r"[a-z0-9]+", t) if w not in _STOP}
+    return words, nums
+
+
+def same_story(a: dict, b: dict, entities: list[re.Pattern] | None = None) -> bool:
+    """True when two items are the same story: same link, or headlines that say the
+    same thing (word overlap >= 60%) with no conflicting numbers, directions or companies."""
+    if a.get("url") and norm_url(a["url"]) == norm_url(b.get("url", "")):
+        return True
+    wa, na = a["_key"]
+    wb, nb = b["_key"]
+    if not wa or not wb:
+        return False
+    if len(wa & wb) / len(wa | wb) < 0.6:
+        return False
+    if na and nb and na != nb:  # "down 4.3%" vs "down 3.2%", "Nov 9" vs "Nov 10"
+        return False
+    diff = wa ^ wb
+    if any(len(pair & diff) == 2 for pair in _OPPOSITES):  # "2x Long" vs "2x Short", "surging" vs "sliding"
+        return False
+    ta, tb = a["title"], b["title"]
+    for rx in entities or []:  # "Qualcomm announces results" vs "Applied Materials announces results"
+        if bool(rx.search(ta)) != bool(rx.search(tb)):
+            return False
+    return True
+
+
+def _rank(it: dict) -> tuple:
+    """Which copy of a story to show: direct publisher link, then photo, then real text, then oldest."""
+    return (it.get("origin") != "feed", not it.get("image"), not it.get("description"),
+            it.get("first_seen") or it.get("published") or "", it["id"])
+
+
+def dedupe(items: list[dict], tagger: Tagger | None = None, window_days: float = 4) -> list[dict]:
+    """Collapse copies of the same story (same link, or near-identical headlines within a
+    few days) into one item. The kept item lists the other outlets under "also"."""
+    entities = [rx for _, rx in tagger.companies] if tagger else []
+    for it in items:
+        it["_key"] = _title_key(it["title"])
+        it["_t"] = parse_iso(it.get("published")) or utcnow()
+    clusters: list[list[dict]] = []
+    window = dt.timedelta(days=window_days)
+    for it in sorted(items, key=lambda x: x["_t"]):
+        for cl in reversed(clusters[-400:]):
+            if it["_t"] - cl[0]["_t"] > window:
+                continue
+            if any(same_story(it, other, entities) for other in cl):
+                cl.append(it)
+                break
+        else:
+            clusters.append([it])
+    out = []
+    for cl in clusters:
+        cl.sort(key=_rank)
+        keep = cl[0]
+        if len(cl) > 1:
+            keep["topics"] = sorted({t for x in cl for t in x.get("topics", [])})
+            keep["companies"] = sorted({c for x in cl for c in x.get("companies", [])})
+            seen = {keep.get("source")}
+            also = []
+            for x in cl[1:] + [{"source": a.get("source"), "url": a.get("url")} for a in keep.get("also", [])]:
+                if x.get("source") and x["source"] not in seen:
+                    seen.add(x["source"])
+                    also.append({"source": x["source"], "url": x.get("url")})
+            keep["also"] = also[:6]
+            if not keep.get("brief"):
+                keep["brief"] = next((x["brief"] for x in cl if x.get("brief")), None) or keep.get("brief")
+                if keep["brief"] is None:
+                    keep.pop("brief")
+        out.append(keep)
+    for it in items:
+        it.pop("_key", None)
+        it.pop("_t", None)
+    out.sort(key=lambda it: it.get("published") or "", reverse=True)
+    return out
+
+
 def collect(cfg: dict, tagger: Tagger) -> list[dict]:
     fresh: list[dict] = []
     for q in cfg.get("news_queries", []):

@@ -259,6 +259,67 @@ class RelevanceTest(unittest.TestCase):
 
 
 
+class DedupeTest(unittest.TestCase):
+    def setUp(self):
+        from devicehub.common import Tagger, load_config
+        self.t = Tagger(load_config())
+
+    def item(self, i, title, source, url=None, origin="google", hours=0, **kw):
+        import datetime as dt
+        when = dt.datetime(2026, 11, 13, 8, tzinfo=dt.timezone.utc) + dt.timedelta(hours=hours)
+        return dict(id=f"n{i}", title=title, source=source, url=url or f"https://ex{i}.com/a", origin=origin,
+                    published=when.isoformat().replace("+00:00", "Z"), topics=[], companies=[], **kw)
+
+    def run_dedupe(self, items):
+        from devicehub import news
+        return news.dedupe(items, self.t)
+
+    def test_same_story_from_several_outlets_is_shown_once(self):
+        out = self.run_dedupe([
+            self.item(1, "Could HBF be the solution to the Memory bottleneck?", "Investing.com"),
+            self.item(2, "Could HBF be the solution to the Memory bottleneck? By Investing.com", "Investing.com India", hours=2),
+            self.item(3, "Nvidia CEO's exit could give South Korean chipmakers greater leverage in HBM", "Big News Network"),
+            self.item(4, "Nvidia CEOs exit could give South Korean chipmakers greater leverage in HBM supply", "The Tribune", hours=5),
+            self.item(5, "Korea Fund: A Lower Beta, Discounted Bet On Samsung & SK Hynix (NYSE:KF)", "Seeking Alpha"),
+            self.item(6, "Korea Fund: A Lower Beta, Discounted Bet On Samsung And SK hynix (NYSE:KF)", "Seeking Alpha", hours=12),
+        ])
+        self.assertEqual(len(out), 3)
+        hbm = [o for o in out if "Nvidia" in o["title"]][0]
+        self.assertEqual(len(hbm["also"]), 1)
+
+    def test_publisher_copy_with_photo_wins(self):
+        out = self.run_dedupe([
+            self.item(1, "Silicon Motion Showcases Next-Generation Enterprise Storage Solutions at SC26", "Business Wire"),
+            self.item(2, "(PR) Silicon Motion Showcases Next-Generation Enterprise Storage Solutions at SC26", "TechPowerUp",
+                      origin="feed", image="https://img/x.jpg", hours=1),
+        ])
+        self.assertEqual([o["source"] for o in out], ["TechPowerUp"])
+        self.assertEqual(out[0]["also"][0]["source"], "Business Wire")
+
+    def test_same_link_is_one_story(self):
+        out = self.run_dedupe([
+            self.item(1, "Intel Korea Launches AI Alliance With 23 Companies at Seoul Summit", "Chosun", url="https://news.google.com/x?oc=5"),
+            self.item(2, "Intel Korea Launches AI Alliance with 23 Companies", "Chosun", url="https://news.google.com/x?oc=5&utm_source=rss", hours=3),
+        ])
+        self.assertEqual(len(out), 1)
+
+    def test_different_stories_are_kept(self):
+        out = self.run_dedupe([
+            self.item(1, "Why is SK hynix stock sliding today?", "Investing.com"),
+            self.item(2, "Why is SK hynix stock surging today?", "Investing.com", hours=24),
+            self.item(3, "SK hynix (NASDAQ:SKHY) Stock Price Down 4.3% - Should You Sell?", "MarketBeat"),
+            self.item(4, "SK hynix (NASDAQ:SKHY) Stock Price Down 3.2% - Time to Sell?", "MarketBeat", hours=30),
+            self.item(5, "(PR) Applied Materials Announces Fourth Quarter and Fiscal Year 2026 Results", "TechPowerUp"),
+            self.item(6, "(PR) Qualcomm Announces Fourth Quarter and Fiscal 2026 Results", "TechPowerUp", hours=2),
+            self.item(7, "GraniteShares 2x Long SK Hynix Daily ETF price data", "CryptoDaily"),
+            self.item(8, "GraniteShares 2x Short SK Hynix Daily ETF price data", "CryptoDaily", hours=1),
+            # same headline, but a week apart: a new story
+            self.item(9, "Micron raises DRAM contract prices", "Reuters"),
+            self.item(10, "Micron raises DRAM contract prices", "Reuters", hours=24 * 7),
+        ])
+        self.assertEqual(len(out), 10)
+
+
 class SummarizerTest(unittest.TestCase):
     def test_structured_output_is_parsed_and_wired(self):
         from types import SimpleNamespace

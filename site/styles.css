@@ -575,3 +575,6 @@ table.market td.num { text-align: right; }
 }
 .linkish { font: inherit; font-weight: 700; color: var(--red); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
 @media (max-width: 640px) { .lib-tabs { gap: .5rem; } .lib-tabs .region { padding: .7rem .6rem 2.4rem; } .lib-tabs .region b { font-size: 1.05rem; } .lib-tabs .region span { display: none; } .lib-tabs .region i { top: auto; bottom: .6rem; left: .6rem; right: auto; transform: none; } }
+
+.news-card .also { margin: 0; }
+.news-card .also a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); }
