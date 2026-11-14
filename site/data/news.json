@@ -1,6 +1,23 @@
 {
- "updated": "2026-11-14T09:35:36Z",
+ "updated": "2026-11-14T10:54:43Z",
  "items": [
+  {
+   "id": "9a049d131c12",
+   "title": "Semiconductor Stock: After Shifting From Engineering Services to Manufacturing, Is Long-Term Profitability a Major Concern?",
+   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPa1dSd096Y2R5NmxDRjZlam1ZNmZhODlRcXkxYkQyQTlZZWlxSXJjOGFRSGVwWDctYmhUZFlFWFd2N08zNHFOY2xyWVpHR2tIRWZGcmRJcF8xZFZ6VHc5RjlEUEdMZmYzcm85T3BLank4QTBybHVRVkxpQ05FeWcwdHM2LVBIMEZndURzTl9UWHZGZ2czWGNyR1YzVHNQMGd2cklVQlpDV1RXWXdyR2RrTmVRX3RlQ1A0ajlXN1pKZHQxTjBJekxodHJGZzFCVjlxR0FVcFdjTUdSOUxweUlGem9KdXZjSG9PaDg2NUtpQ2N2YXFjTGs5T1VZbw?oc=5",
+   "source": "Trade Brains",
+   "source_url": "https://tradebrains.in",
+   "published": "2026-11-14T10:31:37Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-14T10:54:38Z",
+   "section": "market",
+   "region": "international"
+  },
   {
    "id": "707f4335c76c",
    "title": "SK hynix stock: U.S. workforce expansion targets AI customers",
@@ -510,12 +527,13 @@
    "image": null,
    "topics": [],
    "companies": [
-    "Samsung",
-    "SK hynix"
+    "SK hynix",
+    "Samsung"
    ],
    "first_seen": "2026-11-14T06:47:24Z",
    "section": "general",
-   "region": "international"
+   "region": "international",
+   "also": []
   },
   {
    "id": "b6a17ff9dce0",
@@ -543,7 +561,7 @@
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8zRUlFUkloWnpYOEtldzV4ZXozVjNBdE45aDVHMktkZkJNM0thOG9EY2gySV9TN2hZZlhkN2RaN2J4bVpYb1QxWlFrVThJeG5na2Q2ZGJ6T0VSaTcyM0ZUQlp4Wm1HSGF3ZnFGRUxPRzl3NTYzekE?oc=5",
    "source": "BigGo Finance",
    "source_url": "https://finance.biggo.com",
-   "published": "2026-11-13T21:38:07Z",
+   "published": "2026-11-13T21:35:00Z",
    "description": "",
    "hub": "device",
    "origin": "google",
@@ -1324,9 +1342,9 @@
   {
    "id": "acdfc81dbe3f",
    "title": "Japan’s chemical giants boost earnings on semiconductor boom: growth opportunities for India’s specialty..",
-   "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNYlRDbVJHcVp5MXpMaGprOHFxaUlsaFd0R1pDUWpwZ1BEdDZud1FkOHVobmtzRWNCcWtyei14Wm16S2xjSUNaOEVOZ2RzaTNNU1pWVkRQZDNmV0FzQnl0bzd4aXZPOXBoUlp6TjF1MUNtbmE4ZFdDUW9EeXVsM2dkZE94UGZEQ0h5S1BnemtJamlkMHZmeVktY205X1dxc1cyal84R0hqSmQzbS1DTlJJdEdTZFl0ZGwxa3ZveUZNMk1HQlk1bF92ak9pZVNxSEVQV05xMGtUc0w0a3hHTXNtekZOUFJwVEFUUmJLTFhIamZXUWVwYzIxMDZJUkFQWmg3RVZaeTZHSkM2VXdWOGtDV2RYcFVZUmRoUjdsVFk5RmwydXV0elpudk45UGjSAawCQVVfeXFMTWJUQ21SR3FaeTF6TGhqazhxcWlJbGhXdEdaQ1FqcGdQRHQ2bndRZDh1aG5rc0VjQnFrcnoteFptektsY0lDWjhFTmdkc2kzTVNaVlZEUGQzZldBc0J5dG83eGl2TzlwaFJaek4xdTFDbW5hOGRXQ1FvRHl1bDNnZGRPeFBmRENIeUtQZ3prSWppZDB2ZnlZLWNtOV9XcXNXMmpfOEdIakpkM20tQ05SSXRHU2RZdGRsMWt2b3lGTTJNR0JZNWxfdmpPaWVTcUhFUFdOcTBrVHNMNGt4R01zbXpGTlBScFRBVFJiS0xYSGpmV1FlcGMyMTA2SVJBUFpoN0VWWnk2R0pDNlV3VjhrQ1dkWHBVWVJkaFI3bFRZOUZsMnV1dHpabnZOOVBo?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxOYTFlT252RTQwZW1zb2pyekY3Y1BUSUYxamYzSDRBa1paSE1tLUJuMHo2dklYMUhZcXA2aHNVdWtsbjZLaDNra0hFbF9yMVdZQzNaeFNWQ0FrUVA0X0oyZVM4TFduOEdqYzRtcjllOTZhcHNXNjRUSUJHTUgwaVI1Skd4M1lMNjJTMlhMUTR6YXJoOWFZV3dxVXU0TmNadGNpeGZhcm1ycXl2OFFQdmFIMXJ6NXh5Vi1lUWR5aXpZU1VuV0JZd01BaDc1cjM4OTkyQ05XejlNQ0ZsMHN1bTVrdkNHajg2ZlYzRm9mLXVOUWRJV2xFNUEyNFVkYi15NEpBeHNnXzJINi1NLW02VHpuX0cxS29RWlBWZzdkd0gwRzlQanpsNHlOLXR5czFZUdIBrgJBVV95cUxOYTFlT252RTQwZW1zb2pyekY3Y1BUSUYxamYzSDRBa1paSE1tLUJuMHo2dklYMUhZcXA2aHNVdWtsbjZLaDNra0hFbF9yMVdZQzNaeFNWQ0FrUVA0X0oyZVM4TFduOEdqYzRtcjllOTZhcHNXNjRUSUJHTUgwaVI1Skd4M1lMNjJTMlhMUTR6YXJoOWFZV3dxVXU0TmNadGNpeGZhcm1ycXl2OFFQdmFIMXJ6NXh5Vi1lUWR5aXpZU1VuV0JZd01BaDc1cjM4OTkyQ05XejlNQ0ZsMHN1bTVrdkNHajg2ZlYzRm9mLXVOUWRJV2xFNUEyNFVkYi15NEpBeHNnXzJINi1NLW02VHpuX0cxS29RWlBWZzdkd0gwRzlQanpsNHlOLXR5czFZUQ?oc=5",
    "source": "Indiatimes",
-   "source_url": "http://chemicals.economictimes.indiatimes.com",
+   "source_url": "https://chemicals.economictimes.indiatimes.com",
    "published": "2026-11-13T15:26:48Z",
    "description": "",
    "hub": "device",
@@ -1376,13 +1394,7 @@
    ],
    "first_seen": "2026-11-13T19:58:08Z",
    "section": "market",
-   "region": "international",
-   "also": [
-    {
-     "source": "Investing.com UK",
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRk90eFpQUkJwZzJTV1VZRHN6TWZMYTYzZ21TRXdtSTNYWlJ5cUZESWVFekJ6NFJ0ZG9QNTBOcENsUnIxejVhVnZqTmExZmNSdVl4bVllT2w4d0g2bzVRcHJ2ajc4amNkOUNmRUE1dTR3QmZGVkxMMndqYVFkS2YyTlRhVWxDWEllVlRzOHh2MHF5d2tUMFEtcjg0RF8?oc=5"
-    }
-   ]
+   "region": "international"
   },
   {
    "id": "ad4fc46c32a9",
@@ -1676,12 +1688,6 @@
     "Nvidia"
    ],
    "first_seen": "2026-11-13T19:58:08Z",
-   "also": [
-    {
-     "source": "Big News Network.com",
-     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdGJfMlFSbF91ZE5PQVI4WVA2enRZOW83bG1tczRENUhjZkxxRE5HX21yWFNYUFN0enVKSDlfdjRiVzhFOXpiTU9mNHFlM3pNSWZ6SjhPZUhQUmdsaTQyMDJzbnNubnEyTEdwT3NyVzh2ODNKZmNCMkVQU0pvRkMycGpRc282TWFhVWpqV29SaWZNbDhmb0k0VnJpb19yQ3Y2Zm1kUmk3QkNmYkJObHQ5dWN5LXNOandlekh4WnFVdWIwckRHbHpNZXBiVlRfakF3dkxsMTR1SQ?oc=5"
-    }
-   ],
    "section": "market",
    "region": "international"
   },
@@ -1823,6 +1829,25 @@
    ],
    "companies": [],
    "first_seen": "2026-11-13T19:58:08Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "b37c496aa174",
+   "title": "SPEL Semiconductor Limited revenue falls 95.9% in June quarter",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNN2JoY0R2Wmhaa19PMzJnNTFjQnVlY09CMllQQVNtWTJCS2FRTUlDQlgxQXMwWS0xQVd3OUp4cFJsUDJPaUREN0VMdHpQMU9KTDNYcXo3b0tkLTJ2Y28yZmRfVU1sTDQwN25YSUN2ZjlJLTlTM1FJRk14akJNcHFNemNzeHJjOGRpdFQ2cm14Z05NRXhPVDFYMEMyNFA1OUpJZV9jaUJmVHk3aEYtczZXSXB3?oc=5",
+   "source": "Multibagg AI",
+   "source_url": "https://www.multibagg.ai",
+   "published": "2026-11-13T12:41:56Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-14T10:54:38Z",
    "section": "market",
    "region": "international"
   },
@@ -2099,6 +2124,23 @@
    "first_seen": "2026-11-13T19:58:08Z",
    "section": "general",
    "region": "international"
+  },
+  {
+   "id": "43dbd3dceaed",
+   "title": "Rashi Peripherals targets Rs 25,000 crore semiconductor market",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOTlltV2hSTGhrWExJeDVzTjFOZUpKdk1WTVg5Y0xYNHdoZ0RjN1YxYzhMS1R6eldienZ2OGxIM3hER3AyLTRXN0FSQU5ib0NyQkNEeFhBX0NodHhEV1lvOUdWOTE1Nm1id1dETVA4QUprWUt6QU03YURkTWlXYUhxMFlaNFJWa0ZpZU52TW91QzZQOGJnYWFVT3RSYkhBdWc1bmRZMG9OaDdubTJDSFZteDFsWXdIanl1eDYtVFpqeEZXMXhzMndR?oc=5",
+   "source": "Multibagg AI",
+   "source_url": "https://www.multibagg.ai",
+   "published": "2026-11-13T09:12:34Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-14T10:54:38Z",
+   "section": "general",
+   "region": "india"
   },
   {
    "id": "7e02aad6ddf8",
@@ -2959,7 +3001,6 @@
     "SK hynix"
    ],
    "first_seen": "2026-11-14T07:13:42Z",
-   "also": [],
    "section": "general",
    "region": "international"
   },
@@ -3489,10 +3530,6 @@
    ],
    "first_seen": "2026-11-13T06:59:04Z",
    "also": [
-    {
-     "source": "CryptoDaily",
-     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOVG1vQi1semVvR1R4UHlZTWhxZzlLNkZ2YjROenhUTGxOQlljVDYzNjBxR1U0ZDl0T2dxdVF3TVRTYS1hcldzMlAyNEo1NldER2Y4SElrbHFuMVIzb2FDRVF6N1BXNzF5dGtUMWVLbWlTczNFYVlaekpBUTFfOHlTTTd1MDRUOUFMV0thOXdNaXNLQmc?oc=5"
-    },
     {
      "source": "CryptoRank",
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcVk2ZmFDYXdyV2dMNjhxN2dMaHpoMjBjS1phUEtqSWxBWHdnMHNXRkFVbzFCd2RaVlJrVkFJc1Zna1NwXzJ4X0owR05TbkRKTUt4bTNBNjhndjZUN05ma1MtNmE0Y1F2QVhRcXhZY0k3bGV2OWxOTHdpRHhJbVFLU0JxR0M1YTRUaWhKX2pEaXVMYjh3azRkZlRiOA?oc=5"
@@ -4538,12 +4575,6 @@
     "Kaynes"
    ],
    "first_seen": "2026-11-12T20:19:33Z",
-   "also": [
-    {
-     "source": "Investing.com India",
-     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQMnVjWHJtaG8yNDZ0X0NubGRMLXhINW14Ym9leTdFeE5XMV9ZRnBqcHNkUjFTY1J2MzRoeG1GTjBiYi0ycHNYZEZfTnkwbFducFRsS0FPWEJyRHBOUHh5VnB4d1BZRGJ6UWlzcHp6U1FVeHJVbm9WX3B5dWtIM0VnR0lHdGZuQVprekZfZWMwWXF3MzMwN2J1cmdiRzZZODN1endNQnA2QVhxWkp6RDNRZ2UxNUk1R0F3ZVpBNkx2Wkd2dk9jN1BRcjZTaEtab0VQc282dnkzbTNGRkt1dzJXYzJDOGdQUQ?oc=5"
-    }
-   ],
    "section": "general",
    "region": "india"
   },
@@ -6791,9 +6822,9 @@
    "image": null,
    "topics": [],
    "companies": [
-    "Nvidia",
+    "Samsung",
     "SK hynix",
-    "Samsung"
+    "Nvidia"
    ],
    "first_seen": "2026-11-12T07:27:52Z",
    "section": "general",
@@ -8295,9 +8326,8 @@
    "origin": "google",
    "image": null,
    "topics": [
-    "ai-general",
     "ai-hardware",
-    "industry"
+    "ai-general"
    ],
    "companies": [],
    "first_seen": "2026-11-11T19:49:45Z",
@@ -8399,9 +8429,9 @@
    "image": null,
    "topics": [],
    "companies": [
-    "Nvidia",
+    "Samsung",
     "SK hynix",
-    "Samsung"
+    "Nvidia"
    ],
    "first_seen": "2026-11-11T19:49:45Z",
    "section": "market",
@@ -10735,9 +10765,7 @@
    "hub": "device",
    "origin": "google",
    "image": null,
-   "topics": [
-    "dram"
-   ],
+   "topics": [],
    "companies": [
     "SK hynix"
    ],
@@ -13814,10 +13842,7 @@
    "origin": "google",
    "image": null,
    "topics": [],
-   "companies": [
-    "SK hynix",
-    "Samsung"
-   ],
+   "companies": [],
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "market",
    "region": "international",
@@ -14248,8 +14273,8 @@
     "industry"
    ],
    "companies": [
-    "SK hynix",
-    "Samsung"
+    "Samsung",
+    "SK hynix"
    ],
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "market",
@@ -14799,8 +14824,8 @@
    "image": null,
    "topics": [],
    "companies": [
-    "SK hynix",
-    "Samsung"
+    "Samsung",
+    "SK hynix"
    ],
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "market",
@@ -15271,8 +15296,8 @@
    "image": null,
    "topics": [],
    "companies": [
-    "SK hynix",
-    "Samsung"
+    "Samsung",
+    "SK hynix"
    ],
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "market",
@@ -15721,9 +15746,7 @@
    "hub": "device",
    "origin": "google",
    "image": null,
-   "topics": [
-    "packaging"
-   ],
+   "topics": [],
    "companies": [],
    "first_seen": "2026-11-10T13:00:55Z",
    "section": "tech",
@@ -17457,8 +17480,8 @@
     "dram"
    ],
    "companies": [
-    "Nvidia",
-    "TSMC"
+    "TSMC",
+    "Nvidia"
    ],
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "market",
