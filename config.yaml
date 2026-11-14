@@ -6,7 +6,7 @@ site:
   title: Device Hub
   tagline: Nanoscale devices, memory & VLSI — news and research, twice a day
   # How many weeks of papers to keep in the archive shown on the Research page.
-  weeks_to_keep: 8
+  weeks_to_keep: 12
   # How many days of news to keep.
   news_days_to_keep: 10
 
@@ -165,6 +165,8 @@ relevance:
   # classification of the paper); this drops e.g. Social Sciences or Medicine
   # papers that reuse an acronym like SRAM.
   openalex_fields: ["Engineering", "Materials Science", "Physics and Astronomy", "Computer Science", "Chemistry", "Energy", "Mathematics"]
+  # Same idea for Semantic Scholar's fields of study (a paper needs at least one).
+  s2_fields: ["Engineering", "Materials Science", "Physics", "Computer Science", "Chemistry", "Mathematics"]
 
 # Company names used to tag news ("what other companies are doing").
 companies: ["Tata Electronics", "CG Semi", "Kaynes", "HCL", Vedanta, Polymatech, "L&T Semiconductor", Samsung, "SK hynix", Micron, Kioxia, Sandisk, "Western Digital", YMTC, CXMT, Nanya, Winbond, Macronix, Intel, TSMC, GlobalFoundries, "Applied Materials", "Lam Research", "Tokyo Electron", ASML, KLA, imec, IBM, Nvidia, AMD, Synopsys, Cadence, Solidigm, Seagate, Rapidus, Everspin, Weebit]
@@ -232,10 +234,34 @@ research:
   arxiv_categories: [cond-mat.mes-hall, physics.app-ph, cond-mat.mtrl-sci, cs.AR, cs.ET, eess.SY]
   # AI Hub topics search these categories instead.
   arxiv_categories_ai: [cs.LG, cs.AI, cs.AR, cs.ET, cs.NE, cond-mat.mtrl-sci, physics.app-ph]
-  arxiv_max_per_topic: 40
-  openalex_max_per_topic: 40
+  arxiv_max_per_topic: 100
+  # OpenAlex is searched once per "search" phrase of each topic.
+  openalex_max_per_phrase: 50
+  # Semantic Scholar (free; set the S2_API_KEY secret for a higher rate limit).
+  semantic_scholar: true
+  s2_max_per_topic: 200
   # Only papers published within this many days are fetched each run.
-  lookback_days: 14
+  lookback_days: 60
+  # Core journals: their newest papers are pulled from OpenAlex by ISSN (up to
+  # venue_max each) and kept when the title/abstract matches a topic, even when the
+  # publisher hides the abstract.
+  venue_max: 300
+  venues:
+    - {name: IEEE Electron Device Letters, issn: 0741-3106}
+    - {name: IEEE Transactions on Electron Devices, issn: 0018-9383}
+    - {name: IEEE Journal of the Electron Devices Society, issn: 2168-6734}
+    - {name: IEEE Transactions on Nanotechnology, issn: 1536-125X}
+    - {name: IEEE Trans. Device and Materials Reliability, issn: 1530-4388}
+    - {name: IEEE Trans. Semiconductor Manufacturing, issn: 0894-6507}
+    - {name: IEEE Journal of Solid-State Circuits, issn: 0018-9200}
+    - {name: IEEE Transactions on VLSI Systems, issn: 1063-8210}
+    - {name: IEEE Transactions on CAD, issn: 0278-0070}
+    - {name: Nature Electronics, issn: 2520-1131}
+    - {name: Advanced Electronic Materials, issn: 2199-160X}
+    - {name: Solid-State Electronics, issn: 0038-1101}
+    - {name: Microelectronic Engineering, issn: 0167-9317}
+    - {name: Microelectronics Reliability, issn: 0026-2714}
+    - {name: Applied Physics Letters, issn: 0003-6951}
 
 # --- Market ticker ---------------------------------------------------------
 # Symbols use Yahoo Finance notation.

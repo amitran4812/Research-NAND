@@ -41,6 +41,8 @@ def fake_get(url, params=None, **_):
         return FakeHtml('<figure><img src="x1.png" class="ltx_graphics ltx_img" alt=""></figure>', url + "v2/")
     if "arxiv.org" in url:
         return FakeResp(_fixture("arxiv.xml"))
+    if "semanticscholar.org" in url:
+        return FakeResp(_fixture("s2.json"))
     if "openalex.org" in url:
         return FakeResp(_fixture("openalex.json"))
     if "news.google.com" in url:
@@ -135,6 +137,14 @@ class PipelineTest(unittest.TestCase):
         fefet = [p for p in papers if "HZO" in p["title"]][0]
         self.assertEqual(fefet["abstract"], "We report FeFET endurance in 3D NAND arrays.")
         self.assertIn("emerging-memory", fefet["topics"])
+        self.assertEqual(len([p for p in papers if "HZO" in p["title"]]), 1, "OpenAlex + Semantic Scholar copies merged")
+        self.assertEqual(fefet["source"], "OpenAlex")
+        self.assertEqual(fefet["s2_url"], "https://www.semanticscholar.org/paper/s2a")
+        s2 = [p for p in papers if "2T0C" in p["title"]]
+        self.assertEqual(len(s2), 1)
+        self.assertEqual(s2[0]["url"], "https://arxiv.org/abs/2611.00001")
+        self.assertIn("dram", s2[0]["topics"])
+        self.assertFalse(any("Medieval" in t for t in ptitles), "off-topic Semantic Scholar paper filtered")
         self.assertRegex(fefet["week"], r"^\d{4}-W\d{2}$")
 
         market = self.load("market.json")
@@ -253,6 +263,14 @@ class RelevanceTest(unittest.TestCase):
                                      "Graphene oxide sheets filter salt from seawater.", "materials"))
         self.assertIn("materials", self.paper("Graphene contacts for MoS2 transistors",
                                               "Graphene edge contacts lower the contact resistance of MoS2 field-effect transistors.", "materials"))
+
+    def test_core_journal_paper_without_abstract_is_judged_by_title(self):
+        from devicehub import papers
+        p = {"id": "p", "title": "Charge trap layer engineering for 3D NAND", "abstract": "", "hub": "device",
+             "search_topic": None, "trusted_venue": True}
+        self.assertIn("nand", papers.paper_topics(p, self.t, self.cfg))
+        p = dict(p, title="Editorial: a year in review")
+        self.assertIsNone(papers.paper_topics(p, self.t, self.cfg))
 
     def test_one_passing_mention_is_not_enough_for_a_paper(self):
         self.assertIsNone(self.paper("Supply chains in retail", "We also mention DRAM once.", "dram"))

@@ -233,6 +233,8 @@
     var links = [ext(p.url, p.source === "arXiv" ? "arXiv page ↗" : "Paper page ↗")];
     if (p.pdf) links.push(ext(p.pdf, "PDF ↗"));
     if (p.doi) links.push(ext("https://doi.org/" + p.doi, "DOI ↗"));
+    if (p.s2_url && p.s2_url !== p.url) links.push(ext(p.s2_url, "Semantic Scholar ↗"));
+    links.push(ext("https://scholar.google.com/scholar?q=" + encodeURIComponent('"' + p.title + '"'), "Google Scholar ↗"));
     var t = primaryTopic(p);
     return '<article class="card hover row-card fade-in"><div>' +
       (p.domain ? '<div class="domain">' + esc(p.domain) + "</div>" : "") +
@@ -427,7 +429,7 @@
   function pageResearch() {
     function render(keepFocus) {
       app.innerHTML = head("Research" + catSuffix(), state.cat === "all" ? "New papers, week by week" : topicName(state.cat),
-        "From arXiv preprints and OpenAlex (IEEE, Nature, Elsevier, ACS and other journals and conferences). " + (D.meta.llm && D.meta.llm.enabled ? "Each paper has a one-line takeaway, the full abstract and a direct link." : "Each paper has its full abstract and a direct link.") + "", "", pageArt("materials")) + papersBlock("device", state.cat, "paper-search");
+        "From arXiv preprints, OpenAlex and Semantic Scholar (IEEE, Nature, Elsevier, ACS and other journals and conferences), plus the newest papers in core device journals such as IEEE EDL and TED. Every card links the paper and a Google Scholar search. " + (D.meta.llm && D.meta.llm.enabled ? "Each paper has a one-line takeaway, the full abstract and a direct link." : "Each paper has its full abstract and a direct link.") + "", "", pageArt("materials")) + papersBlock("device", state.cat, "paper-search");
       bindPapers(render, "paper-search");
       if (keepFocus) refocus("paper-search");
     }

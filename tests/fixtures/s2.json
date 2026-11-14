@@ -1,0 +1,14 @@
+{"total": 3, "token": null, "data": [
+ {"paperId": "s2a", "title": "Endurance of HZO FeFET for 3D NAND-like Arrays", "abstract": "We report FeFET endurance in 3D NAND arrays, a copy indexed by Semantic Scholar.",
+  "authors": [{"name": "D. Engineer"}], "venue": "IEEE Transactions on Electron Devices", "publicationVenue": {"name": "IEEE Transactions on Electron Devices"},
+  "publicationDate": "__RECENT_DATE__", "externalIds": {"DOI": "10.1109/TED.2026.1"}, "url": "https://www.semanticscholar.org/paper/s2a",
+  "openAccessPdf": null, "citationCount": 1},
+ {"paperId": "s2b", "title": "Capacitorless 2T0C IGZO DRAM cell at 40 nm pitch", "abstract": "We demonstrate a capacitorless 2T0C DRAM cell using IGZO thin-film transistors at 40 nm pitch.",
+  "authors": [{"name": "A. Researcher"}, {"name": "B. Researcher"}], "venue": "", "publicationVenue": null,
+  "publicationDate": "__RECENT_DATE__", "externalIds": {"ArXiv": "2611.00001"}, "url": "https://www.semanticscholar.org/paper/s2b",
+  "openAccessPdf": {"url": "https://arxiv.org/pdf/2611.00001"}, "citationCount": 0},
+ {"paperId": "s2c", "title": "Medieval trade routes and DRAM-like ledgers", "abstract": "A history of merchant record keeping.",
+  "authors": [], "venue": "History Review", "publicationVenue": null,
+  "publicationDate": "__RECENT_DATE__", "externalIds": {}, "url": "https://www.semanticscholar.org/paper/s2c",
+  "openAccessPdf": null, "citationCount": 0, "fieldsOfStudy": ["History"]}
+]}
