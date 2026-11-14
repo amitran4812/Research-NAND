@@ -207,7 +207,7 @@ def fetch_openalex_venue(venue: dict, since: dt.date, max_results: int) -> list[
     cursor = "*"
     while cursor and len(out) < max_results:
         data = _openalex_get({
-            "filter": f"primary_location.source.issn:{venue['issn']},"
+            "filter": f"primary_location.source.issn:{venue['issn']},type:!paratext,"
                       f"from_publication_date:{since.isoformat()},to_publication_date:{utcnow().date().isoformat()}",
             "sort": "publication_date:desc",
             "per-page": min(max_results, 200),
