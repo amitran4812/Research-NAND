@@ -135,6 +135,7 @@ def parse_openalex(data: dict, topic_id: str) -> list[dict]:
         best_oa = w.get("best_oa_location") or {}
         landing = loc.get("landing_page_url") or (f"https://doi.org/{doi}" if doi else w.get("id"))
         authors = [a.get("author", {}).get("display_name") for a in w.get("authorships", [])][:8]
+        field = ((w.get("primary_topic") or {}).get("field") or {}).get("display_name")
         out.append({
             "id": ("doi:" + doi.lower()) if doi else "openalex:" + w.get("id", "").rsplit("/", 1)[-1],
             "title": title,
@@ -147,6 +148,7 @@ def parse_openalex(data: dict, topic_id: str) -> list[dict]:
             "source": "OpenAlex",
             "published": iso(parse_iso(w.get("publication_date"))),
             "cited_by": w.get("cited_by_count", 0),
+            "field": field,
             "search_topic": topic_id,
         })
     return out
@@ -173,6 +175,41 @@ def fetch_openalex(topic: dict, since: dt.date, max_results: int) -> list[dict]:
         return []
 
 
+# --------------------------------------------------------------------------- relevance
+PAPER_MIN_SCORE = 2  # a title mention (3) or at least two mentions in the abstract
+
+
+def paper_topics(p: dict, tagger: Tagger, cfg: dict) -> list[str] | None:
+    """Topics a paper is really about, judged from its title *and* abstract.
+    None means the paper is off-topic and should be dropped."""
+    rel = cfg.get("relevance") or {}
+    hub = p.get("hub") or "device"
+    fields = rel.get("openalex_fields")
+    if fields and p.get("field") and p["field"] not in fields:
+        return None  # OpenAlex files it under e.g. Social Sciences / Arts and Humanities / Medicine
+    title, abstract = p["title"], p.get("abstract", "") or ""
+    text = f"{title} {abstract}"
+    if tagger.excluded(text, hub) or not tagger.has_context(text, hub):
+        return None
+    topics = tagger.relevant_topics(title, abstract, hub=hub, min_score=PAPER_MIN_SCORE)
+    if p.get("llm_topics") is not None:  # Claude's verdict, when the API key is set
+        topics = [t for t in topics if t in p["llm_topics"]]
+    return topics or None
+
+
+def refilter(papers: list[dict], tagger: Tagger, cfg: dict) -> list[dict]:
+    """Re-check every stored paper with the current rules, so tightening config.yaml
+    also cleans the archive (not only new papers)."""
+    out = []
+    for p in papers:
+        topics = paper_topics(p, tagger, cfg)
+        if topics is None:
+            continue
+        p["topics"] = topics
+        out.append(p)
+    return out
+
+
 # --------------------------------------------------------------------------- merge
 def finalize(papers: list[dict], tagger: Tagger, cfg: dict) -> list[dict]:
     """Tag, filter for relevance, de-duplicate (DOI / arXiv id / title)."""
@@ -181,14 +218,13 @@ def finalize(papers: list[dict], tagger: Tagger, cfg: dict) -> list[dict]:
     title_index: dict[str, str] = {}
     for p in papers:
         hub = hubs.get(p["search_topic"], "device")
-        text = f"{p['title']} {p['abstract']}"
-        topics = tagger.topics_for(text, hub=hub)
-        if p["search_topic"] not in topics:
-            # Search engines match loosely; require the paper to really mention the topic.
-            if not tagger.topics_for(p["title"], hub=hub):
-                continue
-        p["topics"] = sorted(set(topics) | {p["search_topic"]})
         p["hub"] = hub
+        topics = paper_topics(p, tagger, cfg)
+        if topics is None:
+            # Search engines match loosely; the abstract must really be about the topic.
+            continue
+        p["topics"] = topics
+        text = f"{p['title']} {p['abstract']}"
         p["companies"] = tagger.companies_for(text)
         nt = norm_title(p["title"])
         key = title_index.get(nt) or p["id"]
@@ -214,10 +250,9 @@ def merge(existing: list[dict], fresh: list[dict], weeks_to_keep: int) -> list[d
         pid = titles.get(norm_title(p["title"]), p["id"])
         old = by_id.get(pid)
         if old:
-            for k in ("tldr", "domain", "image", "arxiv_id", "first_seen"):
-                if k in old and (old[k] or k == "image"):
+            for k in ("tldr", "domain", "image", "arxiv_id", "first_seen", "llm_topics", "field"):
+                if k in old and (old[k] or k in ("image", "llm_topics")) and not p.get(k):
                     p[k] = old[k]
-            p["topics"] = sorted(set(p["topics"]) | set(old.get("topics", [])))
             p["id"] = pid
         else:
             p["first_seen"] = iso(utcnow())

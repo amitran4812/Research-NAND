@@ -3,9 +3,10 @@
   "use strict";
 
   var D = { meta: null, news: [], papers: [], market: null, learn: null, insights: null, venues: null };
-  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", radarTopic: "", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false, newsSection: "all", newsRegion: "india", libGroup: "all", libSubject: "", libProvider: "all", libLevel: "all", libQuery: "" };
-  try { state.cat = localStorage.getItem("dh-cat") || "all"; } catch (e) {}
-  var DEVICE_ROUTES = ["home", "news", "research", "radar", "learn", "publish", "events"];
+  var state = { cat: "all", newsCompany: "", newsQuery: "", paperSource: "all", paperQuery: "", paperWeek: "", aiTab: "news", aiTopic: "all", pubTab: "conf", pubTier: "all", pubQ: "all", pubOA: false, newsSection: "all", newsRegion: "india", libGroup: "all", libSubject: "", libProvider: "all", libLevel: "all", libQuery: "" };
+  // Every visit starts on "All": the topic chosen last time is not restored.
+  try { localStorage.removeItem("dh-cat"); } catch (e) {}
+  var DEVICE_ROUTES = ["home", "news", "research", "learn", "publish", "events"];
   var app = document.getElementById("app");
 
   // ------------------------------------------------------------------ helpers
@@ -153,7 +154,6 @@
   }
   function setCat(c) {
     state.cat = c || "all";
-    try { localStorage.setItem("dh-cat", state.cat); } catch (e) {}
   }
   function renderCatBar(name) {
     var bar = document.getElementById("catbar");
@@ -267,8 +267,6 @@
   function pageHome() {
     var dev = D.news.filter(function (n) { return n.hub === "device" && inCat(n, state.cat); });
     var papers = D.papers.filter(function (p) { return p.hub === "device" && inCat(p, state.cat); });
-    var radar = D.insights && D.insights.topics || {};
-    var radarIds = topicsOf("device").map(function (t) { return t.id; }).filter(function (id) { return radar[id] && (state.cat === "all" || state.cat === id); });
     var q = (D.market && D.market.quotes) || [];
     var movers = q.filter(function (x) { return x.change_pct != null; }).slice().sort(function (a, b) { return Math.abs(b.change_pct) - Math.abs(a.change_pct); }).slice(0, 7);
     var lead = dev[0]; // newest story leads, with topic art if it has no photo
@@ -291,14 +289,6 @@
     h += '<section><div class="section-title"><h2>New papers</h2><a href="#/research">All papers →</a></div>';
     h += papers.length ? '<div class="list">' + papers.slice(0, 6).map(function (p) { return compactCard(p, (p.domain || p.venue || p.source) + " · " + fmtDate(p.published)); }).join("") + "</div>" : noData();
     h += "</section>";
-    if (radarIds.length) {
-      h += '<section><div class="section-title"><h2>Research gaps</h2><a href="#/radar">Open →</a></div><div class="list">';
-      radarIds.slice(0, 3).forEach(function (id) {
-        var g = (radar[id].gaps || [])[0];
-        if (g) h += '<a class="card hover gap fade-in" href="#/radar/' + esc(id) + '"><div class="eyebrow">' + esc(shortTopic(id)) + "</div><h3>" + esc(g.title) + '</h3><p class="small muted" style="margin:0">' + esc(g.what_is_missing) + "</p></a>";
-      });
-      h += "</div></section>";
-    }
     if (movers.length) {
       h += '<section><div class="section-title"><h2>Market movers</h2></div><div class="card pad"><table class="market"><tbody>' +
         movers.map(function (x) {
@@ -430,155 +420,11 @@
   function pageResearch() {
     function render(keepFocus) {
       app.innerHTML = head("Research" + catSuffix(), state.cat === "all" ? "New papers, week by week" : topicName(state.cat),
-        "From arXiv preprints and OpenAlex (IEEE, Nature, Elsevier, ACS and other journals and conferences). " + (D.meta.llm && D.meta.llm.enabled ? "Each paper has a one-line takeaway, the full abstract and a direct link." : "Each paper has its full abstract and a direct link.") + "",
-        '<a class="btn ghost" href="#/radar">Research gaps →</a>', pageArt("materials")) + papersBlock("device", state.cat, "paper-search");
+        "From arXiv preprints and OpenAlex (IEEE, Nature, Elsevier, ACS and other journals and conferences). " + (D.meta.llm && D.meta.llm.enabled ? "Each paper has a one-line takeaway, the full abstract and a direct link." : "Each paper has its full abstract and a direct link.") + "", "", pageArt("materials")) + papersBlock("device", state.cat, "paper-search");
       bindPapers(render, "paper-search");
       if (keepFocus) refocus("paper-search");
     }
     render();
-  }
-
-  function radarView(id, ins) {
-    var idx = byId();
-    var h = '<div class="card overview fade-in">' + media(null, id, id) + '<div><div class="eyebrow">' + esc(ins.name || topicName(id)) + " · " + (ins.paper_count || 0) + " recent papers · " + esc(fmtDate(ins.generated)) + "</div>" +
-      '<p style="margin:.5rem 0 1rem">' + esc(ins.overview) + '</p><a class="btn" href="#/report/' + esc(id) + '">Open one-page report</a></div></div>';
-    if ((ins.trends || []).length) {
-      h += '<section><div class="section-title"><h2>What is being done</h2></div><div class="grid-cards">' + ins.trends.map(function (t) {
-        return '<div class="card pad fade-in"><h3>' + esc(t.title) + refsHtml(t.ids, idx) + '</h3><p class="small muted" style="margin:0">' + esc(t.detail) + "</p></div>";
-      }).join("") + "</div></section>";
-    }
-    if ((ins.gaps || []).length) {
-      h += '<section><div class="section-title"><h2>Research gaps you could work on</h2></div><div class="grid-cards">' + ins.gaps.map(function (g) {
-        return '<div class="card gap fade-in"><span class="badge ' + esc(g.difficulty) + '">' + esc(g.difficulty) + "</span><h3>" + esc(g.title) + "</h3><dl>" +
-          "<dt>What's missing</dt><dd>" + esc(g.what_is_missing) + "</dd><dt>Why it matters</dt><dd>" + esc(g.why_it_matters) + "</dd>" +
-          "<dt>Suggested approach</dt><dd>" + esc(g.suggested_approach) + "</dd></dl>" +
-          ((g.ids || []).length ? '<p class="small muted" style="margin:.7rem 0 0">Related:' + refsHtml(g.ids, idx) + "</p>" : "") + "</div>";
-      }).join("") + "</div></section>";
-    }
-    if ((ins.starter_projects || []).length) {
-      h += '<section><div class="section-title"><h2>Starter project ideas</h2></div><div class="card pad"><ul style="margin:0;padding-left:1.1rem">' +
-        ins.starter_projects.map(function (s) { return '<li style="margin-bottom:.35rem">' + esc(s) + "</li>"; }).join("") + "</ul></div></section>";
-    }
-    var key = (ins.key_papers || []).map(function (k) { return idx[k]; }).filter(Boolean);
-    if (key.length) h += '<section><div class="section-title"><h2>Read these first</h2></div><div class="list">' + key.map(paperCard).join("") + "</div></section>";
-    return h;
-  }
-  function radarTiles(topics, radar, attr) {
-    return '<div class="grid-cards">' + topics.map(function (t) {
-      var ins = radar[t.id], g = (ins.gaps || [])[0];
-      return '<button type="button" class="card hover topic-tile fade-in" data-' + attr + '="' + esc(t.id) + '">' + media(null, t.id, t.id) +
-        '<div class="body"><div class="eyebrow">' + (ins.paper_count || 0) + " recent papers</div><h3>" + esc(t.name) + "</h3>" +
-        (g ? '<p class="small muted" style="margin:0"><b>Top gap:</b> ' + esc(g.title) + "</p>" : "") + "</div></button>";
-    }).join("") + "</div>";
-  }
-  function noRadar() {
-    return empty(D.meta.llm && D.meta.llm.enabled ? "Research-gap notes are generated once a day and will appear after the next run." :
-      "Research-gap notes need the Claude API. Add the <code>ANTHROPIC_API_KEY</code> secret to the repository to switch them on.");
-  }
-  // Keyword trend snapshot computed in the browser: works without the Claude API.
-  var STOP = "a an the of in on for to and or with by from at as is are was were be been this that these those we our it its via using use based into than then also can which show shows shown study studies paper results result new novel high low large small two one three both between under over within without such has have had not more most their they them here there however while due effect effects approach method methods model models data performance device devices proposed demonstrate demonstrated report reported present presented work significant significantly different various compared improved improve enable enables enabling achieve achieved".split(" ");
-  var STOPSET = {};
-  STOP.forEach(function (w) { STOPSET[w] = 1; });
-  function topTerms(items, n) {
-    var counts = {};
-    items.forEach(function (p) {
-      var words = (p.title + " " + (p.abstract || "")).toLowerCase().replace(/[^a-z0-9\-+ ]/g, " ").split(/\s+/).filter(function (w) { return w.length > 2 && !STOPSET[w] && !/^\d+$/.test(w); });
-      var seen = {};
-      for (var i = 0; i < words.length - 1; i++) {
-        var bg = words[i] + " " + words[i + 1];
-        if (!seen[bg]) { seen[bg] = 1; counts[bg] = (counts[bg] || 0) + 1; }
-      }
-    });
-    return Object.keys(counts).filter(function (k) { return counts[k] > 1; })
-      .sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, n).map(function (k) { return [k, counts[k]]; });
-  }
-  function trendSnapshot(cat) {
-    var weeks = (D.meta.weeks || []).map(function (w) { return w.key; });
-    var topics = topicsOf("device").filter(function (t) { return cat === "all" || t.id === cat; });
-    var cards = topics.map(function (t) {
-      var ps = D.papers.filter(function (p) { return p.hub === "device" && (p.topics || []).indexOf(t.id) !== -1; });
-      if (!ps.length) return "";
-      var thisW = ps.filter(function (p) { return p.week === weeks[0]; }).length;
-      var lastW = ps.filter(function (p) { return p.week === weeks[1]; }).length;
-      var venues = {};
-      ps.forEach(function (p) { if (p.venue && p.source !== "arXiv") venues[p.venue] = (venues[p.venue] || 0) + 1; });
-      var topV = Object.keys(venues).sort(function (a, b) { return venues[b] - venues[a]; }).slice(0, 3);
-      var terms = topTerms(ps, 8);
-      var cited = ps.filter(function (p) { return p.cited_by; }).sort(function (a, b) { return b.cited_by - a.cited_by; })[0];
-      var latest = ps[0];
-      return '<div class="card gap fade-in"><div class="eyebrow">' + esc(shortTopic(t.id)) + "</div>" +
-        '<h3>' + ps.length + (ps.length === 1 ? " paper" : " papers") + " <span class=\"muted small\" style=\"font-weight:500\">· " + thisW + " this week, " + lastW + " last week</span></h3>" +
-        (terms.length ? '<dl><dt>Recurring themes</dt><dd><div class="tags" style="margin-top:.3rem">' + terms.map(function (x) { return '<span class="tag topic">' + esc(x[0]) + " · " + x[1] + "</span>"; }).join("") + "</div></dd></dl>" : "") +
-        (topV.length ? "<dl><dt>Where it is published</dt><dd>" + topV.map(esc).join(" · ") + "</dd></dl>" : "") +
-        (cited ? "<dl><dt>Most cited so far</dt><dd>" + ext(cited.url, cited.title) + "</dd></dl>" : "") +
-        (latest ? "<dl><dt>Newest</dt><dd>" + ext(latest.url, latest.title) + "</dd></dl>" : "") + "</div>";
-    }).join("");
-    return cards ? '<div class="grid-cards">' + cards + "</div>" : empty("No papers in this topic yet.");
-  }
-  function pageRadar(topicId) {
-    var radar = D.insights && D.insights.topics || {};
-    var topics = topicsOf("device").filter(function (t) { return radar[t.id]; });
-    if (topicId && radar[topicId]) { setCat(topicId); renderCatBar("radar"); }
-    var h = head("Research gaps" + catSuffix(), state.cat !== "all" && radar[state.cat] ? topicName(state.cat) : "Where the open problems are",
-      "For each area: what recent papers are doing, where the gaps are, and ideas to start on. Refreshed daily from the latest papers; open a one-page report to print or save.", "", pageArt("modeling"));
-    if (!topics.length) {
-      var llmOn = D.meta.llm && D.meta.llm.enabled;
-      app.innerHTML = h + '<p class="notice">' + (llmOn ? "AI research-gap notes are generated once a day and will appear after the next run." :
-        "AI research-gap notes switch on when the <code>ANTHROPIC_API_KEY</code> secret is added.") +
-        " Meanwhile, here is a keyword snapshot of what recent papers in each topic are about.</p>" + trendSnapshot(state.cat);
-      return;
-    }
-    if (state.cat !== "all" && radar[state.cat]) { app.innerHTML = h + radarView(state.cat, radar[state.cat]); return; }
-    var note = state.cat !== "all" ? '<p class="notice">No research-gap notes for <b>' + esc(topicName(state.cat)) + "</b> yet (it needs at least 3 recent papers, and Industry & market is news-only). Showing all topics.</p>" : "";
-    app.innerHTML = h + note + radarTiles(topics, radar, "cat");
-  }
-
-  function reportMarkdown(id, ins) {
-    var idx = byId();
-    function refs(ids) {
-      return (ids || []).map(function (k) { return idx[k]; }).filter(Boolean).map(function (p) { return "[" + p.title + "](" + p.url + ")"; }).join("; ");
-    }
-    var md = "# Research brief: " + (ins.name || topicName(id)) + "\n\n_Device Hub · " + fmtDate(ins.generated) + " · based on " + (ins.paper_count || 0) + " recent papers_\n\n";
-    md += "## Where the field is\n\n" + ins.overview + "\n\n## What is being done\n\n";
-    (ins.trends || []).forEach(function (t) { md += "- **" + t.title + "** - " + t.detail + (refs(t.ids) ? " (" + refs(t.ids) + ")" : "") + "\n"; });
-    md += "\n## Research gaps\n\n";
-    (ins.gaps || []).forEach(function (g, i) {
-      md += (i + 1) + ". **" + g.title + "** (" + g.difficulty + ")\n   - Missing: " + g.what_is_missing + "\n   - Why it matters: " + g.why_it_matters + "\n   - Approach: " + g.suggested_approach + "\n" + (refs(g.ids) ? "   - Related: " + refs(g.ids) + "\n" : "");
-    });
-    if ((ins.starter_projects || []).length) md += "\n## Starter projects\n\n" + ins.starter_projects.map(function (s) { return "- " + s; }).join("\n") + "\n";
-    var key = (ins.key_papers || []).map(function (k) { return idx[k]; }).filter(Boolean);
-    if (key.length) md += "\n## Read first\n\n" + key.map(function (p) { return "- [" + p.title + "](" + p.url + ")" + (p.venue ? " - " + p.venue : ""); }).join("\n") + "\n";
-    return md + "\n_AI-generated from paper abstracts; verify against the original papers._\n";
-  }
-  function pageReport(id) {
-    var ins = D.insights && D.insights.topics && D.insights.topics[id];
-    if (!ins) { app.innerHTML = empty("No report for this topic yet."); return; }
-    var idx = byId();
-    function refList(ids) {
-      var items = (ids || []).map(function (k) { return idx[k]; }).filter(Boolean);
-      return items.length ? ' <span class="small muted">(' + items.map(function (p) { return ext(p.url, p.title.length > 60 ? p.title.slice(0, 57) + "…" : p.title); }).join("; ") + ")</span>" : "";
-    }
-    var key = (ins.key_papers || []).map(function (k) { return idx[k]; }).filter(Boolean);
-    var back = ins.hub === "ai" ? "#/ai" : "#/radar/" + esc(id);
-    app.innerHTML = '<div class="report-actions"><a class="btn ghost" href="' + back + '">← Back</a><button class="btn" type="button" id="print-report">Print / save as PDF</button><button class="btn ghost" type="button" id="md-report">Download Markdown</button></div>' +
-      '<div class="report fade-in"><div class="eyebrow">Device Hub research brief</div><h1>' + esc(ins.name || topicName(id)) + "</h1>" +
-      '<p class="muted small">' + esc(fmtDate(ins.generated)) + " · based on " + (ins.paper_count || 0) + " recent papers · AI-generated from abstracts, so verify against the papers</p>" +
-      "<h2>Where the field is</h2><p>" + esc(ins.overview) + "</p>" +
-      "<h2>What is being done</h2><ul>" + (ins.trends || []).map(function (t) { return "<li><b>" + esc(t.title) + ".</b> " + esc(t.detail) + refList(t.ids) + "</li>"; }).join("") + "</ul>" +
-      "<h2>Research gaps</h2><ol>" + (ins.gaps || []).map(function (g) {
-        return "<li><b>" + esc(g.title) + '</b> <span class="badge ' + esc(g.difficulty) + '">' + esc(g.difficulty) + "</span><br>" + esc(g.what_is_missing) + " <i>Why it matters:</i> " + esc(g.why_it_matters) + " <i>Approach:</i> " + esc(g.suggested_approach) + refList(g.ids) + "</li>";
-      }).join("") + "</ol>" +
-      ((ins.starter_projects || []).length ? "<h2>Starter projects</h2><ul>" + ins.starter_projects.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ul>" : "") +
-      (key.length ? "<h2>Read first</h2><ul>" + key.map(function (p) { return "<li>" + ext(p.url, p.title) + (p.venue ? ' <span class="muted small">' + esc(p.venue) + "</span>" : "") + "</li>"; }).join("") + "</ul>" : "") + "</div>";
-    document.getElementById("print-report").addEventListener("click", function () { window.print(); });
-    document.getElementById("md-report").addEventListener("click", function () {
-      var blob = new Blob([reportMarkdown(id, ins)], { type: "text/markdown" });
-      var a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = "device-hub-" + id + "-" + (ins.generated || "").slice(0, 10) + ".md";
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
-    });
   }
 
   function playbookHtml() {
@@ -594,9 +440,8 @@
       ((pb.skills || []).length ? '<section><div class="section-title"><h2>Skills to learn</h2></div><div class="tags">' + pb.skills.map(function (s) { return '<span class="tag topic" style="font-size:.85rem;padding:.3rem .8rem">' + esc(s) + "</span>"; }).join("") + "</div></section>" : "");
   }
   function pageAI() {
-    var tabs = [["news", "AI news"], ["papers", "AI research"], ["playbook", "AI in devices & VLSI"], ["radar", "AI research gaps"]];
+    var tabs = [["news", "AI news"], ["papers", "AI research"], ["playbook", "AI in devices & VLSI"]];
     function render(keepFocus) {
-      var radar = D.insights && D.insights.topics || {};
       var h = head("AI Hub", "AI, and how it is reshaping devices & VLSI", "Latest AI news and research, and how machine learning and LLMs are being applied to device physics, materials, EDA and chip design.", "", "ai");
       h += briefingCard("ai");
       h += '<div class="controls"><div class="chips">' + tabs.map(function (t) { return chip(t[1], t[0], state.aiTab === t[0], "aitab"); }).join("") + "</div></div>";
@@ -606,17 +451,9 @@
       }
       if (state.aiTab === "news") h += newsBlock("ai", state.aiTopic, "ai-news-search");
       else if (state.aiTab === "papers") h += papersBlock("ai", state.aiTopic, "ai-paper-search");
-      else if (state.aiTab === "playbook") h += playbookHtml();
-      else {
-        var topics = topicsOf("ai").filter(function (t) { return radar[t.id]; });
-        if (!topics.length) h += noRadar();
-        else {
-          var cur = radar[state.radarTopic] && topics.some(function (t) { return t.id === state.radarTopic; }) ? state.radarTopic : topics[0].id;
-          h += '<div class="controls"><div class="chips">' + topics.map(function (t) { return chip(t.name, t.id, t.id === cur, "airadar"); }).join("") + "</div></div>" + radarView(cur, radar[cur]);
-        }
-      }
+      else h += playbookHtml();
       app.innerHTML = h;
-      [["aitab", "aiTab"], ["aitopic", "aiTopic"], ["airadar", "radarTopic"]].forEach(function (pair) {
+      [["aitab", "aiTab"], ["aitopic", "aiTopic"]].forEach(function (pair) {
         Array.prototype.forEach.call(app.querySelectorAll("[data-" + pair[0] + "]"), function (b) {
           b.addEventListener("click", function () { state[pair[1]] = b.getAttribute("data-" + pair[0]); render(); });
         });
@@ -921,8 +758,6 @@
     var b = e.target.closest && e.target.closest("[data-cat]");
     if (!b) return;
     setCat(b.getAttribute("data-cat"));
-    var name = currentRoute().name;
-    if (name === "radar" && location.hash !== "#/radar") { location.hash = "#/radar"; return; }
     route(true);
   });
   function currentRoute() {
@@ -941,12 +776,10 @@
     var r = currentRoute();
     if (r.cat) setCat(r.cat);
     renderCatBar(r.name);
-    var reportHub = r.name === "report" && D.insights && D.insights.topics && D.insights.topics[r.arg] && D.insights.topics[r.arg].hub;
-    setActive(r.name === "report" ? (reportHub === "ai" ? "ai" : "radar") : r.name);
+    if (r.name === "radar" || r.name === "report") { location.replace("#/research"); return; } // old Research gaps links
+    setActive(r.name);
     if (r.name === "news") pageNews();
     else if (r.name === "research") pageResearch();
-    else if (r.name === "radar") pageRadar(r.arg);
-    else if (r.name === "report") pageReport(r.arg);
     else if (r.name === "ai") pageAI();
     else if (r.name === "learn") pageLearn();
     else if (r.name === "publish" || r.name === "events") { setActive("publish"); pagePublish(); }

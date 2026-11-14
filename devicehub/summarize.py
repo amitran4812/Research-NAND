@@ -1,5 +1,5 @@
 """Claude-powered summaries: news briefs, paper TL;DRs, daily briefings,
-research-gap radar per topic, and the AI-in-devices/VLSI playbook.
+relevance checks, and the AI-in-devices/VLSI playbook.
 
 Needs ANTHROPIC_API_KEY (a GitHub Actions secret). Without it every function
 returns None and the site falls back to feed descriptions and abstracts.
@@ -106,6 +106,44 @@ class Summarizer:
                     out[r["id"]] = r["brief"].strip()
         return out
 
+    # ------------------------------------------------------------------ relevance check
+    def relevance(self, items: list[dict], topics: list[dict], kind: str, batch: int = 40) -> dict[str, list[str]]:
+        """Second opinion on items that passed the keyword rules: for each item, the
+        candidate topics it is genuinely about (an empty list means off-topic).
+        kind is "news" or "papers"; papers are judged from their abstract."""
+        out: dict[str, list[str]] = {}
+        names = {t["id"]: t["name"] for t in topics}
+        schema = _obj({"items": {"type": "array", "items": _obj({"id": _STR, "topics": _IDS})}})
+        system = (
+            "You screen content for Device Hub, a portal for researchers in semiconductor devices "
+            "(DRAM, NAND flash, HBF high-bandwidth flash, emerging memory, transistors, materials, "
+            "process, packaging, VLSI) with an AI Hub for AI research and AI applied to chips. "
+            "Each item lists candidate topic ids that a keyword match suggested. Return, for every item, "
+            "only the candidate topics the item is genuinely about, judged from its "
+            + ("abstract" if kind == "papers" else "headline and description") + ". "
+            "Return an empty list when the keyword match is a coincidence: a different meaning of an "
+            "acronym (HBF Park stadium, HbF hemoglobin, a stock ticker), or work from another field "
+            "(religion, law, medicine, agriculture, social science) that only mentions the term in "
+            "passing. AI Hub topics need the item to be about AI/ML research, products or hardware itself."
+        )
+        for i in range(0, len(items), batch):
+            chunk = items[i:i + batch]
+            payload = [{
+                "id": it["id"], "title": it["title"],
+                "text": (it.get("abstract") if kind == "papers" else it.get("description", "")) or "",
+                "candidates": {t: names.get(t, t) for t in it.get("topics", [])},
+            } for it in chunk]
+            for p in payload:
+                p["text"] = p["text"][:1200]
+            res = self._ask(system, "Items (JSON):\n" + json.dumps(payload, ensure_ascii=False), schema)
+            if res is None:
+                continue
+            allowed = {it["id"]: set(it.get("topics", [])) for it in chunk}
+            for r in res.get("items", []):
+                if r.get("id") in allowed:
+                    out[r["id"]] = [t for t in r.get("topics", []) if t in allowed[r["id"]]]
+        return out
+
     # ------------------------------------------------------------------ paper TL;DRs
     def paper_tldrs(self, papers: list[dict], batch: int = 25) -> dict[str, dict]:
         out: dict[str, dict] = {}
@@ -149,39 +187,6 @@ class Summarizer:
                       "brief": n.get("brief") or n.get("description", "")[:300]} for n in news[:70]],
             "papers": [{"id": p["id"], "title": p["title"], "tldr": p.get("tldr") or p.get("abstract", "")[:300]}
                        for p in papers[:30]],
-        }
-        return self._ask(system, json.dumps(payload, ensure_ascii=False), schema, effort="medium")
-
-    # ------------------------------------------------------------------ research radar
-    def topic_insight(self, topic: dict, papers: list[dict], news: list[dict]) -> dict | None:
-        schema = _obj({
-            "overview": _STR,
-            "trends": {"type": "array", "items": _obj({"title": _STR, "detail": _STR, "ids": _IDS})},
-            "gaps": {"type": "array", "items": _obj({
-                "title": _STR, "what_is_missing": _STR, "why_it_matters": _STR,
-                "suggested_approach": _STR,
-                "difficulty": {"type": "string", "enum": ["starter", "moderate", "ambitious"]},
-                "ids": _IDS,
-            })},
-            "starter_projects": {"type": "array", "items": _STR},
-            "key_papers": _IDS,
-        })
-        system = (
-            "You are a senior researcher in semiconductor devices advising a PhD-level researcher. "
-            f"Topic: {topic['name']}. From the recent papers and news supplied, write a research radar: "
-            "'overview' - one paragraph (max 120 words) on what the field is doing right now; "
-            "'trends' - 3-5 concrete directions with the paper ids that show them; "
-            "'gaps' - 3-5 open research gaps a researcher could realistically work on: what is missing in "
-            "the supplied work, why it matters (industry relevance, e.g. scaling, reliability, cost, "
-            "power), and a suggested approach (simulation/TCAD, fabrication, characterization, modelling, "
-            "circuit co-design), with difficulty and related ids; 'starter_projects' - 2-4 one-line "
-            "project ideas; 'key_papers' - up to 5 ids to read first. Ground every claim in the supplied "
-            "items and say when evidence is thin. Plain text, no markdown."
-        )
-        payload = {
-            "papers": [{"id": p["id"], "title": p["title"], "venue": p.get("venue"),
-                        "abstract": p.get("abstract", "")[:1200]} for p in papers[:40]],
-            "news": [{"id": n["id"], "title": n["title"], "brief": n.get("brief", "")} for n in news[:20]],
         }
         return self._ask(system, json.dumps(payload, ensure_ascii=False), schema, effort="medium")
 

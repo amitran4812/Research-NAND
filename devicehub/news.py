@@ -99,16 +99,29 @@ def fetch_publisher_feed(feed: dict) -> list[dict]:
 
 
 def tag_and_filter(items: list[dict], tagger: Tagger) -> list[dict]:
-    """Attach topic/company tags. Publisher-feed items must match a topic keyword of
-    their hub; Google News results are already query-targeted."""
+    """Attach topic/company tags and drop stories that are not really about the
+    portal's subjects. The headline *and* the description are read: a story must
+    mention its hub's domain (semiconductors for the device pages, AI for the AI Hub),
+    must not be from an unrelated field (e.g. "HBF Park" football, HbF hemoglobin
+    drugs, a ticker-symbol trading page), and must score on at least one topic.
+    Google News results with no topic are kept only when the headline is clearly
+    about semiconductors / AI, since their query already targeted the subject."""
     kept = []
     for it in items:
-        text = f"{it['title']} {it.get('description', '')}"
-        it["topics"] = tagger.topics_for(text, hub=it["hub"])
+        title, body = it["title"], it.get("description", "") or ""
+        text = f"{title} {body}"
+        hub = it["hub"]
+        if tagger.excluded(text, hub) or not tagger.has_context(text, hub):
+            continue
+        it["topics"] = tagger.relevant_topics(title, body, hub=hub)
+        if it.get("llm_topics") is not None:  # Claude's verdict, when the API key is set
+            it["topics"] = [t for t in it["topics"] if t in it["llm_topics"]]
+            if not it["llm_topics"]:
+                continue
         it["companies"] = tagger.companies_for(text)
         if it["origin"] == "feed" and not it["topics"]:
             # General tech feeds: a company mention alone (e.g. "Nvidia game bundle")
-            # is too weak, so require a device/memory/VLSI topic keyword.
+            # is too weak, so require a device/memory/VLSI topic.
             continue
         kept.append(it)
     return kept
@@ -153,8 +166,8 @@ def merge(existing: list[dict], fresh: list[dict], keep_days: int) -> list[dict]
     for it in fresh:
         old = by_id.get(it["id"])
         if old:
-            for k in ("brief", "image", "img_checked"):
-                if old.get(k) and not it.get(k):
+            for k in ("brief", "image", "img_checked", "llm_topics"):
+                if (old.get(k) or (k == "llm_topics" and old.get(k) is not None)) and not it.get(k):
                     it[k] = old[k]
             it["first_seen"] = old.get("first_seen", it.get("published"))
             # keep the earliest published date
