@@ -23,6 +23,20 @@ log = logging.getLogger("devicehub")
 STAGES = ("news", "papers", "market", "learn", "insights")
 MAX_NEW_BRIEFS = 160
 MAX_NEW_TLDRS = 200
+MAX_RELEVANCE_CHECKS = 400
+
+
+def _llm_relevance(items: list[dict], cfg, llm: Summarizer, kind: str) -> None:
+    """Ask Claude to confirm the topics of items it has not judged yet (stored as llm_topics)."""
+    todo = [it for it in items if it.get("llm_topics") is None and it.get("topics")][:MAX_RELEVANCE_CHECKS]
+    if not todo or not llm.enabled:
+        return
+    verdicts = llm.relevance(todo, cfg["topics"], kind)
+    for it in todo:
+        if it["id"] in verdicts:
+            it["llm_topics"] = verdicts[it["id"]]
+    log.info("Claude relevance check (%s): %d judged, %d off-topic", kind, len(verdicts),
+             sum(1 for v in verdicts.values() if not v))
 
 
 def _older_than(ts: str | None, hours: float) -> bool:
@@ -36,6 +50,11 @@ def run_news(cfg, tagger, llm: Summarizer) -> list[dict]:
     if not fresh and store["items"]:
         log.warning("No news fetched; keeping previous data")
     items = news.merge(store["items"], fresh, cfg["site"].get("news_days_to_keep", 10))
+    before = len(items)
+    items = news.tag_and_filter(items, tagger)  # re-check the archive with the current rules
+    _llm_relevance(items, cfg, llm, "news")
+    items = news.tag_and_filter(items, tagger)
+    log.info("News relevance: kept %d of %d stories", len(items), before)
     log.info("Looked up preview images for %d stories", news.add_page_images(items))
     todo = [it for it in items if not it.get("brief")][:MAX_NEW_BRIEFS]
     if todo and llm.enabled:
@@ -57,6 +76,11 @@ def run_papers(cfg, tagger, llm: Summarizer) -> list[dict]:
     if not fresh and store["items"]:
         log.warning("No papers fetched; keeping previous data")
     items = papers.merge(store["items"], fresh, cfg["site"].get("weeks_to_keep", 8))
+    before = len(items)
+    items = papers.refilter(items, tagger, cfg)  # re-check the archive with the current rules
+    _llm_relevance(items, cfg, llm, "papers")
+    items = papers.refilter(items, tagger, cfg)
+    log.info("Paper relevance: kept %d of %d papers", len(items), before)
     n_fig = papers.add_figures(items)
     log.info("Looked up figures for %d arXiv papers", n_fig)
     todo = [p for p in items if not p.get("tldr") and p.get("abstract")][:MAX_NEW_TLDRS]
@@ -90,7 +114,8 @@ def run_insights(cfg, llm: Summarizer, news_items, paper_items, force: bool) -> 
     if not llm.enabled:
         log.info("Insights skipped (no ANTHROPIC_API_KEY)")
         return
-    store = read_json("insights.json", {"briefings": {}, "topics": {}, "playbook": None})
+    store = read_json("insights.json", {"briefings": {}, "playbook": None})
+    store.pop("topics", None)  # research-gap notes were retired
     now = iso(utcnow())
     recent_cut = utcnow() - dt.timedelta(hours=36)
 
@@ -107,24 +132,7 @@ def run_insights(cfg, llm: Summarizer, news_items, paper_items, force: bool) -> 
             b["generated"] = now
             store["briefings"][hub] = b
 
-    # Research radar per topic + AI playbook: once a day.
-    for topic in cfg["topics"]:
-        if not topic.get("search"):
-            continue  # news-only category: no research radar
-        prev = store["topics"].get(topic["id"]) or {}
-        if not force and not _older_than(prev.get("generated"), 20):
-            continue
-        tp = [p for p in paper_items if topic["id"] in p.get("topics", [])]
-        tn = [n for n in news_items if topic["id"] in n.get("topics", [])]
-        if len(tp) < 3:
-            log.info("Radar %s: only %d papers, skipped", topic["id"], len(tp))
-            continue
-        ins = llm.topic_insight(topic, tp, tn)
-        if ins:
-            ins.update({"generated": now, "paper_count": len(tp), "name": topic["name"], "hub": topic["hub"]})
-            store["topics"][topic["id"]] = ins
-            log.info("Radar %s: done (%d papers)", topic["id"], len(tp))
-
+    # AI playbook: once a day.
     if force or _older_than((store.get("playbook") or {}).get("generated"), 20):
         ai_ids = {"ai-for-devices", "ai-for-vlsi", "ai-hardware"}
         pp = [p for p in paper_items if ai_ids & set(p.get("topics", []))]
@@ -171,7 +179,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--only", help="comma-separated stages: " + ",".join(STAGES))
     ap.add_argument("--no-llm", action="store_true", help="skip all Claude calls")
     ap.add_argument("--force-market", action="store_true", help="refetch prices even if done today")
-    ap.add_argument("--force-insights", action="store_true", help="regenerate research radar now")
+    ap.add_argument("--force-insights", action="store_true", help="regenerate the AI playbook now")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,

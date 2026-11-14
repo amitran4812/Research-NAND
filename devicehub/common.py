@@ -132,23 +132,118 @@ def make_id(*parts: str) -> str:
     return hashlib.sha1("|".join(parts).encode("utf-8")).hexdigest()[:12]
 
 
-def _kw_regex(words: Iterable[str]) -> re.Pattern:
+def _kw_regex(words: Iterable[str]) -> re.Pattern | None:
     alts = sorted({w.lower() for w in words if w}, key=len, reverse=True)
-    return re.compile(r"(?<![a-z0-9])(" + "|".join(re.escape(a) for a in alts) + r")(?![a-z0-9])", re.I)
+    if not alts:
+        return None
+    # An optional plural "s" is allowed, so "transistor" also matches "transistors", "CFET" "CFETs".
+    return re.compile(r"(?<![a-z0-9])(" + "|".join(_phrase(a) for a in alts) + r")s?(?![a-z0-9])", re.I)
+
+
+def _phrase(word: str) -> str:
+    """Regex for a keyword where a space and a hyphen are interchangeable
+    ("machine learning" also matches "machine-learning-based")."""
+    return re.sub(r"(?:\\ |\\-|-| )", r"[\\s\\-]", re.escape(word))
+
+
+def _stem_regex(words: Iterable[str]) -> re.Pattern | None:
+    """Matches words that *start* with any of the given stems ("religio" -> religious, religion)."""
+    alts = sorted({w.lower() for w in words if w}, key=len, reverse=True)
+    if not alts:
+        return None
+    return re.compile(r"(?<![a-z0-9])(" + "|".join(re.escape(a) for a in alts) + r")", re.I)
+
+
+def _count(rx: re.Pattern | None, text: str) -> int:
+    return len(rx.findall(text)) if rx is not None and text else 0
 
 
 class Tagger:
-    """Tags text with topic ids and company names using whole-word keyword matching."""
+    """Decides which topics an item is really about, reading its title *and* its
+    abstract / description, not just whether a keyword appears somewhere.
+
+    For every topic in config.yaml:
+      * keywords + search phrases are "strong" terms;
+      * "ambiguous" terms (short acronyms such as HBF, PCM, ALD, or everyday words
+        such as yield, retention, fab) only count when the text also contains a
+        semiconductor context term (the hub's "context" list or the topic's own);
+      * any "exclude" term (topic-level or hub-level, matched as a word stem)
+        rules the topic out, e.g. "HBF Park" (a stadium) or a religious-studies
+        paper that happens to mention LLMs.
+    A title hit counts 3, a hit in the abstract / description counts 1, and a topic
+    is kept when its score reaches the caller's threshold.
+    """
+
+    TITLE_WEIGHT = 3
 
     def __init__(self, cfg: dict):
+        rel = cfg.get("relevance") or {}
+        self.hub_context: dict[str, re.Pattern | None] = {}
+        self.hub_exclude: dict[str, re.Pattern | None] = {}
+        ambiguous: dict[str, set[str]] = {}
+        strong: dict[str, set[str]] = {}
+        for t in cfg.get("topics", []):
+            hub = t.get("hub", "device")
+            amb = {w.lower() for w in t.get("ambiguous", [])}
+            ambiguous.setdefault(hub, set()).update(amb)
+            strong.setdefault(hub, set()).update(
+                w.lower() for w in list(t.get("keywords", [])) + list(t.get("search", [])) if w.lower() not in amb)
+        for hub, hc in rel.items():
+            if isinstance(hc, dict) and ("context" in hc or "exclude" in hc):
+                # A topic's unambiguous keywords (e.g. "hafnium oxide", "3D NAND") also show
+                # the item is in the hub's domain; an ambiguous word can never vouch for
+                # itself (e.g. "HBF" in "HBF Park").
+                ctx = [w for w in list(hc.get("context", [])) + sorted(strong.get(hub, set()))
+                       if w.lower() not in ambiguous.get(hub, set())]
+                self.hub_context[hub] = _kw_regex(ctx)
+                self.hub_exclude[hub] = _stem_regex(hc.get("exclude", []))
         self.topics = []
         for t in cfg.get("topics", []):
-            words = list(t.get("keywords", [])) + list(t.get("search", []))
-            self.topics.append((t["id"], t["hub"], _kw_regex(words)))
+            amb = {w.lower() for w in t.get("ambiguous", [])}
+            words = [w for w in list(t.get("keywords", [])) + list(t.get("search", [])) if w.lower() not in amb]
+            self.topics.append({
+                "id": t["id"], "hub": t["hub"],
+                "strong": _kw_regex(words),
+                "weak": _kw_regex(amb),
+                "context": _kw_regex(t.get("context", [])),
+                "exclude": _stem_regex(t.get("exclude", [])),
+            })
         self.companies = [(c, _kw_regex([c])) for c in cfg.get("companies", [])]
 
+    # ------------------------------------------------------------------ checks
+    def excluded(self, text: str, hub: str) -> bool:
+        """True when the text is clearly from another field (hub-level negative terms)."""
+        return _count(self.hub_exclude.get(hub), text) > 0
+
+    def has_context(self, text: str, hub: str) -> bool:
+        """True when the text mentions the hub's domain (semiconductors / AI) at all."""
+        rx = self.hub_context.get(hub)
+        return rx is None or _count(rx, text) > 0
+
+    def scores(self, title: str, body: str = "", hub: str | None = None) -> dict[str, int]:
+        """Relevance score per topic for an item with this title and body text."""
+        text = f"{title} {body}"
+        out: dict[str, int] = {}
+        hub_bad = {h: self.excluded(text, h) for h in self.hub_exclude}
+        hub_ctx = {h: self.has_context(text, h) for h in set(t["hub"] for t in self.topics)}
+        for t in self.topics:
+            if hub is not None and t["hub"] != hub:
+                continue
+            if hub_bad.get(t["hub"]) or _count(t["exclude"], text):
+                continue
+            score = self.TITLE_WEIGHT * _count(t["strong"], title) + _count(t["strong"], body)
+            if t["weak"] is not None and (hub_ctx[t["hub"]] or _count(t["context"], text)):
+                score += self.TITLE_WEIGHT * _count(t["weak"], title) + _count(t["weak"], body)
+            if score:
+                out[t["id"]] = score
+        return out
+
+    def relevant_topics(self, title: str, body: str = "", hub: str | None = None, min_score: int = 1) -> list[str]:
+        return [tid for tid, sc in self.scores(title, body, hub).items() if sc >= min_score]
+
     def topics_for(self, text: str, hub: str | None = None) -> list[str]:
-        return [tid for tid, h, rx in self.topics if (hub is None or h == hub) and rx.search(text)]
+        """Topics for a single piece of text (treated as a title)."""
+        return self.relevant_topics(text, "", hub)
 
     def companies_for(self, text: str) -> list[str]:
         return [name for name, rx in self.companies if rx.search(text)]

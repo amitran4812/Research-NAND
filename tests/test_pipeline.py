@@ -195,6 +195,67 @@ class TaggerTest(unittest.TestCase):
         self.assertNotIn("emerging-memory", t.topics_for("Pcmag reviews the newest laptop"))
         self.assertIn("logic-devices", t.topics_for("imec shows CFET with backside power"))
         self.assertIn("ai-for-vlsi", t.topics_for("LLM writes Verilog for chip design", hub="ai"))
+        # plurals and hyphen/space variants
+        self.assertIn("logic-devices", t.topics_for("Low-power 2D CFETs on a single-crystal dielectric"))
+        self.assertIn("ai-for-devices", t.topics_for("Machine-learning-based reconstruction of SEM images", hub="ai"))
+
+
+class RelevanceTest(unittest.TestCase):
+    """Items are judged by their abstract / description, not a bare keyword hit."""
+
+    def setUp(self):
+        from devicehub.common import Tagger, load_config
+        self.cfg = load_config()
+        self.t = Tagger(self.cfg)
+
+    def news(self, title, desc="", hub="device", origin="google"):
+        from devicehub import news
+        it = {"id": "x", "title": title, "description": desc, "hub": hub, "origin": origin}
+        return news.tag_and_filter([it], self.t)
+
+    def paper(self, title, abstract, topic, field=None):
+        from devicehub import papers
+        hub = {t["id"]: t["hub"] for t in self.cfg["topics"]}[topic]
+        p = {"id": "p", "title": title, "abstract": abstract, "hub": hub, "search_topic": topic, "field": field}
+        return papers.paper_topics(p, self.t, self.cfg)
+
+    def test_hbf_means_high_bandwidth_flash(self):
+        self.assertEqual(self.news("Police Investigate Violent Disorder Near HBF Park After Perth Glory Match"), [])
+        self.assertEqual(self.news("Fulcrum Therapeutics Agrees to Sell Early-Stage HbF Assets"), [])
+        self.assertEqual(self.news("(HBF) Trading Signals (HBF:CA)"), [])
+        kept = self.news("Could HBF be the solution to the memory bottleneck?")
+        self.assertEqual(len(kept), 1)
+        self.assertIn("hbf", kept[0]["topics"])
+        self.assertIn("hbf", self.news("SanDisk and SK hynix standardise High Bandwidth Flash")[0]["topics"])
+
+    def test_feed_story_needs_a_real_topic(self):
+        self.assertEqual(self.news("Security researcher jailbreaks car to update the clock", "A car's head unit.", origin="feed"), [])
+        kept = self.news("SK hynix begins mass production of 321-layer NAND", "The 3D NAND uses charge trap cells.", origin="feed")
+        self.assertIn("nand", kept[0]["topics"])
+
+    def test_religious_paper_is_not_an_ai_paper(self):
+        self.assertIsNone(self.paper(
+            "Al-Ghasali: A Computational Framework for Simulating Islamic Jurisprudential Rulings via Finite State Automata and Large Language Models",
+            "This paper presents Al Ghasali, a framework to formalize Islamic jurisprudential (Fiqh) rulings with LLMs.", "ai-general"))
+        self.assertIn("ai-for-vlsi", self.paper(
+            "LLM agents for RTL generation", "We use a large language model to write Verilog for chip design.", "ai-for-vlsi"))
+
+    def test_acronym_clash_in_abstract(self):
+        # "SRAM" here is a social-science mentoring model, not static RAM.
+        self.assertIsNone(self.paper(
+            "Community-led models and socio-religio-academic mentoring in countering violent extremism",
+            "This article explores the Socio-Religio-Academic Mentoring (SRAM) model applied in the UK.", "sram"))
+        self.assertIsNone(self.paper("SRAM-like scheduling", "A study of school timetables.", "sram", field="Social Sciences"))
+        self.assertIn("sram", self.paper("A 6T SRAM bitcell at 2 nm", "We report a 6T SRAM bitcell with nanosheet transistors.", "sram"))
+
+    def test_materials_need_device_context(self):
+        self.assertIsNone(self.paper("Graphene oxide membranes for water filtration",
+                                     "Graphene oxide sheets filter salt from seawater.", "materials"))
+        self.assertIn("materials", self.paper("Graphene contacts for MoS2 transistors",
+                                              "Graphene edge contacts lower the contact resistance of MoS2 field-effect transistors.", "materials"))
+
+    def test_one_passing_mention_is_not_enough_for_a_paper(self):
+        self.assertIsNone(self.paper("Supply chains in retail", "We also mention DRAM once.", "dram"))
 
 
 
@@ -219,6 +280,19 @@ class SummarizerTest(unittest.TestCase):
         self.assertEqual(kw["model"], "claude-opus-5-5")
         self.assertEqual(kw["output_config"]["format"]["type"], "json_schema")
         self.assertEqual(kw["fallbacks"], "default")
+
+    def test_relevance_check_only_narrows_candidates(self):
+        from types import SimpleNamespace
+
+        from devicehub.summarize import Summarizer
+        s = Summarizer()
+        body = {"items": [{"id": "a", "topics": []}, {"id": "b", "topics": ["hbf", "dram"]}]}
+        s.client = SimpleNamespace(beta=SimpleNamespace(messages=SimpleNamespace(create=lambda **kw: SimpleNamespace(
+            stop_reason="end_turn", stop_details=None, content=[SimpleNamespace(type="text", text=json.dumps(body))]))))
+        items = [{"id": "a", "title": "HBF Park match", "topics": ["hbf"]},
+                 {"id": "b", "title": "High bandwidth flash", "topics": ["hbf"]}]
+        out = s.relevance(items, [{"id": "hbf", "name": "HBF"}], "news")
+        self.assertEqual(out, {"a": [], "b": ["hbf"]})  # "dram" was not a candidate
 
     def test_refusal_returns_none(self):
         from types import SimpleNamespace
