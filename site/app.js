@@ -486,8 +486,8 @@
   // ------------------------------------------------------------------ free video course library (devices / circuits)
   var LIB_GROUPS = [
     ["all", "All", "Every free video course in the library"],
-    ["devices", "Devices", "Device physics, modeling, power devices, nanoelectronics"],
-    ["circuits", "Circuits", "Analog, digital and VLSI circuit design"]
+    ["devices", "Devices", "Device physics, memory, materials, fabrication, packaging"],
+    ["circuits", "Circuits", "Analog, RF, digital, VLSI CAD and architecture"]
   ];
   var LEVELS = ["Beginner", "Intermediate", "Advanced"];
   function libMatches(c, q) {
@@ -515,7 +515,7 @@
     });
     var gc = { all: all.length, devices: 0, circuits: 0 };
     all.forEach(function (c) { gc[c.group] = (gc[c.group] || 0) + 1; });
-    var h = '<section id="library"><div class="section-title"><h2>Free video courses</h2><span class="muted small">' + all.length + " courses · NPTEL, MIT OpenCourseWare, nanoHUB</span></div>" +
+    var h = '<section id="library"><div class="section-title"><h2>Free video courses</h2><span class="muted small">' + all.length + " courses · NPTEL, MIT, nanoHUB, Coursera, edX, YouTube</span></div>" +
       '<div class="region-tabs lib-tabs fade-in" role="tablist">' + LIB_GROUPS.map(function (g) {
         return '<button type="button" class="region' + (state.libGroup === g[0] ? " active" : "") + '" data-libgroup="' + g[0] + '"><b>' + esc(g[1]) + "</b><span>" + esc(g[2]) + "</span><i>" + (gc[g[0]] || 0) + "</i></button>";
       }).join("") + "</div>";
@@ -574,7 +574,7 @@
     var talks = items.filter(function (i) { return i.kind === "interview"; });
     var reads = items.filter(function (i) { return i.kind === "article"; });
     var h = head("Learn" + catSuffix(), cat === "all" ? "Lectures, courses & deep dives" : topicName(cat),
-      "Free video courses from IIT and IISc professors on NPTEL, MIT OpenCourseWare and Purdue's nanoHUB, sorted into Devices and Circuits. Filter by subject, provider and level, or search for a professor.", "", pageArt("sram"));
+      "Free video courses from IIT and IISc on NPTEL, MIT, Purdue's nanoHUB, Berkeley, Cornell, Georgia Tech and ETH Zürich, plus Coursera and edX courses you can audit free. Filter by subject, provider and level, or search for a professor.", "", pageArt("sram"));
 
     h += libraryBlock(L.library || {});
 
