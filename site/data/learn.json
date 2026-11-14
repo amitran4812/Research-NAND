@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T06:48:52Z",
+ "updated": "2026-11-14T07:15:12Z",
  "items": [
   {
    "id": "2f88f8937300",
@@ -58,7 +58,9 @@
    "thumbnail": "https://substackcdn.com/image/fetch/$s_!yMix!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2f060cf6-e633-4930-a5b9-31e783fbbe96_700x394.jpeg",
    "description": "Is NVIDIA Over? Export Controls, RASA, Open Source Implications, Supply Chain Implications, Affair, US Still Dependent On China",
    "published": "2026-11-12T18:06:26Z",
-   "topics": []
+   "topics": [
+    "industry"
+   ]
   },
   {
    "id": "8d0dcddd2bd6",
@@ -628,6 +630,7 @@
    "description": "Agentic AI runs its tools on the CPU, and no vendor tells you how many cores an agent needs. In this keynote at the Design Automation Conference, I compare AMD Venice, Intel Xeon 6, the Arm AGI CPU and Nvidia Vera, then follow the problem down into advanced packaging, CFETs and…",
    "published": "2026-10-09T13:00:13Z",
    "topics": [
+    "logic-devices",
     "packaging"
    ]
   },
@@ -800,9 +803,7 @@
    "thumbnail": null,
    "description": "In gory detail: reliability, performance, support, pricing—and, of course, security—in our most thorough analysis of GPU cloud providers globally.",
    "published": "2026-09-23T21:20:29Z",
-   "topics": [
-    "reliability"
-   ]
+   "topics": []
   },
   {
    "id": "db4ba69b7898",

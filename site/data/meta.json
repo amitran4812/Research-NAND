@@ -1,7 +1,7 @@
 {
  "title": "Device Hub",
- "tagline": "Nanoscale devices, memory & storage, VLSI — news and research, twice a day",
- "updated": "2026-11-14T06:48:52Z",
+ "tagline": "Nanoscale devices, memory & VLSI — news and research, twice a day",
+ "updated": "2026-11-14T07:15:12Z",
  "edition": "morning",
  "llm": {
   "enabled": false,
@@ -113,17 +113,17 @@
   {
    "key": "2026-W46",
    "label": "Nov 09 – Nov 15, 2026",
-   "count": 428
+   "count": 315
   },
   {
    "key": "2026-W45",
    "label": "Nov 02 – Nov 08, 2026",
-   "count": 243
+   "count": 159
   },
   {
    "key": "2026-W44",
    "label": "Oct 26 – Nov 01, 2026",
-   "count": 61
+   "count": 49
   }
  ]
 }
