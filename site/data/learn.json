@@ -1,6 +1,17 @@
 {
- "updated": "2026-11-14T18:41:58Z",
+ "updated": "2026-11-15T07:05:06Z",
  "items": [
+  {
+   "id": "4f8b0697a629",
+   "title": "Musk Warns Nvidia Could Lose Key Deals Without Huang",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeVpYQUpfUFJ2Sjc4SWRWQXZ4SEctejhJdG9Id1FVMjF5R0x6QnVhaUxtTWVCOThBYWlRYmJFaXlDTS1JeEs3ckRlc3lqODlpeVRIVTRFbVVXa1ZqMXVOd1FBTUh5YVZlZTJaX1VTQ3lKbHhaX2RncWkxRzZ1REhhQ3JPLUFvMDdm?oc=5",
+   "source": "조선일보",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-15T05:48:47Z",
+   "topics": []
+  },
   {
    "id": "2f88f8937300",
    "title": "Instead Of Lowering GPU Prices, Former NVIDIA CEO Jensen Huang Reportedly Financed AI Startups To Absorb Excess Silicon, Shattering The Shortage Perception",
@@ -171,6 +182,19 @@
    "description": "",
    "published": "2026-11-09T02:26:00Z",
    "topics": []
+  },
+  {
+   "id": "11ed37030192",
+   "title": "Terafab Is Now Aiming For A Memory Production Capacity Of Around 700,000 Wafers Per Month, Which Is Roughly Equal To Samsung’s Entire DRAM Capacity",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxONHdHUnZpWHJZNzFZUFhCQm82cjVLY0dBMUJ2MWNpOUY1dEd3UDk1RDlESkhFZmZLWkVlZlJfaXk5WFotR09JSUlfMHItQmRhdGNreVRBZDFiclcycWx5aXBpcEd4ZWZpSGRQMTZCcmNJMlhFdUN6clplUUpZYW55X1p2aGN2X1ZmSTdLLXNPWUpaNHRHZDVnTzFhNEZOSEg5ZzVQWlNIVHkxNjRlR0JQN1NrSXlTWmJPYXl5aEtXS0NlRlRSSTRtTVc4aWgwdkJSNXpoV3pJdnhZNy1IcmJIcFRIcnlrb0lhQ3ltLWdyVmxxb0ZXNFpCTWFB0gH_AUFVX3lxTE9JOEpVXy01MlYyOTQ3SzJMbHd3eWNmV0M5eHJJcHNXYThWekplRjlUd2dpOWdJWUl4d2JBT1JaMy1YRjhEaU9ZT0F4RW9oVEVWenRuaUdydFY3TVluQjFWaHE4cUJ2RW93NjZJeGhtMEFaMThnREZIbXM4RW5YN2FEWDlBTFptMWdrWWRWQTNpRzNfbzJBNDY3YzJFXzBmNkJ3Q3lpUkZtaTRyWTRpNnNsc2JZQVRGQXdvaEx6bFNCLWVkcnhLTXVKSTkxdm56XzJwaUxHSnJBcFRnTHpNMDdYcUZlRUtQMnR2cTZWRjFhODRqdGxOdWxoQ0FfdkF6VQ?oc=5",
+   "source": "Wccftech",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-08T23:54:59Z",
+   "topics": [
+    "dram"
+   ]
   },
   {
    "id": "cc6991707a68",
@@ -348,19 +372,6 @@
    ]
   },
   {
-   "id": "d8d8dddbf79c",
-   "title": "OpenAI CEO Altman Pours Cold Water on Local AI: 'DRAM Is More Efficient Concentrated in Data Centers'",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5DTEFUaEVGdTBOOUVBOGtKS2M0d2lkRGVTZmplNjVZcFdrX0M0WURJRUg1c0RNRy1pdDMybENRWV9mOHlRdmtEUHNsdDRKbHI5VUU4d3YzM3piRkJZTjNLNk5tdTI5c2dGUkwzUEI1M1lsUEhJbnc?oc=5",
-   "source": "BigGo Finance",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-02T02:32:07Z",
-   "topics": [
-    "dram"
-   ]
-  },
-  {
    "id": "c2ee97472f42",
    "title": "GDPx: Measuring Frontier Model Capabilities Across the Most Valuable Domains",
    "url": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities",
@@ -414,6 +425,19 @@
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
    "published": "2026-11-01T07:00:31Z",
    "topics": []
+  },
+  {
+   "id": "d8d8dddbf79c",
+   "title": "OpenAI CEO Altman Pours Cold Water on Local AI: 'DRAM Is More Efficient Concentrated in Data Centers'",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5DTEFUaEVGdTBOOUVBOGtKS2M0d2lkRGVTZmplNjVZcFdrX0M0WURJRUg1c0RNRy1pdDMybENRWV9mOHlRdmtEUHNsdDRKbHI5VUU4d3YzM3piRkJZTjNLNk5tdTI5c2dGUkwzUEI1M1lsUEhJbnc?oc=5",
+   "source": "BigGo Finance",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-01T07:00:00Z",
+   "topics": [
+    "dram"
+   ]
   },
   {
    "id": "80506b158faa",
