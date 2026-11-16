@@ -1,6 +1,39 @@
 {
- "updated": "2026-11-16T07:06:18Z",
+ "updated": "2026-11-16T22:39:34Z",
  "items": [
+  {
+   "id": "09493c3e7d3a",
+   "title": "AMD's Biggest Week of The Year... // The Tech Poutine 16th November2026",
+   "url": "https://www.youtube.com/watch?v=PFVzkVsmwOY",
+   "source": "TechTechPotato",
+   "kind": "video",
+   "thumbnail": "https://i1.ytimg.com/vi/PFVzkVsmwOY/hqdefault.jpg",
+   "description": "I heard you like cores, so AMD has put performance and cores in your cores. Here's our roundup of AMD's Venice launch, along with a preview of what we expect from Supercomputing (we're in Chicago).",
+   "published": "2026-11-16T17:08:37Z",
+   "topics": []
+  },
+  {
+   "id": "3223b71602f6",
+   "title": "India’s Chip Dreams Need Extra Focus on Building an Entire Ecosystem: Invest India CEO",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNLW5IY0otVGNLTFphVUtKVlVLVEFxUnlKaTM3dm9pVXJPUHNRMnUxd0tBMTV1b2ZHSHhVaXhwaktuOGY0dWc2SzlSS044MklXMmFxbmxPRHFoUzVRTGFkZkdEOThGNHlGZWpQWWZjNXBRQXJXcnlxbkJ2NW56T0JpWWpaVFlaVUpDcUFOV29ldU45My12dGthT2lwRlhhVGhraGxQVm8wSG9WN3Q3RE1GX3pxSmpWQQ?oc=5",
+   "source": "CXOToday.com",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-16T11:17:57Z",
+   "topics": []
+  },
+  {
+   "id": "fa8645f61f44",
+   "title": "The Rise and Fall of the Soviet Union's Workhorse Computer",
+   "url": "https://www.youtube.com/watch?v=ZQ_1cH6_2N4",
+   "source": "Asianometry",
+   "kind": "video",
+   "thumbnail": "https://i3.ytimg.com/vi/ZQ_1cH6_2N4/hqdefault.jpg",
+   "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
+   "published": "2026-11-15T23:00:35Z",
+   "topics": []
+  },
   {
    "id": "9815224a2772",
    "title": "Even If Nvidia Stumbles, HBM Won't — Why Samsung and SK Hynix Are Smiling",
@@ -23,6 +56,17 @@
    "thumbnail": "https://i3.ytimg.com/vi/Z8IXQA6voHQ/hqdefault.jpg",
    "description": "The prediction markets have priced up who takes over at Nvidia, so here is the top 10 as it stands. One sits at the top leading at 24% and a number of NVIDIA empoylees are in the mix. Lisa Su, Johny Srouji and Jensen himself all make the list. Note: Data taken November 14th.…",
    "published": "2026-11-15T16:38:27Z",
+   "topics": []
+  },
+  {
+   "id": "fea537e65eef",
+   "title": "Musk Warns Nvidia's Supply Chain Vulnerable Without Jensen Huang",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeVpYQUpfUFJ2Sjc4SWRWQXZ4SEctejhJdG9Id1FVMjF5R0x6QnVhaUxtTWVCOThBYWlRYmJFaXlDTS1JeEs3ckRlc3lqODlpeVRIVTRFbVVXa1ZqMXVOd1FBTUh5YVZlZTJaX1VTQ3lKbHhaX2RncWkxRzZ1REhhQ3JPLUFvMDdm?oc=5",
+   "source": "조선일보",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-15T08:27:09Z",
    "topics": []
   },
   {
@@ -208,19 +252,6 @@
    "topics": []
   },
   {
-   "id": "11ed37030192",
-   "title": "Terafab Is Now Aiming For A Memory Production Capacity Of Around 700,000 Wafers Per Month, Which Is Roughly Equal To Samsung’s Entire DRAM Capacity",
-   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxONHdHUnZpWHJZNzFZUFhCQm82cjVLY0dBMUJ2MWNpOUY1dEd3UDk1RDlESkhFZmZLWkVlZlJfaXk5WFotR09JSUlfMHItQmRhdGNreVRBZDFiclcycWx5aXBpcEd4ZWZpSGRQMTZCcmNJMlhFdUN6clplUUpZYW55X1p2aGN2X1ZmSTdLLXNPWUpaNHRHZDVnTzFhNEZOSEg5ZzVQWlNIVHkxNjRlR0JQN1NrSXlTWmJPYXl5aEtXS0NlRlRSSTRtTVc4aWgwdkJSNXpoV3pJdnhZNy1IcmJIcFRIcnlrb0lhQ3ltLWdyVmxxb0ZXNFpCTWFB0gH_AUFVX3lxTE9JOEpVXy01MlYyOTQ3SzJMbHd3eWNmV0M5eHJJcHNXYThWekplRjlUd2dpOWdJWUl4d2JBT1JaMy1YRjhEaU9ZT0F4RW9oVEVWenRuaUdydFY3TVluQjFWaHE4cUJ2RW93NjZJeGhtMEFaMThnREZIbXM4RW5YN2FEWDlBTFptMWdrWWRWQTNpRzNfbzJBNDY3YzJFXzBmNkJ3Q3lpUkZtaTRyWTRpNnNsc2JZQVRGQXdvaEx6bFNCLWVkcnhLTXVKSTkxdm56XzJwaUxHSnJBcFRnTHpNMDdYcUZlRUtQMnR2cTZWRjFhODRqdGxOdWxoQ0FfdkF6VQ?oc=5",
-   "source": "Wccftech",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-08T23:54:59Z",
-   "topics": [
-    "dram"
-   ]
-  },
-  {
    "id": "cc6991707a68",
    "title": "How Cisco Got Bullwhipped",
    "url": "https://www.youtube.com/watch?v=aPuPzqJN1DQ",
@@ -240,6 +271,19 @@
    "thumbnail": null,
    "description": "",
    "published": "2026-11-08T10:10:48Z",
+   "topics": [
+    "dram"
+   ]
+  },
+  {
+   "id": "11ed37030192",
+   "title": "Terafab Is Now Aiming For A Memory Production Capacity Of Around 700,000 Wafers Per Month, Which Is Roughly Equal To Samsung’s Entire DRAM Capacity",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxONHdHUnZpWHJZNzFZUFhCQm82cjVLY0dBMUJ2MWNpOUY1dEd3UDk1RDlESkhFZmZLWkVlZlJfaXk5WFotR09JSUlfMHItQmRhdGNreVRBZDFiclcycWx5aXBpcEd4ZWZpSGRQMTZCcmNJMlhFdUN6clplUUpZYW55X1p2aGN2X1ZmSTdLLXNPWUpaNHRHZDVnTzFhNEZOSEg5ZzVQWlNIVHkxNjRlR0JQN1NrSXlTWmJPYXl5aEtXS0NlRlRSSTRtTVc4aWgwdkJSNXpoV3pJdnhZNy1IcmJIcFRIcnlrb0lhQ3ltLWdyVmxxb0ZXNFpCTWFB0gH_AUFVX3lxTE9JOEpVXy01MlYyOTQ3SzJMbHd3eWNmV0M5eHJJcHNXYThWekplRjlUd2dpOWdJWUl4d2JBT1JaMy1YRjhEaU9ZT0F4RW9oVEVWenRuaUdydFY3TVluQjFWaHE4cUJ2RW93NjZJeGhtMEFaMThnREZIbXM4RW5YN2FEWDlBTFptMWdrWWRWQTNpRzNfbzJBNDY3YzJFXzBmNkJ3Q3lpUkZtaTRyWTRpNnNsc2JZQVRGQXdvaEx6bFNCLWVkcnhLTXVKSTkxdm56XzJwaUxHSnJBcFRnTHpNMDdYcUZlRUtQMnR2cTZWRjFhODRqdGxOdWxoQ0FfdkF6VQ?oc=5",
+   "source": "Wccftech",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-08T08:00:00Z",
    "topics": [
     "dram"
    ]
@@ -332,6 +376,17 @@
    "thumbnail": "https://i2.ytimg.com/vi/Y0WA7Gl4kyo/hqdefault.jpg",
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
    "published": "2026-11-04T23:00:26Z",
+   "topics": []
+  },
+  {
+   "id": "f408eba86272",
+   "title": "Fundstrat's Tom Lee: Beaten-Down Memory, Chip, Neocloud Stocks Set for Post-Midterm 'Biggest Bounces'",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBxQTJGR3BJVHdVWkl1ZVV3eUdQOVZjRDJKSDlpSVZGVEVfc2I1dDFsU2M5VElUVVR3bmJGN0VDSEI3WTk1YTVySGw0NEdVZkMtbDVVSDM1Wk45SnUyZElBMklWdTNkZ2R3UjBXdHh2ZXcySl9xSVE?oc=5",
+   "source": "BigGo Finance",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-04T08:00:00Z",
    "topics": []
   },
   {
