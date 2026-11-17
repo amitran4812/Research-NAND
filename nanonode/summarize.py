@@ -85,14 +85,19 @@ class Summarizer:
             return None
 
     # ------------------------------------------------------------------ news briefs
-    def news_briefs(self, items: list[dict], batch: int = 30) -> dict[str, str]:
-        out: dict[str, str] = {}
-        schema = _obj({"items": {"type": "array", "items": _obj({"id": _STR, "brief": _STR})}})
+    def news_briefs(self, items: list[dict], batch: int = 30) -> dict[str, dict]:
+        """Return {id: {"brief": str, "points": [str]}} for the story pages on the site."""
+        out: dict[str, dict] = {}
+        schema = _obj({"items": {"type": "array", "items": _obj({
+            "id": _STR, "brief": _STR, "points": {"type": "array", "items": _STR}})}})
         system = (
             "You write news briefs for Nano Node, a portal for researchers working on nanoscale "
             "semiconductor devices, DRAM, NAND flash, storage, emerging memory, VLSI and AI. "
             "For each item write a brief of one or two sentences (at most 45 words): what happened and "
-            "why it matters to a device or VLSI researcher. Use only the information given; when only a "
+            "why it matters to a device or VLSI researcher. Also give up to three key points (each at most "
+            "18 words): concrete facts from the text such as the company, product, node, layer count, "
+            "capacity, figures or dates. Give an empty list when the text has no facts beyond the headline. "
+            "Use only the information given; when only a "
             "headline is available, restate it clearly with neutral context and do not invent numbers, "
             "dates, quotes or claims. Plain text, no markdown."
         )
@@ -103,7 +108,8 @@ class Summarizer:
             res = self._ask(system, "News items (JSON):\n" + json.dumps(payload, ensure_ascii=False), schema)
             for r in (res or {}).get("items", []):
                 if r.get("id") and r.get("brief"):
-                    out[r["id"]] = r["brief"].strip()
+                    pts = [str(x).strip() for x in (r.get("points") or []) if str(x).strip()][:3]
+                    out[r["id"]] = {"brief": r["brief"].strip(), "points": pts}
         return out
 
     # ------------------------------------------------------------------ relevance check

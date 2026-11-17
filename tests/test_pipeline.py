@@ -314,6 +314,23 @@ class DedupeTest(unittest.TestCase):
         self.assertEqual([o["source"] for o in out], ["TechPowerUp"])
         self.assertEqual(out[0]["also"][0]["source"], "Business Wire")
 
+    def test_key_points_travel_with_the_brief(self):
+        out = self.run_dedupe([
+            self.item(1, "Could HBF be the solution to the Memory bottleneck?", "Investing.com", origin="feed", image="https://img/x.jpg"),
+            self.item(2, "Could HBF be the solution to the Memory bottleneck? By Investing.com", "Investing.com India", hours=2,
+                      brief="A brief.", points=["Point one"]),
+        ])
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0]["brief"], "A brief.")
+        self.assertEqual(out[0]["points"], ["Point one"])
+
+    def test_merge_keeps_key_points(self):
+        from nanonode import news
+        old = self.item(1, "Kioxia ships 332-layer NAND", "EE Times", brief="b", points=["p"])
+        new = self.item(1, "Kioxia ships 332-layer NAND", "EE Times")
+        out = news.merge([old], [new], keep_days=10000)
+        self.assertEqual(out[0].get("points"), ["p"])
+
     def test_same_link_is_one_story(self):
         out = self.run_dedupe([
             self.item(1, "Intel Korea Launches AI Alliance With 23 Companies at Seoul Summit", "Chosun", url="https://news.google.com/x?oc=5"),
@@ -348,13 +365,13 @@ class SummarizerTest(unittest.TestCase):
 
         def create(**kw):
             calls.append(kw)
-            body = {"items": [{"id": "x1", "brief": "Short brief."}]}
+            body = {"items": [{"id": "x1", "brief": "Short brief.", "points": ["Micron ships HBM4 samples", " "]}]}
             return SimpleNamespace(stop_reason="end_turn", stop_details=None,
                                    content=[SimpleNamespace(type="text", text=json.dumps(body))])
 
         s.client = SimpleNamespace(beta=SimpleNamespace(messages=SimpleNamespace(create=create)))
         out = s.news_briefs([{"id": "x1", "title": "Micron ships HBM4", "description": ""}])
-        self.assertEqual(out, {"x1": "Short brief."})
+        self.assertEqual(out, {"x1": {"brief": "Short brief.", "points": ["Micron ships HBM4 samples"]}})
         kw = calls[0]
         self.assertEqual(kw["model"], "claude-opus-5-5")
         self.assertEqual(kw["output_config"]["format"]["type"], "json_schema")

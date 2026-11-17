@@ -587,3 +587,34 @@ table.market td.num { text-align: right; }
 
 .news-card .also { margin: 0; }
 .news-card .also a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); }
+
+/* ---- story page (#/story/<id>) ------------------------------------------ */
+.story { max-width: 1120px; margin: 0 auto; }
+.story-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .55rem; font-size: .85rem; color: var(--muted); margin-bottom: 1.2rem; }
+.story-crumbs .dot::before { content: "·"; margin-right: .55rem; }
+.story-back { font-weight: 600; }
+.story-head { max-width: 860px; margin-bottom: 1.4rem; }
+.story-head .eyebrow { margin-bottom: .5rem; }
+.story-head h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(1.7rem, 3.6vw, 2.6rem); line-height: 1.14; letter-spacing: -.02em; margin: 0 0 .8rem; overflow-wrap: anywhere; }
+.story-head .meta { font-size: .88rem; }
+.story-media .media { border-radius: calc(var(--radius) + 4px); border: 1px solid var(--border); aspect-ratio: 16 / 7; box-shadow: var(--shadow); }
+.story-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 2.4rem; margin-top: 2rem; align-items: start; }
+@media (max-width: 960px) { .story-grid { grid-template-columns: 1fr; } }
+.story-main { display: flex; flex-direction: column; gap: 1.1rem; }
+.story-main section + section { margin-top: 0; }
+.story-main .card .eyebrow { margin-bottom: .55rem; }
+.story-lede { font-size: 1.12rem; line-height: 1.7; margin: 0; }
+.story-points ul { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: .45rem; }
+.story-points li::marker { color: var(--red); }
+.story-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: .3rem; }
+.story-read { font-size: 1rem; padding: .85rem 1.3rem; }
+.story-note { margin: 0; max-width: 62ch; }
+.story-also { margin-top: 1rem; }
+.story-also .tag:hover { border-color: var(--red); color: var(--red); text-decoration: none; }
+.story-side section + section { margin-top: 2rem; }
+.story-side .row-card.compact { grid-template-columns: 84px minmax(0, 1fr); }
+.story-missing { max-width: 640px; margin: 2rem auto; }
+@media (max-width: 640px) {
+  .story-media .media { aspect-ratio: 16 / 9; border-radius: var(--radius); }
+  .story-cta .btn { flex: 1 1 100%; justify-content: center; }
+}

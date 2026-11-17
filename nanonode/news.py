@@ -166,7 +166,7 @@ def merge(existing: list[dict], fresh: list[dict], keep_days: int) -> list[dict]
     for it in fresh:
         old = by_id.get(it["id"])
         if old:
-            for k in ("brief", "image", "img_checked", "llm_topics"):
+            for k in ("brief", "points", "image", "img_checked", "llm_topics"):
                 if (old.get(k) or (k == "llm_topics" and old.get(k) is not None)) and not it.get(k):
                     it[k] = old[k]
             it["first_seen"] = old.get("first_seen", it.get("published"))
@@ -285,9 +285,13 @@ def dedupe(items: list[dict], tagger: Tagger | None = None, window_days: float =
                     also.append({"source": x["source"], "url": x.get("url")})
             keep["also"] = also[:6]
             if not keep.get("brief"):
-                keep["brief"] = next((x["brief"] for x in cl if x.get("brief")), None) or keep.get("brief")
-                if keep["brief"] is None:
-                    keep.pop("brief")
+                donor = next((x for x in cl if x.get("brief")), None)
+                if donor:
+                    keep["brief"] = donor["brief"]
+                    if donor.get("points"):
+                        keep["points"] = donor["points"]
+                else:
+                    keep.pop("brief", None)
         out.append(keep)
     for it in items:
         it.pop("_key", None)
