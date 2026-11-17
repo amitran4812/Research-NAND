@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T20:53:46Z",
+ "updated": "2026-11-17T21:16:28Z",
  "items": [
   {
    "id": "4134d04a0fb2",
@@ -469,9 +469,9 @@
   {
    "id": "65a2ae8b387b",
    "title": "Micron, Samsung, SK Hynix Fail to Get Memory Price-Fixing Lawsuit Dismissed",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSmtLM0EwVE5oNFVOeDU3MzVETXU0UlRHSnlBSlJqcUV6Zi1GQzJ0dGEzbzM0T3Z6Q1hvWFI1RWVKdWNsR0VsQV9YYzZUVUdfMXJOWjFrWWtDTzlDaElabmdmcDFFc0M5TDFUeTdyaGIwZHhQN2lTR1BpVHZ1MXhVLUZHdVotSXMtcVZoT0F5Ull0MV9hSmZuRU1mcDczT1A0MGxKWFhyeENQUDc5OGo5Y3hR?oc=5",
-   "source": "PCMag Australia",
-   "source_url": "https://au.pcmag.com",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQVRtRDhTcU02TWJFaUlJZ21Fai10SEVoYnAybWlaNVVNSVpjdGxKY2NLYjhFZnYycElfS2VGajM2Szk3RFZmRVJYaDNDa0Z3TDZkREczU2dOOTVpZWNzeTZfTGVPNjNSMVBxekRKck1fVzdrZDNNcV9WNnBkVWYydjlXNDExOWRMWnFBOXlHT19CZjN6azRWenh0TlRJTHlyRzZHaGNwNlF4Mi1HQ2JILUdB?oc=5",
+   "source": "PCMag UK",
+   "source_url": "https://uk.pcmag.com",
    "published": "2026-11-17T17:09:16Z",
    "description": "",
    "hub": "device",
@@ -1216,6 +1216,28 @@
    "companies": [],
    "first_seen": "2026-11-17T20:11:13Z",
    "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "c505fef8253b",
+   "title": "SanDisk's Consumer Slump and Spot-Price Slide Cut Against a Data-Center Boom",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQWGJSbERCdnNQdlRqZnhoUWJFWmJxXzVfemtLNFkzbVlWNmVJWW5NdkhJNzNsejFaOXdKWHlzaEF1dG1ZOUg1NlRPSEVHWVFiVnVmSlloZ0dndDNJNS14aXZmLVBuMnJqYkV2amJKdUxHWEpub3FwUG5aYXkwOHNfd2tidnNmbjRCYzF4em84a3Q2RGMtTEtYcm9ENGllemhkamV2UjJiVHNTWS1sSjd1czE2RXJFdjNFa21sMTBKNkNMY2RGZUZnSk8tR01QZndybHBUblQxQnl4aTJRSGpNM0h3?oc=5",
+   "source": "ad-hoc-news.de",
+   "source_url": "https://www.ad-hoc-news.de",
+   "published": "2026-11-17T12:11:29Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand",
+    "industry"
+   ],
+   "companies": [
+    "Sandisk"
+   ],
+   "first_seen": "2026-11-17T21:16:17Z",
+   "section": "market",
    "region": "international"
   },
   {
@@ -2793,7 +2815,7 @@
   {
    "id": "37a911250b1e",
    "title": "How CTOs are Addressing Semiconductor Dependency in Technology Development",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOblVGZGx6UEJMQTdLNzlrazUxYUNydml3Z2I0MWZpWG9ZSHVQMTNmZm1ScnZuVC0yRXQ3UmNCN21xbmxOWGs0ZmYwdlR6aVVLV0U0Q2gwZ0JXRDZ5YXBhOW1EY1ZMVkVWSXZQQUlqZlpRNENzTmppb2UwOEZMQVh1QUM3RFQ0OFlGdTV3YktON2ZOcl9fQlJCbkRmMG1WTE5xNkRTMmNCMTF3Q05ZS2tsZGFQVVkzUmtTLW9UczVwNkVSeHZNNmtwUnFB0gHKAUFVX3lxTE5uVUZkbHpQQkxBN0s3OWtrNTFhQ3J2aXdnYjQxZmlYb1lIdVAxM2ZmbVJydm5ULTJFdDdSY0I3bXFubE5YazRmZjB2VHppVUtXRTRDaDBnQldENnlhcGE5bURjVkxWRVZJdlBBSWpmWlE0Q3NOamlvZTA4RkxBWHVBQzdEVDQ4WUZ1NXdiS043Zk5yX19CUkJuRGYwbVZMTnE2RFMyY0IxMXdDTllLa2xkYVBVWTNSa1Mtb1RzNXA2RVJ4dk02a3BScUE?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZDItRUstd0xjelczX0NsY3VFdW55bVB6ZnFhNHhYYkxRTlYyck5pVXpsYXpBMGFwaThHcHVhQ05sQm4tcVpjQi1ib3dyaGJQUnpjYUs1VjdmcE92S1VaMnlOT0dXZDFVVFlYTi1ralB3Q1FmZ0FpdmhFYkg3UDBUZWVueHRuazczc3hRWFFzbk9CVXVhbEZWQk1KcENfWmxaaUp1WDYxMFNVeTNVRjExR3JQX3puZ0VYQXV0StIBygFBVV95cUxOblVGZGx6UEJMQTdLNzlrazUxYUNydml3Z2I0MWZpWG9ZSHVQMTNmZm1ScnZuVC0yRXQ3UmNCN21xbmxOWGs0ZmYwdlR6aVVLV0U0Q2gwZ0JXRDZ5YXBhOW1EY1ZMVkVWSXZQQUlqZlpRNENzTmppb2UwOEZMQVh1QUM3RFQ0OFlGdTV3YktON2ZOcl9fQlJCbkRmMG1WTE5xNkRTMmNCMTF3Q05ZS2tsZGFQVVkzUmtTLW9UczVwNkVSeHZNNmtwUnFB?oc=5",
    "source": "Analytics Insight",
    "source_url": "https://www.analyticsinsight.net",
    "published": "2026-11-17T04:30:00Z",
@@ -4063,10 +4085,10 @@
   {
    "id": "7df448712d6f",
    "title": "Sandisk’s Stock Split Is Coming on Nov. 19. Should You Buy Before It Happens?",
-   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNZkh2V0dmRk11R2hUdTZQd05mT1pVZS02UWxSRllsbjRYcXhIR3dqeDJ1bEsxTmkxanNmV2hwRzhzTTA2ZHJDLWZlZFFIaE14YlR2dDM5RzNQaEZ1dmVQQjFKOXZkUS1KeFBOZzI2WWV2TGpwSXF5d0pnYmF3NW4wWjdJYjhGNl9Yc0pnckNVTUx0VmFDVWJRb1JmczA5OWlZQWVrOFh3UjRjb3E3bnVVZ3Vadzd0dlk4bHloMjhXcmc2YnN2UzRfR2oyNnFkSzZabEpYb3lvbDYtMmp1VlpPc2dPRWJuQUJVbTVsUG5oZw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOQlZiNlRMN3FZNHNOcHBKaDNVMUlJRm9nNGNBbV9OXzg3M2lTZFdHd28yclhiTFJvcEVIYUcxcjZkU3lGdklOMG1QTmNlOS1vUlZrY3l2dzZKci1BNG1fUm12NVg1dGJHOF9Wel9BRnlWMWNMVS13bzJ4SXh6OEgyRnJSa0x3cVBVb3hORlozUFRmV2pFbENxWW9tMXRtd0JSb2xjbEtlNlJ4NGRQcTNwNDNwejNneXVEalpCelVSNEstTi1vOHdGRURCdWFWQ0Q5eFRzZm9yQmRpeVVhb3JCSWdZQW1LcmRVYzRyMUpkT3BWUQ?oc=5",
    "source": "The Globe and Mail",
    "source_url": "https://www.theglobeandmail.com",
-   "published": "2026-11-16T20:01:37Z",
+   "published": "2026-11-16T20:01:36Z",
    "description": "",
    "hub": "device",
    "origin": "google",
@@ -5564,9 +5586,9 @@
    "image": null,
    "topics": [],
    "companies": [
-    "Samsung",
+    "Nvidia",
     "SK hynix",
-    "Nvidia"
+    "Samsung"
    ],
    "first_seen": "2026-11-16T22:27:49Z",
    "also": [],
