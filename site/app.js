@@ -19,6 +19,11 @@
   function ext(u, label, cls) {
     return '<a' + (cls ? ' class="' + cls + '"' : "") + ' href="' + safeUrl(u) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + "</a>";
   }
+  // News stories open on their own page inside Nano Node (#/story/<id>); the source is linked from there.
+  function storyHref(n) { return "#/story/" + encodeURIComponent(n.id); }
+  function storyLink(n, label, cls) {
+    return '<a' + (cls ? ' class="' + cls + '"' : "") + ' href="' + storyHref(n) + '">' + esc(label) + "</a>";
+  }
   function timeAgo(iso) {
     if (!iso) return "";
     var s = (Date.now() - new Date(iso).getTime()) / 1000;
@@ -66,7 +71,9 @@
   function refsHtml(ids, index) {
     var links = (ids || []).map(function (id, i) {
       var it = index[id];
-      return it ? '<a href="' + safeUrl(it.url) + '" target="_blank" rel="noopener noreferrer" title="' + esc(it.title) + '">[' + (i + 1) + "]</a>" : "";
+      if (!it) return "";
+      var inSite = D.news.indexOf(it) !== -1;
+      return '<a href="' + (inSite ? storyHref(it) + '"' : safeUrl(it.url) + '" target="_blank" rel="noopener noreferrer"') + ' title="' + esc(it.title) + '">[' + (i + 1) + "]</a>";
     }).join("");
     return links ? ' <span class="refs">' + links + "</span>" : "";
   }
@@ -210,10 +217,10 @@
     var text = n.brief || n.description || "";
     var t = primaryTopic(n);
     return '<article class="card hover news-card fade-in">' +
-      '<a href="' + safeUrl(n.url) + '" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">' + media(n.image, t, n.id, shortTopic(t)) + "</a>" +
+      '<a href="' + storyHref(n) + '" tabindex="-1" aria-hidden="true">' + media(n.image, t, n.id, shortTopic(t)) + "</a>" +
       '<div class="body"><div class="meta"><span class="src">' + esc(n.source) + '</span><span class="dot">' + esc(timeAgo(n.published)) + "</span></div>" +
-      "<h3>" + ext(n.url, n.title) + "</h3>" + (text ? "<p>" + esc(text) + "</p>" : "") + alsoHtml(n) +
-      '<div class="foot">' + tagsHtml({ companies: n.companies }) + ext(n.url, "Read ↗", "read") + "</div></div></article>";
+      "<h3>" + storyLink(n, n.title) + "</h3>" + (text ? "<p>" + esc(text) + "</p>" : "") + alsoHtml(n) +
+      '<div class="foot">' + tagsHtml({ companies: n.companies }) + storyLink(n, "Read story →", "read") + "</div></div></article>";
   }
   // Same story from other outlets (merged by the pipeline), shown once as small links.
   function alsoHtml(n) {
@@ -222,10 +229,11 @@
     return '<p class="also small muted">Also in ' + a.slice(0, 3).map(function (x) { return ext(x.url, x.source); }).join(", ") +
       (a.length > 3 ? " +" + (a.length - 3) : "") + "</p>";
   }
-  function compactCard(it, sub) {
+  // `story` true: the item is a news story and links to its page on the site.
+  function compactCard(it, sub, story) {
     var t = primaryTopic(it);
     return '<article class="card hover row-card compact fade-in">' + media(it.image, t, it.id) +
-      '<div><div class="meta"><span class="src">' + esc(sub) + "</span></div><h3>" + ext(it.url, it.title) + "</h3>" +
+      '<div><div class="meta"><span class="src">' + esc(sub) + "</span></div><h3>" + (story ? storyLink(it, it.title) : ext(it.url, it.title)) + "</h3>" +
       (it.tldr ? '<p class="small muted" style="margin:0">' + esc(it.tldr) + "</p>" : "") + "</div></article>";
   }
   function paperCard(p) {
@@ -286,10 +294,10 @@
     if (lead) {
       var lt = primaryTopic(lead);
       h += '<div class="hero"><article class="card hover lead fade-in">' +
-        '<a href="' + safeUrl(lead.url) + '" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">' + media(lead.image, lt, lead.id, shortTopic(lt)) + "</a>" +
+        '<a href="' + storyHref(lead) + '" tabindex="-1" aria-hidden="true">' + media(lead.image, lt, lead.id, shortTopic(lt)) + "</a>" +
         '<div class="body"><div class="meta" style="margin-bottom:.5rem"><span class="src">' + esc(lead.source) + '</span><span class="dot">' + esc(timeAgo(lead.published)) + "</span></div>" +
-        "<h3>" + ext(lead.url, lead.title) + "</h3>" + ((lead.brief || lead.description) ? "<p>" + esc(lead.brief || lead.description) + "</p>" : "") + tagsHtml(lead) + "</div></article>" +
-        '<div class="hero-side">' + rest.slice(0, 4).map(function (n) { return compactCard(n, n.source + " · " + timeAgo(n.published)); }).join("") + "</div></div>";
+        "<h3>" + storyLink(lead, lead.title) + "</h3>" + ((lead.brief || lead.description) ? "<p>" + esc(lead.brief || lead.description) + "</p>" : "") + tagsHtml(lead) + "</div></article>" +
+        '<div class="hero-side">' + rest.slice(0, 4).map(function (n) { return compactCard(n, n.source + " · " + timeAgo(n.published), true); }).join("") + "</div></div>";
     }
     if (state.cat === "all") h += briefingCard("device");
     h += '<div class="grid-2"><div><section><div class="section-title"><h2>Latest news</h2><a href="#/news">All news →</a></div>';
@@ -332,7 +340,7 @@
     h += '<div class="card pad mkt-stat"><div class="eyebrow">This week</div><div class="big">' + recent.length + '</div><p class="small muted">market & business stories</p>' +
       (top.length ? '<div class="tags">' + top.map(function (c) { return '<button type="button" class="tag topic co" data-company="' + esc(c) + '">' + esc(c) + " · " + comp[c] + "</button>"; }).join("") + "</div>" : "") + "</div>";
     h += '<div class="card pad mkt-outlook"><div class="eyebrow">What\'s expected next</div>' + (outlook.length ? "<ul>" + outlook.map(function (n) {
-      return "<li>" + ext(n.url, n.title) + ' <span class="muted small">' + esc(n.source) + " · " + esc(timeAgo(n.published)) + "</span></li>";
+      return "<li>" + storyLink(n, n.title) + ' <span class="muted small">' + esc(n.source) + " · " + esc(timeAgo(n.published)) + "</span></li>";
     }).join("") + "</ul>" : '<p class="small muted">No forecast or outlook stories right now.</p>') + "</div>";
     if (movers.length) h += '<div class="card pad mkt-movers"><div class="eyebrow">Today\'s share movers</div><table class="market"><tbody>' + movers.map(function (x) {
       return "<tr><td><b>" + esc(x.name) + '</b></td><td class="num ' + (x.change_pct >= 0 ? "up" : "down") + '">' + (x.change_pct >= 0 ? "+" : "") + x.change_pct.toFixed(2) + "%</td></tr>";
@@ -692,6 +700,127 @@
     render();
   }
 
+  // ------------------------------------------------------------------ story page
+  // Each news item gets its own page: headline, image, summary, key points, related
+  // stories and papers from the portal, and a button to the full article at the source.
+  // Only the feed's own excerpt (or Claude's short brief) is shown, never the full text.
+  var STOP = ("about above after again against also among amid could from have here into its just more most much " +
+    "news over said says such than that their them then there these they this those through under until were what when " +
+    "where which while will with would year years your new first world report reports launch launches company companies " +
+    "market chip chips india indian global").split(" ");
+  function words(text) {
+    var out = {};
+    String(text || "").toLowerCase().replace(/[^a-z0-9+.-]+/g, " ").split(" ").forEach(function (w) {
+      w = w.replace(/^[.-]+|[.-]+$/g, "");
+      if (w.length > 3 && STOP.indexOf(w) === -1 && !/^\d+$/.test(w)) out[w] = 1;
+    });
+    return out;
+  }
+  function overlap(a, b) { var n = 0; for (var k in a) if (b[k]) n++; return n; }
+  function shared(a, b) { return (a || []).filter(function (x) { return (b || []).indexOf(x) !== -1; }).length; }
+  function storyKey(n) { return String(n.title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); }
+  function relatedNews(n, max) {
+    var w = words(n.title + " " + (n.brief || n.description || "")), key = storyKey(n);
+    var also = (n.also || []).map(function (x) { return x.url; });
+    return D.news.filter(function (x) { return x !== n && x.hub === n.hub && storyKey(x) !== key && also.indexOf(x.url) === -1; })
+      .map(function (x) {
+        var score = 3 * shared(n.companies, x.companies) + 2 * shared(n.topics, x.topics) + 1.5 * overlap(w, words(x.title));
+        return { it: x, score: score };
+      })
+      .filter(function (r) { return r.score >= 3; })
+      .sort(function (a, b) { return b.score - a.score || String(b.it.published || "").localeCompare(String(a.it.published || "")); })
+      .slice(0, max).map(function (r) { return r.it; });
+  }
+  function relatedPapers(n, max) {
+    var w = words(n.title + " " + (n.brief || n.description || "") + " " + (n.companies || []).join(" "));
+    return D.papers.filter(function (p) { return p.hub === n.hub; })
+      .map(function (p) {
+        var t = shared(n.topics, p.topics);
+        return { it: p, t: t, score: 2 * t + overlap(w, words(p.title + " " + (p.tldr || ""))) };
+      })
+      .filter(function (r) { return r.t > 0 && r.score >= 3; })
+      .sort(function (a, b) { return b.score - a.score || String(b.it.published || "").localeCompare(String(a.it.published || "")); })
+      .slice(0, max).map(function (r) { return r.it; });
+  }
+  function sectionName(id) { return (SECTIONS.filter(function (x) { return x[0] === id; })[0] || [0, "Industry & other"])[1]; }
+  function regionName(id) { return (REGIONS.filter(function (x) { return x[0] === id; })[0] || [0, "International"])[1]; }
+  function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } }
+  // Key points: Claude's when the API key is set, otherwise facts the pipeline already knows.
+  function keyPoints(n) {
+    if ((n.points || []).length) return { title: "Key points", ai: true, items: n.points.map(esc) };
+    var pts = [];
+    if ((n.topics || []).length) pts.push("Topic" + (n.topics.length > 1 ? "s" : "") + ": " + n.topics.slice(0, 3).map(function (t) {
+      return n.hub === "device" ? '<a href="#/news?cat=' + esc(t) + '">' + esc(shortTopic(t)) + "</a>" : esc(shortTopic(t));
+    }).join(", "));
+    if ((n.companies || []).length) pts.push("Companies mentioned: " + n.companies.map(esc).join(", "));
+    if (n.hub === "device") pts.push("Filed under " + esc(sectionName(n.section)) + ", " + esc(regionName(n.region)) + " edition");
+    var also = (n.also || []).filter(function (x) { return x && x.source; });
+    if (also.length) pts.push("Also reported by " + also.length + " other outlet" + (also.length === 1 ? "" : "s") + ": " + also.map(function (x) { return esc(x.source); }).join(", "));
+    pts.push("Published by " + esc(n.source) + (n.published ? " on " + esc(fmtDate(n.published)) : ""));
+    return { title: "At a glance", ai: false, items: pts };
+  }
+  function pageStory(id) {
+    var n = D.news.filter(function (x) { return x.id === id; })[0];
+    setActive(n && n.hub === "ai" ? "ai" : "news");
+    if (!n) {
+      document.title = "Story not found · Nano Node";
+      app.innerHTML = '<div class="story-missing">' + empty("This story is no longer in the Nano Node archive (stories are kept for a few weeks). " +
+        '<a href="#/news">See the latest news →</a>') + "</div>";
+      return;
+    }
+    document.title = n.title + " · Nano Node";
+    var t = primaryTopic(n);
+    var back = n.hub === "ai" ? ["#/ai", "AI Hub"] : ["#/news", "News"];
+    // drop WordPress feed boilerplate ("The post … appeared first on …")
+    var text = n.brief || String(n.description || "").replace(/\s*The post .{0,300} appeared first on [^.]{1,80}\s*\.?\s*$/i, "").trim();
+    var kp = keyPoints(n);
+    var host = hostOf(n.url), src = n.source || host || "the publisher";
+    if (n.origin === "google" || /news\.google\./.test(host)) host = "";
+    var also = (n.also || []).filter(function (x) { return x && x.source && x.url; });
+    var relN = relatedNews(n, 5), relP = relatedPapers(n, 4);
+
+    var h = '<article class="story">';
+    h += '<nav class="story-crumbs" aria-label="Breadcrumb"><a href="' + back[0] + '" class="story-back" data-back>← ' + esc(back[1]) + "</a>" +
+      (n.hub === "device" ? '<span class="dot">' + esc(regionName(n.region)) + '</span><span class="dot">' + esc(sectionName(n.section)) + "</span>" : "") + "</nav>";
+    h += '<header class="story-head fade-in"><div class="eyebrow">' + esc(shortTopic(t)) + "</div><h1>" + esc(n.title) + "</h1>" +
+      '<div class="meta"><span class="src">' + esc(src) + "</span>" + (n.published ? '<span class="dot">' + esc(fmtDateTime(n.published)) + '</span><span class="dot">' + esc(timeAgo(n.published)) + "</span>" : "") + "</div></header>";
+    h += '<div class="story-media fade-in">' + media(n.image, t, n.id, n.image ? "" : shortTopic(t)) + "</div>";
+    h += '<div class="story-grid"><div class="story-main">';
+    h += '<section class="card pad story-summary fade-in"><div class="eyebrow">' + (n.brief ? "Summary · AI-written" : text ? "Summary · from " + esc(src) : "Summary") + "</div>" +
+      (text ? '<p class="story-lede">' + esc(text) + "</p>" :
+        '<p class="story-lede muted">' + esc(src) + " shared only the headline for this story. The full report is one click away below.</p>") + "</section>";
+    h += '<section class="card pad story-points fade-in"><div class="eyebrow">' + kp.title + (kp.ai ? " · AI-written" : "") + "</div><ul>" +
+      kp.items.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ul></section>";
+    if ((n.topics || []).length || (n.companies || []).length) h += '<div class="story-tags">' + tagsHtml(n, 4) + "</div>";
+    h += '<div class="story-cta fade-in"><a class="btn story-read" href="' + safeUrl(n.url) + '" target="_blank" rel="noopener noreferrer">Read the full article at ' + esc(src) + ' <span aria-hidden="true">↗</span></a>' +
+      '<button type="button" class="btn ghost" id="story-copy">Copy link</button></div>';
+    h += '<p class="small muted story-note">Opens ' + (host ? esc(host) : "the publisher's site") + " in a new tab. Nano Node shows a short summary; the full story and its copyright belong to the publisher." +
+      (n.brief ? " AI summaries can be wrong, so check the original before relying on them." : "") + "</p>";
+    if (also.length) h += '<section class="story-also"><div class="section-title"><h2>Also covered by</h2></div><div class="tags">' +
+      also.map(function (x) { return '<a class="tag" href="' + safeUrl(x.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.source) + " ↗</a>"; }).join("") + "</div></section>";
+    h += "</div><aside class=\"story-side\">";
+    h += '<section><div class="section-title"><h2>Related news</h2><a href="' + back[0] + '">All →</a></div>' +
+      (relN.length ? '<div class="list">' + relN.map(function (x) { return compactCard(x, x.source + " · " + timeAgo(x.published), true); }).join("") + "</div>" :
+        '<p class="muted small">No closely related stories right now.</p>') + "</section>";
+    h += '<section><div class="section-title"><h2>Related papers</h2><a href="' + (n.hub === "ai" ? "#/ai" : "#/research" + ((n.topics || [])[0] ? "?cat=" + esc(n.topics[0]) : "")) + '">More →</a></div>' +
+      (relP.length ? '<div class="list">' + relP.map(function (p) { return compactCard(p, (p.domain || p.venue || p.source) + " · " + fmtDate(p.published)); }).join("") + "</div>" :
+        '<p class="muted small">No papers on this topic in the last few weeks.</p>') + "</section>";
+    h += "</aside></div></article>";
+    app.innerHTML = h;
+
+    var backLink = app.querySelector("[data-back]");
+    backLink.addEventListener("click", function (e) {
+      if (cameFromSite) { e.preventDefault(); history.back(); }
+    });
+    var copy = document.getElementById("story-copy");
+    copy.addEventListener("click", function () {
+      var url = location.href;
+      var done = function () { copy.textContent = "Link copied"; setTimeout(function () { copy.textContent = "Copy link"; }, 1800); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { window.prompt("Copy this link", url); });
+      else window.prompt("Copy this link", url);
+    });
+  }
+
   // ------------------------------------------------------------------ notifications
   // "New" = first seen by the pipeline after this browser last opened the bell.
   var NEW_KEY = "dh-last-seen";
@@ -738,7 +867,8 @@
       .sort(function (a, b) { return String(b.it.published || "").localeCompare(String(a.it.published || "")); })
       .slice(0, 12);
     h += latest.map(function (e) {
-      return '<a class="bell-item" href="' + safeUrl(e.it.url) + '" target="_blank" rel="noopener noreferrer"><i></i><span><span class="k">' + esc(e.k) + '</span><br><span class="t">' + esc(e.it.title) + "</span></span></a>";
+      var href = e.k.indexOf("News") === 0 ? 'href="' + storyHref(e.it) + '"' : 'href="' + safeUrl(e.it.url) + '" target="_blank" rel="noopener noreferrer"';
+      return '<a class="bell-item" ' + href + '><i></i><span><span class="k">' + esc(e.k) + '</span><br><span class="t">' + esc(e.it.title) + "</span></span></a>";
     }).join("");
     panel.innerHTML = h;
     var btn = document.getElementById("bell-read");
@@ -781,19 +911,28 @@
     var parts = hash.split("?")[0].split("/");
     return { name: parts[0] || "home", arg: parts[1], cat: qm && qm[1] };
   }
+  // Scroll positions of list pages, so "Back" from a story lands where the reader left off.
+  var scrollMemo = {}, cameFromSite = false, lastRoute = "";
   function route(keepScroll) {
     var r = currentRoute();
     if (r.cat) setCat(r.cat);
     renderCatBar(r.name);
+    if (r.name !== "story") document.title = "Nano Node";
+    var fromStory = lastRoute === "story";
+    lastRoute = r.name;
     if (r.name === "radar" || r.name === "report") { location.replace("#/research"); return; } // old Research gaps links
     setActive(r.name);
-    if (r.name === "news") pageNews();
+    if (r.name === "story") pageStory(decodeURIComponent(r.arg || ""));
+    else if (r.name === "news") pageNews();
     else if (r.name === "research") pageResearch();
     else if (r.name === "ai") pageAI();
     else if (r.name === "learn") pageLearn();
     else if (r.name === "publish" || r.name === "events") { setActive("publish"); pagePublish(); }
     else { setActive("home"); pageHome(); }
-    if (keepScroll !== true) window.scrollTo(0, 0);
+    if (keepScroll === true) return;
+    var y = fromStory && r.name !== "story" ? scrollMemo[location.hash] : null;
+    // jump, not glide (the page has smooth scrolling for in-page links)
+    window.scrollTo({ top: y || 0, left: 0, behavior: "instant" });
   }
 
   // ------------------------------------------------------------------ theme
@@ -805,6 +944,11 @@
     try { localStorage.setItem("dh-theme", next); } catch (e) {}
   });
 
-  window.addEventListener("hashchange", function () { route(); });
+  window.addEventListener("hashchange", function (e) {
+    var before = String(e.oldURL || "").split("#")[1];
+    if (before != null) scrollMemo["#" + before] = window.scrollY;
+    cameFromSite = true;
+    route();
+  });
   init();
 })();

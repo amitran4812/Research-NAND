@@ -64,7 +64,9 @@ def run_news(cfg, tagger, llm: Summarizer) -> list[dict]:
         briefs = llm.news_briefs(todo)
         for it in items:
             if it["id"] in briefs:
-                it["brief"] = briefs[it["id"]]
+                it["brief"] = briefs[it["id"]]["brief"]
+                if briefs[it["id"]]["points"]:
+                    it["points"] = briefs[it["id"]]["points"]
         log.info("Wrote %d news briefs", len(briefs))
     for it in items:
         it["section"] = news.classify_section(it, cfg)
