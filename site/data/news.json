@@ -1,6 +1,1831 @@
 {
- "updated": "2026-11-17T08:12:26Z",
+ "updated": "2026-11-17T20:11:27Z",
  "items": [
+  {
+   "id": "7906cb1c5c11",
+   "title": "Palantir's 148% U.S. Commercial Revenue Surge Signals AI Momentum",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPb3RLMHdzYmJ6SnAtU0lSMEl5V2YyYS1SWlB1NWlDZVlnSkZ0V2xlbEU2R1psb2pBVkU3MVEwMXVOWGREMndDODZtWGVPbUl1MUZWZmVTTy00RjdLZkM4U3MzY3c5cjVMenpYOW5SeTJidDhNc1B6VUU4TlZ4ZG01Y3BSNTB1MTluNDZ5OHY1YzN3dnN3VXdDbGVQN3ExSDFFR3k4UmNMclpScUdQUWFva08yWVh1TTROQ1Zr?oc=5",
+   "source": "TradingView",
+   "source_url": "https://www.tradingview.com",
+   "published": "2026-11-17T19:55:47Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "545699032922",
+   "title": "AP takes aim at global race for chips, robots & AI",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQLXBLeW4yNW9GcGpZY2syQlQyeklIOTN0TXpsMVc3VE11d2xFQUhfVDVya3NtU3gwN1VSMnpCRE1XVlhJMzlmYWtaVi1nN1pMUENReHB3cF83TmZvWnJybmVtckpfbVZ1QkFtS09kOHJYZE5UcTlEU3ZzaEJWUW1vMmtDaklHQWhGQnRLN1pnMzJ2SVhKUlE4X2w4a29MODJrQkFjajlfRDVBZw?oc=5",
+   "source": "The Hans India",
+   "source_url": "https://www.thehansindia.com",
+   "published": "2026-11-17T19:54:01Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "8327350308ee",
+   "title": "Can Adobe (NASDAQ:ADBE) Turn AI Demand Into Lasting Growth?",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPeHJqbE9tS0w5LWlLUDN3QVBTck05d1JVNXAzNVBlRFhVN2FvYU8zaXJDOURwcDRCS3hlY0hMcVVXV3ZCa1pfMHdNVVo1c1RyUzBCRXZQVmozVmNPa2Y2OHptc1RaazR5dUNUdFA2RF9zTE9SYm02ZHBCSUNDNlltMV94OGV3UW1QWUd1Y3lndXpLUlZZVEV1TkZQbVpDaG1XWHJr?oc=5",
+   "source": "Kalkine Media",
+   "source_url": "https://kalkinemedia.com",
+   "published": "2026-11-17T19:51:00Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "f65c8889afb0",
+   "title": "SMX Puts Artificial Intelligence to Work for American Industry",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOS3NUQ2lVaWNIaVhtVDVXVkNyeW1xN0kxRlJWekNvTW1hd0NkQlBnOG1YNUtGY2dFZ2VvMDlMTHM0WTFBaGpxQldGTHQ1eUk4RDk4QjdHLVpMN0F0TElVSThYNmVTNW1RdEhBVVJkeGNHcUFVcHA3SGZmVlppLXh2RUtqekVsVUJHTmlWZm5PQmdNWi1fU3ZfU0ZTNUxBaldYT3hxVHNLRGZNSm5CZmxDSTl2cWk?oc=5",
+   "source": "USA Today",
+   "source_url": "https://www.usatoday.com",
+   "published": "2026-11-17T19:49:23Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "faa7c3117586",
+   "title": "Micron stock falls about 7% as Nvidia earnings and export curbs hit chips",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMmtnU0g4VE5hZGVQSXBtWmhTVmNkZnBPUnEwOEJmZlBjZVg4amJrMU5Ib0VHMFByaUxieW9hNGhXSGRXcTl0WmU0YVJyYlBQb3JCWC1SaTZfNlY4NjAyUjRfMnM2YlZUSFE4X2FjejUxQng0SGNVR1d5MklwT1FtbUdkVHdoa1JKY2JJSk13Q2xnTHNBa2VPRW9qMUlkdVEwbkE?oc=5",
+   "source": "Startup Fortune",
+   "source_url": "https://startupfortune.com",
+   "published": "2026-11-17T19:18:45Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "Micron",
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "d6d2ea169f37",
+   "title": "PR Newswire report reveals how AI-powered search is reshaping press release strategies worldwide",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1DMm9DbGpPdHVLNUtJNDlod1RSZWp3aGs5X0xyeC1NUHNlemVBM1RsOFJXNDN1TFBUUW5uUlprVEdFcjd5X2ZqS1hFWlRoLXBQc1dMT2RNSGV1N1FJ?oc=5",
+   "source": "ACROFAN USA",
+   "source_url": "https://us.acrofan.com",
+   "published": "2026-11-17T19:11:28Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "87024e3a503d",
+   "title": "Micron Stocks Decrease Nearly 3.1% as Judge Lets DRAM Price-Fixing Suit Proceed",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNOTlZTXppckh2ZkRqc3FONXhGMThmX0F5VkphLWlsRDk1Z2pVY1lLOTRITDU1U1ozR3d3YzhMZVRpQ0M4MEJRQ2hVbFp6ZElZWjJsc3RXSmVGQjNBczlGeUZPcThISVZyWXNvSGkyQ3hKMkhLOTBNT1l0ODQyYXhnT29LOFN3dUVLT1RUSkVLZjBoYlBkWDZVc1lSQUNKZHlsRGV3bUQ4RHlGSF8zRm5zNGhEemhHYk94dXVEbEpUMmJQcUVjQjdVaW5LcVp4NUxpYkF1cA?oc=5",
+   "source": "TradingView",
+   "source_url": "https://www.tradingview.com",
+   "published": "2026-11-17T19:06:32Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram"
+   ],
+   "companies": [
+    "Micron"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "56c0b04dd40c",
+   "title": "IEEE Celebrates 10 Years of Incorporating Ethics Into AI Systems",
+   "url": "https://spectrum.ieee.org/ieee-ethics-ai-systems",
+   "source": "IEEE Spectrum (AI)",
+   "source_url": null,
+   "published": "2026-11-17T19:00:03Z",
+   "description": "Policymakers, technologists, and members of the public have raised concerns about the harm AI’s rapid advancement might cause to society. Their concerns include bias, data privacy violations, the spread of misinformation, and losing control of AI agents. Those issues are relatively new to many people, but the IEEE Standards Association has been working for the past decade on ways to prioritize the responsible development of AI systems. In 2016 IEEE SA launched the IEEE Global Initiative for Ethical Considerations in Autonomous and Intelligent Systems (A/IS) and published the Ethically…",
+   "hub": "ai",
+   "origin": "feed",
+   "image": "https://spectrum.ieee.org/media-library/illustration-of-floating-hands-inspecting-the-use-of-ai-features-across-a-laptop-computer-academic-paper-and-the-world-wide-web.jpg?id=68699342&width=980",
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "17be56089032",
+   "title": "SMX Targets Industrial Breakthroughs With New Artificial Intelligence Platform",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOcWtCS1VDZVlBUTJMbzY2aHhGcEVyQkEzMDZmUU9oMHZSQ1VmQlJNUmdXRHR5VGtVTlhYbkRJb0w0eE01bTZCY2dnRE91MHpBazhSMFV2N1NaWEJoYWc4bHc0bGEwelBHY2FPRzdOUDhJbm91ZHB4SDBoNkZId21ScVhTTXR0UEdGXzQzaHRrNU5ZektHVGktZWdBM19xMHhPTEUzZjZsQmQxVktMSE9kbkd0dWVtUC12UFNSeEFxck5JMXFvcTdSczd3?oc=5",
+   "source": "USA Today",
+   "source_url": "https://www.usatoday.com",
+   "published": "2026-11-17T18:56:17Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "88b3357b61a4",
+   "title": "Fullmetal Alchemist, Gundam Director Calls Generative AI ‘Waste’ Due To Its ‘Inferior’ Output",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4zOFNyVEctdF8zSDBmTGlKa2staXJDTjhzX0NTVVZpSHZ4QmFjdzNIY0lmMFpNLW9jMEg5WkNqVGdaanozeDg1dWo3LVBNUWhnaHZtOTBwNXNSc3hDcDBSeGdB?oc=5",
+   "source": "IMDb",
+   "source_url": "https://www.imdb.com",
+   "published": "2026-11-17T18:24:46Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "265046365392",
+   "title": "What Led a 28% Cut in the 2028 AI Accelerator Spending Forecast to Weigh on VanEck Semiconductor ETF (NASDAQ:SMH)?",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQSTJhTzU5UzYtdTRvNFk3M3pIM0UzeGJCYWlkOXhEbGoxbl9tekF5eWdWMHQtUkVyTDEzWWZCR2ZvSXBjLVZod2NjcF8xSGZLbzdoNGxLQng3eHpDRnU5eHBKV080WTJZUUpURlBUaExueHJXZHo1aDNQMnBmZUVhbGxMVFV1NzZaVWlGeXhYX2ZYT1FzOGxxZ1RLYnVXa2pPaFA2eXItei1kaHlOYVBUSDBVSmo1dVpyNTBPd1JzQkx4NXRkV2JRYklFR0ozcldaRzRWclFVMWxqcy05QzFKal91azFyam1SWl9NZXFn?oc=5",
+   "source": "kalkine.ca",
+   "source_url": "https://kalkine.ca",
+   "published": "2026-11-17T18:21:00Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-hardware",
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "ba67c7a9ad50",
+   "title": "Intel Corp Stock (INTC) Moved Down by 3.24% on Nov 17: What Investors Need To Know",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOcjhIYWx3WVVncDMzVG1uRVFuSm9CaEJHYVJNSUdUVERPOTBqTTNmOHlPMnJkeTZrekZuUnpQRC1UMEhwUDIyNDNNYWpqSlliVGJobFZBTngwMDM0ZmFBSEtlZm9YZFFpd251WndNX0NBMjlyR2lrRDJ5SVFiVE9ISGpwdzBmZ0pCYUZz?oc=5",
+   "source": "TradingKey",
+   "source_url": "https://www.tradingkey.com",
+   "published": "2026-11-17T18:15:27Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Intel"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "a342f4866f6b",
+   "title": "Qualcomm vs. SK Hynix: Stable Revenue vs. Rapid Acceleration",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQTBtbXVsTjJ4dzVRR1kzNVNoNFd5QkpuOXd1SmxXUjc5aGw2Z1hFNGdnLUFSOTR3ZjljTE9KMzBpV3phQ1NrTVZ2WXJsWjNOdWV2SXIwdmVuWGotZkNmTXRHaFVid0xjcWhoSzcwTEdoaVdRLXJoYmZoOHIxeEtJWTRfZUJPOUZFbFVPdThWbVNuc3k2RkhoclpuNEpqbVNDYTljbGplenAxUQ?oc=5",
+   "source": "The Motley Fool",
+   "source_url": "https://www.fool.com",
+   "published": "2026-11-17T18:00:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "77428bf51566",
+   "title": "Micron, SanDisk and SK Hynix Face New Warning From Wall Street",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRXl1eDUzUVNUeUxDcFdaTzVXdnhRMmxVTnRzM0ZXZ2R1dlhrRVFreDlVOHhuY2JMRFJiYTZvMGVucEtuRGRWUE81ajBHTGNxY200NkMycFRMeml5VXdMRUFrSUpBdm03MW9UV2hRTHlzZk1tVXgyM0lsc0xNcFFrcURFTVFfOHlvOFp5RXBoXzgwUmQxb3FmTFhJYW5WMmEwa0RlN1Fnc2FIUjRqY3YtemxlUTg0YkxVZXVZaDdn?oc=5",
+   "source": "TradingView",
+   "source_url": "https://www.tradingview.com",
+   "published": "2026-11-17T17:49:59Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [
+    "SK hynix",
+    "Micron",
+    "Sandisk"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "3f1daa5f9da0",
+   "title": "Sandisk's Earnings Face a New Risk in a Key Chip Market",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSmJ4Yno1WjJlRHBVVzlUOHhDUUZMUHR4VnB2YnhLUmVGR1VDeVliNXk1emJmNHZWb2plbmU2NFc5M0dIVEV3bmxSYkRxUU1UMnFMcGpsQVA5Q2FrZ3JOU2tJYVYxb1FNODFlcFkwMlpLcldKbjM3eDBxOFlLNElBWnltNTlyanh6bEJGX1BacUstSVYzZktWSG9NemxEZmVDNXp0dmJUcENkREJQM2xyanNrYzdwQQ?oc=5",
+   "source": "TradingView",
+   "source_url": "https://www.tradingview.com",
+   "published": "2026-11-17T17:49:05Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand",
+    "industry"
+   ],
+   "companies": [
+    "Sandisk"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "501bfbc674ad",
+   "title": "Defect-Aware Chiplet Matching For Heterogeneous Integration Yield (ASU, Ampere)",
+   "url": "https://semiengineering.com/defect-aware-chiplet-matching-for-heterogeneous-integration-yield-asu-ampere/",
+   "source": "Semiconductor Engineering",
+   "source_url": null,
+   "published": "2026-11-17T17:44:39Z",
+   "description": "Researchers at Arizona State University and Ampere Computing published “DT-MATCH: Defect- and Topology-Aware Chiplet Matching for Yield Optimization in Heterogeneous Integration.” Abstract “Heterogeneous integration (HI) and advanced packaging enable chiplet-based system-on-chip (SoC) designs; however, they also introduce new yield challenges arising from manufacturing defects and complex die-to-die (D2D) interconnect constraints. In particular, lane-level defects, limited... » read more The post Defect-Aware Chiplet Matching For Heterogeneous Integration Yield (ASU, Ampere) appeared first…",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://semiengineering.com/wp-content/uploads/purple-AdobeStock_373431968-06-21-scaled.jpeg",
+   "topics": [
+    "interconnects",
+    "packaging",
+    "process"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "img_checked": true,
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "a0cac32ac533",
+   "title": "Backside Clock Mesh Reduces Skew And Power In Backside Power Delivery (KAIST)",
+   "url": "https://semiengineering.com/backside-clock-mesh-reduces-skew-and-power-in-backside-power-delivery-kaist/",
+   "source": "Semiconductor Engineering",
+   "source_url": null,
+   "published": "2026-11-17T17:35:37Z",
+   "description": "Researchers at Korea Advanced Institute of Science and Technology (KAIST) published “Clock Distribution Network with Backside Clock Mesh in BSPDN Architecture.” Abstract Excerpt “We propose a clock distribution network (CDN) in which the clock mesh is located on backside metal (BM) layers, while the rest of the network remains on the frontside. Since the backside... » read more The post Backside Clock Mesh Reduces Skew And Power In Backside Power Delivery (KAIST) appeared first on Semiconductor Engineering .",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://semiengineering.com/wp-content/uploads/AdobeStock_482095378-08-06-24.jpeg",
+   "topics": [
+    "logic-devices",
+    "vlsi"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "img_checked": true,
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "16e312ffd88b",
+   "title": "Everspin Looks to Broaden MRAM Adoption with LPDDR Standard",
+   "url": "https://www.eetimes.com/everspin-looks-to-broaden-mram-adoption-with-lpddr-standard/",
+   "source": "EE Times",
+   "source_url": null,
+   "published": "2026-11-17T17:26:57Z",
+   "description": "An exploratory JEDEC task group is weighing how controller vendors could support MRAM with hard IP to work with newer LPDDR implementations. The post Everspin Looks to Broaden MRAM Adoption with LPDDR Standard appeared first on EE Times .",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://www.eetimes.com/wp-content/uploads/AdobeStock_1746358114-1-e1794936111183.jpeg",
+   "topics": [
+    "dram",
+    "emerging-memory"
+   ],
+   "companies": [
+    "Everspin"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "c68125babd87",
+   "title": "Equipment to make up about half of Tata Electronics’ $11-bn chip fab cost",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPRHFXLXFRamxpMW4wMTU3c1RtNkxMRklCZkhrTlpud2RsWU95aE5RanRicEFQck5pSUtWbzM0aEtSaGQ5cGhWTE03eXoxVFRRczdIdmlCNUdpZFFkMGtvcUJOLW5wUEZJcXFPU0lHOXNHTWRLUDRNVWdkZEg0WTBZRFNKeEMteURGT0JsaWFrTEc3NFBjZkpIcTJRRDBlUmJNWVZJekpGY1lTY3JldHRQRmtuWnBpNW9hUmZYX3drblU4SUlQdjNRWmE0RdIB0gFBVV95cUxPTXI2UGVsc3NSMktSdzl1SGxFTXNFdGFIQTl4NTRCcW9xdkxDMjI3UjViRXBaSzFGdHJIUDFSaDd5N09TdUlJRTdSenV1Y2ZqYklLckMxWDdWN0FUUHhNUXFna0E2RGhicGdVU05DVnVYaHN3NkN0d1pIUUx6eTZUNmJweDRfclFMOTUtME0xUjNua3JKc3BWZmUtdFdoa3pLcEdoVXctbklHdjlFWFJhWmgyR3B3SkJldmp5RVl1cDJ1MkV6bEVBakZVNTRqemxVcmc?oc=5",
+   "source": "The Financial Express",
+   "source_url": "https://www.financialexpress.com",
+   "published": "2026-11-17T17:24:22Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "process",
+    "industry"
+   ],
+   "companies": [
+    "Tata Electronics"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "india"
+  },
+  {
+   "id": "c7da9a57b6b5",
+   "title": "Rosen Law Firm Encourages SK hynix Inc. Investors to Inquire About Securities Class Action Investigation - SKHY",
+   "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxPRDViVDc1TW5Ud21BMS16SS13Q3E4NkVGanRVVHJBRy1RMzJvejduYk1WM2ZkdlNuN01QMUhaazJhS2NFUzF5S1JtSGZhTzZqVmV4anpWTjdZN2l5X3ZCQV9ia2xwaXh1dERray1maTh5NHloRkRlZE94d1BZcXFGQ3VDVFdqeFhvbFhyM0R1OUI5WUhZUUtQdDFwNHJDSEdqTS1YQXJOeDlEaU1Nb0k4cWJ3bjlVTnlRS1QxSDJXX1lRUHNUMTVwaEswbXBicW1qOWtIM2dPdXIydkRzVkJSX09oTDdJbXZOcTJTcmVIU0RDTGFqNG9DSWJxRjRMclBaMkkzU00xc1BEYkQtb1hsWjZmZ0I1S2JQckJzOW9UNllkSFZ5dG9kU3F4bmlGWGc?oc=5",
+   "source": "The Joplin Globe",
+   "source_url": "https://www.joplinglobe.com",
+   "published": "2026-11-17T17:10:14Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "65a2ae8b387b",
+   "title": "Micron, Samsung, SK Hynix Fail to Get Memory Price-Fixing Lawsuit Dismissed",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQVRtRDhTcU02TWJFaUlJZ21Fai10SEVoYnAybWlaNVVNSVpjdGxKY2NLYjhFZnYycElfS2VGajM2Szk3RFZmRVJYaDNDa0Z3TDZkREczU2dOOTVpZWNzeTZfTGVPNjNSMVBxekRKck1fVzdrZDNNcV9WNnBkVWYydjlXNDExOWRMWnFBOXlHT19CZjN6azRWenh0TlRJTHlyRzZHaGNwNlF4Mi1HQ2JILUdB?oc=5",
+   "source": "PCMag UK",
+   "source_url": "https://uk.pcmag.com",
+   "published": "2026-11-17T17:09:16Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung",
+    "SK hynix",
+    "Micron"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "f2b4b126eba2",
+   "title": "Apple Locks In Memory Supply as Chip Costs Reshape Its Cost Base",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOeE1RY0tFbF9wamNvVGhUaWp1V1p0cmpRUzFfYmUtVGN4V2ZKVmk0MlJYc0VkZ0ctTjlZYktxZGVBSWgwd2JNdE82UTQ0T3lqTk5yUDd6M3NDR1ZCR01CNFRVXzh4d0Z0cVRtMTJOdkNfMzN5emVmLVY3UFJwMjVnYkpnMlBUN0t3emo4LWM5Q3M1U2FRQmhVeWswVWh5Qm9EOVVsTDhudkxLSm9lMVktVjdwUTd3OUFSR25WNDNtaFc3SFQ2UjF3bkZINTlnNkNMT2c?oc=5",
+   "source": "ad-hoc-news.de",
+   "source_url": "https://www.ad-hoc-news.de",
+   "published": "2026-11-17T16:51:11Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "8a964e4d85e7",
+   "title": "Apple reportedly nearing long-term Samsung memory deal amid chip shortage",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOX2E4SmZwdUJrbVlac1o3OEVtQ0llMHFscnBqR1ZrRDhONHVyUmNNRVpPUklDTkJWbGo1MThwM1p1Z2ZBWlhKX3dmR21hcm1nQmM0TnhfZUNYY25hM29CMXFiNDBESXhpbWpJZEplRWE3Rm82dHVWemFHZnRHTkpZRkx0a2hEQlRNMmdCZGE1akp5WGlFdW5wcGd2cldGYjVxLU5ibFZsN2RGTDRQczczZldJbC1Id1Z4R3Q0U9IBwgFBVV95cUxQOGJWTUtMVXM3eU9GWm5CMVFTLWp2RUNZdzRjY015Qk9yUmJiSUU3SDFIQmFRUzNMXzVXMGlxSm12S0JKYWRpenlici10QmZsX2N3alI3QzMzS3puRDgtajVnaFJlYzhtLWJUYm1kcklpZVJ0Ml9FdzF4WFpUeDJfQnJsbkEweExSbTVEbUUyc1hIc2hCTlI5b1ZRZldlOTN0cmFBdjVjcFNydTNWMzhWRkg3N2E2WVhzR0l6dFlCU1ZmQQ?oc=5",
+   "source": "The Apple Post",
+   "source_url": "https://www.theapplepost.com",
+   "published": "2026-11-17T16:46:40Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "Samsung"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "e7acd9496d77",
+   "title": "SK hynix AI revenue: What Q3 2026 results show",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRHU1dFNhSVgxYUVPaHhYdlYtTzBnMXVHaVRBY1lJbUJoaHNycUxpa2JFMW5nM0NzU3Rkb3JYZVdOSEJmZ1ktTUd0bEs2cE10SFR2NkstRGNkYnhjRDkycGQ1MGhWQmxBTjU1MVdPdGFyTElwX3lDVGRYck5MQ2ptdG85dER2Sm1vT0pZ?oc=5",
+   "source": "NeoTeo",
+   "source_url": "https://www.neoteo.com",
+   "published": "2026-11-17T16:27:36Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "cc44d161b658",
+   "title": "From gases to machines, India builds its chip backbone",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQQTBXVnUzNFItbmxHeHZNUGFON2dva1d0UHA1Mk5EN3BBc1htNl9rWGRtazIzMXlXYWJrLV9ZNzhRak1iYXUycnVwTXp3UlpxR2ozSmFXcTVQeDRxNDFMYm1Xc0g3bFd3bzNXWDA2NjFkWkJnUVFXRWdkaGkxdHEyRjg5ckg2ekxlNUF1TG9ZZDVkbjlyM2tpRmJaTmJVMEVpVEJsbzdPb2lMZXJnd1VuQjRQRkQxZndLOHFpSC1mWllZTVp0WGppZTNfZUxUVWNIWXNrTHVR0gHbAUFVX3lxTE9na1BXTFNrbGRwcVBaOXdhaFU0Wmc3NGNvemhiRlJVVEhVeXlBUUZZYVZ2ZnB3dDY2dG82ejl6VHAyRDZHRG9fNE1GcWlYQUFNUjFvYkI1UXAxMEF6NTZJTDYzQVhvZUdlRWVsY0RiNzN4SE9XdGl3SktVTmptcHRzRndxblVXdHcwWVhUVXpOeDBqTlVhNEVHeEhXb2habGlfcUFEMzBqWnFvMDU5VHhfS0ctUmVOTHU4TGdKR25lbFM5cGxMcWNlanVYZU5EYU41cTM5Vl9YejBrTQ?oc=5",
+   "source": "The Times of India",
+   "source_url": "https://timesofindia.indiatimes.com",
+   "published": "2026-11-17T16:23:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "india"
+  },
+  {
+   "id": "cc6d4e2d0306",
+   "title": "What Is SanDisk (NASDAQ: SNDK) Stock? Business Model, Products, Growth Opportunities and Risks",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYS1talJYdXg4QnQxSVdMY252ZVQwQ1JhbUlWQ0dtYlRKVXkxR0J5TjlQQ0JMREJUSE41VDg4NlBuakUtWDVPUktLYXVqSjU2eDlYcm9hQlFrekJ2SjFzdEFBLWNqSjZ0NVIzUVZQRDdudGR4MzBkWUtTQ0VRZnFGeXVIV3FhRFB5OXA1Q0tMLWFTd2UwRUg5bjJrN3hsanhNNV94YXNVQmpEVGdkLU9JZlpPZnBjcU8xMm1KTkhuWGZMa1k?oc=5",
+   "source": "MEXC",
+   "source_url": "https://www.mexc.com",
+   "published": "2026-11-17T16:22:51Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [
+    "Sandisk"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "079cda45aaca",
+   "title": "SanDisk and Micron Fall 4% as GF Securities Cuts NAND Price Forecast and Warns of a Glut; SK Hynix Dips",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTjhxMWdCdlBPVzZFcllkOUFvaWtIeWpQSE4wQjdfOHhpMkN2bW5hUmZYcmc4SzhaNVdpQ2tmcEZ1eGp6SlcxZ29uVzRwaFlJNVZDTlVuMHp3dF9SSC15SldENkZLZmZnZnJkUks5Qk5oaGZLN21TSVlZX1B0WExiVlVEcEdVekljakpWUXBhMVhXVFBCQnRrVHRrYnk0QzVUZ3lNa1kzRUpzbGV3MkgzYktQOXliVWZSM05qQ2JIM2xKQV9oQXA4clJzTVBoRk56OTRvNWg4b2pRbkVudlE?oc=5",
+   "source": "24/7 Wall St.",
+   "source_url": "https://247wallst.com",
+   "published": "2026-11-17T16:06:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [
+    "SK hynix",
+    "Micron",
+    "Sandisk"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "124a41661251",
+   "title": "AMD strengthens its AI stack with Taalas acquisition",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNb1JCXzgwN0NjbTI3Mk5CRnFCVzUtdXJUdDdmcUJNODJGUDJpZm9DcWtVWmJaMkNyMjB1UzcyWWdPcUtubThvdlVsYzhNaS1Vb2ZLdUFxM1dpclQtajFsVFVzcUhVc0tFWHlmaVl1Z2FvRklwci1uS2tSazh6V0M4ekwwY2hVdU1hTkVEYW54RVU?oc=5",
+   "source": "OC3D",
+   "source_url": "https://overclock3d.net",
+   "published": "2026-11-17T16:03:29Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [
+    "AMD"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "0be2902889f6",
+   "title": "China threatens countermeasures against US restrictions on advanced semiconductor access",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcGtmR2JwT0h5SXRkMlpDQnJDVGNpeHhqX3ZoajV5b2hxMWUzLVdmTmxWR0J0YW5XNFBCb2VnVWx4eDQweXR0TjRzVlhUei12dFY0Mm5sREZaVEE4OU9Bd3F6OVQtdlZabjZidlE0TFhOdDBEdE1rTncyZHhHN28wb1VWT1hsOU41V0Z2VGJqUTJrNkpzNE9ZLVR3MjVReXF5dEtFS3dWb3MzdGhrZDRZaUtsVmRQeVM3ZVlHemx3VU5jU2wzQ3F2aWRhaVrSAdABQVVfeXFMUDFjNzlXQXlicVdQZU1yX3lHa0FSUHJlRHVPalkteEpOUjhYR2U1Y1d2SjFQTmVxcDdHckxseGR4SGhMc01RMk9nbUFic3VHQVZnMXB1QmotbXVpRUk0dmpRT2w5Y0RBWFhiYWpwUVNnZlhVVTgyRjlPdTdDakNLa0xJS2o5SFJKMFhGT2tGSEtTU083MWdEakRyMFJCWEhYdWVrRHpXcXpwdEN5OWFKTkxQYk9veTY4ejdMc0ZTU1hBMmRhUW0yN25lTzRJTzJxeA?oc=5",
+   "source": "The Tribune",
+   "source_url": "https://www.tribuneindia.com",
+   "published": "2026-11-17T15:58:30Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "4cd3d76fbce1",
+   "title": "OTT Subscriptions Decline as Generative AI, Commerce Memberships Surge",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUHNqelAtY2Rld21jbEktY3Vfd1dsM0k5SllMZy00dldyM3FrNGZyd1JBYnBlNlItd0xJS3A4UGtoMWtJaTdwbFVzcDJjMFR5WFB6Uzd5Ui1DaUJUQXd0czRkVW9YOTUzUXY1SGxxVkhMcFgxX0xZdDRKWDUyUkNtckVVT1h5OWNvMC1Mc1Nn?oc=5",
+   "source": "조선일보",
+   "source_url": "https://www.chosun.com",
+   "published": "2026-11-17T15:40:05Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "bb7bb44bf9a0",
+   "title": "Micron and SanDisk Stocks Fall as GF Securities Warns NAND Glut Could Hit in 2027",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPSEdCYXBtMElEREJMMmJwTFpiWW0xbkQyazAzX2M1SHhqbmd4WWtYc0xXd2dJSDZSVnppM3R2cG9PQWpGMUdnaUhXTmxONFZQTGtndjFTVksyNmpNblZTNjVmR2ZXVkRicjl0RUxCQXZmRkZTOUZobE9NWUppc2RYLUpDU1dhZEc0RGwyTjNUUEw4LW1rR09fNWk0MXEtWjFZZUxnTE1EamNWbmlqMndpZkZIQ3VPOTFjZXFMblZZTXY1Y2VwZW1TdEthR1Azd20zZmFRaWV2eEE?oc=5",
+   "source": "TradingView",
+   "source_url": "https://www.tradingview.com",
+   "published": "2026-11-17T15:37:23Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [
+    "Micron",
+    "Sandisk"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "e784ffe46d59",
+   "title": "Axelera AI moves into HPC with Titania",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1PVXZrbWQ0aW1GSEFWU1lCWmZrVXlTUlhsTGxNZG9mbUhKOW1BZFhtX3dkQm52OGtmVjJiNEZYOU04bklhR2lnQ1o5YWpwUXZMb0x3VkFqZmswRVlhTXByNDVfWldRTElPb1FmcmY1c3JTSTFHRXM2WWdR?oc=5",
+   "source": "Jon Peddie",
+   "source_url": "https://www.jonpeddie.com",
+   "published": "2026-11-17T15:32:52Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "42890cf30236",
+   "title": "Will Anthropic's IPO Price Top $78? Signs of Strong Demand Amid AI Bubble Fears",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QNDY4SjdVODlLcGF4MlBoNFQyQmJtdXJNSWNWLS1DTFU1NVJOLUl6U2l3dlpyS256bGQ5c19acFRpTVpubkY4UmRQY0FnR2Q1NFhuUGdib20?oc=5",
+   "source": "파이낸셜뉴스",
+   "source_url": "https://en.fnnews.com",
+   "published": "2026-11-17T15:18:31Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "b7b26ad58478",
+   "title": "AI Startup Fermat Secures $8M to Streamline Fashion Tech Packs",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSFN6ZDZXbk5uNlZ5WThRd2o5UHNBNzU2WGlwQ01iejNrZGZ5VGcyUDlhWmZPMXFCVGYxSzBvcWpQUHJiZFJCMG43NXZWeEgtY1FsSFRhUFpndFgyQUlGMXVOd0dSWWRCTnNsZzVLTHh1OUR5SGRwTHZfNGdxRE9aU0hheFd4aGhzc0xJQVZZcU5GZmlyVUQtdzJnWmJ2TUhmdjdJ?oc=5",
+   "source": "WWD",
+   "source_url": "https://wwd.com",
+   "published": "2026-11-17T15:18:00Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "c8333662dec7",
+   "title": "Apple memory shortage may keep iPhone and Mac prices high",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBoWXlVZzdhMlN6OXJ0Y2ViWlpWZ1R4bnlTVG5zcERScUF1Zm1VOVVpU0x0enVGdEpLNzZHeEJJWTVQMUw2bnNBUXBMMGkwTkJMaVR2bWlUdXB5WElGbE5KU1p4OA?oc=5",
+   "source": "Tbreak UAE",
+   "source_url": "https://tbreak.com",
+   "published": "2026-11-17T15:16:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "b03fb343de66",
+   "title": "SRAM (Static RAM): 6T Cell, vs DRAM, Caches and AI Chips",
+   "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1HaEphUThnUENSa0VtWnVjVUdRdEMzZ0F5SlFId3ljN3VtNXQ3dVExclN5QUxLS21ZUGZSR1hYaEVyWDg?oc=5",
+   "source": "MLQ.ai",
+   "source_url": "https://mlq.ai",
+   "published": "2026-11-17T15:09:12Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram",
+    "sram"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "8db266819c09",
+   "title": "What Is a Transistor? How It Works, MOSFETs and Chip Counts",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5jRmZnVjkwN2FreDRqYWRTMjRPVEVNY04zQm5FZWNDZU5GQlNCSmctdGlBQXk1LVZhbWQ5X3M4M3djUGtOU1l5bnVPWQ?oc=5",
+   "source": "MLQ.ai",
+   "source_url": "https://mlq.ai",
+   "published": "2026-11-17T15:08:53Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "902d225b2799",
+   "title": "Nvidia Earnings Tonight: Are Semiconductor Stocks in Trouble?",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcnBRc2JERTNqdkgwQkZCZHN4RmJGUlpkQlFJLWVsTW5XajNGb0FHQ3d0a3hBSlViYi1EREZqVk44WWRnalhaWWdNMWppcWlZM2hfaTNJQnF1d2hTYjZxVWN6TmxsbnFoYnNQeC1mRERVUm5fMU1IYmotTkQ2WURLVnJndWMwY1Q5bjA5dUJfQ0h4QUZlWTVod2hWOUdwWWZQTTNsZTFkVQ?oc=5",
+   "source": "Investing.com",
+   "source_url": "https://www.investing.com",
+   "published": "2026-11-17T15:07:44Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "f6a62fc8257d",
+   "title": "SK Hynix Supplier Fund 2026: Where the $1 Billion Goes",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9aaVZNS2dCQWZaZThwU08tTGxtYTNDWmwwZGxIRy1ybXBvUDM4SXk1V0dOdDdOeDdRRUk0d1R4MkYtYVhzZnE3ZTZac2lXQTNpUl9NeWs1WQ?oc=5",
+   "source": "Memeburn",
+   "source_url": "https://memeburn.com",
+   "published": "2026-11-17T14:51:35Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "2aafef14af75",
+   "title": "(PR) AMD Completes Acquisition of Taalas to Advance AI Inference Innovation",
+   "url": "https://www.techpowerup.com/354943/amd-completes-acquisition-of-taalas-to-advance-ai-inference-innovation",
+   "source": "TechPowerUp",
+   "source_url": null,
+   "published": "2026-11-17T14:51:01Z",
+   "description": "AMD today announced the completion of its acquisition of Taalas, a pioneer in specialized AI inference silicon, further strengthening the company's full-stack AI portfolio and long-term inference roadmap. As demand for AI inference accelerates, Taalas brings differentiated technology and world-class engineering expertise designed to deliver breakthrough performance and efficiency for increasingly specialized AI workloads. \"AI inference is evolving rapidly, and customers need a broad range of compute solutions optimized for their workloads,\" said Vamsi Boppana, senior vice president of the…",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://www.techpowerup.com/img/CfPGDpGIXBAIXOlD.jpg",
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "AMD"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "9664516cbc49",
+   "title": "China slams US curbs on five countries over semiconductor chips ahead of Trump's visit",
+   "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNVlZmakNQRFNEVW8wQlZGVEQ2QlNIRVEySFhCTm15X3hXSkVoQ1VnS3hndXhuOFBDS0o0eV8tQzJ1MDk2cGtCcnZDODd4c1paWEhlUm1oTXlNZU04QUVUdFdITGc2aHQ0M2cxZEJrckl3MUNGZ0l0UnZoeV90ZDF6RGRWZVpTdkF1QWpkZDdrQUlRWXVqeldwR0xCRk5MQWhPVGVEQTc1Q0gyT1BKdExMVnY1ZVQ0MllWWXR1bDJpaDhpWUloY29YeDgwbTBaNGtIVWc0ZFE3ZWdna3lTY3hqSHBhTEVEZFpTbDdRd2w2ZlVYRkZDSjZWZzVBS1hqOXVTUUQw?oc=5",
+   "source": "Dailyhunt",
+   "source_url": "https://m.dailyhunt.in",
+   "published": "2026-11-17T14:35:44Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "65ee148e878f",
+   "title": "IWGB Game Workers Union leads manifesto on generative AI use in the industry",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZjNPaC1wb2pWT3B6alBwOHVUUjdjeXp1M3RIQU44OW12bkVFNzZfNHFXNXNmaXZmaURaSUV0djNBdmJmMk9SRzhTVEZCSXhWSlhGX2xHZW5ONzg0ci1Ubzc2VkoxdlNvVjhVU2RPYjVXNDdHc1RMX3JJWmg0VndZOU5TRzRna0pubjkyWUNIME9rZTAxUEFtSWNaQjRSRld1OERXWi0yMEtqZw?oc=5",
+   "source": "GamesIndustry.biz",
+   "source_url": "https://www.gamesindustry.biz",
+   "published": "2026-11-17T14:28:00Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "143981df79cc",
+   "title": "Has The AI Bubble Popped? (NASDAQ:SMH)",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBsLXQzdEtqWDd6SjFCWUdLT2pmV0lLX1h0OUg5UjRtelVGOC1SZVVreEJxOW5EV0E5QnhibDYxOS1IOXJRSjY1QTdZdllUMzRzVXh1QkhsM0lYQVZoMmdHaU1sVi13azRGemZHejZkTzUxZGs?oc=5",
+   "source": "Seeking Alpha",
+   "source_url": "https://seekingalpha.com",
+   "published": "2026-11-17T14:11:14Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "768e8d9bbc53",
+   "title": "SanDisk stock faces 8-for-1 split after 65% crash, but a bigger risk looms",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPLUJDSklUQjdWR3ZPQ3NjaFhGRFBOc0IzMVFMc09Xc2JsSDU3WlRfT1FuTG1mRXpoMlI5NTM4RC1aQlZjbExoRjJLYjVjREUxS1hzOWdiemc5Q0tnZVRpRXR6VGVZUlAzX1JXTzU3VF94aFVDTzJFU0IzQlgta0ZSRFdrb1Z1SE03MS10di04bzhMbmxLQU1qRTNDNXAzRlBCUDAzcXNmR0VnQ2xBVXBWS1ZBYVJlM0tvYnc?oc=5",
+   "source": "Invezz",
+   "source_url": "https://invezz.com",
+   "published": "2026-11-17T14:07:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [
+    "Sandisk"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "87054b8bf41e",
+   "title": "AI Server Demand Is Reshaping the NAND Market",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE92U0lRLUZSNndTUFhpM1ZWLTV0bUM0a202SGVUMDh6TE9BaUJjdF9ReUhqZEl4cTVmNG5BdXFocG5kdzRwY2JBVU1haHExbm9FNy1kRENwMlRmbEZ5TGZJWW9abm1QRWdVRkF1OWlCNEU3b2gtZW8zRE9ndw?oc=5",
+   "source": "NeoTeo",
+   "source_url": "https://www.neoteo.com",
+   "published": "2026-11-17T14:04:40Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "be682342ea3b",
+   "title": "AI Is Giving Optical Computing Another Shot",
+   "url": "https://spectrum.ieee.org/optical-computing-ai",
+   "source": "IEEE Spectrum (AI)",
+   "source_url": null,
+   "published": "2026-11-17T14:00:03Z",
+   "description": "The idea of computing with light has been around for over 70 years, but until recently it’s remained largely in the realm of research. Over the past few years, though, optical computing has emerged as a fast-growing industry: Market valuation of companies in this sector now totals US $2.22 billion, up from $0.4 billion in 2022. One projection suggests that the market will continue to grow exponentially in the coming years. The reason for this sudden surge will surprise no one: AI. In particular, AI inference—the process of using AI models to respond to user queries—has driven much of the…",
+   "hub": "ai",
+   "origin": "feed",
+   "image": "https://spectrum.ieee.org/media-library/close-up-of-a-green-circuit-board-with-a-central-microchip-and-intricate-traces.jpg?id=68692424&width=980",
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "05f976d38a83",
+   "title": "Phison AI Data Platform Brings Sovereign, On-Premises Generative BI to Enterprises",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPWHFvam5uUGJaVjlMZ3Q2RDNqNGtsQ3hpLTEwU3V4VGR2T2kzakJnT180SHR5T2RSTE4wMy1CYjAyZkpSYnRKU2FXaGo4dktVMENKcjZwR19helZzY1lmcWljbWtyNEc2SUozODExeWVDU3lKRkg2dzdoTnQ1ODYybWlzN2x1b1dXQjFmQWRYd1loQTIzMl9YWnVfX3hVSFdVT24zcTkxYVcxekJkdjZsS3hLSm9JMG1LQmtnYzZOMHlfa2JkUTBWaTZxSG5tSmF0M0dTZw?oc=5",
+   "source": "Business Wire",
+   "source_url": "https://www.businesswire.com",
+   "published": "2026-11-17T14:00:00Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "af2c3fb7ae86",
+   "title": "China calls new US semiconductor restrictions 'economic coercion' ahead of Trump-Xi meeting",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNbWVoOThKYnFxTFljRV9mMnp0dVdqdkJVZHc2QXBLRjcwYVRKd0VneTZoY1E1cHE4clI4SlZ0QVF2V0RxWFdSY0pRVy1BT09ob0xBN2d6R0pVN1VJOUZiMURTc2lzelNlYXdZOFVDaFNWX0l2X1VaczgwTmdrU1lDVVM2N01VRWVKMEVxbnJTLTNYallabU9RYmQzdW5aRkp1WWE1a2xwbUhtQmU3dkZwTzRrcGR1M1N1cWE0MDZHTWF0d3k4bzBvWVVKT0RlOWhPclF4TU9mOWp0V2lMbXkyYdIB5gFBVV95cUxNczFwMmVVTHZKSVZIc1Y1dkwxZjVsWGsxRW1mdzNlY1l5WVBEZ2dCUEdjaWc2NmhBd3dOX2tBcjlTd3Y4Mng2YjhsdjB3VlNjeEE0UmlWT29LQUMzakdDUnVYY2ZZYm1nc0tjeWlDUW8tSmR4SlNkUnZLYUNqYjJTa0lRTGpGdk9XTE52SEp1dWFRczY4enhINmZacVc4bENxdFI3VGtYNFk3V1FaSU81NkVRWGZTOG8tLVQ4OHJVenJBUXBGS0xFdWhIc0h1VmxjZ2lyZjhKUGZBa1I3ZTdKN3poTEV3Zw?oc=5",
+   "source": "India TV News",
+   "source_url": "https://www.indiatvnews.com",
+   "published": "2026-11-17T13:55:13Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "4110b67a4b5d",
+   "title": "Bengaluru Tech Summit 2026 Opens With Rs 23,000 Crore Semiconductor Investment Push and AI Focus",
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOeVR3SGhNWXRyMWpwRjF1Z0gwWGRCWWtrdmw5ZzE2bE1NWkk4R2YtTDc2bEkxTUI3WHg0YXpxWG9nTFFVcGU0NW0xU0I0TFpnQkwtSTE0V2JZY29jWGFkQzMzTThGWG5FSHhaaHFuS2FkX1d4WS1SaFlKXzExbkx2d2VYMEJGNzVpQUR3TXRuQ2JmUmUtNjVWMzJtbjdoQ3VvNk5sOExkRURza2VYQkZiX2xQenhVRmJQT253U042UFZjMzZwQ280ajk2anZQUURhVzVVQW1oVlBTY1lTQV9nUzV2LUg0YTl4cXRyN24talM?oc=5",
+   "source": "Siliconindia",
+   "source_url": "https://www.siliconindia.com",
+   "published": "2026-11-17T13:51:35Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "india"
+  },
+  {
+   "id": "da845296c94e",
+   "title": "SK Hynix warns memory shortages may last through at least 2030",
+   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0xTlh3M29ZMldtVEJrd3luVlgtX1Y0VV9LdXVoVTJ1aEZKTEM1TXROZjI1VEhBY3dhbG5GMWdzYXZ2VW1xajlZYTlnWTJiRzNKQjdLclVpejlxNFJuRE9lOVY4ZWZnazB5LW5jNkdaN3VocVZxSl9fT2s5VVZIQQ?oc=5",
+   "source": "Mezha.net",
+   "source_url": "https://mezha.net",
+   "published": "2026-11-17T13:45:45Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "2f4b1bcbb767",
+   "title": "Apple memory suppliers expect price increases through at least 2030 [U]",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdk9KOTFDdmNuVE5SYWVhNU1zRU5uVkcwbkRzckdoZDFoS2s0NURHZExzdng1dUYyUll3R240dDdPRXdscUJQbTNILWozYXhsYW1kbkV6UFdPNDRyaXg2QUdJaEU2OXdhYXlQREdEWlkxZ0NMYVoxcnZ4U1BmdXlobkFHaUc3TGVTSEdSQkVRb21fR191bUx4US1aU2NJMGNk?oc=5",
+   "source": "9to5Mac",
+   "source_url": "https://9to5mac.com",
+   "published": "2026-11-17T13:39:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "025553cca964",
+   "title": "Apple (AAPL.US) Rarely Secures Long-Term DRAM Supply: Could This Fuel the Memory Chip Super Cycle?",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPR0JaNEJzVklDdmh4d0NTWFRwUU5KTnczNE1OSHByQk0tRjd6Wjd4dENKcnhUV1ZDRFZNX1VlbnVjNjBYMmNjcWoxMzZ3bGZ1UkNCUzc0S3JDQnpnSXcxSk00MXpubEg2czlHamdRUGhBSF9IeDdacW1IcGNOcGlVVGtIRWlkTjdZeGxtM0tGYnJCel9mZXAzVnc5d29Nck1WSzNPZzI2cw?oc=5",
+   "source": "Moomoo",
+   "source_url": "https://www.moomoo.com",
+   "published": "2026-11-17T13:28:23Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "aad16a416b08",
+   "title": "Phison Pascari X201P 15.36TB SSD Review: Fast PCIe 5.0 write performance for AI and ingest servers",
+   "url": "https://www.tomshardware.com/pc-components/ssds/phison-pascari-x201p-15-36tb-ssd-review",
+   "source": "Tom's Hardware",
+   "source_url": null,
+   "published": "2026-11-17T13:13:48Z",
+   "description": "The Phison Pascari X201P 15.36TB U.2 data center SSD meets its rated speeds and saves AI checkpoints quickly, though it trails on low-queue-depth writes.",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://cdn.mos.cms.futurecdn.net/w7yzko35quwLmLvdm4oKP7-1920-80.jpg",
+   "topics": [
+    "nand"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "d5aa1811dc38",
+   "title": "(PR) SSSTC Introduces PCIe Gen4 QLC SSDs for AI PCs and Industrial Applications",
+   "url": "https://www.techpowerup.com/354931/ssstc-introduces-pcie-gen4-qlc-ssds-for-ai-pcs-and-industrial-applications",
+   "source": "TechPowerUp",
+   "source_url": null,
+   "published": "2026-11-17T13:01:17Z",
+   "description": "Solid State Storage Technology Corporation (SSSTC), a subsidiary of Kioxia Corporation, today announced the PQ2 series, the company's first industrial-grade QLC SSD. Featuring a PCIe Gen 4 x4 interface and BiCS FLASH generation 8 QLC flash memory, PQ2 combines responsive data access with industrial-grade reliability. Designed for read-intensive workloads, PQ2 supports AI PC tasks such as loading locally stored AI models and accessing application data. The series is also suitable for point-of-sale (POS) terminals, thin clients, and networking devices, as well as boot storage in embedded…",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://www.techpowerup.com/img/xP4WNzEIaxi5v79n.jpg",
+   "topics": [
+    "nand",
+    "reliability"
+   ],
+   "companies": [
+    "Kioxia"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "also": [
+    {
+     "source": "Yonhap News Agency",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5XTFRpeWZweUVVcWlkTEt4OUV3aUxkX0hSWDdRMEdBMEQ4RllzVlZ4bDIzUW4zeWN2NVh3X0djakZpVGQxbXBPeTJkVGxyNFZVMl9XWFNLLWVJUWQyMXFmZ2VOR0M0WTFfaUZ4a1lFSGk1dVpSR2Q5WEhVTDB0UlE?oc=5"
+    }
+   ],
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "369417c0d2de",
+   "title": "U.S. Blocks AI Semiconductor Loopholes for China... Attention Focused on Samsung and SK Hynix",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB6bFRNUnBocDFFYjNIaXAtU2R5SE5IdEJDYUNFT3h1TVZsQV8tRXB6eWVuUTBTSjVUVGp6cU1IVFIwMUlEUjdPLWFTZ21YVXpYZGhQYnRTX3ZPZktlTGt3eUpHVUhsMGtENDlBRVpB0gFmQVVfeXFMTTExMC00UE1ZLU1FT0NPSTI2c1pqb21EdXJSZjdJQkh0eG5DelFWdV83VjhWN2RqdDlJVmxnMmppbzFUekUwZXhqdFVXTng5NjJTVHp3a2dBUWxLbG1BSDROczVFLXhR?oc=5",
+   "source": "SBS 뉴스",
+   "source_url": "https://news.sbs.co.kr",
+   "published": "2026-11-17T12:50:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung",
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "105fb2033bb1",
+   "title": "Apple Turns to Samsung for a Long-Term DRAM Supply Deal Amid Memory Crunch",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQlRwdUo0S21Ta2FWUUJRMHpLVUJleFdZLW9mZUZXaWs0cl9NSlZiUVZnUE9xdnhmUzFlWlZ4eWRpRUN2cGZmU0RMekRCRFNXbENnazAwNHZyLW5EZ19ienQzdHJzV3hremhsUDBfTWpPLUtibkduY2tFVjI4cE94MW44Qjd0T2U3VF9WREdzVGE3a2IyWTNDaENMdW9tLWlEX1M3MnFHNzM?oc=5",
+   "source": "My Mobile India",
+   "source_url": "https://www.mymobileindia.com",
+   "published": "2026-11-17T12:49:19Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram"
+   ],
+   "companies": [
+    "Samsung"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "5fd3f89d9663",
+   "title": "Micron, Sandisk, SK Hynix in focus as GF Securities cuts NAND price forecast, sees glut (MU:NASDAQ)",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUTl0NTdmY0lCcG5CS2V4cHdYZjY0S01nRk83SWdVa1drbWM3NzBlT1RZRFh1NUJmTV9sdjIwVGNvTl9ETFRRZ0xWbWVXekpFZjUxUlFTWVVYSldoNW1SaFliTlB2Z245RWFIdVk4NDMxRWh5QmhJcHpxU3RCdnJlRnNhanZTT2NHRFRNTjlRbEZUS2xEUVhVWXNvZWxOT0xELWFHdzBCMGxrRjhra1hmMml5MC1YNGNyYlBsOFpHRQ?oc=5",
+   "source": "Seeking Alpha",
+   "source_url": "https://seekingalpha.com",
+   "published": "2026-11-17T12:33:13Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [
+    "SK hynix",
+    "Micron",
+    "Sandisk"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "bcaf193d98b4",
+   "title": "How we test enterprise SSDs",
+   "url": "https://www.tomshardware.com/pc-components/ssds/how-we-test-enterprise-ssds-our-new-test-suite-pushes-enterprise-and-data-center-ssds-to-their-limits",
+   "source": "Tom's Hardware",
+   "source_url": null,
+   "published": "2026-11-17T12:32:43Z",
+   "description": "Tom’s Hardware is taking enterprise SSD testing to the extreme. Peek inside our new lab to see how we torture server storage with real-world workloads.",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://cdn.mos.cms.futurecdn.net/ayhToiaEbT3hRiAqSjdrzg-1920-80.jpg",
+   "topics": [
+    "nand"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "b1a3845dc2df",
+   "title": "Samsung, SK hynix and Micron Team Up on Robot Charging Specs in Push Toward Unmanned Fabs",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ZZVdSVS1TS25jXzQtdS1nb3pEdnhaYTFLUm85SDNVTGZwX3ZtZXBjRUpseVBJTzA4WXhCWXZ0Ym43bFM5QTVkbVBHYXVGR2pjbmRURXZlcmJNMTFKMFpBY1Y3T0ZVNF9qeWlPbUtncWl3Wlo1cGc?oc=5",
+   "source": "BigGo Finance",
+   "source_url": "https://finance.biggo.com",
+   "published": "2026-11-17T12:05:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "process"
+   ],
+   "companies": [
+    "Samsung",
+    "SK hynix",
+    "Micron"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "9f0604317be4",
+   "title": "SK hynix Trinity Fab: supplier testing, explained",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9iR01PVl93bUM4R0FCSFdCSUI3ZHhNMkxHZkpfN2otU1pHQmNFZ2hKdXo0dzVfLThOZUxZTWRhRF9SekRVc3plMm5mZEtKeWRfSnZvZ0dhNm80ZS1qUVV5TnJKNlRRV3JnalVoRlM0ZUZUS1BRamphWFFTRkswbHc?oc=5",
+   "source": "NeoTeo",
+   "source_url": "https://www.neoteo.com",
+   "published": "2026-11-17T12:00:14Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "process"
+   ],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "ceeb9f7db140",
+   "title": "Samsung, Apple in Talks to Finalize Long-Term DRAM Chip Supply Deal",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbVpVcENVS0g2ZU43cU9PNGpMX1RZNkk5NWFiWWxvSExxUWRzMERxYXd6QzduZE5CX3YxNGlvWGJCZU5ueHp3eE5rU3RJMUd3UDh1TjFRNTFrcXRnVzMxYnh2MHVPYWxRZUJjTGpiUUMyWFFyQ0pRVW1iUHh3dFQyZnQxNDFRRzlfTkRia25GM3V5TmlMbW55V2p3OGRURjBwdHB6ZEdnZTBiQUZhSkRPMGdEdVp0N0RJTm80?oc=5",
+   "source": "marketscreener.com",
+   "source_url": "https://www.marketscreener.com",
+   "published": "2026-11-17T11:53:14Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram"
+   ],
+   "companies": [
+    "Samsung"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "b6176b2de5d2",
+   "title": "Judge Wise Says RAM Suit Alleges Samsung, SK Hynix and Micron Acted in Lockstep",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQeTlBUDl4UlJ5UFZXc2JHdkh1LW5vSVBNWDNOZWFKTjZvd3JZaGotVXhNQkRnS042S0tYazR3RU5fX1ZJNjNfZ3M0Z21tcHltVzFDZ2pnSnR5azh3MWVGWEw0RDVwMjZlX3JPQTVIcy1RU0E1cnFISld1RGFxR211OTNBaGlRb1VqaGJFUHJDRS1fTXppMjBBNkxmNFZRYmFJdl9BXy13?oc=5",
+   "source": "A 90s Kid",
+   "source_url": "https://www.a90skid.com",
+   "published": "2026-11-17T11:48:30Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung",
+    "SK hynix",
+    "Micron"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "e83cf01727ae",
+   "title": "Samsung, SK hynix and Micron reportedly explore shared robot-charging standards for fabs",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNQXYxU2gwT3Uxd0hRN1o1Y0ZFTUpSZTM5eFNkdktVQU1OT0ZLNkxWOTRhY3o2dkVvZmxqNEszbkpqY2drVE1Ed1lVanNkeFR4Y0J5LUI1ZmFZeGdkaG9zNzhEc0czcnlUdFBPem9yOFBKc2duMU13Y1ExbmI2YzlOOU5B?oc=5",
+   "source": "Mezha.net",
+   "source_url": "https://mezha.net",
+   "published": "2026-11-17T11:46:12Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "process"
+   ],
+   "companies": [
+    "Samsung",
+    "SK hynix",
+    "Micron"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "10322a591a4e",
+   "title": "KRX Short Interest Weekly (Nov 13th): SK Hynix, SIMMTECH, Alteogen, Samsung Electronics, JEL",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQQnVQMEJPZjQyLWlCSG1UUzNnV1dBZ0RidU1KYUFUTllpeWQxX3pMTk5WQnlCaUYtWGM3SVRWazVwNERNN3hRSDZDbVFMTU8teWdpMnZRRFdUYmx5Ty1DeFQ3cERqbUF0RFZLZkZGckV3dTZxUGtGSENmbHVoWmtaXzZZUW9KQ3AyMElnbFpQb0prdEJkTWhqRG1OZ1VndXByZ25GLWVXZHN4NzJqLTBTZllObllOSUpubEg4NjlHTXphUC1HTXRTY2g4Qzh1aTB2QTlOZFFZZzBjM0NUWXktQXE5aEUtV1U?oc=5",
+   "source": "Smartkarma",
+   "source_url": "https://www.smartkarma.com",
+   "published": "2026-11-17T11:45:04Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung",
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "42596ed8b1c2",
+   "title": "Best Samsung laptops under Rs 1 lakh you can buy right now",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPcF8wUlk1UnRqM0JISkxVRGlocnRpV1pRV1ZqNm05ZzFXVFE5STV2Q29FQkpqY18zalZoaDYyUEdKZXRZanExd3ZMWlRnYVZqU1JjbHA4U3dNOVhiRTdxZkZXaTl0Q3NIRkVSUTVUc2lmQVdpaVdzRlFnYU80ci04c01obmwyQ2duVS0xcV9KVHViQzJTOFJ0bElXRWxsWmp6dFh1VVAzUVZVa3Y1SlFGZ0dwWVBVZ2hGd0ZPUnpVVVFTS0lpbHRROVd1VFFqTi1ZUTUzOVBYanrSAd4BQVVfeXFMTml6WWVOSXFiMmFieE5pb2xicnJZQllfWDZTaUZ0SFNadEMtNGxac2l4MDNheV9MOEdNdHN4dGU0WVBoaTIyUXhFOG5XNk1vQmVtRkdHQXk1TGV3VlJ1emdtTGp6c1pEckRHX3M3cktRTHRaVW53bUxtYjFxU2lQTlJPWnBRZWRxRTJja1BQX1VGQlZMRTBDYVZEQVdobEdRZFE4VHF6eTlaYmlacENLUDN6R0NCZVZQZl8tQUNUbHljN3VNQVJRcDFSamMySTE2LU1waGh1dldFZW5RbHpB?oc=5",
+   "source": "The Times of India",
+   "source_url": "https://timesofindia.indiatimes.com",
+   "published": "2026-11-17T11:39:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "india"
+  },
+  {
+   "id": "4fe265cec37c",
+   "title": "Samsung, SK hynix, and Micron form unlikely alliance to standardize robot charging as chipmakers push toward unmanned fabs",
+   "url": "https://www.tomshardware.com/tech-industry/semiconductors/samsung-sk-hynix-and-micron-form-unlikely-alliance-to-standardize-robot-charging-as-chipmakers-push-toward-unmanned-chip-fabs-standard-specs-would-allow-manufacturer-agnostic-charging-equipment",
+   "source": "Tom's Hardware",
+   "source_url": null,
+   "published": "2026-11-17T11:30:00Z",
+   "description": "Samsung, SK hynix, and Micron are working to standardize charging infrastructure for mobile fab robot batteries to simplify automation and help fabs deploy larger mixed robotic fleets.",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://cdn.mos.cms.futurecdn.net/nDTtYSUtcMdaq6MduKFbR5-1920-80.jpg",
+   "topics": [
+    "industry",
+    "process"
+   ],
+   "companies": [
+    "Micron",
+    "SK hynix",
+    "Samsung"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "also": [],
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "740f608f5a12",
+   "title": "NAND flash memory spot prices reverse course: down 20% in just two weeks. (ExtraPower.com)",
+   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5GS3pLU2xvNDRXQ2I1eXNITjdXZ3lpMll0UmJOMlg4UEFnOUtrdkFxZ0Fla2ItdzMwdDUwR2l5VjJVNUJWeXprZ1RB?oc=5",
+   "source": "m.expreview.com",
+   "source_url": "http://m.expreview.com",
+   "published": "2026-11-17T11:29:40Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand",
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "302ae6433571",
+   "title": "Nvidia board establishes National Security and Export Control Oversight Committee in wake of Jensen Huang scandal",
+   "url": "https://www.tomshardware.com/tech-industry/policy/nvidia-board-establishes-national-security-and-export-control-oversight-committee-in-wake-of-jensen-huang-scandal-group-to-work-with-independent-law-national-security-and-trade-compliance-experts",
+   "source": "Tom's Hardware",
+   "source_url": null,
+   "published": "2026-11-17T11:21:39Z",
+   "description": "This group will oversee the company's national security concerns and global trade compliance to avoid a repeat of Jensen's scandals.",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://cdn.mos.cms.futurecdn.net/TVYovaCvDrBoMvxiTPWqLL-1920-80.png",
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "also": [
+    {
+     "source": "TechPowerUp",
+     "url": "https://www.techpowerup.com/354939/nvidia-establishes-national-security-and-export-control-oversight-committee"
+    }
+   ],
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "f595e8763a44",
+   "title": "Save $385 on this 4K-ready Alienware gaming PC with an RTX 5080 and 32GB DDR5 right now",
+   "url": "https://www.tomshardware.com/desktops/gaming-pcs/save-usd385-on-this-4k-ready-alienware-gaming-pc-with-an-rtx-5080-and-32gb-ddr5-right-now-grab-this-powerhouse-aurora-act1250-rig-with-a-24-core-intel-cpu-and-1tb-ssd-for-usd2-799-99",
+   "source": "Tom's Hardware",
+   "source_url": null,
+   "published": "2026-11-17T11:14:08Z",
+   "description": "Grab this Alienware Aurora gaming PC with an RTX 5080 and 32GB of DDR5 RAM for just $2,799.99 in this early Black Friday deal from Amazon.",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://cdn.mos.cms.futurecdn.net/8tNPKTDjCjJ56UGR9Mt7Dd-1920-80.png",
+   "topics": [
+    "dram"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "fda859016df7",
+   "title": "7x Memory Chip Price Surge From Top 3 Major Manufacturers: AI Is Not The Root Cause",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5MdXV2Z0FWMmdReVlzXzMyZ1hkel95NkYxUW5LaV9FOWZHbFlOSE5VRFptVHBfNFZqbEEydXVCX3FJVzBtLVRjUERFa2U1NUhDcEQ0?oc=5",
+   "source": "36Kr",
+   "source_url": "https://eu.36kr.com",
+   "published": "2026-11-17T11:01:24Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "f159d9d6ab18",
+   "title": "$SK hynix (SKHY.US)$ i just buy more dip…i trust this company 2027-2030",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMnFDZ25sT3JBSGJKS05xU2ZyeDdqM3dDY2RMc0stWUVCLWRnLXZqLWJVR19ROHVab28zNmk3bzdjMVBtOGIzMjFDZE51LVlsVWhyaGRudWI5MUlQc08tWXlPTUd2ejhZMUJmWml5ejF3WEIzTWM4UXpFa05CRjRWd0FBWmRfUXJDMWk1RDZFNTc0Unc4aWk0?oc=5",
+   "source": "Moomoo",
+   "source_url": "https://www.moomoo.com",
+   "published": "2026-11-17T10:28:02Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "cad7c4331f8e",
+   "title": "Judge denies motion to dismiss lawsuit accusing Samsung, SK Hynix and Micron of worsening RAM crisis by fixing memory prices and supply",
+   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOcmhYTnBPRkdSX3BfdDJ3Q3ViTGUzZkFsLVhXaFpHUXg0ZG9wWUxDNzZMdS00ZmJWRzAxMkZNdWlOdEl4Sm0zREI5VnIxMFJ3NlMwb09BdV92RWR1VU1qYWtKeWo3M1lrWWNNT3dGMjNfbG5XVGFBSkRta2hmTFE2Y1FTd0ctTWpyRzVwY2xLT1pPVXlVYkc3MWs3V2FXNFBnZ3c0VVNZVHNBb2JIZmVQQWtRanZJekFnWThSQ0NHLVNRV29YZGJWZ1BMR3VNNHFnSTY1Zkswd2IzLTE3aDJIU1BPWFhFQWNmMnNTOF9haS1nNGwzLS14MTE4RQ?oc=5",
+   "source": "Rock Paper Shotgun",
+   "source_url": "https://www.rockpapershotgun.com",
+   "published": "2026-11-17T10:27:30Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung",
+    "SK hynix",
+    "Micron"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "80fde72a7fe0",
+   "title": "U.S. Cracks Down on China Renting AI GPUs Through Overseas Data Centers",
+   "url": "https://www.techpowerup.com/354927/u-s-cracks-down-on-china-renting-ai-gpus-through-overseas-data-centers",
+   "source": "TechPowerUp",
+   "source_url": null,
+   "published": "2026-11-17T09:56:34Z",
+   "description": "Yesterday, the U.S. Commerce Department's Bureau of Industry and Security (BIS) released an interim final rule to address remote access to advanced AI chips and servers. This rule significantly addresses a long-standing gap in U.S. export controls, where Chinese companies that are barred from accessing NVIDIA's latest GPUs have been renting overseas computing power instead of purchasing the chips outright. Notably, BIS states that the rule was written by and at the direction of the Department of the Treasury and the National Security Council. Under the new rule, a license is required to ship…",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://www.techpowerup.com/img/Ls8NjGVQeNnoa5pd.jpg",
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "d01b817752ee",
+   "title": "Karnataka Unveils AI and Semiconductor Initiatives at BTS",
+   "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOQ2dHdHE4LXlGMnpudzJuWkJlZV9zZ3RIMkJBUm0tSjlUNDNDcFVOY0pCTFZCNUY2aUxHZFg0aEVIajhUaHMxdEZqSWRhWkhZM0IyRllxaHRidHV4Tm9Bc0h0bmJqRjhLUVFScHFUUnVPcjhDOFV2WHRhZzA3WngyQUxtRXdYY1NLTDRyTGlNOWh5UFhPNFpxcWFqLXhIeWxjMWFfWlJpdjNzNlpLYTllbkRJU19TSnVFTkVLY0FVU212M1kxdFFwbmctQ0I1RllYRVhSd0dycTBHMTd5R2pyMDFCZEZCckg0akRiMlhvYmtobXFTYjgycHpabEJkQlFHQzNfbEN1c29BNjNZTFkw?oc=5",
+   "source": "Bisinfotech",
+   "source_url": "https://www.bisinfotech.com",
+   "published": "2026-11-17T09:37:27Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "india"
+  },
+  {
+   "id": "534480bd59df",
+   "title": "Karnataka eyes global AI, chip, deep-tech leadership: CM at tech summit",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSndBYmJJdkFYalFQeG1mUkVRUjl1MzU2a1ZEVTFXcm5FWjhHNkljYkVSQXBpcUNFb1FfU0hib181bk51cDk0X0lyd3dMSlVIX3M4MjFDWlpMWlluN09ZY3NQR05kaWpFWTdPSmNEdWVXWXNBVjQ4SDRTdEFNankyZHRLaldwS2NOTmZTYTBvcXNfNVltUUV5Q2tXQmE4YWo1UTFNcVFoWWludTlVS214d09VQkFQZGtDX2lkcEp30gHEAUFVX3lxTFB1SzdaQnVDR2paZzd3QjhDZ3NuX2EwdU00Y3piLXZEVFNYR2lIOXdQLVhlM3Z0QjRxQm1IR1hoT1FUTWs5Y0JBb2g4dTlXWHJqU3dPV2ZRM1RUWno2b3JwR25tek1GUkFBdW5YZko4Smstby12Y0lFb1ZNNHlfdVBNNlV4eWxMT1dKYUZMY2pKdmd3VWNkWjhkMDQ2Z3BCQXU0eHNsSEMtcktzdlNVaGFuaXZtVU5XNnVJUU40Z3ZKUFB2cHk?oc=5",
+   "source": "The Indian Express",
+   "source_url": "https://indianexpress.com",
+   "published": "2026-11-17T09:31:22Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "india"
+  },
+  {
+   "id": "a1df7d0d68ea",
+   "title": "SK Hynix shares dip below 1.1 million won, Samsung Electronics also falls; domestic semiconductor stocks weaken",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE52RUxZLWx6MjB4YlRMcmp5Q3g3ZWpXUE5faGI0MVNjQnpMeExtTVV5b1RtUWMydmdkM3lxYXg3SWZaMkwxVGlkczA3Wk9oRTk3Uno3a0hOMGpMaExTdzlobVdR?oc=5",
+   "source": "재경일보",
+   "source_url": "https://news.jkn.co.kr",
+   "published": "2026-11-17T09:30:03Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung",
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "5f63ad309ff7",
+   "title": "Chip shortage may force Apple to sign memory LTA with Samsung",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSUpUSDFBYVNiTFpncHVYWHlobnFVandJcDZaWUQ2MGpJV0hZNnlMbTg1ZlE2NDVVZEZMdldET3ROZHFXQ041c2N0WFZQbjBoZUFpQTgtampNN0Y1dUtoM0x1OEl0eTJ6dXNjUWpvNXBQbUlqTEtMVHVmT0hEYnlPU2QxYko3TDFacUcxVEpxOUkwakVqQ0ZuSFRDVjNtdWc2OS1KVFBWONIBrAFBVV95cUxNYlFaRlpBTC15aXUyY0t3NW1IYVJqTk5HdjRUSm5hSnhzMlpjZmxERXRQVEk5Q0VWcUhTT1BVajlpc3RQdVpFZ082U29lMEpnS0lVaXl1Nkw4SkpEQlQ0OHFjeHItU19ocmlRSEltb3hWNEJXY1Z6eWpFeUlFdFRieWluTmZaMWdRNG1VeVpxTWZUdlhMTW9WdnZpdmtfT3puaXVyaGxjWl9sNFhv?oc=5",
+   "source": "Sammy Fans",
+   "source_url": "https://www.sammyfans.com",
+   "published": "2026-11-17T09:26:11Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "Samsung"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "81c87ca839fa",
+   "title": "Malaysia's tech sector to benefit from AI, semiconductor investment upcycle in 2027, says Maybank",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQdC1wMDZVMklrYVNPbU5RMWRtUFU2c19KS2hnNC1xUkdIZ3pscUR4U0tLWVpUTjg4WXF1UHdKdTZOaHlFODhGMi1SVnl6a1RRREpXZ0RLRTMwVlg3V1c1T3hpT2J4bkptbzhJWTFNWG5xNU1yTll5Y2QwcnhRQjVHcEZLX0FGdmRZZHh2NlVQbzhRb2J1UmxUdE1sLWZFZ3Nyc05CMm5wMkxnV2dWeWhZTUlnS3Zybi1ia0d3elR2YXRWU2N6TGxzamV3?oc=5",
+   "source": "TNGlobal",
+   "source_url": "https://technode.global",
+   "published": "2026-11-17T09:15:10Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "69b49544745e",
+   "title": "Selecting priority areas in semiconductor industry development.",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMmZyYmFsSG45THlHalZaSTU5Q3lmUmZFNHdhQ3JtZGhycnhBdDBnazkzTXBzX0I5RVpSM0VnbkVwZV9DZlpoelJYallWbllHRzV3eG9NSldaeEstdVdXWVAxM2w4YW55UmhZU0txYmhVVEVHZ2tTV3NObUVMRmVCbjdyMXpCT3FXLU1JS3NLMmxxZw?oc=5",
+   "source": "Vietnam.vn",
+   "source_url": "https://www.vietnam.vn",
+   "published": "2026-11-17T09:06:40Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "f0cfa582c7d7",
+   "title": "Enterprise SSD Cuts Pull NAND Price Drop to 2Q27",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1pcGxaLUgtejFfTGRCbms5amhQVGRESkk5dTJUV3NwVE5Lc1RKZnF5WlFUUkZQc1lJTkdjek5tRXc5aUlCWDJ5R0cwOGFCUDBrNFF1S0tSYTQtUDdieDdVSFg3SXFyQQ?oc=5",
+   "source": "TrendForce",
+   "source_url": "https://www.trendforce.com",
+   "published": "2026-11-17T09:00:07Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "nand"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "7e671d2dcceb",
+   "title": "Inside SK hynix’s Yongin Fab, a Test Lab Takes Shape Alongside Memory Production",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE84aEVRQXMxcGhfbHkzaVVwVnFNdlhTdkUzald4Q1ZOTHAxN3V5VU1YVGRvZ2t3US10bmx1T2ZNeV9oUUowQ3ZmdUN4eXlXcEkzbGxxbUF1UXExSE1iMkVPU0VGYkZPZW8?oc=5",
+   "source": "THE ELEC, Korea Electronics Industry Media",
+   "source_url": "https://www.thelec.net",
+   "published": "2026-11-17T08:59:13Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "process"
+   ],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "2ba2e5640bf1",
+   "title": "KCTech Wins 69.9 Billion Won Order From SK hynix",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9uV19kSXJ6MWdNZi15amZJSTNVR2gtVklkMDNzdVpYTF9xWno0QkdNcXpScnVXN2N5MnNUbTE3aWdYNDBtQkFCWkk1VkZwZHVHN1RGVXBydUlRbW13RWtoYk9fZjNjcFk?oc=5",
+   "source": "THE ELEC, Korea Electronics Industry Media",
+   "source_url": "https://www.thelec.net",
+   "published": "2026-11-17T08:59:13Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "16ef43532751",
+   "title": "Samsung Electronics, Apple Near DRAM Long-Term Supply Deal — Even 'Super Buyer' Apple Bows",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5GamFOOUdma2V3VTBUWGh6Z0Uxc1l3cUdURksweWFSN1FjNHFZdDdoLW9PMHNsM0RCNWZYUzRZMTBKOGRELWJZam9tZ1ZQTnp4YjJ5Nkx3Xy0wQmZPTXB4X1Jac3BBb2duTmFUYmRrdzhOUUxVRUE?oc=5",
+   "source": "BigGo Finance",
+   "source_url": "https://finance.biggo.com",
+   "published": "2026-11-17T08:56:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram"
+   ],
+   "companies": [
+    "Samsung"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "also": [
+    {
+     "source": "Business Upturn",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOY3M4VUxEb3Z4WTlRZ2NaRmd4eW9pV3NNUW1QVFRLZnZyVWpRZkZfVXVGT1htZnNJT3N5VEFtbVFhU2Vld3FVNk9vVlNKcE5Idno5ZzZiR19tcGRjNVZ1bndtM09VMTdPamJraGVndVJKNjB5OGRDT0trR0Mwd3I3cC0yWEwxN2V5dUJNSHBHY1lxcUlVS3MwMDlMZTFOZw?oc=5"
+    }
+   ],
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "bb34823b2ae9",
+   "title": "Samsung is developing custom HBM4E memory for Meta's AI chips on a 2nm base die, Korean outlet reports",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOaEtwOVRMZmVJUHRLMVZHZmhUUExVb3k5UzRJXzJGRzNKM0pKeUx2NVREX2hXT1NPaWhMUmpLWTVSV2lpdUNoSDJxaDhWeFpvTFByMlI2YzRKaUdhbV83Q0xGNmRKVXVaWkg1OGV4Wm4xTjlUX1M4aVZzQ1Z2aTF4dW9UbkpXWjM5d245UEpzMldRV2ZSWW9TWWp4Zjdrb0pmd0w5UGZtZnB5U3V4NmJpNlZKVEZ5bEJWRUlKMjBB?oc=5",
+   "source": "MLQ.ai",
+   "source_url": "https://mlq.ai",
+   "published": "2026-11-17T08:50:47Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "logic-devices"
+   ],
+   "companies": [
+    "Samsung"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "2ad8f356d463",
+   "title": "SK hynix booked 62% of its nine-month sales through the US as its biggest customer's purchases doubled, filing shows",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObVg0U2RRRFBNMjc0TmlCTTgtQkUxMGgxdGVfSzAzYmZDUDM1QVN2YWlOYXR1OUcyOUVxUHVPcGJaeER4U1pzMndqNEpSbG1WbFh6X0ZrNzRyUm04M01BamFLejV0YzllUHNzMVVTVUxQcDluWGthS0ZianVlWkxaQUt2a01PZXcwZFAxdmRycG8yQXVvS1YteXNHRE5CQVVMbjNmdWlXeGphWHRSYlVOb0dOQ0tPeTFCR1pTTGNOY0JFWE5nNXpUc1BxOUpPaXM?oc=5",
+   "source": "MLQ.ai",
+   "source_url": "https://mlq.ai",
+   "published": "2026-11-17T08:50:47Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "e318b66a44bb",
+   "title": "Accenture, Google Cloud to Expand AI Education Across 1,000 Indian Institutions",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSzhtTHY4MU1VRTVrR3lmcS1VNW92NUhOXzdJa1RpWU9KbnI3S01uSXplemx0cFVZaWg4b1hFVUtEeEpGUXR4bkMyR2hEUzdnY25OaEJiWXZiekNrQVdUaU1MQnlobjhqRGdpRkVoaWd6QmNaQ3hlVjdOYlJJOTZjTTlsNG1BbGc5VVNWYTBDbjYtZVFNa1VqYUVSWkVEY2ladDJENlZ4VG5PbGd6bW9QVVI4NGFVYnR2aC1oNmtfSmlqaTV4V3c?oc=5",
+   "source": "Analytics India Magazine",
+   "source_url": "https://analyticsindiamag.com",
+   "published": "2026-11-17T08:46:30Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "india"
+  },
+  {
+   "id": "30dbdf69bb9a",
+   "title": "SEMICON India 2026 Day 2 Sees 25 MoUs, Strategic Collaborations Across Semiconductor Value Chain",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUmRIb2lrdXNNQWlTeGdhWF9fWkRJMllFQVBuQVJHeUloSGJLUkVTUVJWMGtrcWpuWDg0WFMzZzJxLUdhWWwyV1FFeFhBeDdGRjROeFlaR1BmNGk4cXo0Q3d6eERZc0RGbXBTRXp5MjBKRVQtWV8yT28tVGNKOU1nT21RNVdILWt0T2VDcEx6aTRlNHRaSlduWXRkRTZ2WXNHa3YzVTBXR3RCMi15eHNwT1ZYNEdac3dhU1FMU0x3?oc=5",
+   "source": "DD News",
+   "source_url": "https://ddnews.gov.in",
+   "published": "2026-11-17T08:34:43Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "india"
+  },
+  {
+   "id": "f6390682978c",
+   "title": "Micron India MD Anand Ramamoorthy warns data transfer limits AI",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeDVDdk44Z2pOQUhzNWpzSEZwbGFXMzFBdW1CMUgzWnVjX3hiMExYVDRBei1ZNUx2dFdYWVpiSVdxaGhKZVpQcm1XMEZ2aHFLb0V5MEFmajctVUVNVmxpZFdTbjZVVmdoajRRVnRORkttM3lhTDhNWHRuTEtXTnZjRGxkZk8wY2p6eE5uemhMcWx5eW9ZdllER1YwcU5EM2RKQTNsMEMteHljWTdvSG4w?oc=5",
+   "source": "NewsBytes",
+   "source_url": "https://www.newsbytesapp.com",
+   "published": "2026-11-17T08:34:03Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Micron"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "india"
+  },
+  {
+   "id": "3acce9318a04",
+   "title": "Karnataka Unveils 6 Initiatives to Strengthen AI and Semiconductor Ecosystem",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeTF5TnpicEU4TVo5S2V4Z0dMZGZFek5SYnRyNndPbTdSVUlJYk9hX2NPRVBmV01EX2FybE56VWJQVmJvLXpvQThOYVlUd1AzcWJHTVpwU0tpNlNpTmJGWTBMb0NvTENtV2VQVWt0c0tuWXp0UGx0VElhZGNiQWJYU0hiUmNjVlV4VGlWVHpnUEpGUVJHYnJRanNqMUtSUHZGYWhkNDNQVk9JUng3NjIwYW5yaGFWcF9PdV80Yg?oc=5",
+   "source": "Analytics India Magazine",
+   "source_url": "https://analyticsindiamag.com",
+   "published": "2026-11-17T08:21:33Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "india"
+  },
+  {
+   "id": "06a5a3aab848",
+   "title": "Physics Vs. Data",
+   "url": "https://semiengineering.com/physics-vs-data/",
+   "source": "Semiconductor Engineering",
+   "source_url": null,
+   "published": "2026-11-17T08:15:58Z",
+   "description": "Why both approaches are needed at angstrom-level dimensions. The post Physics Vs. Data appeared first on Semiconductor Engineering .",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://semiengineering.com/wp-content/uploads/2026/11/Screenshot-2026-11-16-at-3.47.20-PM-946x1024.png",
+   "topics": [
+    "logic-devices"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "img_checked": true,
+   "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "6b10e8287c61",
+   "title": "Anthropic’s IPO Puts AI Demand In Focus — Analyst Spots China Clue In Nvidia’s 66% Share Of SemiAnalysis’ Forecast Cut",
+   "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOakg1blQ4eFFnbjRkOVg1SVJfSFc0SVB5MnVZMWJwbjMxc3hfUF9PbVNwWUduRjlZeXdaaU9Ea0w0akdfQ2JRODhHYjhzSmJCd1Ixck81ZElXakVsbTNBVXMyMXNMclEyNDhBSUtUS1V3NjJuTzJnZ3BWcHl4ajVjYnlYbnVUbGVIUmNpSkJZU3NfRm02M3lfWjZsSkpZa0lqZFN3MHpxQTlNZk51eVhjQW1fVU42bjFkYS1rcnpkYWxYeHJ0c0ZkOUhmcTlzUzBUWFJ6dGxfSVlibndoZ2V1RVE1dDJxMHNDd2Mtbkh0Y3Y5R1AtSjlEMFZwcFdXVWs2ckFNUVN3?oc=5",
+   "source": "TradingView",
+   "source_url": "https://www.tradingview.com",
+   "published": "2026-11-17T08:12:57Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
   {
    "id": "6972b2e7779c",
    "title": "Samsung Electronics, SK Hynix Semiconductor Sales Surge",
@@ -14,11 +1839,35 @@
    "image": null,
    "topics": [],
    "companies": [
-    "Samsung",
-    "SK hynix"
+    "SK hynix",
+    "Samsung"
    ],
    "first_seen": "2026-11-17T08:12:18Z",
    "section": "market",
+   "region": "international",
+   "also": []
+  },
+  {
+   "id": "d585d54cef1c",
+   "title": "Chip Industry Technical Paper Roundup: Nov. 17",
+   "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-nov-17/",
+   "source": "Semiconductor Engineering",
+   "source_url": null,
+   "published": "2026-11-17T08:01:08Z",
+   "description": "HBM4 controller partitioning; single-crystal high-κ dielectrics for low-power 2D CFETs; HW-based location checks for AI chip smuggling; embedded ECC for AI weight protection; optimized e-beam evaporation for metal-semiconductor contacts; sub-volt HZO ferroelectric capacitors; randomized-cache HW security. The post Chip Industry Technical Paper Roundup: Nov. 17 appeared first on Semiconductor Engineering .",
+   "hub": "device",
+   "origin": "feed",
+   "image": "https://semiengineering.com/wp-content/uploads/2026/06/AdobeStock_532528757-scaled.jpeg?fit=2560%2C1440&ssl=1",
+   "topics": [
+    "dram",
+    "logic-devices",
+    "dielectrics",
+    "vlsi"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "img_checked": true,
+   "section": "tech",
    "region": "international"
   },
   {
@@ -35,6 +1884,23 @@
    "topics": [],
    "companies": [],
    "first_seen": "2026-11-17T08:12:18Z",
+   "section": "general",
+   "region": "india"
+  },
+  {
+   "id": "9353e9174946",
+   "title": "Karnataka Aims for Global AI, Deep Tech, Semiconductor Hub",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOdnQ5TEJWLWg4cUVMeWE4RDQ5SlZDWDJIRnhNMFBsR01CMURvNll2UERmNU5tTnc4M2NaSXExdnU0cE9fYU1MT3Q3OHFzbkZKNjVHLVZiTTVXSG5NX1ZwcHZsM194MmtxallXWERUQ0xjQ3RZcjNaZkRBSjZEdTBPeXVrYXFtMW82YTZORWxPNFloUGVGcUg1M3RJcE55RXJySUxVcVBac0duclNk0gGyAUFVX3lxTFAtNUtKMWVUZVpGbE9XM0xDRW9JNVg2Um5iT1ItUGtZOVBwUGJ5SmpQSFBrV1dzUXQ0Snl6M1FxT2JLcDdpUjQxS3RmZHV6cVlQdGRHMnFyQ1g4SjJETWVZUnpKYWZvdEhvNlFPLWdjbXREVC1CRmh5dUZxQkV1MDJoc0FJYWxHYTZvLWs4NHl1RE9hUzZOUFFTOUtoN2JBNGIzT2lMWTltd1F3a2I5SW9uZFE?oc=5",
+   "source": "Rediff MoneyWiz",
+   "source_url": "https://money.rediff.com",
+   "published": "2026-11-17T07:53:22Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
    "section": "general",
    "region": "india"
   },
@@ -94,6 +1960,23 @@
    "companies": [],
    "first_seen": "2026-11-17T08:12:18Z",
    "section": "general",
+   "region": "international"
+  },
+  {
+   "id": "4acb155c04b6",
+   "title": "US detects alleged semiconductor smuggling worth billions of USD in Megaspeed investigation",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQd0pjc3A3bDFaQVRBdVVwa2oybDg2cExTUjExRVNPaFQzLXcyUzVabjRveFZEMzZRZmh0UjRadjNlYTlLVzllQ1ZnVFdBUUZ2MGc0aWFtS3R1WUJFSW9RWk9QX0lBZVRJbXg0R3lOMDVhZTZtZEo4cVFTZmJhZDJwMWFxQmYtNHNIRy1aVzZYQ004cWZ3U0ViaWRLWVd1Sy1saTY4Y2JkVFJtNERlUUNmN1hKSkQ5ZGdtOHRueldmMjdNR1NqTnc?oc=5",
+   "source": "TNGlobal",
+   "source_url": "https://technode.global",
+   "published": "2026-11-17T07:35:03Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
    "region": "international"
   },
   {
@@ -276,9 +2159,9 @@
   {
    "id": "3eb89f7c5857",
    "title": "Only 10 years in, China’s chip duo CXMT and YMTC close in on Korea’s Samsung and SK Hynix",
-   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE92X2g4SzhZQVRQN0FQOUVUeTlsdGM0ODZId2VOS0tJMEk4Y0l4UGdydWRZelZSUGlRVE9WaVlzYmhkUUxWT2pLMnEwU2RGa2JOU0RBZ2tNaUNXUXVUaXhEN3RNYWQ3UHZpTlRBM2tfVHhZSnI5MlVsbVRrRE0?oc=5",
-   "source": "한겨레",
-   "source_url": "https://www.hani.co.kr",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdjRiM0ZSTFVCVW16MXhpa2hNbkkyTEJLZ3p4c3hiTWRJbUJTQlVTSEJQZ3BubDdtU19FVjdOOHo5aFpDSFk2N010RHltZzFFbVlxTXplUVB3Z3dwNFhCMTRaYnMzcFlwc2F0MVpTeXYzQVp4RllyWkVHTDU5Zko0eDR3?oc=5",
+   "source": "Hankyoreh : English Edition",
+   "source_url": "https://english.hani.co.kr",
    "published": "2026-11-17T06:54:00Z",
    "description": "",
    "hub": "device",
@@ -448,25 +2331,6 @@
    "region": "international"
   },
   {
-   "id": "7c00758dfd12",
-   "title": "[PRNewswire] SSSTC Introduces PCIe® Gen4 QLC SSDs",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5XTFRpeWZweUVVcWlkTEt4OUV3aUxkX0hSWDdRMEdBMEQ4RllzVlZ4bDIzUW4zeWN2NVh3X0djakZpVGQxbXBPeTJkVGxyNFZVMl9XWFNLLWVJUWQyMXFmZ2VOR0M0WTFfaUZ4a1lFSGk1dVpSR2Q5WEhVTDB0UlE?oc=5",
-   "source": "Yonhap News Agency",
-   "source_url": "https://en.yna.co.kr",
-   "published": "2026-11-17T06:09:37Z",
-   "description": "",
-   "hub": "device",
-   "origin": "google",
-   "image": null,
-   "topics": [
-    "nand"
-   ],
-   "companies": [],
-   "first_seen": "2026-11-17T08:12:18Z",
-   "section": "tech",
-   "region": "international"
-  },
-  {
    "id": "0e903e94afc1",
    "title": "US launches criminal probe into Megaspeed over suspected semiconductor export violations",
    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOSVNJWmZJWGRUWTRyOVNCMVZUN191anNuVUhJdGNTZDNoR0ZpdzllYURPSkpSZzRYZERVcU4xQllTV0dtUktxS3FfdTNOeFRYc0RrVmZESEZSLVpXTE5pTFhpcEFoZmc4eWV1RHNKTS1oUnRmNTk3TjVlNjV0S3k4M1JlR042dlpWMjNXMEhKYkZLU0Q2b3JsNDUwQWkxVVg1ZlNVUUdoc0JSUm1vRHdad2Yxd1JxYWJIQV9sNm44eFhkUGRKbktSQnllTndfUWRFMjBnVDBlYzBlYmpWVlhUU1BlLVpTcnJyVVQya2V30gHzAUFVX3lxTE4yaGZ1R3F6bjg3aGZxdkpmeDdpdFYtNUk0Y0RleWVteWY3NWZfOVR3RE9rdV9Lbk5SX3g5c3VIMU1HY2NiU3RCZ2Y2ZnFfVW9DUXd5ZkZ5b3NhVEpVaW1VNnJfMm1VdXVKaUIxOFpJVGk1SFZaekM2MmdCZjNKMlVCMUdMbi1HdGlvTk5MbzZDazR4VS1XTVVuM1NuLVJ3ZUt6NndyNUdJbzk3QU55YVJzQjYzU3gybXdkNGtJMUR6YmpJMXRreEhmTldESEtVN3NxZHVteUFnaHQzbG1NN0xOcWRuVXY2RUF2S09VLUtySWd4Zw?oc=5",
@@ -501,6 +2365,25 @@
    ],
    "first_seen": "2026-11-17T08:12:18Z",
    "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "6db670c1418c",
+   "title": "Special coverage: AI for good and for all",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZ3RwNUtYRjFrZlFDNk1xUkxKYU11NHlMTjNtTlFrTkxucDBUbThNWmRtbDhXRUJGV0w3Vm1YOFdMelk3VEYybDA0UXhUaVJnVDl5X25nTDNDR0piZkZlZzUwNTZ6b183SC01UUl5Y2pqclA1Si1qeFA5Ni1aUG9WZmRYMEZKd3NGS0dXTnQtaTdxMUVnY1pEVVRDVXQ0STRHZjMzbmwtSTc?oc=5",
+   "source": "CGTN",
+   "source_url": "https://news.cgtn.com",
+   "published": "2026-11-17T06:01:12Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
    "region": "international"
   },
   {
@@ -804,7 +2687,7 @@
    "id": "0d0c3e30ea49",
    "title": "AI Ignites the Peak Showdown in Chip Design: Global Tech Giants Unleash Unorthodox Strategic Moves",
    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1MLWpQcmk2ZUhGNGh1dEtWUVQ2eGxqb0wzR1JHcm9ESmdtamhwZDc0VlVaaEt2eTV5YzBoNEFuMmNBMjMtZzJrdkJoUjVRdGI3QldF?oc=5",
-   "source": "eu.36kr.com",
+   "source": "36Kr",
    "source_url": "https://eu.36kr.com",
    "published": "2026-11-17T04:33:04Z",
    "description": "",
@@ -843,7 +2726,7 @@
   {
    "id": "37a911250b1e",
    "title": "How CTOs are Addressing Semiconductor Dependency in Technology Development",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZDItRUstd0xjelczX0NsY3VFdW55bVB6ZnFhNHhYYkxRTlYyck5pVXpsYXpBMGFwaThHcHVhQ05sQm4tcVpjQi1ib3dyaGJQUnpjYUs1VjdmcE92S1VaMnlOT0dXZDFVVFlYTi1ralB3Q1FmZ0FpdmhFYkg3UDBUZWVueHRuazczc3hRWFFzbk9CVXVhbEZWQk1KcENfWmxaaUp1WDYxMFNVeTNVRjExR3JQX3puZ0VYQXV0StIBygFBVV95cUxOblVGZGx6UEJMQTdLNzlrazUxYUNydml3Z2I0MWZpWG9ZSHVQMTNmZm1ScnZuVC0yRXQ3UmNCN21xbmxOWGs0ZmYwdlR6aVVLV0U0Q2gwZ0JXRDZ5YXBhOW1EY1ZMVkVWSXZQQUlqZlpRNENzTmppb2UwOEZMQVh1QUM3RFQ0OFlGdTV3YktON2ZOcl9fQlJCbkRmMG1WTE5xNkRTMmNCMTF3Q05ZS2tsZGFQVVkzUmtTLW9UczVwNkVSeHZNNmtwUnFB?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOblVGZGx6UEJMQTdLNzlrazUxYUNydml3Z2I0MWZpWG9ZSHVQMTNmZm1ScnZuVC0yRXQ3UmNCN21xbmxOWGs0ZmYwdlR6aVVLV0U0Q2gwZ0JXRDZ5YXBhOW1EY1ZMVkVWSXZQQUlqZlpRNENzTmppb2UwOEZMQVh1QUM3RFQ0OFlGdTV3YktON2ZOcl9fQlJCbkRmMG1WTE5xNkRTMmNCMTF3Q05ZS2tsZGFQVVkzUmtTLW9UczVwNkVSeHZNNmtwUnFB0gHKAUFVX3lxTE5uVUZkbHpQQkxBN0s3OWtrNTFhQ3J2aXdnYjQxZmlYb1lIdVAxM2ZmbVJydm5ULTJFdDdSY0I3bXFubE5YazRmZjB2VHppVUtXRTRDaDBnQldENnlhcGE5bURjVkxWRVZJdlBBSWpmWlE0Q3NOamlvZTA4RkxBWHVBQzdEVDQ4WUZ1NXdiS043Zk5yX19CUkJuRGYwbVZMTnE2RFMyY0IxMXdDTllLa2xkYVBVWTNSa1Mtb1RzNXA2RVJ4dk02a3BScUE?oc=5",
    "source": "Analytics Insight",
    "source_url": "https://www.analyticsinsight.net",
    "published": "2026-11-17T04:30:00Z",
@@ -880,7 +2763,7 @@
   {
    "id": "41394a61e797",
    "title": "Chipmakers can't dodge antitrust suit over simultaneous cuts in DRAM supply",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTmRUc0FneVcwR3VtZVZySC1pOEIxb1lhckZJa0l3eDVxV1hTY3NfM3NtWHRtTlpSbmh5bXFmcTU5bVdybEdEUzhDU3EtT1EzVzZ3ZWdYZXk2TEVicndINV95OGp6blpkdDlFT3FKSF9aaWtYd0FmVkZ4c3VyaUlNWlF2VTBsV0NiODJJNkVuXzJsem9feVhKajJUWmZLZ1lVbWtnS2dQNWJwZw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMFBRWWhHMWtlODJkcnd0UVhJWUw0cHdLS2FtbEVZREpKekpadXBXSjRibDdZTHBGRUJPQlpmdVFjYml5N3Z4dTJWN1FIbDdDeF9qQ1VRWTA4Nm5NbF92aURaSHdSUmg3ZU9MQ29ScVZWZUlhaDkwQU0ycHJabEcxVmRLejk3aDduOFNCTG05RUJvV0VkMGM1M3FLRTFQSHFfaTEtU3FUd2s?oc=5",
    "source": "Courthouse News Service",
    "source_url": "https://www.courthousenews.com",
    "published": "2026-11-17T04:01:27Z",
@@ -950,6 +2833,28 @@
    "region": "international"
   },
   {
+   "id": "7018dc4a2e85",
+   "title": "Korea Investment Management Boosts Samsung Electronics Sixfold, Cuts SK Hynix to One-Fifth in Semiconductor ETF",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4yNzFVT0dpeENqbXk5UFNmN1dLWkFqZEk3UzVxeTU3eXJPaHBReGRsVENFeVhvN25VbWVQWTVzZllkc1lmdzVkVThYRno4NVliNnBfaGNBdVVENzE3R0hTbE5EVlR1cGJkdmRlNElTcGNVQ1cycXc?oc=5",
+   "source": "BigGo Finance",
+   "source_url": "https://finance.biggo.com",
+   "published": "2026-11-17T03:25:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "industry"
+   ],
+   "companies": [
+    "Samsung",
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
    "id": "037dc878b1fa",
    "title": "AMD Pairs AI Computing With Fiddler's Enterprise Agent Controls",
    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0ySEJiX014RlE3WHUwRkU5eExjb1d4elhQVGxGTWVxTVlUbmtCOHVVdjQtZmd5WGp4VURCLVFJaVlZcjJMRFdla0JaaG1xWF9wV1ptTVFlTE0?oc=5",
@@ -986,6 +2891,12 @@
     "SK hynix"
    ],
    "first_seen": "2026-11-17T08:12:18Z",
+   "also": [
+    {
+     "source": "marketscreener.com",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMHhwRVpxWXFrYWJrZk5Fekg4RFFqRmp2aWlNYWM5YTRoOTdUWXBFQkNpQy1xbjB6dVRKVlQzejFVbW0xa3FXXzJCYnNWUE5MemN6a29tWTR5VU9Bc2NCMmxBNEVPWS11blM5LTR3V0w0RDRoWHF1S2lKLXhjZEpqSGZvTWxieDF1NnpHaTBIM3hWZEl5LWwwV1dEUTQwNW03OWVLb0xfaXU5Rk5N?oc=5"
+    }
+   ],
    "section": "general",
    "region": "international"
   },
@@ -1056,7 +2967,7 @@
    "id": "90e3bba34b46",
    "title": "Samsung Develops Custom HBM for Meta’s In-House AI Chip",
    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4zbTl4ZkxKWS12RFZ5U0lDR3dJQkhQV1BQUkdjM1o1SkI4ZllWOGxId2lPcjNsLU9qRHIzYVFtd0o2SDg4dldENFYxRjZKMUZJLWVGMmlrVnI0ck0?oc=5",
-   "source": "www.tokenpost.com",
+   "source": "TOKENPOST",
    "source_url": "https://www.tokenpost.com",
    "published": "2026-11-17T02:34:00Z",
    "description": "",
@@ -1324,8 +3235,8 @@
     "process"
    ],
    "companies": [],
-   "first_seen": "2026-11-17T08:12:18Z",
    "img_checked": true,
+   "first_seen": "2026-11-17T08:12:18Z",
    "section": "tech",
    "region": "international"
   },
@@ -1427,6 +3338,28 @@
    "region": "international"
   },
   {
+   "id": "a5688ebd5eeb",
+   "title": "Cadence unveils Maestro AI models to improve chip design efficiency with up to 5X token savings",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBLZXVLQ2dEa2Y2cUJaQkVibXpzcXhwdUpvb1ByOXliU0Q4WXFNWUVLSng1N29EWld5aHEwR3l5Q1JzYk1sZmJXUkNUSy1RVGY2bEJ6Uk1aNjRqYlBqNDEzQjA2NHVvczl2aVpSd2RMZHVlVXk2?oc=5",
+   "source": "My Everyday Tech",
+   "source_url": "https://www.myeverydaytech.com",
+   "published": "2026-11-17T00:29:55Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "companies": [
+    "Cadence"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
+   "region": "international"
+  },
+  {
    "id": "ba165721613a",
    "title": "Samsung, SK Hynix, and Micron Unable to Avoid DRAM Price-Fixing Trial as U.S. Court Advances Lawsuit",
    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9FMkg0T1JZTGxnOFBqS2RYQlFLU085eHEtYUpDTEY1bGRFYUFxbTBSNDk2eTltb3RzMHhWUXVsbV9PZnE4QTN0Ni1OTnQyVVByOHZpYWU1N2xVQnpRV1NxazJB?oc=5",
@@ -1491,7 +3424,7 @@
   {
    "id": "d247c64abce0",
    "title": "Scale up semiconductor ecosystem to join global supply chains, says IBM chairman",
-   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxONTl1aHlwbTJGWDB2ZXlaV2xMRzN3VTlVX0M2WTNySktTSzFHaHNhcnl2RkhSakdjWm9Eblo2Y0djaUU2UlpDWi14eVNMQkQzRHpGclhjSHh6WnR2ZmVzdlgyQjJWa0JRWHFBQkc0RUNycmdpLWVvQVJTR2F1RzAxNEtnaXZRVkRJSzR0QzV1ZVFHak1ULUFQcEdkdTNwRWxVQ1p1TWhCWVV6NmIzQWhuN01fZzIxR3dEbnl6TjVkY1BvTnJ4UnBxbURKUGU4VWhBSkNCMnEzQi1SUHg00gHcAUFVX3lxTE41OXVoeXBtMkZYMHZleVpXbExHM3dVOVVfQzZZM3JKS1NLMUdoc2FyeXZGSFJqR2Nab0RuWjZjR2NpRTZSWkNaLXh5U0xCRDNEekZyWGNIeHpadHZmZXN2WDJCMlZrQlFYcUFCRzRFQ3JyZ2ktZW9BUlNHYXVHMDE0S2dpdlFWRElLNHRDNXVlUUdqTVQtQVBwR2R1M3BFbFVDWnVNaEJZVXo2YjNBaG43TV9nMjFHd0RueXpONWRjUG9OcnhScHFtREpQZThVaEFKQ0IycTNCLVJQeDQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNNk5IQVlCbzBjS1JFclZsSEpmZTVtWDlqakM1SjI3ZzdWVktSTFhrVVd5UmNUQ256MnJHVVBhNTRCTjAxalVfYXNTT3EtcnRCd0FUZDdJV3hWdDBoZjhlYzZ2QnpPZXJsX0J5UTVENzdxSkQwa0NraERBLU4zN0UwSG0tSmMzZktIX1Z1eUpOVV8tSmhSN0RrT3FMZ0tEMTl2Z200dTlyR0VEWUZocmVOQVJzRWJmeE9oTXpsNGswQ1hGVG1uSkwxV2VkRGliUUZJbDhBeW5tTdIB3AFBVV95cUxONTl1aHlwbTJGWDB2ZXlaV2xMRzN3VTlVX0M2WTNySktTSzFHaHNhcnl2RkhSakdjWm9Eblo2Y0djaUU2UlpDWi14eVNMQkQzRHpGclhjSHh6WnR2ZmVzdlgyQjJWa0JRWHFBQkc0RUNycmdpLWVvQVJTR2F1RzAxNEtnaXZRVkRJSzR0QzV1ZVFHak1ULUFQcEdkdTNwRWxVQ1p1TWhCWVV6NmIzQWhuN01fZzIxR3dEbnl6TjVkY1BvTnJ4UnBxbURKUGU4VWhBSkNCMnEzQi1SUHg0?oc=5",
    "source": "Telegraph India",
    "source_url": "https://www.telegraphindia.com",
    "published": "2026-11-17T00:10:43Z",
@@ -1603,12 +3536,18 @@
    "image": null,
    "topics": [],
    "companies": [
-    "Samsung",
-    "SK hynix"
+    "SK hynix",
+    "Samsung"
    ],
    "first_seen": "2026-11-17T08:12:18Z",
    "section": "market",
-   "region": "international"
+   "region": "international",
+   "also": [
+    {
+     "source": "매일경제",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA2SmpNdmxxUnhGcUNiZzh6ZUx1LXl1TEVvdGIzbC1tZkRsSWxLcjQwVHBBT29jdHZRUExOUXRMVV9mMldqNDRkSGRpWkZ0ZlNFZ1hwUEwzVQ?oc=5"
+    }
+   ]
   },
   {
    "id": "fb6ccb03689d",
@@ -1650,8 +3589,8 @@
    "companies": [
     "Nvidia"
    ],
-   "first_seen": "2026-11-17T08:12:18Z",
    "img_checked": true,
+   "first_seen": "2026-11-17T08:12:18Z",
    "section": "tech",
    "region": "international"
   },
@@ -2057,7 +3996,7 @@
   {
    "id": "7df448712d6f",
    "title": "Sandisk’s Stock Split Is Coming on Nov. 19. Should You Buy Before It Happens?",
-   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPa3BSSWx1Xzk0ZVpWU0tnbUQ4TklXTE5maU1DemhFSVdIT1ZUMk5ZUm1LRGRBS0dpbmpOVTktQW9TMnNnVjF6bGRGeVUxNWRWMUdiOWJNMG9CN0Utc21aUlV1Ujl5alBwdEtPY3drajJZa3BoVzI5XzZWS3BnQ0ZmclhYcTcxdXpfbEdyaEU0RHA2Y01PZnRHa0RvQlVEVFItXy1VTjczUWhZSmxFMVZ2dU5DUVBod2ZFbmxMc1FMU1FoMmtkVEg1MDRfRF9lNTFDRFBzWjdwYVhxMVIzZnQwMWhKalZ6WmlxdThFOUdkR0dKQQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNZkh2V0dmRk11R2hUdTZQd05mT1pVZS02UWxSRllsbjRYcXhIR3dqeDJ1bEsxTmkxanNmV2hwRzhzTTA2ZHJDLWZlZFFIaE14YlR2dDM5RzNQaEZ1dmVQQjFKOXZkUS1KeFBOZzI2WWV2TGpwSXF5d0pnYmF3NW4wWjdJYjhGNl9Yc0pnckNVTUx0VmFDVWJRb1JmczA5OWlZQWVrOFh3UjRjb3E3bnVVZ3Vadzd0dlk4bHloMjhXcmc2YnN2UzRfR2oyNnFkSzZabEpYb3lvbDYtMmp1VlpPc2dPRWJuQUJVbTVsUG5oZw?oc=5",
    "source": "The Globe and Mail",
    "source_url": "https://www.theglobeandmail.com",
    "published": "2026-11-16T20:01:37Z",
@@ -2851,9 +4790,9 @@
   {
    "id": "9ae8a764456d",
    "title": "Micron, SK hynix, and Sandisk shares plummet, what you need to know",
-   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUVMwYThlZGhsT2QycGdadWVFLTlYMEdtR2I4QXFHTXZ4a25JQ0R2eDhxal9qLUVWX280aHROX3p3NDlCblZyR2huem5hWHFKejdOZnc3cXh1S2g4dVZ2aXVDd2xCT29XNWRJeFZPek9STGljUTFQMXdjd1pWSXdmMV9CTmVjX1E0eFRybDZTVUcwdmlrYkltNW9BWFFBSjdueXlQMzdWRTZLZFU2cG1RR1VTNks5dmJaVHJzaFBiOVNVYU5tN2IyZ01YQWJQLVdrQTZpUm5ocHU5ZnJQWU5KQmoxcw?oc=5",
-   "source": "The Globe and Mail",
-   "source_url": "https://www.theglobeandmail.com",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSEFXLXlmYXpDcEtPaTBPUFdlb2ZmRGZtenY0Zkd6UFpSZ0c5Rm1zWFdwREpDVm5KQ24tVGZKUVZ5YWhRME9XcHd0NXlVbThqT2lJMWE3UEpSNUhsSTA4SmI0UjdCY21RRWFCdVI1eENzekp5bWgxRGk0SXhHOWpScVFIdVRrZld1WmdQZUg2UXJWMkJKTy1yTVZ2bnJHRnQ4UHc1VC1xVUZ2OEtaUDVDNnhXallaR1dsVjhnZWRtMjY0Zw?oc=5",
+   "source": "StockStory",
+   "source_url": "https://stockstory.org",
    "published": "2026-11-16T15:45:28Z",
    "description": "",
    "hub": "device",
@@ -2907,6 +4846,29 @@
    "companies": [],
    "first_seen": "2026-11-16T22:27:49Z",
    "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "331f99de1ba8",
+   "title": "Press Release - Industropolis Batang Special Economic Zone Explores Strategic Partnership in European Energy-Efficient Semiconductor Technology",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNLS1wYVk2MFBReHNiMzA4Mi1LMk5YMlc5RGNHX1pid2h3dDBkTlA0dHhoUHF6OGJTQzZyX2FYUzcwT1hkQUp5TFBwNExEWWExaDJiSnVtb2E0eHk4emlqX2JTbHc0TmlpUUlPazd0YlB2RHBPT0hrbWxhVU4xU2FhWHpfbjJiQzlIaWQtd1FBNDhfNnptOGpITzRBQi1lbkFfRkV6Rl83VzNCWUdwZFE?oc=5",
+   "source": "KEK.go.id",
+   "source_url": "https://kek.go.id",
+   "published": "2026-11-16T15:35:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "also": [
+    {
+     "source": "Petromindo",
+     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdHlBbldfbFh5UE9icXZwb1duTjJ0NHVQcmFYMkt2X0JweXdPZWI0RUFOb0RDZFpSaXc5UzRQdFE0Z191MWFNSGZMX0hoZ19obVhXWUJPOVBaU25OMGVDSFlRY1BmZXhCRlZSZ2lfbDBlMXE4ekxGYTZGMGExSldFeW80aVlRQVpwOUlWbDFoMWdPaUlaOWJROTlweHltb2ZkbjBBV21Bd1ZuMEk1ZWVINUxKRUEyMlFDZk5Ka3lwVE5oemMyTk5hRWh6VktZWDZLTGo4SnNyY3FRNFZPZmtDcjJVaw?oc=5"
+    }
+   ],
+   "section": "tech",
    "region": "international"
   },
   {
@@ -3447,9 +5409,28 @@
    "region": "international"
   },
   {
+   "id": "a12bc9cb5325",
+   "title": "Global Mofy Announces Indirect Investment in Anthropic, Strengthening Its Position in the Global AI Ecosystem",
+   "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQRGRUaU9fY2dzOUZaQ1hpT29KdE1FM1R6RnUyQ19sdEZQQVFvejhCOGZkQU5HZ3hQYS1KMklkSXBRYi1aMXdSd2ExM3JUYnJXLVo3cExvNk5UMlFuUTZXaHVRd0xiNzd6TXhaRC1sOXdtY3c5TGRrMUp3NDVHbEJpNGhwZnRQU0JVN1JmX2VoLUR5WDRqaU5ZOVhPSXlLSmlMaFJQSkp4ek5jb0YyeE5zNjhlZ1FmbHZ1OE1XWUZISXByVlZoMm1SS3JnSDYyNmlOUFc1N2IyaEp2U3JmRnpER1BmVjUwdEhLTGFrQnNuWVBnWk9EeUE0R2tsUWRYeDJXR0lUd0Jxb2t6WTVm?oc=5",
+   "source": "GlobeNewswire",
+   "source_url": "https://www.globenewswire.com",
+   "published": "2026-11-16T13:30:00Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
    "id": "413b5325d376",
    "title": "Silicon Motion to Attend Upcoming Investor Conferences",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUU5pdzF5ZWxqOXozdWhMajdsUVEtRFRTRUM5MGFEMG5PU296aGU2WGRvLUNKLWROQWkycmpGdWtQRU9HT1daTlFYUURmbzIzazl2Y2E1TER6TFBQbU9jQmxNUlRTZ1oyYjlFejNqcHNSVUlYMklqczV2WVBKV3RhZDVuUjRsbThJVVgzQnZRblo1YnR6SlR1Q3BGQ2hFcHRpbUswQi1wa0FrZlI4QzluM1FGZjVINU82b1N4WEk2cDRubGtBV1Aw0gHMAUFVX3lxTE9GT3FORVVvYTliWVNQZGV0T1lHdjI5NG1SMkpOamFmZ2VuS2Z5bFFibVg0cW83Q2NmOFNsNlBxYTBSWmJsZ2g2ZWJfUG9zQmJsYlRkQW5lQi1PVmNENEowZTlsVlNmQU5BRzFheklNQzFobDVjSVZaTEdEcGVJR05sc1c0Z0F1WlA5TXQ2MHpHZ1NHOUhTRjM2LWkyci0xb2w4cGpxeXhabEZpY2JYUlMwRVUxZ1FhdG1MRGk1SWE5NnJsVFBCeUJZR0dsaQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRk9xTkVVb2E5YllTUGRldE9ZR3YyOTRtUjJKTmphZmdlbktmeWxRYm1YNHFvN0NjZjhTbDZQcWEwUlpibGdoNmViX1Bvc0JibGJUZEFuZUItT1ZjRDRKMGU5bFZTZkFOQUcxYXpJTUMxaGw1Y0lWWkxHRHBlSUdObHNXNGdBdVpQOU10NjB6R2dTRzlIU0YzNi1pMnItMW9sOHBqcXl4WmxGaWNiWFJTMEVVMWdRYXRtTERpNUlhOTZybFRQQnlCWUdHbGnSAcwBQVVfeXFMT0ZPcU5FVW9hOWJZU1BkZXRPWUd2Mjk0bVIySk5qYWZnZW5LZnlsUWJtWDRxbzdDY2Y4U2w2UHFhMFJaYmxnaDZlYl9Qb3NCYmxiVGRBbmVCLU9WY0Q0SjBlOWxWU2ZBTkFHMWF6SU1DMWhsNWNJVlpMR0RwZUlHTmxzVzRnQXVaUDlNdDYwekdnU0c5SFNGMzYtaTJyLTFvbDhwanF5eFpsRmljYlhSUzBFVTFnUWF0bUxEaTVJYTk2cmxUUEJ5QllHR2xp?oc=5",
    "source": "The Manila Times",
    "source_url": "https://www.manilatimes.net",
    "published": "2026-11-16T13:19:40Z",
@@ -3516,9 +5497,9 @@
    "image": null,
    "topics": [],
    "companies": [
-    "Nvidia",
+    "Samsung",
     "SK hynix",
-    "Samsung"
+    "Nvidia"
    ],
    "first_seen": "2026-11-16T22:27:49Z",
    "also": [],
@@ -3561,6 +5542,27 @@
     "Intel"
    ],
    "first_seen": "2026-11-17T08:12:18Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "470457e25a6d",
+   "title": "SemiAnalysis has significantly revised down its AI computing power demand forecasts: capital expenditure projections for 2028 have been reduced by nearly 30%, five-year silicon wafer shipment area estimates have been cut by 17%, and NVIDIA is the most",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdWNlQ045RDd2aWJ6ODc5d1NkSi1wY0doWHJNYmpsZVZVa244aXR1QzFpc2x0QkpIZjkyd3dTX1FRQTBrd1NTYmFNQ0RKVVFyUXFiRk1JbTNBeXI1QUVBaGx1WFY1M01kS0VESW9lZk05VThRZzQ2bTJlNXpPMVZ6al93Y3NxTDExTS1hTFV0RGV5ajZoVk1UajBBTTBYX1JBcmRLSDJDX3dNelFLOEVhRzNWZ3JKRFU?oc=5",
+   "source": "富途牛牛",
+   "source_url": "https://news.futunn.com",
+   "published": "2026-11-16T11:40:42Z",
+   "description": "",
+   "hub": "ai",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [
+    "Nvidia"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
    "section": "market",
    "region": "international"
   },
@@ -3681,23 +5683,6 @@
    "companies": [],
    "first_seen": "2026-11-16T22:27:49Z",
    "section": "tech",
-   "region": "international"
-  },
-  {
-   "id": "c9b4c9a717c2",
-   "title": "SIA logs 3.5% rise in October passenger traffic; sees ‘healthy’ demand for semiconductor shipments",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNbTFraUs1Uk9BV0E4R0dZek9zaDBxTHJOaDNjeldrYURsR3dTZ1Bid3lVRlRwUlBSMERFY1doN1JDR3F0SFpPN0p4Vzk1S0ZWVWpIbG5rUUxjSDN3c2lueDRRcUExX3paVkg2c2s5SF9mVWtBSENGNndNVlIxX0kxQjVkR3NSal9kNDFPWGN6d0wzUTlubjVRSkRZQ2w0U0twZ3lFRTRMdUcxbVFaaXJsV0tCekU1NjQwVmNFdUthUTdndDh2NG8zM0s0T0U?oc=5",
-   "source": "The Straits Times",
-   "source_url": "https://www.straitstimes.com",
-   "published": "2026-11-16T11:21:00Z",
-   "description": "",
-   "hub": "device",
-   "origin": "google",
-   "image": null,
-   "topics": [],
-   "companies": [],
-   "first_seen": "2026-11-16T22:27:49Z",
-   "section": "market",
    "region": "international"
   },
   {
@@ -3847,6 +5832,23 @@
    "region": "international"
   },
   {
+   "id": "c9b4c9a717c2",
+   "title": "SIA logs 3.5% rise in October passenger traffic; sees 'healthy' demand for semiconductor shipments",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZzZQMU9UNFBoVkJUNDRiZDU0YlU0eUJZanp6Wm1jczk0SmFZM1FKSFRBZkI4T0ZkcElteWtfbUxDVURQN001cVJMakd5bFlpN2pWVG4xOVpWS2prMWhtelVuUGNLQkdLcV92QllMZktnZlA0V1JpcmJfVEtHMl94dHJQMXc2Szg5UG9wblpkdjk0WTdadEVUZjFWNHVtWmhWNHNscExhNmhZQm1UOHBkVzk4UmM0SDdLYUQwSlNGY1Z3clNfb1RydVBXLWM?oc=5",
+   "source": "The Business Times",
+   "source_url": "https://www.businesstimes.com.sg",
+   "published": "2026-11-16T10:32:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-16T22:27:49Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
    "id": "609c44812e0b",
    "title": "Samsung, SK Hynix, and Micron face full-scale DRAM price-fixing litigation in the U.S. : Business/Industry : JKN",
    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9JdjZnMXk3Q2EtdlBkN1J0RTNxblJqQjhQMFRmcVJxSnJ6eWRJTURSVk5SWVVRQ0NPLVJQcHZQR3YwblRCM1YwQ2hFNlNscTRkeF9PN0Y4Sk84TUJJNFd0WHN3?oc=5",
@@ -3891,7 +5893,7 @@
   {
    "id": "634da8cecefd",
    "title": "SK Hynix Plans $1 Billion Investment in South Korean Chip Supply Chain",
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOUdfSUM5dlFWck5MTjE1eEpxblZyODBYNXhvaVU4eWdJdm8tdVhLVElxSS1WR3VwUHcwUjI3TlBXUXhSaERyU2Zxb09jek93X21XUWYzMGlCUGhGX2kxMENfSDVFaDRETzNHenRTU0tXT0s5cGhSZDVkM1kxN1ZRMUIybTRkN19lb1E2clNDUzFhNDZ2Y1duYTFJV2w0NFpFVnlFVXNCZVhLd0wzNm1vbWpXSkZPQklXUXJyM2s2dw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPN0tnQTdnNWE1NXh0em1MM0ZOdjBzYUc2RV8wMkNpTzd2ekJYcmVVTVpVeC1ObktTRmpyOFhaWTRjVkUybHAtQWtyVVFtay1KMHpTZ2JYRXR0ZW0wVHRWeW0zSm9pa255V0x0dWhzVG5CM0lnZWtEaEVFY0VtV29CYjROUkMxRFVST2RuLU1Pb3VublRTTUpiZ2RuZzNNRG10d3pyb1BmbHotVExaZzdGNTdDbDV4M3p1WEFMUVpQZw?oc=5",
    "source": "marketscreener.com",
    "source_url": "https://www.marketscreener.com",
    "published": "2026-11-16T10:18:23Z",
@@ -4429,6 +6431,23 @@
    ],
    "first_seen": "2026-11-16T22:27:49Z",
    "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "33bdc1ebe9a5",
+   "title": "Semiconductors 101: Chips, wafers and how they are made",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPc2N1NFh5SVFyVkU5ak9FeExFSWZBUzVoazNlQkNEYXBib3ZOQ1lnVUlVQXFOTEVjUHVTVW5GWlduMXVJcDZsbnpJTXJ2Rk05Q0haTlJNV09xc1dITXlBX19YdXRxdEwydWJUMDhmaTZMM1NOS3J4NGswV2EtR3JMb2JUVEUxTGExZlN5SlRzMjVidXBkVnhjN3B3NjdsQQ?oc=5",
+   "source": "Singapore Economic Development Board (EDB)",
+   "source_url": "https://www.edb.gov.sg",
+   "published": "2026-11-16T08:00:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "tech",
    "region": "international"
   },
   {
@@ -5607,6 +7626,29 @@
    "region": "india"
   },
   {
+   "id": "aeaf0700f88d",
+   "title": "Judge lets DRAM cartel lawsuit against Samsung, SK Hynix and Micron move forward",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1UWHFGTHdWc0txcnJ5SGhmQm9OZkNldkpsSWZycDhhQ2FqUFF3SUZKR1UzNzJtUllqVlB6cHZPQnk1QXFCUE9zY1ZEZHFpa3drWUJTa0hfS2FzWHdKY3JyVm5NcFRUZERvcWp3ZFZ3b3FRQnc3SG12TXAzSQ?oc=5",
+   "source": "Crypto Briefing",
+   "source_url": "https://cryptobriefing.com",
+   "published": "2026-11-16T03:00:17Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram"
+   ],
+   "companies": [
+    "Samsung",
+    "SK hynix",
+    "Micron"
+   ],
+   "first_seen": "2026-11-17T20:11:13Z",
+   "section": "general",
+   "region": "international"
+  },
+  {
    "id": "2a1fa16c9ad1",
    "title": "India’s semiconductor market projected to cross USD 200 billion by 2035: EY-IESA report",
    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOb2M1anRZc2hYUzRGQ0FWMXBkT29IajBzWHN0UnlzU0VHaDJvRkQ3ZDljVzlKV2Q2NFJKbGhLVXpkU0YyNV9iLTR4eEFNTGRRWnZmbklyVlItRnJKZnZOUnhaZHIxdFphTWUyQ0l2S0dpSmJoc3BCdTBnUVMtZEZQQmd1dDdjZUg3dFFYdHFabkNKMEN2M0NiR3pnMERYdDd0Z2NnRVpqdzlZOGVnWnRlVw?oc=5",
@@ -6116,6 +8158,10 @@
    "section": "market",
    "region": "international",
    "also": [
+    {
+     "source": "PYMNTS.com",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRjVuS1dqQ05Gc2lSeHBQYVJubDc2NUZOWmlDc3phWk1RWFFHVkg2TVNjR2czUlg3bzN3eFh0UnM3ZnVkS1BKZjBBU1BCdGhmTUNiSGxqUjl2M3MteW1NbWlWTVZHWDM1YmE3NExFa2hZN01RakpJTFFMTW1Tc3RfQ2x1QXdoc3lPZWRPUV9kdlB5WEUwT3A1Nlh2Z0paZ0JpWXc?oc=5"
+    },
     {
      "source": "MLex",
      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBIWHFHYjQtM1VjMEVWTi1pSlhzdTAwcWRtb2MyaU00Z1A3LTV4QTFOU1lzQUZWRFFnc2Z4YVljVHRaSVdFb2I3QlgwaWo4TVdUUS13b0JubGZlQdIBWkFVX3lxTFBIWHFHYjQtM1VjMEVWTi1pSlhzdTAwcWRtb2MyaU00Z1A3LTV4QTFOU1lzQUZWRFFnc2Z4YVljVHRaSVdFb2I3QlgwaWo4TVdUUS13b0JubGZlQQ?oc=5"
@@ -6743,13 +8789,19 @@
     "dram"
    ],
    "companies": [
-    "Samsung",
+    "Micron",
     "SK hynix",
-    "Micron"
+    "Samsung"
    ],
    "first_seen": "2026-11-15T19:03:14Z",
    "section": "market",
-   "region": "international"
+   "region": "international",
+   "also": [
+    {
+     "source": "VideoCardz.com",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS0lTQVh5bEpOVUphbU5Uc1g4WXZCT254QWY3cVBiVGZUb3BXZ3oyb0JXZmZ4QnJyQ2NpRnRxQ0lab0dhNXVYMkU1UkFnZWNWbnJQM3ZmZ1JLS0tmYUtVeUt0SE9OcWlwTDI2bnFJNzdqeHVjR1dVM0RIVkpiZjAyTW1XTTBuTE5Pc00tRWRsQm8xUVg5SlBnWVZpXzUtcGROdjZ2T3hqOFJKdw?oc=5"
+    }
+   ]
   },
   {
    "id": "71f7cc275055",
@@ -7095,9 +9147,9 @@
     "dram"
    ],
    "companies": [
-    "Micron",
+    "Samsung",
     "SK hynix",
-    "Samsung"
+    "Micron"
    ],
    "first_seen": "2026-11-15T19:03:14Z",
    "also": [],
@@ -7280,6 +9332,14 @@
    "first_seen": "2026-11-15T19:03:14Z",
    "also": [
     {
+     "source": "Chosunbiz",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5nTVY3bXo4MjJWaDRTaXhOSkdMdWhjTFhya0xCSmZQSWJ6Z0hqMHJSSm1WUC05US1JYklyZGxub3lEZHMwN0tqb0o0RkNSRWUtRUlUaFFkZDBMS0Fzb1pDZERHR0JEVENKazdpd2g5THJDb014LTExSC1B0gGOAUFVX3lxTE8wYmdubWtKbFpOXzhCM0lqNVFLZVpTeS12aWJWQzlCTmkxZHFKQmEyUXVEYzRQNGYybXVTOEpQTHBsY3g2Qy1pUG1XeWM1S2NSUHlWZHh3V01jYVhoZTgzMGJSYWNaQXhWQVZ4SS1NMGtzcVVDMDFxdzQ1WFNBZ2JXZzNmN3JCRGFjZ3NUYlE?oc=5"
+    },
+    {
+     "source": "Dataconomy",
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSXRvaFpMSkY3V0QyZldxZUdqX0RWTEdUVUZJWEZnY0VoLTZtUUdCam5VNW1qc0JJVnB3dVNmVkktODFhQUZEcF9hWTVSY285U1Z1TS1Dd0RSZDhIWjdWTkJlcTliR2d3TURHdDRWdWhka2FHRjZwdzFfRUt4SW51N3pvQ2N2OHh4M1RpNy1oSW9NSEE?oc=5"
+    },
+    {
      "source": "Around Prague",
      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObEZzTmlLdGNBNGhjaDJMTTloZGFtMi1Hc2hyLWJudlJPVEZnNGpHdjVCTld1amlFZWdpM2hBdnJUUjExWnhqRWJaQWN0YUNHTmFHM1hJdWI4dlVLOU9jdW9fcWZFcWVsalRjVTdlSjFXRGlDMWNHR1E0NmtIdXBFSmFMYk9aNnBNWHQ1R2JqbkNnX19CSWNtcGtyVWJ5N3locVNoazBfTWltcHc?oc=5"
     },
@@ -7288,16 +9348,8 @@
      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPeEFDNGI3WHdkV2FvNmhzSUhHaDZDSERFNW1Kb2pma0Y0TkI5YXFULThyaVcyTTM0Y09RLXVsTVZ1Y0dlUG1CVWxKMHYzNTd2QXVuUDdmNzhaejB6VHpGVUhlc1lKdWRTenljRzRWQ1NPR3dhVlJiV00ySGQ2WTljMWVqRW1FbVpwWFFfSHFjREJIX2Q5YVV4WEh2RHFJanVFRnNKYV8zc2E2ZURoZER4bXhLS0lORWFrWHhEQm1UaklYMFEwU19keQ?oc=5"
     },
     {
-     "source": "Chosunbiz",
-     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5nTVY3bXo4MjJWaDRTaXhOSkdMdWhjTFhya0xCSmZQSWJ6Z0hqMHJSSm1WUC05US1JYklyZGxub3lEZHMwN0tqb0o0RkNSRWUtRUlUaFFkZDBMS0Fzb1pDZERHR0JEVENKazdpd2g5THJDb014LTExSC1B0gGOAUFVX3lxTE8wYmdubWtKbFpOXzhCM0lqNVFLZVpTeS12aWJWQzlCTmkxZHFKQmEyUXVEYzRQNGYybXVTOEpQTHBsY3g2Qy1pUG1XeWM1S2NSUHlWZHh3V01jYVhoZTgzMGJSYWNaQXhWQVZ4SS1NMGtzcVVDMDFxdzQ1WFNBZ2JXZzNmN3JCRGFjZ3NUYlE?oc=5"
-    },
-    {
      "source": "Crypto Briefing",
      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1UWHFGTHdWc0txcnJ5SGhmQm9OZkNldkpsSWZycDhhQ2FqUFF3SUZKR1UzNzJtUllqVlB6cHZPQnk1QXFCUE9zY1ZEZHFpa3drWUJTa0hfS2FzWHdKY3JyVm5NcFRUZERvcWp3ZFZ3b3FRQnc3SG12TXAzSQ?oc=5"
-    },
-    {
-     "source": "Dataconomy",
-     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSXRvaFpMSkY3V0QyZldxZUdqX0RWTEdUVUZJWEZnY0VoLTZtUUdCam5VNW1qc0JJVnB3dVNmVkktODFhQUZEcF9hWTVSY285U1Z1TS1Dd0RSZDhIWjdWTkJlcTliR2d3TURHdDRWdWhka2FHRjZwdzFfRUt4SW51N3pvQ2N2OHh4M1RpNy1oSW9NSEE?oc=5"
     },
     {
      "source": "BigGo Finance",
@@ -28998,48 +31050,6 @@
    "companies": [],
    "first_seen": "2026-11-10T10:16:55Z",
    "section": "general",
-   "region": "international"
-  },
-  {
-   "id": "05d5de8fad16",
-   "title": "TeamGroup GA Pro 2TB SSD Review: A faltering attempt at a mid-range PCIe 5.0 SSD",
-   "url": "https://www.tomshardware.com/pc-components/ssds/teamgroup-ga-pro-2tb-ssd-review",
-   "source": "Tom's Hardware",
-   "source_url": null,
-   "published": "2026-11-07T14:00:00Z",
-   "description": "The TeamGroup GA Pro mostly misses. Decent QD8 and steady-state writes can’t make up for weak overall performance, poor efficiency, and high temps.",
-   "hub": "device",
-   "origin": "feed",
-   "image": "https://cdn.mos.cms.futurecdn.net/4uccTHKwWnDD6go5YwpkAk-1920-80.jpg",
-   "topics": [
-    "nand"
-   ],
-   "companies": [],
-   "first_seen": "2026-11-10T10:16:55Z",
-   "section": "general",
-   "region": "international"
-  },
-  {
-   "id": "36341342cf71",
-   "title": "TSMC denies exploring 3D DRAM at Nvidia's request",
-   "url": "https://www.tomshardware.com/pc-components/dram/tsmc-denies-exploring-3d-dram-at-nvidias-request-advanced-memory-tech-is-still-years-from-market-viability",
-   "source": "Tom's Hardware",
-   "source_url": null,
-   "published": "2026-11-07T13:00:00Z",
-   "description": "Nvidia reportedly asks TSMC to produce '3D DRAM' to address memory shortages.",
-   "hub": "device",
-   "origin": "feed",
-   "image": "https://cdn.mos.cms.futurecdn.net/inWCPzXNVFbyYDRmxtthn3-1920-80.jpg",
-   "topics": [
-    "dram",
-    "industry"
-   ],
-   "companies": [
-    "TSMC",
-    "Nvidia"
-   ],
-   "first_seen": "2026-11-10T10:16:55Z",
-   "section": "tech",
    "region": "international"
   }
  ]

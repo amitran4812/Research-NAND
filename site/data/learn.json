@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T08:25:05Z",
+ "updated": "2026-11-17T20:23:25Z",
  "items": [
   {
    "id": "15f76ef19f4f",
@@ -21,7 +21,7 @@
    "source": "TechTechPotato",
    "kind": "video",
    "thumbnail": "https://i1.ytimg.com/vi/PFVzkVsmwOY/hqdefault.jpg",
-   "description": "I heard you like cores, so AMD has put performance and cores in your cores. Here's our roundup of AMD's Venice launch, along with a preview of what we expect from Supercomputing (we're in Chicago).",
+   "description": "I heard you like cores, so AMD has put performance and cores in your cores. Here's our roundup of AMD's Venice launch, along with a preview of what we expect from Supercomputing (we're in Chicago). Timestamps: [00:00] - Pre-Show: George's birthday [00:40] - Live from SC26 in…",
    "published": "2026-11-16T17:08:37Z",
    "topics": []
   },
@@ -931,21 +931,6 @@
    "description": "Edge AI doesn't need a data center - it's already running in retail stores, laptops, and microcontrollers all around you. In part two of this edge AI deep-dive, Ian Cutress and Sally Ward-Foxton go off-script to talk through seven chip companies - Axelera AI, Kalray, Kinara,…",
    "published": "2026-09-21T13:00:11Z",
    "topics": []
-  },
-  {
-   "id": "7306454874d6",
-   "title": "The Next Memory Frontier // The Silicon Notebook E3",
-   "url": "https://www.youtube.com/watch?v=aOaYY1DLGqg",
-   "source": "TechTechPotato",
-   "kind": "video",
-   "thumbnail": "https://i2.ytimg.com/vi/aOaYY1DLGqg/hqdefault.jpg",
-   "description": "We're at the final day of the AI Infrastructure Summit, and the booths come down around me as I walk. You get Dnotita's vector database ASIC back from the fab, SK Hynix mocking up high bandwidth flash, Marvell showing photonics, and a 30 watt box running 120 billion parameters…",
-   "published": "2026-09-18T17:45:43Z",
-   "topics": [
-    "hbf",
-    "process",
-    "vlsi"
-   ]
   }
  ],
  "courses": [
