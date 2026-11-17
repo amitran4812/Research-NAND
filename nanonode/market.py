@@ -7,7 +7,7 @@ import logging
 
 from .common import http_get, iso, utcnow
 
-log = logging.getLogger("devicehub.market")
+log = logging.getLogger("nanonode.market")
 
 YAHOO = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}"
 STOOQ = "https://stooq.com/q/l/"

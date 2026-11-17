@@ -10,7 +10,7 @@ import yaml
 from .common import ROOT, Tagger, clean_text, http_get, iso, make_id, norm_title, parse_iso, utcnow
 from .news import fetch_google_news, page_image
 
-log = logging.getLogger("devicehub.learn")
+log = logging.getLogger("nanonode.learn")
 
 
 def parse_learn_feed(content: bytes | str, feed: dict) -> list[dict]:

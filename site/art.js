@@ -1,4 +1,4 @@
-/* Device Hub cover art: a small SVG illustration per category, used when a story
+/* Nano Node cover art: a small SVG illustration per category, used when a story
    or paper has no image of its own. Colours come from CSS (--art-*), so the art
    follows the light/dark theme. */
 (function () {

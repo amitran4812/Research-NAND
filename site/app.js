@@ -1,4 +1,4 @@
-/* Device Hub front end: loads data/*.json (written by the scheduled job) and renders pages. */
+/* Nano Node front end: loads data/*.json (written by the scheduled job) and renders pages. */
 (function () {
   "use strict";
 
@@ -72,7 +72,7 @@
   }
   function empty(msg) { return '<div class="empty">' + msg + "</div>"; }
   function noData() {
-    return empty("No data yet. The first scheduled run fills this in, or run the <b>Update Device Hub</b> workflow from the repo's Actions tab.");
+    return empty("No data yet. The first scheduled run fills this in, or run the <b>Update Nano Node</b> workflow from the repo's Actions tab.");
   }
 
   // Image or, when there is none (or it fails to load), category cover art.
@@ -105,7 +105,7 @@
   function init() {
     fetch("data/meta.json?v=" + Date.now()).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
       .then(function (meta) {
-        D.meta = meta || { topics: [], weeks: [], title: "Device Hub" };
+        D.meta = meta || { topics: [], weeks: [], title: "Nano Node" };
         return Promise.all([load("news.json"), load("papers.json"), load("market.json"), load("learn.json"), load("insights.json"), load("venues.json")]);
       })
       .then(function (r) {
@@ -281,7 +281,7 @@
     var lead = dev[0]; // newest story leads, with topic art if it has no photo
     var rest = dev.filter(function (n) { return n !== lead; });
 
-    var h = head(state.cat === "all" ? "Device Hub" : "Topic", state.cat === "all" ? "What's moving in devices today" : topicName(state.cat),
+    var h = head(state.cat === "all" ? "Nano Node" : "Topic", state.cat === "all" ? "What's moving in devices today" : topicName(state.cat),
       esc(D.meta.tagline || ""));
     if (lead) {
       var lt = primaryTopic(lead);
@@ -647,7 +647,7 @@
       '<div class="j-body"><div class="meta"><span class="src">' + esc(j.publisher) + '</span><span class="dot">' + esc(j.type) + "</span>" + (j.open_access ? '<span class="badge oa">Open access</span>' : "") + "</div>" +
       "<h3>" + ext(j.url, j.name) + (j.abbr ? ' <span class="abbr">' + esc(j.abbr) + "</span>" : "") + "</h3>" +
       (j["for"] ? '<p class="small">' + esc(j["for"]) + "</p>" : "") +
-      (n ? '<p class="small hit">' + n + " recent paper" + (n === 1 ? "" : "s") + " from here on Device Hub</p>" : "") +
+      (n ? '<p class="small hit">' + n + " recent paper" + (n === 1 ? "" : "s") + " from here on Nano Node</p>" : "") +
       '<div class="foot">' + tagsHtml({ topics: j.topics }, 3) + '<span class="links" style="margin:0">' + ext(scimago(j.name), "Check rank ↗") + ext(j.url, "Journal ↗") + "</span></div></div></article>";
   }
 

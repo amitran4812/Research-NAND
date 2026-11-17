@@ -1,4 +1,4 @@
-name: Update Device Hub
+name: Update Nano Node
 
 # Fetches news, papers, prices and learning content, writes summaries with Claude,
 # commits the data, and publishes the site to GitHub Pages.
@@ -26,7 +26,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: device-hub-update
+  group: nano-node-update
   cancel-in-progress: false
 
 jobs:
@@ -50,24 +50,24 @@ jobs:
       - name: Fetch and summarise
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          DEVICEHUB_MODEL: ${{ vars.DEVICEHUB_MODEL }}
+          NANONODE_MODEL: ${{ vars.NANONODE_MODEL || vars.DEVICEHUB_MODEL }}
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           OPENALEX_EMAIL: ${{ vars.OPENALEX_EMAIL }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
         run: |
           ARGS=""
           if [ "${{ inputs.force_insights }}" = "true" ]; then ARGS="--force-insights"; fi
-          python -m devicehub.run $ARGS
+          python -m nanonode.run $ARGS
 
       - name: Commit updated data
         run: |
-          git config user.name "device-hub-bot"
+          git config user.name "nano-node-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add site/data
           if git diff --cached --quiet; then
             echo "No data changes"
           else
-            git commit -m "Update Device Hub data ($(date -u +'%Y-%m-%d %H:%M') UTC)"
+            git commit -m "Update Nano Node data ($(date -u +'%Y-%m-%d %H:%M') UTC)"
             git push
           fi
 

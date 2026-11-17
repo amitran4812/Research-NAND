@@ -1,9 +1,9 @@
-# Device Hub configuration.
+# Nano Node configuration.
 # Everything the fetchers look for lives here, so you can tune the portal
 # without touching code. Edit, commit, and the next scheduled run picks it up.
 
 site:
-  title: Device Hub
+  title: Nano Node
   tagline: Nanoscale devices, memory & VLSI — news and research, twice a day
   # How many weeks of papers to keep in the archive shown on the Research page.
   weeks_to_keep: 12
@@ -15,7 +15,7 @@ site:
 # summaries. "search" phrases are what we send to arXiv / OpenAlex (any match).
 # "hub: ai" puts a topic on the AI Hub page instead of the device pages.
 topics:
-  # ---- Device Hub categories (shown left to right in the category bar) ----
+  # ---- Nano Node categories (shown left to right in the category bar) ----
   - id: dram
     name: DRAM & HBM
     keywords: [dram, hbm, hbm3e, hbm4, "high bandwidth memory", ddr5, ddr6, lpddr, lpddr5x, lpddr6, gddr7, "1c nm", "1-gamma", "1γ", "capacitorless", "3d dram", "vertical channel transistor", "4f2", "cxl memory", "memory cell capacitor", "2t0c", "1t1c", "buried channel array"]

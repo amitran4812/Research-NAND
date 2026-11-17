@@ -16,12 +16,12 @@ import requests
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = Path(os.environ.get("DEVICEHUB_DATA_DIR", ROOT / "site" / "data"))
-CONFIG_PATH = Path(os.environ.get("DEVICEHUB_CONFIG", ROOT / "config.yaml"))
+DATA_DIR = Path(os.environ.get("NANONODE_DATA_DIR", ROOT / "site" / "data"))
+CONFIG_PATH = Path(os.environ.get("NANONODE_CONFIG", ROOT / "config.yaml"))
 
-log = logging.getLogger("devicehub")
+log = logging.getLogger("nanonode")
 
-USER_AGENT = "DeviceHub/1.0 (+https://github.com/amitran4812/Research-NAND; research news aggregator)"
+USER_AGENT = "NanoNode/1.0 (+https://github.com/amitran4812/Research-NAND; research news aggregator)"
 
 
 def load_config(path: Path = CONFIG_PATH) -> dict:

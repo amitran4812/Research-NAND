@@ -1,4 +1,4 @@
-# Device Hub
+# Nano Node
 
 A news and research portal for nanoscale semiconductor devices, with DRAM, NAND flash and storage first, plus emerging memory (FeFET, MRAM, ReRAM), advanced logic devices (CFET, GAA), device materials, VLSI design, and an AI Hub.
 
@@ -44,7 +44,7 @@ The rules are re-applied to the whole archive on every run, so tightening `confi
 
 1. **(Optional, can be done later) Add your Claude API key.** Repo → Settings → Secrets and variables → Actions → *New repository secret*: name `ANTHROPIC_API_KEY`, value from <https://console.anthropic.com/>. See *Without the API key* below for what changes.
 2. **Turn on GitHub Pages.** Repo → Settings → Pages → *Build and deployment* → Source: **GitHub Actions**.
-3. **Run it once now.** Repo → Actions → *Update Device Hub* → *Run workflow*. After it finishes, the site is at `https://<your-username>.github.io/Research-NAND/`.
+3. **Run it once now.** Repo → Actions → *Update Nano Node* → *Run workflow*. After it finishes, the site is at `https://<your-username>.github.io/Research-NAND/`.
 
 From then on it runs at 00:30 and 12:30 UTC every day (06:00 and 18:00 IST). Change the `cron` lines in `.github/workflows/update.yml` for other times.
 
@@ -66,7 +66,7 @@ Add the key later and the next scheduled run fills in the AI parts automatically
 
 | Name | Type | Purpose |
 |---|---|---|
-| `DEVICEHUB_MODEL` | Actions *variable* | Claude model to use. Default `claude-opus-5-5`. Set `claude-sonnet-5-5` to cut cost roughly in half. |
+| `NANONODE_MODEL` | Actions *variable* | Claude model to use (the older name `DEVICEHUB_MODEL` still works). Default `claude-opus-5-5`. Set `claude-sonnet-5-5` to cut cost roughly in half. |
 | `OPENALEX_EMAIL` | Actions *variable* | Contact email sent to OpenAlex (their "polite pool", faster responses). |
 | `OPENALEX_API_KEY` | Actions *secret* | OpenAlex API key, if you have one, for higher limits. |
 | `S2_API_KEY` | Actions *secret* | Optional Semantic Scholar API key (free on request); without it the shared public rate limit applies. |
@@ -96,7 +96,7 @@ Conferences and journals for the Publish page live in [`venues.yaml`](venues.yam
 ```bash
 pip install -r requirements.txt
 export ANTHROPIC_API_KEY=...        # optional
-python -m devicehub.run              # all stages; or --only news,papers / --no-llm
+python -m nanonode.run              # all stages; or --only news,papers / --no-llm
 python -m http.server -d site 8000   # open http://localhost:8000
 python -m unittest discover -s tests # offline tests
 ```
@@ -106,7 +106,7 @@ python -m unittest discover -s tests # offline tests
 ```
 config.yaml              topics, feeds, tickers, courses
 venues.yaml              conferences and journals for the Publish page
-devicehub/
+nanonode/
   news.py                RSS + Google News fetch, tagging, de-duplication
   papers.py              arXiv + OpenAlex + Semantic Scholar fetch, relevance filter, weekly grouping
   market.py              daily share prices

@@ -11,7 +11,7 @@ import feedparser
 
 from .common import Tagger, clean_text, http_get, iso, make_id, norm_title, parse_iso, utcnow
 
-log = logging.getLogger("devicehub.news")
+log = logging.getLogger("nanonode.news")
 
 GOOGLE_NEWS = "https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
 
@@ -134,7 +134,7 @@ _OG_RE = re.compile(
 
 def page_image(url: str) -> str:
     """og:image / twitter:image of an article page ('' if none or unreachable)."""
-    resp = http_get(url, timeout=12, retries=1, headers={"User-Agent": "Mozilla/5.0 (compatible; DeviceHub/1.0)"})
+    resp = http_get(url, timeout=12, retries=1, headers={"User-Agent": "Mozilla/5.0 (compatible; NanoNode/1.0)"})
     if resp is None:
         return ""
     m = _OG_RE.search(resp.text[:200_000])
