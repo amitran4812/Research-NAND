@@ -1,6 +1,48 @@
 {
- "updated": "2026-11-17T20:11:27Z",
+ "updated": "2026-11-17T20:53:46Z",
  "items": [
+  {
+   "id": "4134d04a0fb2",
+   "title": "SK hynix to See Earnings Improve With Early HBM4 Ramp-Up ... Growth Expected in 2027: Morningstar",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9qamJSMjJrTXoxV1VmbDhWTXVsYjN1cFl3VFVhSDE5ekJJTld0V0V0T0M0OVJpeTRQYzJXSkx2U25JUWZLaERaOHY0TDVzdXZON1hSTS1mT0M?oc=5",
+   "source": "파이낸셜뉴스",
+   "source_url": "https://en.fnnews.com",
+   "published": "2026-11-17T20:29:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [
+    "dram",
+    "industry"
+   ],
+   "companies": [
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:53:38Z",
+   "section": "market",
+   "region": "international"
+  },
+  {
+   "id": "243533711901",
+   "title": "Exclusive: Samsung, SK Hynix Divide Honam Semiconductor Site North-South",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMUsxWkduNlNRdXluUmUwS1AyX3hIZ3pJci1JZldtUnEzaHBfS21sTE5rQ0xaSUxMNUQ5TnJzSU0tS1dDZF9KVjRYcWtOX2F4T04tUzhCQ25KWFhXYTBQajUwWmZ0aWg0VTJPT3ctemo0WGZFNnh2QjdPRUZZQVgyQnN2LThKYVhC?oc=5",
+   "source": "조선일보",
+   "source_url": "https://www.chosun.com",
+   "published": "2026-11-17T20:10:54Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Samsung",
+    "SK hynix"
+   ],
+   "first_seen": "2026-11-17T20:53:38Z",
+   "section": "general",
+   "region": "international"
+  },
   {
    "id": "7906cb1c5c11",
    "title": "Palantir's 148% U.S. Commercial Revenue Surge Signals AI Momentum",
@@ -154,6 +196,25 @@
    "companies": [],
    "first_seen": "2026-11-17T20:11:13Z",
    "section": "tech",
+   "region": "international"
+  },
+  {
+   "id": "84259ce8f62e",
+   "title": "Intel (NASDAQ:INTC) Technical Setup Shows Shifting Market Momentum",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOT0tRWHZuTzlldERXZ1JsdW02MW5Fakp5RF84dFlQckJMQlpidzFyMVpWR0twckk5MHdSZHlPX3d0bDRXT01BZ21tMmZPZUt2MU40aFlpd3lYcDAyYjNOY2pMWGdDMXlpNm9yRkdHRmNMbklWTDRMeUpvS0laQjBhVndVdnBmYmxSdmJuNHpleGZrY2p2cmZuOGYyYTk3S0xGcHcyNFNKdzZxd0V0ajg4Q2lBV2pxZDZq?oc=5",
+   "source": "Kalkine Media",
+   "source_url": "https://kalkinemedia.com",
+   "published": "2026-11-17T18:57:00Z",
+   "description": "",
+   "hub": "device",
+   "origin": "google",
+   "image": null,
+   "topics": [],
+   "companies": [
+    "Intel"
+   ],
+   "first_seen": "2026-11-17T20:53:38Z",
+   "section": "market",
    "region": "international"
   },
   {
@@ -316,8 +377,8 @@
     "process"
    ],
    "companies": [],
-   "first_seen": "2026-11-17T20:11:13Z",
    "img_checked": true,
+   "first_seen": "2026-11-17T20:11:13Z",
    "section": "tech",
    "region": "international"
   },
@@ -337,8 +398,8 @@
     "vlsi"
    ],
    "companies": [],
-   "first_seen": "2026-11-17T20:11:13Z",
    "img_checked": true,
+   "first_seen": "2026-11-17T20:11:13Z",
    "section": "tech",
    "region": "international"
   },
@@ -408,9 +469,9 @@
   {
    "id": "65a2ae8b387b",
    "title": "Micron, Samsung, SK Hynix Fail to Get Memory Price-Fixing Lawsuit Dismissed",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQVRtRDhTcU02TWJFaUlJZ21Fai10SEVoYnAybWlaNVVNSVpjdGxKY2NLYjhFZnYycElfS2VGajM2Szk3RFZmRVJYaDNDa0Z3TDZkREczU2dOOTVpZWNzeTZfTGVPNjNSMVBxekRKck1fVzdrZDNNcV9WNnBkVWYydjlXNDExOWRMWnFBOXlHT19CZjN6azRWenh0TlRJTHlyRzZHaGNwNlF4Mi1HQ2JILUdB?oc=5",
-   "source": "PCMag UK",
-   "source_url": "https://uk.pcmag.com",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSmtLM0EwVE5oNFVOeDU3MzVETXU0UlRHSnlBSlJqcUV6Zi1GQzJ0dGEzbzM0T3Z6Q1hvWFI1RWVKdWNsR0VsQV9YYzZUVUdfMXJOWjFrWWtDTzlDaElabmdmcDFFc0M5TDFUeTdyaGIwZHhQN2lTR1BpVHZ1MXhVLUZHdVotSXMtcVZoT0F5Ull0MV9hSmZuRU1mcDczT1A0MGxKWFhyeENQUDc5OGo5Y3hR?oc=5",
+   "source": "PCMag Australia",
+   "source_url": "https://au.pcmag.com",
    "published": "2026-11-17T17:09:16Z",
    "description": "",
    "hub": "device",
@@ -1067,8 +1128,8 @@
    "first_seen": "2026-11-17T20:11:13Z",
    "also": [
     {
-     "source": "Yonhap News Agency",
-     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5XTFRpeWZweUVVcWlkTEt4OUV3aUxkX0hSWDdRMEdBMEQ4RllzVlZ4bDIzUW4zeWN2NVh3X0djakZpVGQxbXBPeTJkVGxyNFZVMl9XWFNLLWVJUWQyMXFmZ2VOR0M0WTFfaUZ4a1lFSGk1dVpSR2Q5WEhVTDB0UlE?oc=5"
+     "source": "The Malaysian Reserve",
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWGpOSWhsdDN2b0NlREpvRThhUHBVQXVBX3BDWkVVMXJKUkJpcFdlbVJtZnhmcHdiZDdFb1BpazNJRXVKcUhMQ1VrckV1X1FiNkNiN2lucFMxY1h1eWsxMUdTcGNiR0wxdTFSSFlKOEZVUXcySnRGMkFZNGRxNXhIX2l4a25qR1IweElNWUNVelBXaTJHMW9WZU9maHdTUkJMWG5tdmE0YnVmaV9ObmxDWEZoYVViY3dqbnhrMkRLdw?oc=5"
     }
    ],
    "section": "tech",
@@ -1800,8 +1861,8 @@
     "logic-devices"
    ],
    "companies": [],
-   "first_seen": "2026-11-17T20:11:13Z",
    "img_checked": true,
+   "first_seen": "2026-11-17T20:11:13Z",
    "section": "tech",
    "region": "international"
   },
@@ -1865,8 +1926,8 @@
     "vlsi"
    ],
    "companies": [],
-   "first_seen": "2026-11-17T20:11:13Z",
    "img_checked": true,
+   "first_seen": "2026-11-17T20:11:13Z",
    "section": "tech",
    "region": "international"
   },
@@ -1901,6 +1962,12 @@
    "topics": [],
    "companies": [],
    "first_seen": "2026-11-17T20:11:13Z",
+   "also": [
+    {
+     "source": "Deccan Chronicle",
+     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOYzl0SGthOUg0c3lzMFpycG9UTlR5RkQ5eUZSRG9NWFBaTzUxR1hmbDBSUjVybldhMlJZTDNGQmp5cms0UTJ1TEdPQ3BrREdJTTNqVmlkX09uS2l3b00teGstWEJYdFAtekduTV9oMXVGOWltZ1pEYl9RQ3U5Xy1pRDRuZHgwZE5nVDNyOVJTeXliZ3k5MTdKb2ZfbEM0RDJ4akpOVGtxZDBXMUhpY2pqc2xka1NxajdaYzV3Y1cycHV0M2pXY3BFbmxaT0FzU25sUUZ5enZFYkNJQkNqWG12TEJvXzY0UGY4bDZ2WUtnRUQzRWhnWFdn0gH8AUFVX3lxTE1lRWltd0hqQ0lmaFppM3VjNHJMSnVLbGtWbkphNV83UDk0MWI1QUFJUFZnLWFlS0NLR0hxRENLSXdlUWt0WmJISkVEZHh6MWtVMVc4RGRwdTlsendnY0JDU0t5b2ZjVkVxLWxTS2VBcUZNMnBDUS01eXFfTHpOQ045RE9YZ2lSeVFNcmp2blNFd0F2bjY4cmVza1JEdTdIUTU4WlN3eE9JZ0xGanRuNWlIU20yUnlsOWw3elhJWjNYVDhLZzJYaUlBclFXTmN5MktMcy1RSlVEcFRfR1lwN2x6bl9qdmdYSDRFMl96ZkVPSFF0NmR2cXRzRU9fZg?oc=5"
+    }
+   ],
    "section": "general",
    "region": "india"
   },
@@ -4874,10 +4941,10 @@
   {
    "id": "db0ef424e05a",
    "title": "SanDisk Stock Could Have Another Big Year. Here’s My 2027 Price Prediction",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUXdhUzh6X3lUNnVsM2dUcnNVaXJQNTREUXo1Tk5vVHBLMGJJRzVNR2FGRnZGbEhpMmxsc21rblVEWHV1N2pNZVl1M0pHUEJ2YzVUcl9nSWE1ZXI4ZGNWRjhZOXdnbE1JVFg1UllaU1FIV212Szl0X19ZNGJMbUNmSnVwTmZsZFloVm1oQU4tXzBVSUF4M2JyUTlTaGE?oc=5",
-   "source": "Yahoo Finance",
-   "source_url": "https://finance.yahoo.com",
-   "published": "2026-11-16T15:33:18Z",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbnhxWW9TT2ZtLVhGRVVIWVVGcWtMY2JDZDNwSXAxWi1QbXdvYU1sRUpuVjBEY3pIREtoeWZnQlhRMVFoRkFxdFE2WUZTTXZiYzhOSjJvNVFyZkFQMzFXUm1UR3YzSEpJaEtGMm9mbzRVSnZoZTZhWHlMeTBJcEJNZkdHUEJvR1N1cld0UXVPc2ZrSXFFZEZtY1NmVXVrM3Vab2U3SWZ0cEZlbnlKdmgtQTVUbk5OOEk?oc=5",
+   "source": "24/7 Wall St.",
+   "source_url": "https://247wallst.com",
+   "published": "2026-11-16T15:33:00Z",
    "description": "",
    "hub": "device",
    "origin": "google",
