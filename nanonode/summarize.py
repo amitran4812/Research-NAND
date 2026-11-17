@@ -11,7 +11,7 @@ import logging
 import os
 from typing import Any
 
-log = logging.getLogger("devicehub.llm")
+log = logging.getLogger("nanonode.llm")
 
 DEFAULT_MODEL = "claude-opus-5-5"
 
@@ -31,7 +31,7 @@ _IDS = {"type": "array", "items": {"type": "string"}}
 
 class Summarizer:
     def __init__(self, model: str | None = None):
-        self.model = model or os.environ.get("DEVICEHUB_MODEL") or DEFAULT_MODEL
+        self.model = model or os.environ.get("NANONODE_MODEL") or os.environ.get("DEVICEHUB_MODEL") or DEFAULT_MODEL
         self.client = None
         if anthropic is None:
             log.warning("anthropic package not installed; AI summaries disabled")
@@ -89,7 +89,7 @@ class Summarizer:
         out: dict[str, str] = {}
         schema = _obj({"items": {"type": "array", "items": _obj({"id": _STR, "brief": _STR})}})
         system = (
-            "You write news briefs for Device Hub, a portal for researchers working on nanoscale "
+            "You write news briefs for Nano Node, a portal for researchers working on nanoscale "
             "semiconductor devices, DRAM, NAND flash, storage, emerging memory, VLSI and AI. "
             "For each item write a brief of one or two sentences (at most 45 words): what happened and "
             "why it matters to a device or VLSI researcher. Use only the information given; when only a "
@@ -115,7 +115,7 @@ class Summarizer:
         names = {t["id"]: t["name"] for t in topics}
         schema = _obj({"items": {"type": "array", "items": _obj({"id": _STR, "topics": _IDS})}})
         system = (
-            "You screen content for Device Hub, a portal for researchers in semiconductor devices "
+            "You screen content for Nano Node, a portal for researchers in semiconductor devices "
             "(DRAM, NAND flash, HBF high-bandwidth flash, emerging memory, transistors, materials, "
             "process, packaging, VLSI) with an AI Hub for AI research and AI applied to chips. "
             "Each item lists candidate topic ids that a keyword match suggested. Return, for every item, "
@@ -176,7 +176,7 @@ class Summarizer:
                  "AI research and industry, with emphasis on AI applied to semiconductor devices, materials, "
                  "EDA/VLSI design and AI hardware")
         system = (
-            "You are the editor of Device Hub. Write today's briefing for a nanoscale device researcher. "
+            "You are the editor of Nano Node. Write today's briefing for a nanoscale device researcher. "
             f"Focus: {focus}. 'headline' is one sentence capturing the most important development. "
             "'points' are 5-8 concise bullets (max 40 words each) synthesising the news and new research, "
             "each citing the ids of the items it draws on. 'watch' lists 2-4 short things worth following "

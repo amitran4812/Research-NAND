@@ -1,4 +1,4 @@
-/* Device Hub — red & white (light) / red & black (dark) */
+/* Nano Node — red & white (light) / red & black (dark) */
 :root {
   --red: #e00400;
   --red-strong: #a80300;
@@ -110,8 +110,18 @@ code { font-size: .9em; background: var(--bg-alt); padding: .1em .35em; border-r
   background: linear-gradient(135deg, var(--red), var(--red-strong)); color: #fff;
   box-shadow: 0 6px 16px -6px rgba(224, 4, 0, .55);
 }
-.brand-text { font-family: var(--serif); font-weight: 700; font-size: 1.65rem; letter-spacing: -.01em; }
-.brand-text em { font-style: normal; color: var(--red); }
+.brand-text {
+  font-family: "Space Grotesk", var(--sans); font-size: 1.75rem; line-height: 1; letter-spacing: -.045em;
+  display: inline-flex; align-items: baseline; gap: .14em;
+}
+.brand-text .nn-a { font-weight: 400; opacity: .78; }
+.brand-text .nn-b { font-weight: 700; }
+.brand-mark svg .nn-link { stroke: currentColor; }
+.brand-mark svg .nn-dot { fill: currentColor; }
+.brand-mark svg .nn-ring { fill: var(--brand-ring-fill, var(--red)); stroke: currentColor; }
+.brand:hover .brand-mark svg .nn-ring { animation: nn-pulse 1.2s ease-in-out infinite; transform-origin: 17.5px 6.5px; }
+@keyframes nn-pulse { 50% { transform: scale(1.18); } }
+@media (prefers-reduced-motion: reduce) { .brand:hover .brand-mark svg .nn-ring { animation: none; } }
 .nav { display: flex; gap: .35rem; flex: 1; justify-content: center; overflow-x: auto; scrollbar-width: none; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a {
@@ -497,10 +507,9 @@ table.market td.num { text-align: right; }
 /* ---- solid red header with white text --------------------------------- */
 .site-header { border-bottom: 0; box-shadow: 0 6px 20px -12px rgba(120, 2, 0, .6); }
 .site-header .brand, .site-header .brand-text { color: #fff; }
-.site-header .brand-text em { color: #fff; opacity: .82; }
+.site-header .brand-text .nn-a { color: #fff; opacity: .8; }
 .site-header .brand-mark { background: #fff; color: var(--header-bg); box-shadow: 0 6px 16px -8px rgba(0, 0, 0, .35); }
-.site-header .brand-mark svg rect, .site-header .brand-mark svg path { stroke: #e00400; }
-.site-header .brand-mark svg rect:last-child { fill: #e00400; stroke: none; }
+.site-header .brand-mark { color: #e00400; --brand-ring-fill: #fff; }
 .site-header .nav a { color: rgba(255, 255, 255, .82); }
 .site-header .nav a:hover, .site-header .nav a.active { color: #fff; }
 .site-header .nav a.active::after { background: #fff; }

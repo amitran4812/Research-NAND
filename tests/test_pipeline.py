@@ -57,26 +57,26 @@ def fake_get(url, params=None, **_):
 class PipelineTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
-        os.environ["DEVICEHUB_DATA_DIR"] = self.tmp.name
+        os.environ["NANONODE_DATA_DIR"] = self.tmp.name
         os.environ.pop("ANTHROPIC_API_KEY", None)
         import importlib
 
-        import devicehub.common as common
+        import nanonode.common as common
         importlib.reload(common)
         for mod in ("news", "papers", "market", "learn", "run"):
-            importlib.reload(importlib.import_module(f"devicehub.{mod}"))
+            importlib.reload(importlib.import_module(f"nanonode.{mod}"))
         self.data = Path(self.tmp.name)
 
     def tearDown(self):
         self.tmp.cleanup()
 
     def _run(self, *args):
-        from devicehub import learn, market, news, papers, run
+        from nanonode import learn, market, news, papers, run
         with mock.patch.object(news, "http_get", fake_get), \
              mock.patch.object(papers, "http_get", fake_get), \
              mock.patch.object(market, "http_get", fake_get), \
              mock.patch.object(learn, "http_get", fake_get), \
-             mock.patch("devicehub.papers.time.sleep"):
+             mock.patch("nanonode.papers.time.sleep"):
             return run.main(list(args))
 
     def load(self, name):
@@ -153,7 +153,7 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(mu["change_pct"], 10.0)
 
         meta = self.load("meta.json")
-        self.assertEqual(meta["title"], "Device Hub")
+        self.assertEqual(meta["title"], "Nano Node")
         self.assertFalse(meta["llm"]["enabled"])
         self.assertTrue(meta["weeks"])
 
@@ -168,7 +168,7 @@ class PipelineTest(unittest.TestCase):
 
 class ImageTest(unittest.TestCase):
     def test_og_image_parsing(self):
-        from devicehub import news
+        from nanonode import news
         page = '<html><head><meta content="/img/a.jpg" property="og:image"></head></html>'
         with mock.patch.object(news, "http_get", lambda url, **kw: FakeHtml(page, "https://ex.com/story")):
             self.assertEqual(news.page_image("https://ex.com/story"), "https://ex.com/img/a.jpg")
@@ -180,8 +180,8 @@ class ImageTest(unittest.TestCase):
 
 class SectionTest(unittest.TestCase):
     def test_classify(self):
-        from devicehub.common import load_config
-        from devicehub.news import classify_section
+        from nanonode.common import load_config
+        from nanonode.news import classify_section
         cfg = load_config()
         self.assertEqual(classify_section({"title": "SK hynix unveils 321-layer NAND with new architecture"}, cfg), "tech")
         self.assertEqual(classify_section({"title": "Micron revenue jumps as DRAM prices rise; analysts raise outlook"}, cfg), "market")
@@ -189,8 +189,8 @@ class SectionTest(unittest.TestCase):
         self.assertEqual(classify_section({"title": "5 cheaper ways to play games"}, cfg), "general")
 
     def test_region(self):
-        from devicehub.common import load_config
-        from devicehub.news import classify_region
+        from nanonode.common import load_config
+        from nanonode.news import classify_region
         cfg = load_config()
         self.assertEqual(classify_region({"title": "Tata Electronics starts trial runs at Dholera fab", "source": "Reuters"}, cfg), "india")
         self.assertEqual(classify_region({"title": "Micron expands HBM output", "source": "The Economic Times"}, cfg), "india")
@@ -200,7 +200,7 @@ class SectionTest(unittest.TestCase):
 
 class TaggerTest(unittest.TestCase):
     def test_whole_word_matching(self):
-        from devicehub.common import Tagger, load_config
+        from nanonode.common import Tagger, load_config
         t = Tagger(load_config())
         self.assertNotIn("emerging-memory", t.topics_for("Pcmag reviews the newest laptop"))
         self.assertIn("logic-devices", t.topics_for("imec shows CFET with backside power"))
@@ -214,17 +214,17 @@ class RelevanceTest(unittest.TestCase):
     """Items are judged by their abstract / description, not a bare keyword hit."""
 
     def setUp(self):
-        from devicehub.common import Tagger, load_config
+        from nanonode.common import Tagger, load_config
         self.cfg = load_config()
         self.t = Tagger(self.cfg)
 
     def news(self, title, desc="", hub="device", origin="google"):
-        from devicehub import news
+        from nanonode import news
         it = {"id": "x", "title": title, "description": desc, "hub": hub, "origin": origin}
         return news.tag_and_filter([it], self.t)
 
     def paper(self, title, abstract, topic, field=None):
-        from devicehub import papers
+        from nanonode import papers
         hub = {t["id"]: t["hub"] for t in self.cfg["topics"]}[topic]
         p = {"id": "p", "title": title, "abstract": abstract, "hub": hub, "search_topic": topic, "field": field}
         return papers.paper_topics(p, self.t, self.cfg)
@@ -265,7 +265,7 @@ class RelevanceTest(unittest.TestCase):
                                               "Graphene edge contacts lower the contact resistance of MoS2 field-effect transistors.", "materials"))
 
     def test_core_journal_paper_without_abstract_is_judged_by_title(self):
-        from devicehub import papers
+        from nanonode import papers
         p = {"id": "p", "title": "Charge trap layer engineering for 3D NAND", "abstract": "", "hub": "device",
              "search_topic": None, "trusted_venue": True}
         self.assertIn("nand", papers.paper_topics(p, self.t, self.cfg))
@@ -279,7 +279,7 @@ class RelevanceTest(unittest.TestCase):
 
 class DedupeTest(unittest.TestCase):
     def setUp(self):
-        from devicehub.common import Tagger, load_config
+        from nanonode.common import Tagger, load_config
         self.t = Tagger(load_config())
 
     def item(self, i, title, source, url=None, origin="google", hours=0, **kw):
@@ -289,7 +289,7 @@ class DedupeTest(unittest.TestCase):
                     published=when.isoformat().replace("+00:00", "Z"), topics=[], companies=[], **kw)
 
     def run_dedupe(self, items):
-        from devicehub import news
+        from nanonode import news
         return news.dedupe(items, self.t)
 
     def test_same_story_from_several_outlets_is_shown_once(self):
@@ -342,7 +342,7 @@ class SummarizerTest(unittest.TestCase):
     def test_structured_output_is_parsed_and_wired(self):
         from types import SimpleNamespace
 
-        from devicehub.summarize import Summarizer
+        from nanonode.summarize import Summarizer
         s = Summarizer()
         calls = []
 
@@ -363,7 +363,7 @@ class SummarizerTest(unittest.TestCase):
     def test_relevance_check_only_narrows_candidates(self):
         from types import SimpleNamespace
 
-        from devicehub.summarize import Summarizer
+        from nanonode.summarize import Summarizer
         s = Summarizer()
         body = {"items": [{"id": "a", "topics": []}, {"id": "b", "topics": ["hbf", "dram"]}]}
         s.client = SimpleNamespace(beta=SimpleNamespace(messages=SimpleNamespace(create=lambda **kw: SimpleNamespace(
@@ -376,7 +376,7 @@ class SummarizerTest(unittest.TestCase):
     def test_refusal_returns_none(self):
         from types import SimpleNamespace
 
-        from devicehub.summarize import Summarizer
+        from nanonode.summarize import Summarizer
         s = Summarizer()
         s.client = SimpleNamespace(beta=SimpleNamespace(messages=SimpleNamespace(
             create=lambda **kw: SimpleNamespace(stop_reason="refusal", stop_details=None, content=[]))))

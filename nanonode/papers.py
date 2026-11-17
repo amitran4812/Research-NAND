@@ -22,7 +22,7 @@ import feedparser
 
 from .common import Tagger, clean_text, http_get, iso, make_id, norm_title, parse_iso, utcnow, week_key
 
-log = logging.getLogger("devicehub.papers")
+log = logging.getLogger("nanonode.papers")
 
 ARXIV_API = "http://export.arxiv.org/api/query"
 OPENALEX_API = "https://api.openalex.org/works"

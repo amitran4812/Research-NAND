@@ -1,9 +1,9 @@
-"""Device Hub pipeline: fetch -> merge with archive -> summarise -> write site/data/*.json
+"""Nano Node pipeline: fetch -> merge with archive -> summarise -> write site/data/*.json
 
 Usage:
-    python -m devicehub.run                 # everything (what the scheduled job runs)
-    python -m devicehub.run --only news     # just one stage (news, papers, market, learn, insights)
-    python -m devicehub.run --no-llm        # skip Claude calls
+    python -m nanonode.run                 # everything (what the scheduled job runs)
+    python -m nanonode.run --only news     # just one stage (news, papers, market, learn, insights)
+    python -m nanonode.run --no-llm        # skip Claude calls
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ from . import learn, market, news, papers
 from .common import ROOT, Tagger, iso, load_config, parse_iso, read_json, utcnow, week_label, write_json
 from .summarize import Summarizer
 
-log = logging.getLogger("devicehub")
+log = logging.getLogger("nanonode")
 
 STAGES = ("news", "papers", "market", "learn", "insights")
 MAX_NEW_BRIEFS = 160

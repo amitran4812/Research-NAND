@@ -7,7 +7,7 @@
 #   level:    Beginner | Intermediate | Advanced (a guide, not a rule)
 #   provider: NPTEL | MIT OpenCourseWare | nanoHUB (Purdue) | Coursera (free to audit) |
 #             edX (free to audit) | YouTube (university lecture recordings)
-#   topics:   Device Hub topic ids, so the topic bar can narrow the list
+#   topics:   Nano Node topic ids, so the topic bar can narrow the list
 
 subjects:
   devices:

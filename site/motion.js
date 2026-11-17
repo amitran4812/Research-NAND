@@ -1,4 +1,4 @@
-/* Device Hub motion: scroll reveals, card tilt, header glow + sliding menu underline, counting numbers.
+/* Nano Node motion: scroll reveals, card tilt, header glow + sliding menu underline, counting numbers.
    Runs after app.js and only enhances what it renders. Everything is skipped when the visitor
    has asked their device to reduce motion. */
 (function () {
