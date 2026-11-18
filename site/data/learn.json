@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T21:29:56Z",
+ "updated": "2026-11-18T08:02:26Z",
  "items": [
   {
    "id": "15f76ef19f4f",
@@ -9,7 +9,7 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-17T07:31:52Z",
+   "published": "2026-11-18T06:11:55Z",
    "topics": [
     "nand"
    ]
@@ -34,6 +34,17 @@
    "thumbnail": null,
    "description": "",
    "published": "2026-11-16T11:17:57Z",
+   "topics": []
+  },
+  {
+   "id": "5f6d8f662bdf",
+   "title": "K-Atomic Force Microscope Breaks Through Speed and Price Barriers… Opens New Era in Semiconductor Inspection",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE84Y0Q1TzQzUkR3SnlCT0Vmb1lkczl6VlpxVFlUbkd0SDRlZFduSUZ5TnhHZzZDT0k2Z3JmRkR2WXQzSlVvT2VjUlEzQVFJbURTbFBCS09KYlQ0bXZqRll6T25RMmFlcWtlVHhRc0tn?oc=5",
+   "source": "머니투데이",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-15T23:10:00Z",
    "topics": []
   },
   {
@@ -221,6 +232,17 @@
    "topics": []
   },
   {
+   "id": "e137cee31fa0",
+   "title": "Could the scandal at Nvidia rattle Korea’s semiconductor industry?",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBZVnZoUmFlVmJMSFNxaEZLdVRubDVqM2ttUzR3YlRUT0ppREs4VWZYcWZsZmwxTE5TSEtmVGJOU2ZUdWpuTlZpTEdPd2pTZ3I2RlFicVBuT1pJR3Bxd3FOZzAwTklMTlpIcE5EVm1ndUVaZ00wQ2EtNUhrSQ?oc=5",
+   "source": "Hankyoreh : English Edition",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-10T03:12:00Z",
+   "topics": []
+  },
+  {
    "id": "0432d102f48e",
    "title": "Analysts say these chip stocks are bargains. Is it time to buy?",
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVFNGQmllQzZ6SE96VUpPTnIya1h1Y3B4QlpKdkFoeW95SnBPZkZydU9XckxOcFk5d0ZsYWgtNTFJOFkzZ1RJa21yc1VVRnluUXJIcmdsajhRN2xESTlISEgxNlE4QU1xS2NPRmpueGxZaDIzQVlxbms5WVE5S3ZmdVBRUWppTGJtZ1psTGNkYk5GYU5sVnVQUEhqc2xKOEc2Nzgyckpnaw?oc=5",
@@ -229,17 +251,6 @@
    "thumbnail": null,
    "description": "",
    "published": "2026-11-09T20:48:00Z",
-   "topics": []
-  },
-  {
-   "id": "c3cf39ae4286",
-   "title": "Taiwan Semiconductor Wants to Enter Into Advanced Memory Production",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZUw0clBIVDBoUGVwWXYwSUFPVV82dFgwMGZYMGhlVDkzVE5BSjVVNFQzdlNqajQ3T3JlV3FlUEJuc1dRYW4zeUlkVG5ycXZjM0dSMHRIZW1YWGZyRGlMcUNhRF9CSGJ1SDVLSGhreGFyZGM3TEMzYU9CbXBYaGt4a0ZhOWtMdVFGcVVhQnZXVU9HaWNuMzI2eE1TbWlSaWFOVTVzNg?oc=5",
-   "source": "Yahoo Finance",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-09T16:35:06Z",
    "topics": []
   },
   {
@@ -254,6 +265,17 @@
    "topics": []
   },
   {
+   "id": "c3cf39ae4286",
+   "title": "Taiwan Semiconductor Wants to Enter Into Advanced Memory Production",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZUw0clBIVDBoUGVwWXYwSUFPVV82dFgwMGZYMGhlVDkzVE5BSjVVNFQzdlNqajQ3T3JlV3FlUEJuc1dRYW4zeUlkVG5ycXZjM0dSMHRIZW1YWGZyRGlMcUNhRF9CSGJ1SDVLSGhreGFyZGM3TEMzYU9CbXBYaGt4a0ZhOWtMdVFGcVVhQnZXVU9HaWNuMzI2eE1TbWlSaWFOVTVzNg?oc=5",
+   "source": "Yahoo Finance",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-09T08:00:00Z",
+   "topics": []
+  },
+  {
    "id": "1783971b31ae",
    "title": "Taiwan chipmaker CEO warns memory price rises are unsustainable",
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNb29sUkJ2WGkxNVYzZUVoclZkS2h2V3Q4S3UtMmdHTVNBb3U2eEFTRkR2Yjg1Nm1IQ25EMkxBZXlmNW9LUUstNkNTcHVUOGl3UEV5QTZ1VlZJUWFDcGdhRWtKZ0hKRnNMZml2eGZKMFVlUGEzRFdXSDEybVZvb0EwUFlUV1lGRVJXYWtGc1Nya1FQby1VYXctT2V3MVhMU0lZM3dLeUNMLUNsd0xqRVJRZEV3?oc=5",
@@ -261,7 +283,7 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-09T02:26:00Z",
+   "published": "2026-11-09T08:00:00Z",
    "topics": []
   },
   {

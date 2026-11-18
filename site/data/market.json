@@ -1,157 +1,157 @@
 {
- "updated": "2026-11-17T08:25:03Z",
+ "updated": "2026-11-18T08:02:08Z",
  "quotes": [
   {
    "symbol": "MU",
    "name": "Micron",
-   "price": 719.02,
-   "change_pct": -7.62,
+   "price": 712.42,
+   "change_pct": -0.92,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:02Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "005930.KS",
    "name": "Samsung",
-   "price": 190300.0,
-   "change_pct": -3.3,
+   "price": 194700.0,
+   "change_pct": 2.31,
    "currency": "KRW",
-   "as_of": "2026-11-17T08:25:02Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "000660.KS",
    "name": "SK hynix",
-   "price": 1098000.0,
-   "change_pct": -1.96,
+   "price": 1144000.0,
+   "change_pct": 4.19,
    "currency": "KRW",
-   "as_of": "2026-11-17T08:25:02Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "285A.T",
    "name": "Kioxia",
-   "price": 7966.0,
-   "change_pct": -5.08,
+   "price": 8025.0,
+   "change_pct": 0.74,
    "currency": "JPY",
-   "as_of": "2026-11-17T08:25:02Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "SNDK",
    "name": "Sandisk",
-   "price": 809.11,
-   "change_pct": -8.58,
+   "price": 797.24,
+   "change_pct": -1.47,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:02Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "WDC",
    "name": "Western Digital",
-   "price": 280.93,
-   "change_pct": -4.98,
+   "price": 283.33,
+   "change_pct": 0.85,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:02Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "STX",
    "name": "Seagate",
-   "price": 499.0,
-   "change_pct": -5.54,
+   "price": 504.4,
+   "change_pct": 1.08,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:02Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "TSM",
    "name": "TSMC",
-   "price": 373.45,
-   "change_pct": -6.34,
+   "price": 359.69,
+   "change_pct": -3.68,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "INTC",
    "name": "Intel",
-   "price": 55.47,
-   "change_pct": -7.02,
+   "price": 55.17,
+   "change_pct": -0.54,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "NVDA",
    "name": "Nvidia",
-   "price": 156.14,
-   "change_pct": -4.12,
+   "price": 155.46,
+   "change_pct": -0.44,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "AMD",
    "name": "AMD",
-   "price": 504.28,
-   "change_pct": -5.58,
+   "price": 503.41,
+   "change_pct": -0.17,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:07Z"
   },
   {
    "symbol": "ASML",
    "name": "ASML",
-   "price": 1406.79,
-   "change_pct": -5.91,
+   "price": 1383.11,
+   "change_pct": -1.68,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:08Z"
   },
   {
    "symbol": "AMAT",
    "name": "Applied Materials",
-   "price": 350.25,
-   "change_pct": -5.47,
+   "price": 349.23,
+   "change_pct": -0.29,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:08Z"
   },
   {
    "symbol": "LRCX",
    "name": "Lam Research",
-   "price": 210.83,
-   "change_pct": -6.68,
+   "price": 210.69,
+   "change_pct": -0.07,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:08Z"
   },
   {
    "symbol": "KLAC",
    "name": "KLA",
-   "price": 143.96,
-   "change_pct": -5.49,
+   "price": 144.56,
+   "change_pct": 0.42,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:08Z"
   },
   {
    "symbol": "8035.T",
    "name": "Tokyo Electron",
-   "price": 8657.0,
-   "change_pct": -1.56,
+   "price": 8699.0,
+   "change_pct": 0.49,
    "currency": "JPY",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:08Z"
   },
   {
    "symbol": "SNPS",
    "name": "Synopsys",
-   "price": 441.33,
-   "change_pct": -3.05,
+   "price": 435.51,
+   "change_pct": -1.32,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:08Z"
   },
   {
    "symbol": "CDNS",
    "name": "Cadence",
-   "price": 309.43,
-   "change_pct": -4.2,
+   "price": 306.97,
+   "change_pct": -0.8,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:08Z"
   },
   {
    "symbol": "^SOX",
    "name": "PHLX Semi Index",
-   "price": 9610.65,
-   "change_pct": -5.28,
+   "price": 9642.88,
+   "change_pct": 0.34,
    "currency": "USD",
-   "as_of": "2026-11-17T08:25:03Z"
+   "as_of": "2026-11-18T08:02:08Z"
   }
  ]
 }
