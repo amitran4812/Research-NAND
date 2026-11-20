@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T07:45:13Z",
+ "updated": "2026-11-20T20:51:36Z",
  "items": [
   {
    "id": "847599321dda",
@@ -46,7 +46,7 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-16T11:17:57Z",
+   "published": "2026-11-16T10:45:01Z",
    "topics": []
   },
   {
@@ -267,6 +267,17 @@
    "topics": []
   },
   {
+   "id": "c3cf39ae4286",
+   "title": "Taiwan Semiconductor Wants to Enter Into Advanced Memory Production",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZUw0clBIVDBoUGVwWXYwSUFPVV82dFgwMGZYMGhlVDkzVE5BSjVVNFQzdlNqajQ3T3JlV3FlUEJuc1dRYW4zeUlkVG5ycXZjM0dSMHRIZW1YWGZyRGlMcUNhRF9CSGJ1SDVLSGhreGFyZGM3TEMzYU9CbXBYaGt4a0ZhOWtMdVFGcVVhQnZXVU9HaWNuMzI2eE1TbWlSaWFOVTVzNg?oc=5",
+   "source": "Yahoo Finance",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-09T08:00:00Z",
+   "topics": []
+  },
+  {
    "id": "1783971b31ae",
    "title": "Taiwan chipmaker CEO warns memory price rises are unsustainable",
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNb29sUkJ2WGkxNVYzZUVoclZkS2h2V3Q4S3UtMmdHTVNBb3U2eEFTRkR2Yjg1Nm1IQ25EMkxBZXlmNW9LUUstNkNTcHVUOGl3UEV5QTZ1VlZJUWFDcGdhRWtKZ0hKRnNMZml2eGZKMFVlUGEzRFdXSDEybVZvb0EwUFlUV1lGRVJXYWtGc1Nya1FQby1VYXctT2V3MVhMU0lZM3dLeUNMLUNsd0xqRVJRZEV3?oc=5",
@@ -282,17 +293,6 @@
    "title": "Analysts say these chip stocks are bargains. Is it time to buy?",
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVFNGQmllQzZ6SE96VUpPTnIya1h1Y3B4QlpKdkFoeW95SnBPZkZydU9XckxOcFk5d0ZsYWgtNTFJOFkzZ1RJa21yc1VVRnluUXJIcmdsajhRN2xESTlISEgxNlE4QU1xS2NPRmpueGxZaDIzQVlxbms5WVE5S3ZmdVBRUWppTGJtZ1psTGNkYk5GYU5sVnVQUEhqc2xKOEc2Nzgyckpnaw?oc=5",
    "source": "MarketWatch",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-09T08:00:00Z",
-   "topics": []
-  },
-  {
-   "id": "c3cf39ae4286",
-   "title": "Taiwan Semiconductor Wants to Enter Into Advanced Memory Production",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZUw0clBIVDBoUGVwWXYwSUFPVV82dFgwMGZYMGhlVDkzVE5BSjVVNFQzdlNqajQ3T3JlV3FlUEJuc1dRYW4zeUlkVG5ycXZjM0dSMHRIZW1YWGZyRGlMcUNhRF9CSGJ1SDVLSGhreGFyZGM3TEMzYU9CbXBYaGt4a0ZhOWtMdVFGcVVhQnZXVU9HaWNuMzI2eE1TbWlSaWFOVTVzNg?oc=5",
-   "source": "Yahoo Finance",
    "kind": "interview",
    "thumbnail": null,
    "description": "",
@@ -965,17 +965,6 @@
    "thumbnail": null,
    "description": "In gory detail: reliability, performance, support, pricing—and, of course, security—in our most thorough analysis of GPU cloud providers globally.",
    "published": "2026-09-23T21:20:29Z",
-   "topics": []
-  },
-  {
-   "id": "db4ba69b7898",
-   "title": "Six Chips Fighting for the Edge // The AI Hardware Podcast S2E10",
-   "url": "https://www.youtube.com/watch?v=K_0xp41Q_jk",
-   "source": "TechTechPotato",
-   "kind": "video",
-   "thumbnail": "https://i4.ytimg.com/vi/K_0xp41Q_jk/hqdefault.jpg",
-   "description": "Edge AI doesn't need a data center - it's already running in retail stores, laptops, and microcontrollers all around you. In part two of this edge AI deep-dive, Ian Cutress and Sally Ward-Foxton go off-script to talk through seven chip companies - Axelera AI, Kalray, Kinara,…",
-   "published": "2026-09-21T13:00:11Z",
    "topics": []
   }
  ],
