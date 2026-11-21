@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T20:51:36Z",
+ "updated": "2026-11-21T07:40:33Z",
  "items": [
   {
    "id": "847599321dda",
@@ -120,7 +120,7 @@
   {
    "id": "2f88f8937300",
    "title": "Instead Of Lowering GPU Prices, Former NVIDIA CEO Jensen Huang Reportedly Financed AI Startups To Absorb Excess Silicon, Shattering The Shortage Perception",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRHY5LWkyLWJMemRpb19USWRiZkdQSWJOVTJFQUMyZHNVdEhBaGJXWXZzajR2ZTB4c0o5WEZnczFuSEFIZVVSX3NYQzRQM095OFIzTTBHZFg0MlZTNTlHSVN3Yk1XbDNMckphYlhvSkFHTG10ZXR2ZmRPNDN4ZTE5SnZxa9IBiAFBVV95cUxPaUgzWktjM2NjcFdMNHdaR2NRd05lbkhyMmhKbk9tS3JFdzJyZEkwREhMd191bll5WkdvOUlGUU1ZbjRid2pzTGJoQkpjYmJrbkxXVlNfMlhabGxaVmpHS1ZjUDJ6ZWFVUkI1aUFNbkprcDh4aVBWOWtiSGtzUzFpLTNDZnRlWE5u?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRHY5LWkyLWJMemRpb19USWRiZkdQSWJOVTJFQUMyZHNVdEhBaGJXWXZzajR2ZTB4c0o5WEZnczFuSEFIZVVSX3NYQzRQM095OFIzTTBHZFg0MlZTNTlHSVN3Yk1XbDNMckphYlhvSkFHTG10ZXR2ZmRPNDN4ZTE5SnZxaw?oc=5",
    "source": "Wccftech",
    "kind": "interview",
    "thumbnail": null,
@@ -473,6 +473,17 @@
    ]
   },
   {
+   "id": "cd6c87117a39",
+   "title": "Arm & SoftBank: Part 2 - Masa’s gifts arrive",
+   "url": "https://thechipletter.substack.com/p/arm-and-softbank-part-2-masas-gifts",
+   "source": "The Chip Letter",
+   "kind": "article",
+   "thumbnail": "https://substackcdn.com/image/fetch/$s_!SMgm!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8794ea26-f79b-484a-9450-d06277ebee4a_1956x2048.jpeg",
+   "description": "Part 2 of an extended discussion, covering what happened following the Softbank takeover of Arm in 2016",
+   "published": "2026-11-03T15:34:59Z",
+   "topics": []
+  },
+  {
    "id": "7f789c209022",
    "title": "[News] Apple Sees Holiday-Quarter Margins at 45%–46% as Memory Costs Soar; Inventory Jumps 154% Amid Stockpiling",
    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPWEdTRTBIR3J4Nmtyb2oxNlhrUDNOaVRVUkt1Rjc0QXk2XzZkUVcyYncyRmRuUFhTTVZZVzNsSjk2NjJxWTFZV0EyLUNMRXUyMm1rV3RMN0gtcDA3bWZoTzgwYWFZcGJna1p1V0RReG15azcxOGYwdklQQy02UFR4blFPS1NYZUp1VVYydkNfZzhBTkZQc2JoVXJVamIyQlRPa3F6VjRrNUpqZXNuNzNJN0IxaUJ5YVV6WHhTcFh3SmQzWFFMVVF4TXJGMEF3VXNKa1NBZmJBbEVQbGpmNmpZZl90X3o?oc=5",
@@ -783,6 +794,17 @@
    "topics": []
   },
   {
+   "id": "de553a58bd0f",
+   "title": "Pat Gelsinger : Why This is the Best Time to Build Hardware",
+   "url": "https://thechipletter.substack.com/p/pat-gelsinger-why-this-is-the-best",
+   "source": "The Chip Letter",
+   "kind": "article",
+   "thumbnail": "https://substackcdn.com/image/youtube/w_728,c_limit/1Q_7yU7FZ1k",
+   "description": "From the A16Z podcast",
+   "published": "2026-10-13T00:01:06Z",
+   "topics": []
+  },
+  {
    "id": "fe0de0ceb8e2",
    "title": "Agentic AI and Why Everyone Wants CPUs Again",
    "url": "https://www.youtube.com/watch?v=Q_QVlJkyaWc",
@@ -931,6 +953,17 @@
    "topics": [
     "logic-devices"
    ]
+  },
+  {
+   "id": "dee396c1ab68",
+   "title": "Arm & SoftBank: Part 1- Masa comes calling, bearing gifts",
+   "url": "https://thechipletter.substack.com/p/arm-and-softbank-part-1-masa-comes",
+   "source": "The Chip Letter",
+   "kind": "article",
+   "thumbnail": "https://substackcdn.com/image/fetch/$s_!JoMe!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96c40782-7f80-4def-a6fd-cfc14e83230e_2047x1365.jpeg",
+   "description": "Part 1 of an extended discussion, covering the Softbank takeover of Arm in 2016",
+   "published": "2026-09-25T22:30:58Z",
+   "topics": []
   },
   {
    "id": "b303ff07966b",
