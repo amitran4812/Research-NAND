@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T07:22:08Z",
+ "updated": "2026-11-23T08:10:54Z",
  "quotes": [
   {
    "symbol": "MU",
@@ -7,23 +7,23 @@
    "price": 594.51,
    "change_pct": -13.89,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:52Z"
   },
   {
    "symbol": "005930.KS",
    "name": "Samsung",
-   "price": 183100.0,
-   "change_pct": -7.01,
+   "price": 177500.0,
+   "change_pct": -3.06,
    "currency": "KRW",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:52Z"
   },
   {
    "symbol": "000660.KS",
    "name": "SK hynix",
-   "price": 1113000.0,
-   "change_pct": -5.92,
+   "price": 1085000.0,
+   "change_pct": -2.52,
    "currency": "KRW",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "285A.T",
@@ -31,7 +31,7 @@
    "price": 7307.0,
    "change_pct": -11.66,
    "currency": "JPY",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "SNDK",
@@ -39,7 +39,7 @@
    "price": 79.24,
    "change_pct": -18.33,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "WDC",
@@ -47,7 +47,7 @@
    "price": 261.11,
    "change_pct": -12.02,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "STX",
@@ -55,7 +55,7 @@
    "price": 457.01,
    "change_pct": -12.35,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "TSM",
@@ -63,7 +63,7 @@
    "price": 318.71,
    "change_pct": -9.48,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "INTC",
@@ -71,7 +71,7 @@
    "price": 51.28,
    "change_pct": -7.97,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:07Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "NVDA",
@@ -79,7 +79,7 @@
    "price": 125.53,
    "change_pct": -14.01,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "AMD",
@@ -87,7 +87,7 @@
    "price": 424.39,
    "change_pct": -13.25,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "ASML",
@@ -95,7 +95,7 @@
    "price": 1266.22,
    "change_pct": -6.63,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "AMAT",
@@ -103,7 +103,7 @@
    "price": 302.63,
    "change_pct": -10.71,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "LRCX",
@@ -111,7 +111,7 @@
    "price": 183.27,
    "change_pct": -10.02,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:53Z"
   },
   {
    "symbol": "KLAC",
@@ -119,7 +119,7 @@
    "price": 126.87,
    "change_pct": -10.33,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:54Z"
   },
   {
    "symbol": "8035.T",
@@ -127,7 +127,7 @@
    "price": 8309.0,
    "change_pct": -7.06,
    "currency": "JPY",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:54Z"
   },
   {
    "symbol": "SNPS",
@@ -135,7 +135,7 @@
    "price": 396.17,
    "change_pct": -8.06,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:54Z"
   },
   {
    "symbol": "CDNS",
@@ -143,7 +143,7 @@
    "price": 281.58,
    "change_pct": -7.64,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:54Z"
   },
   {
    "symbol": "^SOX",
@@ -151,7 +151,7 @@
    "price": 8408.59,
    "change_pct": -10.73,
    "currency": "USD",
-   "as_of": "2026-11-22T07:22:08Z"
+   "as_of": "2026-11-23T08:10:54Z"
   }
  ]
 }
