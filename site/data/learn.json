@@ -1,6 +1,17 @@
 {
- "updated": "2026-11-24T00:27:55Z",
+ "updated": "2026-11-24T10:27:53Z",
  "items": [
+  {
+   "id": "611a925b2d14",
+   "title": "Nikkei Asia Forum 'The Global Chip Game: Our predictions for 2027'",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPeHdsSVNuYTNMLWpEUmRRa2I0cEI4V3FzcTNJdGtoMW1FdWdYR05QMFN3LXRaS3hhVFhaZFRFMzhQQ2dmU1hOSDhYTUU0SVEzVDIzM0swUzNnSFJScFZTMFRtU3h5R3BCTktEZmpaZlV3SmRoVzMzeE1EX0VfUU9sUHRXUkJWanhIUXAxUGhTZVo2dVRUSDBqSzVfcmdpeTlHV1ZEX09DaDMwNTQ?oc=5",
+   "source": "Nikkei Asia",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-24T00:10:00Z",
+   "topics": []
+  },
   {
    "id": "a65f39e16f52",
    "title": "Nikkei Asia webinar 'The Global Chip Game: Our predictions for 2027'",
@@ -20,7 +31,7 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-23T19:56:23Z",
+   "published": "2026-11-23T19:58:10Z",
    "topics": []
   },
   {
@@ -56,6 +67,17 @@
    "thumbnail": null,
    "description": "",
    "published": "2026-11-22T06:37:02Z",
+   "topics": []
+  },
+  {
+   "id": "cdb60c2cf82c",
+   "title": "Samsung’s Memory Production Reportedly Almost Fully Booked Through 2029, As Customers Seek Supply Deals Until 2031",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMk5HdzNSUk5OM24wZlVCZGR1UmxhZjlJX3d5b0FjQ3lCM1p6dWpnMXdWelNKay02YzBTOVpudEZhSDZoMGt0bEE5UVVPTGMxcF9VekhDZm1RUG5vM0I5SER0RVVMd2UybWZfZTRhcTBWVnE4TlFNVjI4eGdJMTlLU3V3YTVNblkxS3RXVDRTMjFJTVg4ZzJQd1Q5TlhieWJjWjY5Q0pQWU5NeWs2NkxkWUZNTlh0LWxNWUNtWUFVZzNxczFMSmdRSC0yd1J3VVnSAdQBQVVfeXFMUDZRS1BSd1RIaTNvT05Ob3F0Y25mZC1aa3luUTltUXhTcnV2T3dMWnhVUUF2M1EtNVN4NkdHMFFuQlRQcXJnOUYwUEdMdGx1dVdpM2ZKWWhzUnpJQ3ZOU2x2b0c0RWE5UFI1ZG1zREdRUEppVGhzUzctVDVVeExtLUV6bHpBU1hCSExIdmJNVGhkYlVxUHE2VFRFdzJFeFI1SzBudklfME5RbWo4UVFoSWpuR0VXUXpQdEFyTFZDMlFXLWNqTmJKMXh4WlM1THVVQU9zVXc?oc=5",
+   "source": "Wccftech",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-21T12:34:12Z",
    "topics": []
   },
   {
@@ -142,19 +164,6 @@
    "topics": []
   },
   {
-   "id": "9815224a2772",
-   "title": "Even If Nvidia Stumbles, HBM Won't — Why Samsung and SK Hynix Are Smiling",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9nMmdDdzJtU3BiWGRQV2xpWlhSZmxXUFhUQ2tkZ0hOb0NUX0FGcWVoM0ZDb2MtcHlHeDZzVFV5UEVnZ1FyVDhQYlpGOW9lbndPS2FlX0pEd1RobHhuU1hZNTFmSWJYNVpEbGNmNkx3S0JtY1NvakE?oc=5",
-   "source": "BigGo Finance",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-15T18:05:00Z",
-   "topics": [
-    "dram"
-   ]
-  },
-  {
    "id": "904933180c49",
    "title": "The Top 10 Candidates to Run NVIDIA",
    "url": "https://www.youtube.com/watch?v=Z8IXQA6voHQ",
@@ -164,6 +173,19 @@
    "description": "The prediction markets have priced up who takes over at Nvidia, so here is the top 10 as it stands. One sits at the top leading at 24% and a number of NVIDIA empoylees are in the mix. Lisa Su, Johny Srouji and Jensen himself all make the list. Note: Data taken November 14th.…",
    "published": "2026-11-15T16:38:27Z",
    "topics": []
+  },
+  {
+   "id": "9815224a2772",
+   "title": "Even If Nvidia Stumbles, HBM Won't — Why Samsung and SK Hynix Are Smiling",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9nMmdDdzJtU3BiWGRQV2xpWlhSZmxXUFhUQ2tkZ0hOb0NUX0FGcWVoM0ZDb2MtcHlHeDZzVFV5UEVnZ1FyVDhQYlpGOW9lbndPS2FlX0pEd1RobHhuU1hZNTFmSWJYNVpEbGNmNkx3S0JtY1NvakE?oc=5",
+   "source": "BigGo Finance",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-15T08:00:00Z",
+   "topics": [
+    "dram"
+   ]
   },
   {
    "id": "fea537e65eef",
