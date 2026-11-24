@@ -1,6 +1,28 @@
 {
- "updated": "2026-11-24T10:27:53Z",
+ "updated": "2026-11-24T22:55:59Z",
  "items": [
+  {
+   "id": "377a939870eb",
+   "title": "Long-Term Contracts Sustain Memory Semiconductor Demand",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQM3Z2WDVuM2lWSi1aRE9GclBBSkpSTDhicHk4SGF1OTVqTjZzTVpYa1pBOU5yTEZDdVBsSUNPal8yVVNNWHV1S1h3Y0xycFd6WWc3ZW5iVFlNdUY0SG9oUEVqdktKTW9YUkJmMThRdDRnNlotbGtoYnBhS0lDM3dMYlNnX0VpdmdYTGVYMEN3?oc=5",
+   "source": "조선일보",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-24T15:38:37Z",
+   "topics": []
+  },
+  {
+   "id": "32e9610e9207",
+   "title": "Semiconductor Market to Reach USD 1,277.45 Billion by 2035",
+   "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxOQ0d2dWt3MEF1THdkZ0o3dEUyOWpqcDZWX01MVGZ2em5ORWFHTWs3dkRyLU1RTW9hZHdzeDhpVFB1RHl6UUw2RTBhQlBpWVJvTUVRUlpybm55T1g0eGVQaGFoZGw0YTQ2eUN6SzZ3NnNLSS1rTS1oR0hacmdtU2swR3kwYmpsdEZ5SHF4YzllWFREQ29GZFAyN1AxcEVsVFFYVktoMmRkSGRyck1EaEpaTjVvUHk3dmJWNHRwbEF5N0gxQjRrT0w0ZU4wNG9vQ1lSajRoYWFuaGZ1NWdIQjRlM0pLTzZpdnJxUGVfbXVXS1BsRVpVQnNuaGdGMTFmZWlLLTdyTGo3S1o3bnN5STJvdlc0bFByTEFvSVdyUGoxaUZVUjczdE5hVmRwMnRPXzVXYUxGTjRQbFlIaHdVRFJiamxIS0NtNnFLdEJ3QU1xYw?oc=5",
+   "source": "GlobeNewswire",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-24T15:00:00Z",
+   "topics": []
+  },
   {
    "id": "611a925b2d14",
    "title": "Nikkei Asia Forum 'The Global Chip Game: Our predictions for 2027'",
@@ -1044,41 +1066,6 @@
    "published": "2026-09-26T13:36:32Z",
    "topics": [
     "logic-devices"
-   ]
-  },
-  {
-   "id": "dee396c1ab68",
-   "title": "Arm & SoftBank: Part 1- Masa comes calling, bearing gifts",
-   "url": "https://thechipletter.substack.com/p/arm-and-softbank-part-1-masa-comes",
-   "source": "The Chip Letter",
-   "kind": "article",
-   "thumbnail": "https://substackcdn.com/image/fetch/$s_!JoMe!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96c40782-7f80-4def-a6fd-cfc14e83230e_2047x1365.jpeg",
-   "description": "Part 1 of an extended discussion, covering the Softbank takeover of Arm in 2016",
-   "published": "2026-09-25T22:30:58Z",
-   "topics": []
-  },
-  {
-   "id": "b303ff07966b",
-   "title": "The Chinese AI Infrastructure Boom: Introducing the SemiAnalysis China Datacenter Model",
-   "url": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom",
-   "source": "SemiAnalysis",
-   "kind": "article",
-   "thumbnail": null,
-   "description": "1,000+ facilities across 60+ operators mapped, built retail-first and flipped by AI, largest hyperscaler leases 1/5 national capacity, 100MW in 12 months, Eastern Data Western Compute",
-   "published": "2026-09-25T15:58:22Z",
-   "topics": []
-  },
-  {
-   "id": "d8b13c79dfe9",
-   "title": "How Low Can AI Power Go? // The AI Hardware Show S2E11",
-   "url": "https://www.youtube.com/watch?v=Wiv08sstkJc",
-   "source": "TechTechPotato",
-   "kind": "video",
-   "thumbnail": "https://i4.ytimg.com/vi/Wiv08sstkJc/hqdefault.jpg",
-   "description": "Forget the data center - the real AI action might be happening in a coin-cell battery near you. Ian Cutress and Sally Ward-Foxton dig into six ultra-low-power chip architectures built to run always-on AI for years on almost nothing, from analog processors that skip the ADC…",
-   "published": "2026-09-25T13:00:16Z",
-   "topics": [
-    "vlsi"
    ]
   }
  ],
