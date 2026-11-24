@@ -1,6 +1,28 @@
 {
- "updated": "2026-11-23T08:10:58Z",
+ "updated": "2026-11-24T00:27:55Z",
  "items": [
+  {
+   "id": "a65f39e16f52",
+   "title": "Nikkei Asia webinar 'The Global Chip Game: Our predictions for 2027'",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNa0FQRGlyNkp6WWw4Zm9hR0NzWDF6WS1mZVJsYWR0N1BWMmtvRGRBcXl3WjNLN0JNQ1BoYUs1eGE3Sk9RV1lpU3Z0ZEJuN3F1R3hnOFhuLXRCWWNXX21uNmYxWlBZRDRaRHFnd1FBQUVsalBUSTdhcU9hVFlYdWVxT3Y3V1prcGZkeVVod1dPM3FzcGl1ZHBRdTJDVUtBeVdydmdPRTd5YXp1MjR0QVE?oc=5",
+   "source": "Nikkei Asia",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-24T00:10:00Z",
+   "topics": []
+  },
+  {
+   "id": "497991b3e6ea",
+   "title": "Micron (NASDAQ:MU) Stock Soars Nearly 20% as Nvidia’s Comeback Sparks AI Memory Rally",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1abkg4OTBxMlNfODF3b2VCdy1DOUJjczlRTGFtM0tmSTBQcXI3cklFYTYwaGtPN0ZEUUdfQU4wcGMtVzJ3c3RaM0VLWURBbzM3bTlxYWFCQjFzWXMxcUZVSms4X2Q5VWh2cVRHeUdiNV9NOV9paFE?oc=5",
+   "source": "Stocks Down Under",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-23T19:56:23Z",
+   "topics": []
+  },
   {
    "id": "7511d57d89ed",
    "title": "Why the Soviet GitHub Failed",
@@ -11,6 +33,19 @@
    "description": "Links: - Patreon (Support the channel directly!): https://www.patreon.com/Asianometry - X: https://twitter.com/asianometry - Newsletter & Podcast (available through Stratechery Plus): https://asianometry.passport.online/ - LinkedIn (feel free to connect):…",
    "published": "2026-11-22T23:00:22Z",
    "topics": []
+  },
+  {
+   "id": "2627da49cba4",
+   "title": "Elon Musk Blames Memory And Storage Price Hikes For Doubling Tesla’s AI4 Computer Costs, Says It “Costs Twice As Much”",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdHZZelhIU05UYkhaTW9yZWs2RnBORGZUUElhMmxlci1xVDFBd1Frc2pZX0IxbUN1U0Fhc1FRUkRjMlhHSEw5MWdkVElGa00wWHBDTC1HT3gyMUE5c0MxZTZlckFIMEZya2dzRm9pSU9FbThuSGVmNWNqWVhjdS1tZ2YzVWtKZ005ajNoM19PNzg2bl90c2RhZEJOTTlvN2p3M0cyTG5LZ3VqOUYtLWs2NVQyWXpKSkpGSGfSAb8BQVVfeXFMTnc5MnJ1blJCZm9NNF9LYzVHYmV3dXhENEVlTTB1VndTV01sM09kbjVUaVZxTUJ2eFBUTDBaUWxFQ2p5VlpVNWhyZWJzRlAzMTZmMHJhYmhJQ0hpcV9WSkNCbEZmUHVfUmVWWFEzTWpROC1LbldlMFliTGFIWDRqY0ZyaThJV2RTelp1b2Rfdm9zRm54ZXdlT0RPOHFyMjNWN2dRVzMxUTRFclZGNGVaVVl6MGFKaTFHdVJ0MUdpaE0?oc=5",
+   "source": "Wccftech",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-22T17:54:23Z",
+   "topics": [
+    "industry"
+   ]
   },
   {
    "id": "05458c725051",
@@ -138,7 +173,7 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-15T08:27:09Z",
+   "published": "2026-11-15T08:00:00Z",
    "topics": []
   },
   {
@@ -175,6 +210,17 @@
    "topics": [
     "industry"
    ]
+  },
+  {
+   "id": "1d597d4f7619",
+   "title": "KORA Systems Develops AI OS With Qualcomm",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBtV2E4QWVBdWhkNzlRTm5SMVpMdG9PX2xuN2JBbVdvd0tNSGJNWnp6WWphcUY4b2RXSmEzT3ZpbURHS1dhb3ZhZ0tvTWd6NWtBS0xkLWpzdmN4a3NjV0VQbnRQMXFzNGs?oc=5",
+   "source": "THE ELEC, Korea Electronics Industry Media",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-13T08:00:00Z",
+   "topics": []
   },
   {
    "id": "ac94162d8a8f",
@@ -222,17 +268,6 @@
    "thumbnail": "https://i1.ytimg.com/vi/Hcbpty6yUY4/hqdefault.jpg",
    "description": "Well, there's only one topic. Timestamps [00:00] - Pre-Show: we're not lawyers [00:50] - Jensen Huang resigns from NVIDIA [01:55] - Other news saved for Sunday [02:30] - Topic #1: What Happened [06:05] - Topic #2: Our Reactions [10:50] - Topic #3: Megaspeed and the Spy Question…",
    "published": "2026-11-12T17:37:33Z",
-   "topics": []
-  },
-  {
-   "id": "1d597d4f7619",
-   "title": "KORA Systems Develops AI OS With Qualcomm",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBtV2E4QWVBdWhkNzlRTm5SMVpMdG9PX2xuN2JBbVdvd0tNSGJNWnp6WWphcUY4b2RXSmEzT3ZpbURHS1dhb3ZhZ0tvTWd6NWtBS0xkLWpzdmN4a3NjV0VQbnRQMXFzNGs?oc=5",
-   "source": "THE ELEC, Korea Electronics Industry Media",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-12T15:03:14Z",
    "topics": []
   },
   {
