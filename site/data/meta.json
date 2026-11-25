@@ -1,8 +1,8 @@
 {
  "title": "Nano Node",
  "tagline": "Nanoscale devices, memory & VLSI — news and research, twice a day",
- "updated": "2026-11-25T09:08:02Z",
- "edition": "morning",
+ "updated": "2026-11-25T22:11:01Z",
+ "edition": "evening",
  "llm": {
   "enabled": false,
   "model": null
@@ -113,47 +113,47 @@
   {
    "key": "2026-W48",
    "label": "Nov 23 – Nov 29, 2026",
-   "count": 189
+   "count": 222
   },
   {
    "key": "2026-W47",
    "label": "Nov 16 – Nov 22, 2026",
-   "count": 827
+   "count": 836
   },
   {
    "key": "2026-W46",
    "label": "Nov 09 – Nov 15, 2026",
-   "count": 819
+   "count": 820
   },
   {
    "key": "2026-W45",
    "label": "Nov 02 – Nov 08, 2026",
-   "count": 307
+   "count": 308
   },
   {
    "key": "2026-W44",
    "label": "Oct 26 – Nov 01, 2026",
-   "count": 378
+   "count": 379
   },
   {
    "key": "2026-W43",
    "label": "Oct 19 – Oct 25, 2026",
-   "count": 202
+   "count": 201
   },
   {
    "key": "2026-W42",
    "label": "Oct 12 – Oct 18, 2026",
-   "count": 136
+   "count": 137
   },
   {
    "key": "2026-W41",
    "label": "Oct 05 – Oct 11, 2026",
-   "count": 143
+   "count": 144
   },
   {
    "key": "2026-W40",
    "label": "Sep 28 – Oct 04, 2026",
-   "count": 431
+   "count": 435
   },
   {
    "key": "2026-W39",

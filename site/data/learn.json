@@ -1,6 +1,19 @@
 {
- "updated": "2026-11-25T09:08:02Z",
+ "updated": "2026-11-25T22:11:01Z",
  "items": [
+  {
+   "id": "f7107efc3075",
+   "title": "Why Is Sandisk Stock Trading Lower on Wednesday?",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYVRiVnpyWUtacWw2ZkJaSXEzMGoxdDNiTDYyLVFBYlJ5ejRrMlktWFZNT0taNHJRMGt5UW4zUlZqRWc2dUQ2aW0zcWhoMk1QMEN1U2JwMGhQa2NKWW5mbjhGNTZpVFR6ZGhDWVQxN1JlVXYweTdJMFVONnYyXzFjSVdpbFhtNGdVWkhJLUd0N2c2ZHFxQzBGQ1IzQ25NQWVEWmRVVXZ2WUpVQQ?oc=5",
+   "source": "TradingView",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-25T14:00:34Z",
+   "topics": [
+    "nand"
+   ]
+  },
   {
    "id": "4dffe5582cd2",
    "title": "China's YMTC boosted by Samsung and SK Hynix adopting its memory technology",
@@ -276,17 +289,6 @@
    "topics": []
   },
   {
-   "id": "1d597d4f7619",
-   "title": "KORA Systems Develops AI OS With Qualcomm",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBtV2E4QWVBdWhkNzlRTm5SMVpMdG9PX2xuN2JBbVdvd0tNSGJNWnp6WWphcUY4b2RXSmEzT3ZpbURHS1dhb3ZhZ0tvTWd6NWtBS0xkLWpzdmN4a3NjV0VQbnRQMXFzNGs?oc=5",
-   "source": "THE ELEC, Korea Electronics Industry Media",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-13T08:00:00Z",
-   "topics": []
-  },
-  {
    "id": "2f88f8937300",
    "title": "Instead Of Lowering GPU Prices, Former NVIDIA CEO Jensen Huang Reportedly Financed AI Startups To Absorb Excess Silicon, Shattering The Shortage Perception",
    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRHY5LWkyLWJMemRpb19USWRiZkdQSWJOVTJFQUMyZHNVdEhBaGJXWXZzajR2ZTB4c0o5WEZnczFuSEFIZVVSX3NYQzRQM095OFIzTTBHZFg0MlZTNTlHSVN3Yk1XbDNMckphYlhvSkFHTG10ZXR2ZmRPNDN4ZTE5SnZxa9IBiAFBVV95cUxPaUgzWktjM2NjcFdMNHdaR2NRd05lbkhyMmhKbk9tS3JFdzJyZEkwREhMd191bll5WkdvOUlGUU1ZbjRid2pzTGJoQkpjYmJrbkxXVlNfMlhabGxaVmpHS1ZjUDJ6ZWFVUkI1aUFNbkprcDh4aVBWOWtiSGtzUzFpLTNDZnRlWE5u?oc=5",
@@ -298,6 +300,17 @@
    "topics": [
     "industry"
    ]
+  },
+  {
+   "id": "1d597d4f7619",
+   "title": "KORA Systems Develops AI OS With Qualcomm",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBtV2E4QWVBdWhkNzlRTm5SMVpMdG9PX2xuN2JBbVdvd0tNSGJNWnp6WWphcUY4b2RXSmEzT3ZpbURHS1dhb3ZhZ0tvTWd6NWtBS0xkLWpzdmN4a3NjV0VQbnRQMXFzNGs?oc=5",
+   "source": "THE ELEC, Korea Electronics Industry Media",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-13T08:00:00Z",
+   "topics": []
   },
   {
    "id": "ac94162d8a8f",
@@ -1086,19 +1099,6 @@
    "published": "2026-09-28T13:00:23Z",
    "topics": [
     "vlsi"
-   ]
-  },
-  {
-   "id": "01ce2c4217db",
-   "title": "Intel Panther Lake Teardown",
-   "url": "https://newsletter.semianalysis.com/p/intel-panther-lake-teardown",
-   "source": "SemiAnalysis",
-   "kind": "article",
-   "thumbnail": null,
-   "description": "Looking inside Intel 18A and Intel’s Panther Lake. A free SemiAnalysis STEEL teardown.",
-   "published": "2026-09-26T13:36:32Z",
-   "topics": [
-    "logic-devices"
    ]
   }
  ],
