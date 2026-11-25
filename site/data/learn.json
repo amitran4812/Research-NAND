@@ -1,6 +1,17 @@
 {
- "updated": "2026-11-24T22:55:59Z",
+ "updated": "2026-11-25T09:08:02Z",
  "items": [
+  {
+   "id": "4dffe5582cd2",
+   "title": "China's YMTC boosted by Samsung and SK Hynix adopting its memory technology",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcmxHTGR2bmVFQ1dEWG1ONkllUlZxbmkyUFVHTEhONFZGdldrYTBCMzA0S1J0N2x5dHpTcVFfTG1YcEpGN1NPNzdwdkZNOHJySUZjenBhRkxSTmtpRnhvYTdlNkZlQUczNC1VdEdWUlhrd3ExVVF6c3RremhxajU4VE5GVlE1SjV5WHdJVndQMUxrNjVqNlBhRS12SndlSEk1aFh3UTZ6dHl6Rjk5T1lRbVBfeGJNbFQySmViZXRGeG9CTEZZTU5J?oc=5",
+   "source": "Nikkei Asia",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-25T06:08:00Z",
+   "topics": []
+  },
   {
    "id": "377a939870eb",
    "title": "Long-Term Contracts Sustain Memory Semiconductor Demand",
@@ -24,6 +35,17 @@
    "topics": []
   },
   {
+   "id": "d9fec08cf7f0",
+   "title": "Micron Stock Drops After Monday’s Surge as Nvidia Scrutiny Hits Chipmakers",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONUxDbXB2YTBxbW1FUmRaaldvNjFxMng5WVN5bnRKVlRZRC1ZTVUwX0ZEYkp3c2E0WDZoN1N0TFhuc29lVEk0X2lwdW1pRk5GbUhLZlEwNzgydE1kSnd0Ukpud0JUTmF6T05wZlRjRFRaVnJaSkJIQXdSMWE2b1BhM2gwcEM3Q0FmbkFfRTQtQllMMjlOWDRWdFVNWkEwNEZpNUdIM3dDOWJYYzNyV0NCRU1sYUZGMUFKbEJ6Z1BOWk5rM0pSdWJDNF9GakprQQ?oc=5",
+   "source": "TradingView",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-24T13:40:25Z",
+   "topics": []
+  },
+  {
    "id": "611a925b2d14",
    "title": "Nikkei Asia Forum 'The Global Chip Game: Our predictions for 2027'",
    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPeHdsSVNuYTNMLWpEUmRRa2I0cEI4V3FzcTNJdGtoMW1FdWdYR05QMFN3LXRaS3hhVFhaZFRFMzhQQ2dmU1hOSDhYTUU0SVEzVDIzM0swUzNnSFJScFZTMFRtU3h5R3BCTktEZmpaZlV3SmRoVzMzeE1EX0VfUU9sUHRXUkJWanhIUXAxUGhTZVo2dVRUSDBqSzVfcmdpeTlHV1ZEX09DaDMwNTQ?oc=5",
@@ -43,6 +65,17 @@
    "thumbnail": null,
    "description": "",
    "published": "2026-11-24T00:10:00Z",
+   "topics": []
+  },
+  {
+   "id": "151187c28093",
+   "title": "[China Shock, K-Industry on the Brink | Semiconductors] 2: Under U.S. Sanctions, China Shuts Its Gates Tight... Its Semiconductor Industry's \"Quiet Advance\"",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE95RmtkMzdYMFdTSWdzMTVJWkFidHFDdEw2b1pYV2ZpeDF5ekcwLXVBcWI1WjZvdDIzcHFQNGdMWUwyZW1xbkM3aU1NbnRRSHJZX0VURk5nMDYtbTFNWXFVTEZ0cjE?oc=5",
+   "source": "아시아경제",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-23T22:30:00Z",
    "topics": []
   },
   {
@@ -197,6 +230,17 @@
    "topics": []
   },
   {
+   "id": "fea537e65eef",
+   "title": "Musk Warns Nvidia's Supply Chain Vulnerable Without Jensen Huang",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeVpYQUpfUFJ2Sjc4SWRWQXZ4SEctejhJdG9Id1FVMjF5R0x6QnVhaUxtTWVCOThBYWlRYmJFaXlDTS1JeEs3ckRlc3lqODlpeVRIVTRFbVVXa1ZqMXVOd1FBTUh5YVZlZTJaX1VTQ3lKbHhaX2RncWkxRzZ1REhhQ3JPLUFvMDdm?oc=5",
+   "source": "조선일보",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-15T08:00:00Z",
+   "topics": []
+  },
+  {
    "id": "9815224a2772",
    "title": "Even If Nvidia Stumbles, HBM Won't — Why Samsung and SK Hynix Are Smiling",
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9nMmdDdzJtU3BiWGRQV2xpWlhSZmxXUFhUQ2tkZ0hOb0NUX0FGcWVoM0ZDb2MtcHlHeDZzVFV5UEVnZ1FyVDhQYlpGOW9lbndPS2FlX0pEd1RobHhuU1hZNTFmSWJYNVpEbGNmNkx3S0JtY1NvakE?oc=5",
@@ -208,17 +252,6 @@
    "topics": [
     "dram"
    ]
-  },
-  {
-   "id": "fea537e65eef",
-   "title": "Musk Warns Nvidia's Supply Chain Vulnerable Without Jensen Huang",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeVpYQUpfUFJ2Sjc4SWRWQXZ4SEctejhJdG9Id1FVMjF5R0x6QnVhaUxtTWVCOThBYWlRYmJFaXlDTS1JeEs3ckRlc3lqODlpeVRIVTRFbVVXa1ZqMXVOd1FBTUh5YVZlZTJaX1VTQ3lKbHhaX2RncWkxRzZ1REhhQ3JPLUFvMDdm?oc=5",
-   "source": "조선일보",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-15T08:00:00Z",
-   "topics": []
   },
   {
    "id": "4f8b0697a629",
@@ -243,6 +276,17 @@
    "topics": []
   },
   {
+   "id": "1d597d4f7619",
+   "title": "KORA Systems Develops AI OS With Qualcomm",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBtV2E4QWVBdWhkNzlRTm5SMVpMdG9PX2xuN2JBbVdvd0tNSGJNWnp6WWphcUY4b2RXSmEzT3ZpbURHS1dhb3ZhZ0tvTWd6NWtBS0xkLWpzdmN4a3NjV0VQbnRQMXFzNGs?oc=5",
+   "source": "THE ELEC, Korea Electronics Industry Media",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-13T08:00:00Z",
+   "topics": []
+  },
+  {
    "id": "2f88f8937300",
    "title": "Instead Of Lowering GPU Prices, Former NVIDIA CEO Jensen Huang Reportedly Financed AI Startups To Absorb Excess Silicon, Shattering The Shortage Perception",
    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRHY5LWkyLWJMemRpb19USWRiZkdQSWJOVTJFQUMyZHNVdEhBaGJXWXZzajR2ZTB4c0o5WEZnczFuSEFIZVVSX3NYQzRQM095OFIzTTBHZFg0MlZTNTlHSVN3Yk1XbDNMckphYlhvSkFHTG10ZXR2ZmRPNDN4ZTE5SnZxa9IBiAFBVV95cUxPaUgzWktjM2NjcFdMNHdaR2NRd05lbkhyMmhKbk9tS3JFdzJyZEkwREhMd191bll5WkdvOUlGUU1ZbjRid2pzTGJoQkpjYmJrbkxXVlNfMlhabGxaVmpHS1ZjUDJ6ZWFVUkI1aUFNbkprcDh4aVBWOWtiSGtzUzFpLTNDZnRlWE5u?oc=5",
@@ -254,17 +298,6 @@
    "topics": [
     "industry"
    ]
-  },
-  {
-   "id": "1d597d4f7619",
-   "title": "KORA Systems Develops AI OS With Qualcomm",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBtV2E4QWVBdWhkNzlRTm5SMVpMdG9PX2xuN2JBbVdvd0tNSGJNWnp6WWphcUY4b2RXSmEzT3ZpbURHS1dhb3ZhZ0tvTWd6NWtBS0xkLWpzdmN4a3NjV0VQbnRQMXFzNGs?oc=5",
-   "source": "THE ELEC, Korea Electronics Industry Media",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-13T08:00:00Z",
-   "topics": []
   },
   {
    "id": "ac94162d8a8f",
