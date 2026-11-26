@@ -1,6 +1,28 @@
 {
- "updated": "2026-11-25T22:11:01Z",
+ "updated": "2026-11-26T08:54:00Z",
  "items": [
+  {
+   "id": "54fe93541e68",
+   "title": "Evaluating Recent Model Releases on GDPx",
+   "url": "https://newsletter.semianalysis.com/p/evaluating-recent-model-releases",
+   "source": "SemiAnalysis",
+   "kind": "article",
+   "thumbnail": "https://substackcdn.com/image/fetch/$s_!cRUS!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,$fp_!0.5:0.5!/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9c04cdba-7f7c-4b04-be7a-d50e882777dd_1536x1024.png",
+   "description": "GPT-6.2 Astra takes the crown but bad at software engineering, Gemini 4 Neon is an impressive improvement from Google but still overrated, Fable 5.2 is smart but expensive, and new Chinese models as well",
+   "published": "2026-11-26T00:05:35Z",
+   "topics": []
+  },
+  {
+   "id": "e994d64eb077",
+   "title": "SMIC Co-Founder Xie Zhifeng Pours Cold Water on AI Chip Boom: Only Two or Three Will Survive in Five Years",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1qZEVRYW41WFd1SmpTWjhubmRtenRCVHhkMEl5WVhIWXUyU3NvcGxQVTNfc1RmVUdKa0FvRi1hY2dJWFdTN1NzbmpKT2xxS0NsNm9yMmtsSjlnUjZQSDZPQ05yVXFmVHBBYVU3TTJxVjNXOF9Od2c?oc=5",
+   "source": "BigGo Finance",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-25T23:35:00Z",
+   "topics": []
+  },
   {
    "id": "f7107efc3075",
    "title": "Why Is Sandisk Stock Trading Lower on Wednesday?",
