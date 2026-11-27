@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T08:53:58Z",
+ "updated": "2026-11-27T09:03:43Z",
  "quotes": [
   {
    "symbol": "MU",
@@ -7,31 +7,31 @@
    "price": 601.25,
    "change_pct": -4.53,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:42Z"
   },
   {
    "symbol": "005930.KS",
    "name": "Samsung",
-   "price": 171300.0,
-   "change_pct": 0.35,
+   "price": 179100.0,
+   "change_pct": 4.55,
    "currency": "KRW",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:42Z"
   },
   {
    "symbol": "000660.KS",
    "name": "SK hynix",
-   "price": 1053000.0,
-   "change_pct": 2.23,
+   "price": 1110000.0,
+   "change_pct": 5.41,
    "currency": "KRW",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "285A.T",
    "name": "Kioxia",
-   "price": 7762.0,
-   "change_pct": 12.57,
+   "price": 8450.0,
+   "change_pct": 8.86,
    "currency": "JPY",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "SNDK",
@@ -39,7 +39,7 @@
    "price": 73.61,
    "change_pct": -24.13,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "WDC",
@@ -47,7 +47,7 @@
    "price": 272.45,
    "change_pct": -0.55,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "STX",
@@ -55,7 +55,7 @@
    "price": 472.33,
    "change_pct": -2.1,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "TSM",
@@ -63,7 +63,7 @@
    "price": 342.34,
    "change_pct": -1.96,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "INTC",
@@ -71,7 +71,7 @@
    "price": 54.47,
    "change_pct": -0.6,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "NVDA",
@@ -79,7 +79,7 @@
    "price": 149.3,
    "change_pct": -3.91,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "AMD",
@@ -87,7 +87,7 @@
    "price": 406.03,
    "change_pct": -1.75,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:57Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "ASML",
@@ -95,7 +95,7 @@
    "price": 1303.08,
    "change_pct": -2.47,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:58Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "AMAT",
@@ -103,7 +103,7 @@
    "price": 311.18,
    "change_pct": -3.89,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:58Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "LRCX",
@@ -111,7 +111,7 @@
    "price": 185.01,
    "change_pct": -5.68,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:58Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "KLAC",
@@ -119,15 +119,15 @@
    "price": 134.2,
    "change_pct": 0.41,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:58Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "8035.T",
    "name": "Tokyo Electron",
-   "price": 7871.0,
-   "change_pct": 0.59,
+   "price": 8220.0,
+   "change_pct": 4.43,
    "currency": "JPY",
-   "as_of": "2026-11-26T08:53:58Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "SNPS",
@@ -135,7 +135,7 @@
    "price": 405.09,
    "change_pct": -2.35,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:58Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "CDNS",
@@ -143,7 +143,7 @@
    "price": 294.89,
    "change_pct": -0.58,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:58Z"
+   "as_of": "2026-11-27T09:03:43Z"
   },
   {
    "symbol": "^SOX",
@@ -151,7 +151,7 @@
    "price": 8774.86,
    "change_pct": -0.65,
    "currency": "USD",
-   "as_of": "2026-11-26T08:53:58Z"
+   "as_of": "2026-11-27T09:03:43Z"
   }
  ]
 }

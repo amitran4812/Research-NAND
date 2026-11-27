@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T22:02:42Z",
+ "updated": "2026-11-27T09:03:42Z",
  "items": [
   {
    "id": "doi:10.1061/jpcfev.cfeng-5649",
@@ -2283,7 +2283,7 @@
     "R. Mortier"
    ],
    "url": "https://doi.org/10.1109/TPDS.2026.3741399",
-   "pdf": "https://doi.org/10.17863/cam.135988",
+   "pdf": "https://www.repository.cam.ac.uk/handle/1810/409837",
    "doi": "10.1109/TPDS.2026.3741399",
    "venue": "IEEE Transactions on Parallel and Distributed Systems",
    "source": "Semantic Scholar",
@@ -3676,6 +3676,34 @@
    "week": "2026-W48"
   },
   {
+   "id": "arxiv:2611.33961",
+   "arxiv_id": "2611.33961",
+   "title": "AI Buckingham: Agentic Discovery of Dimensionless Scaling Laws Across Physical Regimes",
+   "abstract": "Classical dimensional analysis defines admissible dimensionless representations but does not determine which combinations capture the dominant physical dependence, whether it changes across physical regimes, or when dependent-variable rescaling is required. We present AI Buckingham, an agentic framework for autonomous dimensionless discovery from natural-language descriptions of physical problems and observational data. It couples reasoning and planning by a large language model (LLM) with predefined symbolic and numerical tools. Literature-based knowledge retrieval supports dimensional checking, gradient-based clustering identifies physical regimes, and mutual information provides an objective, reparameterization-invariant criterion for identifying dominant dimensionless groups. Explicit numerical criteria determine the group count and assess simplification. Across ten physical systems spanning fluid dynamics, magnetohydrodynamics, thermal convection and additive manufacturing, AI Buckingham recovers established similarity representations and resolves regime-dependent scalings. For the longstanding challenge of predicting turbulent drag on rough surfaces, it identifies informative reparameterizations of surface statistics that improve equivalent sand-grain roughness estimates for engineering-oriented drag modelling.",
+   "authors": [
+    "Ao Cheng",
+    "Lei Zhang",
+    "Guowei He"
+   ],
+   "url": "https://arxiv.org/abs/2611.33961",
+   "pdf": "https://arxiv.org/pdf/2611.33961v1",
+   "doi": null,
+   "venue": "arXiv physics.comp-ph",
+   "source": "arXiv",
+   "published": "2026-11-25T08:24:47Z",
+   "search_topic": "ai-general",
+   "hub": "ai",
+   "topics": [
+    "ai-for-vlsi",
+    "ai-general"
+   ],
+   "companies": [],
+   "image": "https://arxiv.org/html/2611.33961/2611.33961v1/Fig1_SimilarityTyPe.png",
+   "first_seen": "2026-11-26T08:52:25Z",
+   "s2_url": "https://www.semanticscholar.org/paper/5e2443b5b6a626daa312f5023f97b0c7b1460fe4",
+   "week": "2026-W48"
+  },
+  {
    "id": "arxiv:2611.33926",
    "arxiv_id": "2611.33926",
    "title": "Connecting AI Agents to Live Discrete Element Simulations via the Model Context Protocol",
@@ -3757,6 +3785,34 @@
    "companies": [],
    "image": "https://arxiv.org/html/2611.33706/2611.33706v1/figures/teaser.png",
    "first_seen": "2026-11-26T08:52:25Z",
+   "week": "2026-W48"
+  },
+  {
+   "id": "arxiv:2611.33691",
+   "arxiv_id": "2611.33691",
+   "title": "L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention",
+   "abstract": "Long-context inference is a rising demand for LLMs, especially for agent applications. Sparse attention (SpAt) and chiplet technology are promising solutions to reduce computations and scale hardware performance. However, deploying SpAt on distributed chiplets necessitates context parallelism for workload partitioning, introducing complex distributed attention. In this work, we present L2C2, a system optimization for distributed SpAt in long-context inference. During the partial-prefill stage, we propose a novel Split-Comm Attention mechanism that leverages the high-bandwidth interconnect of chiplets to trade communication overhead for reduced memory access. We combine it with conventional Ring Attention to form a Bi-Mode method that adapts to varying input sequence lengths. During the decoding stage, we analyze the cause of memory access imbalance and address it by static interleaved token assignment. Dynamic agile cache balancing is also proposed to adapt to SpAt skewness. Evaluations show our optimization can achieve 1.45$\\times$ and 1.53$\\times$ speedup in partial-prefill and decoding with SpAt on large-scale chiplets.",
+   "authors": [
+    "Kangbo Bai",
+    "Zhonghua Mu",
+    "Hongze Zhou",
+    "Tianyu Jia"
+   ],
+   "url": "https://arxiv.org/abs/2611.33691",
+   "pdf": "https://arxiv.org/pdf/2611.33691v1",
+   "doi": null,
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "published": "2026-11-25T02:56:00Z",
+   "search_topic": "packaging",
+   "hub": "device",
+   "topics": [
+    "packaging"
+   ],
+   "companies": [],
+   "image": "https://arxiv.org/html/2611.33691/2611.33691v1/figure/fig_intro_10.png",
+   "first_seen": "2026-11-26T08:52:25Z",
+   "s2_url": "https://www.semanticscholar.org/paper/fa161a33f02476e78d9ce4d9ca58be9f0f2dc396",
    "week": "2026-W48"
   },
   {
@@ -4256,8 +4312,8 @@
    "title": "SOLO: Towards Sample-Faithful and Detectable LLM Watermarking under Repeated Sampling via Content-Anchored Single-Owner Contexts",
    "abstract": "Providers watermark the outputs of large language models, while applications sample many responses per prompt for self-consistency, best-of-n selection, and uncertainty estimation. We show that deployed configurations of distortion-free watermarks, which deduplicate keyed contexts only within a response, couple the responses of a request: answer templates make all responses query the watermark with the same context before the answer, so collisions across responses, usually assumed rare, become the norm. Key pools reduce or avoid the coupling at the cost of multiple testing, and the exact remedy of a context history shared across the request leaves many positions unwatermarked. We propose SOLO, which keeps a request-scoped context history but anchors its keyed contexts on content selected by min-hash, so that siblings rarely compete for a context and random edits stay local. Its responses are jointly distributed as independent unwatermarked responses, each detectable with a single key. On five language models from three families and three benchmarks, SOLO preserves self-consistency and uncertainty estimation and, at a 1% false positive rate, detects more responses than four-token key pools on most tasks, also after randomly editing 10% of the tokens, and more than the context history on most clean tasks. Code is available at https://github.com/ZhongliangGuo/solo-watermark.",
    "authors": [
-    "Zhong-Liang Guo",
-    "Yan Lin",
+    "Zhongliang Guo",
+    "Yan-Hua Lin",
     "Yi-Fei Qian",
     "Shuai Zhao",
     "Lu-Wei Xiao",
@@ -4319,6 +4375,38 @@
    ],
    "companies": [],
    "first_seen": "2026-11-26T22:01:55Z",
+   "week": "2026-W48"
+  },
+  {
+   "id": "arxiv:2611.34547",
+   "title": "SCO-Hyper-Meta-Double-GroupNN: A Double-Group SU(2) Hyper-/Meta-Graph Neural Network for Cooperative Spin-Crossover Potential Energy Surfaces",
+   "abstract": "Learning potential energy surfaces for magnetic materials requires resolving coupled local spin manifolds and geometric frustration. We introduce SCO-Hyper-Meta-Double-GroupNN, a geometry-only architecture combining a pretrained O(3)-equivariant backbone with SU(2) spinor Hamiltonians and cooperative hyper-/meta-graph interactions. Analytic thermal spinor density matrices provide non-polynomial two- and three-body structural invariants, while frustrated-triangle hyperedges and a multi-shell sideway gate couple geometric representations to local spin manifolds. A variationally consistent, doubly-centered zero-gauge free-energy functional couples multiplet occupations and signed spin orientations, yielding conservative autograd forces without spin inputs at inference. On a first-principles Co-Cr-Ni benchmark comprising 346 training and 59 held-out validation supercells across crystalline, amorphous, glassy, and liquid regimes, compact models with 56k-77k parameters outperform a 207k-parameter spin-conditioned magnetic MACE baseline. Energy MAE decreases by 37-44%, reaching 3.82 versus 6.83 meV/atom, and force MAE decreases by 10.8-14.2 meV/Angstrom, reaching 165.8-169.2 versus 180.0 meV/Angstrom. The models preserve Kramers degeneracy to within $6\\times10^{-15}$ eV, predict equilibrium local magnetic moments from geometry alone with an absolute-moment MAE of $0.181\\,\\mu_B$, and support stable molecular dynamics up to 2,200 K. This framework integrates local spinor symmetry and cooperative magnetic interactions into geometry-only interatomic potentials.",
+   "authors": [
+    "Rong Fu",
+    "Tian-Hao Su",
+    "Shun-Bo Hu",
+    "Mu-Sen Li"
+   ],
+   "url": "https://arxiv.org/abs/2611.34547",
+   "pdf": null,
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-11-25T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/f2d59b231e0e4941448fefd57babce5a7ac04ad5",
+   "s2_fields": [
+    "Computer Science",
+    "Physics"
+   ],
+   "search_topic": "modeling",
+   "hub": "device",
+   "topics": [
+    "logic-devices",
+    "modeling"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-27T09:03:13Z",
    "week": "2026-W48"
   },
   {
@@ -4795,7 +4883,7 @@
     "Dat Tat Mai",
     "Hung Tran Quy",
     "Thai Viet Pham",
-    "James Jin Kang"
+    "J. Kang"
    ],
    "url": "https://arxiv.org/abs/2611.34112",
    "pdf": "https://arxiv.org/pdf/2611.34112v1",
@@ -5057,7 +5145,7 @@
     "Adarsh Nigam"
    ],
    "url": "https://doi.org/10.1007/s44163-026-02591-4",
-   "pdf": null,
+   "pdf": "https://doi.org/10.1007/s44163-026-02591-4",
    "doi": "10.1007/s44163-026-02591-4",
    "venue": "Discover Artificial Intelligence",
    "source": "OpenAlex",
@@ -5070,6 +5158,7 @@
     "power-devices"
    ],
    "companies": [],
+   "s2_url": "https://www.semanticscholar.org/paper/408ecde3581a995c5d38dfda0c91ac47beb0cebb",
    "first_seen": "2026-11-26T22:01:55Z",
    "week": "2026-W48"
   },
@@ -5167,38 +5256,6 @@
     "ai-general"
    ],
    "companies": [],
-   "first_seen": "2026-11-26T08:52:25Z",
-   "week": "2026-W48"
-  },
-  {
-   "id": "arxiv:2611.33691",
-   "title": "L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention",
-   "abstract": "Long-context inference is a rising demand for LLMs, especially for agent applications. Sparse attention (SpAt) and chiplet technology are promising solutions to reduce computations and scale hardware performance. However, deploying SpAt on distributed chiplets necessitates context parallelism for workload partitioning, introducing complex distributed attention. In this work, we present L2C2, a system optimization for distributed SpAt in long-context inference. During the partial-prefill stage, we propose a novel Split-Comm Attention mechanism that leverages the high-bandwidth interconnect of chiplets to trade communication overhead for reduced memory access. We combine it with conventional Ring Attention to form a Bi-Mode method that adapts to varying input sequence lengths. During the decoding stage, we analyze the cause of memory access imbalance and address it by static interleaved token assignment. Dynamic agile cache balancing is also proposed to adapt to SpAt skewness. Evaluations show our optimization can achieve 1.45$\\times$ and 1.53$\\times$ speedup in partial-prefill and decoding with SpAt on large-scale chiplets.",
-   "authors": [
-    "Kang-Bo Bai",
-    "Zhong-Hua Mu",
-    "Hong-Ze Zhou",
-    "Tian-Yu Jia"
-   ],
-   "url": "https://arxiv.org/abs/2611.33691",
-   "pdf": "https://arxiv.org/pdf/2611.33691v1",
-   "doi": null,
-   "venue": "arXiv",
-   "source": "Semantic Scholar",
-   "published": "2026-11-25T00:00:00Z",
-   "cited_by": 0,
-   "s2_url": "https://www.semanticscholar.org/paper/fa161a33f02476e78d9ce4d9ca58be9f0f2dc396",
-   "s2_fields": [
-    "Computer Science"
-   ],
-   "search_topic": "packaging",
-   "hub": "device",
-   "topics": [
-    "packaging"
-   ],
-   "companies": [],
-   "arxiv_id": "2611.33691",
-   "image": "https://arxiv.org/html/2611.33691/2611.33691v1/figure/fig_intro_10.png",
    "first_seen": "2026-11-26T08:52:25Z",
    "week": "2026-W48"
   },
@@ -5802,7 +5859,7 @@
     "Rui-Sen Peng",
     "Lang Gao",
     "Zi-Xiang Xu",
-    "Zi-Rui Song",
+    "Zirui Song",
     "Xiu-Ying Chen"
    ],
    "url": "https://arxiv.org/abs/2611.34254",
@@ -6346,39 +6403,6 @@
    "week": "2026-W48"
   },
   {
-   "id": "arxiv:2611.33961",
-   "title": "AI Buckingham: Agentic Discovery of Dimensionless Scaling Laws Across Physical Regimes",
-   "abstract": "Classical dimensional analysis defines admissible dimensionless representations but does not determine which combinations capture the dominant physical dependence, whether it changes across physical regimes, or when dependent-variable rescaling is required. We present AI Buckingham, an agentic framework for autonomous dimensionless discovery from natural-language descriptions of physical problems and observational data. It couples reasoning and planning by a large language model (LLM) with predefined symbolic and numerical tools. Literature-based knowledge retrieval supports dimensional checking, gradient-based clustering identifies physical regimes, and mutual information provides an objective, reparameterization-invariant criterion for identifying dominant dimensionless groups. Explicit numerical criteria determine the group count and assess simplification. Across ten physical systems spanning fluid dynamics, magnetohydrodynamics, thermal convection and additive manufacturing, AI Buckingham recovers established similarity representations and resolves regime-dependent scalings. For the longstanding challenge of predicting turbulent drag on rough surfaces, it identifies informative reparameterizations of surface statistics that improve equivalent sand-grain roughness estimates for engineering-oriented drag modelling.",
-   "authors": [
-    "Ao Cheng",
-    "Lei Zhang",
-    "Guo-Yu He"
-   ],
-   "url": "https://arxiv.org/abs/2611.33961",
-   "pdf": "https://arxiv.org/pdf/2611.33961v1",
-   "doi": null,
-   "venue": "arXiv",
-   "source": "Semantic Scholar",
-   "published": "2026-11-25T00:00:00Z",
-   "cited_by": 0,
-   "s2_url": "https://www.semanticscholar.org/paper/5e2443b5b6a626daa312f5023f97b0c7b1460fe4",
-   "s2_fields": [
-    "Physics",
-    "Computer Science"
-   ],
-   "search_topic": "ai-general",
-   "hub": "ai",
-   "topics": [
-    "ai-for-vlsi",
-    "ai-general"
-   ],
-   "companies": [],
-   "arxiv_id": "2611.33961",
-   "image": "https://arxiv.org/html/2611.33961/2611.33961v1/Fig1_SimilarityTyPe.png",
-   "first_seen": "2026-11-26T08:52:25Z",
-   "week": "2026-W48"
-  },
-  {
    "id": "doi:10.3389/fnins.2026.1982497",
    "title": "A hardware-aware open-source framework for design space exploration of mixed-signal spiking neural networks",
    "abstract": "Introduction Energy-efficient neuromorphic computing at the edge requires simulation tools that can capture the non-ideal behavior of mixed-signal spiking neural network (SNN) hardware while supporting system-level design exploration. Methods This work presents an open-source hardware-aware simulation framework for mixed-signal SNNs that enables comparative analysis across neuron, synapse and architecture choices. The framework supports multiple neuron models, including Leaky Integrate-and-Fire (LIF), Hodgkin-Huxley (HH) and Axon-Hillock (AH), together with non-volatile analog synapses based on floating-gate transistors and ReRAM devices. By incorporating device-level non-linearities directly into PyTorch-based training and inference, the tool enables optimization of physical synaptic parameters rather than idealized abstract weights. Results The framework is evaluated on standard neuromorphic benchmarks, including N-MNIST, DVS Gesture and Spiking Heidelberg Digits (SHD). For each model dataset configuration, it reports classification accuracy together with hardware-oriented metrics such as silicon area, power consumption and quantization sensitivity. In addition, mismatch analysis has been implemented to capture the impact of real silicon fabrication-based effects, such as device-to-device and transistor-level variability, on network behavior. Discussion These capabilities enable cross-layer design space exploration and help identify neuron-synapse configurations that best satisfy application-specific constraints on accuracy, energy efficiency, area and hardware fidelity.",
@@ -6537,10 +6561,10 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-26T08:52:25Z",
    "s2_url": "https://www.semanticscholar.org/paper/cee0f7ea4e544eb534821d6731efb1eedeaca15b",
-   "week": "2026-W48",
-   "image": ""
+   "week": "2026-W48"
   },
   {
    "id": "arxiv:2611.33513",
@@ -6566,43 +6590,10 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "",
    "first_seen": "2026-11-26T08:52:25Z",
    "s2_url": "https://www.semanticscholar.org/paper/c5c3f8783161caf331202fdc008ddb7568aa2d1b",
-   "week": "2026-W48",
-   "image": ""
-  },
-  {
-   "id": "arxiv:2611.33495",
-   "arxiv_id": "2611.33495",
-   "title": "Low-barrier-height Hf$_\\text{1-x}$Zr$_\\text{x}$O$_2$ ferroelectric tunnel junctions with large ON-state currents",
-   "abstract": "Ferroelectric tunnel junctions (FTJs) hold great promise for nonvolatile memory, neuromorphic computing, and other applications. Hf$_\\text{1-x}$Zr$_\\text{x}$O$_2$ (HZO) has become a leading candidate for the tunnel barrier due primarily to its compatibility with CMOS technology. Recent advances on HZO based FTJs have highlighted the importance of understanding the electrical transport through a ferroelectric tunnel barrier for fulfilling the technological promises of FTJs. In this paper we report investigation of HZO FTJs featuring a barrier of ultrathin HZO ($\\leq$5nm) measured down to a temperature of 2 K. Direct quantum tunneling was found to dominate at low temperatures, along with contributions from trap-assisted tunneling. As the temperature increases, conduction by thermal activation takes over. We developed a minimal model that accounts for all experimental observations, revealing a barrier height significantly lower than that of the band alignment picture, an unexpected finding attributable to the emergence of a shallow trap band. This finding reveals a previously unexplored pathway toward simultaneously achieving large ON-state currents, high tunnel electroresistance and improved temperature stability for the high-speed memory applications of FTJs.",
-   "authors": [
-    "Shaoqing Ding",
-    "Jinyuan Yao",
-    "Eknath Sarkar",
-    "Emmanuel Quezada",
-    "Thomas N. Jackson",
-    "Susan Trolier-McKinstry",
-    "Suman Datta",
-    "Ying Liu"
-   ],
-   "url": "https://arxiv.org/abs/2611.33495",
-   "pdf": "https://arxiv.org/pdf/2611.33495v1",
-   "doi": null,
-   "venue": "arXiv cond-mat.mtrl-sci",
-   "source": "arXiv",
-   "published": "2026-11-24T22:17:52Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "emerging-memory",
-    "dielectrics"
-   ],
-   "companies": [],
-   "first_seen": "2026-11-26T08:52:25Z",
-   "s2_url": "https://www.semanticscholar.org/paper/adcf836eda9bacbb3917957e6b33b7a4d4d9bc56",
-   "week": "2026-W48",
-   "image": "https://arxiv.org/html/2611.33495/2611.33495v1/Figure1_V2.png"
+   "week": "2026-W48"
   },
   {
    "id": "arxiv:2611.33493",
@@ -6626,10 +6617,10 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.33493/2611.33493v1/concept.png",
    "first_seen": "2026-11-26T08:52:25Z",
    "s2_url": "https://www.semanticscholar.org/paper/e21a74be5bb145638f32b1413d1968847f829f2c",
-   "week": "2026-W48",
-   "image": "https://arxiv.org/html/2611.33493/2611.33493v1/concept.png"
+   "week": "2026-W48"
   },
   {
    "id": "arxiv:2611.33470",
@@ -6732,10 +6723,10 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.33351/2611.33351v1/figs/data_analysis/data_analysis_label.png",
    "first_seen": "2026-11-26T08:52:25Z",
    "s2_url": "https://www.semanticscholar.org/paper/b20133b3a9d5563f9fe59b0ba5bffce4101b9ca5",
-   "week": "2026-W48",
-   "image": "https://arxiv.org/html/2611.33351/2611.33351v1/figs/data_analysis/data_analysis_label.png"
+   "week": "2026-W48"
   },
   {
    "id": "arxiv:2611.33346",
@@ -6762,10 +6753,10 @@
     "ai-general"
    ],
    "companies": [],
+   "image": "https://arxiv.org/html/2611.33346/2611.33346v1/methodology_overview.png",
    "first_seen": "2026-11-26T08:52:25Z",
    "s2_url": "https://www.semanticscholar.org/paper/b5ba825cd89b9f9b7b6dc75d1a9c1bfca747e2af",
-   "week": "2026-W48",
-   "image": "https://arxiv.org/html/2611.33346/2611.33346v1/methodology_overview.png"
+   "week": "2026-W48"
   },
   {
    "id": "arxiv:2611.33119",
@@ -8151,9 +8142,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.32082",
-   "s2_url": "https://www.semanticscholar.org/paper/445cac94e596a0d54c47382188cafd831a14e310",
    "image": "https://arxiv.org/html/2611.32082/2611.32082v1/T.png",
    "first_seen": "2026-11-25T09:06:32Z",
+   "s2_url": "https://www.semanticscholar.org/paper/445cac94e596a0d54c47382188cafd831a14e310",
    "week": "2026-W48"
   },
   {
@@ -9198,6 +9189,43 @@
    "week": "2026-W48"
   },
   {
+   "id": "arxiv:2611.33495",
+   "title": "Low-barrier-height Hf$_\\text{1-x}$Zr$_\\text{x}$O$_2$ ferroelectric tunnel junctions with large ON-state currents",
+   "abstract": "Ferroelectric tunnel junctions (FTJs) hold great promise for nonvolatile memory, neuromorphic computing, and other applications. Hf$_\\text{1-x}$Zr$_\\text{x}$O$_2$ (HZO) has become a leading candidate for the tunnel barrier due primarily to its compatibility with CMOS technology. Recent advances on HZO based FTJs have highlighted the importance of understanding the electrical transport through a ferroelectric tunnel barrier for fulfilling the technological promises of FTJs. In this paper we report investigation of HZO FTJs featuring a barrier of ultrathin HZO ($\\leq$5nm) measured down to a temperature of 2 K. Direct quantum tunneling was found to dominate at low temperatures, along with contributions from trap-assisted tunneling. As the temperature increases, conduction by thermal activation takes over. We developed a minimal model that accounts for all experimental observations, revealing a barrier height significantly lower than that of the band alignment picture, an unexpected finding attributable to the emergence of a shallow trap band. This finding reveals a previously unexplored pathway toward simultaneously achieving large ON-state currents, high tunnel electroresistance and improved temperature stability for the high-speed memory applications of FTJs.",
+   "authors": [
+    "Shao-Qing Ding",
+    "Jin-Yuan Yao",
+    "E. Sarkar",
+    "E. Quezada",
+    "Thomas N. Jackson",
+    "S. Trolier-McKinstry",
+    "S. Datta",
+    "Ying Liu"
+   ],
+   "url": "https://arxiv.org/abs/2611.33495",
+   "pdf": "https://arxiv.org/pdf/2611.33495v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-11-24T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/adcf836eda9bacbb3917957e6b33b7a4d4d9bc56",
+   "s2_fields": [
+    "Physics"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "emerging-memory",
+    "dielectrics"
+   ],
+   "companies": [],
+   "arxiv_id": "2611.33495",
+   "image": "https://arxiv.org/html/2611.33495/2611.33495v1/Figure1_V2.png",
+   "first_seen": "2026-11-26T08:52:25Z",
+   "week": "2026-W48"
+  },
+  {
    "id": "arxiv:2611.32954",
    "title": "LoomKV: Lossless KV Cache Compression from GPU Memory to SSD for LLM Serving",
    "abstract": "Large language model (LLM) serving engines offload the key/value (KV) cache from GPU memory to host DRAM and SSD so multi-turn and agent requests can reuse prompt prefixes. Capacity then limits service at two levels: external tiers govern prefix reuse before eviction, while the GPU KV pool bounds concurrent long requests, and lossy compression alters KV values and outputs. LoomKV brings lossless KV compression to both external tiers (tier mode) and the GPU pool (pool mode) on an unmodified engine. Using a calibrated per-head two-level 3-bit code over BF16 high bytes (sign and upper seven exponent bits), LoomKV stores BF16 KV at 0.71 of its raw size across nine models and FP8 KV at 0.85-0.87. In tier mode, TileStream writes exact-length records with length readback off the load path, leaving tier storage, eviction, and prefetch unchanged, and decompresses fetched records straight into scattered GPU pages. In pool mode, FragPack packs variable-length records into smaller shared-budget GPU pages read in place by a fused decode-attention kernel faster than FlashAttention-3 on BF16. Built with LMCache and vLLM, LoomKV makes compressed tiers act as 1.4x larger raw tiers on AgentX: across LMCache's LRU cliff, tier mode delivers 2.7-3.6x raw's goodput and 1.9-3.1x lower mean time-to-first-token (TTFT), shifts the cliff identically under other simulated replacement policies, and cuts repeated-prompt TTFT up to 1.7x via SSD-to-DRAM promotion. When tiers hold the working set, pool mode fits 1.31-1.34x as many GPU tokens, admitting 12 long requests with roughly raw's queue and goodput at 8. On an AI IDE trace where both tiers and the GPU pool are constrained, tier and pool modes raise goodput by 1.24x and 1.59x. Where raw capacity suffices, compression costs at most 2.2% throughput; tier mode is bit-exact with raw tiers, and pool mode matches FlashAttention-3's numerical accuracy.",
@@ -9876,6 +9904,7 @@
     "modeling"
    ],
    "companies": [],
+   "s2_url": "https://www.semanticscholar.org/paper/46fb8ca8d341911a206211a383fba07ed4167e03",
    "first_seen": "2026-11-25T22:10:11Z",
    "week": "2026-W48"
   },
@@ -13590,9 +13619,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.30505",
-   "s2_url": "https://www.semanticscholar.org/paper/83231da3010eb1720477eafdd2eb64136f656b40",
    "image": "",
    "first_seen": "2026-11-24T10:26:14Z",
+   "s2_url": "https://www.semanticscholar.org/paper/83231da3010eb1720477eafdd2eb64136f656b40",
    "week": "2026-W48"
   },
   {
@@ -13684,6 +13713,7 @@
     "modeling"
    ],
    "companies": [],
+   "s2_url": "https://www.semanticscholar.org/paper/74fcb7628195ec25a6018dc08c8468439cd0590c",
    "first_seen": "2026-11-24T22:54:58Z",
    "week": "2026-W48"
   },
@@ -13960,8 +13990,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/adcd98f46f0356c041d9cc4c7d95837c70d37938",
    "first_seen": "2026-11-24T22:54:58Z",
+   "s2_url": "https://www.semanticscholar.org/paper/adcd98f46f0356c041d9cc4c7d95837c70d37938",
    "week": "2026-W48"
   },
   {
@@ -14454,9 +14484,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.30740",
+   "s2_url": "https://www.semanticscholar.org/paper/8b480fd590341f42acbf974640098eb6c9927e33",
    "image": "",
    "first_seen": "2026-11-24T10:26:14Z",
-   "s2_url": "https://www.semanticscholar.org/paper/8b480fd590341f42acbf974640098eb6c9927e33",
    "week": "2026-W48"
   },
   {
@@ -16007,8 +16037,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/84b83ad43a045d05591d905f46b56103a81d0647",
    "first_seen": "2026-11-24T22:54:58Z",
+   "s2_url": "https://www.semanticscholar.org/paper/84b83ad43a045d05591d905f46b56103a81d0647",
    "week": "2026-W47"
   },
   {
@@ -16652,8 +16682,8 @@
     "emerging-memory"
    ],
    "companies": [],
-   "first_seen": "2026-11-24T22:54:58Z",
    "s2_url": "https://www.semanticscholar.org/paper/c82ba1c599151468db6f11d75e2148cfc1ac7dcc",
+   "first_seen": "2026-11-24T22:54:58Z",
    "week": "2026-W47"
   },
   {
@@ -18622,8 +18652,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/1060355cbd23925548fae3c20e118ad9835f50dc",
    "first_seen": "2026-11-21T19:52:37Z",
+   "s2_url": "https://www.semanticscholar.org/paper/1060355cbd23925548fae3c20e118ad9835f50dc",
    "week": "2026-W47"
   },
   {
@@ -19224,8 +19254,8 @@
     "process"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/3598153ecda234d2a8c7f0bc5170451588f6fcf5",
    "first_seen": "2026-11-21T19:52:37Z",
+   "s2_url": "https://www.semanticscholar.org/paper/3598153ecda234d2a8c7f0bc5170451588f6fcf5",
    "week": "2026-W47"
   },
   {
@@ -23716,8 +23746,8 @@
     "reliability"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/f7b54f9a708a29c450d610f6544b67081bbf2059",
    "first_seen": "2026-11-20T20:50:36Z",
+   "s2_url": "https://www.semanticscholar.org/paper/f7b54f9a708a29c450d610f6544b67081bbf2059",
    "week": "2026-W47"
   },
   {
@@ -23775,9 +23805,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.26567",
+   "s2_url": "https://www.semanticscholar.org/paper/ceb49d47cf3d429088f04d37918e5776b4efb697",
    "image": "",
    "first_seen": "2026-11-20T07:43:46Z",
-   "s2_url": "https://www.semanticscholar.org/paper/ceb49d47cf3d429088f04d37918e5776b4efb697",
    "week": "2026-W47"
   },
   {
@@ -24549,8 +24579,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/21c78f7cf53dd0dfdb8611a242be936b7e283c50",
    "first_seen": "2026-11-20T20:50:36Z",
+   "s2_url": "https://www.semanticscholar.org/paper/21c78f7cf53dd0dfdb8611a242be936b7e283c50",
    "week": "2026-W47"
   },
   {
@@ -27485,8 +27515,8 @@
     "modeling"
    ],
    "companies": [],
-   "first_seen": "2026-11-19T21:06:04Z",
    "s2_url": "https://www.semanticscholar.org/paper/e55818a3c6e60bf0601e07e883d31bd1a85dd7dd",
+   "first_seen": "2026-11-19T21:06:04Z",
    "week": "2026-W47"
   },
   {
@@ -27662,8 +27692,8 @@
     "materials"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/c1cb737276e6bd7be94dead9ab6de48cf762a7de",
    "first_seen": "2026-11-18T21:02:25Z",
+   "s2_url": "https://www.semanticscholar.org/paper/c1cb737276e6bd7be94dead9ab6de48cf762a7de",
    "week": "2026-W47"
   },
   {
@@ -28583,8 +28613,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/286708fb2c1967c99eed05c22635dfc51ac84644",
    "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/286708fb2c1967c99eed05c22635dfc51ac84644",
    "week": "2026-W47"
   },
   {
@@ -30090,9 +30120,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.22694",
-   "s2_url": "https://www.semanticscholar.org/paper/c5a870e0923ed2ab11018f05a4fe9166e26e81af",
    "image": "",
    "first_seen": "2026-11-18T08:00:40Z",
+   "s2_url": "https://www.semanticscholar.org/paper/c5a870e0923ed2ab11018f05a4fe9166e26e81af",
    "week": "2026-W47"
   },
   {
@@ -31009,9 +31039,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.22772",
-   "s2_url": "https://www.semanticscholar.org/paper/10227cb257fcf76aacdc4ed593799b21fb20494e",
    "image": "",
    "first_seen": "2026-11-18T08:00:40Z",
+   "s2_url": "https://www.semanticscholar.org/paper/10227cb257fcf76aacdc4ed593799b21fb20494e",
    "week": "2026-W47"
   },
   {
@@ -31750,9 +31780,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.22937",
-   "s2_url": "https://www.semanticscholar.org/paper/6a171d256aa4ea11ca3d0a1f593a2ede21575edb",
    "image": "https://arxiv.org/html/2611.22937/2611.22937v1/heatmap_cost_function_saturation_throughput.png",
    "first_seen": "2026-11-18T08:00:40Z",
+   "s2_url": "https://www.semanticscholar.org/paper/6a171d256aa4ea11ca3d0a1f593a2ede21575edb",
    "week": "2026-W47"
   },
   {
@@ -34299,39 +34329,6 @@
    "image": ""
   },
   {
-   "id": "arxiv:2611.21594",
-   "arxiv_id": "2611.21594",
-   "title": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
-   "abstract": "Cryogenic circuit design requires compact transistor models that reproduce measured low-temperature behavior and run in standard circuit simulators. We fit BSIM4 parameters to measured I-V curves of SkyWater 130 nm (SKY130) transistors at 77 K using a neural surrogate of NGSpice. The surrogate maps compact-model parameters and device geometry to the complete set of output and transfer characteristics. Extraction is a bounded least-squares search: a bank of NGSpice simulations supplies initial candidates, finite differences of the surrogate supply the local Jacobian, and NGSpice re-simulates the resulting cards before selection. On 18 measured geometries, we compare a search over seven card parameters with a search over 43 parameters selected by NGSpice sensitivity. Relative to NGSpice re-simulations of the previously released cards, the two searches reduce the in-sample mean relative root-mean-square error (RRMS) by 17% and 26%, respectively. The 43-parameter search has the lower overall error, but the seven-parameter search has the lower mean on high-bias curves, and some individual curves have higher error than with the released cards under both searches.",
-   "authors": [
-    "Aaron Wang",
-    "Olivia Gzamouranis",
-    "Vaibhav Lohia",
-    "Hershel Fei Xun Weiner",
-    "Olivia Seidel",
-    "Richard Cavanaugh",
-    "Giuseppe Di Guglielmo",
-    "Nhan Tran"
-   ],
-   "url": "https://arxiv.org/abs/2611.21594",
-   "pdf": "https://arxiv.org/pdf/2611.21594v1",
-   "doi": "10.48550/arxiv.2611.21594",
-   "venue": "arXiv physics.ins-det",
-   "source": "arXiv",
-   "published": "2026-11-16T18:57:06Z",
-   "search_topic": "modeling",
-   "hub": "device",
-   "topics": [
-    "modeling"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2611.21594/2611.21594v1/rrms_single_device_chart.png",
-   "first_seen": "2026-11-17T08:23:46Z",
-   "field": "Engineering",
-   "s2_url": "https://www.semanticscholar.org/paper/84dcc3b35d39632a508811ae7ab9c1fa6187575c",
-   "week": "2026-W47"
-  },
-  {
    "id": "arxiv:2611.21577",
    "arxiv_id": "2611.21577",
    "title": "When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents",
@@ -35367,6 +35364,44 @@
    "week": "2026-W47"
   },
   {
+   "id": "arxiv:2611.21594",
+   "title": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
+   "abstract": "Cryogenic circuit design requires compact transistor models that reproduce measured low-temperature behavior and run in standard circuit simulators. We fit BSIM4 parameters to measured I-V curves of SkyWater 130 nm (SKY130) transistors at 77 K using a neural surrogate of NGSpice. The surrogate maps compact-model parameters and device geometry to the complete set of output and transfer characteristics. Extraction is a bounded least-squares search: a bank of NGSpice simulations supplies initial candidates, finite differences of the surrogate supply the local Jacobian, and NGSpice re-simulates the resulting cards before selection. On 18 measured geometries, we compare a search over seven card parameters with a search over 43 parameters selected by NGSpice sensitivity. Relative to NGSpice re-simulations of the previously released cards, the two searches reduce the in-sample mean relative root-mean-square error (RRMS) by 17% and 26%, respectively. The 43-parameter search has the lower overall error, but the seven-parameter search has the lower mean on high-bias curves, and some individual curves have higher error than with the released cards under both searches.",
+   "authors": [
+    "Aaron Wang",
+    "Olivia Gzamouranis",
+    "Vaibhav Lohia",
+    "Hershel Weiner",
+    "O. Seidel",
+    "R. Cavanaugh",
+    "G. Di Guglielmo",
+    "Nhan Tran"
+   ],
+   "url": "https://arxiv.org/abs/2611.21594",
+   "pdf": "https://arxiv.org/pdf/2611.21594v1",
+   "doi": "10.48550/arxiv.2611.21594",
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-11-16T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/84dcc3b35d39632a508811ae7ab9c1fa6187575c",
+   "s2_fields": [
+    "Physics",
+    "Computer Science"
+   ],
+   "search_topic": "modeling",
+   "hub": "device",
+   "topics": [
+    "modeling"
+   ],
+   "companies": [],
+   "arxiv_id": "2611.21594",
+   "image": "https://arxiv.org/html/2611.21594/2611.21594v1/rrms_single_device_chart.png",
+   "first_seen": "2026-11-17T08:23:46Z",
+   "field": "Engineering",
+   "week": "2026-W47"
+  },
+  {
    "id": "doi:10.1145/3841580.3841623",
    "title": "Surgical Suppression of LLM Sycophancy via Sparse Autoencoder Feature Intervention",
    "abstract": "Large language models (LLMs) often exhibit sycophancy: they bend analyses toward a user’s stated preference rather than maintain an objective stance, undermining their value as decision-support agents in human–agent interaction. We propose a fine-grained intervention that suppresses sycophantic behavior without retraining. Using a pre-trained Sparse Autoencoder (SAE) on the residual stream of gemma-2-9b-it, we decompose hidden states into sparse interpretable features. Candidate sycophancy features are selected by combining a gradient-based importance score with a sycophancy-specificity log-ratio and removed at inference time via zero-ablation. On the SycophancyEval Feedback benchmark, intervening at layer 31 reduces the sycophancy rate from \\(41.0\\%\\) to \\(34.8\\%\\) (p < 0.001, McNemar), turns \\(34.7\\%\\) of originally sycophantic responses neutral, and improves fluency. The effect transfers to held-out prompts, consistent with a substantial part of sycophancy being mediated by a small set of late-layer features, and suggesting sparse features as a runtime control surface for keeping interactive agents objective.",
@@ -35907,8 +35942,8 @@
     "vlsi"
    ],
    "companies": [],
-   "first_seen": "2026-11-14T11:05:09Z",
    "s2_url": "https://www.semanticscholar.org/paper/95e982d6356aef8d0b1ff1ad45e59b36df3f9ce8",
+   "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W47"
   },
   {
@@ -36590,8 +36625,8 @@
     "emerging-memory"
    ],
    "companies": [],
-   "first_seen": "2026-11-17T20:22:43Z",
    "s2_url": "https://www.semanticscholar.org/paper/17900bd5c2da0b927558d1b60aa51cd2bf2e4b59",
+   "first_seen": "2026-11-17T20:22:43Z",
    "week": "2026-W47"
   },
   {
@@ -41172,6 +41207,36 @@
    "companies": [],
    "image": "",
    "first_seen": "2026-11-17T08:23:46Z",
+   "week": "2026-W46"
+  },
+  {
+   "id": "arxiv:2611.19544",
+   "arxiv_id": "2611.19544",
+   "title": "DT-MATCH: Defect- and Topology-Aware Chiplet Matching for Yield Optimization in Heterogeneous Integration",
+   "abstract": "Heterogeneous integration (HI) and advanced packaging enable chiplet-based system-on-chip (SoC) designs; however, they also introduce new yield challenges arising from manufacturing defects and complex die-to-die (D2D) interconnect constraints. In particular, lane-level defects, limited spares, and strict structural compatibility requirements impede the efficient assembly of functional systems from defective but repairable chiplets. We present DT-MATCH, a defect- and topology-aware chiplet matching framework that maximizes the number of functional SoCs under realistic assembly constraints. DT-MATCH provides two complementary approaches. The integer linear programming (ILP)-based approach is implemented using a batching strategy to approximate the exact formulation. The greedy randomized adaptive search procedure (GRASP)-based approach provides substantial acceleration, but it does not guarantee yield optimality. Both approaches use a preprocessing pipeline to reduce the problem size. Experimental results on industrial designs demonstrate that, as expected, the ILP-based approach achieves superior solution quality. The GRASP-based approach leads to lower runtimes while still achieving solution quality that is comparable to the ILP-based solution. Together, these methods provide a trade-off between solution quality and efficiency for practical chiplet assembly optimization.",
+   "authors": [
+    "Xuanyi Tan",
+    "Sanmitra Banerjee",
+    "Dhruv Thapar",
+    "Sreejit Chakravarty",
+    "Krishnendu Chakrabarty"
+   ],
+   "url": "https://arxiv.org/abs/2611.19544",
+   "pdf": "https://arxiv.org/pdf/2611.19544v1",
+   "doi": "10.1109/ITC64303.2026.00034",
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "published": "2026-11-14T18:13:04Z",
+   "search_topic": "packaging",
+   "hub": "device",
+   "topics": [
+    "packaging",
+    "process"
+   ],
+   "companies": [],
+   "image": "https://arxiv.org/html/2611.19544/2611.19544v1/SEC2.png",
+   "first_seen": "2026-11-17T08:23:46Z",
+   "s2_url": "https://www.semanticscholar.org/paper/f50424b07e81beec4324a8569f6548031f69a2df",
    "week": "2026-W46"
   },
   {
@@ -45859,8 +45924,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/6f599d239156e098c690f60f06ec00528c2663af",
    "first_seen": "2026-11-16T22:39:05Z",
+   "s2_url": "https://www.semanticscholar.org/paper/6f599d239156e098c690f60f06ec00528c2663af",
    "week": "2026-W46"
   },
   {
@@ -46286,8 +46351,8 @@
     "power-devices"
    ],
    "companies": [],
-   "first_seen": "2026-11-14T18:40:36Z",
    "s2_url": "https://www.semanticscholar.org/paper/da7bf407a62edce4789ad923fb38e521945e2dc4",
+   "first_seen": "2026-11-14T18:40:36Z",
    "week": "2026-W46"
   },
   {
@@ -46347,9 +46412,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.17627",
+   "s2_url": "https://www.semanticscholar.org/paper/8d247283d80e688ac5659f15e97202f30984a501",
    "image": "https://arxiv.org/html/2611.17627/2611.17627v1/fig1.png",
    "first_seen": "2026-11-16T07:05:00Z",
-   "s2_url": "https://www.semanticscholar.org/paper/8d247283d80e688ac5659f15e97202f30984a501",
    "week": "2026-W46"
   },
   {
@@ -46382,8 +46447,8 @@
     "vlsi"
    ],
    "companies": [],
-   "first_seen": "2026-11-14T18:40:36Z",
    "s2_url": "https://www.semanticscholar.org/paper/b8ad0606e1bc84409e620351eb8a555b2d7f2774",
+   "first_seen": "2026-11-14T18:40:36Z",
    "week": "2026-W46"
   },
   {
@@ -48751,8 +48816,8 @@
    "companies": [
     "imec"
    ],
-   "s2_url": "https://www.semanticscholar.org/paper/4efee1e599ff0fceee35379dc16bcd0491e09720",
    "first_seen": "2026-11-21T19:52:37Z",
+   "s2_url": "https://www.semanticscholar.org/paper/4efee1e599ff0fceee35379dc16bcd0491e09720",
    "week": "2026-W46"
   },
   {
@@ -49618,8 +49683,8 @@
     "dielectrics"
    ],
    "companies": [],
-   "first_seen": "2026-11-13T19:59:48Z",
    "s2_url": "https://www.semanticscholar.org/paper/bb7eff219a7d6ae9364bed7d6fe43e3da54841e2",
+   "first_seen": "2026-11-13T19:59:48Z",
    "week": "2026-W46"
   },
   {
@@ -50192,8 +50257,8 @@
     "interconnects"
    ],
    "companies": [],
-   "first_seen": "2026-11-13T19:59:48Z",
    "s2_url": "https://www.semanticscholar.org/paper/4f1256b434795091c31f2859eb49a8554d72058d",
+   "first_seen": "2026-11-13T19:59:48Z",
    "week": "2026-W46"
   },
   {
@@ -51326,6 +51391,37 @@
    "week": "2026-W46"
   },
   {
+   "id": "arxiv:2611.15951",
+   "arxiv_id": "2611.15951",
+   "title": "Starscream: Reimagining LLM Sharding on AMD Instinct GPUs with GPU Partitioning",
+   "abstract": "As GPU accelerators grow larger to meet rising compute demands, they exhibit increasingly pronounced non-uniform memory access (NUMA) characteristics that challenge existing LLM frameworks. Chiplet-based architectures provide a practical path to larger GPUs while mitigating manufacturing yield constraints. Modern GPUs such as AMD Instinct MI300X employs such a multi-die design, and further offer GPU partitioning capabilities, partitioning a single physical GPU into multiple logical devices with NUMA-aware memory domains, promising faster kernel launches, and reduced memory access latencies with improved locality. However, current parallelization strategies, designed for homogeneous GPU topologies, when applied under partitioning, extend its unidimensional sharding causing significant performance degradation. Three bottlenecks emerge: (1) memory redundancy; (2) arithmetic intensity collapse; (3) communication overhead from flat collectives. We present Starscream, a rethinking of LLM sharding for the chiplet era. Rather than stretching inter-GPU sharding thinner, Starscream adds intra-GPU sharding along an orthogonal dimension, grounded in three foundational principles: kernel shape preservation, memory redundancy elimination, and communication overhead minimization. These principles form the basis for extending any sharding strategy into the partitioning regime. We demonstrate their effectiveness using tensor parallelism as a case study. On AMD MI300X and MI355X, exploiting partitioning capabilities yields up to 4x speedup for attention and 1.43x for fused GEMMs compared to chiplet-oblivious baselines, demonstrating the effectiveness of chiplet-aware designs. Starscream's principles generalize across sharding strategies and future architectures.",
+   "authors": [
+    "Sumanth Gudaparthi",
+    "Smeet Chheda",
+    "Ganesh Dasika"
+   ],
+   "url": "https://arxiv.org/abs/2611.15951",
+   "pdf": "https://arxiv.org/pdf/2611.15951v1",
+   "doi": "10.48550/arxiv.2611.15951",
+   "venue": "arXiv cs.DC",
+   "source": "arXiv",
+   "published": "2026-11-11T19:44:22Z",
+   "search_topic": "packaging",
+   "hub": "device",
+   "topics": [
+    "packaging",
+    "process"
+   ],
+   "companies": [
+    "AMD"
+   ],
+   "image": "https://arxiv.org/html/2611.15951/2611.15951v1/figures/mi300x-architecture.png",
+   "first_seen": "2026-11-13T07:00:26Z",
+   "field": "Computer Science",
+   "s2_url": "https://www.semanticscholar.org/paper/4aa007f579f78106d05e94da138eeb329ebbb989",
+   "week": "2026-W46"
+  },
+  {
    "id": "arxiv:2611.15925",
    "arxiv_id": "2611.15925",
    "title": "ShadowBench: Exposing Lexical Anchoring and the Illusion of Forgetting in Large Language Models",
@@ -52382,43 +52478,8 @@
     "dielectrics"
    ],
    "companies": [],
-   "first_seen": "2026-11-12T20:21:23Z",
    "s2_url": "https://www.semanticscholar.org/paper/c4c1399c34dd7ff063b5417e6614178d818ebede",
-   "week": "2026-W46"
-  },
-  {
-   "id": "arxiv:2611.15951",
-   "title": "Starscream: Reimagining LLM Sharding on AMD Instinct GPUs with GPU Partitioning",
-   "abstract": "As GPU accelerators grow larger to meet rising compute demands, they exhibit increasingly pronounced non-uniform memory access (NUMA) characteristics that challenge existing LLM frameworks. Chiplet-based architectures provide a practical path to larger GPUs while mitigating manufacturing yield constraints. Modern GPUs such as AMD Instinct MI300X employs such a multi-die design, and further offer GPU partitioning capabilities, partitioning a single physical GPU into multiple logical devices with NUMA-aware memory domains, promising faster kernel launches, and reduced memory access latencies with improved locality. However, current parallelization strategies, designed for homogeneous GPU topologies, when applied under partitioning, extend its unidimensional sharding causing significant performance degradation. Three bottlenecks emerge: (1) memory redundancy; (2) arithmetic intensity collapse; (3) communication overhead from flat collectives. We present Starscream, a rethinking of LLM sharding for the chiplet era. Rather than stretching inter-GPU sharding thinner, Starscream adds intra-GPU sharding along an orthogonal dimension, grounded in three foundational principles: kernel shape preservation, memory redundancy elimination, and communication overhead minimization. These principles form the basis for extending any sharding strategy into the partitioning regime. We demonstrate their effectiveness using tensor parallelism as a case study. On AMD MI300X and MI355X, exploiting partitioning capabilities yields up to 4x speedup for attention and 1.43x for fused GEMMs compared to chiplet-oblivious baselines, demonstrating the effectiveness of chiplet-aware designs. Starscream's principles generalize across sharding strategies and future architectures.",
-   "authors": [
-    "Sumanth Gudaparthi",
-    "Smeet Chheda",
-    "Ganesh S. Dasika"
-   ],
-   "url": "https://arxiv.org/abs/2611.15951",
-   "pdf": "https://arxiv.org/pdf/2611.15951v1",
-   "doi": "10.48550/arxiv.2611.15951",
-   "venue": "arXiv",
-   "source": "Semantic Scholar",
-   "published": "2026-11-11T00:00:00Z",
-   "cited_by": 0,
-   "s2_url": "https://www.semanticscholar.org/paper/4aa007f579f78106d05e94da138eeb329ebbb989",
-   "s2_fields": [
-    "Computer Science"
-   ],
-   "search_topic": "packaging",
-   "hub": "device",
-   "topics": [
-    "packaging",
-    "process"
-   ],
-   "companies": [
-    "AMD"
-   ],
-   "arxiv_id": "2611.15951",
-   "image": "https://arxiv.org/html/2611.15951/2611.15951v1/figures/mi300x-architecture.png",
-   "first_seen": "2026-11-13T07:00:26Z",
-   "field": "Computer Science",
+   "first_seen": "2026-11-12T20:21:23Z",
    "week": "2026-W46"
   },
   {
@@ -52701,8 +52762,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/b9b9e56fa5c894c82a435f9190419c982b9bfabe",
    "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/b9b9e56fa5c894c82a435f9190419c982b9bfabe",
    "week": "2026-W46"
   },
   {
@@ -52727,9 +52788,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.15438",
+   "s2_url": "https://www.semanticscholar.org/paper/fdbcefdf3e554440667397cbea68ba5543a9ca90",
    "image": "https://arxiv.org/html/2611.15438/2611.15438v1/fig1_halo_maps.png",
    "first_seen": "2026-11-13T07:00:26Z",
-   "s2_url": "https://www.semanticscholar.org/paper/fdbcefdf3e554440667397cbea68ba5543a9ca90",
    "week": "2026-W46"
   },
   {
@@ -53726,8 +53787,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/05e3b19a927b999ee4af2dcc1c155df69d5c4936",
    "first_seen": "2026-11-12T20:21:23Z",
+   "s2_url": "https://www.semanticscholar.org/paper/05e3b19a927b999ee4af2dcc1c155df69d5c4936",
    "week": "2026-W46"
   },
   {
@@ -55616,7 +55677,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/52309f187e6ad986f512ed6f2dd9d5a77a66a9c2",
    "s2_fields": [],
-   "search_topic": "packaging",
+   "search_topic": "reliability",
    "hub": "device",
    "topics": [
     "logic-devices",
@@ -56145,8 +56206,8 @@
     "reliability"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/0a7e4dcf59aebf615486d5241020b6460b85c2ad",
    "first_seen": "2026-11-11T19:51:02Z",
+   "s2_url": "https://www.semanticscholar.org/paper/0a7e4dcf59aebf615486d5241020b6460b85c2ad",
    "week": "2026-W46"
   },
   {
@@ -57706,8 +57767,8 @@
     "packaging"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/601b7f1d81a9ca51700fc2bde86cb1d983cbf6a0",
    "first_seen": "2026-11-18T21:02:25Z",
+   "s2_url": "https://www.semanticscholar.org/paper/601b7f1d81a9ca51700fc2bde86cb1d983cbf6a0",
    "week": "2026-W46"
   },
   {
@@ -58068,8 +58129,8 @@
    "companies": [
     "Nvidia"
    ],
-   "s2_url": "https://www.semanticscholar.org/paper/94878c30621057da4fdce58e1d73c12d37b629e0",
    "first_seen": "2026-11-18T21:02:25Z",
+   "s2_url": "https://www.semanticscholar.org/paper/94878c30621057da4fdce58e1d73c12d37b629e0",
    "week": "2026-W46"
   },
   {
@@ -60094,8 +60155,8 @@
     "reliability"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/5eed3e5acfb811fa484f9e54aa7d65a42cf3a4be",
    "first_seen": "2026-11-10T10:18:14Z",
+   "s2_url": "https://www.semanticscholar.org/paper/5eed3e5acfb811fa484f9e54aa7d65a42cf3a4be",
    "week": "2026-W46"
   },
   {
@@ -60659,8 +60720,8 @@
     "reliability"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/00da6a9c77dc6ed0b8a4a58a6ad0bb950e14ad65",
    "first_seen": "2026-11-10T10:18:14Z",
+   "s2_url": "https://www.semanticscholar.org/paper/00da6a9c77dc6ed0b8a4a58a6ad0bb950e14ad65",
    "week": "2026-W45"
   },
   {
@@ -61595,31 +61656,32 @@
   },
   {
    "id": "doi:10.1145/3861020",
-   "title": "LV-RM 3: Logic Synthesis and Verification of Computing-in-Memory Systems Using 3-Input Resistive Majority Gates",
-   "abstract": "Resistive random-access memory (ReRAM) is a promising non-volatile technology that enables both data storage and in-memory Boolean computation, with 3-input resistive majority (RM \\({}_{3}\\)) logic as a native computational primitive. Efficiently synthesizing, mapping, and verifying RM \\({}_{3}\\) -based logic under device constraints remains a critical challenge for ReRAM-based computing-in-memory (CiM) architectures. This paper presents an end-to-end framework for logic synthesis, mapping, and verification tailored to RM \\({}_{3}\\) -based ReRAM systems. The proposed approach employs an RM \\({}_{3}\\) -based logic representation and integrates exact synthesis, algebraic rewriting, and inversion-aware optimization to reduce logic complexity and hardware cost. A dynamic mapping and instruction-generation strategy is further developed to optimize execution efficiency and resource utilization on crossbar arrays. To ensure correctness, a dedicated intermediate representation, ReRAM micro-operation intermediate representation (ReMOIR), is introduced to model stateful execution and enable SAT-based equivalence checking between logic specifications and generated micro-operation sequences. Experimental results on the EPFL benchmark suite demonstrate that the proposed method reduces logic network size and depth by 14% and 17.7%, respectively, compared to majority-inverter graph (MIG)-based approaches. In addition, it outperforms the SIMPLER MAGIC architecture, reducing execution cycles by 10.16% and ReRAM usage by 41.11%. The proposed framework is implemented in the open-source logic synthesis tool ALSO.",
+   "title": "LV-RM3: Logic Synthesis and Verification of Computing-in-Memory Systems Using 3-Input Resistive Majority Gates",
+   "abstract": "Resistive random-access memory (ReRAM) is a promising non-volatile technology that enables both data storage and in-memory Boolean computation, with 3-input resistive majority (RM \\({}_{3}\\) ) logic as a native computational primitive. Efficiently synthesizing, mapping, and verifying RM \\({}_{3}\\) -based logic under device constraints remains a critical challenge for ReRAM-based computing-in-memory (CiM) architectures. This paper presents an end-to-end framework for logic synthesis, mapping, and verification tailored to RM \\({}_{3}\\) -based ReRAM systems. The proposed approach employs an RM \\({}_{3}\\) -based logic representation and integrates exact synthesis, algebraic rewriting, and inversion-aware optimization to reduce logic complexity and hardware cost. A dynamic mapping and instruction-generation strategy is further developed to optimize execution efficiency and resource utilization on crossbar arrays. To ensure correctness, a dedicated intermediate representation, ReRAM micro-operation intermediate representation (ReMOIR), is introduced to model stateful execution and enable SAT-based equivalence checking between logic specifications and generated micro-operation sequences. Experimental results on the EPFL benchmark suite demonstrate that the proposed method reduces logic network size and depth by 14% and 17.7%, respectively, compared to majority-inverter graph (MIG)-based approaches. In addition, it outperforms the SIMPLER MAGIC architecture, reducing execution cycles by 10.16% and ReRAM usage by 41.11%. The proposed framework is implemented in the open-source logic synthesis tool ALSO.",
    "authors": [
     "Zhang Hu",
     "Ming Yan",
-    "Yinshui Xia",
-    "Lunyao Wang",
-    "Zhufei Chu"
+    "Yin-Shui Xia",
+    "Lun-Yao Wang",
+    "Zhu-Fei Chu"
    ],
    "url": "https://doi.org/10.1145/3861020",
    "pdf": "https://dl.acm.org/doi/pdf/10.1145/3861020?download=true",
    "doi": "10.1145/3861020",
    "venue": "ACM Journal on Emerging Technologies in Computing Systems",
-   "source": "OpenAlex",
+   "source": "Semantic Scholar",
    "published": "2026-11-07T00:00:00Z",
    "cited_by": 0,
-   "field": "Engineering",
+   "s2_url": "https://www.semanticscholar.org/paper/d44342712c417b8c14a50ad182f743e01fbebda1",
+   "s2_fields": [],
    "search_topic": "emerging-memory",
    "hub": "device",
    "topics": [
     "emerging-memory"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/d44342712c417b8c14a50ad182f743e01fbebda1",
    "first_seen": "2026-11-10T10:18:14Z",
+   "field": "Engineering",
    "week": "2026-W45"
   },
   {
@@ -63240,31 +63302,31 @@
    "week": "2026-W45"
   },
   {
-   "id": "arxiv:2611.08693",
-   "arxiv_id": "2611.08693",
-   "title": "Enabling Retraining-Free Accurate Inference in Analog Compute in Memory Accelerators",
-   "abstract": "Analog compute-in-memory (CIM) accelerators compute matrix-vector products directly inside memory arrays, eliminating weight movement and promising order-of-magnitude gains in inference efficiency. However, converter and device errors make pretrained models unusable on these arrays, and hardware-aware retraining is costly. We enable retraining-free, accurate inference of pretrained models on simple analog arrays with low-cost, shared calibration. Our key observation is that analog error depends on how each layer is represented on the array, and that this representation can be changed offline without changing the computation. We center the inputs and apply Hadamard rotations designed for analog arrays, which keep shared reference errors spread and confine input mixing to each array. Across CNNs, vision transformers and LLMs up to 14B parameters on PCM and ReRAM, the method brings vision models and larger LLMs within a few points of floating-point accuracy and matches or approaches published hardware-aware training without training any weights. On ReRAM with 6-bit ADCs, it restores ViT-B/16 from 37.4% to 82.9% and Phi-4 from 27.0% to 72.2%, both within 2.2 points of floating-point accuracy.",
+   "id": "doi:10.48550/arxiv.2611.08399",
+   "arxiv_id": "2611.08399",
+   "title": "Scaling Up Analog CIM: A Simulation Framework for Topology-Aware Mapping",
+   "abstract": "Analog compute-in-memory (CIM) enables energy-efficient AI inference by performing in-situ matrix multiplication. The growing demand for deploying larger models motivates chiplet integration to expand CIM capacity. However, simulation abstractions based on local operator costs and aggregate communication metrics obscure the impact of weight-mapping topology when CIM system scales up. We develop a phase analysis that quantifies how strongly mapping topology affects system performance across hardware configurations and how mapping optimization translates into latency gains. To evaluate and exploit this design space, we present Isobar, a simulation platform integrating CIM decompositions, heterogeneous execution, and resource modeling. Validated against silicon measurements and cycle-accurate simulation, Isobar provides reliable cost estimates that enable effective mapping search across model and hardware configurations. For Gemma-7B prefill, Isobar-guided mapping reduces communication time by 23.3% and end-to-end latency by 18.6% relative to the strongest baseline. Isobar's system-level modeling show that analog CIM retains energy-efficiency potential relative to GPU when scaled to thousands of dies, and identify topology-aware mapping as a key design dimension for efficient execution.",
    "authors": [
-    "George Karfakis",
-    "Puneet Gupta"
+    "Yuxin Ren",
+    "Danella Zhao",
+    "Huanrui Yang"
    ],
-   "url": "https://arxiv.org/abs/2611.08693",
-   "pdf": "https://arxiv.org/pdf/2611.08693v1",
-   "doi": "10.48550/arxiv.2611.08693",
+   "url": "https://arxiv.org/abs/2611.08399",
+   "pdf": "https://arxiv.org/pdf/2611.08399v1",
+   "doi": "10.48550/arxiv.2611.08399",
    "venue": "arXiv cs.AR",
    "source": "arXiv",
-   "published": "2026-11-05T20:49:55Z",
-   "search_topic": "emerging-memory",
+   "published": "2026-11-05T18:11:00Z",
+   "search_topic": "packaging",
    "hub": "device",
    "topics": [
-    "emerging-memory",
     "vlsi"
    ],
    "companies": [],
-   "image": "",
+   "image": "https://arxiv.org/html/2611.08399/2611.08399v1/fig2_platform.png",
    "first_seen": "2026-11-10T10:18:14Z",
    "field": "Engineering",
-   "s2_url": "https://www.semanticscholar.org/paper/4e47df6d8a5c2bc7b7f8f9237adf4bbae0c8cba4",
+   "s2_url": "https://www.semanticscholar.org/paper/66fed301410f2b3648b06785f4b7664b59c106f8",
    "week": "2026-W45"
   },
   {
@@ -63560,9 +63622,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.08405",
+   "s2_url": "https://www.semanticscholar.org/paper/68c4fbf8c37ea2389e194837d4b32ceff55820d0",
    "image": "https://arxiv.org/html/2611.08405/2611.08405v1/Fig1.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "s2_url": "https://www.semanticscholar.org/paper/68c4fbf8c37ea2389e194837d4b32ceff55820d0",
    "week": "2026-W45"
   },
   {
@@ -63690,38 +63752,6 @@
    "companies": [],
    "s2_url": "https://www.semanticscholar.org/paper/a62aabfd352ea6ddde248a16295664280357db67",
    "first_seen": "2026-11-10T10:18:14Z",
-   "week": "2026-W45"
-  },
-  {
-   "id": "doi:10.48550/arxiv.2611.08399",
-   "title": "Scaling Up Analog CIM: A Simulation Framework for Topology-Aware Mapping",
-   "abstract": "Analog compute-in-memory (CIM) enables energy-efficient AI inference by performing in-situ matrix multiplication. The growing demand for deploying larger models motivates chiplet integration to expand CIM capacity. However, simulation abstractions based on local operator costs and aggregate communication metrics obscure the impact of weight-mapping topology when CIM system scales up. We develop a phase analysis that quantifies how strongly mapping topology affects system performance across hardware configurations and how mapping optimization translates into latency gains. To evaluate and exploit this design space, we present Isobar, a simulation platform integrating CIM decompositions, heterogeneous execution, and resource modeling. Validated against silicon measurements and cycle-accurate simulation, Isobar provides reliable cost estimates that enable effective mapping search across model and hardware configurations. For Gemma-7B prefill, Isobar-guided mapping reduces communication time by 23.3% and end-to-end latency by 18.6% relative to the strongest baseline. Isobar's system-level modeling show that analog CIM retains energy-efficiency potential relative to GPU when scaled to thousands of dies, and identify topology-aware mapping as a key design dimension for efficient execution.",
-   "authors": [
-    "Yu-Xin Ren",
-    "Danella Zhao",
-    "Huan-Rui Yang"
-   ],
-   "url": "https://arxiv.org/abs/2611.08399",
-   "pdf": "https://arxiv.org/pdf/2611.08399v1",
-   "doi": "10.48550/arxiv.2611.08399",
-   "venue": "arXiv",
-   "source": "Semantic Scholar",
-   "published": "2026-11-05T00:00:00Z",
-   "cited_by": 0,
-   "s2_url": "https://www.semanticscholar.org/paper/66fed301410f2b3648b06785f4b7664b59c106f8",
-   "s2_fields": [
-    "Computer Science"
-   ],
-   "search_topic": "packaging",
-   "hub": "device",
-   "topics": [
-    "vlsi"
-   ],
-   "companies": [],
-   "arxiv_id": "2611.08399",
-   "image": "https://arxiv.org/html/2611.08399/2611.08399v1/fig2_platform.png",
-   "first_seen": "2026-11-10T10:18:14Z",
-   "field": "Engineering",
    "week": "2026-W45"
   },
   {
@@ -64476,6 +64506,38 @@
    "week": "2026-W45"
   },
   {
+   "id": "arxiv:2611.08693",
+   "title": "Enabling Retraining-Free Accurate Inference in Analog Compute in Memory Accelerators",
+   "abstract": "Analog compute-in-memory (CIM) accelerators compute matrix-vector products directly inside memory arrays, eliminating weight movement and promising order-of-magnitude gains in inference efficiency. However, converter and device errors make pretrained models unusable on these arrays, and hardware-aware retraining is costly. We enable retraining-free, accurate inference of pretrained models on simple analog arrays with low-cost, shared calibration. Our key observation is that analog error depends on how each layer is represented on the array, and that this representation can be changed offline without changing the computation. We center the inputs and apply Hadamard rotations designed for analog arrays, which keep shared reference errors spread and confine input mixing to each array. Across CNNs, vision transformers and LLMs up to 14B parameters on PCM and ReRAM, the method brings vision models and larger LLMs within a few points of floating-point accuracy and matches or approaches published hardware-aware training without training any weights. On ReRAM with 6-bit ADCs, it restores ViT-B/16 from 37.4% to 82.9% and Phi-4 from 27.0% to 72.2%, both within 2.2 points of floating-point accuracy.",
+   "authors": [
+    "George Karfakis",
+    "Puneet Gupta"
+   ],
+   "url": "https://arxiv.org/abs/2611.08693",
+   "pdf": "https://arxiv.org/pdf/2611.08693v1",
+   "doi": "10.48550/arxiv.2611.08693",
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-11-05T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/4e47df6d8a5c2bc7b7f8f9237adf4bbae0c8cba4",
+   "s2_fields": [
+    "Computer Science"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "emerging-memory",
+    "vlsi"
+   ],
+   "companies": [],
+   "arxiv_id": "2611.08693",
+   "image": "",
+   "first_seen": "2026-11-10T10:18:14Z",
+   "field": "Engineering",
+   "week": "2026-W45"
+  },
+  {
    "id": "doi:10.1117/1.jmm.26.1.011204",
    "title": "Effect of photoacid generator loading and quencher on development pathways in a model chemically amplified photoresist",
    "abstract": "BackgroundThe development in photolithography proceeds through multiple steps that require precise monitoring to capture each procedure. Although standard sensitivity analysis defines the static dose-to-clear endpoint, these conventional metrics fail to resolve the time-dependent physical and chemical pathways that dictate final pattern quality.AimWe aim to determine the effect of photoacid generator (PAG) loading and quencher additives on the sensitivity and time-resolved development pathways of a model chemically amplified photoresist exposed under extreme ultraviolet (EUV).ApproachInitial sensitivity analysis on silicon substrates established a dose-to-clear reference window for all resist formulations. Using this defined exposure range, a quartz crystal microbalance with resistance monitoring tracked real-time dissolution kinetics from low doses through full clearance in a diluted developer.ResultsDevelopment behavior was categorized into four distinct modes based on resonant frequency and motional resistance. Increasing PAG concentration or exposure dose systematically shifted the observed development behavior from diffusion-dominated uptake toward rapid bulk dissolution.ConclusionsSamples exhibiting similar final thicknesses can evolve through fundamentally distinct time-resolved development pathways. Here, we report a model photoresist formulation that transitions from swelling (at 5 wt.% PAG) to nonswelling behavior (at 10 and 20 wt.% PAG) during dissolution in a diluted developer. In addition, resists containing a photo-decomposable quencher required a higher exposure dose than their quencher-free counterparts to achieve similar dissolution behavior. Ultimately, these findings demonstrate that real-time kinetic measurements are essential to capture the critical, transient interfacial states that govern EUV resist dissolution.",
@@ -64649,8 +64711,8 @@
     "process"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/18bb3b23f0caffbcf2d9b61de81a40bd02e97f3b",
    "first_seen": "2026-11-10T10:18:14Z",
+   "s2_url": "https://www.semanticscholar.org/paper/18bb3b23f0caffbcf2d9b61de81a40bd02e97f3b",
    "week": "2026-W45"
   },
   {
@@ -65296,8 +65358,8 @@
     "process"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/ecaee26fb6fb48586b28437746a4adb7b76113eb",
    "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/ecaee26fb6fb48586b28437746a4adb7b76113eb",
    "week": "2026-W45"
   },
   {
@@ -65739,9 +65801,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.06127",
+   "s2_url": "https://www.semanticscholar.org/paper/962e042b1ab9f63507f9284baa512cef6d9f7c3c",
    "image": "https://arxiv.org/html/2611.06127/2611.06127v1/measurement_setup.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "s2_url": "https://www.semanticscholar.org/paper/962e042b1ab9f63507f9284baa512cef6d9f7c3c",
    "week": "2026-W45"
   },
   {
@@ -67386,9 +67448,9 @@
    ],
    "companies": [],
    "arxiv_id": "2611.05194",
+   "s2_url": "https://www.semanticscholar.org/paper/41c22d97bb0a9d0aa99b2a23f553d3e491ca5524",
    "image": "",
    "first_seen": "2026-11-10T10:18:14Z",
-   "s2_url": "https://www.semanticscholar.org/paper/41c22d97bb0a9d0aa99b2a23f553d3e491ca5524",
    "week": "2026-W45"
   },
   {
@@ -67685,8 +67747,8 @@
    "companies": [
     "Micron"
    ],
-   "s2_url": "https://www.semanticscholar.org/paper/79214601a23aa6e415439953185b25d070088962",
    "first_seen": "2026-11-10T10:18:14Z",
+   "s2_url": "https://www.semanticscholar.org/paper/79214601a23aa6e415439953185b25d070088962",
    "week": "2026-W45"
   },
   {
@@ -68718,8 +68780,8 @@
     "vlsi"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/d3ee77d0ac71c3829b28068ca0b4298cd92be4fb",
    "first_seen": "2026-11-14T07:14:54Z",
+   "s2_url": "https://www.semanticscholar.org/paper/d3ee77d0ac71c3829b28068ca0b4298cd92be4fb",
    "week": "2026-W45"
   },
   {
@@ -68838,8 +68900,8 @@
     "modeling"
    ],
    "companies": [],
-   "first_seen": "2026-11-14T07:14:54Z",
    "s2_url": "https://www.semanticscholar.org/paper/8b7940798f48373f46bf5c68b3decb2c07af7748",
+   "first_seen": "2026-11-14T07:14:54Z",
    "week": "2026-W45"
   },
   {
@@ -69162,7 +69224,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/33690fa051e18b8210d281a9b3b9764c9b0ffa63",
    "s2_fields": [],
-   "search_topic": "packaging",
+   "search_topic": "vlsi",
    "hub": "device",
    "topics": [
     "packaging"
@@ -70086,11 +70148,10 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/d12c90891137937f0fb7587cc3360fe8957eae29",
    "s2_fields": [],
-   "search_topic": "packaging",
-   "hub": "device",
+   "search_topic": "ai-hardware",
+   "hub": "ai",
    "topics": [
-    "interconnects",
-    "packaging"
+    "ai-hardware"
    ],
    "companies": [],
    "first_seen": "2026-11-14T11:05:09Z",
@@ -70795,7 +70856,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/47c0554cf52bf716aaeb284d968627a30133beed",
    "s2_fields": [],
-   "search_topic": "power-devices",
+   "search_topic": "modeling",
    "hub": "device",
    "topics": [
     "modeling",
@@ -72281,7 +72342,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/b251877fb9e0cfccc9b7232838d22cbaa84367c1",
    "s2_fields": [],
-   "search_topic": "packaging",
+   "search_topic": "vlsi",
    "hub": "device",
    "topics": [
     "packaging",
@@ -72341,7 +72402,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/981f0422ac16ebc0d0fce6c2aabef6251b6b8f28",
    "s2_fields": [],
-   "search_topic": "vlsi",
+   "search_topic": "modeling",
    "hub": "device",
    "topics": [
     "process"
@@ -73249,11 +73310,10 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/f02ec1a099a5e218366d5246b1076e7bc80d8c77",
    "s2_fields": [],
-   "search_topic": "ai-for-devices",
-   "hub": "ai",
+   "search_topic": "modeling",
+   "hub": "device",
    "topics": [
-    "ai-for-devices",
-    "ai-general"
+    "modeling"
    ],
    "companies": [],
    "first_seen": "2026-11-18T21:02:25Z",
@@ -73497,7 +73557,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/dfa252addfb34c6d62f3467d8a19e7d886abe2a1",
    "s2_fields": [],
-   "search_topic": "reliability",
+   "search_topic": "emerging-memory",
    "hub": "device",
    "topics": [
     "reliability",
@@ -76093,10 +76153,10 @@
    "s2_fields": [
     "Physics"
    ],
-   "search_topic": "ai-hardware",
-   "hub": "ai",
+   "search_topic": "emerging-memory",
+   "hub": "device",
    "topics": [
-    "ai-hardware"
+    "emerging-memory"
    ],
    "companies": [],
    "arxiv_id": "2610.39625",
@@ -76656,9 +76716,9 @@
    ],
    "companies": [],
    "arxiv_id": "2610.39420",
+   "s2_url": "https://www.semanticscholar.org/paper/2eb17b6304fd35adf822a2cf1cec7ff32ad5276d",
    "image": "https://arxiv.org/html/2610.39420/2610.39420v1/Depression_crop.png",
    "first_seen": "2026-11-10T10:18:14Z",
-   "s2_url": "https://www.semanticscholar.org/paper/2eb17b6304fd35adf822a2cf1cec7ff32ad5276d",
    "week": "2026-W44"
   },
   {
@@ -76990,8 +77050,8 @@
     "process"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/63e5c12d624cbb45cbc56a25d5d328c012e726c8",
    "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/63e5c12d624cbb45cbc56a25d5d328c012e726c8",
    "week": "2026-W44"
   },
   {
@@ -77561,8 +77621,8 @@
     "dielectrics"
    ],
    "companies": [],
-   "first_seen": "2026-11-14T11:05:09Z",
    "s2_url": "https://www.semanticscholar.org/paper/8278138510722c7149beea96cf26e014b6fda0fa",
+   "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W44"
   },
   {
@@ -78199,32 +78259,6 @@
    "week": "2026-W44"
   },
   {
-   "id": "arxiv:2610.37121",
-   "arxiv_id": "2610.37121",
-   "title": "Prospector: learning a compact graph traversal policy for scientific reasoning",
-   "abstract": "Scientific reasoning in specialized engineering fields depends on knowledge scattered across the literature, often proprietary and absent from frontier LLM training data. In such domains, frontier models tend to give generic answers. Knowledge graphs (KGs) can ground LLM reasoning. Because a graph is too large to provide in full, typical LLM+KG systems preselect a portion, deciding relevance before reasoning begins. Here we train a compact model, Prospector, to reason over a domain knowledge graph by traversing it step by step, seeking evidence in light of what it has already found. Prospector calls a small set of tools one at a time to progressively build its context, and answers with a chain of evidence that can be checked edge by edge against what its tools retrieved from the graph. On a knowledge graph built from the semiconductor-manufacturing literature, Prospector approaches the strongest off-the-shelf models given the same graph and tools, and it far exceeds off-the-shelf models answering closed-book or from a pre-selected portion of the graph. Although trained only on the semiconductor graph, Prospector transfers to unseen knowledge graphs from three other distinct fields: bio-inspired materials, per- and polyfluoroalkyl substances (PFAS) and materials properties. Served on a single GPU, Prospector answers faster and at a fraction of the cost of a hosted service, while keeping proprietary data on the owner's hardware. We find that the policy's latent state is indicative of its next move on both seen and unseen graphs, and modulating the latent state can steer the policy from one behavior mode to another. These results suggest a practical LLM + KG paradigm for scientific and engineering reasoning over private data, in which a compact model trained on a graph from published literature transfers its traversal to unseen graphs that stay with their owners.",
-   "authors": [
-    "Haiqian Yang",
-    "Markus J. Buehler"
-   ],
-   "url": "https://arxiv.org/abs/2610.37121",
-   "pdf": "https://arxiv.org/pdf/2610.37121v1",
-   "doi": null,
-   "venue": "arXiv cs.AI",
-   "source": "arXiv",
-   "published": "2026-10-27T12:21:37Z",
-   "search_topic": "modeling",
-   "hub": "device",
-   "topics": [
-    "modeling"
-   ],
-   "companies": [],
-   "image": "",
-   "first_seen": "2026-11-10T10:18:14Z",
-   "s2_url": "https://www.semanticscholar.org/paper/d1e5a9298c85adf5bd179952a5a07df9357611c8",
-   "week": "2026-W44"
-  },
-  {
    "id": "arxiv:2610.37033",
    "title": "p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM-RAG Pipeline",
    "abstract": "We present a fabricated SRAM DCIM Ising machine that performs set-level context selection for large language model (LLM) with retrieval-augmented generation (RAG). In RAG, the evidence-selection stage is increasingly delegated to repeated language-model reranking, which adds substantial energy to the inference pipeline. We reformulate evidence selection as a quadratic unconstrained binary optimization (QUBO) problem and solve it on a dual-mode digital compute-in-memory (DCIM) macro: the same multiply-and-accumulate datapath computes the embedding-similarity scores that populate the QUBO coefficients and evaluates the per-spin Hamiltonian differences that drive the anneal. The annealing temperature is set by a digital plane-count control along with the SRAM pseudo-read random bit flips, giving graded cooling entirely from on-chip digital configuration. The macro is taped-out in a 28 nm process [0.16 mm2, 0.41 mW] and is proposed to be integrated as part of the logic base-die in hybrid high-bandwidth memory (HBM) and high-bandwidth flash (HBF) stacks in a GPU package, where only the selected passage identifiers return to the host. Replacing the language-model selection pass with the near-memory Ising solver yields a macro normalized selection-energy estimate more than six orders of magnitude lower than the LLM-based baseline and reduces the evaluated total energy per query by 67%, while maintaining comparable token-level F1 on the evaluated examples.",
@@ -78731,6 +78765,37 @@
    "week": "2026-W44"
   },
   {
+   "id": "arxiv:2610.37121",
+   "title": "Prospector: learning a compact graph traversal policy for scientific reasoning",
+   "abstract": "Scientific reasoning in specialized engineering fields depends on knowledge scattered across the literature, often proprietary and absent from frontier LLM training data. In such domains, frontier models tend to give generic answers. Knowledge graphs (KGs) can ground LLM reasoning. Because a graph is too large to provide in full, typical LLM+KG systems preselect a portion, deciding relevance before reasoning begins. Here we train a compact model, Prospector, to reason over a domain knowledge graph by traversing it step by step, seeking evidence in light of what it has already found. Prospector calls a small set of tools one at a time to progressively build its context, and answers with a chain of evidence that can be checked edge by edge against what its tools retrieved from the graph. On a knowledge graph built from the semiconductor-manufacturing literature, Prospector approaches the strongest off-the-shelf models given the same graph and tools, and it far exceeds off-the-shelf models answering closed-book or from a pre-selected portion of the graph. Although trained only on the semiconductor graph, Prospector transfers to unseen knowledge graphs from three other distinct fields: bio-inspired materials, per- and polyfluoroalkyl substances (PFAS) and materials properties. Served on a single GPU, Prospector answers faster and at a fraction of the cost of a hosted service, while keeping proprietary data on the owner's hardware. We find that the policy's latent state is indicative of its next move on both seen and unseen graphs, and modulating the latent state can steer the policy from one behavior mode to another. These results suggest a practical LLM + KG paradigm for scientific and engineering reasoning over private data, in which a compact model trained on a graph from published literature transfers its traversal to unseen graphs that stay with their owners.",
+   "authors": [
+    "Hai-Qian Yang",
+    "Markus J. Buehler"
+   ],
+   "url": "https://arxiv.org/abs/2610.37121",
+   "pdf": "https://arxiv.org/pdf/2610.37121v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-27T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/d1e5a9298c85adf5bd179952a5a07df9357611c8",
+   "s2_fields": [
+    "Computer Science",
+    "Physics"
+   ],
+   "search_topic": "modeling",
+   "hub": "device",
+   "topics": [
+    "modeling"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.37121",
+   "image": "",
+   "first_seen": "2026-11-10T10:18:14Z",
+   "week": "2026-W44"
+  },
+  {
    "id": "doi:10.4071/001c.173330",
    "title": "Process Window Design Framework for Packaging Materials Using Physics-Informed Property Prediction Models",
    "abstract": "This study presents a physics-informed encoder-decoder model that directly predicts key material properties influencing warpage in semiconductor package substrates from process conditions. By integrating this model with a data‑driven pattern‑profile prediction model, we develop a process optimization framework that successfully recommends process windows to meet multiple property requirements simultaneously. This reduces development costs for semiconductor packages by replacing extensive trial-and-error experiments.",
@@ -79150,8 +79215,8 @@
     "process"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/2335e8178fa4e0ad5301d66b1907a9ffe799b3f5",
    "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/2335e8178fa4e0ad5301d66b1907a9ffe799b3f5",
    "week": "2026-W44"
   },
   {
@@ -79239,11 +79304,10 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/5c3bf880775df8aba4cf75698e70162dd8f00820",
    "s2_fields": [],
-   "search_topic": "packaging",
-   "hub": "device",
+   "search_topic": "ai-hardware",
+   "hub": "ai",
    "topics": [
-    "interconnects",
-    "reliability"
+    "ai-general"
    ],
    "companies": [],
    "first_seen": "2026-11-14T11:05:09Z",
@@ -79815,8 +79879,8 @@
     "interconnects"
    ],
    "companies": [],
-   "first_seen": "2026-11-14T11:05:09Z",
    "s2_url": "https://www.semanticscholar.org/paper/6beca6327ed626ebf76f6d7beba754502521195c",
+   "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W44"
   },
   {
@@ -85437,39 +85501,6 @@
    "week": "2026-W43"
   },
   {
-   "id": "arxiv:2610.27910",
-   "arxiv_id": "2610.27910",
-   "title": "Local learning with imperfect analog synapses",
-   "abstract": "Analog in-memory computing delivers efficient neural network inference at the edge, but systems deployed in non-stationary environments may need to adapt in situ to locally acquired data. Backpropagation faces two structural obstacles here. Its global error transport lets stochastic write errors compound across layers, and its backward pass demands bidirectional, high-precision peripheral circuitry absent from inference-oriented crossbar arrays. We introduce Channel-wise Spatial Gradient learning (CwSG), a strictly local, forward-only rule that trains each convolutional layer by rewarding spatial variation in its feature maps. In simulations replaying the measured trajectories of 1,189 phase-change memory and 1,268 filamentary memristor devices, CwSG learns with single, unverified, sub-1 V pulses. It matches backpropagation on phase-change memory with 59-fold fewer pulses and outperforms it by 53 percentage points on highly variable filamentary memristors, with 8-bit forward converters and without transposed crossbar reads or network-wide activation storage. Analog training thus becomes a problem of credit assignment, in which algorithmic design rather than hardware compensation alone overcomes severe programming noise.",
-   "authors": [
-    "Théo Dupuis",
-    "Adrien Renaudineau",
-    "Guillaume Bourgeois",
-    "Joel Minguet Lopez",
-    "Gabriele Navarro",
-    "Jean-Michel Portal",
-    "Elisa Vianello",
-    "Jacques-Olivier Klein"
-   ],
-   "url": "https://arxiv.org/abs/2610.27910",
-   "pdf": "https://arxiv.org/pdf/2610.27910v1",
-   "doi": null,
-   "venue": "arXiv cs.ET",
-   "source": "arXiv",
-   "published": "2026-10-20T09:23:26Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "emerging-memory",
-    "vlsi"
-   ],
-   "companies": [],
-   "image": "",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/879f4de3e64e54ac467f7a379008a623d43fcf37",
-   "week": "2026-W43"
-  },
-  {
    "id": "doi:10.1016/j.finel.2026.104659",
    "title": "Wafer-to-Wafer bonding: Part: I - The coupled physics problem and the 2D finite element implementation",
    "abstract": "Wafer-to-wafer (WxW) bonding is a key enabler for three-dimensional integration, including hybrid bonding for fine-pitch Cu–Cu interconnects. During bonding, wafer deformation and the air entrapped between the wafers interact through a strongly coupled, time-dependent fluid–structure interaction (FSI) that can produce non-intuitive bonding dynamics and process sensitivities. This paper develops a mathematically consistent reduced-order model for WxW bonding by deriving a Kirchhoff–Love plate equation for wafer bending from three-dimensional linear elasticity and coupling it to a Reynolds lubrication equation for the inter-wafer air film. The resulting nonlinear plate–Reynolds system is discretized and solved monolithically in the high-performance FEniCSx framework using a C 0 interior-penalty formulation for the fourth-order plate operator, standard continuous Galerkin discretization for the pressure field, implicit time integration, and a Newton solver with automatic differentiation. Simulations reproduce experimentally reported wafer displacement histories for multiple initial gaps and verify force equilibrium at the bond front, where the Reynolds pressure acts as an effective contact reaction. Parametric studies reveal nonlinear, and in some cases non-monotonic, sensitivities of bonding-front kinetics to the initial gap, air viscosity, and interfacial energy, providing actionable trends for process optimization.",
@@ -85648,8 +85679,8 @@
     "process"
    ],
    "companies": [],
-   "s2_url": "https://www.semanticscholar.org/paper/223a9562ccabaefb60054c7815dba26ccc135036",
    "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/223a9562ccabaefb60054c7815dba26ccc135036",
    "week": "2026-W43"
   },
   {
@@ -85748,6 +85779,43 @@
    "week": "2026-W43"
   },
   {
+   "id": "arxiv:2610.27910",
+   "title": "Local learning with imperfect analog synapses",
+   "abstract": "Analog in-memory computing delivers efficient neural network inference at the edge, but systems deployed in non-stationary environments may need to adapt in situ to locally acquired data. Backpropagation faces two structural obstacles here. Its global error transport lets stochastic write errors compound across layers, and its backward pass demands bidirectional, high-precision peripheral circuitry absent from inference-oriented crossbar arrays. We introduce Channel-wise Spatial Gradient learning (CwSG), a strictly local, forward-only rule that trains each convolutional layer by rewarding spatial variation in its feature maps. In simulations replaying the measured trajectories of 1,189 phase-change memory and 1,268 filamentary memristor devices, CwSG learns with single, unverified, sub-1 V pulses. It matches backpropagation on phase-change memory with 59-fold fewer pulses and outperforms it by 53 percentage points on highly variable filamentary memristors, with 8-bit forward converters and without transposed crossbar reads or network-wide activation storage. Analog training thus becomes a problem of credit assignment, in which algorithmic design rather than hardware compensation alone overcomes severe programming noise.",
+   "authors": [
+    "T. Dupuis",
+    "A. Renaudineau",
+    "G. Bourgeois",
+    "J. Minguet Lopez",
+    "Gabriele Navarro",
+    "J. Portal",
+    "E. Vianello",
+    "Jacques-Olivier Klein"
+   ],
+   "url": "https://arxiv.org/abs/2610.27910",
+   "pdf": "https://arxiv.org/pdf/2610.27910v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-20T00:00:00Z",
+   "cited_by": 1,
+   "s2_url": "https://www.semanticscholar.org/paper/879f4de3e64e54ac467f7a379008a623d43fcf37",
+   "s2_fields": [
+    "Computer Science"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "emerging-memory",
+    "vlsi"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.27910",
+   "image": "",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W43"
+  },
+  {
    "id": "doi:10.1088/1361-6463/aeaef7",
    "title": "In situ identification and oxygen-assisted suppression of residual-fluorocarbon-induced instabilities in purgeless atomic layer etching of SiO 2",
    "abstract": "Purgeless atomic layer etching (ALE) of SiO 2 has been proposed to simplify the conventional ALE process by eliminating the purge steps, and its feasibility for achieving self-limiting etching has been experimentally demonstrated. However, subsequent investigations revealed that the process suffers from non-ideal behaviors: ‘dragging decrease’ caused by residual fluorocarbon species, and ‘over-etching’ that may cause etch-per-cycle drift. These phenomena weaken the self-limiting nature essential for ALE yet have not been mechanistically studied in the purgeless ALE regime. In this study, simultaneous in situ ellipsometry and residual gas analysis are used to directly track residual gas-phase CF x species and examine their temporal relationship with dragging decrease and continuous over-etching in purgeless ALE. Oxygen is introduced into the etching step to scavenge residual species and suppress the instabilities, and the process monitoring confirms that O 2 addition effectively reduces residual CF x radicals, leading to the simultaneous suppression of dragging decrease and over-etching. According to the results, application of the oxygen-assisted approach in purgeless ALE successfully restores the self-limiting characteristics and ensures process stability. By mechanistically identifying the instabilities and demonstrating their suppression, this work supports the practical implementation of purgeless ALE.",
@@ -85792,7 +85860,7 @@
    "cited_by": 1,
    "s2_url": "https://www.semanticscholar.org/paper/570b867ed8eb7c3b33aa8ef383f467cda57d7273",
    "s2_fields": [],
-   "search_topic": "packaging",
+   "search_topic": "interconnects",
    "hub": "device",
    "topics": [
     "interconnects",
@@ -85949,40 +86017,6 @@
    "week": "2026-W43"
   },
   {
-   "id": "doi:10.48550/arxiv.2610.26530",
-   "arxiv_id": "2610.26530",
-   "title": "UnO-NeSy: Optimizing Neuro-Symbolic Computing with Unified FeFET Based In-Memory System",
-   "abstract": "Neuro-symbolic artificial intelligence (NeSy AI) combines neural perception with symbolic reasoning, enabling logical reasoning. Hyperdimensional computing (HDC) is promising for NeSy AI, owing to its high parallelism and strong robustness to noise. However, the dense neural operations and memory-intensive symbolic inference in NeSy impose a severe \"memory wall\" bottleneck. Existing NeSy accelerators either focus solely on symbolic kernels or rely on conventional digital architectures, lacking a unified and energy-efficient hardware substrate. Moreover, exploring optimal hardware design configurations often requires costly trial-and-error. In this work, we propose UnO-NeSy, a unified CiM framework for optimizing NeSy computing. UnO-NeSy consists of UnO-CiM, an ultra-low-power NeSy architecture based on a homogeneous 2FeFET--2R compute-in-memory (CiM) array that supports both neural computation and HDC reasoning, and UnO-Sim, a cross-workload, end-to-end CiM simulator that models device non-idealities, neural quantization effects, and HDC execution behavior for accurate system-level evaluation. Built on UnO-Sim, we further develop an automated optimizer to identify workload-specific operating points under coupled energy, accuracy, and hardware constraints. By optimizing the operating configuration of the baseline 2FeFET--2R design, UnO-NeSy achieves $61.8\\%$ higher energy efficiency and $38.2\\%$ lower full-system inference energy. Across seven RAVEN configurations, UnO-NeSy achieves $96.2\\%$ average reasoning accuracy under hardware non-idealities, demonstrating a practical and scalable path toward ultra-low-power NeSy hardware.",
-   "authors": [
-    "Yifei Zhou",
-    "Zhiying Zhu",
-    "Yuxiao Jiang",
-    "Yihan Mao",
-    "Jiaqi Zhang",
-    "Yuxiao Yang",
-    "Zhiguo Shi",
-    "Zheyu Yan"
-   ],
-   "url": "https://arxiv.org/abs/2610.26530",
-   "pdf": "https://arxiv.org/pdf/2610.26530v1",
-   "doi": "10.48550/arxiv.2610.26530",
-   "venue": "arXiv cs.ET",
-   "source": "arXiv",
-   "published": "2026-10-19T14:56:41Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "emerging-memory",
-    "vlsi"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2610.26530/2610.26530v1/overview.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "field": "Engineering",
-   "s2_url": "https://www.semanticscholar.org/paper/39c3b48d490f147b0df4690d2860820382e7bd69",
-   "week": "2026-W43"
-  },
-  {
    "id": "arxiv:2610.26131",
    "arxiv_id": "2610.26131",
    "title": "A Hybrid GPU and Processing-Near-Memory Architecture with Shared DRAM for Efficient Prefill-Decode Disaggregation",
@@ -86008,36 +86042,6 @@
    "companies": [],
    "image": "https://arxiv.org/html/2610.26131/2610.26131v1/Figure/intro3.png",
    "first_seen": "2026-11-14T11:05:09Z",
-   "week": "2026-W43"
-  },
-  {
-   "id": "arxiv:2610.26118",
-   "arxiv_id": "2610.26118",
-   "title": "Superposed analog memory for vector storage in neural networks",
-   "abstract": "The growing memory demands of artificial neural networks pose a major challenge for energy-efficient computing, particularly for models that rely on large collections of high-dimensional weight and embedding vectors. Conventional memory architectures store these vectors individually, requiring many memory cells per vector and limiting achievable storage density. Here we demonstrate an analog memory architecture that encodes multiple vectors in a distributed superposition within a single memory array. Individual vectors are recovered through in-memory matrix-vector multiplication, allowing the degree of superposition to be tuned to balance storage density against recall fidelity. This approach introduces a new scaling dimension for analog memory, in which effective storage density can be increased without a corresponding increase in the number of physical memory cells. The distributed representation also provides resilience to device-level noise. We implement the architecture on a prototype phase-change memory chip and experimentally evaluate it using embedding tables from deep learning recommendation models and large language models. The results demonstrate inference accuracy comparable to full-precision software baselines, establishing analog superposition as a promising route towards dense, energy-efficient memory for artificial intelligence.",
-   "authors": [
-    "Athanasios Vasilopoulos",
-    "Patrick Diener",
-    "Michael Hersche",
-    "Abbas Rahimi",
-    "Abu Sebastian"
-   ],
-   "url": "https://arxiv.org/abs/2610.26118",
-   "pdf": "https://arxiv.org/pdf/2610.26118v1",
-   "doi": "10.48550/arxiv.2610.26118",
-   "venue": "arXiv cs.ET",
-   "source": "arXiv",
-   "published": "2026-10-19T10:11:15Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "vlsi"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2610.26118/2610.26118v1/figure4.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "field": "Engineering",
-   "s2_url": "https://www.semanticscholar.org/paper/9f21a5276365cec7e5e3d8461db3a2138a5a0db0",
    "week": "2026-W43"
   },
   {
@@ -86093,6 +86097,44 @@
    ],
    "companies": [],
    "first_seen": "2026-11-18T21:02:25Z",
+   "week": "2026-W43"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2610.26530",
+   "title": "UnO-NeSy: Optimizing Neuro-Symbolic Computing with Unified FeFET Based In-Memory System",
+   "abstract": "Neuro-symbolic artificial intelligence (NeSy AI) combines neural perception with symbolic reasoning, enabling logical reasoning. Hyperdimensional computing (HDC) is promising for NeSy AI, owing to its high parallelism and strong robustness to noise. However, the dense neural operations and memory-intensive symbolic inference in NeSy impose a severe\"memory wall\"bottleneck. Existing NeSy accelerators either focus solely on symbolic kernels or rely on conventional digital architectures, lacking a unified and energy-efficient hardware substrate. Moreover, exploring optimal hardware design configurations often requires costly trial-and-error. In this work, we propose UnO-NeSy, a unified CiM framework for optimizing NeSy computing. UnO-NeSy consists of UnO-CiM, an ultra-low-power NeSy architecture based on a homogeneous 2FeFET--2R compute-in-memory (CiM) array that supports both neural computation and HDC reasoning, and UnO-Sim, a cross-workload, end-to-end CiM simulator that models device non-idealities, neural quantization effects, and HDC execution behavior for accurate system-level evaluation. Built on UnO-Sim, we further develop an automated optimizer to identify workload-specific operating points under coupled energy, accuracy, and hardware constraints. By optimizing the operating configuration of the baseline 2FeFET--2R design, UnO-NeSy achieves $61.8\\%$ higher energy efficiency and $38.2\\%$ lower full-system inference energy. Across seven RAVEN configurations, UnO-NeSy achieves $96.2\\%$ average reasoning accuracy under hardware non-idealities, demonstrating a practical and scalable path toward ultra-low-power NeSy hardware.",
+   "authors": [
+    "Yi-Fei Zhou",
+    "Zhi-Ying Zhu",
+    "Yu-Xiao Jiang",
+    "Yi-Han Mao",
+    "Jia-Qi Zhang",
+    "Yu-Xiao Yang",
+    "Zhi-Guo Shi",
+    "Zhe-Yu Yan"
+   ],
+   "url": "https://arxiv.org/abs/2610.26530",
+   "pdf": "https://arxiv.org/pdf/2610.26530v1",
+   "doi": "10.48550/arxiv.2610.26530",
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-19T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/39c3b48d490f147b0df4690d2860820382e7bd69",
+   "s2_fields": [
+    "Computer Science"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "emerging-memory",
+    "vlsi"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.26530",
+   "image": "https://arxiv.org/html/2610.26530/2610.26530v1/overview.png",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "field": "Engineering",
    "week": "2026-W43"
   },
   {
@@ -86247,6 +86289,40 @@
    "week": "2026-W43"
   },
   {
+   "id": "arxiv:2610.26118",
+   "title": "Superposed analog memory for vector storage in neural networks",
+   "abstract": "The growing memory demands of artificial neural networks pose a major challenge for energy-efficient computing, particularly for models that rely on large collections of high-dimensional weight and embedding vectors. Conventional memory architectures store these vectors individually, requiring many memory cells per vector and limiting achievable storage density. Here we demonstrate an analog memory architecture that encodes multiple vectors in a distributed superposition within a single memory array. Individual vectors are recovered through in-memory matrix-vector multiplication, allowing the degree of superposition to be tuned to balance storage density against recall fidelity. This approach introduces a new scaling dimension for analog memory, in which effective storage density can be increased without a corresponding increase in the number of physical memory cells. The distributed representation also provides resilience to device-level noise. We implement the architecture on a prototype phase-change memory chip and experimentally evaluate it using embedding tables from deep learning recommendation models and large language models. The results demonstrate inference accuracy comparable to full-precision software baselines, establishing analog superposition as a promising route towards dense, energy-efficient memory for artificial intelligence.",
+   "authors": [
+    "A. Vasilopoulos",
+    "Patrick Diener",
+    "M. Hersche",
+    "Abbas Rahimi",
+    "Abu Sebastian"
+   ],
+   "url": "https://arxiv.org/abs/2610.26118",
+   "pdf": "https://arxiv.org/pdf/2610.26118v1",
+   "doi": "10.48550/arxiv.2610.26118",
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-19T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/9f21a5276365cec7e5e3d8461db3a2138a5a0db0",
+   "s2_fields": [
+    "Computer Science"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "vlsi"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.26118",
+   "image": "https://arxiv.org/html/2610.26118/2610.26118v1/figure4.png",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "field": "Engineering",
+   "week": "2026-W43"
+  },
+  {
    "id": "doi:10.1021/acs.jpcc.6c01336",
    "title": "Strain-Induced Interfacial Bond Evolution and Facet-Dependent Strain Response of Electronic Properties in Oxidized Silicon Nanowires",
    "abstract": "Silicon nanowires (Si NWs) have emerged as promising candidates for next-generation nanoelectronic devices due to their tunable electronic properties, and compatibility with aggressive scaling requirements. The integration of strain further enhances their performance by modulating carrier mobility, band structure, and transport behavior without altering material chemistry. Within the NW, the silicon–silicon dioxide (Si–SiO2) interface serves as a critical region where strain redistribution and suboxide bonding collectively influence the mechanical and electronic response. Here, we combine reactive force field molecular dynamics and first-principles calculations to investigate how oxidation-induced interfacial structure and crystallographic facet orientation govern strain-dependent bond evolution and facet-dependent strain response of electronic properties in oxidized Si NWs. Simulated dry thermal oxidation generates chemically realistic Si–SiO2 interfaces, enabling direct characterization of bond order redistribution and stress gradient development across the interface under tensile strain. Interfacial Si–Si bonds exhibit elongation and reduced bond order associated with partial oxidation states, leading to localized stress concentration and preferential bond rupture. Complementary density functional theory calculations on facet-specific models reveal that orientation-dependent interfacial bonding modulates facet-dependent strain response of electronic properties. Together, these results establish a direct coupling between interfacial suboxide chemistry, mechanical deformation, and electronic structure, providing atomistic insight into strain-modulated behavior at oxidized silicon interfaces in faceted NWs.",
@@ -86299,8 +86375,8 @@
     "modeling"
    ],
    "companies": [],
-   "first_seen": "2026-11-14T11:05:09Z",
    "s2_url": "https://www.semanticscholar.org/paper/a1d6834429d315581eed8988cd27ea52d35da996",
+   "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W43"
   },
   {
@@ -88749,65 +88825,6 @@
    "week": "2026-W42"
   },
   {
-   "id": "arxiv:2610.19793",
-   "arxiv_id": "2610.19793",
-   "title": "Orientation-Dependent Universality of Spin-Conductance Fluctuations in d-Wave Altermagnets",
-   "abstract": "Universal conductance fluctuations reflect the symmetry and geometry of phase-coherent transport. However, it remains unclear whether crystal orientation relative to the device can tune fluctuation plateaus in spin-conserving altermagnets. Here, using quantum transport simulations of a two-dimensional $d$-wave altermagnet with scalar disorder, we show that crystal orientation tunes longitudinal and spin-Hall fluctuation plateaus while each spin sector remains in the orthogonal symmetry class. At intermediate disorder, tuning the crystal orientation toward the device diagonal weakens longitudinal spin-conductance fluctuations and enhances spin-Hall fluctuations. Both responses exhibit well-defined plateaus at the diagonal orientation, with amplitudes that depend only weakly on disorder and altermagnetic strength over the ranges studied. A variance decomposition shows that, at this orientation, increasing disorder drives the longitudinal spin-channel covariance toward zero, while the transverse covariance shifts from enhancing to suppressing the spin-Hall variance. Our findings suggest that spin-conductance fluctuations can probe transport anisotropy in altermagnets.",
-   "authors": [
-    "Yihan Zhang",
-    "Zheng Qin",
-    "Dong-Hui Xu",
-    "Junjie Zeng",
-    "Zhen Ning",
-    "Rui Wang"
-   ],
-   "url": "https://arxiv.org/abs/2610.19793",
-   "pdf": "https://arxiv.org/pdf/2610.19793v3",
-   "doi": null,
-   "venue": "arXiv cond-mat.mes-hall",
-   "source": "arXiv",
-   "published": "2026-10-14T08:38:09Z",
-   "search_topic": "modeling",
-   "hub": "device",
-   "topics": [
-    "modeling"
-   ],
-   "companies": [],
-   "first_seen": "2026-11-26T08:52:25Z",
-   "week": "2026-W42",
-   "image": "https://arxiv.org/html/2610.19793/2610.19793v3/Fig1.png"
-  },
-  {
-   "id": "arxiv:2610.19697",
-   "arxiv_id": "2610.19697",
-   "title": "CAFE: Conducting-Cell-Aware Adaptive Differential Encoding for Robust DNN Inference in FeFET-Based Compute-in-Memory",
-   "abstract": "Ferroelectric field-effect transistor (FeFET)-based compute-in-memory (CIM) promises energy-efficient deep neural network (DNN) inference, but device variation can severely degrade bit-sliced CIM accuracy. Prior works either rely on hardware modifications or treat such variation as generic noise, overlooking a key FeFET asymmetry: negligible off-state leakage makes errors dominated by conducting on-state cells. This asymmetry is amplified by two's-complement sign extension, which maps small negative values to high-significance bit slices and magnifies their errors during shift-and-add reconstruction. In this paper, we propose CAFE, a conducting-cell-aware adaptive differential encoding framework built upon this FeFET-specific asymmetry. CAFE introduces C$^2$AM, a bit-significance-weighted conducting-cell activity metric that predicts output deviation and inference accuracy degradation under FeFET device variation. Guided by C$^2$AM, CAFE applies differential weight and activation encoding to eliminate sign-extension-induced conducting-cell amplification. To balance robustness and cost, CAFE performs type-wise encoding enumeration, layer-wise NSGA-II search, and post-GA pruning to allocate robust encodings where the robustness-cost trade-off is favorable. Across representative vision and language workloads, CAFE reduces C$^2$AM by up to $28.6\\times$; in the main deployment study, it improves accuracy over two's-complement CIM by more than 87 percentage points and approaches full-differential robustness at $1.86$-$2.78\\times$ normalized cost, compared with $3.06\\times$ for uniform full-differential encoding.",
-   "authors": [
-    "Wenshuai Yao",
-    "Wenyong Zhou",
-    "Hanyong Shao",
-    "Zhiyuan Ning",
-    "Ru Huang",
-    "Kechao Tang"
-   ],
-   "url": "https://arxiv.org/abs/2610.19697",
-   "pdf": "https://arxiv.org/pdf/2610.19697v1",
-   "doi": null,
-   "venue": "arXiv cs.AR",
-   "source": "arXiv",
-   "published": "2026-10-14T07:20:14Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "emerging-memory"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2610.19697/2610.19697v1/overview.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/ab0aec3dfe1b9a1751d57c1bd575f9efe2fc407a",
-   "week": "2026-W42"
-  },
-  {
    "id": "doi:10.1002/adfm.79025",
    "title": "Understanding and Mitigating Interlayer Thermal Crosstalk in 3D Vertical Phase‐Change Memory",
    "abstract": "Three‐dimensional vertical phase‐change memory (3D vertical PCM) provides a device‐level route toward vertically integrated phase‐change storage, yet vertical stacking converts cell‐level thermal confinement into a stack‐level reliability constraint. Here, interlayer thermal crosstalk is investigated in a dual‐layer Hf‐doped Ge─Sb─Te 3D vertical PCM device by constructing an operation‐ and state‐dependent disturbance matrix. The monitoring cell is initialized in either the crystalline low‐resistance state or the amorphous high‐resistance state, while READ‐, SET‐, and RESET‐level pulse trains are applied to the adjacent programming cell. READ and SET produce limited disturbance, whereas RESET dominates interlayer thermal perturbation. The amorphous high‐resistance state exhibits the highest susceptibility, showing a pronounced resistance decrease under adjacent RESET excitation. Qualitative electrothermal simulations attribute this selectivity to localized RESET heating and transient vertical heat spreading across stacked layers. Paired‐pulse programming temporally redistributes the RESET thermal budget by decoupling rapid selected‐layer heating from delayed interlayer heat spreading. This strategy preserves the thermal response required for selected‐cell programming while suppressing heat transfer to the monitoring layer. Electrical measurements confirm that paired‐pulse programming improves post‐disturbance resistance retention from 85%, demonstrating thermal‐budget engineering as an effective strategy for enhancing the reliability of vertically integrated 3D vertical PCM devices.",
@@ -89046,6 +89063,40 @@
    ],
    "companies": [],
    "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W42"
+  },
+  {
+   "id": "arxiv:2610.19793",
+   "title": "Orientation-Dependent Universality of Spin-Conductance Fluctuations in d-Wave Altermagnets",
+   "abstract": "Universal conductance fluctuations reflect the symmetry and geometry of phase-coherent transport. However, it remains unclear whether crystal orientation relative to the device can tune fluctuation plateaus in spin-conserving altermagnets. Here, using quantum transport simulations of a two-dimensional $d$-wave altermagnet with scalar disorder, we show that crystal orientation tunes longitudinal and spin-Hall fluctuation plateaus while each spin sector remains in the orthogonal symmetry class. At intermediate disorder, tuning the crystal orientation toward the device diagonal weakens longitudinal spin-conductance fluctuations and enhances spin-Hall fluctuations. Both responses exhibit well-defined plateaus at the diagonal orientation, with amplitudes that depend only weakly on disorder and altermagnetic strength over the ranges studied. A variance decomposition shows that, at this orientation, increasing disorder drives the longitudinal spin-channel covariance toward zero, while the transverse covariance shifts from enhancing to suppressing the spin-Hall variance. Our findings suggest that spin-conductance fluctuations can probe transport anisotropy in altermagnets.",
+   "authors": [
+    "Yi-Han Zhang",
+    "Zheng Qin",
+    "Dong-Hui Xu",
+    "Jun-Jie Zeng",
+    "Zhen-Bo Ning",
+    "Rui Wang"
+   ],
+   "url": "https://arxiv.org/abs/2610.19793",
+   "pdf": "https://arxiv.org/pdf/2610.19793v3",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-14T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/e5477bd81f57b584f1f61aa437ceae2520959a34",
+   "s2_fields": [
+    "Physics"
+   ],
+   "search_topic": "modeling",
+   "hub": "device",
+   "topics": [
+    "modeling"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.19793",
+   "image": "https://arxiv.org/html/2610.19793/2610.19793v3/Fig1.png",
+   "first_seen": "2026-11-26T08:52:25Z",
    "week": "2026-W42"
   },
   {
@@ -89485,6 +89536,40 @@
     "packaging"
    ],
    "companies": [],
+   "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W42"
+  },
+  {
+   "id": "arxiv:2610.19697",
+   "title": "CAFE: Conducting-Cell-Aware Adaptive Differential Encoding for Robust DNN Inference in FeFET-Based Compute-in-Memory",
+   "abstract": "Ferroelectric field-effect transistor (FeFET)-based compute-in-memory (CIM) promises energy-efficient deep neural network (DNN) inference, but device variation can severely degrade bit-sliced CIM accuracy. Prior works either rely on hardware modifications or treat such variation as generic noise, overlooking a key FeFET asymmetry: negligible off-state leakage makes errors dominated by conducting on-state cells. This asymmetry is amplified by two's-complement sign extension, which maps small negative values to high-significance bit slices and magnifies their errors during shift-and-add reconstruction. In this paper, we propose CAFE, a conducting-cell-aware adaptive differential encoding framework built upon this FeFET-specific asymmetry. CAFE introduces C$^2$AM, a bit-significance-weighted conducting-cell activity metric that predicts output deviation and inference accuracy degradation under FeFET device variation. Guided by C$^2$AM, CAFE applies differential weight and activation encoding to eliminate sign-extension-induced conducting-cell amplification. To balance robustness and cost, CAFE performs type-wise encoding enumeration, layer-wise NSGA-II search, and post-GA pruning to allocate robust encodings where the robustness-cost trade-off is favorable. Across representative vision and language workloads, CAFE reduces C$^2$AM by up to $28.6\\times$; in the main deployment study, it improves accuracy over two's-complement CIM by more than 87 percentage points and approaches full-differential robustness at $1.86$-$2.78\\times$ normalized cost, compared with $3.06\\times$ for uniform full-differential encoding.",
+   "authors": [
+    "Wen-Shuai Yao",
+    "Wen-Yong Zhou",
+    "Han-Yong Shao",
+    "Zhi-Yuan Ning",
+    "Ru Huang",
+    "Ke-Chao Tang"
+   ],
+   "url": "https://arxiv.org/abs/2610.19697",
+   "pdf": "https://arxiv.org/pdf/2610.19697v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-14T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/ab0aec3dfe1b9a1751d57c1bd575f9efe2fc407a",
+   "s2_fields": [
+    "Computer Science"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "emerging-memory"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.19697",
+   "image": "https://arxiv.org/html/2610.19697/2610.19697v1/overview.png",
    "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W42"
   },
@@ -91495,6 +91580,32 @@
    "week": "2026-W41"
   },
   {
+   "id": "arxiv:2610.13525",
+   "arxiv_id": "2610.13525",
+   "title": "UV Fluorescence Sensing of Medical-Chemical-and- Biological Analytes by an AlGaN/Si-on-Sapphire Optoelectronic Chip",
+   "abstract": "This paper proposes and analyzes a compact fluorescence-photometer lab-on-a-chip that is simpler than a fluorescence spectrometer, and that does not require spectrum reconstruction by a computer. An on-chip AlGaN VCSEL lasing at 280 nm, or at 310 nm, pumps an on-chip sample in the form of liquid or solid or tissue, thereby exciting signature fluorescence in the 300 to 540 nm wavelength range. This emission signal is detected and read out by an on-chip UV-enhanced Silicon photodiode. The 2 cm x 5 cm chip consists of C-plane (0001) Sapphire, and no lenses, prisms, or mirrors are utilized in the photometer. The chip is opto-electronic and features co-packaged electronics using tiny electronic chiplets that are bonded to the sapphire. These consist of an LD driver and transimpedance amplifier for the UV photonics, together with ASICs, ADC, microcontroller, micro-battery and RF-wireless or Ethernet chiplets. The mission of this self-contained cost-effective chip is sensing targeted medical-chemical-biological (MCB) agents in a local or network setting. Eight significant MCB applications are detailed here.",
+   "authors": [
+    "Richard Soref"
+   ],
+   "url": "https://arxiv.org/abs/2610.13525",
+   "pdf": "https://arxiv.org/pdf/2610.13525v1",
+   "doi": null,
+   "venue": "arXiv physics.optics",
+   "source": "arXiv",
+   "published": "2026-10-09T12:47:52Z",
+   "search_topic": "packaging",
+   "hub": "device",
+   "topics": [
+    "packaging",
+    "vlsi"
+   ],
+   "companies": [],
+   "image": "",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/733364bef879fceeca5f25cf40a614aae40763db",
+   "week": "2026-W41"
+  },
+  {
    "id": "doi:10.1021/acs.jpcc.6c05460",
    "title": "Unveiling Phosphorus Vacancy-Mediated Resistive Switching in Cu/HfO2/BP/Pt Memristors: Experimental and First-Principles Investigations",
    "abstract": "Memristors integrating 2D materials are promising for neuromorphic computing, yet their microscopic resistive switching mechanisms require further clarification. In this study, a Cu/HfO2/BP/Pt memristor was fabricated to investigate its electrical characteristics and conductive filament (CF) dynamics. The device exhibits compliance-dependent behavior, enabling unipolar volatile switching at 100 μA and bipolar nonvolatile switching at 200 μA. In nonvolatile mode, it demonstrates a concentrated switching voltage distribution (Vset ≈ −1.491 V, Vreset ≈ 1.669 V), stable endurance exceeding 150 cycles, and an ON/OFF ratio of ∼104. The low- and high-resistance states follow ohmic conduction (a hybrid ohmic conduction of electron capture/decapture under negative bias) and Schottky emission, respectively. Furthermore, first-principles CI-NEB calculations indicate that intrinsic phosphorus vacancies (Vp) within the BP layer facilitate directional Cu+ migration (1.54 eV barrier) and spontaneous Pt atom trapping (0.1 eV barrier). This defect-mediated interfacial interaction promotes stable orbital hybridization, anchoring localized CFs. This work provides experimental and theoretical insights for designing oxide/2D material-based neuromorphic hardware.",
@@ -91559,36 +91670,6 @@
    "arxiv_id": "2610.14244",
    "s2_url": "https://www.semanticscholar.org/paper/845e8d1afac60e258b43cf4b14037c6734444718",
    "image": "https://arxiv.org/html/2610.14244/2610.14244v1/dram_bender_picture.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "week": "2026-W41"
-  },
-  {
-   "id": "arxiv:2610.13525",
-   "title": "UV Fluorescence Sensing of Medical-Chemical-and- Biological Analytes by an AlGaN/Si-on-Sapphire Optoelectronic Chip",
-   "abstract": "This paper proposes and analyzes a compact fluorescence-photometer lab-on-a-chip that is simpler than a fluorescence spectrometer, and that does not require spectrum reconstruction by a computer. An on-chip AlGaN VCSEL lasing at 280 nm, or at 310 nm, pumps an on-chip sample in the form of liquid or solid or tissue, thereby exciting signature fluorescence in the 300 to 540 nm wavelength range. This emission signal is detected and read out by an on-chip UV-enhanced Silicon photodiode. The 2 cm x 5 cm chip consists of C-plane (0001) Sapphire, and no lenses, prisms, or mirrors are utilized in the photometer. The chip is opto-electronic and features co-packaged electronics using tiny electronic chiplets that are bonded to the sapphire. These consist of an LD driver and transimpedance amplifier for the UV photonics, together with ASICs, ADC, microcontroller, micro-battery and RF-wireless or Ethernet chiplets. The mission of this self-contained cost-effective chip is sensing targeted medical-chemical-biological (MCB) agents in a local or network setting. Eight significant MCB applications are detailed here.",
-   "authors": [
-    "R. Soref"
-   ],
-   "url": "https://arxiv.org/abs/2610.13525",
-   "pdf": "https://arxiv.org/pdf/2610.13525v1",
-   "doi": null,
-   "venue": "arXiv",
-   "source": "Semantic Scholar",
-   "published": "2026-10-09T00:00:00Z",
-   "cited_by": 0,
-   "s2_url": "https://www.semanticscholar.org/paper/733364bef879fceeca5f25cf40a614aae40763db",
-   "s2_fields": [
-    "Physics"
-   ],
-   "search_topic": "packaging",
-   "hub": "device",
-   "topics": [
-    "packaging",
-    "vlsi"
-   ],
-   "companies": [],
-   "arxiv_id": "2610.13525",
-   "image": "",
    "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W41"
   },
@@ -92124,7 +92205,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/f179d08fe4e9fbe628655f8d3378c9150f945e39",
    "s2_fields": [],
-   "search_topic": "logic-devices",
+   "search_topic": "emerging-memory",
    "hub": "device",
    "topics": [
     "logic-devices",
@@ -92492,39 +92573,6 @@
    "image": "https://arxiv.org/html/2610.11992/2610.11992v1/XRD.jpg",
    "first_seen": "2026-11-14T11:05:09Z",
    "s2_url": "https://www.semanticscholar.org/paper/47a360684da553082d96d45478b5960360aa7b2f",
-   "week": "2026-W41"
-  },
-  {
-   "id": "arxiv:2610.11191",
-   "arxiv_id": "2610.11191",
-   "title": "Cooperative STT and SOT switching in perpendicular magnetic tunnel junctions: Role of the pulse-end magnetization state",
-   "abstract": "Spin--orbit torque MRAM (SOT-MRAM) is a leading candidate for next-generation nonvolatile memory, offering high speed, endurance, and architectural compatibility. However, in conventional SOT switching, the magnetization remains near the in-plane region at pulse termination, making the final state highly sensitive to post-pulse relaxation dynamics and prone to back-switching. To overcome this, we propose a field-free scheme in which the transverse SOT drives large-angle precessional excitation while the perpendicular spin-transfer torque (STT) biases the trajectory toward the reversed $-z$ state. Micromagnetic simulations reveal a nonlinear switching boundary in the $J_{\\mathrm{STT}}$--$J_{\\mathrm{SOT}}$ parameter space, originating from the distinct dynamical roles of the two torques: SOT primarily governs the excitation and crossing of the dynamical separatrix, whereas STT controls the terminal trajectory and final-state selection. An analytical macrospin model, based on the stability analysis of the current-induced equilibrium, reproduces the critical-boundary trends as functions of current density, Gilbert damping $α$, and uniaxial anisotropy $K_\\mathrm{u}$, and distinguishes dynamic anti-damping and static instability branches. Systematic analyses of pulse duration, damping, anisotropy, and the STT--SOT balance further demonstrate that reliable ultrafast switching requires not only sufficient excitation to cross the separatrix before pulse termination, but also precise control of the pulse-end magnetization state to minimize post-pulse relaxation. These results establish that the pulse-end state, rather than the instantaneous torque amplitude, is the decisive factor governing switching speed and reliability in coupled STT--SOT systems.",
-   "authors": [
-    "Zeyi Zhu",
-    "Ding Ma",
-    "Kai Zhang",
-    "Mingwei Wu",
-    "Yi Huang",
-    "Jiarui Niu",
-    "Shuai Zhang",
-    "Mengdi Yin"
-   ],
-   "url": "https://arxiv.org/abs/2610.11191",
-   "pdf": "https://arxiv.org/pdf/2610.11191v1",
-   "doi": null,
-   "venue": "arXiv cond-mat.mes-hall",
-   "source": "arXiv",
-   "published": "2026-10-08T03:49:34Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "emerging-memory",
-    "reliability"
-   ],
-   "companies": [],
-   "image": "",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/1d77173ad8d0ffe147cdd6476ae8ec2c3e2b4af8",
    "week": "2026-W41"
   },
   {
@@ -92937,6 +92985,43 @@
    "week": "2026-W41"
   },
   {
+   "id": "arxiv:2610.11191",
+   "title": "Cooperative STT and SOT switching in perpendicular magnetic tunnel junctions: Role of the pulse-end magnetization state",
+   "abstract": "Spin--orbit torque MRAM (SOT-MRAM) is a leading candidate for next-generation nonvolatile memory, offering high speed, endurance, and architectural compatibility. However, in conventional SOT switching, the magnetization remains near the in-plane region at pulse termination, making the final state highly sensitive to post-pulse relaxation dynamics and prone to back-switching. To overcome this, we propose a field-free scheme in which the transverse SOT drives large-angle precessional excitation while the perpendicular spin-transfer torque (STT) biases the trajectory toward the reversed $-z$ state. Micromagnetic simulations reveal a nonlinear switching boundary in the $J_{\\mathrm{STT}}$--$J_{\\mathrm{SOT}}$ parameter space, originating from the distinct dynamical roles of the two torques: SOT primarily governs the excitation and crossing of the dynamical separatrix, whereas STT controls the terminal trajectory and final-state selection. An analytical macrospin model, based on the stability analysis of the current-induced equilibrium, reproduces the critical-boundary trends as functions of current density, Gilbert damping $\\alpha$, and uniaxial anisotropy $K_\\mathrm{u}$, and distinguishes dynamic anti-damping and static instability branches. Systematic analyses of pulse duration, damping, anisotropy, and the STT--SOT balance further demonstrate that reliable ultrafast switching requires not only sufficient excitation to cross the separatrix before pulse termination, but also precise control of the pulse-end magnetization state to minimize post-pulse relaxation. These results establish that the pulse-end state, rather than the instantaneous torque amplitude, is the decisive factor governing switching speed and reliability in coupled STT--SOT systems.",
+   "authors": [
+    "Ze-Yi Zhu",
+    "Di Ma",
+    "Kai Zhang",
+    "Ming-Wei Wu",
+    "Yi Huang",
+    "Jia-Rui Niu",
+    "Shuai Zhang",
+    "M. Yin"
+   ],
+   "url": "https://arxiv.org/abs/2610.11191",
+   "pdf": "https://arxiv.org/pdf/2610.11191v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-08T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/1d77173ad8d0ffe147cdd6476ae8ec2c3e2b4af8",
+   "s2_fields": [
+    "Physics"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "emerging-memory",
+    "reliability"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.11191",
+   "image": "",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W41"
+  },
+  {
    "id": "doi:10.4018/979-8-2600-0423-4.ch001",
    "title": "Charged Boundaries: Semiconductor Plasma and Quantum Devices",
    "abstract": "The continuing miniaturization of semiconductor devices beyond the 2 nm node imposes extraordinary demands on materials processing, device architecture, and quantum-physical understanding. This chapter examines the interplay of plasma physics, semiconductor device engineering, and emergent quantum phenomena that define the frontier of advanced electronic manufacturing. Plasma-based fabrication, including inductively coupled plasma etching, atomic layer etching (ALE), and extreme ultraviolet (EUV) lithography using tin-droplet plasmas, provides atomic-scale precision. Device architectures have evolved from planar MOSFETs to FinFETs and gate-all-around (GAA) nanowire transistors, while emerging concepts like tunneling FETs (TFETs) and single-molecule transistors leverage quantum effects for ultralow power. Two-dimensional materials such as MoS2 and transition metal dichalcogenides offer atomically thin channels compatible with plasma fabrication. This chapter integrates experimental advances, theoretical models, and future research directions for quantum-scale electronics.",
@@ -93110,7 +93195,7 @@
    "s2_fields": [
     "Engineering"
    ],
-   "search_topic": "power-devices",
+   "search_topic": "modeling",
    "hub": "device",
    "topics": [
     "modeling",
@@ -93146,34 +93231,6 @@
    ],
    "companies": [],
    "first_seen": "2026-11-14T11:05:09Z",
-   "week": "2026-W41"
-  },
-  {
-   "id": "doi:10.1016/j.future.2026.108685",
-   "arxiv_id": "2610.09999",
-   "title": "ReSAFT: An Efficient Stuck-at Fault-Tolerant Scheme for ReRAM-based Process-in-Memory Accelerators",
-   "abstract": "Analog ReRAM-based process-in-memory (PIM) accelerators provide high parallelism and energy efficiency for deep convolutional neural networks (CNNs) inference. However, their susceptibility to permanent faults, such as stuck-at high (SaH) and stuck-at low (SaL) resistance states, poses a major challenge by permanently corrupting the CNN weights mapped to conductance values of ReRAM cells and degrading inference accuracy, which leads to system unreliability in safety-critical applications. In this paper, we propose a fault-tolerant scheme for analog ReRAM-based PIM accelerators to tackle stuck-at faults (SAFs) with minimal redundancy overhead to recover classification accuracy degradation. The proposed scheme contains a redundancy-based hardware solution alongside fault-aware mapping method for ensuring reliable analog computation in ReRAM crossbar. We analyze the impact of varying number of redundant rows and columns on accuracy and design metrics. Subsequently, a multi-objective optimization (MOO) problem is formulated and solved to efficiently determine the number of redundant rows and columns, considering trade-offs among various design metrics. Furthermore, a fault-aware weight mapping is proposed for dual-crossbar structures to further compensate for the accuracy degradation caused by SAFs. Simulation results show that, for the SimpleNet model using the MNIST dataset, the inference accuracy is recovered by approximately 22.39%, on average, across four configurations of optimal solutions, each offering a trade-off between reliability and area, energy consumption, and latency overheads. The mean-time-tofailure (MTTF) improves by about 61x on average compared to the baseline. These selected configurations also reduce energy and area overheads by 32%, on average, in comparison to row-only and column-only configurations.",
-   "authors": [
-    "Aniseh Dorostkar",
-    "Hamed Farbeh",
-    "Hamid R. Zarandi"
-   ],
-   "url": "https://arxiv.org/abs/2610.09999",
-   "pdf": "https://arxiv.org/pdf/2610.09999v1",
-   "doi": "10.1016/j.future.2026.108685",
-   "venue": "arXiv cs.AR",
-   "source": "arXiv",
-   "published": "2026-10-07T12:56:03Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "emerging-memory",
-    "vlsi"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2610.09999/2610.09999v1/Fig7-a-MTTF_mat.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/32fed06e17d1e4473242d2a466d073fe5c276ac6",
    "week": "2026-W41"
   },
   {
@@ -93387,6 +93444,38 @@
    ],
    "companies": [],
    "first_seen": "2026-11-18T21:02:25Z",
+   "week": "2026-W41"
+  },
+  {
+   "id": "doi:10.1016/j.future.2026.108685",
+   "title": "ReSAFT: An efficient stuck-at fault-tolerant scheme for ReRAM-based process-in-memory accelerators",
+   "abstract": "Analog ReRAM-based process-in-memory (PIM) accelerators provide high parallelism and energy efficiency for deep convolutional neural networks (CNNs) inference. However, their susceptibility to permanent faults, such as stuck-at high (SaH) and stuck-at low (SaL) resistance states, poses a major challenge by permanently corrupting the CNN weights mapped to conductance values of ReRAM cells and degrading inference accuracy, which leads to system unreliability in safety-critical applications. In this paper, we propose a fault-tolerant scheme for analog ReRAM-based PIM accelerators to tackle stuck-at faults (SAFs) with minimal redundancy overhead to recover classification accuracy degradation. The proposed scheme contains a redundancy-based hardware solution alongside fault-aware mapping method for ensuring reliable analog computation in ReRAM crossbar. We analyze the impact of varying number of redundant rows and columns on accuracy and design metrics. Subsequently, a multi-objective optimization (MOO) problem is formulated and solved to efficiently determine the number of redundant rows and columns, considering trade-offs among various design metrics. Furthermore, a fault-aware weight mapping is proposed for dual-crossbar structures to further compensate for the accuracy degradation caused by SAFs. Simulation results show that, for the SimpleNet model using the MNIST dataset, the inference accuracy is recovered by approximately 22.39%, on average, across four configurations of optimal solutions, each offering a trade-off between reliability and area, energy consumption, and latency overheads. The mean-time-tofailure (MTTF) improves by about 61x on average compared to the baseline. These selected configurations also reduce energy and area overheads by 32%, on average, in comparison to row-only and column-only configurations.",
+   "authors": [
+    "Aniseh Dorostkar",
+    "Hamed Farbeh",
+    "H. Zarandi"
+   ],
+   "url": "https://doi.org/10.1016/j.future.2026.108685",
+   "pdf": "https://arxiv.org/pdf/2610.09999",
+   "doi": "10.1016/j.future.2026.108685",
+   "venue": "Future generations computer systems",
+   "source": "Semantic Scholar",
+   "published": "2026-10-07T00:00:00Z",
+   "cited_by": 3,
+   "s2_url": "https://www.semanticscholar.org/paper/32fed06e17d1e4473242d2a466d073fe5c276ac6",
+   "s2_fields": [
+    "Computer Science"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "emerging-memory",
+    "vlsi"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.09999",
+   "image": "https://arxiv.org/html/2610.09999/2610.09999v1/Fig7-a-MTTF_mat.png",
+   "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W41"
   },
   {
@@ -94630,34 +94719,6 @@
    "week": "2026-W41"
   },
   {
-   "id": "arxiv:2610.07408",
-   "arxiv_id": "2610.07408",
-   "title": "Compact Circuit Models for Nanoantenna-Based Lightwave Electronics",
-   "abstract": "As the field of nanoscale lightwave electronics matures from centering around fundamental science to focusing on device engineering, there is a growing need for compact models that can provide rapid and scalable quantitative analysis of the performance of petahertz-frequency optical-field-driven electronics. In this work, we developed a circuit model framework for describing nano-scale lightwave electronics. Our framework captures the physics governing nanoscale optical devices, such as electrically-connected nanoantennas, using compact circuit models that predict their electromagnetic response, their electron emission, and their charge transfer dynamics. This approach allows scalable simulation of large integrated systems containing networks of nanoscale lightwave electronic components, which is not possible using full-wave electromagnetic and particle-in-cell simulation methods. We implemented the compact model in an free commercial circuit solver (LTspice) and validated its electromagnetic response against a full-wave electromagnetic solver (MEEP). We propose an experiment to fully benchmark the model's ability to capture non-linear charge-transfer-based coupling between devices. The circuit model implementation speeds up the electromagnetic analysis from hours to seconds and accounts for charge-driven coupling, enabling rapid quantitative studies of device operation which provide new insights into how femtosecond signals propagate through nanoscale lightwave electronic structures. We anticipate that the methods we introduce here will become essential to the development and performance analysis of nanoscale lightwave electronics for communication, computation, and signal processing at optical frequencies.",
-   "authors": [
-    "Adina Bechhofer",
-    "Felix Ritzkowsky",
-    "Karl K. Berggren",
-    "Phillip D. Keathley"
-   ],
-   "url": "https://arxiv.org/abs/2610.07408",
-   "pdf": "https://arxiv.org/pdf/2610.07408v1",
-   "doi": null,
-   "venue": "arXiv physics.optics",
-   "source": "arXiv",
-   "published": "2026-10-05T21:17:06Z",
-   "search_topic": "modeling",
-   "hub": "device",
-   "topics": [
-    "modeling"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2610.07408/2610.07408v1/Big_picture_v3.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/ae357f2577cf2d9b20ee2bfb8adb7dece47c5686",
-   "week": "2026-W41"
-  },
-  {
    "id": "doi:10.48550/arxiv.2610.07321",
    "arxiv_id": "2610.07321",
    "title": "Synapse Loss Estimation for the BrainScaleS Wafer-scale Neuromorphic System",
@@ -94709,35 +94770,6 @@
    "image": "https://arxiv.org/html/2610.06322/2610.06322v1/figures/fig1_ald_schema.png",
    "first_seen": "2026-11-14T11:05:09Z",
    "s2_url": "https://www.semanticscholar.org/paper/4d04146e5be1cc407f9330787d13fdd7942b6958",
-   "week": "2026-W41"
-  },
-  {
-   "id": "arxiv:2610.06131",
-   "arxiv_id": "2610.06131",
-   "title": "An \\textit{ab initio} based compact analytical formula for inelastic x-ray scattering from spatially localized excitons",
-   "abstract": "In this contribution we provide a compact model for the description of inelastic x-ray scattering of spatially localized excitons. We combine our analytical theory with first principles calculations and apply it to the material lithium fluoride (LiF). A comparison of two different approaches for the underlying single-particle wave functions to calculate the spectrum yield a qualitatively good agreement with experimental data but also shows that a detailed description of the wave functions is essential to obtain qualitative results.",
-   "authors": [
-    "Joris Sturm",
-    "Duc Anh Truong",
-    "Andrei Benediktovitch",
-    "Nina Rohringer",
-    "Andreas Knorr$^{1}$"
-   ],
-   "url": "https://arxiv.org/abs/2610.06131",
-   "pdf": "https://arxiv.org/pdf/2610.06131v1",
-   "doi": null,
-   "venue": "arXiv cond-mat.mes-hall",
-   "source": "arXiv",
-   "published": "2026-10-05T11:05:23Z",
-   "search_topic": "modeling",
-   "hub": "device",
-   "topics": [
-    "modeling"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2610.06131/2610.06131v1/LiF_spectrum_lcao_gray_withexp.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/914428de2f45cbaa0c91b86a804bcb0e9355defe",
    "week": "2026-W41"
   },
   {
@@ -94951,7 +94983,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/ba5fdde5989d89e5eb195d63988bdc756e69d87e",
    "s2_fields": [],
-   "search_topic": "power-devices",
+   "search_topic": "modeling",
    "hub": "device",
    "topics": [
     "power-devices"
@@ -95108,9 +95140,9 @@
    ],
    "companies": [],
    "arxiv_id": "2610.06720",
+   "s2_url": "https://www.semanticscholar.org/paper/98dae114cfd029b506a790d677f52b527260ac06",
    "image": "https://arxiv.org/html/2610.06720/2610.06720v1/fig_rats.png",
    "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/98dae114cfd029b506a790d677f52b527260ac06",
    "week": "2026-W41"
   },
   {
@@ -95442,6 +95474,38 @@
    "week": "2026-W41"
   },
   {
+   "id": "arxiv:2610.07408",
+   "title": "Compact Circuit Models for Nanoantenna-Based Lightwave Electronics",
+   "abstract": "As the field of nanoscale lightwave electronics matures from centering around fundamental science to focusing on device engineering, there is a growing need for compact models that can provide rapid and scalable quantitative analysis of the performance of petahertz-frequency optical-field-driven electronics. In this work, we developed a circuit model framework for describing nano-scale lightwave electronics. Our framework captures the physics governing nanoscale optical devices, such as electrically-connected nanoantennas, using compact circuit models that predict their electromagnetic response, their electron emission, and their charge transfer dynamics. This approach allows scalable simulation of large integrated systems containing networks of nanoscale lightwave electronic components, which is not possible using full-wave electromagnetic and particle-in-cell simulation methods. We implemented the compact model in an free commercial circuit solver (LTspice) and validated its electromagnetic response against a full-wave electromagnetic solver (MEEP). We propose an experiment to fully benchmark the model's ability to capture non-linear charge-transfer-based coupling between devices. The circuit model implementation speeds up the electromagnetic analysis from hours to seconds and accounts for charge-driven coupling, enabling rapid quantitative studies of device operation which provide new insights into how femtosecond signals propagate through nanoscale lightwave electronic structures. We anticipate that the methods we introduce here will become essential to the development and performance analysis of nanoscale lightwave electronics for communication, computation, and signal processing at optical frequencies.",
+   "authors": [
+    "Adina R. Bechhofer",
+    "F. Ritzkowsky",
+    "K. Berggren",
+    "P. Keathley"
+   ],
+   "url": "https://arxiv.org/abs/2610.07408",
+   "pdf": "https://arxiv.org/pdf/2610.07408v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-05T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/ae357f2577cf2d9b20ee2bfb8adb7dece47c5686",
+   "s2_fields": [
+    "Physics"
+   ],
+   "search_topic": "modeling",
+   "hub": "device",
+   "topics": [
+    "modeling"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.07408",
+   "image": "https://arxiv.org/html/2610.07408/2610.07408v1/Big_picture_v3.png",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W41"
+  },
+  {
    "id": "doi:10.1016/j.microrel.2026.116323",
    "title": "Analysis of failure mechanisms in GaN HEMTs under picosecond fast-rise VF-TLP stress",
    "abstract": "",
@@ -95466,6 +95530,39 @@
    ],
    "companies": [],
    "first_seen": "2026-11-18T21:02:25Z",
+   "week": "2026-W41"
+  },
+  {
+   "id": "arxiv:2610.06131",
+   "title": "An \\textit{ab initio} based compact analytical formula for inelastic x-ray scattering from spatially localized excitons",
+   "abstract": "In this contribution we provide a compact model for the description of inelastic x-ray scattering of spatially localized excitons. We combine our analytical theory with first principles calculations and apply it to the material lithium fluoride (LiF). A comparison of two different approaches for the underlying single-particle wave functions to calculate the spectrum yield a qualitatively good agreement with experimental data but also shows that a detailed description of the wave functions is essential to obtain qualitative results.",
+   "authors": [
+    "Joris Sturm",
+    "Duc Anh Truong",
+    "A. Benediktovitch",
+    "N. Rohringer",
+    "A. Knorr"
+   ],
+   "url": "https://arxiv.org/abs/2610.06131",
+   "pdf": "https://arxiv.org/pdf/2610.06131v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-05T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/914428de2f45cbaa0c91b86a804bcb0e9355defe",
+   "s2_fields": [
+    "Physics"
+   ],
+   "search_topic": "modeling",
+   "hub": "device",
+   "topics": [
+    "modeling"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.06131",
+   "image": "https://arxiv.org/html/2610.06131/2610.06131v1/LiF_spectrum_lcao_gray_withexp.png",
+   "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W41"
   },
   {
@@ -95547,37 +95644,6 @@
    "image": "https://arxiv.org/html/2610.05318/2610.05318v1/figures/odi_qwen_top8_stability.png",
    "first_seen": "2026-11-14T11:05:09Z",
    "field": "Engineering",
-   "week": "2026-W40"
-  },
-  {
-   "id": "arxiv:2610.05016",
-   "arxiv_id": "2610.05016",
-   "title": "A FeFET Voltage-to-Time Converter with Offset Trim by Programmed Multilevel State in 28-nm CMOS",
-   "abstract": "The offset and gain of voltage-to-time converters (VTCs) in time-domain circuits vary with process, supply, and temperature. This work presents a VTC whose nonvolatile input-referred offset trim is the programmed multilevel state of the ferroelectric field-effect transistor (FeFET) that converts the input. Fabricated in 28-nm CMOS, the 6.07-$μ$m$^2$ VTC consists of a current-starved inverter with the FeFET and a parallel NMOS leaker in its tail, a capacitor bank, and a following inverter. The programmed state shifts the transfer curve onto the input range, leaving the gain to the capacitor bank and the leaker bias. Measured at 10~MS/s, centered states weaken the second harmonic from $-$12.5~dB in the low-threshold state to $-$32.2~dB and lower the static integral nonlinearity (INL) at 5~bit from 2.42 to 0.92~LSB. Post-layout simulations indicate that the proposed VTC can operate at 500~MS/s, drawing 2.0~$μ$W from a 0.9-V supply, with nearly unchanged distortion and gain up to 700~MS/s. Across simulated process corners and $\\pm$10\\,\\% supply variation, the input-referred offset is calibrated to within 10~mV and the gain to within 4\\,\\% of nominal by adjusting the programmed state and leaker bias.",
-   "authors": [
-    "Jeries Mattar",
-    "Hanaa Eqeiq",
-    "Stefan Dünkel",
-    "Halid Mulaosmanovic",
-    "Gunda Beernink",
-    "Sven Beyer",
-    "Nicolás Wainstein"
-   ],
-   "url": "https://arxiv.org/abs/2610.05016",
-   "pdf": "https://arxiv.org/pdf/2610.05016v1",
-   "doi": null,
-   "venue": "arXiv cs.ET",
-   "source": "arXiv",
-   "published": "2026-10-04T07:19:19Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "emerging-memory"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2610.05016/2610.05016v1/fefet_model.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/b0638594fbb0202db05143ce155900e58e00e8f6",
    "week": "2026-W40"
   },
   {
@@ -96918,6 +96984,41 @@
    "week": "2026-W40"
   },
   {
+   "id": "arxiv:2610.05016",
+   "title": "A FeFET Voltage-to-Time Converter with Offset Trim by Programmed Multilevel State in 28-nm CMOS",
+   "abstract": "The offset and gain of voltage-to-time converters (VTCs) in time-domain circuits vary with process, supply, and temperature. This work presents a VTC whose nonvolatile input-referred offset trim is the programmed multilevel state of the ferroelectric field-effect transistor (FeFET) that converts the input. Fabricated in 28-nm CMOS, the 6.07-$\\mu$m$^2$ VTC consists of a current-starved inverter with the FeFET and a parallel NMOS leaker in its tail, a capacitor bank, and a following inverter. The programmed state shifts the transfer curve onto the input range, leaving the gain to the capacitor bank and the leaker bias. Measured at 10~MS/s, centered states weaken the second harmonic from $-$12.5~dB in the low-threshold state to $-$32.2~dB and lower the static integral nonlinearity (INL) at 5~bit from 2.42 to 0.92~LSB. Post-layout simulations indicate that the proposed VTC can operate at 500~MS/s, drawing 2.0~$\\mu$W from a 0.9-V supply, with nearly unchanged distortion and gain up to 700~MS/s. Across simulated process corners and $\\pm$10\\,\\% supply variation, the input-referred offset is calibrated to within 10~mV and the gain to within 4\\,\\% of nominal by adjusting the programmed state and leaker bias.",
+   "authors": [
+    "Jeries Mattar",
+    "Hanaa Eqeiq",
+    "S. Dünkel",
+    "H. Mulaosmanovic",
+    "G. Beernink",
+    "S. Beyer",
+    "Nicolás Wainstein"
+   ],
+   "url": "https://arxiv.org/abs/2610.05016",
+   "pdf": "https://arxiv.org/pdf/2610.05016v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-10-04T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/b0638594fbb0202db05143ce155900e58e00e8f6",
+   "s2_fields": [
+    "Computer Science"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "emerging-memory"
+   ],
+   "companies": [],
+   "arxiv_id": "2610.05016",
+   "image": "https://arxiv.org/html/2610.05016/2610.05016v1/fefet_model.png",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W40"
+  },
+  {
    "id": "arxiv:2610.04740",
    "title": "Toward a Locally Deployable Agentic Co-Scientist: Small-Model Planning for Early-Stage Drug Discovery",
    "abstract": "Early-stage computational drug discovery requires coordinating heterogeneous scientific tools across multi-step workflows. We present a lightweight, tool-augmented framework in which a locally deployable compact language model plans calls to 18 modular tools. A Unified Molecular Schema maintains shared molecular records, while a plug-in interface supports tool replacement and extension. We construct 1,263 manually refined query-plan pairs through workflow-graph path coverage and apply LoRA fine-tuning to three compact model families. Under the query-level split, all fine-tuned models generate fully parseable and schema-compliant plans on 47 held-out cross-group queries. Llama 3.2-3B achieves a tool-selection F1 of 0.998, sequence exact match of 0.979, and argument F1 of 0.960. Under the stricter workflow-grouped split, which excludes identical ordered tool sequences across partitions, sequence exact match reaches 0.452 to 0.548, highlighting the remaining difficulty for compact models in generating complete workflow paths unseen during training. These results demonstrate the feasibility of compact, locally deployable planning while identifying compositional generalization as an important direction for further improvement.",
@@ -97270,6 +97371,34 @@
    ],
    "companies": [],
    "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W40"
+  },
+  {
+   "id": "arxiv:2610.03061",
+   "arxiv_id": "2610.03061",
+   "title": "Divide and conquer: Scalable performance and energy in MCM GPUs",
+   "abstract": "Multi-chip-module (MCM) GPUs offer a promising path to scale compute capability beyond monolithic designs by integrating multiple chiplets on a common package. However, the impact of disaggregation on performance scalability and energy consumption remains underexplored. The design space grows rapidly across dimensions such as SMs per chiplet, chiplet count, and interconnection network. The inter-chiplet network is particularly critical, as it determines whether additional compute resources translate into performance gains. This limited understanding leaves industry and research without clear guidance on the performance and energy trade-offs of MCM GPU scaling. In this work, we investigate whether distributing compute and memory capability across multiple chiplets offers a more scalable alternative to concentrating resources. We quantify their effects on performance, energy, and efficiency and examine how inter-chiplet topology influences scalability at different system sizes. Our results demonstrate that a 16 chiplet Torus configuration with 256 SMs delivers a remarkable $2.40\\times$ performance improvement over a state-of-the-art MCM architecture with the same compute capability, while simultaneously reducing energy consumption by $4.45\\times$. These substantial gains provide evidence that disaggregation is a first-order architectural factor and will be critical to unlocking the performance and energy-efficiency potential of next-generation GPUs.",
+   "authors": [
+    "Mario Ibáñez Bolado",
+    "Borja Pérez Pavón",
+    "Jose Luis Bosque Orero",
+    "Julio Ramón Beivide"
+   ],
+   "url": "https://arxiv.org/abs/2610.03061",
+   "pdf": "https://arxiv.org/pdf/2610.03061v1",
+   "doi": null,
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "published": "2026-10-02T09:45:01Z",
+   "search_topic": "packaging",
+   "hub": "device",
+   "topics": [
+    "packaging"
+   ],
+   "companies": [],
+   "image": "https://arxiv.org/html/2610.03061/2610.03061v1/figures/MCM_ARCH.png",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/284acd3db3672378cdb32c4d50221338e0a0d74f",
    "week": "2026-W40"
   },
   {
@@ -97781,38 +97910,6 @@
    "week": "2026-W40"
   },
   {
-   "id": "arxiv:2610.03061",
-   "title": "Divide and conquer: Scalable performance and energy in MCM GPUs",
-   "abstract": "Multi-chip-module (MCM) GPUs offer a promising path to scale compute capability beyond monolithic designs by integrating multiple chiplets on a common package. However, the impact of disaggregation on performance scalability and energy consumption remains underexplored. The design space grows rapidly across dimensions such as SMs per chiplet, chiplet count, and interconnection network. The inter-chiplet network is particularly critical, as it determines whether additional compute resources translate into performance gains. This limited understanding leaves industry and research without clear guidance on the performance and energy trade-offs of MCM GPU scaling. In this work, we investigate whether distributing compute and memory capability across multiple chiplets offers a more scalable alternative to concentrating resources. We quantify their effects on performance, energy, and efficiency and examine how inter-chiplet topology influences scalability at different system sizes. Our results demonstrate that a 16 chiplet Torus configuration with 256 SMs delivers a remarkable $2.40\\times$ performance improvement over a state-of-the-art MCM architecture with the same compute capability, while simultaneously reducing energy consumption by $4.45\\times$. These substantial gains provide evidence that disaggregation is a first-order architectural factor and will be critical to unlocking the performance and energy-efficiency potential of next-generation GPUs.",
-   "authors": [
-    "Mario Ibáñez Bolado",
-    "Borja Pérez Pavón",
-    "Jose Luis Bosque Orero",
-    "Julio Ramón Beivide"
-   ],
-   "url": "https://arxiv.org/abs/2610.03061",
-   "pdf": "https://arxiv.org/pdf/2610.03061v1",
-   "doi": null,
-   "venue": "arXiv",
-   "source": "Semantic Scholar",
-   "published": "2026-10-02T00:00:00Z",
-   "cited_by": 0,
-   "s2_url": "https://www.semanticscholar.org/paper/284acd3db3672378cdb32c4d50221338e0a0d74f",
-   "s2_fields": [
-    "Computer Science"
-   ],
-   "search_topic": "packaging",
-   "hub": "device",
-   "topics": [
-    "packaging"
-   ],
-   "companies": [],
-   "arxiv_id": "2610.03061",
-   "image": "https://arxiv.org/html/2610.03061/2610.03061v1/figures/MCM_ARCH.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "week": "2026-W40"
-  },
-  {
    "id": "doi:10.1016/j.mtadv.2026.101002",
    "title": "Discrete electron storage and retention in single α-MoO3 nanocrystals",
    "abstract": "The development of high-density, energy-efficient nonvolatile memory (NVM) devices can benefit from the integration of novel charge-trapping materials with nanoscale performance. Here, we demonstrate the synthesis of orthorhombic-phase α-MoO 3 nanoparticles (NPs), achieved via solution processing, and their incorporation as discrete High-k charge trapping sites within a Metal-Oxide-High-k-Oxide-Semiconductor (MOHOS) architecture employing ultrathin Al 2 O 3 tunnel and blocking layers. Conductive Atomic force microscopy (cAFM) and Kelvin probe force microscopy (KPFM) were used to directly correlate mapping of both topography and local electrical behavior at the single-NP level. cAFM I-V curves over individual MoO 3 NPs revealed charge trapping/detrapping with threshold shifts around 1 V. KPFM confirmed localized electrostatic potential shifts corresponding to the storage of ∼10-30 electrons per NP, with independent transport-based (cAFM) and electrostatic (KPFM) estimates agreeing to within a factor of two. By combining discrete trapping scalability and low-power operation, single MoO 3 NP capacitor geometry delivers reliable reversible storage. These single-node charge states provide a materials-level basis for discrete-trap memory with potential for multi-level storage.",
@@ -98075,6 +98172,34 @@
    "week": "2026-W40"
   },
   {
+   "id": "arxiv:2610.02461",
+   "arxiv_id": "2610.02461",
+   "title": "A Composable AI-Accelerated Iterative Solver for 3D-IC Thermal Modeling",
+   "abstract": "Accurate thermal analysis of heterogeneous 2.5D/3D-IC packages is essential yet computationally prohibitive. A single full-package FEM simulation can take hours, while AI-based surrogates treat the entire stack as a monolithic prediction target and must be retrained whenever the die count or topology changes. To address this limitation, this work proposes Domain-Decomposed AI-Accelerated Iterative Solver for Thermal Analysis (DAIST), a composable thermal solver that decomposes the global package simulation into block-level subdomain problems, replaces subdomain solvers with neural operators, and couples them through iterative exchanges of interfacial temperature and heat flux. This local-to-global architecture eliminates the topology lock-in of monolithic models: block-level neural operators can be directly reused in unseen package assemblies without retraining. The iterative coupling strategy further provides a controllable accuracy-runtime tradeoff, where the iteration budget can be adjusted to trade accuracy for runtime. Evaluated on a multi-chiplet system and an advanced packaging system, DAIST achieves up to $178\\times$ speedup over traditional FEM solvers with mean temperature errors of 0.068% and 0.323%, respectively, while demonstrating cross-topology reuse of block-level models across structurally distinct package assemblies.",
+   "authors": [
+    "Yixing Li",
+    "Jiahang Zhou",
+    "Zhiyu Zeng",
+    "Xin Ai"
+   ],
+   "url": "https://arxiv.org/abs/2610.02461",
+   "pdf": "https://arxiv.org/pdf/2610.02461v1",
+   "doi": null,
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "published": "2026-10-01T20:34:17Z",
+   "search_topic": "ai-hardware",
+   "hub": "ai",
+   "topics": [
+    "ai-general"
+   ],
+   "companies": [],
+   "image": "https://arxiv.org/html/2610.02461/2610.02461v1/figures/stackup_diagram.png",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "s2_url": "https://www.semanticscholar.org/paper/8e6fb912a87d216977a89229a2ec9671949400c9",
+   "week": "2026-W40"
+  },
+  {
    "id": "doi:10.48550/arxiv.2610.00956",
    "arxiv_id": "2610.00956",
    "title": "Hydrogen plasma-assisted atomic layer epitaxy of superconducting titanium nitride",
@@ -98156,7 +98281,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/5247dddbaeb89856629b30fa7e6a8f92584e593a",
    "s2_fields": [],
-   "search_topic": "packaging",
+   "search_topic": "emerging-memory",
    "hub": "device",
    "topics": [
     "emerging-memory",
@@ -99616,7 +99741,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/e781ee7ee3836846f7581cdf161f04e419058ab3",
    "s2_fields": [],
-   "search_topic": "packaging",
+   "search_topic": "interconnects",
    "hub": "device",
    "topics": [
     "interconnects",
@@ -100616,6 +100741,38 @@
    ],
    "companies": [],
    "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W40"
+  },
+  {
+   "id": "doi:10.1109/norcas71164.2026.11790988",
+   "title": "Nested Current Mountains: Compact-Model Extraction for Multilevel RRAM",
+   "abstract": "Fitting a compact model to measured devices is essential for accurate circuit simulation, but the published fitting procedure of the widely used Stanford-PKU RRAM model is a manual loop that relies on circuit simulation and a single pair of high- and low-resistance states. We propose a nested-mountain measurement protocol, in which each programming ramp reaches slightly higher than the last, so that a single SET or RESET operation yields tens of stable intermediate states. From these states, the static parameters of the model are extracted directly, by closed-form algebra and one-dimensional searches, without a circuit simulator. The measurements require two changes to the model: the gap must also enter the voltage dependence of the conduction law, and SET and RESET need separate field-enhancement laws. On IHP $130 \\text{nm} \\mathbf{H f O}_{2}$ 1T1R cells, one conduction law with one gap per state describes all states of a run to about 1%. Replayed in Verilog-A, the model returns to the programmed states within 0.6 mV in SET and $1 \\mu \\mathrm{A}$ in RESET, while the path between them, which depends on the switching speed not extracted here, deviates by 24 mV. Furthermore, a model fitted at one gate bias predicts nine other biases as accurately as it predicts repeat runs at the fitted bias.",
+   "authors": [
+    "M. Watfa",
+    "Thomas Lepoittevin",
+    "L. Latorre",
+    "Alberto García-Ortiz",
+    "E. Pérez",
+    "C. Wenger",
+    "G. Sassatelli"
+   ],
+   "url": "https://doi.org/10.1109/NorCAS71164.2026.11790988",
+   "pdf": null,
+   "doi": "10.1109/NorCAS71164.2026.11790988",
+   "venue": "IEEE Nordic Circuits and Systems Conference",
+   "source": "Semantic Scholar",
+   "published": "2026-10-01T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/c947663aeaa9ef65badfded61115573ecc0b8f4c",
+   "s2_fields": [],
+   "search_topic": "modeling",
+   "hub": "device",
+   "topics": [
+    "emerging-memory",
+    "modeling"
+   ],
+   "companies": [],
+   "first_seen": "2026-11-27T09:03:13Z",
    "week": "2026-W40"
   },
   {
@@ -103276,40 +103433,6 @@
    "week": "2026-W40"
   },
   {
-   "id": "arxiv:2611.19544",
-   "title": "DT-MATCH: Defect- and Topology-Aware Chiplet Matching for Yield Optimization in Heterogeneous Integration",
-   "abstract": "Heterogeneous integration (HI) and advanced packaging enable chiplet-based system-on-chip (SoC) designs; however, they also introduce new yield challenges arising from manufacturing defects and complex die-to-die (D2D) interconnect constraints. In particular, lane-level defects, limited spares, and strict structural compatibility requirements impede the efficient assembly of functional systems from defective but repairable chiplets. We present DT-MATCH, a defect- and topology-aware chiplet matching framework that maximizes the number of functional SoCs under realistic assembly constraints. DT-MATCH provides two complementary approaches. The integer linear programming (ILP)-based approach is implemented using a batching strategy to approximate the exact formulation. The greedy randomized adaptive search procedure (GRASP)-based approach provides substantial acceleration, but it does not guarantee yield optimality. Both approaches use a preprocessing pipeline to reduce the problem size. Experimental results on industrial designs demonstrate that, as expected, the ILP-based approach achieves superior solution quality. The GRASP-based approach leads to lower runtimes while still achieving solution quality that is comparable to the ILP-based solution. Together, these methods provide a trade-off between solution quality and efficiency for practical chiplet assembly optimization.",
-   "authors": [
-    "Xuan-Yi Tan",
-    "Sanmitra Banerjee",
-    "Dhruv Thapar",
-    "S. Chakravarty",
-    "K. Chakrabarty"
-   ],
-   "url": "https://doi.org/10.1109/ITC64303.2026.00034",
-   "pdf": "https://arxiv.org/pdf/2611.19544",
-   "doi": "10.1109/ITC64303.2026.00034",
-   "venue": "International Test Conference",
-   "source": "Semantic Scholar",
-   "published": "2026-10-01T00:00:00Z",
-   "cited_by": 0,
-   "s2_url": "https://www.semanticscholar.org/paper/f50424b07e81beec4324a8569f6548031f69a2df",
-   "s2_fields": [
-    "Computer Science"
-   ],
-   "search_topic": "packaging",
-   "hub": "device",
-   "topics": [
-    "packaging",
-    "process"
-   ],
-   "companies": [],
-   "arxiv_id": "2611.19544",
-   "image": "https://arxiv.org/html/2611.19544/2611.19544v1/SEC2.png",
-   "first_seen": "2026-11-17T08:23:46Z",
-   "week": "2026-W40"
-  },
-  {
    "id": "doi:10.1088/1361-6641/aeaa7b",
    "title": "DFT-informed TCAD screening of Hf-based high- κ dielectrics for gate-all-around nanosheet FETs",
    "abstract": "In gate-all-around (GAA) nanosheet field-effect transistors, a higher dielectric constant produces a larger physical high- κ thickness for a given equivalent oxide thickness, lowering direct tunnelling across the gate that wraps each stacked sheet. This work evaluates 35 gate-dielectric compositions in a four-stack GAA nanosheet FET. Density functional theory-derived dielectric constants (κ) for SiO 2 /SiON/HfO 2 references, doped HfO 2 oxides, and HfMON oxynitrides (M = Al, La, Sr, Ba) were translated into technology computer-aided design material inputs. Across the 35-material set, the intrinsic direct-tunnelling on-state gate current (I G, on) varies by 15.2 decades, drain-induced barrier lowering varies from 30.8 to 64.6 mV V − 1, and on-state drain current (I ON) varies by 9.5%. The latter range is smaller than the I ON change produced by a ± 0.1 eV metal-gate work-function shift and illustrates the sensitivity of drive current to gate work function. HfLaON (9% La, 6% N) reduces I G, on by 10.3 decades from the HfO 2 value while changing I ON by only 0.20%. The reported",
@@ -104563,8 +104686,8 @@
     "interconnects"
    ],
    "companies": [],
-   "first_seen": "2026-11-17T20:22:43Z",
    "s2_url": "https://www.semanticscholar.org/paper/ed6ac576442add859dbbe2275e3d5eb3db238876",
+   "first_seen": "2026-11-17T20:22:43Z",
    "week": "2026-W40"
   },
   {
@@ -105566,7 +105689,7 @@
    "cited_by": 0,
    "s2_url": "https://www.semanticscholar.org/paper/f19ab3eaa46f39c8d9019abc4dd93712177256ae",
    "s2_fields": [],
-   "search_topic": "packaging",
+   "search_topic": "vlsi",
    "hub": "device",
    "topics": [
     "packaging"
@@ -105603,38 +105726,6 @@
     "vlsi"
    ],
    "companies": [],
-   "first_seen": "2026-11-14T11:05:09Z",
-   "week": "2026-W40"
-  },
-  {
-   "id": "arxiv:2610.02461",
-   "title": "A Composable AI-Accelerated Iterative Solver for 3D-IC Thermal Modeling",
-   "abstract": "Accurate thermal analysis of heterogeneous 2.5D/3D-IC packages is essential yet computationally prohibitive. A single full-package FEM simulation can take hours, while AI-based surrogates treat the entire stack as a monolithic prediction target and must be retrained whenever the die count or topology changes. To address this limitation, this work proposes Domain-Decomposed AI-Accelerated Iterative Solver for Thermal Analysis (DAIST), a composable thermal solver that decomposes the global package simulation into block-level subdomain problems, replaces subdomain solvers with neural operators, and couples them through iterative exchanges of interfacial temperature and heat flux. This local-to-global architecture eliminates the topology lock-in of monolithic models: block-level neural operators can be directly reused in unseen package assemblies without retraining. The iterative coupling strategy further provides a controllable accuracy-runtime tradeoff, where the iteration budget can be adjusted to trade accuracy for runtime. Evaluated on a multi-chiplet system and an advanced packaging system, DAIST achieves up to $178\\times$ speedup over traditional FEM solvers with mean temperature errors of 0.068% and 0.323%, respectively, while demonstrating cross-topology reuse of block-level models across structurally distinct package assemblies.",
-   "authors": [
-    "Yi-Xing Li",
-    "Jia-Hang Zhou",
-    "Zhi-Yu Zeng",
-    "Xin Ai"
-   ],
-   "url": "https://arxiv.org/abs/2610.02461",
-   "pdf": "https://arxiv.org/pdf/2610.02461v1",
-   "doi": null,
-   "venue": "arXiv",
-   "source": "Semantic Scholar",
-   "published": "2026-10-01T00:00:00Z",
-   "cited_by": 0,
-   "s2_url": "https://www.semanticscholar.org/paper/8e6fb912a87d216977a89229a2ec9671949400c9",
-   "s2_fields": [
-    "Computer Science"
-   ],
-   "search_topic": "packaging",
-   "hub": "device",
-   "topics": [
-    "packaging"
-   ],
-   "companies": [],
-   "arxiv_id": "2610.02461",
-   "image": "https://arxiv.org/html/2610.02461/2610.02461v1/figures/stackup_diagram.png",
    "first_seen": "2026-11-14T11:05:09Z",
    "week": "2026-W40"
   },
@@ -106738,7 +106829,7 @@
     "Engineering",
     "Mathematics"
    ],
-   "search_topic": "power-devices",
+   "search_topic": "modeling",
    "hub": "device",
    "topics": [
     "power-devices"
@@ -107224,35 +107315,6 @@
    "week": "2026-W40"
   },
   {
-   "id": "arxiv:2609.37823",
-   "arxiv_id": "2609.37823",
-   "title": "Multiscale modelling of nanoscaled FETs based on 2D ferroelectric materials",
-   "abstract": "Ferroelectric materials are highly attractive for low-power, high-speed electronics and emerging neuromorphic computing architectures. However, the severe physical scaling limits of conventional bulk (3D) ferroelectrics at the nanoscale have shifted attention towards two-dimensional (2D) ferroelectric monolayers. Accurate device-level performance predictions are essential to accelerate the experimental testing and screening of these novel materials. In this work, we present a multiscale simulation framework that bridges first-principles density functional theory with Non-Equilibrium Green's Function (NEGF) transport calculations. Using a 2D Indium Phosphide monolayer as a case study, our approach leverages a continuously interpolated, polarization-dependent Hamiltonian embedded within a self-consistent Poisson-NEGF solver. The model captures the dynamic interplay between ion movement and electronic transport, naturally reproducing macroscopic hysteresis loops and memory windows without empirical parameters. This predictive pipeline provides a computationally efficient tool to evaluate and optimize next-generation 2D ferroelectric field-effect transistors.",
-   "authors": [
-    "Alejandro Toral-Lopez",
-    "Michele Virgilio",
-    "Gianluca Fiori",
-    "Damiano Marian"
-   ],
-   "url": "https://arxiv.org/abs/2609.37823",
-   "pdf": "https://arxiv.org/pdf/2609.37823v1",
-   "doi": null,
-   "venue": "arXiv cond-mat.mes-hall",
-   "source": "arXiv",
-   "published": "2026-09-29T15:31:06Z",
-   "search_topic": "emerging-memory",
-   "hub": "device",
-   "topics": [
-    "dielectrics",
-    "modeling"
-   ],
-   "companies": [],
-   "image": "https://arxiv.org/html/2609.37823/2609.37823v1/modellingFerroelectric-figure2.png",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "s2_url": "https://www.semanticscholar.org/paper/98537f354c054ca394bb469c8ebc5050631bb754",
-   "week": "2026-W40"
-  },
-  {
    "id": "arxiv:2609.37711",
    "arxiv_id": "2609.37711",
    "title": "Zephyr: An Efficient Audio Denoising System Using Spiking Neural Networks Enabled With A Sparsity-Aware Flexible FPGA PE Array",
@@ -107334,36 +107396,6 @@
    "image": "https://arxiv.org/html/2610.22377/2610.22377v1/CompactInst.png",
    "first_seen": "2026-11-14T11:05:09Z",
    "s2_url": "https://www.semanticscholar.org/paper/d4a7a14044fcd16bb3a5f41712b633c8c5b88867",
-   "week": "2026-W40"
-  },
-  {
-   "id": "doi:10.48550/arxiv.2609.37058",
-   "arxiv_id": "2609.37058",
-   "title": "Linear-Scaling Quantum Transport from Machine-Learning Density Functional Theory Hamiltonians",
-   "abstract": "Quantum transport simulations that combine density functional theory (DFT) with the nonequilibrium Green's function formalism (DFT-NEGF) are important to modern technology, yet their unfavorable scaling has long confined predictive simulations to small, idealized systems far below the ten-thousand-atom scale of realistic devices. Here, we introduce HamGNN-NEGF, a linear-scaling framework with DFT-level fidelity. An E(3)-equivariant graph neural network trained on conventional DFT Hamiltonians of small structures predicts Hamiltonians for large devices, avoiding costly DFT-NEGF training data. The predicted Hamiltonians are integrated with DFT-derived electrode self-energies, a nonorthogonal kernel polynomial method for Fermi-level determination, and a recursive Green's function algorithm, yielding a computational cost that scales linearly with device length at fixed cross section. Even for devices containing fewer than 500 atoms, HamGNN-NEGF achieves speedups exceeding three orders of magnitude over fully self-consistent DFT-NEGF, with the advantage increasing further with system size. Benchmarks on pristine Pt-Si-Pt, doped Pt-Si:P-Pt, and Pt-molecule-Pt junctions demonstrate meV-level Hamiltonian accuracy, faithful transmission spectra, and predictive simulations beyond 10,000 atoms. Eliminating transport self-consistency also enables hybrid functionals such as HSE06 without additional NEGF overhead, while a zero-bias Hamiltonian approximation extends the framework to finite-bias transport in weakly nonlinear regimes. HamGNN-NEGF thus bridges first-principles accuracy and device-scale simulation, providing a practical route toward predictive modeling of realistic nanoelectronic and quantum devices.",
-   "authors": [
-    "Bang Liu",
-    "Yang Zhong",
-    "Zhi-Xin Guo",
-    "Xin-Gao Gong",
-    "Hongjun Xiang"
-   ],
-   "url": "https://arxiv.org/abs/2609.37058",
-   "pdf": "https://arxiv.org/pdf/2609.37058v1",
-   "doi": "10.48550/arxiv.2609.37058",
-   "venue": "arXiv cond-mat.mtrl-sci",
-   "source": "arXiv",
-   "published": "2026-09-29T09:00:07Z",
-   "search_topic": "modeling",
-   "hub": "device",
-   "topics": [
-    "modeling"
-   ],
-   "companies": [],
-   "image": "",
-   "first_seen": "2026-11-14T11:05:09Z",
-   "field": "Materials Science",
-   "s2_url": "https://www.semanticscholar.org/paper/ef97b1a840b3da044491d8d65e6ec1de77fb8d38",
    "week": "2026-W40"
   },
   {
@@ -107516,6 +107548,39 @@
    "week": "2026-W40"
   },
   {
+   "id": "arxiv:2609.37823",
+   "title": "Multiscale modelling of nanoscaled FETs based on 2D ferroelectric materials",
+   "abstract": "Ferroelectric materials are highly attractive for low-power, high-speed electronics and emerging neuromorphic computing architectures. However, the severe physical scaling limits of conventional bulk (3D) ferroelectrics at the nanoscale have shifted attention towards two-dimensional (2D) ferroelectric monolayers. Accurate device-level performance predictions are essential to accelerate the experimental testing and screening of these novel materials. In this work, we present a multiscale simulation framework that bridges first-principles density functional theory with Non-Equilibrium Green's Function (NEGF) transport calculations. Using a 2D Indium Phosphide monolayer as a case study, our approach leverages a continuously interpolated, polarization-dependent Hamiltonian embedded within a self-consistent Poisson-NEGF solver. The model captures the dynamic interplay between ion movement and electronic transport, naturally reproducing macroscopic hysteresis loops and memory windows without empirical parameters. This predictive pipeline provides a computationally efficient tool to evaluate and optimize next-generation 2D ferroelectric field-effect transistors.",
+   "authors": [
+    "A. Toral-López",
+    "M. Virgilio",
+    "G. Fiori",
+    "D. Marian"
+   ],
+   "url": "https://arxiv.org/abs/2609.37823",
+   "pdf": "https://arxiv.org/pdf/2609.37823v1",
+   "doi": null,
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-09-29T00:00:00Z",
+   "cited_by": 0,
+   "s2_url": "https://www.semanticscholar.org/paper/98537f354c054ca394bb469c8ebc5050631bb754",
+   "s2_fields": [
+    "Physics"
+   ],
+   "search_topic": "emerging-memory",
+   "hub": "device",
+   "topics": [
+    "dielectrics",
+    "modeling"
+   ],
+   "companies": [],
+   "arxiv_id": "2609.37823",
+   "image": "https://arxiv.org/html/2609.37823/2609.37823v1/modellingFerroelectric-figure2.png",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W40"
+  },
+  {
    "id": "doi:10.1007/s10825-026-02647-9",
    "title": "Modeling of random telegraph noise decay constant in 3D NAND flash memory using machine learning-based Monte Carlo simulation",
    "abstract": "Random telegraph noise (RTN) has emerged as a major reliability concern in high-density 3D NAND flash memory, causing significant threshold voltage (V t) distribution distortion. While technology computer-aided design (TCAD) simulations provide physical insights, they face fundamental limitations in capturing the statistical randomness of grain boundaries and traps due to high computational costs. In this study, we design the RTN decay constant (λ) model in 3D NAND using artificial neural networks (ANN) and Monte Carlo simulation. Our analysis reveals that unlike 2D NAND or single-Si 3D NAND, poly-Si channel 3D NAND exhibits average trap number dependent (μ trap) scaling behavior due to percolation effects induced by GBs. Specifically, we find that the scaling sensitivity of cell variations directly influencing channel volume, such as word-line length (L WL) and poly-Si channel thickness (T poly), decreases as the μ trap increases. Furthermore, we demonstrate that λ in 3D NAND is proportional to the cubic root of μ trap (λ $$\\alpha \\sqrt[3]{{\\mu}_{\\text{t}\\text{r}\\text{a}\\text{p}}}$$ α μ trap 3), a deviation from the square-root dependency observed in 2D NAND. These results provide a robust numerical model and essential design guidelines for predicting the reliability of 3D NAND flash memory devices.",
@@ -107541,6 +107606,40 @@
    "companies": [],
    "s2_url": "https://www.semanticscholar.org/paper/180ff956077d9cde6ebafa5226208cb52478a5e0",
    "first_seen": "2026-11-14T11:05:09Z",
+   "week": "2026-W40"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.37058",
+   "title": "Linear-Scaling Quantum Transport from Machine-Learning Density Functional Theory Hamiltonians",
+   "abstract": "Quantum transport simulations that combine density functional theory (DFT) with the nonequilibrium Green's function formalism (DFT-NEGF) are important to modern technology, yet their unfavorable scaling has long confined predictive simulations to small, idealized systems far below the ten-thousand-atom scale of realistic devices. Here, we introduce HamGNN-NEGF, a linear-scaling framework with DFT-level fidelity. An E(3)-equivariant graph neural network trained on conventional DFT Hamiltonians of small structures predicts Hamiltonians for large devices, avoiding costly DFT-NEGF training data. The predicted Hamiltonians are integrated with DFT-derived electrode self-energies, a nonorthogonal kernel polynomial method for Fermi-level determination, and a recursive Green's function algorithm, yielding a computational cost that scales linearly with device length at fixed cross section. Even for devices containing fewer than 500 atoms, HamGNN-NEGF achieves speedups exceeding three orders of magnitude over fully self-consistent DFT-NEGF, with the advantage increasing further with system size. Benchmarks on pristine Pt-Si-Pt, doped Pt-Si:P-Pt, and Pt-molecule-Pt junctions demonstrate meV-level Hamiltonian accuracy, faithful transmission spectra, and predictive simulations beyond 10,000 atoms. Eliminating transport self-consistency also enables hybrid functionals such as HSE06 without additional NEGF overhead, while a zero-bias Hamiltonian approximation extends the framework to finite-bias transport in weakly nonlinear regimes. HamGNN-NEGF thus bridges first-principles accuracy and device-scale simulation, providing a practical route toward predictive modeling of realistic nanoelectronic and quantum devices.",
+   "authors": [
+    "Bang Liu",
+    "Yang Zhong",
+    "Zhi-Xin Guo",
+    "Xin-Gao Gong",
+    "Hong-Jun Xiang"
+   ],
+   "url": "https://arxiv.org/abs/2609.37058",
+   "pdf": "https://arxiv.org/pdf/2609.37058v1",
+   "doi": "10.48550/arxiv.2609.37058",
+   "venue": "arXiv",
+   "source": "Semantic Scholar",
+   "published": "2026-09-29T00:00:00Z",
+   "cited_by": 1,
+   "s2_url": "https://www.semanticscholar.org/paper/ef97b1a840b3da044491d8d65e6ec1de77fb8d38",
+   "s2_fields": [
+    "Physics"
+   ],
+   "search_topic": "modeling",
+   "hub": "device",
+   "topics": [
+    "modeling"
+   ],
+   "companies": [],
+   "arxiv_id": "2609.37058",
+   "image": "",
+   "first_seen": "2026-11-14T11:05:09Z",
+   "field": "Materials Science",
    "week": "2026-W40"
   },
   {
