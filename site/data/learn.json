@@ -1,6 +1,30 @@
 {
- "updated": "2026-11-27T09:03:46Z",
+ "updated": "2026-11-27T21:46:14Z",
  "items": [
+  {
+   "id": "99dbe3403628",
+   "title": "Huawei Advances AI Semiconductor Trio Amid U.S. Sanctions",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTGw2ZEdLeHQzUzZiUnlXc1FWX19yS1ktNVR6bWRtcE1HUW5YVGdBNUh1RmpzNzd0T2RsakVBMXNUNlBoOE1pOFY3SW5vWFNsZ1pITUFtZ05ucldNRFY5TlJrTmxrQTFZVnh4c0VibnBVMVZOVTdMa1FYWmY5QWVqT3NBREYtTzlr?oc=5",
+   "source": "조선일보",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-27T20:49:41Z",
+   "topics": []
+  },
+  {
+   "id": "a2c6baf2a367",
+   "title": "AWS Challenger: Trainium3 Inference and Microarchitecture Deep Dive",
+   "url": "https://newsletter.semianalysis.com/p/trainium3-inferencex",
+   "source": "SemiAnalysis",
+   "kind": "article",
+   "thumbnail": "https://substackcdn.com/image/fetch/$s_!YlZE!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F096299c0-abec-445e-ace3-994016882a17_1672x941.png",
+   "description": "Better Perf TCO vs NVIDIA GB300, First Principles Physics-Based Architecture, High MFU and MBU, UBenchX, Low Latency, Alisa Liu vs Eileen Gu",
+   "published": "2026-11-27T15:54:59Z",
+   "topics": [
+    "modeling"
+   ]
+  },
   {
    "id": "59dc277fb0ea",
    "title": "Etron's Lu Chao-chun Calls for Taiwan Sovereign AI Fund, Says Taiwan Semiconductor Revenue to Hit NT$9.5 Trillion This Year",
@@ -208,6 +232,30 @@
    "topics": [
     "dram"
    ]
+  },
+  {
+   "id": "a1dd59c9c356",
+   "title": "Samsung Electronics, SK Hynix Halve on 'AI Fear'…KB Says \"Supply Shortage Will Prove Earnings\"",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5HN3JtY3lfbW9YaVljS240YUxqWlREWlU0ZHFUb0VpYUh3Z2NGU1NDNXlkMG8xOEJBQmJ5R2d0MFdvTFR4RXowOXVBOHFlSkpmLVNRdkllenRneEx5QVBMM0JnbnFsSm1uY0tHaHI5cW5wOW9tU2c?oc=5",
+   "source": "BigGo Finance",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-17T23:25:00Z",
+   "topics": [
+    "industry"
+   ]
+  },
+  {
+   "id": "3632dd902fcb",
+   "title": "Commerce Department Investigates Megaspeed, Interviews Alice Huang",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeUtBQjhzZFJzMDFadWJTLURsVGFvTkxWVkJkUmJ6aE01MUZxcF92M1M4M1B5WWdHTEloMTdtSHFqQ0VYbDVleVVxQVJ2UkZOVVRCTzRsWkdHLWNlY2hJclZIcUprQkZOamlwemV4eEp0YlBqamxUM19hY29uNGNEUHczd3c?oc=5",
+   "source": "조선일보",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-17T08:00:00Z",
+   "topics": []
   },
   {
    "id": "15f76ef19f4f",
@@ -1107,32 +1155,6 @@
    "topics": [
     "dram",
     "packaging",
-    "vlsi"
-   ]
-  },
-  {
-   "id": "6b584623a8de",
-   "title": "How GLM5.3 Sparse Attention Affects HBM Memory Usage",
-   "url": "https://newsletter.semianalysis.com/p/sparse-savings-persistent-demand-inside-glm53",
-   "source": "SemiAnalysis",
-   "kind": "article",
-   "thumbnail": null,
-   "description": "GLM-5.3, KV Cache Offloading, HiSparse, DeepSeek Sparse Attention, IndexShare, Single-rollout Asynchronous Optimization, Cybersecurity",
-   "published": "2026-09-28T19:26:41Z",
-   "topics": [
-    "dram"
-   ]
-  },
-  {
-   "id": "629c14aa7b88",
-   "title": "The Microwatt Chip Race // The AI Hardware Podcast S2E11",
-   "url": "https://www.youtube.com/watch?v=ipsL7t1GFFY",
-   "source": "TechTechPotato",
-   "kind": "video",
-   "thumbnail": "https://i2.ytimg.com/vi/ipsL7t1GFFY/hqdefault.jpg",
-   "description": "Forget the data center - the real AI action might be happening in microwatts. Sally Ward-Foxton and Ian Cutress dig into the tiniest AI chips on the market, from analog compute upstarts to ARM's revived Ethos NPU line, and debate why an \"AI ASIC\" isn't really an ASIC at all.…",
-   "published": "2026-09-28T13:00:23Z",
-   "topics": [
     "vlsi"
    ]
   }
