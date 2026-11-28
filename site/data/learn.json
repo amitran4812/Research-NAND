@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T08:23:36Z",
+ "updated": "2026-11-28T20:46:16Z",
  "items": [
   {
    "id": "99dbe3403628",
@@ -158,7 +158,7 @@
    "kind": "interview",
    "thumbnail": null,
    "description": "",
-   "published": "2026-11-23T19:58:10Z",
+   "published": "2026-11-23T19:57:30Z",
    "topics": []
   },
   {
@@ -231,6 +231,19 @@
    "published": "2026-11-19T23:00:31Z",
    "topics": [
     "dram"
+   ]
+  },
+  {
+   "id": "c28e5ff2d494",
+   "title": "From Kanpur to CEO of $900 billion Micron: Who is Sanjay Mehrotra? SanDisk co-founder in race to replace Jensen Huang at Nvidia",
+   "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOS24tQUxMRE1EMThReTU2RkRORnc5a0g5SkJvQ3g5bV96eVVlUjRXaWJBaUxpWklfd1NIV3Q4Wm0teWd5WE5qTHpRNHVYakZiRnN3SFgwN0YzRmgxcVJfQkVZX0x1Y1gzdzJ0TkNVV09QVzBiUWE5SXVqNmVZelNmMkZFVnNaU1RrY09WVWtTZEFpaXRXbEc1dUhXNFZ6cVk3RXBfZ052cVFUM2NBcGhsb1JOZENLb0dpbm55TEpzMllta0tLSHR3dTVxaE9GbTlvYlFIYVF0RVVGM3cyVG1zT1BTdlczSlI3TXBFcVBpWlYwV19RYXRjY1U5ZVZRalJGRHpONFJwTENZZnpubUcyd2RoWXZ2dFk1?oc=5",
+   "source": "Moneycontrol.com",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-17T08:00:00Z",
+   "topics": [
+    "nand"
    ]
   },
   {
@@ -326,17 +339,6 @@
    "topics": []
   },
   {
-   "id": "fea537e65eef",
-   "title": "Musk Warns Nvidia's Supply Chain Vulnerable Without Jensen Huang",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeVpYQUpfUFJ2Sjc4SWRWQXZ4SEctejhJdG9Id1FVMjF5R0x6QnVhaUxtTWVCOThBYWlRYmJFaXlDTS1JeEs3ckRlc3lqODlpeVRIVTRFbVVXa1ZqMXVOd1FBTUh5YVZlZTJaX1VTQ3lKbHhaX2RncWkxRzZ1REhhQ3JPLUFvMDdm?oc=5",
-   "source": "조선일보",
-   "kind": "interview",
-   "thumbnail": null,
-   "description": "",
-   "published": "2026-11-15T08:00:00Z",
-   "topics": []
-  },
-  {
    "id": "9815224a2772",
    "title": "Even If Nvidia Stumbles, HBM Won't — Why Samsung and SK Hynix Are Smiling",
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9nMmdDdzJtU3BiWGRQV2xpWlhSZmxXUFhUQ2tkZ0hOb0NUX0FGcWVoM0ZDb2MtcHlHeDZzVFV5UEVnZ1FyVDhQYlpGOW9lbndPS2FlX0pEd1RobHhuU1hZNTFmSWJYNVpEbGNmNkx3S0JtY1NvakE?oc=5",
@@ -348,6 +350,17 @@
    "topics": [
     "dram"
    ]
+  },
+  {
+   "id": "fea537e65eef",
+   "title": "Musk Warns Nvidia's Supply Chain Vulnerable Without Jensen Huang",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeVpYQUpfUFJ2Sjc4SWRWQXZ4SEctejhJdG9Id1FVMjF5R0x6QnVhaUxtTWVCOThBYWlRYmJFaXlDTS1JeEs3ckRlc3lqODlpeVRIVTRFbVVXa1ZqMXVOd1FBTUh5YVZlZTJaX1VTQ3lKbHhaX2RncWkxRzZ1REhhQ3JPLUFvMDdm?oc=5",
+   "source": "조선일보",
+   "kind": "interview",
+   "thumbnail": null,
+   "description": "",
+   "published": "2026-11-15T08:00:00Z",
+   "topics": []
   },
   {
    "id": "4f8b0697a629",
@@ -1142,21 +1155,6 @@
    "description": "Today's sponsor is https://www.amtechmicro.com Richard Ho leads hardware at OpenAI. He joined Google's TPU program as one of its first engineers, built Anton supercomputers at D. E. Shaw before that, and now runs the team behind Jalapeño. He tells me how close he came to a…",
    "published": "2026-09-30T13:10:53Z",
    "topics": []
-  },
-  {
-   "id": "e9bf11b36afa",
-   "title": "Faster is Better // The Silicon Notebook E4",
-   "url": "https://www.youtube.com/watch?v=kxWhzTmJfQQ",
-   "source": "TechTechPotato",
-   "kind": "video",
-   "thumbnail": "https://i4.ytimg.com/vi/kxWhzTmJfQQ/hqdefault.jpg",
-   "description": "I walk the show floor at TSMC's Open Innovation Platform (OIP) event in the Bay Area. It's a one-day conference where TSMC puts its partners front and centre. We stop by Cadence, Samsung, SK hynix, Synopsys and GUC to see what's next for HBM thermals, co-packaged optics, UCIe…",
-   "published": "2026-09-29T13:00:08Z",
-   "topics": [
-    "dram",
-    "packaging",
-    "vlsi"
-   ]
   }
  ],
  "courses": [
